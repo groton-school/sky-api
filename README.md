@@ -5,7 +5,7 @@ PHP client for Blackbaud's SKY API deployed to Google App Engine
 ## Install
 
 ```sh
-composer install groton-school/appengine-sky-api
+composer require groton-school/appengine-sky-api
 ```
 
 ## Use
