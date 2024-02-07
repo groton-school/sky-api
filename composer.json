@@ -1,0 +1,24 @@
+{
+  "name": "groton-school/appengine-sky-api",
+  "description": "PHP client for Blackbaud's SKY API deployed to Google App Engine",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Seth Battis",
+      "email": "sbattis@groton.org"
+    }
+  ],
+  "require": {
+    "battis/lazy-secrets": "^0.2.0",
+    "google/appengine-php-sdk": "^2.2",
+    "groton-school/oauth2-blackbaudsky": "^0.2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "GrotonSchool\\Blackbaud\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
