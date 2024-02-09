@@ -6,6 +6,9 @@ use JsonSerializable;
 
 abstract class Base implements JsonSerializable
 {
+    /** @var string[] $fields */
+    protected static array $fields = [];
+
     /**
      * JSON array of object data
      *
@@ -17,22 +20,40 @@ abstract class Base implements JsonSerializable
      * Construct from a JSON object response value from the SKY API
      *
      * @param array<string, mixed> $data
+     * @api
      */
     public function __construct(array $data)
     {
         $this->data = $data;
     }
 
+    /**
+     * @param string $name
+     * @return mixed
+     * @throws \GrotonSchool\Blackbaud\SKY\ObjectModel\ObjectModelException if unknown property accessed
+     * @api
+     */
+    public function __get(string $name): mixed
+    {
+        if (in_array($name, static::$fields)) {
+            if (array_key_exists($name, $this->data)) {
+                return $this->data[$name];
+            } else {
+                return null;
+            }
+        }
+        throw new ObjectModelException(
+            "Unknown property $name",
+            ObjectModelException::PROPERTY_ERROR
+        );
+    }
+
+    /**
+     * @return mixed
+     * @api
+     */
     public function jsonSerialize(): mixed
     {
         return $this->data;
-    }
-
-    public function getId(): string
-    {
-        if (empty($this->data["id"])) {
-            return null;
-        }
-        return $this->data["id"];
     }
 }
