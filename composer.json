@@ -1,6 +1,6 @@
 {
-  "name": "groton-school/appengine-sky-api",
-  "description": "PHP client for Blackbaud's SKY API deployed to Google App Engine",
+  "name": "groton-school/sky-api",
+  "description": "PHP client for Blackbaud's SKY API",
   "license": "GPL-3.0",
   "authors": [
     {
@@ -9,9 +9,8 @@
     }
   ],
   "require": {
-    "battis/lazy-secrets": "^0.2.0",
-    "google/appengine-php-sdk": "^2.2",
-    "groton-school/oauth2-blackbaudsky": "^0.2.3"
+    "groton-school/oauth2-blackbaudsky": "^0.2.3",
+    "psr/simple-cache": "^3.0"
   },
   "autoload": {
     "psr-4": {
@@ -20,5 +19,8 @@
   },
   "config": {
     "sort-packages": true
+  },
+  "require-dev": {
+    "sspat/reserved-words": "^3.0"
   }
 }

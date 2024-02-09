@@ -3,10 +3,9 @@
 namespace GrotonSchool\Blackbaud;
 
 use Exception;
-use Google\AppEngine\Api\Memcache\Memcached;
-use Battis\LazySecrets\Secrets;
 use GrotonSchool\Blackbaud\SKY\API;
 use League\OAuth2\Client\Token\AccessToken;
+use Psr\SimpleCache\CacheInterface;
 
 class SKY
 {
@@ -27,66 +26,65 @@ class SKY
     public const AUTHORIZATION_CODE = "authorization_code";
     public const REFRESH_TOKEN = "refresh_token";
 
-    private static ?Memcached $cache = null;
-    private static ?API $api = null;
+    private ?API $api = null;
 
-    public static function api()
+    private CacheInterface $cache;
+
+    public function __construct(CacheInterface $cache)
+    {
+        $this->cache = $cache;
+        session_start();
+    }
+
+    public function api()
     {
         if (!self::$api) {
             self::$api = new API([
-        API::ACCESS_KEY => Secrets::get(self::Bb_ACCESS_KEY),
-        "clientId" => Secrets::get(self::Bb_CLIENT_ID),
-        "clientSecret" => Secrets::get(self::Bb_CLIENT_SECRET),
-        "redirectUri" => Secrets::get(self::Bb_REDIRECT_URL),
-      ]);
+              API::ACCESS_KEY => $this->cache->get(self::Bb_ACCESS_KEY),
+              "clientId" => $this->cache->get(self::Bb_CLIENT_ID),
+              "clientSecret" => $this->cache->get(self::Bb_CLIENT_SECRET),
+              "redirectUri" => $this->cache->get(self::Bb_REDIRECT_URL),
+            ]);
         }
         return self::$api;
     }
 
-    private static function cache()
+    public function isReady()
     {
-        if (!self::$cache) {
-            self::$cache = new Memcached();
-        }
-        return self::$cache;
+        return !!self::getToken(false);
     }
 
-    public static function isReady($server, $session, $get)
+    public function getToken($interactive = true)
     {
-        return !!self::getToken($server, $session, $get, false);
-    }
-
-    public static function getToken($server, $session, $get, $interactive = true)
-    {
-        $cachedToken = Secrets::get(self::Bb_TOKEN, true);
+        $cachedToken = $this->cache->get(self::Bb_TOKEN, true);
         $token = $cachedToken ? new AccessToken($cachedToken) : null;
 
         // acquire a Bb SKY API access token
         if (empty($token)) {
             if ($interactive) {
                 // interactively acquire a new Bb access token
-                if (false === isset($get[self::CODE])) {
+                if (false === isset($_GET[self::CODE])) {
                     $authorizationUrl = self::api()->getAuthorizationUrl();
-                    $session[self::OAuth2_STATE] = self::api()->getState();
+                    $_SESSION[self::OAuth2_STATE] = self::api()->getState();
                     // TODO wipe existing token?
-                    self::cache()->set(self::Request_URI, $server["REQUEST_URI"]);
+                    $this->cache->set(self::Request_URI, $_SERVER["REQUEST_URI"]);
                     header("Location: $authorizationUrl");
                     exit();
                 } elseif (
-          empty($get[self::STATE]) ||
-          (isset($session[self::OAuth2_STATE]) &&
-            $get[self::STATE] !== $session[self::OAuth2_STATE])
-        ) {
-                    if (isset($session[self::OAuth2_STATE])) {
-                        unset($session[self::OAuth2_STATE]);
+                    empty($_GET[self::STATE]) ||
+                    (isset($_SESSION[self::OAuth2_STATE]) &&
+                      $_GET[self::STATE] !== $_SESSION[self::OAuth2_STATE])
+                ) {
+                    if (isset($_SESSION[self::OAuth2_STATE])) {
+                        unset($_SESSION[self::OAuth2_STATE]);
                     }
 
                     throw new Exception(json_encode(["error" => "invalid state"]));
                 } else {
                     $token = self::api()->getAccessToken(self::AUTHORIZATION_CODE, [
-            self::CODE => $get[self::CODE],
-          ]);
-                    Secrets::set(self::Bb_TOKEN, $token);
+                      self::CODE => $_GET[self::CODE],
+                    ]);
+                    $this->cache->set(self::Bb_TOKEN, $token);
                 }
             } else {
                 return null;
@@ -94,10 +92,10 @@ class SKY
         } elseif ($token->hasExpired()) {
             // use refresh token to get new Bb access token
             $newToken = self::api()->getAccessToken(self::REFRESH_TOKEN, [
-        self::REFRESH_TOKEN => $token->getRefreshToken(),
-      ]);
+              self::REFRESH_TOKEN => $token->getRefreshToken(),
+            ]);
             // FIXME need to handle _not_ being able to refresh!
-            Secrets::set(self::Bb_TOKEN, $newToken);
+            $this->cache->set(self::Bb_TOKEN, $newToken);
             $token = $newToken;
         } else {
             self::api()->setAccessToken($token);
@@ -106,10 +104,10 @@ class SKY
         return $token;
     }
 
-    public static function handleRedirect($server, $session, $get)
+    public function handleRedirect()
     {
-        self::getToken($server, $session, $get);
-        $uri = self::cache()->get(self::Request_URI) ?? "/";
+        self::getToken();
+        $uri = $this->cache->get(self::Request_URI) ?? "/";
         header("Location: $uri");
     }
 }
