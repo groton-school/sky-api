@@ -47,6 +47,7 @@ class TypeMap
      */
     public static function _string(): string
     {
+        // TODO enum
         return "string";
     }
 

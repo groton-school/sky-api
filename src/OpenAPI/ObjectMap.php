@@ -105,6 +105,7 @@ $description";
                         if ($property["type"] == "array") {
                             // $description = $api["components"]["schemas"][$type]["description"];
                         }
+                        // TODO handle enums
                     } else {
                         $type = basename($property['$ref']);
                         $description = array_key_exists(
@@ -119,6 +120,7 @@ $description";
                       " * @property $type$nullable $$key $description" . PHP_EOL;
                 }
             }
+            // TODO additionalProperties
             $fileContents .=
               " * @api
  */
