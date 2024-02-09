@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "composer run build"
+    }
+  },
+  "openLogOnRun" : "start"
+}

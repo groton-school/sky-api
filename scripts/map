@@ -1,0 +1,55 @@
+#!/usr/bin/env php
+<?php
+use GrotonSchool\Blackbaud\CLI as BlackbaudCLI;
+use GrotonSchool\Blackbaud\OpenAPI\ObjectMap;
+use splitbrain\phpcli\CLI;
+use splitbrain\phpcli\Colors;
+use splitbrain\phpcli\Options;
+use Webmozart\PathUtil\Path;
+
+require __DIR__ . "/../vendor/autoload.php";
+
+class Map extends CLI
+{
+  protected function setup(Options $options)
+  {
+    $options->setHelp("Map OpenAPI 3 JSON definition on to PHP classes");
+    $options->registerOption(
+      "delete",
+      "Delete existing classes in base namespace",
+      "d"
+    );
+    $options->registerArgument(
+      "JSONPath",
+      "Path to OpenAPI 3 JSON definition file"
+    );
+  }
+
+  private function objectMap(string $path, $delete)
+  {
+    if (is_dir($path)) {
+      $this->info("Scanning " . $this->colors->wrap($path, Colors::C_CYAN));
+      foreach (scandir($path) as $file) {
+        if ($file !== "." && $file !== "..") {
+          $this->objectMap(Path::join($path, $file), $delete);
+        }
+      }
+    } elseif (is_file($path)) {
+      $this->info("Parsing " . $this->colors->wrap($path, Colors::C_CYAN));
+      $definition = json_decode(file_get_contents($path), true);
+      ObjectMap::build($definition, $delete);
+    }
+  }
+
+  protected function main(Options $options)
+  {
+    $this->objectMap(
+      Path::canonicalize(Path::join(__DIR__, "..", $options->getArgs()[0])),
+      $options->getOpt("delete", false)
+    );
+  }
+}
+
+BlackbaudCLI::init(new Map());
+BlackbaudCLI::get()->run();
+

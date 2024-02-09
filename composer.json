@@ -21,6 +21,11 @@
     "sort-packages": true
   },
   "require-dev": {
-    "sspat/reserved-words": "^3.0"
+    "splitbrain/php-cli": "^1.3",
+    "sspat/reserved-words": "^3.0",
+    "webmozart/path-util": "^2.3"
+  },
+  "scripts": {
+    "build": "./scripts/map --delete var"
   }
 }

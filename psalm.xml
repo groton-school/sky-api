@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<psalm errorLevel="1" findUnusedBaselineEntry="true" findUnusedCode="true">
+<psalm errorLevel="2" findUnusedBaselineEntry="true" findUnusedCode="true">
   <projectFiles>
     <directory name="src" />
     <ignoreFiles>

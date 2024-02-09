@@ -2,11 +2,14 @@
 
 namespace GrotonSchool\Blackbaud;
 
-use Exception;
-use GrotonSchool\Blackbaud\SKY\API;
+use GrotonSchool\OAuth2\Client\Provider\BlackbaudSKY;
 use League\OAuth2\Client\Token\AccessToken;
+use League\OAuth2\Client\Token\AccessTokenInterface;
 use Psr\SimpleCache\CacheInterface;
 
+/**
+ * @api
+ */
 class SKY
 {
     // environment variables
@@ -26,7 +29,7 @@ class SKY
     public const AUTHORIZATION_CODE = "authorization_code";
     public const REFRESH_TOKEN = "refresh_token";
 
-    private ?API $api = null;
+    private ?BlackbaudSKY $api = null;
 
     private CacheInterface $cache;
 
@@ -36,24 +39,29 @@ class SKY
         session_start();
     }
 
-    public function api()
+    public function api(): BlackbaudSKY
     {
-        if (!self::$api) {
-            self::$api = new API([
-              API::ACCESS_KEY => $this->cache->get(self::Bb_ACCESS_KEY),
+        if (!$this->api) {
+            $this->api = new BlackbaudSKY([
+              BlackbaudSKY::ACCESS_KEY => $this->cache->get(self::Bb_ACCESS_KEY),
               "clientId" => $this->cache->get(self::Bb_CLIENT_ID),
               "clientSecret" => $this->cache->get(self::Bb_CLIENT_SECRET),
               "redirectUri" => $this->cache->get(self::Bb_REDIRECT_URL),
             ]);
         }
-        return self::$api;
+        return $this->api;
     }
 
-    public function isReady()
+    public function isReady(): bool
     {
         return !!self::getToken(false);
     }
 
+    /**
+     * @param boolean $interactive
+     *
+     * @return AccessTokenInterface|null
+     */
     public function getToken($interactive = true)
     {
         $cachedToken = $this->cache->get(self::Bb_TOKEN, true);
@@ -67,11 +75,11 @@ class SKY
                     $authorizationUrl = self::api()->getAuthorizationUrl();
                     $_SESSION[self::OAuth2_STATE] = self::api()->getState();
                     // TODO wipe existing token?
-                    $this->cache->set(self::Request_URI, $_SERVER["REQUEST_URI"]);
+                    $this->cache->set(self::Request_URI, $_SERVER["REQUEST_URI"] ?? null);
                     header("Location: $authorizationUrl");
                     exit();
                 } elseif (
-                    empty($_GET[self::STATE]) ||
+                    !isset($_GET[self::STATE]) ||
                     (isset($_SESSION[self::OAuth2_STATE]) &&
                       $_GET[self::STATE] !== $_SESSION[self::OAuth2_STATE])
                 ) {
@@ -79,7 +87,10 @@ class SKY
                         unset($_SESSION[self::OAuth2_STATE]);
                     }
 
-                    throw new Exception(json_encode(["error" => "invalid state"]));
+                    throw new BlackbaudException(
+                        json_encode(["error" => "invalid state"]),
+                        BlackbaudException::OAUTH_ERROR
+                    );
                 } else {
                     $token = self::api()->getAccessToken(self::AUTHORIZATION_CODE, [
                       self::CODE => $_GET[self::CODE],
@@ -104,10 +115,11 @@ class SKY
         return $token;
     }
 
-    public function handleRedirect()
+    public function handleRedirect(): void
     {
         self::getToken();
         $uri = $this->cache->get(self::Request_URI) ?? "/";
         header("Location: $uri");
+        exit();
     }
 }
