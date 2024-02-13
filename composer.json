@@ -9,6 +9,12 @@
       "email": "sbattis@groton.org"
     }
   ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../openapi-client-generator"
+    }
+  ],
   "require": {
     "groton-school/oauth2-blackbaudsky": "^0.2.3",
     "psr/simple-cache": "^3.0"
