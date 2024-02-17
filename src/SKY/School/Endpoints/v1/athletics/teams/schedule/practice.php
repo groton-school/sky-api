@@ -3,6 +3,8 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\athletics\teams\schedule;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\PracticeCreate;
+use Blackbaud\SKY\School\Objects\PracticeUpdate;
 
 /**
  * @api
@@ -27,14 +29,16 @@ class practice extends BaseEndpoint
      * @param array{team_id: int} $params An associative array
      *     - team_id: Format - int32. ID of the team for the practice to be
      *   created
+     * @param Blackbaud\SKY\School\Objects\PracticeCreate $requestBody
+     *   Information about the practice to be created
      *
      * @return \int
      *
      * @api
      */
-    public function postByTeam(array $params)
+    public function postByTeam(array $params, PracticeCreate $requestBody)
     {
-        return $this->send("post", ["{team_id}" => $params["team_id"]], []);
+        return $this->send("post", ["{team_id}" => $params["team_id"]], [], $requestBody);
     }
 
     /**
@@ -49,14 +53,16 @@ class practice extends BaseEndpoint
      * @param array{team_id: int} $params An associative array
      *     - team_id: Format - int32. The ID of the team for the practice to
      *   be updated
+     * @param Blackbaud\SKY\School\Objects\PracticeUpdate $requestBody
+     *   Information about the practice to be updated
      *
      * @return \void
      *
      * @api
      */
-    public function patchByTeam(array $params)
+    public function patchByTeam(array $params, PracticeUpdate $requestBody)
     {
-        return $this->send("patch", ["{team_id}" => $params["team_id"]], []);
+        return $this->send("patch", ["{team_id}" => $params["team_id"]], [], $requestBody);
     }
 
     /**

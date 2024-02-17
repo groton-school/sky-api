@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\OneRoster\Objects\CategoriesOutputModel;
+use Blackbaud\SKY\OneRoster\Objects\CategoryInputModel;
 use Blackbaud\SKY\OneRoster\Objects\CategoryOutputModel;
 
 /**
@@ -48,13 +49,15 @@ class categories extends BaseEndpoint
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the category
+     * @param Blackbaud\SKY\OneRoster\Objects\CategoryInputModel $requestBody
+     *   input model for a category
      *
      * @return \Blackbaud\SKY\OneRoster\Objects\CategoryOutputModel
      *
      * @api
      */
-    public function put(array $params)
+    public function put(array $params, CategoryInputModel $requestBody)
     {
-        return new CategoryOutputModel($this->send("put", ["{id}" => $params["id"]], []));
+        return new CategoryOutputModel($this->send("put", ["{id}" => $params["id"]], [], $requestBody));
     }
 }

@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\academics\sections;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\BulkEnrollment;
 use Blackbaud\SKY\School\Objects\PostResponse;
 use Blackbaud\SKY\School\Objects\StudentCollection;
 
@@ -53,12 +54,16 @@ class students extends BaseEndpoint
      *
      * - Schedule Manager
      *
+     * @param Blackbaud\SKY\School\Objects\BulkEnrollment $requestBody Defines
+     *   which users (students and/or teachers) should be added to which
+     *   offerings (via ```section_id``` and duration ```id```)
+     *
      * @return \Blackbaud\SKY\School\Objects\PostResponse
      *
      * @api
      */
-    public function post()
+    public function post(BulkEnrollment $requestBody)
     {
-        return new PostResponse($this->send("post", [], []));
+        return new PostResponse($this->send("post", [], [], $requestBody));
     }
 }

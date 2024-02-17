@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\ResultCreate;
 
 /**
  * @api
@@ -32,12 +33,14 @@ class result extends BaseEndpoint
      *
      * - Pending Coach
      *
+     * @param Blackbaud\SKY\School\Objects\ResultCreate $requestBody
+     *
      * @return \void
      *
      * @api
      */
-    public function post()
+    public function post(ResultCreate $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

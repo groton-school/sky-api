@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\RelationshipCreate;
 use Blackbaud\SKY\School\Objects\RelationshipReadCollection;
 
 /**
@@ -58,14 +59,16 @@ class relationships extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\RelationshipCreate $requestBody
+     *   Defines the relationship to be created.
      *
      * @return \void
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, RelationshipCreate $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**

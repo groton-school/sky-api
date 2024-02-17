@@ -3,6 +3,8 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\StudentAllergyUpdate;
+use Blackbaud\SKY\School\Objects\StudentMedicalAllergy;
 
 /**
  * @api
@@ -48,14 +50,16 @@ class allergies extends BaseEndpoint
      *
      * @param array{allergy_id: int} $params An associative array
      *     - allergy_id: Format - int32. The ID of the student's allergy.
+     * @param Blackbaud\SKY\School\Objects\StudentAllergyUpdate $requestBody
+     *   The allergy changes
      *
      * @return \int
      *
      * @api
      */
-    public function patch(array $params)
+    public function patch(array $params, StudentAllergyUpdate $requestBody)
     {
-        return $this->send("patch", ["{allergy_id}" => $params["allergy_id"]], []);
+        return $this->send("patch", ["{allergy_id}" => $params["allergy_id"]], [], $requestBody);
     }
 
     /**
@@ -70,12 +74,15 @@ class allergies extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
+     * @param Blackbaud\SKY\School\Objects\StudentMedicalAllergy $requestBody
+     *   The medical allergy to be created for student
+     *
      * @return \int
      *
      * @api
      */
-    public function post()
+    public function post(StudentMedicalAllergy $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

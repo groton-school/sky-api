@@ -3,7 +3,9 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\PhoneAdd;
 use Blackbaud\SKY\School\Objects\PhoneReadCollection;
+use Blackbaud\SKY\School\Objects\PhoneUpdate;
 
 /**
  * @api
@@ -44,14 +46,16 @@ class phones extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\PhoneAdd $requestBody The phone
+     *   information to be created.
      *
      * @return \int
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, PhoneAdd $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**
@@ -100,14 +104,16 @@ class phones extends BaseEndpoint
      *     - phone_id: Format - int32. The phone id to be updated.
      *     - split_phone_if_shared: (Optional) Set to true if phone number is
      *   shared
+     * @param Blackbaud\SKY\School\Objects\PhoneUpdate $requestBody The phone
+     *   information to be updated.
      *
      * @return \int
      *
      * @api
      */
-    public function patchByUser(array $params)
+    public function patchByUser(array $params, PhoneUpdate $requestBody)
     {
         return $this->send("patch", ["{user_id}" => $params["user_id"],
-        "{phone_id}" => $params["phone_id"]], ["split_phone_if_shared" => $params["split_phone_if_shared"]]);
+        "{phone_id}" => $params["phone_id"]], ["split_phone_if_shared" => $params["split_phone_if_shared"]], $requestBody);
     }
 }

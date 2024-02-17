@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\AttendanceCreate;
 use Blackbaud\SKY\School\Objects\AttendanceGetCollection;
 
 /**
@@ -59,12 +60,15 @@ class attendance extends BaseEndpoint
      *
      * - Attendance Manager
      *
+     * @param Blackbaud\SKY\School\Objects\AttendanceCreate $requestBody
+     *   Information about the attendance report
+     *
      * @return \void
      *
      * @api
      */
-    public function post()
+    public function post(AttendanceCreate $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

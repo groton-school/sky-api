@@ -5,6 +5,8 @@ namespace Blackbaud\SKY\School\Endpoints\v1\users;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Objects\UserAdminCustomField;
 use Blackbaud\SKY\School\Objects\UserAdminCustomFieldCollection;
+use Blackbaud\SKY\School\Objects\UserAdminCustomFieldCreate;
+use Blackbaud\SKY\School\Objects\UserAdminCustomFieldUpdate;
 
 /**
  * @api
@@ -93,14 +95,17 @@ class customfields extends BaseEndpoint
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The Id of the user to create a custom
      *   field for
+     * @param Blackbaud\SKY\School\Objects\UserAdminCustomFieldCreate
+     *   $requestBody Object that describes the custom field that will be
+     *   created.
      *
      * @return \bool
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, UserAdminCustomFieldCreate $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**
@@ -114,13 +119,16 @@ class customfields extends BaseEndpoint
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The Id of the user to update an existing
      *   custom field for.
+     * @param Blackbaud\SKY\School\Objects\UserAdminCustomFieldUpdate
+     *   $requestBody Object that describes the custom field that should be
+     *   updated.
      *
      * @return \bool
      *
      * @api
      */
-    public function patchByUser(array $params)
+    public function patchByUser(array $params, UserAdminCustomFieldUpdate $requestBody)
     {
-        return $this->send("patch", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("patch", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 }

@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\OneRoster\Objects\ResultInputModelSvc;
 use Blackbaud\SKY\OneRoster\Objects\ResultOutputModelSvc;
 use Blackbaud\SKY\OneRoster\Objects\ResultsOutputModelSvc;
 
@@ -48,14 +49,16 @@ class results extends BaseEndpoint
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the result
+     * @param Blackbaud\SKY\OneRoster\Objects\ResultInputModelSvc $requestBody
+     *   input model for the result
      *
      * @return \Blackbaud\SKY\OneRoster\Objects\ResultOutputModelSvc
      *
      * @api
      */
-    public function put(array $params)
+    public function put(array $params, ResultInputModelSvc $requestBody)
     {
-        return new ResultOutputModelSvc($this->send("put", ["{id}" => $params["id"]], []));
+        return new ResultOutputModelSvc($this->send("put", ["{id}" => $params["id"]], [], $requestBody));
     }
 
     /**

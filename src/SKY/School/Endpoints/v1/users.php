@@ -3,6 +3,8 @@
 namespace Blackbaud\SKY\School\Endpoints\v1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\UserAdd;
+use Blackbaud\SKY\School\Objects\UserEdit;
 use Blackbaud\SKY\School\Objects\UserRead;
 use Blackbaud\SKY\School\Objects\UserReadCollection;
 
@@ -81,13 +83,16 @@ class users extends BaseEndpoint
      *
      * - Contact Card Manager
      *
+     * @param Blackbaud\SKY\School\Objects\UserAdd $requestBody The user to be
+     *   created
+     *
      * @return \int
      *
      * @api
      */
-    public function post()
+    public function post(UserAdd $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 
     /**
@@ -102,13 +107,16 @@ class users extends BaseEndpoint
      *
      * - Contact Card Manager
      *
+     * @param Blackbaud\SKY\School\Objects\UserEdit $requestBody User
+     *   information to be updated
+     *
      * @return \int
      *
      * @api
      */
-    public function patch()
+    public function patch(UserEdit $requestBody)
     {
-        return $this->send("patch", [], []);
+        return $this->send("patch", [], [], $requestBody);
     }
 
     /**

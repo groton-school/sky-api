@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\events;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\EventCategory;
 use Blackbaud\SKY\School\Objects\EventCategoryCollection;
 use Blackbaud\SKY\School\Objects\EventCategoryCreateResponseExample;
 
@@ -50,13 +51,15 @@ class categories extends BaseEndpoint
      * <param name="eventCategory"></param><param
      * name="cancellationToken"></param>
      *
+     * @param Blackbaud\SKY\School\Objects\EventCategory $requestBody
+     *
      * @return \Blackbaud\SKY\School\Objects\EventCategoryCreateResponseExample
 
      *
      * @api
      */
-    public function post()
+    public function post(EventCategory $requestBody)
     {
-        return new EventCategoryCreateResponseExample($this->send("post", [], []));
+        return new EventCategoryCreateResponseExample($this->send("post", [], [], $requestBody));
     }
 }

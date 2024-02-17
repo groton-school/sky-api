@@ -3,6 +3,8 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\AddressAdd;
+use Blackbaud\SKY\School\Objects\AddressEdit;
 use Blackbaud\SKY\School\Objects\AddressReadCollection;
 
 /**
@@ -49,14 +51,16 @@ class addresses extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\AddressAdd $requestBody Address
+     *   information to be updated.
      *
      * @return \int
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, AddressAdd $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**
@@ -75,15 +79,17 @@ class addresses extends BaseEndpoint
      *   array
      *     - user_id: Format - int32. The ID of the user.
      *     - address_id: Format - int32. The ID of the address to be updated.
+     * @param Blackbaud\SKY\School\Objects\AddressEdit $requestBody Address
+     *   information to be updated.
      *
      * @return \int
      *
      * @api
      */
-    public function patchByUser(array $params)
+    public function patchByUser(array $params, AddressEdit $requestBody)
     {
         return $this->send("patch", ["{user_id}" => $params["user_id"],
-        "{address_id}" => $params["address_id"]], []);
+        "{address_id}" => $params["address_id"]], [], $requestBody);
     }
 
     /**

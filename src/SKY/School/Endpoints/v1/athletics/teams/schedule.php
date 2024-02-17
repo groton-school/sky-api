@@ -3,6 +3,8 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\athletics\teams;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\GameCreate;
+use Blackbaud\SKY\School\Objects\GameUpdate;
 
 /**
  * @api
@@ -33,14 +35,16 @@ class schedule extends BaseEndpoint
      * @param array{team_id: int} $params An associative array
      *     - team_id: Format - int32. ID of the team for the game to be
      *   created
+     * @param Blackbaud\SKY\School\Objects\GameCreate $requestBody Information
+     *   about the game to be created
      *
      * @return \int
      *
      * @api
      */
-    public function postByTeam(array $params)
+    public function postByTeam(array $params, GameCreate $requestBody)
     {
-        return $this->send("post", ["{team_id}" => $params["team_id"]], []);
+        return $this->send("post", ["{team_id}" => $params["team_id"]], [], $requestBody);
     }
 
     /**
@@ -63,14 +67,16 @@ class schedule extends BaseEndpoint
      * @param array{team_id: int} $params An associative array
      *     - team_id: Format - int32. ID of the team for the game to be
      *   updated
+     * @param Blackbaud\SKY\School\Objects\GameUpdate $requestBody Information
+     *   for the game to be updated
      *
      * @return \void
      *
      * @api
      */
-    public function patchByTeam(array $params)
+    public function patchByTeam(array $params, GameUpdate $requestBody)
     {
-        return $this->send("patch", ["{team_id}" => $params["team_id"]], []);
+        return $this->send("patch", ["{team_id}" => $params["team_id"]], [], $requestBody);
     }
 
     /**

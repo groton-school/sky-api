@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\TestScoreAdd;
 use Blackbaud\SKY\School\Objects\TestScoreCollection;
 
 /**
@@ -43,13 +44,14 @@ class testscores extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\TestScoreAdd $requestBody
      *
      * @return \int
      *
      * @api
      */
-    public function post(array $params)
+    public function post(array $params, TestScoreAdd $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 }

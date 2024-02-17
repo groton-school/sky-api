@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Objects\LocationCollection;
+use Blackbaud\SKY\School\Objects\LocationCreateModel;
 
 /**
  * @api
@@ -59,12 +60,15 @@ class locations extends BaseEndpoint
      *
      * - Pending Coach
      *
+     * @param Blackbaud\SKY\School\Objects\LocationCreateModel $requestBody
+     *   The location to be created
+     *
      * @return \int
      *
      * @api
      */
-    public function post()
+    public function post(LocationCreateModel $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

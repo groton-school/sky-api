@@ -3,7 +3,9 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\EducationAdd;
 use Blackbaud\SKY\School\Objects\EducationReadCollection;
+use Blackbaud\SKY\School\Objects\EducationUpdate;
 
 /**
  * @api
@@ -53,14 +55,16 @@ class education extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\EducationAdd $requestBody The
+     *   education model.
      *
      * @return \int
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, EducationAdd $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**
@@ -112,14 +116,16 @@ class education extends BaseEndpoint
      *   array
      *     - user_id: Format - int32. The ID of the user.
      *     - education_id: Format - int32. The ID of the education.
+     * @param Blackbaud\SKY\School\Objects\EducationUpdate $requestBody The
+     *   education model.
      *
      * @return \int
      *
      * @api
      */
-    public function patchByUser(array $params)
+    public function patchByUser(array $params, EducationUpdate $requestBody)
     {
         return $this->send("patch", ["{user_id}" => $params["user_id"],
-        "{education_id}" => $params["education_id"]], []);
+        "{education_id}" => $params["education_id"]], [], $requestBody);
     }
 }

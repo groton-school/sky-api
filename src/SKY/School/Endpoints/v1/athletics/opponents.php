@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Objects\OpponentFlyweightCollection;
+use Blackbaud\SKY\School\Objects\OpponentUpdateModel;
 
 /**
  * @api
@@ -58,12 +59,15 @@ class opponents extends BaseEndpoint
      *
      * - Pending Coach
      *
+     * @param Blackbaud\SKY\School\Objects\OpponentUpdateModel $requestBody
+     *   The opponent to be created
+     *
      * @return \int
      *
      * @api
      */
-    public function post()
+    public function post(OpponentUpdateModel $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

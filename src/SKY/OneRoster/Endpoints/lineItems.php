@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\OneRoster\Objects\LineItemInputModel;
 use Blackbaud\SKY\OneRoster\Objects\LineItemOutputModel;
 use Blackbaud\SKY\OneRoster\Objects\LineItemsOutputModel;
 
@@ -48,13 +49,15 @@ class lineItems extends BaseEndpoint
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the lineItem
+     * @param Blackbaud\SKY\OneRoster\Objects\LineItemInputModel $requestBody
+     *   input model for the lineItem
      *
      * @return \Blackbaud\SKY\OneRoster\Objects\LineItemOutputModel
      *
      * @api
      */
-    public function put(array $params)
+    public function put(array $params, LineItemInputModel $requestBody)
     {
-        return new LineItemOutputModel($this->send("put", ["{id}" => $params["id"]], []));
+        return new LineItemOutputModel($this->send("put", ["{id}" => $params["id"]], [], $requestBody));
     }
 }

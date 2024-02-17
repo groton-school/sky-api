@@ -3,7 +3,9 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\OccupationCreate;
 use Blackbaud\SKY\School\Objects\OccupationReadCollection;
+use Blackbaud\SKY\School\Objects\OccupationUpdate;
 
 /**
  * @api
@@ -51,14 +53,16 @@ class occupations extends BaseEndpoint
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
+     * @param Blackbaud\SKY\School\Objects\OccupationCreate $requestBody The
+     *   occupation information to be created.
      *
      * @return \int
      *
      * @api
      */
-    public function postByUser(array $params)
+    public function postByUser(array $params, OccupationCreate $requestBody)
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
     }
 
     /**
@@ -110,14 +114,16 @@ class occupations extends BaseEndpoint
      *   array
      *     - user_id: Format - int32. The ID of the user.
      *     - occupation_id: Format - int32. The ID of the occupation.
+     * @param Blackbaud\SKY\School\Objects\OccupationUpdate $requestBody The
+     *   occupation information to be updated.
      *
      * @return \int
      *
      * @api
      */
-    public function patchByUser(array $params)
+    public function patchByUser(array $params, OccupationUpdate $requestBody)
     {
         return $this->send("patch", ["{user_id}" => $params["user_id"],
-        "{occupation_id}" => $params["occupation_id"]], []);
+        "{occupation_id}" => $params["occupation_id"]], [], $requestBody);
     }
 }

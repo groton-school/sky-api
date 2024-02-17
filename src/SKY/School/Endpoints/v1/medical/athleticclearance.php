@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\StudentAthleticRequirementUpdate;
 
 /**
  * @api
@@ -24,12 +25,15 @@ class athleticclearance extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
+     * @param Blackbaud\SKY\School\Objects\StudentAthleticRequirementUpdate
+     *   $requestBody The athletics requirements to update
+     *
      * @return \string[]
      *
      * @api
      */
-    public function post()
+    public function post(StudentAthleticRequirementUpdate $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }

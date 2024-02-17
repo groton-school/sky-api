@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\UserEnrollmentCreate;
 use Blackbaud\SKY\School\Objects\UserEnrollmentResponse;
 
 /**
@@ -23,12 +24,14 @@ class enroll extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
+     * @param Blackbaud\SKY\School\Objects\UserEnrollmentCreate $requestBody
+     *
      * @return \Blackbaud\SKY\School\Objects\UserEnrollmentResponse
      *
      * @api
      */
-    public function post()
+    public function post(UserEnrollmentCreate $requestBody)
     {
-        return new UserEnrollmentResponse($this->send("post", [], []));
+        return new UserEnrollmentResponse($this->send("post", [], [], $requestBody));
     }
 }

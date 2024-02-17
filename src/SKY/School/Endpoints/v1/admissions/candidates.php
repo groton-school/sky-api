@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\v1\admissions;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\CandidateCreate;
 use Blackbaud\SKY\School\Objects\CandidateReadCollection;
 
 /**
@@ -70,12 +71,14 @@ class candidates extends BaseEndpoint
      *
      * - Admissions Staff
      *
+     * @param Blackbaud\SKY\School\Objects\CandidateCreate $requestBody
+     *
      * @return \int
      *
      * @api
      */
-    public function post()
+    public function post(CandidateCreate $requestBody)
     {
-        return $this->send("post", [], []);
+        return $this->send("post", [], [], $requestBody);
     }
 }
