@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -9,12 +9,17 @@ use Battis\OpenAPI\Client\BaseObject;
  * condition
  *
  * @property int $id The Id of the role
- * @property string | null $name The name of the role
+ * @property string $name The name of the role
  *
  * @api
  */
 class SecurityRole extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["id","name"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "id",
+        "name",
+    ];
 }

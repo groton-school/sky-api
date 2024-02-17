@@ -1,15 +1,125 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\v1\users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\AddressReadCollection;
 
+/**
+ * @api
+ */
 class addresses extends BaseEndpoint
 {
+    /**
+     * @var string url
+     */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/addresses/{address_id}/{address_type_id}";
 
-    public function delete(string $user_id, string $address_id, string $address_type_id): void
+    /**
+     * Returns a collection of addresses.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - SKY API Data Sync
+     *
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     *
+     * @return \Blackbaud\SKY\School\Objects\AddressReadCollection
+     *
+     * @api
+     */
+    public function getByUser(array $params)
     {
-        return $this->send("delete", ["{user_id}" => $user_id, "{address_id}" => $address_id, "{address_type_id}" => $address_type_id]);
+        return new AddressReadCollection($this->send("get", ["{user_id}" => $params["user_id"]], []));
+    }
+
+    /**
+     * Returns the ID of the address just created.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     *
+     * @return \int
+     *
+     * @api
+     */
+    public function postByUser(array $params)
+    {
+        return $this->send("post", ["{user_id}" => $params["user_id"]], []);
+    }
+
+    /**
+     * Returns ID of the address just updated.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * @param array{user_id: int, address_id: int} $params An associative
+     *   array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - address_id: Format - int32. The ID of the address to be updated.
+     *
+     * @return \int
+     *
+     * @api
+     */
+    public function patchByUser(array $params)
+    {
+        return $this->send("patch", ["{user_id}" => $params["user_id"],
+        "{address_id}" => $params["address_id"]], []);
+    }
+
+    /**
+     * Removes the specified address from the user.
+     *
+     * If the address is shared, other users linked to the address will not be
+     * affected.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
+     *
+     * @param array{user_id: int, address_id: int, address_type_id: int}
+     *   $params An associative array
+     *     - user_id: Format - int32. The ID of the user
+     *     - address_id: Format - int32. The ID of the user's address to
+     *   delete.
+     *     - address_type_id: Format - int32. The ID of the user's address
+     *   type to delete.
+     *
+     * @return \void
+     *
+     * @api
+     */
+    public function deleteByUserAndAddress(array $params)
+    {
+        return $this->send("delete", ["{user_id}" => $params["user_id"],
+        "{address_id}" => $params["address_id"],
+        "{address_type_id}" => $params["address_type_id"]], []);
     }
 }

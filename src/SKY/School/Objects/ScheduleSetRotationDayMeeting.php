@@ -1,20 +1,28 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int | null $WeekInCycle 
- * @property int | null $DayInCycle 
- * @property int | null $DailyOrdinal 
- * @property int | null $BlockId 
- * @property string | null $BlockName 
+ * @property int $WeekInCycle
+ * @property int $DayInCycle
+ * @property int $DailyOrdinal
+ * @property int $BlockId
+ * @property string $BlockName
  *
  * @api
  */
 class ScheduleSetRotationDayMeeting extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["WeekInCycle","DayInCycle","DailyOrdinal","BlockId","BlockName"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "WeekInCycle",
+        "DayInCycle",
+        "DailyOrdinal",
+        "BlockId",
+        "BlockName",
+    ];
 }

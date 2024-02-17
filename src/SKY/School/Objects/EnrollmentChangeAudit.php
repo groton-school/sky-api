@@ -1,21 +1,30 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int | null $section_id 
- * @property string | null $course_code 
- * @property string | null $section_name 
- * @property string | null $modified_date_time 
- * @property int | null $modified_by 
- * @property string | null $action 
+ * @property int $section_id
+ * @property string $course_code
+ * @property string $section_name
+ * @property string $modified_date_time
+ * @property int $modified_by
+ * @property string $action
  *
  * @api
  */
 class EnrollmentChangeAudit extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["section_id","course_code","section_name","modified_date_time","modified_by","action"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "section_id",
+        "course_code",
+        "section_name",
+        "modified_date_time",
+        "modified_by",
+        "action",
+    ];
 }

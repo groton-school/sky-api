@@ -1,28 +1,40 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\OneRoster\Objects;
+namespace Blackbaud\SKY\OneRoster\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property \GrotonSchool\Blackbaud\SKY\OneRoster\Objects\GuidRefModel $user 
- * @property \GrotonSchool\Blackbaud\SKY\OneRoster\Objects\GuidRefModel $class
- *   
- * @property \GrotonSchool\Blackbaud\SKY\OneRoster\Objects\GuidRefModel
- *   $school 
- * @property string | null $role 
- * @property bool | null $primary 
- * @property string | null $beginDate 
- * @property string | null $endDate 
- * @property string | null $sourcedId 
- * @property string | null $status 
- * @property string | null $dateLastModified 
- * @property string[] | null $metadata 
+ * @property \Blackbaud\SKY\OneRoster\Objects\GuidRefModel $user
+ * @property \Blackbaud\SKY\OneRoster\Objects\GuidRefModel $class
+ * @property \Blackbaud\SKY\OneRoster\Objects\GuidRefModel $school
+ * @property string $role
+ * @property bool $primary
+ * @property string $beginDate
+ * @property string $endDate
+ * @property string $sourcedId
+ * @property string $status
+ * @property string $dateLastModified
+ * @property string[] $metadata
  *
  * @api
  */
 class EnrollmentModel extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["user","class","school","role","primary","beginDate","endDate","sourcedId","status","dateLastModified","metadata"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "user",
+        "class",
+        "school",
+        "role",
+        "primary",
+        "beginDate",
+        "endDate",
+        "sourcedId",
+        "status",
+        "dateLastModified",
+        "metadata",
+    ];
 }

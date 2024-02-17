@@ -1,21 +1,28 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * Media Model
  *
- * @property string | null $type 
- * @property string | null $title 
- * @property string | null $caption 
- * @property string | null $url 
+ * @property string $type
+ * @property string $title
+ * @property string $caption
+ * @property string $url
  *
  * @api
  */
 class MediaItem extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["type","title","caption","url"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "type",
+        "title",
+        "caption",
+        "url",
+    ];
 }

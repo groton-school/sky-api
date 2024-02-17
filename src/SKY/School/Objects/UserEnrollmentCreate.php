@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -9,10 +9,10 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property int $grade_level_id ID of the grade the individual is enrolling
  *   in
  * @property int $school_level_id ID of the school level
- * @property string | null $school_year_label School Year individual is
- *   enrolling in.  Defaults to the current school year.
+ * @property string $school_year_label School Year individual is enrolling in.
+ *    Defaults to the current school year.
  * @property string $enroll_date Date of the enrollment
- * @property string | null $depart_date Date departed
+ * @property string $depart_date Date departed
  * @property bool $current_year Toggles current year
  * @property bool $has_grades Toggles has grades
  * @property bool $grade_repeated Toggles grade repeated
@@ -31,6 +31,25 @@ use Battis\OpenAPI\Client\BaseObject;
  */
 class UserEnrollmentCreate extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["user_id","grade_level_id","school_level_id","school_year_label","enroll_date","depart_date","current_year","has_grades","grade_repeated","graduated","allow_edit","allow_delete","future_enrollments","duration_id","session_id","role_ids"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "user_id",
+        "grade_level_id",
+        "school_level_id",
+        "school_year_label",
+        "enroll_date",
+        "depart_date",
+        "current_year",
+        "has_grades",
+        "grade_repeated",
+        "graduated",
+        "allow_edit",
+        "allow_delete",
+        "future_enrollments",
+        "duration_id",
+        "session_id",
+        "role_ids",
+    ];
 }

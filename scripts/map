@@ -2,6 +2,7 @@
 <?php
 
 use Battis\DataUtilities\Path;
+use Battis\Loggable\Loggable;
 use Battis\OpenAPI\CLI\Map;
 use cebe\openapi\spec\OpenApi;
 use Monolog\Handler\ErrorLogHandler;
@@ -26,6 +27,7 @@ $logger = new Logger('console');
 $handler = new ErrorLogHandler();
 $handler->setFormatter(new CliFormatter());
 $logger->pushHandler($handler);
+Loggable::init($logger);
 
 $map = new BlackbaudMap($logger);
 $map->run();

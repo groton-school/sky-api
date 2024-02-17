@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -18,6 +18,13 @@ use Battis\OpenAPI\Client\BaseObject;
  */
 class CandidateCreate extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["user_id","entering_year","entering_grade_id","checklist_id"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "user_id",
+        "entering_year",
+        "entering_grade_id",
+        "checklist_id",
+    ];
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -13,6 +13,10 @@ use Battis\OpenAPI\Client\BaseObject;
  */
 class GameOpponent extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["opponent_id"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "opponent_id",
+    ];
 }

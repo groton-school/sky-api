@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -13,6 +13,12 @@ use Battis\OpenAPI\Client\BaseObject;
  */
 class ExcuseDurationTypes extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["na","full_day","half_day"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "na",
+        "full_day",
+        "half_day",
+    ];
 }

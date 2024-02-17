@@ -1,20 +1,69 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\OpponentFlyweightCollection;
 
+/**
+ * @api
+ */
 class opponents extends BaseEndpoint
 {
+    /**
+     * @var string url
+     */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
 
-    public function get(): void
+    /**
+     * Returns a collection of athletic opponents.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
+     *
+     * @return \Blackbaud\SKY\School\Objects\OpponentFlyweightCollection
+     *
+     * @api
+     */
+    public function getAll()
     {
-        return $this->send("get");
+        return new OpponentFlyweightCollection($this->send("get", [], []));
     }
 
-    public function post(): void
+    /**
+     * Creates a new athletic opponent.
+     *
+     * Requires at least one of the following roles in the Education
+     * Management system:
+     *
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
+     *
+     * @return \int
+     *
+     * @api
+     */
+    public function post()
     {
-        return $this->send("post");
+        return $this->send("post", [], []);
     }
 }

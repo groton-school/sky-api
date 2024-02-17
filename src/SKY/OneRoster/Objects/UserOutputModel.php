@@ -1,18 +1,22 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\OneRoster\Objects;
+namespace Blackbaud\SKY\OneRoster\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property \GrotonSchool\Blackbaud\SKY\OneRoster\Objects\ORUserModel $user 
- * @property GrotonSchool\Blackbaud\SKY\OneRoster\Objects\StatusInfoModel[] |
- *   null $statusInfoSet 
+ * @property \Blackbaud\SKY\OneRoster\Objects\ORUserModel $user
+ * @property \Blackbaud\SKY\OneRoster\Objects\StatusInfoModel[] $statusInfoSet
  *
  * @api
  */
 class UserOutputModel extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["user","statusInfoSet"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "user",
+        "statusInfoSet",
+    ];
 }

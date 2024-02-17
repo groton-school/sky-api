@@ -1,25 +1,75 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\OneRoster\Endpoints;
+namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\OneRoster\Objects\ResultOutputModelSvc;
+use Blackbaud\SKY\OneRoster\Objects\ResultsOutputModelSvc;
 
+/**
+ * @api
+ */
 class results extends BaseEndpoint
 {
+    /**
+     * @var string url
+     */
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/results/{id}";
 
-    public function get(string $id): void
+    /**
+     * Returns a collection of results.
+     *
+     * @return \Blackbaud\SKY\OneRoster\Objects\ResultsOutputModelSvc
+     *
+     * @api
+     */
+    public function getAll()
     {
-        return $this->send("get", ["{id}" => $id]);
+        return new ResultsOutputModelSvc($this->send("get", [], []));
     }
 
-    public function put(string $id): void
+    /**
+     * Returns a specific result.
+     *
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
+     *
+     * @return \Blackbaud\SKY\OneRoster\Objects\ResultOutputModelSvc
+     *
+     * @api
+     */
+    public function get(array $params)
     {
-        return $this->send("put", ["{id}" => $id]);
+        return new ResultOutputModelSvc($this->send("get", ["{id}" => $params["id"]], []));
     }
 
-    public function delete(string $id): void
+    /**
+     * Returns the result object that was created or updated.
+     *
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
+     *
+     * @return \Blackbaud\SKY\OneRoster\Objects\ResultOutputModelSvc
+     *
+     * @api
+     */
+    public function put(array $params)
     {
-        return $this->send("delete", ["{id}" => $id]);
+        return new ResultOutputModelSvc($this->send("put", ["{id}" => $params["id"]], []));
+    }
+
+    /**
+     * Deletes the specified result sourcedId.
+     *
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
+     *
+     * @return \Blackbaud\SKY\OneRoster\Objects\ResultsOutputModelSvc
+     *
+     * @api
+     */
+    public function delete(array $params)
+    {
+        return new ResultsOutputModelSvc($this->send("delete", ["{id}" => $params["id"]], []));
     }
 }

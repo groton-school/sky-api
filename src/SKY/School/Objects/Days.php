@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -26,6 +26,16 @@ use Battis\OpenAPI\Client\BaseObject;
  */
 class Days extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+    ];
 }

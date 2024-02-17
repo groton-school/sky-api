@@ -1,32 +1,52 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\OneRoster\Objects;
+namespace Blackbaud\SKY\OneRoster\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string | null $birthDate 
- * @property string | null $sex 
- * @property bool | null $americanIndianOrAlaskaNative 
- * @property bool | null $asian 
- * @property bool | null $blackOrAfricanAmerican 
- * @property bool | null $nativeHawaiianOrOtherPacificIslander 
- * @property bool | null $white 
- * @property bool | null $demographicRaceTwoOrMoreRaces 
- * @property bool | null $hispanicOrLatinoEthnicity 
- * @property string | null $countryOfBirthCode 
- * @property string | null $stateOfBirthAbbreviation 
- * @property string | null $cityOfBirth 
- * @property string | null $publicSchoolResidenceStatus 
- * @property string | null $sourcedId 
- * @property string | null $status 
- * @property string | null $dateLastModified 
- * @property string[] | null $metadata 
+ * @property string $birthDate
+ * @property string $sex
+ * @property bool $americanIndianOrAlaskaNative
+ * @property bool $asian
+ * @property bool $blackOrAfricanAmerican
+ * @property bool $nativeHawaiianOrOtherPacificIslander
+ * @property bool $white
+ * @property bool $demographicRaceTwoOrMoreRaces
+ * @property bool $hispanicOrLatinoEthnicity
+ * @property string $countryOfBirthCode
+ * @property string $stateOfBirthAbbreviation
+ * @property string $cityOfBirth
+ * @property string $publicSchoolResidenceStatus
+ * @property string $sourcedId
+ * @property string $status
+ * @property string $dateLastModified
+ * @property string[] $metadata
  *
  * @api
  */
 class ORDemographicModel extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["birthDate","sex","americanIndianOrAlaskaNative","asian","blackOrAfricanAmerican","nativeHawaiianOrOtherPacificIslander","white","demographicRaceTwoOrMoreRaces","hispanicOrLatinoEthnicity","countryOfBirthCode","stateOfBirthAbbreviation","cityOfBirth","publicSchoolResidenceStatus","sourcedId","status","dateLastModified","metadata"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "birthDate",
+        "sex",
+        "americanIndianOrAlaskaNative",
+        "asian",
+        "blackOrAfricanAmerican",
+        "nativeHawaiianOrOtherPacificIslander",
+        "white",
+        "demographicRaceTwoOrMoreRaces",
+        "hispanicOrLatinoEthnicity",
+        "countryOfBirthCode",
+        "stateOfBirthAbbreviation",
+        "cityOfBirth",
+        "publicSchoolResidenceStatus",
+        "sourcedId",
+        "status",
+        "dateLastModified",
+        "metadata",
+    ];
 }

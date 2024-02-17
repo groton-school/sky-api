@@ -1,15 +1,33 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\v1\types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Blackbaud\SKY\School\Objects\ExcuseDurationTypes;
 
+/**
+ * @api
+ */
 class excusedurationtypes extends BaseEndpoint
 {
+    /**
+     * @var string url
+     */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedurationtypes";
 
-    public function get(): void
+    /**
+     * Returns a collection of excuse duration types.
+     *
+     * Requires the following role in the Education Management system:
+     *
+     * - SKY API Basic
+     *
+     * @return \Blackbaud\SKY\School\Objects\ExcuseDurationTypes
+     *
+     * @api
+     */
+    public function getAll()
     {
-        return $this->send("get");
+        return new ExcuseDurationTypes($this->send("get", [], []));
     }
 }

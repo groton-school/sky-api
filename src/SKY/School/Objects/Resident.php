@@ -1,33 +1,52 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int | null $building_id 
- * @property bool | null $is_admin 
- * @property bool | null $is_head 
- * @property int | null $owner_type 
- * @property string | null $resident_from_date 
- * @property int | null $room_id 
- * @property int | null $section_id 
- * @property int | null $user_id 
- * @property string | null $first_name 
- * @property string | null $last_name 
- * @property string | null $nick_name 
- * @property string | null $prefix 
- * @property string | null $suffix 
- * @property string | null $middle_name 
- * @property string | null $display 
- * @property string | null $date_of_birth 
- * @property GrotonSchool\Blackbaud\SKY\School\Objects\DormStudentInfo[] |
- *   null $student_info 
+ * @property int $building_id
+ * @property bool $is_admin
+ * @property bool $is_head
+ * @property int $owner_type
+ * @property string $resident_from_date
+ * @property int $room_id
+ * @property int $section_id
+ * @property int $user_id
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $nick_name
+ * @property string $prefix
+ * @property string $suffix
+ * @property string $middle_name
+ * @property string $display
+ * @property string $date_of_birth
+ * @property \Blackbaud\SKY\School\Objects\DormStudentInfo[] $student_info
  *
  * @api
  */
 class Resident extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["building_id","is_admin","is_head","owner_type","resident_from_date","room_id","section_id","user_id","first_name","last_name","nick_name","prefix","suffix","middle_name","display","date_of_birth","student_info"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "building_id",
+        "is_admin",
+        "is_head",
+        "owner_type",
+        "resident_from_date",
+        "room_id",
+        "section_id",
+        "user_id",
+        "first_name",
+        "last_name",
+        "nick_name",
+        "prefix",
+        "suffix",
+        "middle_name",
+        "display",
+        "date_of_birth",
+        "student_info",
+    ];
 }

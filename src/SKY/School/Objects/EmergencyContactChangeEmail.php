@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -8,18 +8,28 @@ use Battis\OpenAPI\Client\BaseObject;
  * Emergency Contact Change Email Model
  *
  * @property bool $active Active Indicator
- * @property string | null $automated_email Automated email type
- * @property string | null $email The email address of a user
- * @property string | null $first_name The first name of the emergency contact
- * @property string | null $last_name The last name of the emergency contact
- * @property string | null $relationship The relationship of the emergency
- *   contact to the user
- * @property int | null $sort_order Sort order
+ * @property string $automated_email Automated email type
+ * @property string $email The email address of a user
+ * @property string $first_name The first name of the emergency contact
+ * @property string $last_name The last name of the emergency contact
+ * @property string $relationship The relationship of the emergency contact to
+ *   the user
+ * @property int $sort_order Sort order
  *
  * @api
  */
 class EmergencyContactChangeEmail extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["active","automated_email","email","first_name","last_name","relationship","sort_order"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "active",
+        "automated_email",
+        "email",
+        "first_name",
+        "last_name",
+        "relationship",
+        "sort_order",
+    ];
 }

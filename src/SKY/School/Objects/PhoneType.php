@@ -1,6 +1,6 @@
 <?php
 
-namespace GrotonSchool\Blackbaud\SKY\School\Objects;
+namespace Blackbaud\SKY\School\Objects;
 
 use Battis\OpenAPI\Client\BaseObject;
 
@@ -9,12 +9,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property int $id The type ID of a phone number; the type ID corresponds
  *   with the type of phone number (ex. Cell, Work, Home)
- * @property string | null $type The name of the phone type
+ * @property string $type The name of the phone type
  *
  * @api
  */
 class PhoneType extends BaseObject
 {
-    /** @var string[] $fields */
-    protected static array $fields = ["id","type"];
+    /**
+     * @var string[] fields
+     */
+    protected static array $fields = [
+        "id",
+        "type",
+    ];
 }
