@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Attendance Model
@@ -34,32 +34,32 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AttendanceGet extends BaseObject
+class AttendanceGet extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "attendance_of_record",
-        "attendance_type",
-        "block_name",
-        "comment",
-        "date",
-        "excuse_category_description",
-        "excuse_category_id",
-        "excuse_description",
-        "excuse_type_id",
-        "excused",
-        "grad_year",
-        "grade",
-        "grade_level_sort",
-        "group_name",
-        "photo_file_name",
-        "section",
-        "section_id",
-        "student_name",
-        "student_user_id",
-        "teacher_name",
+        "id" => "int",
+        "attendance_of_record" => "bool",
+        "attendance_type" => "bool",
+        "block_name" => "string",
+        "comment" => "string",
+        "date" => "string",
+        "excuse_category_description" => "string",
+        "excuse_category_id" => "int",
+        "excuse_description" => "string",
+        "excuse_type_id" => "int",
+        "excused" => "int",
+        "grad_year" => "string",
+        "grade" => "string",
+        "grade_level_sort" => "int",
+        "group_name" => "string",
+        "photo_file_name" => "string",
+        "section" => "string",
+        "section_id" => "int",
+        "student_name" => "string",
+        "student_user_id" => "int",
+        "teacher_name" => "string",
     ];
 }

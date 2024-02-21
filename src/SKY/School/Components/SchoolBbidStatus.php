@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The id of the user in Education Management
@@ -21,21 +21,21 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SchoolBbidStatus extends BaseObject
+class SchoolBbidStatus extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "current_authentication",
-        "days_remaining",
-        "email",
-        "invalid_message",
-        "invited",
-        "name",
-        "status_id",
-        "status",
-        "username",
+        "id" => "int",
+        "current_authentication" => "string",
+        "days_remaining" => "int",
+        "email" => "string",
+        "invalid_message" => "string",
+        "invited" => "string",
+        "name" => "string",
+        "status_id" => "int",
+        "status" => "string",
+        "username" => "string",
     ];
 }

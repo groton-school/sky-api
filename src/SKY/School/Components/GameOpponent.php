@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * A game opponent
@@ -11,12 +11,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GameOpponent extends BaseObject
+class GameOpponent extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "opponent_id",
+        "opponent_id" => "int",
     ];
 }

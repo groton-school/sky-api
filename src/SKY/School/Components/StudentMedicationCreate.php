@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student medication create
@@ -33,22 +33,22 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentMedicationCreate extends BaseObject
+class StudentMedicationCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "medication_type",
-        "date_as_of",
-        "date_until",
-        "location",
-        "dosage",
-        "dispense",
-        "conditions",
-        "allergies",
-        "notes",
-        "role_access",
+        "user_id" => "int",
+        "medication_type" => "string",
+        "date_as_of" => "string",
+        "date_until" => "string",
+        "location" => "string",
+        "dosage" => "string",
+        "dispense" => "\Blackbaud\SKY\School\Components\MedicationDosageCreate",
+        "conditions" => "int[]",
+        "allergies" => "int[]",
+        "notes" => "string",
+        "role_access" => "\Blackbaud\SKY\School\Components\MedicalSecurityRole[]",
     ];
 }

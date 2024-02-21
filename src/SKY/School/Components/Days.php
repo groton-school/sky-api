@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Days for medication
@@ -24,18 +24,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Days extends BaseObject
+class Days extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "sunday",
-        "monday",
-        "tuesday",
-        "wednesday",
-        "thursday",
-        "friday",
-        "saturday",
+        "sunday" => "bool",
+        "monday" => "bool",
+        "tuesday" => "bool",
+        "wednesday" => "bool",
+        "thursday" => "bool",
+        "friday" => "bool",
+        "saturday" => "bool",
     ];
 }

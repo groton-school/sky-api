@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $schedule_set Name of the schedule rotation for the cycle
@@ -24,26 +24,26 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Cycle extends BaseObject
+class Cycle extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "schedule_set",
-        "schedule_set_id",
-        "week",
-        "day",
-        "begin_time",
-        "end_time",
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "room_full_name",
-        "canceled",
+        "schedule_set" => "string",
+        "schedule_set_id" => "int",
+        "week" => "int",
+        "day" => "int",
+        "begin_time" => "string",
+        "end_time" => "string",
+        "sun" => "bool",
+        "mon" => "bool",
+        "tue" => "bool",
+        "wed" => "bool",
+        "thu" => "bool",
+        "fri" => "bool",
+        "sat" => "bool",
+        "room_full_name" => "string",
+        "canceled" => "bool",
     ];
 }

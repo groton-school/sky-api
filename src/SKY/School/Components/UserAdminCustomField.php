@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * UserAdminCustomField
@@ -16,16 +16,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserAdminCustomField extends BaseObject
+class UserAdminCustomField extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "first_name",
-        "last_name",
-        "preferred_name",
-        "custom_fields",
+        "id" => "int",
+        "first_name" => "string",
+        "last_name" => "string",
+        "preferred_name" => "string",
+        "custom_fields" => "\Blackbaud\SKY\School\Components\CustomAdminField[]",
     ];
 }

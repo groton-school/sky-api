@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student Academic Section Model
@@ -26,20 +26,20 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AcademicsSectionStudent extends BaseObject
+class AcademicsSectionStudent extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_id",
-        "section_display_name",
-        "school_level_name",
-        "room_name",
-        "block_name",
-        "lead_section_id",
-        "marking_period_id",
-        "duration_id",
-        "cumulative_grade",
+        "section_id" => "int",
+        "section_display_name" => "string",
+        "school_level_name" => "string",
+        "room_name" => "string",
+        "block_name" => "string",
+        "lead_section_id" => "int",
+        "marking_period_id" => "int",
+        "duration_id" => "int",
+        "cumulative_grade" => "float",
     ];
 }

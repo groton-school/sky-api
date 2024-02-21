@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $user
@@ -19,22 +19,22 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EnrollmentModel extends BaseObject
+class EnrollmentModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user",
-        "class",
-        "school",
-        "role",
-        "primary",
-        "beginDate",
-        "endDate",
-        "sourcedId",
-        "status",
-        "dateLastModified",
-        "metadata",
+        "user" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "class" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "school" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "role" => "string",
+        "primary" => "bool",
+        "beginDate" => "string",
+        "endDate" => "string",
+        "sourcedId" => "string",
+        "status" => "string",
+        "dateLastModified" => "string",
+        "metadata" => "string[]",
     ];
 }

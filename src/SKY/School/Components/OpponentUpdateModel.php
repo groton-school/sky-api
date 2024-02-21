@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property string $name Opponents name. Required.
@@ -28,31 +28,31 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class OpponentUpdateModel extends BaseObject
+class OpponentUpdateModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "name",
-        "phone1",
-        "ad_first_name",
-        "ad_last_name",
-        "ad_email",
-        "fax",
-        "phone2",
-        "asst_ad_first_name",
-        "asst_ad_last_name",
-        "asst_ad_email",
-        "address_id",
-        "address_line1",
-        "address_line2",
-        "address_line3",
-        "city",
-        "state_short",
-        "country",
-        "province",
-        "zip",
-        "conference_id",
+        "name" => "string",
+        "phone1" => "string",
+        "ad_first_name" => "string",
+        "ad_last_name" => "string",
+        "ad_email" => "string",
+        "fax" => "string",
+        "phone2" => "string",
+        "asst_ad_first_name" => "string",
+        "asst_ad_last_name" => "string",
+        "asst_ad_email" => "string",
+        "address_id" => "int",
+        "address_line1" => "string",
+        "address_line2" => "string",
+        "address_line3" => "string",
+        "city" => "string",
+        "state_short" => "string",
+        "country" => "string",
+        "province" => "string",
+        "zip" => "string",
+        "conference_id" => "int",
     ];
 }

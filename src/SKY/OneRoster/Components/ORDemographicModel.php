@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $birthDate
@@ -25,28 +25,28 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ORDemographicModel extends BaseObject
+class ORDemographicModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "birthDate",
-        "sex",
-        "americanIndianOrAlaskaNative",
-        "asian",
-        "blackOrAfricanAmerican",
-        "nativeHawaiianOrOtherPacificIslander",
-        "white",
-        "demographicRaceTwoOrMoreRaces",
-        "hispanicOrLatinoEthnicity",
-        "countryOfBirthCode",
-        "stateOfBirthAbbreviation",
-        "cityOfBirth",
-        "publicSchoolResidenceStatus",
-        "sourcedId",
-        "status",
-        "dateLastModified",
-        "metadata",
+        "birthDate" => "string",
+        "sex" => "string",
+        "americanIndianOrAlaskaNative" => "bool",
+        "asian" => "bool",
+        "blackOrAfricanAmerican" => "bool",
+        "nativeHawaiianOrOtherPacificIslander" => "bool",
+        "white" => "bool",
+        "demographicRaceTwoOrMoreRaces" => "bool",
+        "hispanicOrLatinoEthnicity" => "bool",
+        "countryOfBirthCode" => "string",
+        "stateOfBirthAbbreviation" => "string",
+        "cityOfBirth" => "string",
+        "publicSchoolResidenceStatus" => "string",
+        "sourcedId" => "string",
+        "status" => "string",
+        "dateLastModified" => "string",
+        "metadata" => "string[]",
     ];
 }

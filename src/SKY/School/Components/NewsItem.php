@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * NewsItem Model
@@ -21,19 +21,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class NewsItem extends BaseObject
+class NewsItem extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "headline",
-        "author",
-        "short_description",
-        "long_description",
-        "featured",
-        "media_item",
-        "categories",
+        "id" => "int",
+        "headline" => "string",
+        "author" => "string",
+        "short_description" => "string",
+        "long_description" => "string",
+        "featured" => "bool",
+        "media_item" => "\Blackbaud\SKY\School\Components\MediaItem[]",
+        "categories" => "\Blackbaud\SKY\School\Components\Category[]",
     ];
 }

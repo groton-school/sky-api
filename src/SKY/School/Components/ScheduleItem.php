@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id ID of the schedule item
@@ -82,57 +82,57 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ScheduleItem extends BaseObject
+class ScheduleItem extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "alumni",
-        "cancelled",
-        "created",
-        "departure_location",
-        "departure_time",
-        "description",
-        "directions",
-        "dismissal_time",
-        "end_time",
-        "end_time_span",
-        "title",
-        "faculty",
-        "game_date",
-        "game_time",
-        "highlight_id",
-        "home_or_away",
-        "invitational",
-        "last_modified",
-        "league",
-        "location",
-        "map_url",
-        "meet",
-        "opponents",
-        "pickup_time",
-        "playoff",
-        "practice",
-        "previous_schedule_id",
-        "published",
-        "require_dinner",
-        "require_lunch",
-        "rescheduled",
-        "rescheduled_date",
-        "rescheduled_note",
-        "room_id",
-        "schedule_type",
-        "scrimmage",
-        "section_id",
-        "show_details",
-        "show_directions",
-        "show_versus",
-        "start_time",
-        "team_id",
-        "time",
-        "tournament",
-        "uniform_color",
+        "id" => "int",
+        "alumni" => "bool",
+        "cancelled" => "bool",
+        "created" => "string",
+        "departure_location" => "string",
+        "departure_time" => "string",
+        "description" => "string",
+        "directions" => "string",
+        "dismissal_time" => "string",
+        "end_time" => "string",
+        "end_time_span" => "string",
+        "title" => "string",
+        "faculty" => "bool",
+        "game_date" => "string",
+        "game_time" => "\Blackbaud\SKY\School\Components\GameTime",
+        "highlight_id" => "int",
+        "home_or_away" => "string",
+        "invitational" => "bool",
+        "last_modified" => "string",
+        "league" => "bool",
+        "location" => "string",
+        "map_url" => "string",
+        "meet" => "int",
+        "opponents" => "\Blackbaud\SKY\School\Components\Opponent[]",
+        "pickup_time" => "string",
+        "playoff" => "bool",
+        "practice" => "bool",
+        "previous_schedule_id" => "int",
+        "published" => "bool",
+        "require_dinner" => "bool",
+        "require_lunch" => "bool",
+        "rescheduled" => "bool",
+        "rescheduled_date" => "string",
+        "rescheduled_note" => "string",
+        "room_id" => "int",
+        "schedule_type" => "int",
+        "scrimmage" => "bool",
+        "section_id" => "int",
+        "show_details" => "bool",
+        "show_directions" => "bool",
+        "show_versus" => "bool",
+        "start_time" => "string",
+        "team_id" => "int",
+        "time" => "string",
+        "tournament" => "bool",
+        "uniform_color" => "string",
     ];
 }

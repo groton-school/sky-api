@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $na Not Applicable
@@ -11,14 +11,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ExcuseDurationTypes extends BaseObject
+class ExcuseDurationTypes extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "na",
-        "full_day",
-        "half_day",
+        "na" => "int",
+        "full_day" => "int",
+        "half_day" => "int",
     ];
 }

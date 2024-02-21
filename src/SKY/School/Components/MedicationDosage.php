@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $times_a_day The frequency per day of the medication
@@ -12,14 +12,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class MedicationDosage extends BaseObject
+class MedicationDosage extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "times_a_day",
-        "frequency",
-        "days",
+        "times_a_day" => "int",
+        "frequency" => "string",
+        "days" => "\Blackbaud\SKY\School\Components\Days",
     ];
 }

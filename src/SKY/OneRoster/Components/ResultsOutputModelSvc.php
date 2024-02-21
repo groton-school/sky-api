@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Result
@@ -14,13 +14,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ResultsOutputModelSvc extends BaseObject
+class ResultsOutputModelSvc extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "results",
-        "status_info_set",
+        "results" => "\Blackbaud\SKY\OneRoster\Components\ResultModelSvc[]",
+        "status_info_set" => "\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]",
     ];
 }

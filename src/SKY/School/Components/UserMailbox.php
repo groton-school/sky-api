@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * An object for mailbox information
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserMailbox extends BaseObject
+class UserMailbox extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "number",
-        "combo",
+        "number" => "string",
+        "combo" => "string",
     ];
 }

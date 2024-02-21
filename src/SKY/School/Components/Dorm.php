@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $available_spots
@@ -17,20 +17,20 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Dorm extends BaseObject
+class Dorm extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "available_spots",
-        "building_capacity",
-        "building_id",
-        "building_name",
-        "building_enrollment",
-        "offering_type",
-        "leaders",
-        "Rooms",
-        "section_id",
+        "available_spots" => "int",
+        "building_capacity" => "int",
+        "building_id" => "int",
+        "building_name" => "string",
+        "building_enrollment" => "int",
+        "offering_type" => "int",
+        "leaders" => "\Blackbaud\SKY\School\Components\DormLeader[]",
+        "Rooms" => "\Blackbaud\SKY\School\Components\Room[]",
+        "section_id" => "int",
     ];
 }

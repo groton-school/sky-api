@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * EventCategoryCreateResponseExample
@@ -11,12 +11,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EventCategoryCreateResponseExample extends BaseObject
+class EventCategoryCreateResponseExample extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
+        "id" => "int",
     ];
 }

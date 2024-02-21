@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Events Category Model
@@ -16,17 +16,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EventsCategory extends BaseObject
+class EventsCategory extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "category_id",
-        "category_name",
-        "association_id",
-        "association_name",
-        "rss_ind",
-        "rss_feed",
+        "category_id" => "int",
+        "category_name" => "string",
+        "association_id" => "int",
+        "association_name" => "string",
+        "rss_ind" => "bool",
+        "rss_feed" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $ScheduleSetId
@@ -49,50 +49,50 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ScheduleSetDetails extends BaseObject
+class ScheduleSetDetails extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "ScheduleSetId",
-        "ScheduleSetDescription",
-        "ShortDescription",
-        "OfferingType",
-        "SchoolYearLabel",
-        "LevelNum",
-        "Effdate",
-        "Enddate",
-        "StartDay",
-        "StartWeek",
-        "MaxDay",
-        "MaxWeek",
-        "MeetingList",
-        "AccessList",
-        "RotationList",
-        "DefinedRotationPattern",
-        "MeetingTimeCreated",
-        "BlockRotationCreated",
-        "Sun",
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat",
-        "SunInUse",
-        "MonInUse",
-        "TueInUse",
-        "WedInUse",
-        "ThuInUse",
-        "FriInUse",
-        "SatInUse",
-        "BlockGroupId",
-        "MeetingTimeId",
-        "InsertDate",
-        "LastModifyDate",
-        "LastModifyUserId",
-        "FieldsToNull",
-        "vendor_external_id",
+        "ScheduleSetId" => "int",
+        "ScheduleSetDescription" => "string",
+        "ShortDescription" => "string",
+        "OfferingType" => "string",
+        "SchoolYearLabel" => "string",
+        "LevelNum" => "int",
+        "Effdate" => "string",
+        "Enddate" => "string",
+        "StartDay" => "int",
+        "StartWeek" => "int",
+        "MaxDay" => "int",
+        "MaxWeek" => "int",
+        "MeetingList" => "\Blackbaud\SKY\School\Components\ScheduleSetMettingPattern[]",
+        "AccessList" => "\Blackbaud\SKY\School\Components\ScheduleSetAccess[]",
+        "RotationList" => "\Blackbaud\SKY\School\Components\ScheduleSetRotation[]",
+        "DefinedRotationPattern" => "bool",
+        "MeetingTimeCreated" => "bool",
+        "BlockRotationCreated" => "bool",
+        "Sun" => "bool",
+        "Mon" => "bool",
+        "Tue" => "bool",
+        "Wed" => "bool",
+        "Thu" => "bool",
+        "Fri" => "bool",
+        "Sat" => "bool",
+        "SunInUse" => "bool",
+        "MonInUse" => "bool",
+        "TueInUse" => "bool",
+        "WedInUse" => "bool",
+        "ThuInUse" => "bool",
+        "FriInUse" => "bool",
+        "SatInUse" => "bool",
+        "BlockGroupId" => "int",
+        "MeetingTimeId" => "int",
+        "InsertDate" => "string",
+        "LastModifyDate" => "string",
+        "LastModifyUserId" => "int",
+        "FieldsToNull" => "string[]",
+        "vendor_external_id" => "string",
     ];
 }

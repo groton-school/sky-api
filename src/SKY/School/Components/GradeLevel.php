@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * GradeLevel Model
@@ -18,17 +18,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GradeLevel extends BaseObject
+class GradeLevel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "active",
-        "description",
-        "abbreviation",
-        "name",
-        "promote_to_code",
+        "id" => "int",
+        "active" => "bool",
+        "description" => "string",
+        "abbreviation" => "string",
+        "name" => "string",
+        "promote_to_code" => "int",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * An object for access role information.
@@ -13,13 +13,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentAccessRole extends BaseObject
+class StudentAccessRole extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "has_access",
+        "id" => "int",
+        "has_access" => "bool",
     ];
 }

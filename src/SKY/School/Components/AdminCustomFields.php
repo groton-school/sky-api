@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $field_id
@@ -28,30 +28,30 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AdminCustomFields extends BaseObject
+class AdminCustomFields extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "field_id",
-        "field_name",
-        "table_id",
-        "table_name",
-        "data_type_id",
-        "data_type",
-        "location_index_id",
-        "location",
-        "active",
-        "unique",
-        "required",
-        "in_use",
-        "usage_not_unique",
-        "location_id",
-        "sub_location_id",
-        "sub_location",
-        "use_abbreviation",
-        "vendor_id",
-        "table",
+        "field_id" => "int",
+        "field_name" => "string",
+        "table_id" => "int",
+        "table_name" => "string",
+        "data_type_id" => "int",
+        "data_type" => "string",
+        "location_index_id" => "int",
+        "location" => "string",
+        "active" => "bool",
+        "unique" => "bool",
+        "required" => "bool",
+        "in_use" => "bool",
+        "usage_not_unique" => "bool",
+        "location_id" => "int",
+        "sub_location_id" => "int",
+        "sub_location" => "string",
+        "use_abbreviation" => "bool",
+        "vendor_id" => "int",
+        "table" => "\Blackbaud\SKY\School\Components\UserDefinedTable",
     ];
 }

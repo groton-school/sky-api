@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The Id of the Degree, Major, Minor, or Concentration
@@ -13,14 +13,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Degree extends BaseObject
+class Degree extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "abbreviation",
+        "id" => "int",
+        "name" => "string",
+        "abbreviation" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * PhoneRead Model
@@ -19,18 +19,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class PhoneRead extends BaseObject
+class PhoneRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "phone_type",
-        "index_id",
-        "links",
-        "number",
-        "type_id",
-        "user_id",
+        "id" => "int",
+        "phone_type" => "string",
+        "index_id" => "int",
+        "links" => "\Blackbaud\SKY\School\Components\PhoneTypeLink[]",
+        "number" => "string",
+        "type_id" => "int",
+        "user_id" => "int",
     ];
 }

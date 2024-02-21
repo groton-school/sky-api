@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The Id of the session
@@ -19,20 +19,20 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SchoolSession extends BaseObject
+class SchoolSession extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "school_year_label",
-        "school_year_id",
-        "level_num",
-        "begin_date",
-        "end_date",
-        "current",
-        "in_use",
+        "id" => "int",
+        "name" => "string",
+        "school_year_label" => "string",
+        "school_year_id" => "int",
+        "level_num" => "int",
+        "begin_date" => "string",
+        "end_date" => "string",
+        "current" => "bool",
+        "in_use" => "bool",
     ];
 }

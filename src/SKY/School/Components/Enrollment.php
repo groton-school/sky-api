@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Section Model
@@ -54,41 +54,41 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Enrollment extends BaseObject
+class Enrollment extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "begin_date",
-        "block_id",
-        "block_name",
-        "blocks",
-        "building_name",
-        "changed_sections",
-        "course_code",
-        "course_length",
-        "course_title",
-        "departments",
-        "distinction",
-        "dropped",
-        "duration_begin_date",
-        "duration_description",
-        "duration_end_date",
-        "duration_id",
-        "duration_name",
-        "end_date",
-        "faculty_first_name",
-        "faculty_last_name",
-        "level_number",
-        "offering_description",
-        "offering_id",
-        "offering_type_id",
-        "room_id",
-        "room_name",
-        "room_number",
-        "school_year",
-        "section_identifier",
+        "id" => "int",
+        "begin_date" => "string",
+        "block_id" => "int",
+        "block_name" => "string",
+        "blocks" => "bool",
+        "building_name" => "string",
+        "changed_sections" => "int",
+        "course_code" => "string",
+        "course_length" => "int",
+        "course_title" => "string",
+        "departments" => "\Blackbaud\SKY\School\Components\Department[]",
+        "distinction" => "string",
+        "dropped" => "int",
+        "duration_begin_date" => "string",
+        "duration_description" => "string",
+        "duration_end_date" => "string",
+        "duration_id" => "int",
+        "duration_name" => "string",
+        "end_date" => "string",
+        "faculty_first_name" => "string",
+        "faculty_last_name" => "string",
+        "level_number" => "int",
+        "offering_description" => "string",
+        "offering_id" => "int",
+        "offering_type_id" => "int",
+        "room_id" => "int",
+        "room_name" => "string",
+        "room_number" => "string",
+        "school_year" => "string",
+        "section_identifier" => "string",
     ];
 }

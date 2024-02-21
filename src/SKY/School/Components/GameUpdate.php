@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $game_id ID of the game to be updated
@@ -53,37 +53,37 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GameUpdate extends BaseObject
+class GameUpdate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "game_id",
-        "schedule_type",
-        "title",
-        "game_date",
-        "game_date_end",
-        "cancel_type",
-        "home_away_type",
-        "location_id",
-        "location_ind",
-        "dismissal_time",
-        "departure_time",
-        "departure_note",
-        "pickup_time",
-        "pickup_note",
-        "league_ind",
-        "scrimmage_ind",
-        "tournament_ind",
-        "invitational_ind",
-        "playoff_ind",
-        "additional_notes",
-        "news_id",
-        "send_notifications",
-        "clear_reschedule",
-        "skip_validation",
-        "transportation",
-        "opponents",
+        "game_id" => "int",
+        "schedule_type" => "int",
+        "title" => "string",
+        "game_date" => "string",
+        "game_date_end" => "string",
+        "cancel_type" => "int",
+        "home_away_type" => "int",
+        "location_id" => "int",
+        "location_ind" => "int",
+        "dismissal_time" => "string",
+        "departure_time" => "string",
+        "departure_note" => "string",
+        "pickup_time" => "string",
+        "pickup_note" => "string",
+        "league_ind" => "bool",
+        "scrimmage_ind" => "bool",
+        "tournament_ind" => "bool",
+        "invitational_ind" => "bool",
+        "playoff_ind" => "bool",
+        "additional_notes" => "string",
+        "news_id" => "int",
+        "send_notifications" => "bool",
+        "clear_reschedule" => "bool",
+        "skip_validation" => "bool",
+        "transportation" => "\Blackbaud\SKY\School\Components\GameTransportation[]",
+        "opponents" => "\Blackbaud\SKY\School\Components\GameOpponent[]",
     ];
 }

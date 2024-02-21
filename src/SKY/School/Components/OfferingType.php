@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * OfferingType Model
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class OfferingType extends BaseObject
+class OfferingType extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "description",
+        "id" => "int",
+        "description" => "string",
     ];
 }

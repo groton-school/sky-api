@@ -2,19 +2,19 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $grad_year
  *
  * @api
  */
-class DormStudentInfo extends BaseObject
+class DormStudentInfo extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "grad_year",
+        "grad_year" => "string",
     ];
 }

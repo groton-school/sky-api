@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * List Collection
@@ -13,14 +13,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ListResult extends BaseObject
+class ListResult extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "count",
-        "page",
-        "results",
+        "count" => "int",
+        "page" => "int",
+        "results" => "\Blackbaud\SKY\School\Components\List_",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Duration Model
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Duration extends BaseObject
+class Duration extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
+        "id" => "int",
+        "name" => "string",
     ];
 }

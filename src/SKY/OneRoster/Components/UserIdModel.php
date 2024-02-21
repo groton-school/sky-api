@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $type
@@ -10,13 +10,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserIdModel extends BaseObject
+class UserIdModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "type",
-        "identifier",
+        "type" => "string",
+        "identifier" => "string",
     ];
 }

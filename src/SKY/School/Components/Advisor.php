@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Advisor Model
@@ -13,14 +13,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Advisor extends BaseObject
+class Advisor extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "head",
-        "name",
+        "id" => "int",
+        "head" => "bool",
+        "name" => "string",
     ];
 }

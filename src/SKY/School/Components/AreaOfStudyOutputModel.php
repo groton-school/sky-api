@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The Id of the area of study
@@ -15,17 +15,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AreaOfStudyOutputModel extends BaseObject
+class AreaOfStudyOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "primary_area_of_study_id",
-        "description",
-        "award_level",
-        "type",
-        "degree",
+        "id" => "int",
+        "primary_area_of_study_id" => "int",
+        "description" => "string",
+        "award_level" => "int",
+        "type" => "string",
+        "degree" => "\Blackbaud\SKY\School\Components\Degree",
     ];
 }

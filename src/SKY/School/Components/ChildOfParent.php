@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * UserRead Model
@@ -24,23 +24,23 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ChildOfParent extends BaseObject
+class ChildOfParent extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "student_is_active",
-        "current_grade",
-        "grad_year",
-        "email",
-        "first_name",
-        "last_name",
-        "middle_name",
-        "nick_name",
-        "preferred_name",
-        "prefix",
-        "suffix",
+        "id" => "int",
+        "student_is_active" => "bool",
+        "current_grade" => "string",
+        "grad_year" => "string",
+        "email" => "string",
+        "first_name" => "string",
+        "last_name" => "string",
+        "middle_name" => "string",
+        "nick_name" => "string",
+        "preferred_name" => "string",
+        "prefix" => "string",
+        "suffix" => "string",
     ];
 }

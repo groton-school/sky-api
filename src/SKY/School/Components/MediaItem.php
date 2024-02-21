@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Media Model
@@ -14,15 +14,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class MediaItem extends BaseObject
+class MediaItem extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "type",
-        "title",
-        "caption",
-        "url",
+        "type" => "string",
+        "title" => "string",
+        "caption" => "string",
+        "url" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property string $relationship_type The nature of the relationship; modeled
@@ -17,16 +17,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class RelationshipCreate extends BaseObject
+class RelationshipCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "relationship_type",
-        "give_parental_access",
-        "list_as_parent",
-        "tuition_responsible_signer",
-        "left_user",
+        "relationship_type" => "string",
+        "give_parental_access" => "bool",
+        "list_as_parent" => "bool",
+        "tuition_responsible_signer" => "bool",
+        "left_user" => "int",
     ];
 }

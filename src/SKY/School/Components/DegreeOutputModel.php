@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The Id of the area of study
@@ -29,26 +29,26 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class DegreeOutputModel extends BaseObject
+class DegreeOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "declared_on",
-        "completed_on",
-        "conferred_on",
-        "credits_completed",
-        "credits_in_progress",
-        "credits_remaining",
-        "created_by",
-        "modified_by",
-        "created",
-        "modified",
-        "requirement_set",
-        "majors",
-        "minors",
-        "concentrations",
+        "id" => "int",
+        "declared_on" => "string",
+        "completed_on" => "string",
+        "conferred_on" => "string",
+        "credits_completed" => "float",
+        "credits_in_progress" => "float",
+        "credits_remaining" => "float",
+        "created_by" => "string",
+        "modified_by" => "string",
+        "created" => "string",
+        "modified" => "string",
+        "requirement_set" => "\Blackbaud\SKY\School\Components\AreaOfStudyOutputModel[]",
+        "majors" => "\Blackbaud\SKY\School\Components\UserAreaOfStudyReferenceOutputModel[]",
+        "minors" => "\Blackbaud\SKY\School\Components\UserAreaOfStudyReferenceOutputModel[]",
+        "concentrations" => "\Blackbaud\SKY\School\Components\UserAreaOfStudyReferenceOutputModel[]",
     ];
 }

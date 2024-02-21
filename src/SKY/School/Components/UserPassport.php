@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * An object for passport information
@@ -13,13 +13,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserPassport extends BaseObject
+class UserPassport extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "number",
-        "expire_date",
+        "number" => "string",
+        "expire_date" => "string",
     ];
 }

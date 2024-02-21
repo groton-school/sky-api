@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $date Date of the game or practice. Uses
@@ -14,15 +14,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GameTime extends BaseObject
+class GameTime extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "date",
-        "start",
-        "end",
-        "duration",
+        "date" => "string",
+        "start" => "string",
+        "end" => "string",
+        "duration" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id
@@ -15,16 +15,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserAreaOfStudyReferenceOutputModel extends BaseObject
+class UserAreaOfStudyReferenceOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "declared_on",
-        "area_of_study_id",
-        "requirement_set",
-        "concentrations",
+        "id" => "int",
+        "declared_on" => "string",
+        "area_of_study_id" => "int",
+        "requirement_set" => "\Blackbaud\SKY\School\Components\UserMajorMinorConcentrationOutputModel",
+        "concentrations" => "\Blackbaud\SKY\School\Components\UserAreaOfStudyReferenceOutputModel",
     ];
 }

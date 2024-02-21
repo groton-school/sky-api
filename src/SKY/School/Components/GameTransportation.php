@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $transportation_id ID of the transportation item to be used
@@ -17,15 +17,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GameTransportation extends BaseObject
+class GameTransportation extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "transportation_id",
-        "full_day",
-        "begin_use",
-        "end_use",
+        "transportation_id" => "int",
+        "full_day" => "bool",
+        "begin_use" => "string",
+        "end_use" => "string",
     ];
 }

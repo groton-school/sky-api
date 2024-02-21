@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * AddressType Model
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AddressType extends BaseObject
+class AddressType extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "type",
+        "id" => "int",
+        "type" => "string",
     ];
 }

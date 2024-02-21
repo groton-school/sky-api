@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id
@@ -12,15 +12,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ApplicationModel extends BaseObject
+class ApplicationModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "date_submitted",
-        "date_processed",
-        "source",
+        "id" => "int",
+        "date_submitted" => "string",
+        "date_processed" => "string",
+        "source" => "\Blackbaud\SKY\School\Components\SourceModel",
     ];
 }

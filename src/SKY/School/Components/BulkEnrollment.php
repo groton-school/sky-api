@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Model to define bulk enrollments for both students and teachers
@@ -20,15 +20,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class BulkEnrollment extends BaseObject
+class BulkEnrollment extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "enrollment_date",
-        "section_ids",
-        "user_ids",
+        "id" => "int",
+        "enrollment_date" => "string",
+        "section_ids" => "string",
+        "user_ids" => "string",
     ];
 }

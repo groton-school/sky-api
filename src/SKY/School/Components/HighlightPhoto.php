@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Photo model
@@ -16,17 +16,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class HighlightPhoto extends BaseObject
+class HighlightPhoto extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "caption",
-        "large_filename",
-        "large_filename_url",
-        "thumb_filename",
-        "thumb_filename_url",
+        "id" => "int",
+        "caption" => "string",
+        "large_filename" => "string",
+        "large_filename_url" => "string",
+        "thumb_filename" => "string",
+        "thumb_filename_url" => "string",
     ];
 }

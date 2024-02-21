@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * RaceAdd Model
@@ -12,12 +12,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserAddRace extends BaseObject
+class UserAddRace extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "race_type",
+        "race_type" => "string",
     ];
 }

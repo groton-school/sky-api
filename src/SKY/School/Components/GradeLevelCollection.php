@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * A Collection
@@ -16,14 +16,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GradeLevelCollection extends BaseObject
+class GradeLevelCollection extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "count",
-        "next_link",
-        "value",
+        "count" => "int",
+        "next_link" => "string",
+        "value" => "\Blackbaud\SKY\School\Components\GradeLevel[]",
     ];
 }

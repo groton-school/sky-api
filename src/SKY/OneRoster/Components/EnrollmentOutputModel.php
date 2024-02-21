@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\EnrollmentModel $enrollment
@@ -11,13 +11,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EnrollmentOutputModel extends BaseObject
+class EnrollmentOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "enrollment",
-        "statusInfoSet",
+        "enrollment" => "\Blackbaud\SKY\OneRoster\Components\EnrollmentModel",
+        "statusInfoSet" => "\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]",
     ];
 }

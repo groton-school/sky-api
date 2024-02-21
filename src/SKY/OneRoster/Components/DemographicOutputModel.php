@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\ORDemographicModel
@@ -10,12 +10,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class DemographicOutputModel extends BaseObject
+class DemographicOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "demographic",
+        "demographic" => "\Blackbaud\SKY\OneRoster\Components\ORDemographicModel",
     ];
 }

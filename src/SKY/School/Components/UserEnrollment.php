@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * User Enrollment
@@ -28,25 +28,25 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserEnrollment extends BaseObject
+class UserEnrollment extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "firstname",
-        "lastname",
-        "preferred_name",
-        "name",
-        "school_year",
-        "school_level",
-        "grade_level",
-        "repeated",
-        "graduated",
-        "enroll_date",
-        "depart_date",
-        "depart_reason",
-        "session",
+        "user_id" => "int",
+        "firstname" => "string",
+        "lastname" => "string",
+        "preferred_name" => "string",
+        "name" => "string",
+        "school_year" => "string",
+        "school_level" => "\Blackbaud\SKY\School\Components\Level",
+        "grade_level" => "\Blackbaud\SKY\School\Components\GradeLevel",
+        "repeated" => "bool",
+        "graduated" => "bool",
+        "enroll_date" => "string",
+        "depart_date" => "string",
+        "depart_reason" => "string",
+        "session" => "string",
     ];
 }

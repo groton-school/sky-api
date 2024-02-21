@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $title
@@ -24,27 +24,27 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ClassModel extends BaseObject
+class ClassModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "title",
-        "classCode",
-        "classType",
-        "location",
-        "grades",
-        "subjects",
-        "course",
-        "school",
-        "terms",
-        "subjectCodes",
-        "periods",
-        "resources",
-        "sourcedId",
-        "status",
-        "dateLastModified",
-        "metadata",
+        "title" => "string",
+        "classCode" => "string",
+        "classType" => "string",
+        "location" => "string",
+        "grades" => "string[]",
+        "subjects" => "string[]",
+        "course" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "school" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "terms" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel[]",
+        "subjectCodes" => "string[]",
+        "periods" => "string[]",
+        "resources" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel[]",
+        "sourcedId" => "string",
+        "status" => "string",
+        "dateLastModified" => "string",
+        "metadata" => "string[]",
     ];
 }

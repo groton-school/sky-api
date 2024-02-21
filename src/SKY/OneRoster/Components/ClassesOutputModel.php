@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?\Blackbaud\SKY\OneRoster\Components\ClassModel[] $classes
@@ -11,13 +11,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ClassesOutputModel extends BaseObject
+class ClassesOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "classes",
-        "statusInfoSet",
+        "classes" => "\Blackbaud\SKY\OneRoster\Components\ClassModel[]",
+        "statusInfoSet" => "\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]",
     ];
 }

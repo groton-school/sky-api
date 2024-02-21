@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Term Model
@@ -24,19 +24,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Term extends BaseObject
+class Term extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "begin_date",
-        "description",
-        "end_date",
-        "level_description",
-        "level_id",
-        "offering_type",
-        "school_year_label",
+        "id" => "int",
+        "begin_date" => "string",
+        "description" => "string",
+        "end_date" => "string",
+        "level_description" => "string",
+        "level_id" => "int",
+        "offering_type" => "int",
+        "school_year_label" => "string",
     ];
 }

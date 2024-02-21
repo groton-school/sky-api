@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Results model
@@ -21,21 +21,21 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ResultModelSvc extends BaseObject
+class ResultModelSvc extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "scoreStatus",
-        "scoreDate",
-        "score",
-        "comment",
-        "lineItem",
-        "student",
-        "sourcedId",
-        "status",
-        "dateLastModified",
-        "metadata",
+        "scoreStatus" => "string",
+        "scoreDate" => "string",
+        "score" => "float",
+        "comment" => "string",
+        "lineItem" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "student" => "\Blackbaud\SKY\OneRoster\Components\GuidRefModel",
+        "sourcedId" => "string",
+        "status" => "string",
+        "dateLastModified" => "string",
+        "metadata" => "string[]",
     ];
 }

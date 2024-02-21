@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * ListRead Class
@@ -18,19 +18,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ListRead extends BaseObject
+class ListRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "type",
-        "description",
-        "category",
-        "created_by",
-        "created",
-        "last_modified",
+        "id" => "int",
+        "name" => "string",
+        "type" => "string",
+        "description" => "string",
+        "category" => "string",
+        "created_by" => "string",
+        "created" => "string",
+        "last_modified" => "string",
     ];
 }

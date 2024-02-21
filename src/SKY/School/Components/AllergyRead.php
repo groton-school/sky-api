@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The ID of student medical allergy
@@ -10,13 +10,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AllergyRead extends BaseObject
+class AllergyRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "allergy",
+        "id" => "int",
+        "allergy" => "\Blackbaud\SKY\School\Components\IdDescriptorField",
     ];
 }

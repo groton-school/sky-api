@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * RaceRead Model
@@ -14,15 +14,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class RaceRead extends BaseObject
+class RaceRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "race_type_id",
-        "description",
-        "user_race_id",
-        "user_id",
+        "race_type_id" => "int",
+        "description" => "string",
+        "user_race_id" => "int",
+        "user_id" => "int",
     ];
 }

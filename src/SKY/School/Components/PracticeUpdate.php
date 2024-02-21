@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The ID of the practice
@@ -35,24 +35,24 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class PracticeUpdate extends BaseObject
+class PracticeUpdate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "send_notification",
-        "title",
-        "practice_start_date",
-        "practice_end_date",
-        "location_id",
-        "room_id",
-        "transportation_id",
-        "dismissal_time",
-        "departure_time",
-        "pickup_time",
-        "practice_note",
-        "skip_validation",
+        "id" => "int",
+        "send_notification" => "bool",
+        "title" => "string",
+        "practice_start_date" => "string",
+        "practice_end_date" => "string",
+        "location_id" => "int",
+        "room_id" => "int",
+        "transportation_id" => "int",
+        "dismissal_time" => "string",
+        "departure_time" => "string",
+        "pickup_time" => "string",
+        "practice_note" => "string",
+        "skip_validation" => "bool",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\OneRoster\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $sourcedId
@@ -11,14 +11,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GuidRefModel extends BaseObject
+class GuidRefModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "sourcedId",
-        "href",
-        "type",
+        "sourcedId" => "string",
+        "href" => "string",
+        "type" => "string",
     ];
 }

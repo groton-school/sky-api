@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * User Defined Table
@@ -20,21 +20,21 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserDefinedTable extends BaseObject
+class UserDefinedTable extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "table_id",
-        "table_name",
-        "use_abbreviations",
-        "in_use",
-        "base_table",
-        "system_table",
-        "require_abbreviation",
-        "modify_user",
-        "vendor_id",
-        "values",
+        "table_id" => "int",
+        "table_name" => "string",
+        "use_abbreviations" => "bool",
+        "in_use" => "bool",
+        "base_table" => "bool",
+        "system_table" => "bool",
+        "require_abbreviation" => "bool",
+        "modify_user" => "string",
+        "vendor_id" => "int",
+        "values" => "\Blackbaud\SKY\School\Components\UserDefinedTableValue[]",
     ];
 }

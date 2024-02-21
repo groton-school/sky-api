@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Athletic requirement
@@ -15,13 +15,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentAthleticRequirement extends BaseObject
+class StudentAthleticRequirement extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "athletic_type",
-        "athletic_date",
+        "athletic_type" => "string",
+        "athletic_date" => "string",
     ];
 }

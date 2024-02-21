@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Emergency Contact Changes
@@ -34,32 +34,32 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EmergencyContactChange extends BaseObject
+class EmergencyContactChange extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "call_dialer",
-        "ec_user_id",
-        "firstname",
-        "lastname",
-        "phone_number",
-        "phone_type",
-        "phone_call_type",
-        "email",
-        "email_call_type",
-        "record_type",
-        "sort",
-        "inactive",
-        "active",
-        "delete_indicator",
-        "roles",
-        "student_indicator",
-        "faculty_indicator",
-        "staff_indicator",
-        "emergency_contact_change_emails",
-        "emergency_contact_change_phones",
+        "user_id" => "int",
+        "call_dialer" => "string",
+        "ec_user_id" => "int",
+        "firstname" => "string",
+        "lastname" => "string",
+        "phone_number" => "string",
+        "phone_type" => "string",
+        "phone_call_type" => "int",
+        "email" => "string",
+        "email_call_type" => "int",
+        "record_type" => "int",
+        "sort" => "int",
+        "inactive" => "bool",
+        "active" => "bool",
+        "delete_indicator" => "bool",
+        "roles" => "string",
+        "student_indicator" => "bool",
+        "faculty_indicator" => "bool",
+        "staff_indicator" => "bool",
+        "emergency_contact_change_emails" => "\Blackbaud\SKY\School\Components\EmergencyContactChangeEmail[]",
+        "emergency_contact_change_phones" => "\Blackbaud\SKY\School\Components\EmergencyContactChangePhone[]",
     ];
 }

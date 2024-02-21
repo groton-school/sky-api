@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The user Id that was enrolled
@@ -10,13 +10,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserEnrollmentResponse extends BaseObject
+class UserEnrollmentResponse extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "message",
+        "id" => "int",
+        "message" => "string",
     ];
 }

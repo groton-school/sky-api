@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * EducationAdd Model
@@ -16,17 +16,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EducationAdd extends BaseObject
+class EducationAdd extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "school",
-        "degree",
-        "major",
-        "field",
-        "grad_year",
-        "sort_order",
+        "school" => "string",
+        "degree" => "string",
+        "major" => "string",
+        "field" => "string",
+        "grad_year" => "int",
+        "sort_order" => "int",
     ];
 }

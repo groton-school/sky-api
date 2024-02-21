@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * PhoneUpdate Model
@@ -13,13 +13,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class PhoneUpdate extends BaseObject
+class PhoneUpdate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "number",
-        "type_id",
+        "number" => "string",
+        "type_id" => "int",
     ];
 }

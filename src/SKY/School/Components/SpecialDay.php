@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id
@@ -13,16 +13,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SpecialDay extends BaseObject
+class SpecialDay extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "day_description",
-        "sort_order",
-        "rotation_behavior",
-        "blocks",
+        "id" => "int",
+        "day_description" => "string",
+        "sort_order" => "int",
+        "rotation_behavior" => "string",
+        "blocks" => "\Blackbaud\SKY\School\Components\SpecialDayBlock[]",
     ];
 }

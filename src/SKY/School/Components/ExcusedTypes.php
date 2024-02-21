@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $category_description The category that the excuse
@@ -18,19 +18,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ExcusedTypes extends BaseObject
+class ExcusedTypes extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "category_description",
-        "category_id",
-        "excuse_type_id",
-        "excuse_description",
-        "use_in_calculations",
-        "excused",
-        "duration",
-        "attendance_type",
+        "category_description" => "string",
+        "category_id" => "int",
+        "excuse_type_id" => "int",
+        "excuse_description" => "string",
+        "use_in_calculations" => "bool",
+        "excused" => "string",
+        "duration" => "string",
+        "attendance_type" => "string",
     ];
 }

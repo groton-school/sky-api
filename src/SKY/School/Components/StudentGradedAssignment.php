@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student Graded Assignments Model
@@ -30,28 +30,28 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentGradedAssignment extends BaseObject
+class StudentGradedAssignment extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "assignment_id",
-        "assignment_index_id",
-        "short_description",
-        "date_assigned",
-        "date_due",
-        "max_points",
-        "points",
-        "assignment_percentage",
-        "letter",
-        "section_grade",
-        "formative",
-        "missing",
-        "late",
-        "incomplete",
-        "exempt",
-        "comment",
-        "assignment_type",
+        "assignment_id" => "int",
+        "assignment_index_id" => "int",
+        "short_description" => "string",
+        "date_assigned" => "string",
+        "date_due" => "string",
+        "max_points" => "float",
+        "points" => "float",
+        "assignment_percentage" => "float",
+        "letter" => "string",
+        "section_grade" => "float",
+        "formative" => "bool",
+        "missing" => "bool",
+        "late" => "bool",
+        "incomplete" => "bool",
+        "exempt" => "bool",
+        "comment" => "string",
+        "assignment_type" => "\Blackbaud\SKY\School\Components\AssignmentType",
     ];
 }

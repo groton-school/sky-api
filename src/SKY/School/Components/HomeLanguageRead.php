@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The Id of the language
@@ -10,13 +10,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class HomeLanguageRead extends BaseObject
+class HomeLanguageRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "description",
+        "id" => "int",
+        "description" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Used to create a non-user emergency contact
@@ -21,19 +21,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EmergencyContactNonUserCreate extends BaseObject
+class EmergencyContactNonUserCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "automated_email",
-        "email",
-        "call_dialer",
-        "firstname",
-        "lastname",
-        "phone_number",
-        "phone_type",
-        "relationship",
+        "automated_email" => "int",
+        "email" => "string",
+        "call_dialer" => "int",
+        "firstname" => "string",
+        "lastname" => "string",
+        "phone_number" => "string",
+        "phone_type" => "string",
+        "relationship" => "string",
     ];
 }

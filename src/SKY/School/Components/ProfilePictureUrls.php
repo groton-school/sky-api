@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $large_filename_url URL to users Large profile picture
@@ -11,13 +11,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ProfilePictureUrls extends BaseObject
+class ProfilePictureUrls extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "large_filename_url",
-        "thumb_filename_url",
+        "large_filename_url" => "string",
+        "thumb_filename_url" => "string",
     ];
 }

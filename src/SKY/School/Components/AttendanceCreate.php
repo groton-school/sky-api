@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $student_user_id ID of the student
@@ -21,18 +21,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AttendanceCreate extends BaseObject
+class AttendanceCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "student_user_id",
-        "begin_date",
-        "end_date",
-        "start_time",
-        "end_time",
-        "excuse_type_id",
-        "excuse_comment",
+        "student_user_id" => "int",
+        "begin_date" => "string",
+        "end_date" => "string",
+        "start_time" => "string",
+        "end_time" => "string",
+        "excuse_type_id" => "int",
+        "excuse_comment" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id ID of the location
@@ -23,26 +23,26 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Location extends BaseObject
+class Location extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "address_line1",
-        "address_line2",
-        "address_line3",
-        "city",
-        "state",
-        "state_short",
-        "country",
-        "zip",
-        "province",
-        "map_url",
-        "directions",
-        "travel_time",
-        "opponent_id",
+        "id" => "int",
+        "name" => "string",
+        "address_line1" => "string",
+        "address_line2" => "string",
+        "address_line3" => "string",
+        "city" => "string",
+        "state" => "string",
+        "state_short" => "string",
+        "country" => "string",
+        "zip" => "string",
+        "province" => "string",
+        "map_url" => "string",
+        "directions" => "string",
+        "travel_time" => "int",
+        "opponent_id" => "int",
     ];
 }

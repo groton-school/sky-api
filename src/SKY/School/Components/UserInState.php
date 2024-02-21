@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * An object for in-state resident information
@@ -15,14 +15,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserInState extends BaseObject
+class UserInState extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "resident",
-        "county",
-        "from_date",
+        "resident" => "string",
+        "county" => "string",
+        "from_date" => "string",
     ];
 }

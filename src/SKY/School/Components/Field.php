@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * List Field
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Field extends BaseObject
+class Field extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "name",
-        "value",
+        "name" => "string",
+        "value" => "string",
     ];
 }

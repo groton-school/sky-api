@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The ID of the gender type
@@ -16,18 +16,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class GenderType extends BaseObject
+class GenderType extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "gender_type_id",
-        "code",
-        "description",
-        "active",
-        "sort_order",
-        "pronouns",
+        "id" => "int",
+        "gender_type_id" => "int",
+        "code" => "string",
+        "description" => "string",
+        "active" => "bool",
+        "sort_order" => "int",
+        "pronouns" => "string",
     ];
 }

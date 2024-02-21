@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Department model
@@ -15,15 +15,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Department extends BaseObject
+class Department extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "level_description",
-        "name",
-        "sort",
+        "id" => "int",
+        "level_description" => "string",
+        "name" => "string",
+        "sort" => "int",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Object that describes the custom field to be created
@@ -33,18 +33,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserAdminCustomFieldCreate extends BaseObject
+class UserAdminCustomFieldCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "field_id",
-        "data_type_id",
-        "int_value",
-        "text_value",
-        "decimal_value",
-        "date_value",
-        "bit_value",
+        "field_id" => "int",
+        "data_type_id" => "int",
+        "int_value" => "int",
+        "text_value" => "string",
+        "decimal_value" => "float",
+        "date_value" => "string",
+        "bit_value" => "bool",
     ];
 }

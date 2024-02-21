@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $WeekInCycle
@@ -13,16 +13,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ScheduleSetRotationDayMeeting extends BaseObject
+class ScheduleSetRotationDayMeeting extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "WeekInCycle",
-        "DayInCycle",
-        "DailyOrdinal",
-        "BlockId",
-        "BlockName",
+        "WeekInCycle" => "int",
+        "DayInCycle" => "int",
+        "DailyOrdinal" => "int",
+        "BlockId" => "int",
+        "BlockName" => "string",
     ];
 }

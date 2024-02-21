@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Emergency Contact Change Email Model
@@ -18,18 +18,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EmergencyContactChangeEmail extends BaseObject
+class EmergencyContactChangeEmail extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "active",
-        "automated_email",
-        "email",
-        "first_name",
-        "last_name",
-        "relationship",
-        "sort_order",
+        "active" => "bool",
+        "automated_email" => "string",
+        "email" => "string",
+        "first_name" => "string",
+        "last_name" => "string",
+        "relationship" => "string",
+        "sort_order" => "int",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * SubTest Model
@@ -17,18 +17,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SubTest extends BaseObject
+class SubTest extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "test_type_id",
-        "sub_test_type",
-        "score",
-        "test_subtype_id",
-        "percentile",
-        "scale",
-        "stanie",
+        "test_type_id" => "int",
+        "sub_test_type" => "string",
+        "score" => "float",
+        "test_subtype_id" => "int",
+        "percentile" => "float",
+        "scale" => "float",
+        "stanie" => "float",
     ];
 }

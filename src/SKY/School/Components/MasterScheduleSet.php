@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $schedule_set_id
@@ -12,15 +12,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class MasterScheduleSet extends BaseObject
+class MasterScheduleSet extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "schedule_set_id",
-        "holiday_label",
-        "day_label",
-        "blocks",
+        "schedule_set_id" => "int",
+        "holiday_label" => "string",
+        "day_label" => "string",
+        "blocks" => "\Blackbaud\SKY\School\Components\MasterScheduleBlock[]",
     ];
 }

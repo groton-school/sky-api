@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Calendar item
@@ -53,41 +53,41 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class CalendarItem extends BaseObject
+class CalendarItem extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "association_id",
-        "brief_description",
-        "building_name",
-        "cancelled",
-        "contact_email",
-        "contact_name",
-        "end_date",
-        "event_id",
-        "event_type",
-        "category_id",
-        "category_name",
-        "home_away",
-        "invitational",
-        "league",
-        "location",
-        "long_description",
-        "opponent",
-        "playoff",
-        "preset_id",
-        "recurrence_id",
-        "registration_id",
-        "rescheduled",
-        "reschedule_note",
-        "room_name",
-        "scrimmage",
-        "start_date",
-        "title",
-        "tournament",
-        "all_day",
-        "total_days",
+        "association_id" => "int",
+        "brief_description" => "string",
+        "building_name" => "string",
+        "cancelled" => "bool",
+        "contact_email" => "string",
+        "contact_name" => "string",
+        "end_date" => "string",
+        "event_id" => "int",
+        "event_type" => "string",
+        "category_id" => "int",
+        "category_name" => "string",
+        "home_away" => "string",
+        "invitational" => "bool",
+        "league" => "bool",
+        "location" => "string",
+        "long_description" => "string",
+        "opponent" => "string",
+        "playoff" => "bool",
+        "preset_id" => "int",
+        "recurrence_id" => "int",
+        "registration_id" => "int",
+        "rescheduled" => "bool",
+        "reschedule_note" => "string",
+        "room_name" => "string",
+        "scrimmage" => "bool",
+        "start_date" => "string",
+        "title" => "string",
+        "tournament" => "bool",
+        "all_day" => "bool",
+        "total_days" => "int",
     ];
 }

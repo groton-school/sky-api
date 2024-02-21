@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student medication
@@ -13,13 +13,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentImmunizationUpdate extends BaseObject
+class StudentImmunizationUpdate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "immunizations",
+        "user_id" => "int",
+        "immunizations" => "\Blackbaud\SKY\School\Components\StudentImmunization[]",
     ];
 }

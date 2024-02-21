@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Year Model
@@ -22,17 +22,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Year extends BaseObject
+class Year extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "begin_date",
-        "current_year",
-        "end_date",
-        "published",
-        "school_year_label",
+        "id" => "int",
+        "begin_date" => "string",
+        "current_year" => "bool",
+        "end_date" => "string",
+        "published" => "bool",
+        "school_year_label" => "string",
     ];
 }

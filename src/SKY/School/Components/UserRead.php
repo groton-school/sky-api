@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * UserRead Model
@@ -61,43 +61,43 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserRead extends BaseObject
+class UserRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "affiliation",
-        "custom_field_eight",
-        "custom_field_five",
-        "custom_field_four",
-        "custom_field_nine",
-        "custom_field_one",
-        "custom_field_seven",
-        "custom_field_six",
-        "custom_field_ten",
-        "custom_field_three",
-        "custom_field_two",
-        "deceased",
-        "display",
-        "email",
-        "email_active",
-        "first_name",
-        "gender",
-        "gender_description",
-        "greeting",
-        "host_id",
-        "last_name",
-        "lost",
-        "maiden_name",
-        "middle_name",
-        "nick_name",
-        "preferred_name",
-        "dob",
-        "prefix",
-        "suffix",
-        "profile_pictures",
-        "home_languages",
+        "id" => "int",
+        "affiliation" => "string",
+        "custom_field_eight" => "string",
+        "custom_field_five" => "string",
+        "custom_field_four" => "string",
+        "custom_field_nine" => "string",
+        "custom_field_one" => "string",
+        "custom_field_seven" => "string",
+        "custom_field_six" => "string",
+        "custom_field_ten" => "string",
+        "custom_field_three" => "string",
+        "custom_field_two" => "string",
+        "deceased" => "bool",
+        "display" => "string",
+        "email" => "string",
+        "email_active" => "bool",
+        "first_name" => "string",
+        "gender" => "string",
+        "gender_description" => "string",
+        "greeting" => "string",
+        "host_id" => "string",
+        "last_name" => "string",
+        "lost" => "bool",
+        "maiden_name" => "string",
+        "middle_name" => "string",
+        "nick_name" => "string",
+        "preferred_name" => "string",
+        "dob" => "string",
+        "prefix" => "string",
+        "suffix" => "string",
+        "profile_pictures" => "\Blackbaud\SKY\School\Components\ProfilePictureUrls",
+        "home_languages" => "\Blackbaud\SKY\School\Components\HomeLanguageRead[]",
     ];
 }

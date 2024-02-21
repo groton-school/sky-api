@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * HomeLanguageAdd Model
@@ -12,12 +12,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class HomeLanguageAdd extends BaseObject
+class HomeLanguageAdd extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "language",
+        "language" => "string",
     ];
 }

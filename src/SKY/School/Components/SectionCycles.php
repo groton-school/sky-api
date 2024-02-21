@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $section_id The ID of the section
@@ -16,17 +16,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SectionCycles extends BaseObject
+class SectionCycles extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_id",
-        "course_title",
-        "section_identifier",
-        "block_name",
-        "course_code",
-        "cycles",
+        "section_id" => "int",
+        "course_title" => "string",
+        "section_identifier" => "string",
+        "block_name" => "string",
+        "course_code" => "string",
+        "cycles" => "\Blackbaud\SKY\School\Components\Cycle[]",
     ];
 }

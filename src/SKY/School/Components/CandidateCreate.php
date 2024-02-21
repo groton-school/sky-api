@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Candidate Create
@@ -16,15 +16,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class CandidateCreate extends BaseObject
+class CandidateCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "entering_year",
-        "entering_grade_id",
-        "checklist_id",
+        "user_id" => "int",
+        "entering_year" => "string",
+        "entering_grade_id" => "int",
+        "checklist_id" => "int",
     ];
 }

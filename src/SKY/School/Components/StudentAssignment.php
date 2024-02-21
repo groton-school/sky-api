@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $section_name The name of the section the assignment was
@@ -39,34 +39,34 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentAssignment extends BaseObject
+class StudentAssignment extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_name",
-        "section_id",
-        "assignment_id",
-        "short_description",
-        "date_assigned",
-        "date_due",
-        "long_description",
-        "assignment_type",
-        "grade_book",
-        "online_submission",
-        "assignment_status",
-        "assessment",
-        "assessment_id",
-        "assessment_locked",
-        "major",
-        "discussion",
-        "formative",
-        "exempt",
-        "incomplete",
-        "late",
-        "missing",
-        "rubric",
-        "user_task",
+        "section_name" => "string",
+        "section_id" => "int",
+        "assignment_id" => "int",
+        "short_description" => "string",
+        "date_assigned" => "string",
+        "date_due" => "string",
+        "long_description" => "string",
+        "assignment_type" => "string",
+        "grade_book" => "bool",
+        "online_submission" => "bool",
+        "assignment_status" => "int",
+        "assessment" => "bool",
+        "assessment_id" => "int",
+        "assessment_locked" => "bool",
+        "major" => "int",
+        "discussion" => "bool",
+        "formative" => "bool",
+        "exempt" => "bool",
+        "incomplete" => "bool",
+        "late" => "bool",
+        "missing" => "bool",
+        "rubric" => "bool",
+        "user_task" => "bool",
     ];
 }

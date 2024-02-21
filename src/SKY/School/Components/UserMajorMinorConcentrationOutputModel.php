@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The Id of the user for whom this data belongs
@@ -15,18 +15,18 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserMajorMinorConcentrationOutputModel extends BaseObject
+class UserMajorMinorConcentrationOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "parent_id",
-        "major",
-        "minor",
-        "concentration",
-        "cip_prefix",
-        "cip_suffix",
+        "id" => "int",
+        "parent_id" => "int",
+        "major" => "\Blackbaud\SKY\School\Components\Major",
+        "minor" => "\Blackbaud\SKY\School\Components\Minor",
+        "concentration" => "\Blackbaud\SKY\School\Components\Concentration",
+        "cip_prefix" => "string",
+        "cip_suffix" => "string",
     ];
 }

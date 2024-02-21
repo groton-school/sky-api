@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?string $cip_prefix
@@ -15,16 +15,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Major extends BaseObject
+class Major extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "cip_prefix",
-        "cip_suffix",
-        "id",
-        "name",
-        "abbreviation",
+        "cip_prefix" => "string",
+        "cip_suffix" => "string",
+        "id" => "int",
+        "name" => "string",
+        "abbreviation" => "string",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Row Model
@@ -12,12 +12,12 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Row extends BaseObject
+class Row extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "columns",
+        "columns" => "\Blackbaud\SKY\School\Components\Field[]",
     ];
 }

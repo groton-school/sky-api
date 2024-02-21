@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Highlight model for athletic game highlights
@@ -20,20 +20,20 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Highlight extends BaseObject
+class Highlight extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "athletic_schedule_id",
-        "author",
-        "headline",
-        "brief_description",
-        "long_description",
-        "publish_date",
-        "expire_date",
-        "photos",
+        "id" => "int",
+        "athletic_schedule_id" => "int",
+        "author" => "string",
+        "headline" => "string",
+        "brief_description" => "string",
+        "long_description" => "string",
+        "publish_date" => "string",
+        "expire_date" => "string",
+        "photos" => "\Blackbaud\SKY\School\Components\HighlightPhoto[]",
     ];
 }

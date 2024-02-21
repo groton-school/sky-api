@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id The ID of the sport level
@@ -20,20 +20,20 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SportsLevel extends BaseObject
+class SportsLevel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "description",
-        "gender",
-        "level_of_play",
-        "sport_id",
-        "sport",
-        "season_id",
-        "season",
+        "id" => "int",
+        "name" => "string",
+        "description" => "string",
+        "gender" => "string",
+        "level_of_play" => "string",
+        "sport_id" => "int",
+        "sport" => "string",
+        "season_id" => "int",
+        "season" => "string",
     ];
 }

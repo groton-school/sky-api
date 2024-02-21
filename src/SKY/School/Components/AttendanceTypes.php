@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $present Individual was present
@@ -11,14 +11,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AttendanceTypes extends BaseObject
+class AttendanceTypes extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "present",
-        "absence",
-        "tardy",
+        "present" => "int",
+        "absence" => "int",
+        "tardy" => "int",
     ];
 }

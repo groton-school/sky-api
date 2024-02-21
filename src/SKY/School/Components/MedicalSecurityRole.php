@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $role_id The ID of role
@@ -11,13 +11,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class MedicalSecurityRole extends BaseObject
+class MedicalSecurityRole extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "role_id",
-        "has_access",
+        "role_id" => "int",
+        "has_access" => "bool",
     ];
 }

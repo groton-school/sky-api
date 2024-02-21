@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $section_id
@@ -14,17 +14,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EnrollmentChangeAudit extends BaseObject
+class EnrollmentChangeAudit extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_id",
-        "course_code",
-        "section_name",
-        "modified_date_time",
-        "modified_by",
-        "action",
+        "section_id" => "int",
+        "course_code" => "string",
+        "section_name" => "string",
+        "modified_date_time" => "string",
+        "modified_by" => "int",
+        "action" => "string",
     ];
 }

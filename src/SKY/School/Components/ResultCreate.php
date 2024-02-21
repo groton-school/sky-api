@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Result Create Model
@@ -17,15 +17,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class ResultCreate extends BaseObject
+class ResultCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "schedule_id",
-        "schedule_type",
-        "send_notification",
-        "opponents",
+        "schedule_id" => "int",
+        "schedule_type" => "int",
+        "send_notification" => "bool",
+        "opponents" => "\Blackbaud\SKY\School\Components\ResultCreateOpponent[]",
     ];
 }

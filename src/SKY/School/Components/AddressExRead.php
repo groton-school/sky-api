@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * AddressExRead Model
@@ -29,27 +29,27 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AddressExRead extends BaseObject
+class AddressExRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "address_type",
-        "city",
-        "country",
-        "line_one",
-        "line_three",
-        "line_two",
-        "mailing_address",
-        "postal_code",
-        "primary",
-        "province",
-        "region",
-        "shared",
-        "state",
-        "type_id",
-        "user_id",
+        "id" => "int",
+        "address_type" => "string",
+        "city" => "string",
+        "country" => "string",
+        "line_one" => "string",
+        "line_three" => "string",
+        "line_two" => "string",
+        "mailing_address" => "bool",
+        "postal_code" => "string",
+        "primary" => "bool",
+        "province" => "string",
+        "region" => "string",
+        "shared" => "bool",
+        "state" => "string",
+        "type_id" => "int",
+        "user_id" => "int",
     ];
 }

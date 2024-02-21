@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Admissions Checklist Status
@@ -14,14 +14,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AdmissionsChecklistStatus extends BaseObject
+class AdmissionsChecklistStatus extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "status_id",
-        "status_name",
-        "ordinal",
+        "status_id" => "int",
+        "status_name" => "string",
+        "ordinal" => "int",
     ];
 }

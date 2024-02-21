@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $user_id ID of the individual to be enrolled
@@ -29,27 +29,27 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserEnrollmentCreate extends BaseObject
+class UserEnrollmentCreate extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "grade_level_id",
-        "school_level_id",
-        "school_year_label",
-        "enroll_date",
-        "depart_date",
-        "current_year",
-        "has_grades",
-        "grade_repeated",
-        "graduated",
-        "allow_edit",
-        "allow_delete",
-        "future_enrollments",
-        "duration_id",
-        "session_id",
-        "role_ids",
+        "user_id" => "int",
+        "grade_level_id" => "int",
+        "school_level_id" => "int",
+        "school_year_label" => "string",
+        "enroll_date" => "string",
+        "depart_date" => "string",
+        "current_year" => "bool",
+        "has_grades" => "bool",
+        "grade_repeated" => "bool",
+        "graduated" => "bool",
+        "allow_edit" => "bool",
+        "allow_delete" => "bool",
+        "future_enrollments" => "bool",
+        "duration_id" => "int",
+        "session_id" => "int",
+        "role_ids" => "int[]",
     ];
 }

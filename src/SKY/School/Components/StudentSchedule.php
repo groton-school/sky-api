@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Schedule Item
@@ -37,32 +37,32 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentSchedule extends BaseObject
+class StudentSchedule extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_id",
-        "section_identifier",
-        "course_title",
-        "course_code",
-        "section_name",
-        "block_id",
-        "block_name",
-        "room_id",
-        "room_name",
-        "room_number",
-        "room_capacity",
-        "room_code",
-        "faculty_name",
-        "faculty_firstname",
-        "faculty_lastname",
-        "start_time",
-        "end_time",
-        "meeting_date",
-        "faculty_user_id",
-        "attendance_required",
-        "offering_type",
+        "section_id" => "int",
+        "section_identifier" => "string",
+        "course_title" => "string",
+        "course_code" => "string",
+        "section_name" => "string",
+        "block_id" => "int",
+        "block_name" => "string",
+        "room_id" => "int",
+        "room_name" => "string",
+        "room_number" => "string",
+        "room_capacity" => "int",
+        "room_code" => "string",
+        "faculty_name" => "string",
+        "faculty_firstname" => "string",
+        "faculty_lastname" => "string",
+        "start_time" => "string",
+        "end_time" => "string",
+        "meeting_date" => "string",
+        "faculty_user_id" => "int",
+        "attendance_required" => "bool",
+        "offering_type" => "\Blackbaud\SKY\School\Components\OfferingType",
     ];
 }

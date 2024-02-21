@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property ?int $id
@@ -17,19 +17,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class SchoolDecisionModel extends BaseObject
+class SchoolDecisionModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "decision_type",
-        "decision_type_id",
-        "date",
-        "expire_date",
-        "comment",
-        "candidate_response",
+        "id" => "int",
+        "name" => "string",
+        "decision_type" => "string",
+        "decision_type_id" => "int",
+        "date" => "string",
+        "expire_date" => "string",
+        "comment" => "string",
+        "candidate_response" => "\Blackbaud\SKY\School\Components\CandidateDecisionModel",
     ];
 }

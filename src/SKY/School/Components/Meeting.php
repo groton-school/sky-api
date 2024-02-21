@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Meeting
@@ -44,39 +44,39 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Meeting extends BaseObject
+class Meeting extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "section_id",
-        "section_identifier",
-        "course_title",
-        "group_name",
-        "block_id",
-        "block_name",
-        "room_id",
-        "room_name",
-        "room_number",
-        "room_capacity",
-        "room_code",
-        "faculty_user_id",
-        "faculty_name",
-        "faculty_firstname",
-        "faculty_lastname",
-        "start_time",
-        "end_time",
-        "meeting_date",
-        "attendance_required",
-        "attendance_taken",
-        "num_absent",
-        "attendance_id",
-        "level_number",
-        "offering_type",
-        "created_date",
-        "modified_date",
-        "last_modified_user_id",
-        "teachers",
+        "section_id" => "int",
+        "section_identifier" => "string",
+        "course_title" => "string",
+        "group_name" => "string",
+        "block_id" => "int",
+        "block_name" => "string",
+        "room_id" => "int",
+        "room_name" => "string",
+        "room_number" => "int",
+        "room_capacity" => "int",
+        "room_code" => "string",
+        "faculty_user_id" => "int",
+        "faculty_name" => "string",
+        "faculty_firstname" => "string",
+        "faculty_lastname" => "string",
+        "start_time" => "string",
+        "end_time" => "string",
+        "meeting_date" => "string",
+        "attendance_required" => "bool",
+        "attendance_taken" => "bool",
+        "num_absent" => "int",
+        "attendance_id" => "int",
+        "level_number" => "int",
+        "offering_type" => "\Blackbaud\SKY\School\Components\OfferingType",
+        "created_date" => "string",
+        "modified_date" => "string",
+        "last_modified_user_id" => "int",
+        "teachers" => "\Blackbaud\SKY\School\Components\Teacher[]",
     ];
 }

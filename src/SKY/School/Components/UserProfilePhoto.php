@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * profile photo object
@@ -12,13 +12,13 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserProfilePhoto extends BaseObject
+class UserProfilePhoto extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "photo_url",
-        "thumbnail_url",
+        "photo_url" => "string",
+        "thumbnail_url" => "string",
     ];
 }

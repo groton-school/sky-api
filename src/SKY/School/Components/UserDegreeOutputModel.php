@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $user_id The Id of the user for whom this data belongs
@@ -14,16 +14,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserDegreeOutputModel extends BaseObject
+class UserDegreeOutputModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "first_name",
-        "last_name",
-        "preferred_name",
-        "student_degrees",
+        "user_id" => "int",
+        "first_name" => "string",
+        "last_name" => "string",
+        "preferred_name" => "string",
+        "student_degrees" => "\Blackbaud\SKY\School\Components\DegreeOutputModel[]",
     ];
 }

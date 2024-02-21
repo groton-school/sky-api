@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Candidate Read
@@ -57,53 +57,53 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class CandidateRead extends BaseObject
+class CandidateRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "first_name",
-        "last_name",
-        "middle_name",
-        "prefix",
-        "suffix",
-        "nickname",
-        "role",
-        "role_id",
-        "current_status",
-        "status_id",
-        "entering_year",
-        "entering_year_id",
-        "entering_grade",
-        "entering_grade_id",
-        "email",
-        "comment",
-        "parent1_email",
-        "parent2_email",
-        "international",
-        "school_program",
-        "gender",
-        "ethnicity",
-        "boarding_or_day",
-        "financial_aid",
-        "admissions_staff_id",
-        "admissions_staff",
-        "inquiry_source",
-        "inquiry_source_id",
-        "referral_type",
-        "referral_type_id",
-        "has_iep",
-        "has_504",
-        "created_by",
-        "created",
-        "modified_by",
-        "modified",
-        "preferred_name",
-        "decision",
-        "family_id",
-        "current_status_date",
-        "application",
+        "user_id" => "int",
+        "first_name" => "string",
+        "last_name" => "string",
+        "middle_name" => "string",
+        "prefix" => "string",
+        "suffix" => "string",
+        "nickname" => "string",
+        "role" => "string",
+        "role_id" => "int",
+        "current_status" => "string",
+        "status_id" => "int",
+        "entering_year" => "string",
+        "entering_year_id" => "int",
+        "entering_grade" => "string",
+        "entering_grade_id" => "int",
+        "email" => "string",
+        "comment" => "string",
+        "parent1_email" => "string",
+        "parent2_email" => "string",
+        "international" => "bool",
+        "school_program" => "string",
+        "gender" => "string",
+        "ethnicity" => "string",
+        "boarding_or_day" => "string",
+        "financial_aid" => "bool",
+        "admissions_staff_id" => "int",
+        "admissions_staff" => "string",
+        "inquiry_source" => "string",
+        "inquiry_source_id" => "int",
+        "referral_type" => "string",
+        "referral_type_id" => "int",
+        "has_iep" => "bool",
+        "has_504" => "bool",
+        "created_by" => "string",
+        "created" => "string",
+        "modified_by" => "string",
+        "modified" => "string",
+        "preferred_name" => "string",
+        "decision" => "\Blackbaud\SKY\School\Components\SchoolDecisionModel",
+        "family_id" => "int",
+        "current_status_date" => "string",
+        "application" => "\Blackbaud\SKY\School\Components\ApplicationModel",
     ];
 }

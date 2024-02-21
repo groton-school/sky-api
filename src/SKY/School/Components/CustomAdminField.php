@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Custom Field
@@ -30,31 +30,31 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class CustomAdminField extends BaseObject
+class CustomAdminField extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "data_type_id",
-        "data_type",
-        "data_type_description",
-        "field_id",
-        "field_name",
-        "bit_value",
-        "int_value",
-        "decimal_value",
-        "text_value",
-        "date_value",
-        "last_modified_user_id",
-        "last_modified_date",
-        "status",
-        "unique",
-        "required",
-        "table_id",
-        "table_value_id",
-        "table_value",
-        "table_value_abbreviation",
+        "id" => "string",
+        "data_type_id" => "int",
+        "data_type" => "string",
+        "data_type_description" => "string",
+        "field_id" => "int",
+        "field_name" => "string",
+        "bit_value" => "bool",
+        "int_value" => "int",
+        "decimal_value" => "float",
+        "text_value" => "string",
+        "date_value" => "string",
+        "last_modified_user_id" => "int",
+        "last_modified_date" => "string",
+        "status" => "bool",
+        "unique" => "bool",
+        "required" => "bool",
+        "table_id" => "int",
+        "table_value_id" => "int",
+        "table_value" => "string",
+        "table_value_abbreviation" => "string",
     ];
 }

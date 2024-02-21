@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Timezone model
@@ -14,14 +14,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Timezone extends BaseObject
+class Timezone extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "timezone_name",
-        "is_daylight_savings_time",
-        "utc_offset",
+        "timezone_name" => "string",
+        "is_daylight_savings_time" => "bool",
+        "utc_offset" => "string",
     ];
 }

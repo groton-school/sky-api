@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * RelationshipRead Model
@@ -40,27 +40,27 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class RelationshipRead extends BaseObject
+class RelationshipRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "comment",
-        "contact",
-        "first_name",
-        "last_name",
-        "list_as_parent",
-        "parental_access",
-        "primary",
-        "relationship",
-        "resides_with",
-        "show_parent",
-        "tuition_responsible_signer",
-        "type_id",
-        "user_one_id",
-        "user_one_role",
-        "user_two_id",
+        "id" => "string",
+        "comment" => "string",
+        "contact" => "bool",
+        "first_name" => "string",
+        "last_name" => "string",
+        "list_as_parent" => "bool",
+        "parental_access" => "bool",
+        "primary" => "bool",
+        "relationship" => "int",
+        "resides_with" => "bool",
+        "show_parent" => "bool",
+        "tuition_responsible_signer" => "bool",
+        "type_id" => "int",
+        "user_one_id" => "int",
+        "user_one_role" => "string",
+        "user_two_id" => "int",
     ];
 }

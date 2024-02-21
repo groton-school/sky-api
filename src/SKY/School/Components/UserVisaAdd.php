@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * An object for visa information
@@ -20,16 +20,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserVisaAdd extends BaseObject
+class UserVisaAdd extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "number",
-        "status",
-        "type",
-        "issue_date",
-        "expire_date",
+        "number" => "string",
+        "status" => "string",
+        "type" => "string",
+        "issue_date" => "string",
+        "expire_date" => "string",
     ];
 }

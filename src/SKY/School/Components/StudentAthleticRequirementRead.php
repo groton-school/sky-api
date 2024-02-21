@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student athletic clearance requirement model
@@ -21,17 +21,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentAthleticRequirementRead extends BaseObject
+class StudentAthleticRequirementRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "athletic_requirement_type",
-        "school_year",
-        "season",
-        "is_complete",
-        "athletic_requirement_date",
+        "id" => "int",
+        "athletic_requirement_type" => "\Blackbaud\SKY\School\Components\AthleticRequirementType",
+        "school_year" => "\Blackbaud\SKY\School\Components\IdDescriptorField",
+        "season" => "\Blackbaud\SKY\School\Components\IdDescriptorField",
+        "is_complete" => "bool",
+        "athletic_requirement_date" => "string",
     ];
 }

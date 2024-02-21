@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Player
@@ -23,23 +23,23 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Player extends BaseObject
+class Player extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "accolades",
-        "first_name",
-        "height",
-        "hometown",
-        "jersey",
-        "last_name",
-        "position",
-        "returning_letter",
-        "team_captain",
-        "weight",
-        "preferred_name",
+        "id" => "int",
+        "accolades" => "string",
+        "first_name" => "string",
+        "height" => "string",
+        "hometown" => "string",
+        "jersey" => "int",
+        "last_name" => "string",
+        "position" => "string",
+        "returning_letter" => "bool",
+        "team_captain" => "bool",
+        "weight" => "string",
+        "preferred_name" => "string",
     ];
 }

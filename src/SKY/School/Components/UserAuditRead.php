@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Contains the audit information for a single field
@@ -15,16 +15,16 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class UserAuditRead extends BaseObject
+class UserAuditRead extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "field_name",
-        "change_date",
-        "value_before",
-        "value_after",
-        "user_id",
+        "field_name" => "string",
+        "change_date" => "string",
+        "value_before" => "string",
+        "value_after" => "string",
+        "user_id" => "int",
     ];
 }

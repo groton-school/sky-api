@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Sports Model
@@ -14,15 +14,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class Sport extends BaseObject
+class Sport extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "level",
-        "name",
-        "season",
+        "id" => "int",
+        "level" => "\Blackbaud\SKY\School\Components\Level",
+        "name" => "string",
+        "season" => "\Blackbaud\SKY\School\Components\Season",
     ];
 }

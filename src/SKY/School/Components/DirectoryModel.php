@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property int $id The Id of the directory
@@ -11,14 +11,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class DirectoryModel extends BaseObject
+class DirectoryModel extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "sort",
+        "id" => "int",
+        "name" => "string",
+        "sort" => "int",
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Emergency Contact Change Phone Model
@@ -19,19 +19,19 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class EmergencyContactChangePhone extends BaseObject
+class EmergencyContactChangePhone extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "active",
-        "call_dialer",
-        "first_name",
-        "last_name",
-        "phone_number",
-        "phone_type",
-        "relationship",
-        "sort_order",
+        "active" => "bool",
+        "call_dialer" => "string",
+        "first_name" => "string",
+        "last_name" => "string",
+        "phone_number" => "string",
+        "phone_type" => "string",
+        "relationship" => "string",
+        "sort_order" => "int",
     ];
 }

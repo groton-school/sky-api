@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Directory Result Model
@@ -52,49 +52,49 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class DirectoryResult extends BaseObject
+class DirectoryResult extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "user_id",
-        "first_name",
-        "last_name",
-        "email",
-        "address_line1",
-        "address_line2",
-        "address_line3",
-        "city",
-        "state",
-        "zip",
-        "country",
-        "home_phone",
-        "cell_phone",
-        "office_phone",
-        "home_phone2",
-        "has_relationships",
-        "prefix",
-        "preferred_name",
-        "profile_photo",
-        "middlename",
-        "maiden_name",
-        "suffix",
-        "grad_year",
-        "grade",
-        "grade_display",
-        "department",
-        "department_display",
-        "spouse_id",
-        "child_names",
-        "grade_numeric",
-        "grade_numeric_display",
-        "total_count",
-        "deceased",
-        "student",
-        "preferred_address_id",
-        "preferred_address_lat",
-        "preferred_address_lng",
-        "job_title",
+        "user_id" => "int",
+        "first_name" => "string",
+        "last_name" => "string",
+        "email" => "string",
+        "address_line1" => "string",
+        "address_line2" => "string",
+        "address_line3" => "string",
+        "city" => "string",
+        "state" => "string",
+        "zip" => "string",
+        "country" => "string",
+        "home_phone" => "string",
+        "cell_phone" => "string",
+        "office_phone" => "string",
+        "home_phone2" => "string",
+        "has_relationships" => "bool",
+        "prefix" => "string",
+        "preferred_name" => "string",
+        "profile_photo" => "string",
+        "middlename" => "string",
+        "maiden_name" => "string",
+        "suffix" => "string",
+        "grad_year" => "string",
+        "grade" => "string",
+        "grade_display" => "string",
+        "department" => "string",
+        "department_display" => "string",
+        "spouse_id" => "int",
+        "child_names" => "string",
+        "grade_numeric" => "int",
+        "grade_numeric_display" => "string",
+        "total_count" => "int",
+        "deceased" => "bool",
+        "student" => "bool",
+        "preferred_address_id" => "int",
+        "preferred_address_lat" => "float",
+        "preferred_address_lng" => "float",
+        "job_title" => "string",
     ];
 }

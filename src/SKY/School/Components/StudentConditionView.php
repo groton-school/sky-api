@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Student medical condition
@@ -17,17 +17,17 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class StudentConditionView extends BaseObject
+class StudentConditionView extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "condition",
-        "date_as_of",
-        "date_until",
-        "notes",
-        "student_medications",
+        "id" => "int",
+        "condition" => "\Blackbaud\SKY\School\Components\IdDescriptorField",
+        "date_as_of" => "string",
+        "date_until" => "string",
+        "notes" => "string",
+        "student_medications" => "\Blackbaud\SKY\School\Components\StudentMedication[]",
     ];
 }

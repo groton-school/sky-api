@@ -2,7 +2,7 @@
 
 namespace Blackbaud\SKY\School\Components;
 
-use Battis\OpenAPI\Client\BaseObject;
+use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * Assignment Type Model
@@ -15,15 +15,15 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @api
  */
-class AssignmentType extends BaseObject
+class AssignmentType extends BaseComponent
 {
     /**
      * @var string[] $fields
      */
     protected static array $fields = [
-        "id",
-        "name",
-        "percentage",
-        "weight",
+        "id" => "int",
+        "name" => "string",
+        "percentage" => "string",
+        "weight" => "float",
     ];
 }
