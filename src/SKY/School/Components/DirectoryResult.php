@@ -46,8 +46,8 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?bool $student Returns true if the user is a student
  * @property ?int $preferred_address_id The Id of the preferred address for
  *   the user
- * @property ?\double $preferred_address_lat Preferred address latitude
- * @property ?\double $preferred_address_lng Preferred address longitude
+ * @property ?float $preferred_address_lat Preferred address latitude
+ * @property ?float $preferred_address_lng Preferred address longitude
  * @property ?string $job_title The user's job title
  *
  * @api

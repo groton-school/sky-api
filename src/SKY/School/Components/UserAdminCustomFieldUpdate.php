@@ -25,7 +25,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *   fields](https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet).
  * @property ?string $text_value If the field format is Text input or Text
  *   paragraph, use this property for the value of the custom field.
- * @property ?\double $decimal_value If the field format is Currency, use this
+ * @property ?float $decimal_value If the field format is Currency, use this
  *   property for the value of the custom field. Values must be between 0.00 and
  *   99,999,999.99.
  * @property ?string $date_value If field format is Date, use this property

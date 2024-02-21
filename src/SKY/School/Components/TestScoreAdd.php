@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property ?int $id The Test Type Id
  * @property ?string $comment The Comments on the Test
- * @property ?\double $overall_score The Overall Score
+ * @property ?float $overall_score The Overall Score
  * @property ?bool $printon_report_card Print on Report Card?
  * @property ?bool $printon_transcript Print on Transcript?
  * @property ?\Blackbaud\SKY\School\Components\SubTest[] $sub_tests List of

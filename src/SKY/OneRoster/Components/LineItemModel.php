@@ -12,8 +12,8 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $class
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $category
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $gradingPeriod
- * @property ?\double $resultValueMin
- * @property ?\double $resultValueMax
+ * @property ?float $resultValueMin
+ * @property ?float $resultValueMax
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified

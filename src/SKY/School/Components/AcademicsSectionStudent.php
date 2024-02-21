@@ -21,7 +21,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?int $marking_period_id The ID of the marking period for this
  *   section
  * @property ?int $duration_id The duration ID for a section
- * @property ?\double $cumulative_grade The cumulative grade for this section
+ * @property ?float $cumulative_grade The cumulative grade for this section
  *   and student
  *
  * @api

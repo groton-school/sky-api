@@ -9,9 +9,9 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $declared_on From User Area of Study Reference
  * @property ?string $completed_on From User Area of Study Group
  * @property ?string $conferred_on From User Area of Study Group
- * @property ?\double $credits_completed From User Area of Study Reference
- * @property ?\double $credits_in_progress From User Area of Study Reference
- * @property ?\double $credits_remaining From User Area of Study Reference
+ * @property ?float $credits_completed From User Area of Study Reference
+ * @property ?float $credits_in_progress From User Area of Study Reference
+ * @property ?float $credits_remaining From User Area of Study Reference
  * @property ?string $created_by The BBID of the user who created the area of
  *   study
  * @property ?string $modified_by The BBID of the user who last modified the

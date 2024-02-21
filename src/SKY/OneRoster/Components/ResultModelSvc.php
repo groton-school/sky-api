@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property ?string $scoreStatus Score status
  * @property ?string $scoreDate Score date
- * @property ?\double $score Score
+ * @property ?float $score Score
  * @property ?string $comment Comment
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $lineItem
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $student
