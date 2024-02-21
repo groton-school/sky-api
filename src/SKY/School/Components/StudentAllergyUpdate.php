@@ -22,7 +22,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?\Blackbaud\SKY\School\Components\MedicalSecurityRole[]
  *   $role_access Array of roles. If a role is not included, default access will
  *   be set to true
- * @property ?\int[] $medications The list of student medication IDs for the
+ * @property ?int[] $medications The list of student medication IDs for the
  *   allergy. If included, this list will replace the existing list of
  *   medications.
  *
@@ -31,7 +31,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StudentAllergyUpdate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "date_as_of",

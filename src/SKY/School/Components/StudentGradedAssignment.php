@@ -33,7 +33,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StudentGradedAssignment extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "assignment_id",

@@ -32,9 +32,9 @@ class Students extends BaseEndpoint
      *   be found using [Section
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet).
      *
-     * @return \Blackbaud\SKY\School\Components\StudentCollection Success
+     * @return \Blackbaud\SKY\School\Components\StudentCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -63,9 +63,9 @@ class Students extends BaseEndpoint
      *   Defines which users (students and/or teachers) should be added to which
      *   offerings (via ```section_id``` and duration ```id```)
      *
-     * @return \Blackbaud\SKY\School\Components\PostResponse Success
+     * @return \Blackbaud\SKY\School\Components\PostResponseSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

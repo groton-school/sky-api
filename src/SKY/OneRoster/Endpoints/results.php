@@ -21,7 +21,7 @@ class Results extends BaseEndpoint
     /**
      * Returns a collection of results.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
      *   It was possible to read the collection.
      *
      * @api
@@ -36,10 +36,10 @@ class Results extends BaseEndpoint
      *
      * @param string $id sourcedId for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc OK -
-     *   It was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvcOK - It
+     *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -58,10 +58,10 @@ class Results extends BaseEndpoint
      * @param \Blackbaud\SKY\OneRoster\Components\ResultInputModelSvc
      *   $requestBody input model for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc OK -
-     *   It was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvcOK - It
+     *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -79,10 +79,10 @@ class Results extends BaseEndpoint
      *
      * @param string $id sourcedId for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
      *   Resource has been deleted.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -33,7 +33,7 @@ class Locations extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\LocationCollection Success
+     * @return \Blackbaud\SKY\School\Components\LocationCollectionSuccess
      *
      * @api
      */
@@ -64,9 +64,9 @@ class Locations extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\LocationCreateModel
      *   $requestBody The location to be created
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

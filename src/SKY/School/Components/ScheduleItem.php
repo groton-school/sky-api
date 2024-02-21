@@ -85,7 +85,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class ScheduleItem extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

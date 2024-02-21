@@ -25,14 +25,14 @@ use Battis\OpenAPI\Client\BaseObject;
  *   allergic reaction
  * @property ?\Blackbaud\SKY\School\Components\MedicalSecurityRole[]
  *   $role_access Array of roles
- * @property ?\int[] $medications Array of medication IDs
+ * @property ?int[] $medications Array of medication IDs
  *
  * @api
  */
 class StudentMedicalAllergyCondition extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "user_id",

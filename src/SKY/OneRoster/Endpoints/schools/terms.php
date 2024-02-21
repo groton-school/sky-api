@@ -21,10 +21,10 @@ class Terms extends BaseEndpoint
      *
      * @param string $school_id sourcedId for the school
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
-     *   OK - It was possible to read the collection.
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModelOK
+     *   - It was possible to read the collection.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

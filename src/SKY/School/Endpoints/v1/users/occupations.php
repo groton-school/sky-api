@@ -28,10 +28,10 @@ class Occupations extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\OccupationReadCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\OccupationReadCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -61,9 +61,9 @@ class Occupations extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\OccupationCreate $requestBody
      *   The occupation information to be created.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -95,9 +95,9 @@ class Occupations extends BaseEndpoint
      * @param int $occupation_id Format - int32. The ID of the occupation.
      * @param ?bool $current (Optional) Current Employment Status
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -130,9 +130,9 @@ class Occupations extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\OccupationUpdate $requestBody
      *   The occupation information to be updated.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

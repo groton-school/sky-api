@@ -24,7 +24,7 @@ class Testtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\TestTypeCollection Success
+     * @return \Blackbaud\SKY\School\Components\TestTypeCollectionSuccess
      *
      * @api
      */

@@ -9,25 +9,25 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $classCode
  * @property ?string $classType
  * @property ?string $location
- * @property ?\string[] $grades
- * @property ?\string[] $subjects
+ * @property ?string[] $grades
+ * @property ?string[] $subjects
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $course
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $school
  * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $terms
- * @property ?\string[] $subjectCodes
- * @property ?\string[] $periods
+ * @property ?string[] $subjectCodes
+ * @property ?string[] $periods
  * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $resources
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified
- * @property ?\string[] $metadata
+ * @property ?string[] $metadata
  *
  * @api
  */
 class ClassModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "title",

@@ -17,7 +17,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Timezone extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "timezone_name",

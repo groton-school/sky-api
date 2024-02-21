@@ -15,14 +15,14 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified
- * @property ?\string[] $metadata
+ * @property ?string[] $metadata
  *
  * @api
  */
 class EnrollmentModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "user",

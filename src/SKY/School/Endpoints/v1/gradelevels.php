@@ -29,7 +29,7 @@ class Gradelevels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\GradeLevelCollection Success
+     * @return \Blackbaud\SKY\School\Components\GradeLevelCollectionSuccess
      *
      * @api
      */

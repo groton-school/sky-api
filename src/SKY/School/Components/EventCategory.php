@@ -18,7 +18,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?bool $public If set to True, the event category is public.  If
  *   set to False, it is secure and only users with the allowed list of roles
  *   can see the events in the category
- * @property ?\int[] $roles List of Role IDs that are allowed to see a secure
+ * @property ?int[] $roles List of Role IDs that are allowed to see a secure
  *   event category
  *
  * @api
@@ -26,7 +26,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class EventCategory extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

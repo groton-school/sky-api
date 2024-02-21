@@ -32,10 +32,10 @@ class Sections extends BaseEndpoint
      *   ```school_year_label``` in the [Year
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget).
      *
-     * @return \Blackbaud\SKY\School\Components\AcademicsSectionCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AcademicsSectionCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

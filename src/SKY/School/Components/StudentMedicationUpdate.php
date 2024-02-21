@@ -22,10 +22,10 @@ use Battis\OpenAPI\Client\BaseObject;
  *   medication. Allowed values: everyday, asneeded, specificdays.
  * @property \Blackbaud\SKY\School\Components\Days $dispense_days Days for
  *   medication
- * @property ?\int[] $conditions The list of student condition IDs for the
+ * @property ?int[] $conditions The list of student condition IDs for the
  *   condition. If included, this list will replace the existing list of
  *   conditions on the medication.
- * @property ?\int[] $allergies The list of student allergy IDs for the
+ * @property ?int[] $allergies The list of student allergy IDs for the
  *   allergy. If included, this list will replace the existing list of allegies
  *   on the medication.
  *
@@ -34,7 +34,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StudentMedicationUpdate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "date_as_of",

@@ -22,7 +22,7 @@ class Excusedurationtypes extends BaseEndpoint
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypes Success
+     * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypesSuccess
      *
      * @api
      */

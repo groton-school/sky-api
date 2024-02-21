@@ -32,9 +32,9 @@ class Practice extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PracticeCreate $requestBody
      *   Information about the practice to be created
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -61,9 +61,9 @@ class Practice extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PracticeUpdate $requestBody
      *   Information about the practice to be updated
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -92,9 +92,9 @@ class Practice extends BaseEndpoint
      * @param int $practice_id Format - int32. ID of the practice to be
      *   deleted
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

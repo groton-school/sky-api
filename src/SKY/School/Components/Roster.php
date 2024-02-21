@@ -16,7 +16,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Roster extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

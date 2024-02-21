@@ -17,7 +17,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class ScheduleSet extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "schedule_set_id",

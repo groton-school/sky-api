@@ -61,7 +61,7 @@ class Teams extends BaseEndpoint
      *
      * @param ?string $school_year (Optional) School year
      *
-     * @return \Blackbaud\SKY\School\Components\TeamCollection Success
+     * @return \Blackbaud\SKY\School\Components\TeamCollectionSuccess
      *
      * @api
      */

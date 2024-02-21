@@ -37,7 +37,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class AttendanceGet extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

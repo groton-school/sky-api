@@ -27,7 +27,7 @@ class Offeringtypes extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Components\OfferingTypeCollection Success
+     * @return \Blackbaud\SKY\School\Components\OfferingTypeCollectionSuccess
      *
      * @api
      */

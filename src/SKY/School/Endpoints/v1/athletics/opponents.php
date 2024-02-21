@@ -33,8 +33,8 @@ class Opponents extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollectionSuccess
+
      *
      * @api
      */
@@ -64,9 +64,9 @@ class Opponents extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\OpponentUpdateModel
      *   $requestBody The opponent to be created
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

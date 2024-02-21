@@ -18,7 +18,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class AdmissionsCheckList extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "checklist_id",

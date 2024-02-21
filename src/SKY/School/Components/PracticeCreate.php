@@ -37,7 +37,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class PracticeCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "send_notification",

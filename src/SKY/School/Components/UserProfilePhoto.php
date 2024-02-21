@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserProfilePhoto extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "photo_url",

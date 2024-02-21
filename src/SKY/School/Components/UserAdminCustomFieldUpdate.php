@@ -39,7 +39,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserAdminCustomFieldUpdate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

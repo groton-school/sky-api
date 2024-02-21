@@ -17,7 +17,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StudentImmunizationType extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

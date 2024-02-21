@@ -37,10 +37,10 @@ class Changes extends BaseEndpoint
      *   RFC3339). The DateTime of changes to academics enrollments to end with.
 
      *
-     * @return \Blackbaud\SKY\School\Components\EnrollmentChangesCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EnrollmentChangesCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

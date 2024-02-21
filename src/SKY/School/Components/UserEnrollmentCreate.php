@@ -24,7 +24,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *   enrolled in. Optional for all Education Enrollments.
  * @property int $session_id The Id of the session the user should be enrolled
  *   in. Required for Higher Education Enrollments.
- * @property \int[] $role_ids Collection of RoleIds the individual should be
+ * @property int[] $role_ids Collection of RoleIds the individual should be
  *   associated to
  *
  * @api
@@ -32,7 +32,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserEnrollmentCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "user_id",

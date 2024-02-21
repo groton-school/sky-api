@@ -27,10 +27,9 @@ class Students extends BaseEndpoint
      *
      * @param int $parent_id Format - int32.
      *
-     * @return \Blackbaud\SKY\School\Components\ChildOfParentCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\ChildOfParentCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -28,8 +28,8 @@ class Categories extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Components\EventsCategoryCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EventsCategoryCollectionSuccess
+
      *
      * @api
      */

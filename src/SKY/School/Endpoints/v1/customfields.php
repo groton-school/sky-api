@@ -23,8 +23,8 @@ class Customfields extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollectionSuccess
+
      *
      * @api
      */

@@ -37,10 +37,9 @@ class Attendance extends BaseEndpoint
      * @param ?int $excuse_type (Optional) Format - int32. Filters results to
      *   a specific excuse type.
      *
-     * @return \Blackbaud\SKY\School\Components\AttendanceGetCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AttendanceGetCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -70,9 +69,9 @@ class Attendance extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\AttendanceCreate $requestBody
      *   Information about the attendance report
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

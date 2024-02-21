@@ -16,7 +16,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Team extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

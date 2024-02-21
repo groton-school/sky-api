@@ -29,9 +29,9 @@ class Athleticclearance extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentAthleticRequirementUpdate
      *   $requestBody The athletics requirements to update
      *
-     * @return \string[] Success
+     * @return string[]Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

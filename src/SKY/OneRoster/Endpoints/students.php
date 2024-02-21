@@ -20,7 +20,7 @@ class Students extends BaseEndpoint
     /**
      * Returns a collection of student user data.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
      *
      * @api
      */
@@ -34,9 +34,9 @@ class Students extends BaseEndpoint
      *
      * @param string $id sourcedId for the student
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModel Success
+     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModelSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

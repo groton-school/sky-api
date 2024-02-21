@@ -20,7 +20,7 @@ class Enrollments extends BaseEndpoint
     /**
      * Returns a collection of enrollments.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentsOutputModel OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentsOutputModelOK -
      *   It was possible to read the collection.
      *
      * @api
@@ -35,10 +35,10 @@ class Enrollments extends BaseEndpoint
      *
      * @param string $id sourcedId for the enrollment
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentOutputModel OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentOutputModelOK -
      *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

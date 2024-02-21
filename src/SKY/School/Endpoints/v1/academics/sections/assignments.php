@@ -45,9 +45,9 @@ class Assignments extends BaseEndpoint
      * @param ?string $search (Optional) Returns results with Descriptions or
      *   Titles that match search string.
      *
-     * @return \Blackbaud\SKY\School\Components\AssignmentCollection Success
+     * @return \Blackbaud\SKY\School\Components\AssignmentCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

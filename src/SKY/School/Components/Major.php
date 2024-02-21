@@ -18,7 +18,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Major extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "cip_prefix",

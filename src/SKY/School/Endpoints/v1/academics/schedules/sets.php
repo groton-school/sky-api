@@ -37,9 +37,9 @@ class Sets extends BaseEndpoint
      *   filter the collection of Schedule Sets. Defaults to the 'Academics'
      *   (1).
      *
-     * @return \Blackbaud\SKY\School\Components\ScheduleSetCollection Success
+     * @return \Blackbaud\SKY\School\Components\ScheduleSetCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -66,9 +66,9 @@ class Sets extends BaseEndpoint
      * @param int $schedule_set_id Format - int32. ID of the Schedule Set you
      *   seek.
      *
-     * @return \Blackbaud\SKY\School\Components\ScheduleSetDetails Success
+     * @return \Blackbaud\SKY\School\Components\ScheduleSetDetailsSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

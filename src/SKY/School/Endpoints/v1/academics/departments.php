@@ -29,7 +29,7 @@ class Departments extends BaseEndpoint
      *
      * @param ?int $level_id (Optional) Format - int32. Level number.
      *
-     * @return \Blackbaud\SKY\School\Components\DepartmentCollection Success
+     * @return \Blackbaud\SKY\School\Components\DepartmentCollectionSuccess
      *
      * @api
      */

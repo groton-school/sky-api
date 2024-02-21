@@ -40,10 +40,10 @@ class Enrollments extends BaseEndpoint
      * @param ?int $offset (Optional) Format - int32. The record to start the
      *   next collection on. Defaults to 0.
      *
-     * @return \Blackbaud\SKY\School\Components\UserEnrollmentCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\UserEnrollmentCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

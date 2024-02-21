@@ -69,9 +69,9 @@ class Meetings extends BaseEndpoint
      *   calculate the ```start_time``` and ```end_time``` or meetings based on
      *   the current day instead of the meeting day. Defaults to false.
      *
-     * @return \Blackbaud\SKY\School\Components\MeetingCollection Success
+     * @return \Blackbaud\SKY\School\Components\MeetingCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -114,10 +114,10 @@ class Meetings extends BaseEndpoint
      * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339).
      *
-     * @return \Blackbaud\SKY\School\Components\StudentScheduleCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\StudentScheduleCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

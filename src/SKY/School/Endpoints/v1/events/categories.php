@@ -30,8 +30,7 @@ class Categories extends BaseEndpoint
      * @param ?int $page (Optional) Format - int32. The page of results to
      *   start from.
      *
-     * @return \Blackbaud\SKY\School\Components\EventCategoryCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EventCategoryCollectionSuccess
      *
      * @api
      */
@@ -54,10 +53,10 @@ class Categories extends BaseEndpoint
      *
      * @param \Blackbaud\SKY\School\Components\EventCategory $requestBody
      *
-     * @return \Blackbaud\SKY\School\Components\EventCategoryCreateResponseExample
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EventCategoryCreateResponseExampleSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

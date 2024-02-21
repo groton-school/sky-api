@@ -28,8 +28,8 @@ class Directories extends BaseEndpoint
      *
      * - Student
      *
-     * @return \Blackbaud\SKY\School\Components\DirectoryModelCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\DirectoryModelCollectionSuccess
+
      *
      * @api
      */
@@ -62,10 +62,10 @@ class Directories extends BaseEndpoint
      * @param ?string $search (Optional)
      * @param ?bool $search_all (Optional)
      *
-     * @return \Blackbaud\SKY\School\Components\DirectoryResultCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\DirectoryResultCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

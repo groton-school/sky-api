@@ -19,7 +19,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class CandidateCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "user_id",

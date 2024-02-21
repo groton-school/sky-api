@@ -13,7 +13,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class DemographicOutputModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "demographic",

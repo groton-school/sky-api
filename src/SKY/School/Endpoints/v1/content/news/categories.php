@@ -25,7 +25,7 @@ class Categories extends BaseEndpoint
      *
      * - Student
      *
-     * @return \Blackbaud\SKY\School\Components\NewsCategoryCollection Success
+     * @return \Blackbaud\SKY\School\Components\NewsCategoryCollectionSuccess
      *
      * @api
      */

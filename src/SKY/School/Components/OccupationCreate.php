@@ -29,7 +29,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class OccupationCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "business_name",

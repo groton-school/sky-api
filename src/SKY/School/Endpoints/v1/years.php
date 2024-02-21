@@ -29,7 +29,7 @@ class Years extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\YearCollection Success
+     * @return \Blackbaud\SKY\School\Components\YearCollectionSuccess
      *
      * @api
      */

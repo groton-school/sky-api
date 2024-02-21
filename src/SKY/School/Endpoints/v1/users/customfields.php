@@ -63,10 +63,10 @@ class Customfields extends BaseEndpoint
      *   be returned from that result set for all users in that set even if they
      *   don't have any data for the given ```field_ids```.
      *
-     * @return \Blackbaud\SKY\School\Components\UserAdminCustomFieldCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\UserAdminCustomFieldCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -93,9 +93,9 @@ class Customfields extends BaseEndpoint
      * @param int $user_id Format - int32. The id of the user to get custom
      *   fields for.
      *
-     * @return \Blackbaud\SKY\School\Components\UserAdminCustomField Success
+     * @return \Blackbaud\SKY\School\Components\UserAdminCustomFieldSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -125,9 +125,9 @@ class Customfields extends BaseEndpoint
      *   $requestBody Object that describes the custom field that will be
      *   created.
      *
-     * @return bool Success
+     * @return boolSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -154,9 +154,9 @@ class Customfields extends BaseEndpoint
      *   $requestBody Object that describes the custom field that should be
      *   updated.
      *
-     * @return bool Success
+     * @return boolSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

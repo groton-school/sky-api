@@ -39,10 +39,10 @@ class LineItems extends BaseEndpoint
      *
      * @param string $class_id sourcedId for the class
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
-     *   It was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModelOK - It
+     *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

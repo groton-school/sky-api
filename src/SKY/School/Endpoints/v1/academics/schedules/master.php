@@ -40,10 +40,10 @@ class Master extends BaseEndpoint
      * @param ?int $offering_type (Optional) Format - int32. Filters the
      *   results by a specific group type. Defaults to "All" offering types.
      *
-     * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

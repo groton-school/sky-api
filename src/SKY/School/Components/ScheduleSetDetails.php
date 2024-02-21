@@ -44,7 +44,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $InsertDate
  * @property ?string $LastModifyDate
  * @property ?int $LastModifyUserId
- * @property ?\string[] $FieldsToNull
+ * @property ?string[] $FieldsToNull
  * @property ?string $vendor_external_id
  *
  * @api
@@ -52,7 +52,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class ScheduleSetDetails extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "ScheduleSetId",

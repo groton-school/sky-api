@@ -54,7 +54,7 @@ class Schedules extends BaseEndpoint
      *   date-time in RFC3339). Set date to limit results to games with
      *   information changed on and after that date.
      *
-     * @return \Blackbaud\SKY\School\Components\ScheduleItemCollection Success
+     * @return \Blackbaud\SKY\School\Components\ScheduleItemCollectionSuccess
      *
      * @api
      */

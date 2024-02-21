@@ -85,7 +85,7 @@ class Lists extends BaseEndpoint
      *
      * - SkyApi Data Sync
      *
-     * @return \Blackbaud\SKY\School\Components\ListReadCollection Success
+     * @return \Blackbaud\SKY\School\Components\ListReadCollectionSuccess
      *
      * @api
      */

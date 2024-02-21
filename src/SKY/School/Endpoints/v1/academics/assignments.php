@@ -34,10 +34,10 @@ class Assignments extends BaseEndpoint
      *   RFC3339).
      * @param ?string $section_ids (Optional)
      *
-     * @return \Blackbaud\SKY\School\Components\StudentAssignmentCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\StudentAssignmentCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

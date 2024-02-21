@@ -17,7 +17,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StatusInfoModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "imsx_codeMajor",

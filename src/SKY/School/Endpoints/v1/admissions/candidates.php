@@ -56,8 +56,7 @@ class Candidates extends BaseEndpoint
      *   or after. Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date
      *   format: 2003-04-21. Default is no modified date filter
      *
-     * @return \Blackbaud\SKY\School\Components\CandidateReadCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\CandidateReadCollectionSuccess
      *
      * @api
      */
@@ -81,9 +80,9 @@ class Candidates extends BaseEndpoint
      *
      * @param \Blackbaud\SKY\School\Components\CandidateCreate $requestBody
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

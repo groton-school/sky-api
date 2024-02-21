@@ -16,7 +16,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserPassport extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "number",

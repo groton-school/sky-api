@@ -18,19 +18,19 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $phone
  * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $agents
  * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $orgs
- * @property ?\string[] $grades
+ * @property ?string[] $grades
  * @property ?string $password
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified
- * @property ?\string[] $metadata
+ * @property ?string[] $metadata
  *
  * @api
  */
 class ORUserModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "username",

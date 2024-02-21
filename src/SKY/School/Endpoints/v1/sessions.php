@@ -30,8 +30,7 @@ class Sessions extends BaseEndpoint
      * @param ?string $school_year (Optional) Filter for a specific
      *   ```school_year``` (required format YYYY - YYYY (11 chars))
      *
-     * @return \Blackbaud\SKY\School\Components\SchoolSessionCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\SchoolSessionCollectionSuccess
      *
      * @api
      */

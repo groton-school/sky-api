@@ -29,8 +29,7 @@ class Venues extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\AthleticVenueCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AthleticVenueCollectionSuccess
      *
      * @api
      */

@@ -26,8 +26,8 @@ class Status extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollectionSuccess
+
      *
      * @api
      */

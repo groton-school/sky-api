@@ -30,10 +30,10 @@ class Allergiesconditions extends BaseEndpoint
      *
      * @param int $user_id Format - int32. ID of the student
      *
-     * @return \Blackbaud\SKY\School\Components\AllergiesAndConditionsView[]
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AllergiesAndConditionsView[]Success
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

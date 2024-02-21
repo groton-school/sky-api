@@ -107,7 +107,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $suffix The suffix of a user
  * @property \Blackbaud\SKY\School\Components\UserVisaAdd $visa An object for
  *   visa information
- * @property ?\string[] $fields_to_delete An array of strings representing
+ * @property ?string[] $fields_to_delete An array of strings representing
  *   field names.
  * Due to an inherent check against deleting data only accessible through the
  *   UI, this unusual step is necessary. To delete or clear data from a user
@@ -126,7 +126,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserEdit extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "affiliation",

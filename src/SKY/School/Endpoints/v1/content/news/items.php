@@ -27,7 +27,7 @@ class Items extends BaseEndpoint
      *
      * @param ?string $categories (Optional)
      *
-     * @return \Blackbaud\SKY\School\Components\NewsItemCollection Success
+     * @return \Blackbaud\SKY\School\Components\NewsItemCollectionSuccess
      *
      * @api
      */

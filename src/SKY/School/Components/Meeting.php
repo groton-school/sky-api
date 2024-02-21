@@ -47,7 +47,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Meeting extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "section_id",

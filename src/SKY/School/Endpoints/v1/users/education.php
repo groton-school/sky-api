@@ -29,10 +29,9 @@ class Education extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\EducationReadCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EducationReadCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -63,9 +62,9 @@ class Education extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EducationAdd $requestBody The
      *   education model.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -96,9 +95,9 @@ class Education extends BaseEndpoint
      * @param int $user_id Format - int32.
      * @param int $education_id Format - int32.
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -132,9 +131,9 @@ class Education extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EducationUpdate $requestBody
      *   The education model.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

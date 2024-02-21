@@ -21,10 +21,10 @@ class Categories extends BaseEndpoint
      *
      * @param string $class_id sourcedId for the category
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModelOK -
      *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

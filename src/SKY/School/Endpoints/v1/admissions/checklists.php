@@ -33,8 +33,8 @@ class Checklists extends BaseEndpoint
      * @param ?bool $inactive (Optional) flag to return only inactive
      *   checklists (default is both).
      *
-     * @return \Blackbaud\SKY\School\Components\AdmissionsCheckListCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AdmissionsCheckListCollectionSuccess
+
      *
      * @api
      */

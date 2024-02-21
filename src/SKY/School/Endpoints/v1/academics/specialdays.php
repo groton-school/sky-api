@@ -28,7 +28,7 @@ class Specialdays extends BaseEndpoint
      * @param ?int $level_id (Optional) Format - int32. Identifier for a
      *   specific school level.
      *
-     * @return \Blackbaud\SKY\School\Components\SpecialDayCollection Success
+     * @return \Blackbaud\SKY\School\Components\SpecialDayCollectionSuccess
      *
      * @api
      */

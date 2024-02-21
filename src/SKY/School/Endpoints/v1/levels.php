@@ -25,7 +25,7 @@ class Levels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\LevelCollection Success
+     * @return \Blackbaud\SKY\School\Components\LevelCollectionSuccess
      *
      * @api
      */

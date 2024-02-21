@@ -34,7 +34,7 @@ class Terms extends BaseEndpoint
      * @param ?int $offering_type (Optional) Format - int32. The offering type
      *   to filter terms by.
      *
-     * @return \Blackbaud\SKY\School\Components\TermCollection Success
+     * @return \Blackbaud\SKY\School\Components\TermCollectionSuccess
      *
      * @api
      */

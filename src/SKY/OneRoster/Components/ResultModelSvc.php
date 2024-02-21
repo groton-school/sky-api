@@ -17,14 +17,14 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $status Status for the instance
  * @property ?string $dateLastModified Date and time the instance was last
  *   modified
- * @property ?\string[] $metadata Extension properties for the instance
+ * @property ?string[] $metadata Extension properties for the instance
  *
  * @api
  */
 class ResultModelSvc extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "scoreStatus",

@@ -20,8 +20,8 @@ class GradingPeriods extends BaseEndpoint
     /**
      * Returns a collection of grading periods.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
-     *   OK - It was possible to read the collection.
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModelOK
+     *   - It was possible to read the collection.
      *
      * @api
      */
@@ -35,10 +35,10 @@ class GradingPeriods extends BaseEndpoint
      *
      * @param string $id sourcedId for the grading period
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModel
-     *   OK - It was possible to read the collection.
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModelOK
+     *   - It was possible to read the collection.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -28,9 +28,9 @@ class Nonuser extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EmergencyContactNonUserCreate
      *   $requestBody
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

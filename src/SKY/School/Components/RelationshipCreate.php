@@ -20,7 +20,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class RelationshipCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "relationship_type",

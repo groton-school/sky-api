@@ -25,7 +25,7 @@ class Gendertypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\GenderTypeCollection Success
+     * @return \Blackbaud\SKY\School\Components\GenderTypeCollectionSuccess
      *
      * @api
      */

@@ -14,7 +14,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class CourseOutputModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "course",

@@ -21,7 +21,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class AddressTypeLink extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "type_id",

@@ -29,7 +29,7 @@ class Sportslevels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\SportsLevelCollection Success
+     * @return \Blackbaud\SKY\School\Components\SportsLevelCollectionSuccess
      *
      * @api
      */

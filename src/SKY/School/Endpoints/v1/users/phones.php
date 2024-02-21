@@ -39,9 +39,9 @@ class Phones extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\PhoneReadCollection Success
+     * @return \Blackbaud\SKY\School\Components\PhoneReadCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -69,9 +69,9 @@ class Phones extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PhoneAdd $requestBody The phone
      *   information to be created.
      *
-     * @return int ID of the phone just added.
+     * @return intID of the phone just added.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -107,9 +107,9 @@ class Phones extends BaseEndpoint
      *   delete.
      * @param int $phone_type_id Format - int32. The ID of the phone type.
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -137,9 +137,9 @@ class Phones extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PhoneUpdate $requestBody The
      *   phone information to be updated.
      *
-     * @return int ID of the phone just updated.
+     * @return intID of the phone just updated.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

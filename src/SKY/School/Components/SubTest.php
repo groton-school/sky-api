@@ -20,7 +20,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class SubTest extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "test_type_id",

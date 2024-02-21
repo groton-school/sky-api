@@ -42,7 +42,7 @@ class Teachers extends BaseEndpoint
      *
      * - Pending Teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
      *
      * @api
      */
@@ -62,9 +62,9 @@ class Teachers extends BaseEndpoint
      *
      * @param string $id sourcedId for the teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModel Success
+     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModelSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

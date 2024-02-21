@@ -20,7 +20,7 @@ class Courses extends BaseEndpoint
     /**
      * Returns a collection of courses.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CoursesOutputModel OK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\CoursesOutputModelOK - It
      *   was possible to read the collection.
      *
      * @api
@@ -35,10 +35,10 @@ class Courses extends BaseEndpoint
      *
      * @param string $id sourcedId for the course
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CourseOutputModel OK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\CourseOutputModelOK - It
      *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

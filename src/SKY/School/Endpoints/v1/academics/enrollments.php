@@ -51,9 +51,9 @@ class Enrollments extends BaseEndpoint
      *   the [Year
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget). Defaults to the current school year.
      *
-     * @return \Blackbaud\SKY\School\Components\EnrollmentCollection Success
+     * @return \Blackbaud\SKY\School\Components\EnrollmentCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

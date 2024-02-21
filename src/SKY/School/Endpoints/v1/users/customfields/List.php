@@ -36,9 +36,9 @@ class List_ extends BaseEndpoint
      *   $requestBody Object that describes the list of custom fields that will
      *   be created for the user.
      *
-     * @return bool Success
+     * @return boolSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -65,9 +65,9 @@ class List_ extends BaseEndpoint
      *   $requestBody Object that describes the custom field that should be
      *   updated.
      *
-     * @return bool Success
+     * @return boolSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

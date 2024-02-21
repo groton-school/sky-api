@@ -24,7 +24,7 @@ class Excusedtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollection Success
+     * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollectionSuccess
      *
      * @api
      */

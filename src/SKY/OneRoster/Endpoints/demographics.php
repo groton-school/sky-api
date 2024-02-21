@@ -20,8 +20,8 @@ class Demographics extends BaseEndpoint
     /**
      * Returns a collection of user's demographic data.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModel
-     *   Success
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModelSuccess
+
      *
      * @api
      */
@@ -35,10 +35,10 @@ class Demographics extends BaseEndpoint
      *
      * @param string $id sourcedId for the user
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModel
-     *   Success
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModelSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

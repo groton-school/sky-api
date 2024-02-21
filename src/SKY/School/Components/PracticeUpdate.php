@@ -38,7 +38,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class PracticeUpdate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

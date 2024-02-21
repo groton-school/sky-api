@@ -12,7 +12,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class DormStudentInfo extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "grad_year",

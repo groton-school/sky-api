@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserMailbox extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "number",

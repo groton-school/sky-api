@@ -29,7 +29,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class AcademicsSectionStudent extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "section_id",

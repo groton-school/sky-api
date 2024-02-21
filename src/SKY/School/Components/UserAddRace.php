@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserAddRace extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "race_type",

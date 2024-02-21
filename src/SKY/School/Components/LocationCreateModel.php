@@ -25,7 +25,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class LocationCreateModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "opponent_id",

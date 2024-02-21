@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class MedicationDosage extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "times_a_day",

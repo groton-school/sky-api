@@ -27,7 +27,7 @@ class Timezone extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\Timezone Success
+     * @return \Blackbaud\SKY\School\Components\TimezoneSuccess
      *
      * @api
      */

@@ -29,9 +29,9 @@ class Allergies extends BaseEndpoint
      *
      * @param int $allergy_id Format - int32. The ID of the student's allergy.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -57,9 +57,9 @@ class Allergies extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentAllergyUpdate
      *   $requestBody The allergy changes
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -87,9 +87,9 @@ class Allergies extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergy
      *   $requestBody The medical allergy to be created for student
      *
-     * @return int ID of the student medical allergy just created.
+     * @return intID of the student medical allergy just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -32,9 +32,9 @@ class Changed extends BaseEndpoint
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2003-04-21.
      *
-     * @return \Blackbaud\SKY\School\Components\UserExtendedCollection Success
+     * @return \Blackbaud\SKY\School\Components\UserExtendedCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

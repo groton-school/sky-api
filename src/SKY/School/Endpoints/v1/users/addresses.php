@@ -44,9 +44,9 @@ class Addresses extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\AddressReadCollection Success
+     * @return \Blackbaud\SKY\School\Components\AddressReadCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -74,9 +74,9 @@ class Addresses extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\AddressAdd $requestBody Address
      *   information to be updated.
      *
-     * @return int ID of the address just added.
+     * @return intID of the address just added.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -107,9 +107,9 @@ class Addresses extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\AddressEdit $requestBody
      *   Address information to be updated.
      *
-     * @return int ID of the address just updated.
+     * @return intID of the address just updated.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -148,9 +148,9 @@ class Addresses extends BaseEndpoint
      * @param int $address_type_id Format - int32. The ID of the user's
      *   address type to delete.
      *
-     * @return void Returned when the operation succeeds.
+     * @return voidReturned when the operation succeeds.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

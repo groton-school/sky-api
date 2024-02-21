@@ -32,10 +32,10 @@ class Relationships extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\RelationshipReadCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\RelationshipReadCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -67,9 +67,9 @@ class Relationships extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\RelationshipCreate $requestBody
      *   Defines the relationship to be created.
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -105,9 +105,9 @@ class Relationships extends BaseEndpoint
      * @param string $relationship_type Defines the relationship between
      *   left_user and this user.
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -30,9 +30,9 @@ class Conditions extends BaseEndpoint
      * @param int $condition_id Format - int32. The ID of the student's
      *   condition.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -59,9 +59,9 @@ class Conditions extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentConditionUpdate
      *   $requestBody The condition changes
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -89,9 +89,9 @@ class Conditions extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentMedicalCondition
      *   $requestBody The medical condition to be created for student
      *
-     * @return int ID of the student medical condition just created.
+     * @return intID of the student medical condition just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

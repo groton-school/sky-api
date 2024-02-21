@@ -22,7 +22,7 @@ class Attendancetypes extends BaseEndpoint
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Components\AttendanceTypes Success
+     * @return \Blackbaud\SKY\School\Components\AttendanceTypesSuccess
      *
      * @api
      */

@@ -28,9 +28,9 @@ class Enroll extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserEnrollmentCreate
      *   $requestBody
      *
-     * @return \Blackbaud\SKY\School\Components\UserEnrollmentResponse Success
+     * @return \Blackbaud\SKY\School\Components\UserEnrollmentResponseSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

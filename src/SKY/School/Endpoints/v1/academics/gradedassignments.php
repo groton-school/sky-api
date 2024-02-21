@@ -34,10 +34,10 @@ class Gradedassignments extends BaseEndpoint
      * @param int $marking_period_id Format - int32. The ID of the marking
      *   period to return grades for.
      *
-     * @return \Blackbaud\SKY\School\Components\StudentGradedAssignmentCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\StudentGradedAssignmentCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

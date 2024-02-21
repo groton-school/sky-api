@@ -12,7 +12,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class PostResponse extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "value",

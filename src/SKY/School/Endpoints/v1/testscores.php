@@ -44,7 +44,7 @@ class Testscores extends BaseEndpoint
      *
      * @param ?int $user_id (Optional) Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\TestScoreCollection Success
+     * @return \Blackbaud\SKY\School\Components\TestScoreCollectionSuccess
      *
      * @api
      */
@@ -63,9 +63,9 @@ class Testscores extends BaseEndpoint
      * @param int $user_id Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\TestScoreAdd $requestBody
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

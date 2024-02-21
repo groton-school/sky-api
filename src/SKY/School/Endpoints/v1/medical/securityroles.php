@@ -23,7 +23,7 @@ class Securityroles extends BaseEndpoint
      * IDs returned here. ***This endpoint is in BETA. It may be removed or
      * replaced with a 90 day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Components\SecurityRoleCollection Success
+     * @return \Blackbaud\SKY\School\Components\SecurityRoleCollectionSuccess
      *
      * @api
      */

@@ -81,9 +81,9 @@ class Advanced extends BaseEndpoint
      * @param ?int $page_size (Optional) Format - int32. Number of rows to
      *   return per page. Default is 1000. Maximum allowed is 1000.
      *
-     * @return \Blackbaud\SKY\School\Components\ListResult Success
+     * @return \Blackbaud\SKY\School\Components\ListResultSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

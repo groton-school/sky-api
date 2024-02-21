@@ -29,10 +29,10 @@ class Sections extends BaseEndpoint
      *   sections for.
      * Defaults to the current school year.
      *
-     * @return \Blackbaud\SKY\School\Components\ActivitiesSectionCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\ActivitiesSectionCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -35,10 +35,10 @@ class Bbidstatus extends BaseEndpoint
      *   at to return the next batch of data. Results will start with the next
      *   user in the result set.
      *
-     * @return \Blackbaud\SKY\School\Components\SchoolBbidStatusCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\SchoolBbidStatusCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

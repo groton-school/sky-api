@@ -30,9 +30,9 @@ class Cycles extends BaseEndpoint
      * @param ?int $group_type (Optional) Format - int32. The Group Type for
      *   the section specified. Defaults to the 'Academics' (1).
      *
-     * @return \Blackbaud\SKY\School\Components\SectionCycles Success
+     * @return \Blackbaud\SKY\School\Components\SectionCyclesSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -20,7 +20,7 @@ class Orgs extends BaseEndpoint
     /**
      * Returns a collection of organizations.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModelOK - It was
      *   possible to read the collection.
      *
      * @api
@@ -35,10 +35,10 @@ class Orgs extends BaseEndpoint
      *
      * @param string $id sourcedId for the org
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModel OK - It was
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModelOK - It was
      *   possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

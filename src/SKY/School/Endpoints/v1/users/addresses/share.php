@@ -38,9 +38,9 @@ class Share extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\AddressShare $requestBody The
      *   details about the address that should be shared with the user.
      *
-     * @return int ID of the address just shared.
+     * @return intID of the address just shared.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

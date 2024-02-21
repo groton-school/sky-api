@@ -22,8 +22,8 @@ class Checkliststatus extends BaseEndpoint
      *
      * - Admissions Manager
      *
-     * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollectionSuccess
+
      *
      * @api
      */

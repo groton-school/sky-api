@@ -25,7 +25,7 @@ class Addresstypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\AddressTypeCollection Success
+     * @return \Blackbaud\SKY\School\Components\AddressTypeCollectionSuccess
      *
      * @api
      */

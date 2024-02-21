@@ -34,7 +34,7 @@ class Tablevalues extends BaseEndpoint
      * @param ?bool $includeInactive (Optional) If set to true, returns
      *   inactive items for the table. Defaults to false.
      *
-     * @return \Blackbaud\SKY\School\Components\TableValueCollection Success
+     * @return \Blackbaud\SKY\School\Components\TableValueCollectionSuccess
      *
      * @api
      */

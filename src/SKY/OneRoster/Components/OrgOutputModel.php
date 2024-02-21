@@ -14,7 +14,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class OrgOutputModel extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "org",

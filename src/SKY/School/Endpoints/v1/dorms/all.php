@@ -29,7 +29,7 @@ class All extends BaseEndpoint
      *   school level
      * @param ?string $school_year (Optional) Identifier for the school year
      *
-     * @return \Blackbaud\SKY\School\Components\DormCollection Success
+     * @return \Blackbaud\SKY\School\Components\DormCollectionSuccess
      *
      * @api
      */

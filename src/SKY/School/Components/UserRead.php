@@ -64,7 +64,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserRead extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

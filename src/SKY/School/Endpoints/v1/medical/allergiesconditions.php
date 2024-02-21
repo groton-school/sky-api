@@ -31,9 +31,9 @@ class Allergiesconditions extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
      *
-     * @return int ID of the student medical allergy/condition just created.
+     * @return intID of the student medical allergy/condition just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

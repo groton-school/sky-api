@@ -32,9 +32,9 @@ class Medications extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentMedicationCreate
      *   $requestBody The medication to be created for student
      *
-     * @return int ID of the student medication just created.
+     * @return intID of the student medication just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -59,9 +59,9 @@ class Medications extends BaseEndpoint
      * @param int $medication_id Format - int32. The ID of the student's
      *   medication.
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -87,9 +87,9 @@ class Medications extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentMedicationUpdate
      *   $requestBody The medication changes to update
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

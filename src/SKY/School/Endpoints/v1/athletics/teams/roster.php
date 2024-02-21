@@ -37,9 +37,9 @@ class Roster extends BaseEndpoint
      * @param int $team_id Format - int32. The ID for the team to get the
      *   roster for.
      *
-     * @return \Blackbaud\SKY\School\Components\Roster Success
+     * @return \Blackbaud\SKY\School\Components\RosterSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

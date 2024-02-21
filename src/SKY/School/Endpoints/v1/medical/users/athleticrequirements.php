@@ -37,10 +37,10 @@ class Athleticrequirements extends BaseEndpoint
      *   only those completed or missing. School year and season are required if
      *   not set to completed. Allowed values: all, completed, missing
      *
-     * @return \Blackbaud\SKY\School\Components\StudentAthleticRequirementRead[]
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\StudentAthleticRequirementRead[]Success
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

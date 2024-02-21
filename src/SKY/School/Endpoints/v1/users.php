@@ -224,9 +224,9 @@ class Users extends BaseEndpoint
      * @param ?int $marker (Optional) Format - int32. The record number start
      *   at to return the next batch of data.
      *
-     * @return \Blackbaud\SKY\School\Components\UserReadCollection Success
+     * @return \Blackbaud\SKY\School\Components\UserReadCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -260,9 +260,9 @@ class Users extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserAdd $requestBody The user
      *   to be created
      *
-     * @return int ID of the user just created.
+     * @return intID of the user just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -289,9 +289,9 @@ class Users extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserEdit $requestBody User
      *   information to be updated
      *
-     * @return int ID of the user just updated.
+     * @return intID of the user just updated.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -313,9 +313,9 @@ class Users extends BaseEndpoint
      *
      * @param int $user_id Format - int32. ID of the user to be returned.
      *
-     * @return \Blackbaud\SKY\School\Components\UserRead Success
+     * @return \Blackbaud\SKY\School\Components\UserReadSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

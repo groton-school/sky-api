@@ -33,10 +33,10 @@ class Immunizations extends BaseEndpoint
      *   just those completed or missing. Allowed values: all, completed,
      *   missing.
      *
-     * @return \Blackbaud\SKY\School\Components\StudentImmunizationRead[]
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\StudentImmunizationRead[]Success
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

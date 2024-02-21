@@ -26,7 +26,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class EmergencyContactEmail extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "id",

@@ -23,10 +23,10 @@ class Results extends BaseEndpoint
      * @param string $class_id sourcedId for the class
      * @param string $student_id sourcedId for the student
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
      *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

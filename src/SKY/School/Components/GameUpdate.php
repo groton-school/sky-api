@@ -56,7 +56,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class GameUpdate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "game_id",

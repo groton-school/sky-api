@@ -21,10 +21,10 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property ?string $dosage The dosage of the medication to dispense
  * @property \Blackbaud\SKY\School\Components\MedicationDosageCreate $dispense
  *   Determines the frequency the medication is dispensed.
- * @property ?\int[] $conditions The list of student condition IDs for the
+ * @property ?int[] $conditions The list of student condition IDs for the
  *   condition. If included, this list will replace the existing list of
  *   conditions on the medication.
- * @property ?\int[] $allergies The list of student allergy IDs for the
+ * @property ?int[] $allergies The list of student allergy IDs for the
  *   allergy. If included, this list will replace the existing list of allegies
  *   on the medication.
  * @property ?string $notes Notes for medication
@@ -36,7 +36,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class StudentMedicationCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "user_id",

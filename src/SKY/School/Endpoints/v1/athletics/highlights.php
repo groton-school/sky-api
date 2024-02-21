@@ -41,9 +41,9 @@ class Highlights extends BaseEndpoint
      * @param int $highlight_id Format - int32. ID of the highlight to be
      *   returned.
      *
-     * @return \Blackbaud\SKY\School\Components\Highlight Success
+     * @return \Blackbaud\SKY\School\Components\HighlightSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

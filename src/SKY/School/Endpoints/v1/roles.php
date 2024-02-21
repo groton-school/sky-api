@@ -25,7 +25,7 @@ class Roles extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\RoleCollection Success
+     * @return \Blackbaud\SKY\School\Components\RoleCollectionSuccess
      *
      * @api
      */

@@ -56,9 +56,9 @@ class Schedule extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\GameCreate $requestBody
      *   Information about the game to be created
      *
-     * @return int Success
+     * @return intSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -93,9 +93,9 @@ class Schedule extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\GameUpdate $requestBody
      *   Information for the game to be updated
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -122,9 +122,9 @@ class Schedule extends BaseEndpoint
      *   deleted
      * @param int $game_id Format - int32. ID of the game to be deleted
      *
-     * @return void Success
+     * @return voidSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

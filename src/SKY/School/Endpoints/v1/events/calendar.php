@@ -33,7 +33,7 @@ class Calendar extends BaseEndpoint
      * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339).
      *
-     * @return \Blackbaud\SKY\School\Components\CalendarItemCollection Success
+     * @return \Blackbaud\SKY\School\Components\CalendarItemCollectionSuccess
      *
      * @api
      */

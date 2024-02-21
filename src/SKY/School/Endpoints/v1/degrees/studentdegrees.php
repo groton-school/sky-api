@@ -34,10 +34,10 @@ class Studentdegrees extends BaseEndpoint
      *
      * @param int $student_id Format - int32. user Id
      *
-     * @return \Blackbaud\SKY\School\Components\UserDegreeOutputModelCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\UserDegreeOutputModelCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

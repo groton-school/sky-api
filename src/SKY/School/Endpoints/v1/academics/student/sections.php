@@ -37,10 +37,10 @@ class Sections extends BaseEndpoint
      * @param int $student_id Format - int32. The ID of the student to view
      *   sections and grades for.
      *
-     * @return \Blackbaud\SKY\School\Components\AcademicsSectionStudentCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\AcademicsSectionStudentCollectionSuccess
+
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

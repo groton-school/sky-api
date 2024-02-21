@@ -28,7 +28,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class DormLeader extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "building_id",

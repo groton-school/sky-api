@@ -38,8 +38,8 @@ class Changed extends BaseEndpoint
      *   at to return the next batch of data. Results will start with the next
      *   user in the result set.
      *
-     * @return \Blackbaud\SKY\School\Components\EmergencyContactChangeCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\EmergencyContactChangeCollectionSuccess
+
      *
      * @api
      */

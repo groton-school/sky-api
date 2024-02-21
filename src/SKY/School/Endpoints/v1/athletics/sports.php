@@ -35,7 +35,7 @@ class Sports extends BaseEndpoint
      *
      * @param ?int $season_id (Optional) Format - int32. Season ID
      *
-     * @return \Blackbaud\SKY\School\Components\SportCollection Success
+     * @return \Blackbaud\SKY\School\Components\SportCollectionSuccess
      *
      * @api
      */

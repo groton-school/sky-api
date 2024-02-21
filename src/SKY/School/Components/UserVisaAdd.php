@@ -23,7 +23,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class UserVisaAdd extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "number",

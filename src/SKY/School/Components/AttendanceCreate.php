@@ -24,7 +24,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class AttendanceCreate extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "student_user_id",

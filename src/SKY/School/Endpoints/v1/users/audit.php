@@ -33,10 +33,9 @@ class Audit extends BaseEndpoint
      *   RFC3339). The date to end looking for changes.  Must be within 1 year
      *   of start_date. Null returns start_date + 7 days.
      *
-     * @return \Blackbaud\SKY\School\Components\UserAuditReadCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\UserAuditReadCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

@@ -34,9 +34,9 @@ class Extended extends BaseEndpoint
      *   at to return the next batch of data. Results will start with the next
      *   user in the result set.
      *
-     * @return \Blackbaud\SKY\School\Components\UserExtendedCollection Success
+     * @return \Blackbaud\SKY\School\Components\UserExtendedCollectionSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api
@@ -58,9 +58,9 @@ class Extended extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\UserExtended Success
+     * @return \Blackbaud\SKY\School\Components\UserExtendedSuccess
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
      *   parameters are not defined
      *
      * @api

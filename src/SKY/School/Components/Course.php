@@ -23,7 +23,7 @@ use Battis\OpenAPI\Client\BaseObject;
 class Course extends BaseObject
 {
     /**
-     * @var \string[] $fields
+     * @var string[] $fields
      */
     protected static array $fields = [
         "offering_id",

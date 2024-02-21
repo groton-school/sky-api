@@ -33,8 +33,8 @@ class Transportationtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\TransportationCollection
-     *   Success
+     * @return \Blackbaud\SKY\School\Components\TransportationCollectionSuccess
+
      *
      * @api
      */
