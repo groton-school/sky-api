@@ -12,9 +12,9 @@ use Blackbaud\SKY\OneRoster\Components\CoursesOutputModel;
 class Courses extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/courses";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/courses";
 
     /**
      * Returns a collection of courses for the specified `school_id`.

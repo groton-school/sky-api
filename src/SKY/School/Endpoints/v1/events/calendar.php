@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\CalendarItemCollection;
 class Calendar extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/events/calendar";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/events/calendar";
 
     /**
      * Returns a list of events for the calling user. Requires one of the

@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\ListResult;
 class Advanced extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/lists/advanced/{list_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/lists/advanced/{list_id}";
 
     /**
      * Returns a collection of results from a basic or advanced list.

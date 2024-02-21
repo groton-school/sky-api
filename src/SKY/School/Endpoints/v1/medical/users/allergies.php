@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\StudentAllergiesView;
 class Allergies extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/allergies";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/allergies";
 
     /**
      * Returns the medical allergies for a student.

@@ -5,15 +5,15 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $name
- * @property string $type
- * @property string $identifier
+ * @property ?string $name
+ * @property ?string $type
+ * @property ?string $identifier
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $parent
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $children
- * @property string $sourcedId
- * @property string $status
- * @property string $dateLastModified
- * @property \string[] $metadata
+ * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $children
+ * @property ?string $sourcedId
+ * @property ?string $status
+ * @property ?string $dateLastModified
+ * @property ?\string[] $metadata
  *
  * @api
  */

@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\PhoneShare;
 class Share extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/phones/share";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/phones/share";
 
     /**
      * For an existing user, create a link to an existing phone number.

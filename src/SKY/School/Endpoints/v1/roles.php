@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\RoleCollection;
 class Roles extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/roles";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/roles";
 
     /**
      * Returns a collection of core school user roles.

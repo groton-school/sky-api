@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\ActivitiesSectionCollection;
 class Sections extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/activities/sections";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/activities/sections";
 
     /**
      * Returns a collection of activity sections for the specified school

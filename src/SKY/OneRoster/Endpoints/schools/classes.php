@@ -8,20 +8,31 @@ use Blackbaud\SKY\OneRoster\Components\ClassOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
+ *   $enrollments
+ *
  * @api
  */
 class Classes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/classes";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/classes";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "enrollments" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
      *   $_enrollments
      */
-    public Enrollments $_enrollments;
+    protected ?Enrollments $_enrollments = null;
 
     /**
      * Returns a collection of classes for the specified `school_id`.
@@ -41,18 +52,5 @@ class Classes extends BaseEndpoint
         assert($school_id !== null, new ArgumentException("Parameter `school_id` is required"));
 
         return new ClassOutputModel($this->send("get", ["{school_id}" => $school_id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
-     *
-     * @api
-     */
-    public function enrollments(): Enrollments
-    {
-        if ($this->_enrollments === null) {
-            $this->_enrollments = new Enrollments($this->api);
-        }
-        return $this->_enrollments;
     }
 }

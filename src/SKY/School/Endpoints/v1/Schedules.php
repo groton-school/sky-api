@@ -8,25 +8,22 @@ use Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Schedules
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings $meetings
+ *
  * @api
  */
 class Schedules extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings $_meetings
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Meetings $_meetings;
+    protected array $endpoints = [
+        "meetings" => "\Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings $_meetings
      */
-    public function meetings(): Meetings
-    {
-        if ($this->_meetings === null) {
-            $this->_meetings = new Meetings($this->api);
-        }
-        return $this->_meetings;
-    }
+    protected ?Meetings $_meetings = null;
 }

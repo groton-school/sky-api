@@ -10,44 +10,31 @@ use Blackbaud\SKY\School\Endpoints\V1\Content\News\Items;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Content\News
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
+ *   $categories
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $items
+ *
  * @api
  */
 class News extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "categories" => "\Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories",
+        "items" => "\Blackbaud\SKY\School\Endpoints\V1\Content\News\Items",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
      *   $_categories
      */
-    public Categories $_categories;
+    protected ?Categories $_categories = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
      */
-    public Items $_items;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
-     *
-     * @api
-     */
-    public function categories(): Categories
-    {
-        if ($this->_categories === null) {
-            $this->_categories = new Categories($this->api);
-        }
-        return $this->_categories;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\News\Items
-     *
-     * @api
-     */
-    public function items(): Items
-    {
-        if ($this->_items === null) {
-            $this->_items = new Items($this->api);
-        }
-        return $this->_items;
-    }
+    protected ?Items $_items = null;
 }

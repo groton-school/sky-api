@@ -9,8 +9,8 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property int $id The ID of the student’s medication
  * @property \Blackbaud\SKY\School\Components\IdDescriptorField $medication
- * @property string $date_as_of The start date for the medication.
- * @property string $date_until The end date for the medication.
+ * @property ?string $date_as_of The start date for the medication.
+ * @property ?string $date_until The end date for the medication.
  *
  * @api
  */

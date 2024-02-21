@@ -9,6 +9,9 @@ use Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
+ *   $gradingPeriods
+ *
  * @api
  */
 class Terms extends BaseEndpoint
@@ -19,10 +22,18 @@ class Terms extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{id}";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "gradingPeriods" => "\Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
      *   $_gradingPeriods
      */
-    public GradingPeriods $_gradingPeriods;
+    protected ?GradingPeriods $_gradingPeriods = null;
 
     /**
      * Returns a collection of terms.
@@ -55,18 +66,5 @@ class Terms extends BaseEndpoint
         assert($id !== null, new ArgumentException("Parameter `id` is required"));
 
         return new AcademicSessionOutputModel($this->send("get", ["{id}" => $id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
-     *
-     * @api
-     */
-    public function gradingPeriods(): GradingPeriods
-    {
-        if ($this->_gradingPeriods === null) {
-            $this->_gradingPeriods = new GradingPeriods($this->api);
-        }
-        return $this->_gradingPeriods;
     }
 }

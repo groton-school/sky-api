@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * Student Model
  *
  * @property int $id The ID of the student
- * @property string $name The name of the student
+ * @property ?string $name The name of the student
  *
  * @api
  */

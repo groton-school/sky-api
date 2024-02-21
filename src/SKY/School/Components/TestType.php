@@ -5,10 +5,10 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $id The Test Score Id
- * @property \Blackbaud\SKY\School\Components\SubTest[] $sub_tests List of
+ * @property ?int $id The Test Score Id
+ * @property ?\Blackbaud\SKY\School\Components\SubTest[] $sub_tests List of
  *   Subtests
- * @property string $test_name The Test Type
+ * @property ?string $test_name The Test Type
  *
  * @api
  */

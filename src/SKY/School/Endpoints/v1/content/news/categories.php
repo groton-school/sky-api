@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\NewsCategoryCollection;
 class Categories extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/news/categories";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/content/news/categories";
 
     /**
      * Returns a collection of Content News Categories Requires at least one

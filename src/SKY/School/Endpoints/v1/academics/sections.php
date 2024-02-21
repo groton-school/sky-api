@@ -10,32 +10,49 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
+ *   $assignments
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
+ *   $students
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
+ *   $cycles
+ *
  * @api
  */
 class Sections extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "assignments" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments",
+        "students" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students",
+        "cycles" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
      *   $_assignments
      */
-    public Assignments $_assignments;
+    protected ?Assignments $_assignments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
      *   $_students
      */
-    public Students $_students;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
      *   $_cycles
      */
-    public Cycles $_cycles;
+    protected ?Cycles $_cycles = null;
 
     /**
      * Returns a collection of academic sections for the specified school
@@ -64,45 +81,5 @@ class Sections extends BaseEndpoint
 
         return new AcademicsSectionCollection($this->send("get", [], ["level_num" => $level_num,
         "school_year" => $school_year]));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
-
-     *
-     * @api
-     */
-    public function assignments(): Assignments
-    {
-        if ($this->_assignments === null) {
-            $this->_assignments = new Assignments($this->api);
-        }
-        return $this->_assignments;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
-     *
-     * @api
-     */
-    public function students(): Students
-    {
-        if ($this->_students === null) {
-            $this->_students = new Students($this->api);
-        }
-        return $this->_students;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
-     *
-     * @api
-     */
-    public function cycles(): Cycles
-    {
-        if ($this->_cycles === null) {
-            $this->_cycles = new Cycles($this->api);
-        }
-        return $this->_cycles;
     }
 }

@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * RaceAdd Model
  *
- * @property string $race_type The ID or description of the race to be added
+ * @property ?string $race_type The ID or description of the race to be added
  *   to the user
  *
  * @api

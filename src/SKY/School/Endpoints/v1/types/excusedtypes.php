@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\ExcusedTypesCollection;
 class Excusedtypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedtypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedtypes";
 
     /**
      * Returns a collection of excused types.

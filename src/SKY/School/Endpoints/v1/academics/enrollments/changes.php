@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\EnrollmentChangesCollection;
 class Changes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/enrollments/changes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/enrollments/changes";
 
     /**
      * Returns a collection of students with enrollment changes on or after

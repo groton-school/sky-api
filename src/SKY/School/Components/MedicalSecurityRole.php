@@ -5,8 +5,8 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $role_id The ID of role
- * @property bool $has_access Set to true to allow access for this type of
+ * @property ?int $role_id The ID of role
+ * @property ?bool $has_access Set to true to allow access for this type of
  *   user
  *
  * @api

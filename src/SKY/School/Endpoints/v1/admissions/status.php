@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\AdmissionsStatusesCollection;
 class Status extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/status";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/status";
 
     /**
      * Returns a collection of admissions statuses.

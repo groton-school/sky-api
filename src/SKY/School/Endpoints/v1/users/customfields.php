@@ -11,6 +11,9 @@ use Blackbaud\SKY\School\Components\UserAdminCustomFieldUpdate;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
+ *   $list_
+ *
  * @api
  */
 class Customfields extends BaseEndpoint
@@ -21,10 +24,18 @@ class Customfields extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/customfields";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "list_" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
      *   $_list_
      */
-    public List_ $_list_;
+    protected ?List_ $_list_ = null;
 
     /**
      * Returns a paginated collection of users with custom admin fields,
@@ -156,18 +167,5 @@ class Customfields extends BaseEndpoint
         assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $user_id], [], $requestBody);
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
-     *
-     * @api
-     */
-    public function list_(): List_
-    {
-        if ($this->_list_ === null) {
-            $this->_list_ = new List_($this->api);
-        }
-        return $this->_list_;
     }
 }

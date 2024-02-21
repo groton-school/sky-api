@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\CourseCollection;
 class Courses extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/courses";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/courses";
 
     /**
      * Returns a collection of academic courses, filtered by department and/or

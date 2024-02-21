@@ -7,11 +7,11 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Assignment Type Model
  *
- * @property int $id The ID for the assignment type
- * @property string $name The name of the assignment type
- * @property string $percentage The calculated percentage for the assignment
+ * @property ?int $id The ID for the assignment type
+ * @property ?string $name The name of the assignment type
+ * @property ?string $percentage The calculated percentage for the assignment
  *   type for this section
- * @property float $weight The weight applied to the assignment type
+ * @property ?float $weight The weight applied to the assignment type
  *
  * @api
  */

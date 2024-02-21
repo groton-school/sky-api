@@ -8,14 +8,14 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $user
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $class
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $school
- * @property string $role
- * @property bool $primary
- * @property string $beginDate
- * @property string $endDate
- * @property string $sourcedId
- * @property string $status
- * @property string $dateLastModified
- * @property \string[] $metadata
+ * @property ?string $role
+ * @property ?bool $primary
+ * @property ?string $beginDate
+ * @property ?string $endDate
+ * @property ?string $sourcedId
+ * @property ?string $status
+ * @property ?string $dateLastModified
+ * @property ?\string[] $metadata
  *
  * @api
  */

@@ -10,44 +10,32 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets $sets
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
+ *   $master
+ *
  * @api
  */
 class Schedules extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets $_sets
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Sets $_sets;
+    protected array $endpoints = [
+        "sets" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets",
+        "master" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets
+     *   $_sets
+     */
+    protected ?Sets $_sets = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
      *   $_master
      */
-    public Master $_master;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets
-     *
-     * @api
-     */
-    public function sets(): Sets
-    {
-        if ($this->_sets === null) {
-            $this->_sets = new Sets($this->api);
-        }
-        return $this->_sets;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
-     *
-     * @api
-     */
-    public function master(): Master
-    {
-        if ($this->_master === null) {
-            $this->_master = new Master($this->api);
-        }
-        return $this->_master;
-    }
+    protected ?Master $_master = null;
 }

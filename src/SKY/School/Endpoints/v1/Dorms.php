@@ -8,25 +8,22 @@ use Blackbaud\SKY\School\Endpoints\V1\Dorms\All;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Dorms
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Dorms\All $all
+ *
  * @api
  */
 class Dorms extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public All $_all;
+    protected array $endpoints = [
+        "all" => "\Blackbaud\SKY\School\Endpoints\V1\Dorms\All",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Dorms\All
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
      */
-    public function all(): All
-    {
-        if ($this->_all === null) {
-            $this->_all = new All($this->api);
-        }
-        return $this->_all;
-    }
+    protected ?All $_all = null;
 }

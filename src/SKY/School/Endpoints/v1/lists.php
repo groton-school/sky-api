@@ -7,19 +7,29 @@ use Blackbaud\SKY\School\Components\ListReadCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $advanced
+ *
  * @api
  */
 class Lists extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/lists";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/lists";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Advanced $_advanced;
+    protected array $endpoints = [
+        "advanced" => "\Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
+     */
+    protected ?Advanced $_advanced = null;
 
     /**
      * Returns a list of basic or advanced lists the authorized user has
@@ -82,18 +92,5 @@ class Lists extends BaseEndpoint
     public function getAll(): ListReadCollection
     {
         return new ListReadCollection($this->send("get", [], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced
-     *
-     * @api
-     */
-    public function advanced(): Advanced
-    {
-        if ($this->_advanced === null) {
-            $this->_advanced = new Advanced($this->api);
-        }
-        return $this->_advanced;
     }
 }

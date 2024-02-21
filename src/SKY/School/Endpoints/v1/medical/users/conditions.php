@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\StudentConditionView;
 class Conditions extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/conditions";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/conditions";
 
     /**
      * Returns the medical conditions for a student.

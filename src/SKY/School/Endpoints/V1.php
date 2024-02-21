@@ -34,506 +34,233 @@ use Blackbaud\SKY\School\Endpoints\V1\Years;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Roles $roles
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Years $years
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Levels $levels
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Gradelevels $gradelevels
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Offeringtypes $offeringtypes
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Terms $terms
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users $users
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Attendance $attendance
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Lists $lists
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Timezone $timezone
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Testscores $testscores
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Sessions $sessions
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Customfields $customfields
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Directories $directories
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics $academics Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Academics
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics $athletics Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Athletics
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Types $types Routing class for
+ *   the namespace Blackbaud\SKY\School\Endpoints\V1\Types
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions $admissions Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Admissions
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Venues $venues Routing class
+ *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Venues
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Advisories $advisories Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Advisories
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Activities $activities Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Activities
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Events $events Routing class
+ *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Events
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Dorms $dorms Routing class for
+ *   the namespace Blackbaud\SKY\School\Endpoints\V1\Dorms
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Schedules $schedules Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Schedules
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content $content Routing class
+ *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Content
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Degrees $degrees Routing class
+ *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Degrees
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical $medical Routing class
+ *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Medical
+ *
  * @api
  */
 class V1 extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Roles $_roles
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Roles $_roles;
+    protected array $endpoints = [
+        "roles" => "\Blackbaud\SKY\School\Endpoints\V1\Roles",
+        "years" => "\Blackbaud\SKY\School\Endpoints\V1\Years",
+        "levels" => "\Blackbaud\SKY\School\Endpoints\V1\Levels",
+        "gradelevels" => "\Blackbaud\SKY\School\Endpoints\V1\Gradelevels",
+        "offeringtypes" => "\Blackbaud\SKY\School\Endpoints\V1\Offeringtypes",
+        "terms" => "\Blackbaud\SKY\School\Endpoints\V1\Terms",
+        "users" => "\Blackbaud\SKY\School\Endpoints\V1\Users",
+        "attendance" => "\Blackbaud\SKY\School\Endpoints\V1\Attendance",
+        "lists" => "\Blackbaud\SKY\School\Endpoints\V1\Lists",
+        "timezone" => "\Blackbaud\SKY\School\Endpoints\V1\Timezone",
+        "testscores" => "\Blackbaud\SKY\School\Endpoints\V1\Testscores",
+        "sessions" => "\Blackbaud\SKY\School\Endpoints\V1\Sessions",
+        "customfields" => "\Blackbaud\SKY\School\Endpoints\V1\Customfields",
+        "directories" => "\Blackbaud\SKY\School\Endpoints\V1\Directories",
+        "academics" => "\Blackbaud\SKY\School\Endpoints\V1\Academics",
+        "athletics" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics",
+        "types" => "\Blackbaud\SKY\School\Endpoints\V1\Types",
+        "admissions" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions",
+        "venues" => "\Blackbaud\SKY\School\Endpoints\V1\Venues",
+        "advisories" => "\Blackbaud\SKY\School\Endpoints\V1\Advisories",
+        "activities" => "\Blackbaud\SKY\School\Endpoints\V1\Activities",
+        "events" => "\Blackbaud\SKY\School\Endpoints\V1\Events",
+        "dorms" => "\Blackbaud\SKY\School\Endpoints\V1\Dorms",
+        "schedules" => "\Blackbaud\SKY\School\Endpoints\V1\Schedules",
+        "content" => "\Blackbaud\SKY\School\Endpoints\V1\Content",
+        "degrees" => "\Blackbaud\SKY\School\Endpoints\V1\Degrees",
+        "medical" => "\Blackbaud\SKY\School\Endpoints\V1\Medical",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Years $_years
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Roles $_roles
      */
-    public Years $_years;
+    protected ?Roles $_roles = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Levels $_levels
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Years $_years
      */
-    public Levels $_levels;
+    protected ?Years $_years = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Gradelevels $_gradelevels
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Levels $_levels
      */
-    public Gradelevels $_gradelevels;
+    protected ?Levels $_levels = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Offeringtypes $_offeringtypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Gradelevels $_gradelevels
      */
-    public Offeringtypes $_offeringtypes;
+    protected ?Gradelevels $_gradelevels = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Terms $_terms
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Offeringtypes $_offeringtypes
      */
-    public Terms $_terms;
+    protected ?Offeringtypes $_offeringtypes = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users $_users
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Terms $_terms
      */
-    public Users $_users;
+    protected ?Terms $_terms = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Attendance $_attendance
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users $_users
      */
-    public Attendance $_attendance;
+    protected ?Users $_users = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Lists $_lists
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Attendance $_attendance
      */
-    public Lists $_lists;
+    protected ?Attendance $_attendance = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Timezone $_timezone
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Lists $_lists
      */
-    public Timezone $_timezone;
+    protected ?Lists $_lists = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Testscores $_testscores
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Timezone $_timezone
      */
-    public Testscores $_testscores;
+    protected ?Timezone $_timezone = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Sessions $_sessions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Testscores $_testscores
      */
-    public Sessions $_sessions;
+    protected ?Testscores $_testscores = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Customfields $_customfields
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Sessions $_sessions
      */
-    public Customfields $_customfields;
+    protected ?Sessions $_sessions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Directories $_directories
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Customfields $_customfields
      */
-    public Directories $_directories;
+    protected ?Customfields $_customfields = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics $_academics Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Directories $_directories
+     */
+    protected ?Directories $_directories = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics $_academics Routing
      *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Academics
      */
-    public Academics $_academics;
+    protected ?Academics $_academics = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics $_athletics Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics $_athletics Routing
      *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Athletics
      */
-    public Athletics $_athletics;
+    protected ?Athletics $_athletics = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Types $_types Routing class for
-     *   the namespace Blackbaud\SKY\School\Endpoints\V1\Types
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types $_types Routing class
+     *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Types
      */
-    public Types $_types;
+    protected ?Types $_types = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions $_admissions Routing
-     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Admissions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions $_admissions
+     *   Routing class for the namespace
+     *   Blackbaud\SKY\School\Endpoints\V1\Admissions
      */
-    public Admissions $_admissions;
+    protected ?Admissions $_admissions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Venues $_venues Routing class
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Venues $_venues Routing class
      *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Venues
      */
-    public Venues $_venues;
+    protected ?Venues $_venues = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Advisories $_advisories Routing
-     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Advisories
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Advisories $_advisories
+     *   Routing class for the namespace
+     *   Blackbaud\SKY\School\Endpoints\V1\Advisories
      */
-    public Advisories $_advisories;
+    protected ?Advisories $_advisories = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Activities $_activities Routing
-     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Activities
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Activities $_activities
+     *   Routing class for the namespace
+     *   Blackbaud\SKY\School\Endpoints\V1\Activities
      */
-    public Activities $_activities;
+    protected ?Activities $_activities = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Events $_events Routing class
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Events $_events Routing class
      *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Events
      */
-    public Events $_events;
+    protected ?Events $_events = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Dorms $_dorms Routing class for
-     *   the namespace Blackbaud\SKY\School\Endpoints\V1\Dorms
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Dorms $_dorms Routing class
+     *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Dorms
      */
-    public Dorms $_dorms;
+    protected ?Dorms $_dorms = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Schedules $_schedules Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Schedules $_schedules Routing
      *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Schedules
      */
-    public Schedules $_schedules;
+    protected ?Schedules $_schedules = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content $_content Routing class
-     *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Content
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content $_content Routing
+     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Content
      */
-    public Content $_content;
+    protected ?Content $_content = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Degrees $_degrees Routing class
-     *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Degrees
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Degrees $_degrees Routing
+     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Degrees
      */
-    public Degrees $_degrees;
+    protected ?Degrees $_degrees = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical $_medical Routing class
-     *   for the namespace Blackbaud\SKY\School\Endpoints\V1\Medical
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical $_medical Routing
+     *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Medical
      */
-    public Medical $_medical;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Roles
-     *
-     * @api
-     */
-    public function roles(): Roles
-    {
-        if ($this->_roles === null) {
-            $this->_roles = new Roles($this->api);
-        }
-        return $this->_roles;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Years
-     *
-     * @api
-     */
-    public function years(): Years
-    {
-        if ($this->_years === null) {
-            $this->_years = new Years($this->api);
-        }
-        return $this->_years;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Levels
-     *
-     * @api
-     */
-    public function levels(): Levels
-    {
-        if ($this->_levels === null) {
-            $this->_levels = new Levels($this->api);
-        }
-        return $this->_levels;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Gradelevels
-     *
-     * @api
-     */
-    public function gradelevels(): Gradelevels
-    {
-        if ($this->_gradelevels === null) {
-            $this->_gradelevels = new Gradelevels($this->api);
-        }
-        return $this->_gradelevels;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Offeringtypes
-     *
-     * @api
-     */
-    public function offeringtypes(): Offeringtypes
-    {
-        if ($this->_offeringtypes === null) {
-            $this->_offeringtypes = new Offeringtypes($this->api);
-        }
-        return $this->_offeringtypes;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Terms
-     *
-     * @api
-     */
-    public function terms(): Terms
-    {
-        if ($this->_terms === null) {
-            $this->_terms = new Terms($this->api);
-        }
-        return $this->_terms;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users
-     *
-     * @api
-     */
-    public function users(): Users
-    {
-        if ($this->_users === null) {
-            $this->_users = new Users($this->api);
-        }
-        return $this->_users;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Attendance
-     *
-     * @api
-     */
-    public function attendance(): Attendance
-    {
-        if ($this->_attendance === null) {
-            $this->_attendance = new Attendance($this->api);
-        }
-        return $this->_attendance;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Lists
-     *
-     * @api
-     */
-    public function lists(): Lists
-    {
-        if ($this->_lists === null) {
-            $this->_lists = new Lists($this->api);
-        }
-        return $this->_lists;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Timezone
-     *
-     * @api
-     */
-    public function timezone(): Timezone
-    {
-        if ($this->_timezone === null) {
-            $this->_timezone = new Timezone($this->api);
-        }
-        return $this->_timezone;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Testscores
-     *
-     * @api
-     */
-    public function testscores(): Testscores
-    {
-        if ($this->_testscores === null) {
-            $this->_testscores = new Testscores($this->api);
-        }
-        return $this->_testscores;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Sessions
-     *
-     * @api
-     */
-    public function sessions(): Sessions
-    {
-        if ($this->_sessions === null) {
-            $this->_sessions = new Sessions($this->api);
-        }
-        return $this->_sessions;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Customfields
-     *
-     * @api
-     */
-    public function customfields(): Customfields
-    {
-        if ($this->_customfields === null) {
-            $this->_customfields = new Customfields($this->api);
-        }
-        return $this->_customfields;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Directories
-     *
-     * @api
-     */
-    public function directories(): Directories
-    {
-        if ($this->_directories === null) {
-            $this->_directories = new Directories($this->api);
-        }
-        return $this->_directories;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics
-     *
-     * @api
-     */
-    public function academics(): Academics
-    {
-        if ($this->_academics === null) {
-            $this->_academics = new Academics($this->api);
-        }
-        return $this->_academics;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics
-     *
-     * @api
-     */
-    public function athletics(): Athletics
-    {
-        if ($this->_athletics === null) {
-            $this->_athletics = new Athletics($this->api);
-        }
-        return $this->_athletics;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Types
-     *
-     * @api
-     */
-    public function types(): Types
-    {
-        if ($this->_types === null) {
-            $this->_types = new Types($this->api);
-        }
-        return $this->_types;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Admissions
-     *
-     * @api
-     */
-    public function admissions(): Admissions
-    {
-        if ($this->_admissions === null) {
-            $this->_admissions = new Admissions($this->api);
-        }
-        return $this->_admissions;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Venues
-     *
-     * @api
-     */
-    public function venues(): Venues
-    {
-        if ($this->_venues === null) {
-            $this->_venues = new Venues($this->api);
-        }
-        return $this->_venues;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Advisories
-     *
-     * @api
-     */
-    public function advisories(): Advisories
-    {
-        if ($this->_advisories === null) {
-            $this->_advisories = new Advisories($this->api);
-        }
-        return $this->_advisories;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Activities
-     *
-     * @api
-     */
-    public function activities(): Activities
-    {
-        if ($this->_activities === null) {
-            $this->_activities = new Activities($this->api);
-        }
-        return $this->_activities;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Events
-     *
-     * @api
-     */
-    public function events(): Events
-    {
-        if ($this->_events === null) {
-            $this->_events = new Events($this->api);
-        }
-        return $this->_events;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Dorms
-     *
-     * @api
-     */
-    public function dorms(): Dorms
-    {
-        if ($this->_dorms === null) {
-            $this->_dorms = new Dorms($this->api);
-        }
-        return $this->_dorms;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Schedules
-     *
-     * @api
-     */
-    public function schedules(): Schedules
-    {
-        if ($this->_schedules === null) {
-            $this->_schedules = new Schedules($this->api);
-        }
-        return $this->_schedules;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content
-     *
-     * @api
-     */
-    public function content(): Content
-    {
-        if ($this->_content === null) {
-            $this->_content = new Content($this->api);
-        }
-        return $this->_content;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Degrees
-     *
-     * @api
-     */
-    public function degrees(): Degrees
-    {
-        if ($this->_degrees === null) {
-            $this->_degrees = new Degrees($this->api);
-        }
-        return $this->_degrees;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical
-     *
-     * @api
-     */
-    public function medical(): Medical
-    {
-        if ($this->_medical === null) {
-            $this->_medical = new Medical($this->api);
-        }
-        return $this->_medical;
-    }
+    protected ?Medical $_medical = null;
 }

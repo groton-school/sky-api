@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\TestTypeCollection;
 class Testtypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/testscores/testtypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/testscores/testtypes";
 
     /**
      * Returns a collection of test and subtest types for a school.

@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\OfferingTypeCollection;
 class Offeringtypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/offeringtypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/offeringtypes";
 
     /**
      * Returns a collection of core school offering types.

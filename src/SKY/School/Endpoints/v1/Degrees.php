@@ -8,26 +8,24 @@ use Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Degrees
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
+ *   $studentdegrees
+ *
  * @api
  */
 class Degrees extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
-     *   $_studentdegrees
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Studentdegrees $_studentdegrees;
+    protected array $endpoints = [
+        "studentdegrees" => "\Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
+     *   $_studentdegrees
      */
-    public function studentdegrees(): Studentdegrees
-    {
-        if ($this->_studentdegrees === null) {
-            $this->_studentdegrees = new Studentdegrees($this->api);
-        }
-        return $this->_studentdegrees;
-    }
+    protected ?Studentdegrees $_studentdegrees = null;
 }

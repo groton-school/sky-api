@@ -5,11 +5,11 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $id
- * @property string $name
- * @property string $decision_type
- * @property int $decision_type_id
- * @property string $date
+ * @property ?int $id
+ * @property ?string $name
+ * @property ?string $decision_type
+ * @property ?int $decision_type_id
+ * @property ?string $date
  *
  * @api
  */

@@ -7,9 +7,9 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Result
  *
- * @property \Blackbaud\SKY\OneRoster\Components\ResultModelSvc[] $results
+ * @property ?\Blackbaud\SKY\OneRoster\Components\ResultModelSvc[] $results
  *   Results
- * @property \Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
+ * @property ?\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
  *   $status_info_set List of status messages
  *
  * @api

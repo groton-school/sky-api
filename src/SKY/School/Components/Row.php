@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Row Model
  *
- * @property \Blackbaud\SKY\School\Components\Field[] $columns The fields of
+ * @property ?\Blackbaud\SKY\School\Components\Field[] $columns The fields of
  *   the list
  *
  * @api

@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\YearCollection;
 class Years extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/years";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/years";
 
     /**
      * Returns a collection of core school years.

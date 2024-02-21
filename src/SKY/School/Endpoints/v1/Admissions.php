@@ -12,82 +12,49 @@ use Blackbaud\SKY\School\Endpoints\V1\Admissions\Status;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Admissions
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
+ *   $checklists
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
+ *   $candidates
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
+ *   $checkliststatus
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $status
+ *
  * @api
  */
 class Admissions extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "checklists" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists",
+        "candidates" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates",
+        "checkliststatus" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus",
+        "status" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions\Status",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
      *   $_checklists
      */
-    public Checklists $_checklists;
+    protected ?Checklists $_checklists = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
      *   $_candidates
      */
-    public Candidates $_candidates;
+    protected ?Candidates $_candidates = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
      *   $_checkliststatus
      */
-    public Checkliststatus $_checkliststatus;
+    protected ?Checkliststatus $_checkliststatus = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
      */
-    public Status $_status;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
-     *
-     * @api
-     */
-    public function checklists(): Checklists
-    {
-        if ($this->_checklists === null) {
-            $this->_checklists = new Checklists($this->api);
-        }
-        return $this->_checklists;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
-     *
-     * @api
-     */
-    public function candidates(): Candidates
-    {
-        if ($this->_candidates === null) {
-            $this->_candidates = new Candidates($this->api);
-        }
-        return $this->_candidates;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
-     *
-     * @api
-     */
-    public function checkliststatus(): Checkliststatus
-    {
-        if ($this->_checkliststatus === null) {
-            $this->_checkliststatus = new Checkliststatus($this->api);
-        }
-        return $this->_checkliststatus;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Admissions\Status
-     *
-     * @api
-     */
-    public function status(): Status
-    {
-        if ($this->_status === null) {
-            $this->_status = new Status($this->api);
-        }
-        return $this->_status;
-    }
+    protected ?Status $_status = null;
 }

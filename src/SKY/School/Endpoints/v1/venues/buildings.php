@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\BuildingReadCollection;
 class Buildings extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/venues/buildings";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/venues/buildings";
 
     /**
      * Returns a collection of buildings.

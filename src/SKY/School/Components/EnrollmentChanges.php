@@ -7,11 +7,12 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Enrollment Changes Model
  *
- * @property int $id The ID of the student
- * @property string $preferred_name
- * @property string $first_name
- * @property string $last_name
- * @property \Blackbaud\SKY\School\Components\EnrollmentChangeAudit[] $changes
+ * @property ?int $id The ID of the student
+ * @property ?string $preferred_name
+ * @property ?string $first_name
+ * @property ?string $last_name
+ * @property ?\Blackbaud\SKY\School\Components\EnrollmentChangeAudit[]
+ *   $changes
  *
  * @api
  */

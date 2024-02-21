@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\DormCollection;
 class All extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/dorms/all";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/dorms/all";
 
     /**
      * Requires at least one of the following roles in the Education

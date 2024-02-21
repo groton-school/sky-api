@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\UserEnrollmentCollection;
 class Enrollments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/enrollments";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/enrollments";
 
     /**
      * Returns a collection of users and their enrollments for a single school

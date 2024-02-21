@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\LevelCollection;
 class Levels extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/levels";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/levels";
 
     /**
      * Returns a collection of core school levels.

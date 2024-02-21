@@ -9,26 +9,24 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Academics\Student
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections
+ *   $sections
+ *
  * @api
  */
 class Student extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections
-     *   $_sections
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Sections $_sections;
+    protected array $endpoints = [
+        "sections" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Student\Sections
+     *   $_sections
      */
-    public function sections(): Sections
-    {
-        if ($this->_sections === null) {
-            $this->_sections = new Sections($this->api);
-        }
-        return $this->_sections;
-    }
+    protected ?Sections $_sections = null;
 }

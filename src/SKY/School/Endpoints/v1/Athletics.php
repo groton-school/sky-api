@@ -17,191 +17,94 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Athletics
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $sports
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules $schedules
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $teams
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
+ *   $sportslevels
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $venues
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
+ *   $transportationtypes
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations $locations
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents $opponents
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
+ *   $highlights
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $result
+ *
  * @api
  */
 class Athletics extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $_sports
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Sports $_sports;
+    protected array $endpoints = [
+        "sports" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports",
+        "schedules" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules",
+        "teams" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams",
+        "sportslevels" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels",
+        "venues" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues",
+        "transportationtypes" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes",
+        "locations" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations",
+        "opponents" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents",
+        "highlights" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights",
+        "result" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Result",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules $_schedules
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $_sports
      */
-    public Schedules $_schedules;
+    protected ?Sports $_sports = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $_teams
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules
+     *   $_schedules
      */
-    public Teams $_teams;
+    protected ?Schedules $_schedules = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $_teams
+     */
+    protected ?Teams $_teams = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
      *   $_sportslevels
      */
-    public Sportslevels $_sportslevels;
+    protected ?Sportslevels $_sportslevels = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $_venues
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $_venues
      */
-    public Venues $_venues;
+    protected ?Venues $_venues = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
      *   $_transportationtypes
      */
-    public Transportationtypes $_transportationtypes;
+    protected ?Transportationtypes $_transportationtypes = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations $_locations
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations
+     *   $_locations
      */
-    public Locations $_locations;
+    protected ?Locations $_locations = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents $_opponents
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents
+     *   $_opponents
      */
-    public Opponents $_opponents;
+    protected ?Opponents $_opponents = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
      *   $_highlights
      */
-    public Highlights $_highlights;
+    protected ?Highlights $_highlights = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $_result
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $_result
      */
-    public Result $_result;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports
-     *
-     * @api
-     */
-    public function sports(): Sports
-    {
-        if ($this->_sports === null) {
-            $this->_sports = new Sports($this->api);
-        }
-        return $this->_sports;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules
-     *
-     * @api
-     */
-    public function schedules(): Schedules
-    {
-        if ($this->_schedules === null) {
-            $this->_schedules = new Schedules($this->api);
-        }
-        return $this->_schedules;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams
-     *
-     * @api
-     */
-    public function teams(): Teams
-    {
-        if ($this->_teams === null) {
-            $this->_teams = new Teams($this->api);
-        }
-        return $this->_teams;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
-     *
-     * @api
-     */
-    public function sportslevels(): Sportslevels
-    {
-        if ($this->_sportslevels === null) {
-            $this->_sportslevels = new Sportslevels($this->api);
-        }
-        return $this->_sportslevels;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues
-     *
-     * @api
-     */
-    public function venues(): Venues
-    {
-        if ($this->_venues === null) {
-            $this->_venues = new Venues($this->api);
-        }
-        return $this->_venues;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
-
-     *
-     * @api
-     */
-    public function transportationtypes(): Transportationtypes
-    {
-        if ($this->_transportationtypes === null) {
-            $this->_transportationtypes = new Transportationtypes($this->api);
-        }
-        return $this->_transportationtypes;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations
-     *
-     * @api
-     */
-    public function locations(): Locations
-    {
-        if ($this->_locations === null) {
-            $this->_locations = new Locations($this->api);
-        }
-        return $this->_locations;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents
-     *
-     * @api
-     */
-    public function opponents(): Opponents
-    {
-        if ($this->_opponents === null) {
-            $this->_opponents = new Opponents($this->api);
-        }
-        return $this->_opponents;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
-     *
-     * @api
-     */
-    public function highlights(): Highlights
-    {
-        if ($this->_highlights === null) {
-            $this->_highlights = new Highlights($this->api);
-        }
-        return $this->_highlights;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Result
-     *
-     * @api
-     */
-    public function result(): Result
-    {
-        if ($this->_result === null) {
-            $this->_result = new Result($this->api);
-        }
-        return $this->_result;
-    }
+    protected ?Result $_result = null;
 }

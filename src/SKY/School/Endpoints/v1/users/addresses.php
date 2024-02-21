@@ -10,6 +10,8 @@ use Blackbaud\SKY\School\Components\AddressReadCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $share
+ *
  * @api
  */
 class Addresses extends BaseEndpoint
@@ -20,9 +22,17 @@ class Addresses extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/addresses/{address_id}/{address_type_id}";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $_share
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Share $_share;
+    protected array $endpoints = [
+        "share" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $_share
+     */
+    protected ?Share $_share = null;
 
     /**
      * Returns a collection of addresses.
@@ -154,18 +164,5 @@ class Addresses extends BaseEndpoint
         return $this->send("delete", ["{user_id}" => $user_id,
         "{address_id}" => $address_id,
         "{address_type_id}" => $address_type_id], []);
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share
-     *
-     * @api
-     */
-    public function share(): Share
-    {
-        if ($this->_share === null) {
-            $this->_share = new Share($this->api);
-        }
-        return $this->_share;
     }
 }

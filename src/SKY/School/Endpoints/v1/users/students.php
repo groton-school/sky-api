@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\ChildOfParentCollection;
 class Students extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{parent_id}/students";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{parent_id}/students";
 
     /**
      * Returns a collection of children of the specified ```parent_id```.

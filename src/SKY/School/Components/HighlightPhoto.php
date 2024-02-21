@@ -7,12 +7,12 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Photo model
  *
- * @property int $id Photo ID
- * @property string $caption Photo Caption
- * @property string $large_filename Large Filename
- * @property string $large_filename_url Large Filename URL
- * @property string $thumb_filename Thumb Filename
- * @property string $thumb_filename_url Thumb Filename URL
+ * @property ?int $id Photo ID
+ * @property ?string $caption Photo Caption
+ * @property ?string $large_filename Large Filename
+ * @property ?string $large_filename_url Large Filename URL
+ * @property ?string $thumb_filename Thumb Filename
+ * @property ?string $thumb_filename_url Thumb Filename URL
  *
  * @api
  */

@@ -8,9 +8,9 @@ use Battis\OpenAPI\Client\BaseObject;
  * Emergency Contact List Model
  *
  * @property int $id User ID
- * @property \Blackbaud\SKY\School\Components\EmergencyContactEmail[]
+ * @property ?\Blackbaud\SKY\School\Components\EmergencyContactEmail[]
  *   $email_contact_list List of emergency contact emails
- * @property \Blackbaud\SKY\School\Components\EmergencyContactPhone[]
+ * @property ?\Blackbaud\SKY\School\Components\EmergencyContactPhone[]
  *   $phone_contact_list List of emergency contact phones
  *
  * @api

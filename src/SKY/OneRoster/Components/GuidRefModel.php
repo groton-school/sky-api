@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $sourcedId
- * @property string $href
- * @property string $type
+ * @property ?string $sourcedId
+ * @property ?string $href
+ * @property ?string $type
  *
  * @api
  */

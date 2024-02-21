@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\SectionCycles;
 class Cycles extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/cycles";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/cycles";
 
     /**
      * Returns a collection of cycles for the specified ```section_id```.

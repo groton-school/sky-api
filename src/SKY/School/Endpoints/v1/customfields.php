@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\AdminCustomFieldsCollection;
 class Customfields extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/customfields";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/customfields";
 
     /**
      * Returns a collection of admin custom fields.

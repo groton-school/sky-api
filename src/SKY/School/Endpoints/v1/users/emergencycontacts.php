@@ -10,32 +10,49 @@ use Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
+ *   $changed
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
+ *   $user
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
+ *   $nonuser
+ *
  * @api
  */
 class Emergencycontacts extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "changed" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed",
+        "user" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User",
+        "nonuser" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
      *   $_changed
      */
-    public Changed $_changed;
+    protected ?Changed $_changed = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
      *   $_user
      */
-    public User $_user;
+    protected ?User $_user = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
      *   $_nonuser
      */
-    public Nonuser $_nonuser;
+    protected ?Nonuser $_nonuser = null;
 
     /**
      * Returns a collection of a emergency contacts for the specified
@@ -58,46 +75,5 @@ class Emergencycontacts extends BaseEndpoint
         assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
 
         return new EmergencyContactList($this->send("get", ["{user_id}" => $user_id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
-
-     *
-     * @api
-     */
-    public function changed(): Changed
-    {
-        if ($this->_changed === null) {
-            $this->_changed = new Changed($this->api);
-        }
-        return $this->_changed;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
-     *
-     * @api
-     */
-    public function user(): User
-    {
-        if ($this->_user === null) {
-            $this->_user = new User($this->api);
-        }
-        return $this->_user;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
-
-     *
-     * @api
-     */
-    public function nonuser(): Nonuser
-    {
-        if ($this->_nonuser === null) {
-            $this->_nonuser = new Nonuser($this->api);
-        }
-        return $this->_nonuser;
     }
 }

@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\LineItemModel $lineItem
- * @property \Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
+ * @property ?\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
  *   $statusInfoSet
  *
  * @api

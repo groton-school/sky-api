@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\AssignmentCollection;
 class Assignments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/assignments";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/assignments";
 
     /**
      * Returns a collection of assignments for the specified ```section_id```.

@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\SchoolBbidStatusCollection;
 class Bbidstatus extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/bbidstatus";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/bbidstatus";
 
     /**
      * Returns a paginated collection of users education management BBID

@@ -13,6 +13,12 @@ use Blackbaud\SKY\OneRoster\Endpoints\Classes\Students;
 use Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems $lineItems
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\Results $results
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers $teachers
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students $students
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories $categories
+ *
  * @api
  */
 class Classes extends BaseEndpoint
@@ -23,29 +29,42 @@ class Classes extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{id}";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems $_lineItems
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public LineItems $_lineItems;
+    protected array $endpoints = [
+        "lineItems" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems",
+        "results" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\Results",
+        "teachers" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers",
+        "students" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students",
+        "categories" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Results $_results
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems $_lineItems
      */
-    public Results $_results;
+    protected ?LineItems $_lineItems = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers $_teachers
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Results $_results
      */
-    public Teachers $_teachers;
+    protected ?Results $_results = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students $_students
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers $_teachers
      */
-    public Students $_students;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories $_categories
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students $_students
      */
-    public Categories $_categories;
+    protected ?Students $_students = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories
+     *   $_categories
+     */
+    protected ?Categories $_categories = null;
 
     /**
      * Returns a collection of classes.
@@ -78,70 +97,5 @@ class Classes extends BaseEndpoint
         assert($id !== null, new ArgumentException("Parameter `id` is required"));
 
         return new ClassOutputModel($this->send("get", ["{id}" => $id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems
-     *
-     * @api
-     */
-    public function lineItems(): LineItems
-    {
-        if ($this->_lineItems === null) {
-            $this->_lineItems = new LineItems($this->api);
-        }
-        return $this->_lineItems;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\Results
-     *
-     * @api
-     */
-    public function results(): Results
-    {
-        if ($this->_results === null) {
-            $this->_results = new Results($this->api);
-        }
-        return $this->_results;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers
-     *
-     * @api
-     */
-    public function teachers(): Teachers
-    {
-        if ($this->_teachers === null) {
-            $this->_teachers = new Teachers($this->api);
-        }
-        return $this->_teachers;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students
-     *
-     * @api
-     */
-    public function students(): Students
-    {
-        if ($this->_students === null) {
-            $this->_students = new Students($this->api);
-        }
-        return $this->_students;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories
-     *
-     * @api
-     */
-    public function categories(): Categories
-    {
-        if ($this->_categories === null) {
-            $this->_categories = new Categories($this->api);
-        }
-        return $this->_categories;
     }
 }

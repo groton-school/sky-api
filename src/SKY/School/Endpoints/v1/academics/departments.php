@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\DepartmentCollection;
 class Departments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/departments";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/departments";
 
     /**
      * Returns a collection of academic departments.

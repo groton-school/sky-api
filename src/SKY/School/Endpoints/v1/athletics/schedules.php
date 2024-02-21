@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\ScheduleItemCollection;
 class Schedules extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/schedules";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/schedules";
 
     /**
      * Returns a collection of athletic games for the current school year.

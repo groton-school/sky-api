@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\Highlight;
 class Highlights extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/highlights/{highlight_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/highlights/{highlight_id}";
 
     /**
      * Returns an athletic game's highlights for the specified

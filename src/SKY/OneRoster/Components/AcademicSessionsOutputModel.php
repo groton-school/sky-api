@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property \Blackbaud\SKY\OneRoster\Components\AcademicSessionModel[]
+ * @property ?\Blackbaud\SKY\OneRoster\Components\AcademicSessionModel[]
  *   $academicSessions
- * @property \Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
+ * @property ?\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
  *   $statusInfoSet
  *
  * @api

@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\UserMe;
 class Me extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/me";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/me";
 
     /**
      * Returns information about the caller.

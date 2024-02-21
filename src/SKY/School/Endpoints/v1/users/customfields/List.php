@@ -11,9 +11,9 @@ use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 class List_ extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/customfields/list";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/customfields/list";
 
     /**
      * Creates a list of admin custom field for a user.

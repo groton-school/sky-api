@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\StudentGradedAssignmentCollection;
 class Gradedassignments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/{student_id}/{section_id}/gradedassignments";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/{student_id}/{section_id}/gradedassignments";
 
     /**
      * Returns the graded assignments for the specified ```student_id``` and

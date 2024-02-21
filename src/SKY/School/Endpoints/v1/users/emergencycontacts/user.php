@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\EmergencyContactUserCreate;
 class User extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts/user";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts/user";
 
     /**
      * Activates an existing inactive or suggested emergency contact for a

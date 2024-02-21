@@ -5,8 +5,8 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $calendar_day
- * @property \Blackbaud\SKY\School\Components\MasterScheduleSet[]
+ * @property ?string $calendar_day
+ * @property ?\Blackbaud\SKY\School\Components\MasterScheduleSet[]
  *   $schedule_sets
  *
  * @api

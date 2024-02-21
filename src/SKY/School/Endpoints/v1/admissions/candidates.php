@@ -13,9 +13,9 @@ use Blackbaud\SKY\School\Components\CandidateReadCollection;
 class Candidates extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/candidates";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/candidates";
 
     /**
      * Returns a collection of admissions candidates.

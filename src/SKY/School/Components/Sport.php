@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property int $id The ID of the sport
  * @property \Blackbaud\SKY\School\Components\Level $level Level Model
- * @property string $name The name of the sport
+ * @property ?string $name The name of the sport
  * @property \Blackbaud\SKY\School\Components\Season $season Season Model
  *
  * @api

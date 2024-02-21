@@ -14,9 +14,9 @@ use Blackbaud\SKY\School\Components\EventCategoryCreateResponseExample;
 class Categories extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/events/categories";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/events/categories";
 
     /**
      * Returns a collection of event categories.

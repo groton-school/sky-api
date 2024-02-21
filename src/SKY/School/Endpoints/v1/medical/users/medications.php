@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\StudentMedicationRead;
 class Medications extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/medications";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/medications";
 
     /**
      * Returns a list of medications for the specified ```user_id```.

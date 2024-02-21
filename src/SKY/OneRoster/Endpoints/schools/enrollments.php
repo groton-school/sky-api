@@ -12,9 +12,9 @@ use Blackbaud\SKY\OneRoster\Components\EnrollmentsOutputModel;
 class Enrollments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/enrollments";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/enrollments";
 
     /**
      * Returns a collection of enrollments for the specified `school_id`.

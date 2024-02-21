@@ -5,25 +5,25 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $username
- * @property \Blackbaud\SKY\OneRoster\Components\UserIdModel[] $userIds
- * @property bool $enabledUser
- * @property string $givenName
- * @property string $familyName
- * @property string $middleName
- * @property string $role
- * @property string $identifier
- * @property string $email
- * @property string $sms
- * @property string $phone
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $agents
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $orgs
- * @property \string[] $grades
- * @property string $password
- * @property string $sourcedId
- * @property string $status
- * @property string $dateLastModified
- * @property \string[] $metadata
+ * @property ?string $username
+ * @property ?\Blackbaud\SKY\OneRoster\Components\UserIdModel[] $userIds
+ * @property ?bool $enabledUser
+ * @property ?string $givenName
+ * @property ?string $familyName
+ * @property ?string $middleName
+ * @property ?string $role
+ * @property ?string $identifier
+ * @property ?string $email
+ * @property ?string $sms
+ * @property ?string $phone
+ * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $agents
+ * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $orgs
+ * @property ?\string[] $grades
+ * @property ?string $password
+ * @property ?string $sourcedId
+ * @property ?string $status
+ * @property ?string $dateLastModified
+ * @property ?\string[] $metadata
  *
  * @api
  */

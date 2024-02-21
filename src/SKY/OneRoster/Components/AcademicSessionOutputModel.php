@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\AcademicSessionModel
  *   $academicSession
- * @property \Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
+ * @property ?\Blackbaud\SKY\OneRoster\Components\StatusInfoModel[]
  *   $statusInfoSet
  *
  * @api

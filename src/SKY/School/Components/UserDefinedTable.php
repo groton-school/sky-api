@@ -7,16 +7,16 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * User Defined Table
  *
- * @property int $table_id
- * @property string $table_name
- * @property bool $use_abbreviations
- * @property bool $in_use
- * @property bool $base_table
- * @property bool $system_table
- * @property bool $require_abbreviation
- * @property string $modify_user
- * @property int $vendor_id
- * @property \Blackbaud\SKY\School\Components\UserDefinedTableValue[] $values
+ * @property ?int $table_id
+ * @property ?string $table_name
+ * @property ?bool $use_abbreviations
+ * @property ?bool $in_use
+ * @property ?bool $base_table
+ * @property ?bool $system_table
+ * @property ?bool $require_abbreviation
+ * @property ?string $modify_user
+ * @property ?int $vendor_id
+ * @property ?\Blackbaud\SKY\School\Components\UserDefinedTableValue[] $values
  *
  * @api
  */

@@ -9,10 +9,10 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property int $grade_level_id ID of the grade the individual is enrolling
  *   in
  * @property int $school_level_id ID of the school level
- * @property string $school_year_label School Year individual is enrolling in.
- *    Defaults to the current school year.
+ * @property ?string $school_year_label School Year individual is enrolling
+ *   in.  Defaults to the current school year.
  * @property string $enroll_date Date of the enrollment
- * @property string $depart_date Date departed
+ * @property ?string $depart_date Date departed
  * @property bool $current_year Toggles current year
  * @property bool $has_grades Toggles has grades
  * @property bool $grade_repeated Toggles grade repeated

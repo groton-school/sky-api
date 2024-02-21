@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\ExcuseDurationTypes;
 class Excusedurationtypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedurationtypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedurationtypes";
 
     /**
      * Returns a collection of excuse duration types.

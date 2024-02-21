@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\SportCollection;
 class Sports extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/sports";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/sports";
 
     /**
      * Returns a collection of athletic sports.

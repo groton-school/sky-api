@@ -8,25 +8,22 @@ use Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Venues
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings $buildings
+ *
  * @api
  */
 class Venues extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings $_buildings
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Buildings $_buildings;
+    protected array $endpoints = [
+        "buildings" => "\Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings $_buildings
      */
-    public function buildings(): Buildings
-    {
-        if ($this->_buildings === null) {
-            $this->_buildings = new Buildings($this->api);
-        }
-        return $this->_buildings;
-    }
+    protected ?Buildings $_buildings = null;
 }

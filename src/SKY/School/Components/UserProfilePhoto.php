@@ -7,8 +7,8 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * profile photo object
  *
- * @property string $photo_url The photo url of the user.
- * @property string $thumbnail_url The thumbnail url of the user.
+ * @property ?string $photo_url The photo url of the user.
+ * @property ?string $thumbnail_url The thumbnail url of the user.
  *
  * @api
  */

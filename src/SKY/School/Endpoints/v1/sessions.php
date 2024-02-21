@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\SchoolSessionCollection;
 class Sessions extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/sessions";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/sessions";
 
     /**
      * Returns a collection of sessions for a higher education institution.

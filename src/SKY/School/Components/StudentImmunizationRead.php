@@ -10,9 +10,9 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property int $id The ID of student immunization
  * @property \Blackbaud\SKY\School\Components\StudentImmunizationType
  *   $immunization_type Student immunization type
- * @property bool $is_complete Returns true if immunization exists for the
+ * @property ?bool $is_complete Returns true if immunization exists for the
  *   student
- * @property string $immunization_date The date of immunization. Use format
+ * @property ?string $immunization_date The date of immunization. Use format
  *   ... Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```
  *

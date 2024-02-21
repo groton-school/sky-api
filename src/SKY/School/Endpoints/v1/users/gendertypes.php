@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\GenderTypeCollection;
 class Gendertypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/gendertypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/gendertypes";
 
     /**
      * Returns a collection of gender types.

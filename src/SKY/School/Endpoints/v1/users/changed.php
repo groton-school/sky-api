@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\UserExtendedCollection;
 class Changed extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/changed";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/changed";
 
     /**
      * Returns a paginated collection of users that have been created or

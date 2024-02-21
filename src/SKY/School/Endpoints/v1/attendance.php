@@ -13,9 +13,9 @@ use Blackbaud\SKY\School\Components\AttendanceGetCollection;
 class Attendance extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/attendance";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/attendance";
 
     /**
      * Returns a collection of student attendance records for the specified

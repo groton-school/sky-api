@@ -13,9 +13,9 @@ use Blackbaud\SKY\School\Components\UserEnrollmentResponse;
 class Enroll extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/enroll";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/enroll";
 
     /**
      * Creates the users enrollment record.

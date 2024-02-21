@@ -12,9 +12,9 @@ use Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel;
 class Categories extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/categories";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/categories";
 
     /**
      * Returns a collection of categories for a specified `class_id`.

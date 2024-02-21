@@ -12,9 +12,9 @@ use Blackbaud\SKY\OneRoster\Components\UsersOutputModel;
 class Teachers extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/teachers";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/teachers";
 
     /**
      * Returns a collection of teacher user data for the specified `class_id`.

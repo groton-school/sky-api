@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * condition
  *
  * @property int $id The Id of the role
- * @property string $name The name of the role
+ * @property ?string $name The name of the role
  *
  * @api
  */

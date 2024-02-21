@@ -8,21 +8,22 @@ use Battis\OpenAPI\Client\BaseObject;
  * Meeting
  *
  * @property int $section_id The id of the section
- * @property string $section_identifier The section identifier
- * @property string $course_title The title of the course
- * @property string $group_name The auto generated name of the group
+ * @property ?string $section_identifier The section identifier
+ * @property ?string $course_title The title of the course
+ * @property ?string $group_name The auto generated name of the group
  * @property int $block_id The id of the block
- * @property string $block_name The name of the block
+ * @property ?string $block_name The name of the block
  * @property int $room_id The id of the room where the meeting takes place
- * @property string $room_name The name of the room where the meeting takes
+ * @property ?string $room_name The name of the room where the meeting takes
  *   place
  * @property int $room_number The room number where the meeting takes place
  * @property int $room_capacity The room capacity
- * @property string $room_code The room code
+ * @property ?string $room_code The room code
  * @property int $faculty_user_id The user id of the faculty member
- * @property string $faculty_name The combined name of the head faculty member
- * @property string $faculty_firstname The faculty member's first name
- * @property string $faculty_lastname The faculty member's last name
+ * @property ?string $faculty_name The combined name of the head faculty
+ *   member
+ * @property ?string $faculty_firstname The faculty member's first name
+ * @property ?string $faculty_lastname The faculty member's last name
  * @property string $start_time The start time of the meeting
  * @property string $end_time The end time of the meeting
  * @property string $meeting_date The date the meeting takes place
@@ -38,7 +39,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property string $modified_date The date the section was last modified
  * @property int $last_modified_user_id The identifier of the user that last
  *   modified the section
- * @property \Blackbaud\SKY\School\Components\Teacher[] $teachers The list of
+ * @property ?\Blackbaud\SKY\School\Components\Teacher[] $teachers The list of
  *   teachers for the meeting
  *
  * @api

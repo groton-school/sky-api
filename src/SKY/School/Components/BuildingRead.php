@@ -5,10 +5,10 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $building_id ID of the building
- * @property string $building_name Building Name
- * @property \string[] $building_types Building group types
- * @property \Blackbaud\SKY\School\Components\BuildingRoomRead[] $rooms
+ * @property ?int $building_id ID of the building
+ * @property ?string $building_name Building Name
+ * @property ?\string[] $building_types Building group types
+ * @property ?\Blackbaud\SKY\School\Components\BuildingRoomRead[] $rooms
  *   Collection of rooms within the building
  *
  * @api

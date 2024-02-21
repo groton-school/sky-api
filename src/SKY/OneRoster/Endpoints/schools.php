@@ -14,6 +14,14 @@ use Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers;
 use Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes $classes
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers $teachers
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Students $students
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
+ *   $enrollments
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms $terms
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses $courses
+ *
  * @api
  */
 class Schools extends BaseEndpoint
@@ -24,35 +32,48 @@ class Schools extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{id}";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes $_classes
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Classes $_classes;
+    protected array $endpoints = [
+        "classes" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes",
+        "teachers" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers",
+        "students" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Students",
+        "enrollments" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments",
+        "terms" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms",
+        "courses" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers $_teachers
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes $_classes
      */
-    public Teachers $_teachers;
+    protected ?Classes $_classes = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Students $_students
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers $_teachers
      */
-    public Students $_students;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Students $_students
+     */
+    protected ?Students $_students = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
      *   $_enrollments
      */
-    public Enrollments $_enrollments;
+    protected ?Enrollments $_enrollments = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms $_terms
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms $_terms
      */
-    public Terms $_terms;
+    protected ?Terms $_terms = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses $_courses
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses $_courses
      */
-    public Courses $_courses;
+    protected ?Courses $_courses = null;
 
     /**
      * Returns a collection of schools.
@@ -85,83 +106,5 @@ class Schools extends BaseEndpoint
         assert($id !== null, new ArgumentException("Parameter `id` is required"));
 
         return new OrgOutputModel($this->send("get", ["{id}" => $id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes
-     *
-     * @api
-     */
-    public function classes(): Classes
-    {
-        if ($this->_classes === null) {
-            $this->_classes = new Classes($this->api);
-        }
-        return $this->_classes;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers
-     *
-     * @api
-     */
-    public function teachers(): Teachers
-    {
-        if ($this->_teachers === null) {
-            $this->_teachers = new Teachers($this->api);
-        }
-        return $this->_teachers;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Students
-     *
-     * @api
-     */
-    public function students(): Students
-    {
-        if ($this->_students === null) {
-            $this->_students = new Students($this->api);
-        }
-        return $this->_students;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
-     *
-     * @api
-     */
-    public function enrollments(): Enrollments
-    {
-        if ($this->_enrollments === null) {
-            $this->_enrollments = new Enrollments($this->api);
-        }
-        return $this->_enrollments;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms
-     *
-     * @api
-     */
-    public function terms(): Terms
-    {
-        if ($this->_terms === null) {
-            $this->_terms = new Terms($this->api);
-        }
-        return $this->_terms;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses
-     *
-     * @api
-     */
-    public function courses(): Courses
-    {
-        if ($this->_courses === null) {
-            $this->_courses = new Courses($this->api);
-        }
-        return $this->_courses;
     }
 }

@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\Roster as RosterDisambiguate;
 class Roster extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/roster";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/roster";
 
     /**
      * Returns a collection of players and coaches for the specified athletic

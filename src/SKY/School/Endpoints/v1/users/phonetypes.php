@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\PhoneTypeCollection;
 class Phonetypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/phonetypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/phonetypes";
 
     /**
      * Returns a collection of phone types. Requires at least one of the

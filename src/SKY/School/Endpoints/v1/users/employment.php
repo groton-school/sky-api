@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\FacultyEmploymentRead;
 class Employment extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/employment";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/employment";
 
     /**
      * Returns the employment details for the specified ```user_id```.

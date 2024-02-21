@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property int $id The Id of the language
- * @property string $description The description fo the language
+ * @property ?string $description The description fo the language
  *
  * @api
  */

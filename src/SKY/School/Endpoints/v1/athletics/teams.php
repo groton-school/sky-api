@@ -8,25 +8,39 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster $roster
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
+ *   $schedule
+ *
  * @api
  */
 class Teams extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster $_roster
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Roster $_roster;
+    protected array $endpoints = [
+        "roster" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster",
+        "schedule" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster
+     *   $_roster
+     */
+    protected ?Roster $_roster = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
      *   $_schedule
      */
-    public Schedule $_schedule;
+    protected ?Schedule $_schedule = null;
 
     /**
      * Returns a collection of athletic teams for the current school year.
@@ -54,31 +68,5 @@ class Teams extends BaseEndpoint
     public function filterBy(?string $school_year = null): TeamCollection
     {
         return new TeamCollection($this->send("get", [], ["school_year" => $school_year]));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster
-     *
-     * @api
-     */
-    public function roster(): Roster
-    {
-        if ($this->_roster === null) {
-            $this->_roster = new Roster($this->api);
-        }
-        return $this->_roster;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
-     *
-     * @api
-     */
-    public function schedule(): Schedule
-    {
-        if ($this->_schedule === null) {
-            $this->_schedule = new Schedule($this->api);
-        }
-        return $this->_schedule;
     }
 }

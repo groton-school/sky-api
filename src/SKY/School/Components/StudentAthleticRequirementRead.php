@@ -12,9 +12,9 @@ use Battis\OpenAPI\Client\BaseObject;
  *   $athletic_requirement_type Athletic requirement type
  * @property \Blackbaud\SKY\School\Components\IdDescriptorField $school_year
  * @property \Blackbaud\SKY\School\Components\IdDescriptorField $season
- * @property bool $is_complete Returns true if athletic requirement exists for
- *   the student
- * @property string $athletic_requirement_date The date of athletic
+ * @property ?bool $is_complete Returns true if athletic requirement exists
+ *   for the student
+ * @property ?string $athletic_requirement_date The date of athletic
  *   requirement. Use format ... Uses
  *   [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```

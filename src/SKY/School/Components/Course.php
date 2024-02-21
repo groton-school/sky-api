@@ -6,17 +6,17 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property int $offering_id
- * @property int $course_length
- * @property string $course_code
- * @property string $course_title
- * @property string $course_description
+ * @property ?int $course_length
+ * @property ?string $course_code
+ * @property ?string $course_title
+ * @property ?string $course_description
  * @property bool $inactive
- * @property int $level_num
- * @property string $block_type_id
- * @property int $room_type_id
- * @property int $room_id
- * @property int $building_id
- * @property float $credits
+ * @property ?int $level_num
+ * @property ?string $block_type_id
+ * @property ?int $room_type_id
+ * @property ?int $room_id
+ * @property ?int $building_id
+ * @property ?float $credits
  *
  * @api
  */

@@ -9,10 +9,10 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property int $id The ID of the student’s condition
  * @property \Blackbaud\SKY\School\Components\IdDescriptorField $condition
- * @property string $date_as_of The start date for the condition.
- * @property string $date_until The end date for the condition.
- * @property string $notes The notes for the condition.
- * @property \Blackbaud\SKY\School\Components\StudentMedication[]
+ * @property ?string $date_as_of The start date for the condition.
+ * @property ?string $date_until The end date for the condition.
+ * @property ?string $notes The notes for the condition.
+ * @property ?\Blackbaud\SKY\School\Components\StudentMedication[]
  *   $student_medications An array of student medication objects.
  *
  * @api

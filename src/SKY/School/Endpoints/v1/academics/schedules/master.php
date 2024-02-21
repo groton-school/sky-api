@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\MasterScheduleDayCollection;
 class Master extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/schedules/master";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/schedules/master";
 
     /**
      * Returns a collection of Master Schedule days within the date range

@@ -11,12 +11,12 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property string $condition The ID or description of the condition.
  * @property string $date_as_of The start date for the condition. Use ISO-8601
  *   date format: 2022-08-31.
- * @property string $date_until The end date for the condition. Use ISO-8601
+ * @property ?string $date_until The end date for the condition. Use ISO-8601
  *   date format: 2022-08-31.
- * @property string $notes The notes for the condition.
- * @property \Blackbaud\SKY\School\Components\StudentAccessRole[]
+ * @property ?string $notes The notes for the condition.
+ * @property ?\Blackbaud\SKY\School\Components\StudentAccessRole[]
  *   $access_roles An array of access role objects.
- * @property \int[] $student_medications An array of student medication ID
+ * @property ?\int[] $student_medications An array of student medication ID
  *   integers.
  *
  * @api

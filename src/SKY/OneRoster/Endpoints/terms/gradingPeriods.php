@@ -12,9 +12,9 @@ use Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel;
 class GradingPeriods extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{term_id}/gradingPeriods";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{term_id}/gradingPeriods";
 
     /**
      * Returns a collection of grading periods for the specified `term_id`

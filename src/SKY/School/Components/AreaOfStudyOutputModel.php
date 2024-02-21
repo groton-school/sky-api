@@ -5,12 +5,12 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $id The Id of the area of study
- * @property int $primary_area_of_study_id
- * @property string $description The long description of the area of study
- * @property int $award_level The designated award level for this area of
+ * @property ?int $id The Id of the area of study
+ * @property ?int $primary_area_of_study_id
+ * @property ?string $description The long description of the area of study
+ * @property ?int $award_level The designated award level for this area of
  *   study
- * @property string $type
+ * @property ?string $type
  * @property \Blackbaud\SKY\School\Components\Degree $degree
  *
  * @api

@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\NewsItemCollection;
 class Items extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/news/items";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/content/news/items";
 
     /**
      * Returns a collection of Content News Items Requires at least one of the

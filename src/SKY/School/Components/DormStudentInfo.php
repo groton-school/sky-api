@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $grad_year
+ * @property ?string $grad_year
  *
  * @api
  */

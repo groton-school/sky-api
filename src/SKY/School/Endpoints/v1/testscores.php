@@ -9,6 +9,9 @@ use Blackbaud\SKY\School\Components\TestScoreCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
+ *   $testtypes
+ *
  * @api
  */
 class Testscores extends BaseEndpoint
@@ -19,10 +22,18 @@ class Testscores extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/testscores/{user_id}";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "testtypes" => "\Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
      *   $_testtypes
      */
-    public Testtypes $_testtypes;
+    protected ?Testtypes $_testtypes = null;
 
     /**
      * Returns a collection of test scores.
@@ -65,18 +76,5 @@ class Testscores extends BaseEndpoint
         assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
-     *
-     * @api
-     */
-    public function testtypes(): Testtypes
-    {
-        if ($this->_testtypes === null) {
-            $this->_testtypes = new Testtypes($this->api);
-        }
-        return $this->_testtypes;
     }
 }

@@ -7,15 +7,15 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * User Defined Table Values
  *
- * @property int $table_id
- * @property int $table_value_id
- * @property string $value_name
- * @property string $value_abbreviation
- * @property bool $in_use
- * @property bool $active
- * @property int $sort
- * @property int $base_table_value_id
- * @property bool $base_value
+ * @property ?int $table_id
+ * @property ?int $table_value_id
+ * @property ?string $value_name
+ * @property ?string $value_abbreviation
+ * @property ?bool $in_use
+ * @property ?bool $active
+ * @property ?int $sort
+ * @property ?int $base_table_value_id
+ * @property ?bool $base_value
  *
  * @api
  */

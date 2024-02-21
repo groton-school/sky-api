@@ -9,43 +9,29 @@ use Blackbaud\SKY\School\Endpoints\V1\Events\Categories;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Events
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Events\Categories $categories
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Events\Calendar $calendar
+ *
  * @api
  */
 class Events extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Events\Categories $_categories
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Categories $_categories;
+    protected array $endpoints = [
+        "categories" => "\Blackbaud\SKY\School\Endpoints\V1\Events\Categories",
+        "calendar" => "\Blackbaud\SKY\School\Endpoints\V1\Events\Calendar",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Events\Calendar $_calendar
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Events\Categories $_categories
      */
-    public Calendar $_calendar;
+    protected ?Categories $_categories = null;
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Events\Categories
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Events\Calendar $_calendar
      */
-    public function categories(): Categories
-    {
-        if ($this->_categories === null) {
-            $this->_categories = new Categories($this->api);
-        }
-        return $this->_categories;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Events\Calendar
-     *
-     * @api
-     */
-    public function calendar(): Calendar
-    {
-        if ($this->_calendar === null) {
-            $this->_calendar = new Calendar($this->api);
-        }
-        return $this->_calendar;
-    }
+    protected ?Calendar $_calendar = null;
 }

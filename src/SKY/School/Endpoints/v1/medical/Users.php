@@ -14,123 +14,69 @@ use Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Medical\Users
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
+ *   $allergiesconditions
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
+ *   $medications
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
+ *   $immunizations
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
+ *   $athleticrequirements
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
+ *   $allergies
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
+ *   $conditions
+ *
  * @api
  */
 class Users extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "allergiesconditions" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions",
+        "medications" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications",
+        "immunizations" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations",
+        "athleticrequirements" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements",
+        "allergies" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies",
+        "conditions" => "\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
      *   $_allergiesconditions
      */
-    public Allergiesconditions $_allergiesconditions;
+    protected ?Allergiesconditions $_allergiesconditions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
      *   $_medications
      */
-    public Medications $_medications;
+    protected ?Medications $_medications = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
      *   $_immunizations
      */
-    public Immunizations $_immunizations;
+    protected ?Immunizations $_immunizations = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
      *   $_athleticrequirements
      */
-    public Athleticrequirements $_athleticrequirements;
+    protected ?Athleticrequirements $_athleticrequirements = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
      *   $_allergies
      */
-    public Allergies $_allergies;
+    protected ?Allergies $_allergies = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
      *   $_conditions
      */
-    public Conditions $_conditions;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
-
-     *
-     * @api
-     */
-    public function allergiesconditions(): Allergiesconditions
-    {
-        if ($this->_allergiesconditions === null) {
-            $this->_allergiesconditions = new Allergiesconditions($this->api);
-        }
-        return $this->_allergiesconditions;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
-     *
-     * @api
-     */
-    public function medications(): Medications
-    {
-        if ($this->_medications === null) {
-            $this->_medications = new Medications($this->api);
-        }
-        return $this->_medications;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
-     *
-     * @api
-     */
-    public function immunizations(): Immunizations
-    {
-        if ($this->_immunizations === null) {
-            $this->_immunizations = new Immunizations($this->api);
-        }
-        return $this->_immunizations;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
-
-     *
-     * @api
-     */
-    public function athleticrequirements(): Athleticrequirements
-    {
-        if ($this->_athleticrequirements === null) {
-            $this->_athleticrequirements = new Athleticrequirements($this->api);
-        }
-        return $this->_athleticrequirements;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
-     *
-     * @api
-     */
-    public function allergies(): Allergies
-    {
-        if ($this->_allergies === null) {
-            $this->_allergies = new Allergies($this->api);
-        }
-        return $this->_allergies;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
-     *
-     * @api
-     */
-    public function conditions(): Conditions
-    {
-        if ($this->_conditions === null) {
-            $this->_conditions = new Conditions($this->api);
-        }
-        return $this->_conditions;
-    }
+    protected ?Conditions $_conditions = null;
 }

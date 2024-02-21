@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\SecurityRoleCollection;
 class Securityroles extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/securityroles";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/securityroles";
 
     /**
      * Returns the user roles available for additional access control when

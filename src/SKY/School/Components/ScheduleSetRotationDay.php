@@ -5,10 +5,10 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $WeekInCycle
- * @property int $DayInCycle
- * @property string $DayLabel
- * @property \Blackbaud\SKY\School\Components\ScheduleSetRotationDayMeeting[]
+ * @property ?int $WeekInCycle
+ * @property ?int $DayInCycle
+ * @property ?string $DayLabel
+ * @property ?\Blackbaud\SKY\School\Components\ScheduleSetRotationDayMeeting[]
  *   $RotaionDayMeetingList
  *
  * @api

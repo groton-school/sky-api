@@ -8,20 +8,31 @@ use Blackbaud\SKY\OneRoster\Components\UsersOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
+ *   $results
+ *
  * @api
  */
 class Students extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/students";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/students";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "results" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
      *   $_results
      */
-    public Results $_results;
+    protected ?Results $_results = null;
 
     /**
      * Returns a collection of student user data for the specified `class_id`.
@@ -40,18 +51,5 @@ class Students extends BaseEndpoint
         assert($class_id !== null, new ArgumentException("Parameter `class_id` is required"));
 
         return new UsersOutputModel($this->send("get", ["{class_id}" => $class_id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
-     *
-     * @api
-     */
-    public function results(): Results
-    {
-        if ($this->_results === null) {
-            $this->_results = new Results($this->api);
-        }
-        return $this->_results;
     }
 }

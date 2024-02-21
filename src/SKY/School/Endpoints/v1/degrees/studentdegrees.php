@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\UserDegreeOutputModelCollection;
 class Studentdegrees extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/degrees/studentdegrees/{student_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/degrees/studentdegrees/{student_id}";
 
     /**
      * Returns a collection of degree/diplomas assigned to the student.

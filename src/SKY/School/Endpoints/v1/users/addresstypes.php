@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\AddressTypeCollection;
 class Addresstypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/addresstypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/addresstypes";
 
     /**
      * Returns a collection of address types.

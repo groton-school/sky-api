@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\UserAuditReadCollection;
 class Audit extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/audit";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/audit";
 
     /**
      * Returns a collection of audit information based on the specified

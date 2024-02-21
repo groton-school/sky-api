@@ -10,65 +10,42 @@ use Blackbaud\SKY\School\Endpoints\V1\Content\Resources;
 /**
  * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Content
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\Resources $resources
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\News $news Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Content\News
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\Events $events Routing
+ *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Content\Events
+ *
  * @api
  */
 class Content extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Resources $_resources
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Resources $_resources;
+    protected array $endpoints = [
+        "resources" => "\Blackbaud\SKY\School\Endpoints\V1\Content\Resources",
+        "news" => "\Blackbaud\SKY\School\Endpoints\V1\Content\News",
+        "events" => "\Blackbaud\SKY\School\Endpoints\V1\Content\Events",
+    ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News $_news Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Resources $_resources
+     */
+    protected ?Resources $_resources = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News $_news Routing
      *   class for the namespace Blackbaud\SKY\School\Endpoints\V1\Content\News
 
      */
-    public News $_news;
+    protected ?News $_news = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Events $_events Routing
-     *   class for the namespace
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Events $_events
+     *   Routing class for the namespace
      *   Blackbaud\SKY\School\Endpoints\V1\Content\Events
      */
-    public Events $_events;
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\Resources
-     *
-     * @api
-     */
-    public function resources(): Resources
-    {
-        if ($this->_resources === null) {
-            $this->_resources = new Resources($this->api);
-        }
-        return $this->_resources;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\News
-     *
-     * @api
-     */
-    public function news(): News
-    {
-        if ($this->_news === null) {
-            $this->_news = new News($this->api);
-        }
-        return $this->_news;
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\Events
-     *
-     * @api
-     */
-    public function events(): Events
-    {
-        if ($this->_events === null) {
-            $this->_events = new Events($this->api);
-        }
-        return $this->_events;
-    }
+    protected ?Events $_events = null;
 }

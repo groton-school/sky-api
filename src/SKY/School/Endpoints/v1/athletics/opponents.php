@@ -13,9 +13,9 @@ use Blackbaud\SKY\School\Components\OpponentUpdateModel;
 class Opponents extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
 
     /**
      * Returns a collection of athletic opponents.

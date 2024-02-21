@@ -5,13 +5,13 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $id
- * @property string $name
- * @property string $decision_type
- * @property int $decision_type_id
- * @property string $date
- * @property string $expire_date
- * @property string $comment
+ * @property ?int $id
+ * @property ?string $name
+ * @property ?string $decision_type
+ * @property ?int $decision_type_id
+ * @property ?string $date
+ * @property ?string $expire_date
+ * @property ?string $comment
  * @property \Blackbaud\SKY\School\Components\CandidateDecisionModel
  *   $candidate_response
  *

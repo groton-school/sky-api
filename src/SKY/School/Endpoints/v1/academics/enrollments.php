@@ -8,20 +8,31 @@ use Blackbaud\SKY\School\Components\EnrollmentCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
+ *   $changes
+ *
  * @api
  */
 class Enrollments extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/enrollments/{user_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/enrollments/{user_id}";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "changes" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
      *   $_changes
      */
-    public Changes $_changes;
+    protected ?Changes $_changes = null;
 
     /**
      * Returns a collection of course sections in which the provided student
@@ -52,19 +63,5 @@ class Enrollments extends BaseEndpoint
         assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
 
         return new EnrollmentCollection($this->send("get", ["{user_id}" => $user_id], ["school_year" => $school_year]));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
-
-     *
-     * @api
-     */
-    public function changes(): Changes
-    {
-        if ($this->_changes === null) {
-            $this->_changes = new Changes($this->api);
-        }
-        return $this->_changes;
     }
 }

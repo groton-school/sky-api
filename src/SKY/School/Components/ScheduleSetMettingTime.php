@@ -5,11 +5,11 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $PatternNum
- * @property int $DailyOrdinal
- * @property string $BeginTime
- * @property string $EndTime
- * @property bool $HasAttendance
+ * @property ?int $PatternNum
+ * @property ?int $DailyOrdinal
+ * @property ?string $BeginTime
+ * @property ?string $EndTime
+ * @property ?bool $HasAttendance
  *
  * @api
  */

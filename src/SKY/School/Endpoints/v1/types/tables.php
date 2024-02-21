@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\TableCollection;
 class Tables extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/tables";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/types/tables";
 
     /**
      * Returns a collection of table types.

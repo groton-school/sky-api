@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * Duration Model
  *
  * @property int $id The ID of the duration
- * @property string $name The starting term of the section
+ * @property ?string $name The starting term of the section
  *
  * @api
  */

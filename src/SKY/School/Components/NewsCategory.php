@@ -7,12 +7,12 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * NewsCategory Model
  *
- * @property int $category_id
- * @property string $category_name
- * @property int $association_id
- * @property string $association_name
- * @property bool $rss_ind
- * @property string $rss_feed
+ * @property ?int $category_id
+ * @property ?string $category_name
+ * @property ?int $association_id
+ * @property ?string $association_name
+ * @property ?bool $rss_ind
+ * @property ?string $rss_feed
  *
  * @api
  */

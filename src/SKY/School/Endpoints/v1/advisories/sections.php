@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\AdvisoriesSectionCollection;
 class Sections extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/advisories/sections";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/advisories/sections";
 
     /**
      * Returns a collection of advisory sections for the specified school

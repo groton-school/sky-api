@@ -5,11 +5,11 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $id
- * @property string $day_description
- * @property int $sort_order
- * @property string $rotation_behavior
- * @property \Blackbaud\SKY\School\Components\SpecialDayBlock[] $blocks
+ * @property ?int $id
+ * @property ?string $day_description
+ * @property ?int $sort_order
+ * @property ?string $rotation_behavior
+ * @property ?\Blackbaud\SKY\School\Components\SpecialDayBlock[] $blocks
  *
  * @api
  */

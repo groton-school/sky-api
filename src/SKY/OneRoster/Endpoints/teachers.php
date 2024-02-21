@@ -9,6 +9,8 @@ use Blackbaud\SKY\OneRoster\Components\UsersOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes;
 
 /**
+ * @property \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $classes
+ *
  * @api
  */
 class Teachers extends BaseEndpoint
@@ -19,9 +21,17 @@ class Teachers extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/teachers/{id}";
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Classes $_classes;
+    protected array $endpoints = [
+        "classes" => "\Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
+     */
+    protected ?Classes $_classes = null;
 
     /**
      * Returns a collection of teacher user data.
@@ -64,18 +74,5 @@ class Teachers extends BaseEndpoint
         assert($id !== null, new ArgumentException("Parameter `id` is required"));
 
         return new UserOutputModel($this->send("get", ["{id}" => $id], []));
-    }
-
-    /**
-     * @return \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes
-     *
-     * @api
-     */
-    public function classes(): Classes
-    {
-        if ($this->_classes === null) {
-            $this->_classes = new Classes($this->api);
-        }
-        return $this->_classes;
     }
 }

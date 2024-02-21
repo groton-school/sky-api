@@ -7,10 +7,10 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Timezone model
  *
- * @property string $timezone_name The timezone the school is set to
- * @property bool $is_daylight_savings_time Gets or sets the daylight savings
+ * @property ?string $timezone_name The timezone the school is set to
+ * @property ?bool $is_daylight_savings_time Gets or sets the daylight savings
  *   time flag
- * @property string $utc_offset The UTC offset
+ * @property ?string $utc_offset The UTC offset
  *
  * @api
  */

@@ -5,16 +5,16 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $category_description The category that the excuse
+ * @property ?string $category_description The category that the excuse
  *   associated with
- * @property int $category_id The ID of category that the excuse associated
+ * @property ?int $category_id The ID of category that the excuse associated
  *   with
- * @property int $excuse_type_id The ID of the excuse type
- * @property string $excuse_description The description of the excuse type
- * @property bool $use_in_calculations The Use In Calculations flag
- * @property string $excused The Excused/Unexecused status
- * @property string $duration The Full Day/Half day status
- * @property string $attendance_type The attendance type
+ * @property ?int $excuse_type_id The ID of the excuse type
+ * @property ?string $excuse_description The description of the excuse type
+ * @property ?bool $use_in_calculations The Use In Calculations flag
+ * @property ?string $excused The Excused/Unexecused status
+ * @property ?string $duration The Full Day/Half day status
+ * @property ?string $attendance_type The attendance type
  *
  * @api
  */

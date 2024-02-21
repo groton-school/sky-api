@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *
  * @property int $id The type ID of a phone number; the type ID corresponds
  *   with the type of phone number (ex. Cell, Work, Home)
- * @property string $type The name of the phone type
+ * @property ?string $type The name of the phone type
  *
  * @api
  */

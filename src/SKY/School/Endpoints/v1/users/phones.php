@@ -10,6 +10,8 @@ use Blackbaud\SKY\School\Components\PhoneUpdate;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share $share
+ *
  * @api
  */
 class Phones extends BaseEndpoint
@@ -20,9 +22,17 @@ class Phones extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/phones/{phone_id}/{phone_type_id}";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share $_share
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Share $_share;
+    protected array $endpoints = [
+        "share" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share $_share
+     */
+    protected ?Share $_share = null;
 
     /**
      * Returns a collection phone numbers for the specified ```user_id```.
@@ -142,18 +152,5 @@ class Phones extends BaseEndpoint
 
         return $this->send("patch", ["{user_id}" => $user_id,
         "{phone_id}" => $phone_id], ["split_phone_if_shared" => $split_phone_if_shared], $requestBody);
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share
-     *
-     * @api
-     */
-    public function share(): Share
-    {
-        if ($this->_share === null) {
-            $this->_share = new Share($this->api);
-        }
-        return $this->_share;
     }
 }

@@ -5,22 +5,22 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $title
- * @property string $classCode
- * @property string $classType
- * @property string $location
- * @property \string[] $grades
- * @property \string[] $subjects
+ * @property ?string $title
+ * @property ?string $classCode
+ * @property ?string $classType
+ * @property ?string $location
+ * @property ?\string[] $grades
+ * @property ?\string[] $subjects
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $course
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $school
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $terms
- * @property \string[] $subjectCodes
- * @property \string[] $periods
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $resources
- * @property string $sourcedId
- * @property string $status
- * @property string $dateLastModified
- * @property \string[] $metadata
+ * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $terms
+ * @property ?\string[] $subjectCodes
+ * @property ?\string[] $periods
+ * @property ?\Blackbaud\SKY\OneRoster\Components\GuidRefModel[] $resources
+ * @property ?string $sourcedId
+ * @property ?string $status
+ * @property ?string $dateLastModified
+ * @property ?\string[] $metadata
  *
  * @api
  */

@@ -6,11 +6,11 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property int $schedule_set_id
- * @property string $title
+ * @property ?string $title
  * @property bool $meeting_time
  * @property bool $rotation
- * @property string $begin_date
- * @property string $end_date
+ * @property ?string $begin_date
+ * @property ?string $end_date
  *
  * @api
  */

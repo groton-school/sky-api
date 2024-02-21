@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\AcademicsSectionStudentCollection;
 class Sections extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/student/{student_id}/sections";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/student/{student_id}/sections";
 
     /**
      * Returns a collection of sections for the specified ```student_id```.

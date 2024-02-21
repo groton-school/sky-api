@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\StudentImmunizationUpdate;
 class Immunizations extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/immunizations";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/immunizations";
 
     /**
      * Updates a medical immunization for a student.

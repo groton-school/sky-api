@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\Timezone as TimezoneDisambiguate;
 class Timezone extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/timezone";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/timezone";
 
     /**
      * Returns the current time zone set for the school.

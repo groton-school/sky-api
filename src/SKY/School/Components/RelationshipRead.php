@@ -7,13 +7,13 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * RelationshipRead Model
  *
- * @property string $id ID of the relationship
- * @property string $comment A comment describing the relationship
+ * @property ?string $id ID of the relationship
+ * @property ?string $comment A comment describing the relationship
  * @property bool $contact Returns True if the user can be contacted. Returns
  *   False if the user is marked as 'No Contact' in the UI.
- * @property string $first_name The first name of the user(s) associated with
+ * @property ?string $first_name The first name of the user(s) associated with
  *   the queried user
- * @property string $last_name The last name of the user(s) associated with
+ * @property ?string $last_name The last name of the user(s) associated with
  *   the queried user
  * @property bool $list_as_parent Returns True if List as Parent is enabled in
  *   the UI for a user. If enabled, the user can be listed in directories as the
@@ -22,7 +22,7 @@ use Battis\OpenAPI\Client\BaseObject;
  *   in the UI for a relationship type
  * @property bool $primary Returns True if the user in a relationship is the
  *   primary user
- * @property int $relationship The enum value that describes the relationship
+ * @property ?int $relationship The enum value that describes the relationship
  *   (ex. Parent_Child = 6)
  * @property bool $resides_with Returns True if Resides With is enabled in the
  *   UI. If enabled, then the user in a relationship resides with the queried
@@ -32,11 +32,11 @@ use Battis\OpenAPI\Client\BaseObject;
  * @property bool $tuition_responsible_signer Returns True if Responsible
  *   Signer is enabled in the UI for a user. If enabled, it indicates the user
  *   signs enrollment contracts in onBoard
- * @property int $type_id The ID of the relationship type. The ID corresponds
+ * @property ?int $type_id The ID of the relationship type. The ID corresponds
  *   with static options in the UI
- * @property int $user_one_id The ID of the user associated with user_two_id
- * @property string $user_one_role The role of the user being queried
- * @property int $user_two_id The ID of the user associated with user_one_id
+ * @property ?int $user_one_id The ID of the user associated with user_two_id
+ * @property ?string $user_one_role The role of the user being queried
+ * @property ?int $user_two_id The ID of the user associated with user_one_id
  *
  * @api
  */

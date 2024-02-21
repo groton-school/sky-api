@@ -12,9 +12,9 @@ use Blackbaud\SKY\School\Components\ResultCreate;
 class Result extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/result";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/result";
 
     /**
      * Creates a result/score for the specified athletic game

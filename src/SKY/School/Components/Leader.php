@@ -7,9 +7,9 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Leader Model
  *
- * @property int $id The user ID for the leader
- * @property bool $head The head leader indicator
- * @property string $name The firstname and lastname of the leader
+ * @property ?int $id The user ID for the leader
+ * @property ?bool $head The head leader indicator
+ * @property ?string $name The firstname and lastname of the leader
  *
  * @api
  */

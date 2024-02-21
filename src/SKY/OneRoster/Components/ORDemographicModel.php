@@ -5,23 +5,23 @@ namespace Blackbaud\SKY\OneRoster\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $birthDate
- * @property string $sex
- * @property bool $americanIndianOrAlaskaNative
- * @property bool $asian
- * @property bool $blackOrAfricanAmerican
- * @property bool $nativeHawaiianOrOtherPacificIslander
- * @property bool $white
- * @property bool $demographicRaceTwoOrMoreRaces
- * @property bool $hispanicOrLatinoEthnicity
- * @property string $countryOfBirthCode
- * @property string $stateOfBirthAbbreviation
- * @property string $cityOfBirth
- * @property string $publicSchoolResidenceStatus
- * @property string $sourcedId
- * @property string $status
- * @property string $dateLastModified
- * @property \string[] $metadata
+ * @property ?string $birthDate
+ * @property ?string $sex
+ * @property ?bool $americanIndianOrAlaskaNative
+ * @property ?bool $asian
+ * @property ?bool $blackOrAfricanAmerican
+ * @property ?bool $nativeHawaiianOrOtherPacificIslander
+ * @property ?bool $white
+ * @property ?bool $demographicRaceTwoOrMoreRaces
+ * @property ?bool $hispanicOrLatinoEthnicity
+ * @property ?string $countryOfBirthCode
+ * @property ?string $stateOfBirthAbbreviation
+ * @property ?string $cityOfBirth
+ * @property ?string $publicSchoolResidenceStatus
+ * @property ?string $sourcedId
+ * @property ?string $status
+ * @property ?string $dateLastModified
+ * @property ?\string[] $metadata
  *
  * @api
  */

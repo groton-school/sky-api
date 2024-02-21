@@ -7,8 +7,8 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * List Field
  *
- * @property string $name The name of the field
- * @property string $value The value of the field
+ * @property ?string $name The name of the field
+ * @property ?string $value The value of the field
  *
  * @api
  */

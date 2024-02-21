@@ -5,8 +5,9 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property string $large_filename_url URL to users Large profile picture
- * @property string $thumb_filename_url URL to users Thumbnail profile picture
+ * @property ?string $large_filename_url URL to users Large profile picture
+ * @property ?string $thumb_filename_url URL to users Thumbnail profile
+ *   picture
  *
  * @api
  */

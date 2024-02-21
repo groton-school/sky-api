@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property int $id
- * @property string $name
+ * @property ?string $name
  *
  * @api
  */

@@ -5,17 +5,17 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseObject;
 
 /**
- * @property int $PatternNum
- * @property bool $Sun
- * @property bool $Mon
- * @property bool $Tue
- * @property bool $Wed
- * @property bool $Thu
- * @property bool $Fri
- * @property bool $Sat
- * @property \Blackbaud\SKY\School\Components\ScheduleSetMettingTime[]
+ * @property ?int $PatternNum
+ * @property ?bool $Sun
+ * @property ?bool $Mon
+ * @property ?bool $Tue
+ * @property ?bool $Wed
+ * @property ?bool $Thu
+ * @property ?bool $Fri
+ * @property ?bool $Sat
+ * @property ?\Blackbaud\SKY\School\Components\ScheduleSetMettingTime[]
  *   $MeetingTimeList
- * @property bool $HasAttendance
+ * @property ?bool $HasAttendance
  *
  * @api
  */

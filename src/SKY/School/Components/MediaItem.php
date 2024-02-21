@@ -7,10 +7,10 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * Media Model
  *
- * @property string $type
- * @property string $title
- * @property string $caption
- * @property string $url
+ * @property ?string $type
+ * @property ?string $title
+ * @property ?string $caption
+ * @property ?string $url
  *
  * @api
  */

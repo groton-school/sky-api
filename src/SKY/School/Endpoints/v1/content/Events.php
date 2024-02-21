@@ -9,26 +9,24 @@ use Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories;
  * Routing class for the namespace
  * Blackbaud\SKY\School\Endpoints\V1\Content\Events
  *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
+ *   $categories
+ *
  * @api
  */
 class Events extends BaseEndpoint
 {
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
-     *   $_categories
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
      */
-    public Categories $_categories;
+    protected array $endpoints = [
+        "categories" => "\Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories",
+    ];
 
     /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
-     *
-     * @api
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
+     *   $_categories
      */
-    public function categories(): Categories
-    {
-        if ($this->_categories === null) {
-            $this->_categories = new Categories($this->api);
-        }
-        return $this->_categories;
-    }
+    protected ?Categories $_categories = null;
 }

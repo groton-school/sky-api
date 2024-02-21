@@ -9,6 +9,9 @@ use Blackbaud\SKY\School\Components\GameUpdate;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice;
 
 /**
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
+ *   $practice
+ *
  * @api
  */
 class Schedule extends BaseEndpoint
@@ -19,10 +22,18 @@ class Schedule extends BaseEndpoint
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/schedule/{game_id}";
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
+     * @var \array<string class-string=""> $endpoints Routing
+     *   subpaths</string>
+     */
+    protected array $endpoints = [
+        "practice" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
      *   $_practice
      */
-    public Practice $_practice;
+    protected ?Practice $_practice = null;
 
     /**
      * Creates a new athletic game for the specified ```team_id```.
@@ -125,19 +136,5 @@ class Schedule extends BaseEndpoint
 
         return $this->send("delete", ["{team_id}" => $team_id,
         "{game_id}" => $game_id], []);
-    }
-
-    /**
-     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
-
-     *
-     * @api
-     */
-    public function practice(): Practice
-    {
-        if ($this->_practice === null) {
-            $this->_practice = new Practice($this->api);
-        }
-        return $this->_practice;
     }
 }

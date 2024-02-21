@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\AttendanceTypes;
 class Attendancetypes extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/attendancetypes";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/types/attendancetypes";
 
     /**
      * Returns a collection of attendance types.

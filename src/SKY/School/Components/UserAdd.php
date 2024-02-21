@@ -7,101 +7,101 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * UserAdd Model
  *
- * @property string $affiliation The affiliation of a user
- * @property string $birth_place The birthplace of the user
- * @property string $boarding_or_day The boarding or day status. Accepted
+ * @property ?string $affiliation The affiliation of a user
+ * @property ?string $birth_place The birthplace of the user
+ * @property ?string $boarding_or_day The boarding or day status. Accepted
  *   values: boarding, day, "B" and "D"
- * @property string $cc_email The cc email address of a user
- * @property string $citizenship The descriptor or ID of the citizenship.
+ * @property ?string $cc_email The cc email address of a user
+ * @property ?string $citizenship The descriptor or ID of the citizenship.
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
- * @property string $custom_field_eight A custom field on the user profile
+ * @property ?string $custom_field_eight A custom field on the user profile
  *   (eight of ten)
- * @property string $custom_field_five A custom field on the user profile
+ * @property ?string $custom_field_five A custom field on the user profile
  *   (five of ten)
- * @property string $custom_field_four A custom field on the user profile
+ * @property ?string $custom_field_four A custom field on the user profile
  *   (four of ten)
- * @property string $custom_field_nine A custom field on the user profile
+ * @property ?string $custom_field_nine A custom field on the user profile
  *   (nine of ten)
- * @property string $custom_field_one A custom field on the user profile (one
+ * @property ?string $custom_field_one A custom field on the user profile (one
  *   of ten)
- * @property string $custom_field_seven A custom field on the user profile
+ * @property ?string $custom_field_seven A custom field on the user profile
  *   (seven of ten)
- * @property string $custom_field_six A custom field on the user profile (six
+ * @property ?string $custom_field_six A custom field on the user profile (six
  *   of ten)
- * @property string $custom_field_ten A custom field on the user profile (ten
+ * @property ?string $custom_field_ten A custom field on the user profile (ten
  *   of ten)
- * @property string $custom_field_three A custom field on the user profile
+ * @property ?string $custom_field_three A custom field on the user profile
  *   (three of ten)
- * @property string $custom_field_two A custom field on the user profile (two
+ * @property ?string $custom_field_two A custom field on the user profile (two
  *   of ten)
  * @property bool $deceased Set to true if the user is deceased. Allowed
  *   value: true, false. Defaults to false.
- * @property string $deceased_date The deceased date of the user. Use ISO-8601
- *   date format: 2022-04-08.
+ * @property ?string $deceased_date The deceased date of the user. Use
+ *   ISO-8601 date format: 2022-04-08.
  * @property string $dob The birthday of a user
- * @property string $email The email address of a user
+ * @property ?string $email The email address of a user
  * @property bool $email_active Set to true if email is usable. Allowed value:
  *   true, false. Defaults to true.
- * @property string $ethnicity The descriptor or ID of the ethnicity.
+ * @property ?string $ethnicity The descriptor or ID of the ethnicity.
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
- * @property string $first_name The first name of a user
- * @property string $gender The gender of a user
- * @property string $greeting The greeting of a user
- * @property \Blackbaud\SKY\School\Components\HomeLanguageAdd[]
+ * @property ?string $first_name The first name of a user
+ * @property ?string $gender The gender of a user
+ * @property ?string $greeting The greeting of a user
+ * @property ?\Blackbaud\SKY\School\Components\HomeLanguageAdd[]
  *   $home_languages A list of languages the user speaks at home. Each entry is
  *   the description or ID of the language. Descriptors are not case sensitive,
  *   but otherwise must match the table value exactly. These values are returned
  *   by GET Types table values.
- * @property string $host_id The HostId of a user
- * @property string $international Whether the user is an international user.
+ * @property ?string $host_id The HostId of a user
+ * @property ?string $international Whether the user is an international user.
  *   This will return: Yes, No, or No answer.
- * @property bool $is_abroad Set to true if user is currently abroad. Allowed
+ * @property ?bool $is_abroad Set to true if user is currently abroad. Allowed
  *   value: true, false. Defaults to false.
- * @property bool $is_international Set to true if user is international (will
- *   be deprecated 02/15/2024)
- * @property bool $is_latino_hispanic Set to true if  user is latino or
+ * @property ?bool $is_international Set to true if user is international
+ *   (will be deprecated 02/15/2024)
+ * @property ?bool $is_latino_hispanic Set to true if  user is latino or
  *   hispanic (will be deprecated 02/15/2024).
- * @property string $latino_hispanic Whether the user is Latino/Hispanic.
+ * @property ?string $latino_hispanic Whether the user is Latino/Hispanic.
  *   Allowed values: Yes, No, or No answer.
  * @property bool $is_responsible_signer Set to true if user is a responsible
  *   signer. Allowed value: true, false. Defaults to false.
  * @property \Blackbaud\SKY\School\Components\UserInState $in_state An object
  *   for in-state resident information
- * @property string $last_name The last name of a user
- * @property string $living_status The living status of a user. Valid values
+ * @property ?string $last_name The last name of a user
+ * @property ?string $living_status The living status of a user. Valid values
  *   are Single, Married, Separated, Divorced, Widowed, Partner.
  * @property \Blackbaud\SKY\School\Components\UserLocker $locker An object for
  *   locker information
  * @property bool $lost Set to true if user is set as lost
- * @property string $maiden_name The maiden name of a user
+ * @property ?string $maiden_name The maiden name of a user
  * @property \Blackbaud\SKY\School\Components\UserMailbox $mailbox An object
  *   for mailbox information
- * @property string $middle_name The middle name of a user
+ * @property ?string $middle_name The middle name of a user
  * @property \Blackbaud\SKY\School\Components\UserPassport $passport An object
  *   for passport information
- * @property string $primary_language The descriptor or ID of the language.
+ * @property ?string $primary_language The descriptor or ID of the language.
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
- * @property string $preferred_name The preferred name of the user
- * @property string $prefix The prefix of a user
- * @property string $pronouns The descriptor or ID of the pronouns.
+ * @property ?string $preferred_name The preferred name of the user
+ * @property ?string $prefix The prefix of a user
+ * @property ?string $pronouns The descriptor or ID of the pronouns.
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
- * @property \Blackbaud\SKY\School\Components\UserAddRace[] $races A list of
+ * @property ?\Blackbaud\SKY\School\Components\UserAddRace[] $races A list of
  *   races. Each entry is the description or ID of the race. Descriptions are
  *   not case sensitive, but otherwise must match the table value exactly. These
  *   values are returned by GET Types table values.
- * @property string $religion The descriptor or ID of the religion.
+ * @property ?string $religion The descriptor or ID of the religion.
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
- * @property string $school_program The descriptor or ID of the school
+ * @property ?string $school_program The descriptor or ID of the school
  *   program. Descriptors are not case sensitive, but otherwise must match the
  *   table value exactly. These values are returned by GET Types table values.
- * @property string $state_id The state assigned ID of the user
- * @property string $student_id The school assigned ID of the user
- * @property string $suffix The suffix of a user
+ * @property ?string $state_id The state assigned ID of the user
+ * @property ?string $student_id The school assigned ID of the user
+ * @property ?string $suffix The suffix of a user
  * @property \Blackbaud\SKY\School\Components\UserVisaAdd $visa An object for
  *   visa information
  *

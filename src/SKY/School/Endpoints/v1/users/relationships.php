@@ -13,9 +13,9 @@ use Blackbaud\SKY\School\Components\RelationshipReadCollection;
 class Relationships extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/relationships";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/relationships";
 
     /**
      * Returns a collection of a relationships for the specified

@@ -6,10 +6,10 @@ use Battis\OpenAPI\Client\BaseObject;
 
 /**
  * @property int $id ID of the coach
- * @property string $first_name Coach's first name
- * @property string $last_name Coach's last name
- * @property string $title Coach's title
- * @property string $preferred_name Preferred Name
+ * @property ?string $first_name Coach's first name
+ * @property ?string $last_name Coach's last name
+ * @property ?string $title Coach's title
+ * @property ?string $preferred_name Preferred Name
  *
  * @api
  */

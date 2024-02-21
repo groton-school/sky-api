@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\TermCollection;
 class Terms extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/terms";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/terms";
 
     /**
      * Returns a collection of core school terms.

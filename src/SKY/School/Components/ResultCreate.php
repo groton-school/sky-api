@@ -12,7 +12,7 @@ use Battis\OpenAPI\Client\BaseObject;
  * Set to 1 for Place/Points scoring results
  * @property bool $send_notification Toggle to true to send a notification of
  *   this event change
- * @property \Blackbaud\SKY\School\Components\ResultCreateOpponent[]
+ * @property ?\Blackbaud\SKY\School\Components\ResultCreateOpponent[]
  *   $opponents List of opponents to record results for
  *
  * @api

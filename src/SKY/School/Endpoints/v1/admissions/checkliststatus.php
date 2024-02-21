@@ -11,9 +11,9 @@ use Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection;
 class Checkliststatus extends BaseEndpoint
 {
     /**
-     * @var string $url
+     * @var string $url Endpoint URL pattern
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checkliststatus";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checkliststatus";
 
     /**
      * Returns a collection of admissions checklist statuses.

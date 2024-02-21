@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseObject;
 /**
  * HomeLanguageAdd Model
  *
- * @property string $language The ID or description of the language to be
+ * @property ?string $language The ID or description of the language to be
  *   added to the user
  *
  * @api
