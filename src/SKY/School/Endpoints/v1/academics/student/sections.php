@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics\student;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Student;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AcademicsSectionStudentCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\AcademicsSectionStudentCollection;
 
 /**
  * @api
  */
-class sections extends BaseEndpoint
+class Sections extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/student/{student_id}/sections";
 
@@ -33,16 +34,21 @@ class sections extends BaseEndpoint
      *
      * - Faculty
      *
-     * @param array{student_id: int} $params An associative array
-     *     - student_id: Format - int32. The ID of the student to view
+     * @param int $student_id Format - int32. The ID of the student to view
      *   sections and grades for.
      *
-     * @return \Blackbaud\SKY\School\Objects\AcademicsSectionStudentCollection
+     * @return \Blackbaud\SKY\School\Components\AcademicsSectionStudentCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByStudent(array $params)
+    public function getByStudent(int $student_id): AcademicsSectionStudentCollection
     {
-        return new AcademicsSectionStudentCollection($this->send("get", ["{student_id}" => $params["student_id"]], []));
+        assert($student_id !== null, new ArgumentException("Parameter `student_id` is required"));
+
+        return new AcademicsSectionStudentCollection($this->send("get", ["{student_id}" => $student_id], []));
     }
 }

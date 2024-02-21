@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users\emergencycontacts;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\EmergencyContactNonUserCreate;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\EmergencyContactNonUserCreate;
 
 /**
  * @api
  */
-class nonuser extends BaseEndpoint
+class Nonuser extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts/nonuser";
 
@@ -23,17 +24,22 @@ class nonuser extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The ID of the user.
-     * @param Blackbaud\SKY\School\Objects\EmergencyContactNonUserCreate
+     * @param int $user_id Format - int32. The ID of the user.
+     * @param \Blackbaud\SKY\School\Components\EmergencyContactNonUserCreate
      *   $requestBody
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByUser(array $params, EmergencyContactNonUserCreate $requestBody)
+    public function postByUser(int $user_id, EmergencyContactNonUserCreate $requestBody): void
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
     }
 }

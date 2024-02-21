@@ -1,16 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentImmunizationRead;
 
 /**
  * @api
  */
-class immunizations extends BaseEndpoint
+class Immunizations extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/immunizations";
 
@@ -26,18 +28,23 @@ class immunizations extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{user_id: int, include?: string} $params An associative
-     *   array
-     *     - user_id: Format - int32. The ID of the student
-     *     - include: (Optional) Show all required immunizations or just those
-     *   completed or missing. Allowed values: all, completed, missing.
+     * @param int $user_id Format - int32. The ID of the student
+     * @param ?string $include (Optional) Show all required immunizations or
+     *   just those completed or missing. Allowed values: all, completed,
+     *   missing.
      *
-     * @return \Blackbaud\SKY\School\Objects\StudentImmunizationRead[]
+     * @return \Blackbaud\SKY\School\Components\StudentImmunizationRead[]
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByUser(array $params)
+    public function getByUser(int $user_id, ?string $include = null): array
     {
-        return $this->send("get", ["{user_id}" => $params["user_id"]], ["include" => $params["include"]]);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+
+        return array_map(fn($a) => new StudentImmunizationRead($a), $this->send("get", ["{user_id}" => $user_id], ["include" => $include]));
     }
 }

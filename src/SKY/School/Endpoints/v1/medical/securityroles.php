@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\SecurityRoleCollection;
+use Blackbaud\SKY\School\Components\SecurityRoleCollection;
 
 /**
  * @api
  */
-class securityroles extends BaseEndpoint
+class Securityroles extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/securityroles";
 
@@ -23,11 +23,11 @@ class securityroles extends BaseEndpoint
      * IDs returned here. ***This endpoint is in BETA. It may be removed or
      * replaced with a 90 day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Objects\SecurityRoleCollection
+     * @return \Blackbaud\SKY\School\Components\SecurityRoleCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): SecurityRoleCollection
     {
         return new SecurityRoleCollection($this->send("get", [], []));
     }

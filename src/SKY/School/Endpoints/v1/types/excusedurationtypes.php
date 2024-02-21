@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ExcuseDurationTypes;
+use Blackbaud\SKY\School\Components\ExcuseDurationTypes;
 
 /**
  * @api
  */
-class excusedurationtypes extends BaseEndpoint
+class Excusedurationtypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedurationtypes";
 
@@ -22,11 +22,11 @@ class excusedurationtypes extends BaseEndpoint
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Objects\ExcuseDurationTypes
+     * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypes Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): ExcuseDurationTypes
     {
         return new ExcuseDurationTypes($this->send("get", [], []));
     }

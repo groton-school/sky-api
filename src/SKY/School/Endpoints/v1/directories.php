@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\DirectoryModelCollection;
-use Blackbaud\SKY\School\Objects\DirectoryResultCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\DirectoryModelCollection;
+use Blackbaud\SKY\School\Components\DirectoryResultCollection;
 
 /**
  * @api
  */
-class directories extends BaseEndpoint
+class Directories extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/directories/{directory_id}";
 
@@ -27,11 +28,12 @@ class directories extends BaseEndpoint
      *
      * - Student
      *
-     * @return \Blackbaud\SKY\School\Objects\DirectoryModelCollection
+     * @return \Blackbaud\SKY\School\Components\DirectoryModelCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): DirectoryModelCollection
     {
         return new DirectoryModelCollection($this->send("get", [], []));
     }
@@ -56,19 +58,23 @@ class directories extends BaseEndpoint
      *
      * - Student
      *
-     * @param array{directory_id: int, search?: string, search_all?: bool}
-     *   $params An associative array
-     *     - directory_id: Format - int32.
-     *     - search: (Optional)
-     *     - search_all: (Optional)
+     * @param int $directory_id Format - int32.
+     * @param ?string $search (Optional)
+     * @param ?bool $search_all (Optional)
      *
-     * @return \Blackbaud\SKY\School\Objects\DirectoryResultCollection
+     * @return \Blackbaud\SKY\School\Components\DirectoryResultCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function get(array $params)
+    public function get(int $directory_id, ?string $search = null, ?bool $search_all = null): DirectoryResultCollection
     {
-        return new DirectoryResultCollection($this->send("get", ["{directory_id}" => $params["directory_id"]], ["search" => $params["search"],
-        "search_all" => $params["search_all"]]));
+        assert($directory_id !== null, new ArgumentException("Parameter `directory_id` is required"));
+
+        return new DirectoryResultCollection($this->send("get", ["{directory_id}" => $directory_id], ["search" => $search,
+        "search_all" => $search_all]));
     }
 }

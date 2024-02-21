@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\OpponentFlyweightCollection;
-use Blackbaud\SKY\School\Objects\OpponentUpdateModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\OpponentFlyweightCollection;
+use Blackbaud\SKY\School\Components\OpponentUpdateModel;
 
 /**
  * @api
  */
-class opponents extends BaseEndpoint
+class Opponents extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
 
@@ -32,11 +33,12 @@ class opponents extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Objects\OpponentFlyweightCollection
+     * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): OpponentFlyweightCollection
     {
         return new OpponentFlyweightCollection($this->send("get", [], []));
     }
@@ -59,15 +61,20 @@ class opponents extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param Blackbaud\SKY\School\Objects\OpponentUpdateModel $requestBody
-     *   The opponent to be created
+     * @param \Blackbaud\SKY\School\Components\OpponentUpdateModel
+     *   $requestBody The opponent to be created
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(OpponentUpdateModel $requestBody)
+    public function post(OpponentUpdateModel $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

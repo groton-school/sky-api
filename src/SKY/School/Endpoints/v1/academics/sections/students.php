@@ -1,19 +1,20 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics\sections;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Sections;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\BulkEnrollment;
-use Blackbaud\SKY\School\Objects\PostResponse;
-use Blackbaud\SKY\School\Objects\StudentCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\BulkEnrollment;
+use Blackbaud\SKY\School\Components\PostResponse;
+use Blackbaud\SKY\School\Components\StudentCollection;
 
 /**
  * @api
  */
-class students extends BaseEndpoint
+class Students extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/students";
 
@@ -27,18 +28,22 @@ class students extends BaseEndpoint
      *
      * - Teacher
      *
-     * @param array{section_id: int} $params An associative array -
-     *   section_id: Format - int32. The ID of the section, which can be found
-     *   using [Section
+     * @param int $section_id Format - int32. The ID of the section, which can
+     *   be found using [Section
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet).
      *
-     * @return \Blackbaud\SKY\School\Objects\StudentCollection
+     * @return \Blackbaud\SKY\School\Components\StudentCollection Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getBySection(array $params)
+    public function getBySection(int $section_id): StudentCollection
     {
-        return new StudentCollection($this->send("get", ["{section_id}" => $params["section_id"]], []));
+        assert($section_id !== null, new ArgumentException("Parameter `section_id` is required"));
+
+        return new StudentCollection($this->send("get", ["{section_id}" => $section_id], []));
     }
 
     /**
@@ -54,16 +59,21 @@ class students extends BaseEndpoint
      *
      * - Schedule Manager
      *
-     * @param Blackbaud\SKY\School\Objects\BulkEnrollment $requestBody Defines
-     *   which users (students and/or teachers) should be added to which
+     * @param \Blackbaud\SKY\School\Components\BulkEnrollment $requestBody
+     *   Defines which users (students and/or teachers) should be added to which
      *   offerings (via ```section_id``` and duration ```id```)
      *
-     * @return \Blackbaud\SKY\School\Objects\PostResponse
+     * @return \Blackbaud\SKY\School\Components\PostResponse Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(BulkEnrollment $requestBody)
+    public function post(BulkEnrollment $requestBody): PostResponse
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return new PostResponse($this->send("post", [], [], $requestBody));
     }
 }

@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\RelationshipCreate;
-use Blackbaud\SKY\School\Objects\RelationshipReadCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\RelationshipCreate;
+use Blackbaud\SKY\School\Components\RelationshipReadCollection;
 
 /**
  * @api
  */
-class relationships extends BaseEndpoint
+class Relationships extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/relationships";
 
@@ -29,16 +30,21 @@ class relationships extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The ID of the user.
+     * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Objects\RelationshipReadCollection
+     * @return \Blackbaud\SKY\School\Components\RelationshipReadCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByUser(array $params)
+    public function getByUser(int $user_id): RelationshipReadCollection
     {
-        return new RelationshipReadCollection($this->send("get", ["{user_id}" => $params["user_id"]], []));
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+
+        return new RelationshipReadCollection($this->send("get", ["{user_id}" => $user_id], []));
     }
 
     /**
@@ -57,18 +63,23 @@ class relationships extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The ID of the user.
-     * @param Blackbaud\SKY\School\Objects\RelationshipCreate $requestBody
+     * @param int $user_id Format - int32. The ID of the user.
+     * @param \Blackbaud\SKY\School\Components\RelationshipCreate $requestBody
      *   Defines the relationship to be created.
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByUser(array $params, RelationshipCreate $requestBody)
+    public function postByUser(int $user_id, RelationshipCreate $requestBody): void
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
     }
 
     /**
@@ -87,22 +98,27 @@ class relationships extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @param array{user_id: int, left_user: int, relationship_type: string}
-     *   $params An associative array
-     *     - user_id: Format - int32. The ID of the user for whom you are
+     * @param int $user_id Format - int32. The ID of the user for whom you are
      *   deleting the relationship.
-     *     - left_user: Format - int32. ID of the other user in the
+     * @param int $left_user Format - int32. ID of the other user in the
      *   relationship.
-     *     - relationship_type: Defines the relationship between left_user and
-     *   this user.
+     * @param string $relationship_type Defines the relationship between
+     *   left_user and this user.
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function deleteByUser(array $params)
+    public function deleteByUser(int $user_id, int $left_user, string $relationship_type): void
     {
-        return $this->send("delete", ["{user_id}" => $params["user_id"]], ["left_user" => $params["left_user"],
-        "relationship_type" => $params["relationship_type"]]);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($left_user !== null, new ArgumentException("Parameter `left_user` is required"));
+        assert($relationship_type !== null, new ArgumentException("Parameter `relationship_type` is required"));
+
+        return $this->send("delete", ["{user_id}" => $user_id], ["left_user" => $left_user,
+        "relationship_type" => $relationship_type]);
     }
 }

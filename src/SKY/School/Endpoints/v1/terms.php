@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\TermCollection;
+use Blackbaud\SKY\School\Components\TermCollection;
 
 /**
  * @api
  */
-class terms extends BaseEndpoint
+class Terms extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/terms";
 
@@ -29,20 +29,18 @@ class terms extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @param array{school_year?: string, offering_type?: int} $params An
-     *   associative array
-     *     - school_year: (Optional) The school year to get terms for.
-     *   Defaults to the current school year.
-     *     - offering_type: (Optional) Format - int32. The offering type to
-     *   filter terms by.
+     * @param ?string $school_year (Optional) The school year to get terms
+     *   for. Defaults to the current school year.
+     * @param ?int $offering_type (Optional) Format - int32. The offering type
+     *   to filter terms by.
      *
-     * @return \Blackbaud\SKY\School\Objects\TermCollection
+     * @return \Blackbaud\SKY\School\Components\TermCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $school_year = null, ?int $offering_type = null): TermCollection
     {
-        return new TermCollection($this->send("get", [], ["school_year" => $params["school_year"],
-        "offering_type" => $params["offering_type"]]));
+        return new TermCollection($this->send("get", [], ["school_year" => $school_year,
+        "offering_type" => $offering_type]));
     }
 }

@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\Highlight;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\Highlight;
 
 /**
  * @api
  */
-class highlights extends BaseEndpoint
+class Highlights extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/highlights/{highlight_id}";
 
@@ -37,15 +38,20 @@ class highlights extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{highlight_id: int} $params An associative array
-     *     - highlight_id: Format - int32. ID of the highlight to be returned.
+     * @param int $highlight_id Format - int32. ID of the highlight to be
+     *   returned.
      *
-     * @return \Blackbaud\SKY\School\Objects\Highlight
+     * @return \Blackbaud\SKY\School\Components\Highlight Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function get(array $params)
+    public function get(int $highlight_id): Highlight
     {
-        return new Highlight($this->send("get", ["{highlight_id}" => $params["highlight_id"]], []));
+        assert($highlight_id !== null, new ArgumentException("Parameter `highlight_id` is required"));
+
+        return new Highlight($this->send("get", ["{highlight_id}" => $highlight_id], []));
     }
 }

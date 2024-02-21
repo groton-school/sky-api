@@ -1,32 +1,38 @@
 <?php
 
-namespace Blackbaud\SKY\OneRoster\Endpoints\teachers;
+namespace Blackbaud\SKY\OneRoster\Endpoints\Teachers;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\OneRoster\Objects\ClassOutputModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\OneRoster\Components\ClassOutputModel;
 
 /**
  * @api
  */
-class classes extends BaseEndpoint
+class Classes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/teachers/{teacher_id}/classes";
 
     /**
      * Returns a collection of classes for the specified `teacher_id`.
      *
-     * @param array{teacher_id: string} $params An associative array
-     *     - teacher_id: sourcedId for the teacher
+     * @param string $teacher_id sourcedId for the teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\ClassOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModel OK - It
+     *   was possible to read the resource.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByTeacher(array $params)
+    public function getByTeacher(string $teacher_id): ClassOutputModel
     {
-        return new ClassOutputModel($this->send("get", ["{teacher_id}" => $params["teacher_id"]], []));
+        assert($teacher_id !== null, new ArgumentException("Parameter `teacher_id` is required"));
+
+        return new ClassOutputModel($this->send("get", ["{teacher_id}" => $teacher_id], []));
     }
 }

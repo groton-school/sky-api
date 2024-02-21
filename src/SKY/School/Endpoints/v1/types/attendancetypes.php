@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AttendanceTypes;
+use Blackbaud\SKY\School\Components\AttendanceTypes;
 
 /**
  * @api
  */
-class attendancetypes extends BaseEndpoint
+class Attendancetypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/attendancetypes";
 
@@ -22,11 +22,11 @@ class attendancetypes extends BaseEndpoint
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Objects\AttendanceTypes
+     * @return \Blackbaud\SKY\School\Components\AttendanceTypes Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AttendanceTypes
     {
         return new AttendanceTypes($this->send("get", [], []));
     }

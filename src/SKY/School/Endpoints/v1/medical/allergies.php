@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\StudentAllergyUpdate;
-use Blackbaud\SKY\School\Objects\StudentMedicalAllergy;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentAllergyUpdate;
+use Blackbaud\SKY\School\Components\StudentMedicalAllergy;
 
 /**
  * @api
  */
-class allergies extends BaseEndpoint
+class Allergies extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/allergies/{allergy_id}";
 
@@ -26,16 +27,20 @@ class allergies extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{allergy_id: int} $params An associative array
-     *     - allergy_id: Format - int32. The ID of the student's allergy.
+     * @param int $allergy_id Format - int32. The ID of the student's allergy.
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function delete(array $params)
+    public function delete(int $allergy_id): int
     {
-        return $this->send("delete", ["{allergy_id}" => $params["allergy_id"]], []);
+        assert($allergy_id !== null, new ArgumentException("Parameter `allergy_id` is required"));
+
+        return $this->send("delete", ["{allergy_id}" => $allergy_id], []);
     }
 
     /**
@@ -48,18 +53,23 @@ class allergies extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{allergy_id: int} $params An associative array
-     *     - allergy_id: Format - int32. The ID of the student's allergy.
-     * @param Blackbaud\SKY\School\Objects\StudentAllergyUpdate $requestBody
-     *   The allergy changes
+     * @param int $allergy_id Format - int32. The ID of the student's allergy.
+     * @param \Blackbaud\SKY\School\Components\StudentAllergyUpdate
+     *   $requestBody The allergy changes
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function patch(array $params, StudentAllergyUpdate $requestBody)
+    public function patch(int $allergy_id, StudentAllergyUpdate $requestBody): int
     {
-        return $this->send("patch", ["{allergy_id}" => $params["allergy_id"]], [], $requestBody);
+        assert($allergy_id !== null, new ArgumentException("Parameter `allergy_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", ["{allergy_id}" => $allergy_id], [], $requestBody);
     }
 
     /**
@@ -74,15 +84,20 @@ class allergies extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param Blackbaud\SKY\School\Objects\StudentMedicalAllergy $requestBody
-     *   The medical allergy to be created for student
+     * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergy
+     *   $requestBody The medical allergy to be created for student
      *
-     * @return \int
+     * @return int ID of the student medical allergy just created.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(StudentMedicalAllergy $requestBody)
+    public function post(StudentMedicalAllergy $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

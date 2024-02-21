@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\testscores;
+namespace Blackbaud\SKY\School\Endpoints\V1\Testscores;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\TestTypeCollection;
+use Blackbaud\SKY\School\Components\TestTypeCollection;
 
 /**
  * @api
  */
-class testtypes extends BaseEndpoint
+class Testtypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/testscores/testtypes";
 
@@ -24,11 +24,11 @@ class testtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\TestTypeCollection
+     * @return \Blackbaud\SKY\School\Components\TestTypeCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): TestTypeCollection
     {
         return new TestTypeCollection($this->send("get", [], []));
     }

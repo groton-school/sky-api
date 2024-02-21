@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\YearCollection;
+use Blackbaud\SKY\School\Components\YearCollection;
 
 /**
  * @api
  */
-class years extends BaseEndpoint
+class Years extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/years";
 
@@ -29,11 +29,11 @@ class years extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\YearCollection
+     * @return \Blackbaud\SKY\School\Components\YearCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): YearCollection
     {
         return new YearCollection($this->send("get", [], []));
     }

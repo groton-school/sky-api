@@ -9,6 +9,16 @@
       "email": "sbattis@groton.org"
     }
   ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../openapi-client-generator"
+    },
+    {
+      "type": "path",
+      "url": "../php-generator"
+    }
+  ],
   "require": {
     "groton-school/oauth2-blackbaudsky": "^0.2.3",
     "psr/simple-cache": "^3.0"
@@ -23,6 +33,7 @@
   },
   "require-dev": {
     "battis/openapi-client-generator": "dev-main",
+    "battis/php-generator": "dev-main",
     "monolog/monolog": "^3.0",
     "pahanini/monolog-cli-formatter": "^2.0",
     "php-di/php-di": "^7.0",

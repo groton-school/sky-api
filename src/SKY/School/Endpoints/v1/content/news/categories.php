@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\content\news;
+namespace Blackbaud\SKY\School\Endpoints\V1\Content\News;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\NewsCategoryCollection;
+use Blackbaud\SKY\School\Components\NewsCategoryCollection;
 
 /**
  * @api
  */
-class categories extends BaseEndpoint
+class Categories extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/news/categories";
 
@@ -25,11 +25,11 @@ class categories extends BaseEndpoint
      *
      * - Student
      *
-     * @return \Blackbaud\SKY\School\Objects\NewsCategoryCollection
+     * @return \Blackbaud\SKY\School\Components\NewsCategoryCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): NewsCategoryCollection
     {
         return new NewsCategoryCollection($this->send("get", [], []));
     }

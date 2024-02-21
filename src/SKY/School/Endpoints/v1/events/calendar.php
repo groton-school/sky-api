@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\events;
+namespace Blackbaud\SKY\School\Endpoints\V1\Events;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\CalendarItemCollection;
+use Blackbaud\SKY\School\Components\CalendarItemCollection;
 
 /**
  * @api
  */
-class calendar extends BaseEndpoint
+class Calendar extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/events/calendar";
 
@@ -28,20 +28,18 @@ class calendar extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{start_date?: string, end_date?: string} $params An
-     *   associative array
-     *     - start_date: (Optional) Format - date-time (as date-time in
-     *   RFC3339).
-     *     - end_date: (Optional) Format - date-time (as date-time in
+     * @param ?string $start_date (Optional) Format - date-time (as date-time
+     *   in RFC3339).
+     * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339).
      *
-     * @return \Blackbaud\SKY\School\Objects\CalendarItemCollection
+     * @return \Blackbaud\SKY\School\Components\CalendarItemCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $start_date = null, ?string $end_date = null): CalendarItemCollection
     {
-        return new CalendarItemCollection($this->send("get", [], ["start_date" => $params["start_date"],
-        "end_date" => $params["end_date"]]));
+        return new CalendarItemCollection($this->send("get", [], ["start_date" => $start_date,
+        "end_date" => $end_date]));
     }
 }

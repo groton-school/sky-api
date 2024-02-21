@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\StudentConditionUpdate;
-use Blackbaud\SKY\School\Objects\StudentMedicalCondition;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentConditionUpdate;
+use Blackbaud\SKY\School\Components\StudentMedicalCondition;
 
 /**
  * @api
  */
-class conditions extends BaseEndpoint
+class Conditions extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/conditions/{condition_id}";
 
@@ -26,16 +27,21 @@ class conditions extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{condition_id: int} $params An associative array
-     *     - condition_id: Format - int32. The ID of the student's condition.
+     * @param int $condition_id Format - int32. The ID of the student's
+     *   condition.
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function delete(array $params)
+    public function delete(int $condition_id): int
     {
-        return $this->send("delete", ["{condition_id}" => $params["condition_id"]], []);
+        assert($condition_id !== null, new ArgumentException("Parameter `condition_id` is required"));
+
+        return $this->send("delete", ["{condition_id}" => $condition_id], []);
     }
 
     /**
@@ -48,18 +54,24 @@ class conditions extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{condition_id: int} $params An associative array
-     *     - condition_id: Format - int32. The ID of the student's condition.
-     * @param Blackbaud\SKY\School\Objects\StudentConditionUpdate $requestBody
-     *   The condition changes
+     * @param int $condition_id Format - int32. The ID of the student's
+     *   condition.
+     * @param \Blackbaud\SKY\School\Components\StudentConditionUpdate
+     *   $requestBody The condition changes
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function patch(array $params, StudentConditionUpdate $requestBody)
+    public function patch(int $condition_id, StudentConditionUpdate $requestBody): int
     {
-        return $this->send("patch", ["{condition_id}" => $params["condition_id"]], [], $requestBody);
+        assert($condition_id !== null, new ArgumentException("Parameter `condition_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", ["{condition_id}" => $condition_id], [], $requestBody);
     }
 
     /**
@@ -74,15 +86,20 @@ class conditions extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param Blackbaud\SKY\School\Objects\StudentMedicalCondition
+     * @param \Blackbaud\SKY\School\Components\StudentMedicalCondition
      *   $requestBody The medical condition to be created for student
      *
-     * @return \int
+     * @return int ID of the student medical condition just created.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(StudentMedicalCondition $requestBody)
+    public function post(StudentMedicalCondition $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

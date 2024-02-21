@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\content\events;
+namespace Blackbaud\SKY\School\Endpoints\V1\Content\Events;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\EventsCategoryCollection;
+use Blackbaud\SKY\School\Components\EventsCategoryCollection;
 
 /**
  * @api
  */
-class categories extends BaseEndpoint
+class Categories extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/events/categories";
 
@@ -28,11 +28,12 @@ class categories extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Objects\EventsCategoryCollection
+     * @return \Blackbaud\SKY\School\Components\EventsCategoryCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): EventsCategoryCollection
     {
         return new EventsCategoryCollection($this->send("get", [], []));
     }

@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\TableValueCollection;
+use Blackbaud\SKY\School\Components\TableValueCollection;
 
 /**
  * @api
  */
-class tablevalues extends BaseEndpoint
+class Tablevalues extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/tablevalues";
 
@@ -25,19 +25,23 @@ class tablevalues extends BaseEndpoint
      * no results will be returned. ***This endpoint is in BETA. It may be
      * removed or replaced with a 90 day deprecation period.***
      *
-     * @param array{tableId?: int, tableName?: string, includeInactive?: bool}
-     *   $params An associative array - tableId: (Optional) Format - int32. The
-     *   ID of the table type. The tableId is returned by [Types table
-     *   types](https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet) or from the settings area for the table within Blackbaud Education Management. - tableName: (Optional) The name of the table type. The name is returned by [Types table types](https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet) or from the settings area for the table within Blackbaud Education Management. - includeInactive: (Optional) If set to true, returns inactive items for the table. Defaults to false.
+     * @param ?int $tableId (Optional) Format - int32. The ID of the table
+     *   type. The tableId is returned by [Types table
+     *   types](https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet) or from the settings area for the table within Blackbaud Education Management.
+     * @param ?string $tableName (Optional) The name of the table type. The
+     *   name is returned by [Types table
+     *   types](https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet) or from the settings area for the table within Blackbaud Education Management.
+     * @param ?bool $includeInactive (Optional) If set to true, returns
+     *   inactive items for the table. Defaults to false.
      *
-     * @return \Blackbaud\SKY\School\Objects\TableValueCollection
+     * @return \Blackbaud\SKY\School\Components\TableValueCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $tableId = null, ?string $tableName = null, ?bool $includeInactive = null): TableValueCollection
     {
-        return new TableValueCollection($this->send("get", [], ["tableId" => $params["tableId"],
-        "tableName" => $params["tableName"],
-        "includeInactive" => $params["includeInactive"]]));
+        return new TableValueCollection($this->send("get", [], ["tableId" => $tableId,
+        "tableName" => $tableName,
+        "includeInactive" => $includeInactive]));
     }
 }

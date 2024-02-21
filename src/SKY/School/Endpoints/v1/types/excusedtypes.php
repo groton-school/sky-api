@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ExcusedTypesCollection;
+use Blackbaud\SKY\School\Components\ExcusedTypesCollection;
 
 /**
  * @api
  */
-class excusedtypes extends BaseEndpoint
+class Excusedtypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedtypes";
 
@@ -24,11 +24,11 @@ class excusedtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\ExcusedTypesCollection
+     * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): ExcusedTypesCollection
     {
         return new ExcusedTypesCollection($this->send("get", [], []));
     }

@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users\addresses;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users\Addresses;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AddressShare;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\AddressShare;
 
 /**
  * @api
  */
-class share extends BaseEndpoint
+class Share extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/addresses/share";
 
@@ -32,18 +33,23 @@ class share extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The Id of the user the existing address
-     *   should be shared.
-     * @param Blackbaud\SKY\School\Objects\AddressShare $requestBody The
+     * @param int $user_id Format - int32. The Id of the user the existing
+     *   address should be shared.
+     * @param \Blackbaud\SKY\School\Components\AddressShare $requestBody The
      *   details about the address that should be shared with the user.
      *
-     * @return \int
+     * @return int ID of the address just shared.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByUser(array $params, AddressShare $requestBody)
+    public function postByUser(int $user_id, AddressShare $requestBody): int
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
     }
 }

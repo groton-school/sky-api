@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AdminCustomFieldsCollection;
+use Blackbaud\SKY\School\Components\AdminCustomFieldsCollection;
 
 /**
  * @api
  */
-class customfields extends BaseEndpoint
+class Customfields extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/customfields";
 
@@ -23,11 +23,12 @@ class customfields extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Objects\AdminCustomFieldsCollection
+     * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AdminCustomFieldsCollection
     {
         return new AdminCustomFieldsCollection($this->send("get", [], []));
     }

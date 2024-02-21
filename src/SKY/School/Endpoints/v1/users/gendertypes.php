@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\GenderTypeCollection;
+use Blackbaud\SKY\School\Components\GenderTypeCollection;
 
 /**
  * @api
  */
-class gendertypes extends BaseEndpoint
+class Gendertypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/gendertypes";
 
@@ -25,11 +25,11 @@ class gendertypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\GenderTypeCollection
+     * @return \Blackbaud\SKY\School\Components\GenderTypeCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): GenderTypeCollection
     {
         return new GenderTypeCollection($this->send("get", [], []));
     }

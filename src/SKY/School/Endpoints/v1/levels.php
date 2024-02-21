@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\LevelCollection;
+use Blackbaud\SKY\School\Components\LevelCollection;
 
 /**
  * @api
  */
-class levels extends BaseEndpoint
+class Levels extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/levels";
 
@@ -25,11 +25,11 @@ class levels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\LevelCollection
+     * @return \Blackbaud\SKY\School\Components\LevelCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): LevelCollection
     {
         return new LevelCollection($this->send("get", [], []));
     }

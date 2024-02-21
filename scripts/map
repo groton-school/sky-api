@@ -4,12 +4,27 @@
 use Battis\DataUtilities\Path;
 use Battis\Loggable\Loggable;
 use Battis\OpenAPI\CLI\Map;
+use Battis\OpenAPI\Generator\Sanitize;
 use cebe\openapi\spec\OpenApi;
 use Monolog\Handler\ErrorLogHandler;
 use Monolog\Logger;
 use pahanini\Monolog\Formatter\CliFormatter;
 
 require __DIR__ . "/../vendor/autoload.php";
+
+class MySanitize extends Sanitize {
+  public static function getInstance(): Sanitize
+  {
+     if (parent::$instance === null) {
+       parent::$instance = new MySanitize();
+     } 
+     return parent::$instance;
+  }
+  public function rename(string $name): string
+  {
+    return $name . "Renamed";
+  }
+}
 
 class BlackbaudMap extends Map {
   protected function getNamespaceFromSpec(string $specPath, OpenApi $spec, string $baseNamespace): string

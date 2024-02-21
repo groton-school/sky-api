@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\admissions;
+namespace Blackbaud\SKY\School\Endpoints\V1\Admissions;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AdmissionsChecklistStatusCollection;
+use Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection;
 
 /**
  * @api
  */
-class checkliststatus extends BaseEndpoint
+class Checkliststatus extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checkliststatus";
 
@@ -22,12 +22,12 @@ class checkliststatus extends BaseEndpoint
      *
      * - Admissions Manager
      *
-     * @return \Blackbaud\SKY\School\Objects\AdmissionsChecklistStatusCollection
-
+     * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AdmissionsChecklistStatusCollection
     {
         return new AdmissionsChecklistStatusCollection($this->send("get", [], []));
     }

@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\StudentAthleticRequirementUpdate;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentAthleticRequirementUpdate;
 
 /**
  * @api
  */
-class athleticclearance extends BaseEndpoint
+class Athleticclearance extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/athleticclearance";
 
@@ -25,15 +26,20 @@ class athleticclearance extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param Blackbaud\SKY\School\Objects\StudentAthleticRequirementUpdate
+     * @param \Blackbaud\SKY\School\Components\StudentAthleticRequirementUpdate
      *   $requestBody The athletics requirements to update
      *
-     * @return \string[]
+     * @return \string[] Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(StudentAthleticRequirementUpdate $requestBody)
+    public function post(StudentAthleticRequirementUpdate $requestBody): array
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

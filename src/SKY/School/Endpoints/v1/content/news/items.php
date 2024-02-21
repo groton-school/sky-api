@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\content\news;
+namespace Blackbaud\SKY\School\Endpoints\V1\Content\News;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\NewsItemCollection;
+use Blackbaud\SKY\School\Components\NewsItemCollection;
 
 /**
  * @api
  */
-class items extends BaseEndpoint
+class Items extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/news/items";
 
@@ -25,15 +25,14 @@ class items extends BaseEndpoint
      *
      * - Student
      *
-     * @param array{categories?: string} $params An associative array
-     *     - categories: (Optional)
+     * @param ?string $categories (Optional)
      *
-     * @return \Blackbaud\SKY\School\Objects\NewsItemCollection
+     * @return \Blackbaud\SKY\School\Components\NewsItemCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $categories = null): NewsItemCollection
     {
-        return new NewsItemCollection($this->send("get", [], ["categories" => $params["categories"]]));
+        return new NewsItemCollection($this->send("get", [], ["categories" => $categories]));
     }
 }

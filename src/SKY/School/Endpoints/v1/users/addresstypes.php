@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AddressTypeCollection;
+use Blackbaud\SKY\School\Components\AddressTypeCollection;
 
 /**
  * @api
  */
-class addresstypes extends BaseEndpoint
+class Addresstypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/addresstypes";
 
@@ -25,11 +25,11 @@ class addresstypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\AddressTypeCollection
+     * @return \Blackbaud\SKY\School\Components\AddressTypeCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AddressTypeCollection
     {
         return new AddressTypeCollection($this->send("get", [], []));
     }

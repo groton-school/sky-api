@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\TransportationCollection;
+use Blackbaud\SKY\School\Components\TransportationCollection;
 
 /**
  * @api
  */
-class transportationtypes extends BaseEndpoint
+class Transportationtypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/transportationtypes";
 
@@ -33,11 +33,12 @@ class transportationtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\TransportationCollection
+     * @return \Blackbaud\SKY\School\Components\TransportationCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): TransportationCollection
     {
         return new TransportationCollection($this->send("get", [], []));
     }

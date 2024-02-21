@@ -3,27 +3,29 @@
 namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\OneRoster\Objects\DemographicOutputModel;
-use Blackbaud\SKY\OneRoster\Objects\DemographicsOutputModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\OneRoster\Components\DemographicOutputModel;
+use Blackbaud\SKY\OneRoster\Components\DemographicsOutputModel;
 
 /**
  * @api
  */
-class demographics extends BaseEndpoint
+class Demographics extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/demographics/{id}";
 
     /**
      * Returns a collection of user's demographic data.
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\DemographicsOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModel
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): DemographicsOutputModel
     {
         return new DemographicsOutputModel($this->send("get", [], []));
     }
@@ -31,15 +33,20 @@ class demographics extends BaseEndpoint
     /**
      * Returns a single user's demographic data for the specified `id`..
      *
-     * @param array{id: string} $params An associative array
-     *     - id: sourcedId for the user
+     * @param string $id sourcedId for the user
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\DemographicOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModel
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function get(array $params)
+    public function get(string $id): DemographicOutputModel
     {
-        return new DemographicOutputModel($this->send("get", ["{id}" => $params["id"]], []));
+        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+
+        return new DemographicOutputModel($this->send("get", ["{id}" => $id], []));
     }
 }

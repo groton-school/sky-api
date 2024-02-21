@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\UserExtendedCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\UserExtendedCollection;
 
 /**
  * @api
  */
-class changed extends BaseEndpoint
+class Changed extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/changed";
 
@@ -24,20 +25,26 @@ class changed extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{base_role_ids: string, start_date: string} $params An
-     *   associative array - base_role_ids: Comma delimited list of base role
-     *   IDs to get users for. - start_date: Format - date-time (as date-time in
-     *   RFC3339). The date to begin looking for changes. Use
+     * @param string $base_role_ids Comma delimited list of base role IDs to
+     *   get users for.
+     * @param string $start_date Format - date-time (as date-time in RFC3339).
+     *   The date to begin looking for changes. Use
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2003-04-21.
      *
-     * @return \Blackbaud\SKY\School\Objects\UserExtendedCollection
+     * @return \Blackbaud\SKY\School\Components\UserExtendedCollection Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function filterBy(array $params)
+    public function filterBy(string $base_role_ids, string $start_date): UserExtendedCollection
     {
-        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $params["base_role_ids"],
-        "start_date" => $params["start_date"]]));
+        assert($base_role_ids !== null, new ArgumentException("Parameter `base_role_ids` is required"));
+        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
+
+        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
+        "start_date" => $start_date]));
     }
 }

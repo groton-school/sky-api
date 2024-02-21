@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\admissions;
+namespace Blackbaud\SKY\School\Endpoints\V1\Admissions;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AdmissionsCheckListCollection;
+use Blackbaud\SKY\School\Components\AdmissionsCheckListCollection;
 
 /**
  * @api
  */
-class checklists extends BaseEndpoint
+class Checklists extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checklists";
 
@@ -28,20 +28,19 @@ class checklists extends BaseEndpoint
      *
      * - Admissions Manager
      *
-     * @param array{search_text?: string, inactive?: bool} $params An
-     *   associative array
-     *     - search_text: (Optional) Applies a case-insensitive search against
-     *   check lists "name".
-     *     - inactive: (Optional) flag to return only inactive checklists
-     *   (default is both).
+     * @param ?string $search_text (Optional) Applies a case-insensitive
+     *   search against check lists "name".
+     * @param ?bool $inactive (Optional) flag to return only inactive
+     *   checklists (default is both).
      *
-     * @return \Blackbaud\SKY\School\Objects\AdmissionsCheckListCollection
+     * @return \Blackbaud\SKY\School\Components\AdmissionsCheckListCollection
+     *   Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $search_text = null, ?bool $inactive = null): AdmissionsCheckListCollection
     {
-        return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $params["search_text"],
-        "inactive" => $params["inactive"]]));
+        return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $search_text,
+        "inactive" => $inactive]));
     }
 }

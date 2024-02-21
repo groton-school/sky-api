@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ResultCreate;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\ResultCreate;
 
 /**
  * @api
  */
-class result extends BaseEndpoint
+class Result extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/result";
 
@@ -33,14 +34,19 @@ class result extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param Blackbaud\SKY\School\Objects\ResultCreate $requestBody
+     * @param \Blackbaud\SKY\School\Components\ResultCreate $requestBody
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(ResultCreate $requestBody)
+    public function post(ResultCreate $requestBody): void
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

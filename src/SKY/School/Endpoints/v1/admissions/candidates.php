@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\admissions;
+namespace Blackbaud\SKY\School\Endpoints\V1\Admissions;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\CandidateCreate;
-use Blackbaud\SKY\School\Objects\CandidateReadCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\CandidateCreate;
+use Blackbaud\SKY\School\Components\CandidateReadCollection;
 
 /**
  * @api
  */
-class candidates extends BaseEndpoint
+class Candidates extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/candidates";
 
@@ -43,21 +44,28 @@ class candidates extends BaseEndpoint
      * The school_year_id filter has been deprecated and no longer functions
      * as of 01/01/2023.
      *
-     * @param array{school_year?: string, status_ids?: string, modified_date?:
-     *   string} $params An associative array - school_year: (Optional) The
-     *   school year for which to return results. Corresponds to
-     *   ```school_year_label``` in the [Year
-     *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget). Default is current year. - status_ids: (Optional) One or more comma delimited status Id(s) to filter results on. Corresponds to ```id``` in the [Status list](https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet). Default is no status Id filter. - modified_date: (Optional) Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format: 2003-04-21. Default is no modified date filter
+     * @param ?string $school_year (Optional) The school year for which to
+     *   return results. Corresponds to ```school_year_label``` in the [Year
+     *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget). Default is current year.
+     * @param ?string $status_ids (Optional) One or more comma delimited
+     *   status Id(s) to filter results on. Corresponds to ```id``` in the
+     *   [Status
+     *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet). Default is no status Id filter.
+     * @param ?string $modified_date (Optional) Format - date-time (as
+     *   date-time in RFC3339). The date last modified to filter results to on
+     *   or after. Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date
+     *   format: 2003-04-21. Default is no modified date filter
      *
-     * @return \Blackbaud\SKY\School\Objects\CandidateReadCollection
+     * @return \Blackbaud\SKY\School\Components\CandidateReadCollection
+     *   Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $school_year = null, ?string $status_ids = null, ?string $modified_date = null): CandidateReadCollection
     {
-        return new CandidateReadCollection($this->send("get", [], ["school_year" => $params["school_year"],
-        "status_ids" => $params["status_ids"],
-        "modified_date" => $params["modified_date"]]));
+        return new CandidateReadCollection($this->send("get", [], ["school_year" => $school_year,
+        "status_ids" => $status_ids,
+        "modified_date" => $modified_date]));
     }
 
     /**
@@ -71,14 +79,19 @@ class candidates extends BaseEndpoint
      *
      * - Admissions Staff
      *
-     * @param Blackbaud\SKY\School\Objects\CandidateCreate $requestBody
+     * @param \Blackbaud\SKY\School\Components\CandidateCreate $requestBody
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(CandidateCreate $requestBody)
+    public function post(CandidateCreate $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

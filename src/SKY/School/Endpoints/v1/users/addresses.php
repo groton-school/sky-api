@@ -1,21 +1,28 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AddressAdd;
-use Blackbaud\SKY\School\Objects\AddressEdit;
-use Blackbaud\SKY\School\Objects\AddressReadCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\AddressAdd;
+use Blackbaud\SKY\School\Components\AddressEdit;
+use Blackbaud\SKY\School\Components\AddressReadCollection;
+use Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share;
 
 /**
  * @api
  */
-class addresses extends BaseEndpoint
+class Addresses extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/addresses/{address_id}/{address_type_id}";
+
+    /**
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $_share
+     */
+    public Share $_share;
 
     /**
      * Returns a collection of addresses.
@@ -25,16 +32,20 @@ class addresses extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The ID of the user.
+     * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Objects\AddressReadCollection
+     * @return \Blackbaud\SKY\School\Components\AddressReadCollection Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByUser(array $params)
+    public function getByUser(int $user_id): AddressReadCollection
     {
-        return new AddressReadCollection($this->send("get", ["{user_id}" => $params["user_id"]], []));
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+
+        return new AddressReadCollection($this->send("get", ["{user_id}" => $user_id], []));
     }
 
     /**
@@ -49,18 +60,23 @@ class addresses extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The ID of the user.
-     * @param Blackbaud\SKY\School\Objects\AddressAdd $requestBody Address
+     * @param int $user_id Format - int32. The ID of the user.
+     * @param \Blackbaud\SKY\School\Components\AddressAdd $requestBody Address
      *   information to be updated.
      *
-     * @return \int
+     * @return int ID of the address just added.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByUser(array $params, AddressAdd $requestBody)
+    public function postByUser(int $user_id, AddressAdd $requestBody): int
     {
-        return $this->send("post", ["{user_id}" => $params["user_id"]], [], $requestBody);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
     }
 
     /**
@@ -75,21 +91,27 @@ class addresses extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * @param array{user_id: int, address_id: int} $params An associative
-     *   array
-     *     - user_id: Format - int32. The ID of the user.
-     *     - address_id: Format - int32. The ID of the address to be updated.
-     * @param Blackbaud\SKY\School\Objects\AddressEdit $requestBody Address
-     *   information to be updated.
+     * @param int $user_id Format - int32. The ID of the user.
+     * @param int $address_id Format - int32. The ID of the address to be
+     *   updated.
+     * @param \Blackbaud\SKY\School\Components\AddressEdit $requestBody
+     *   Address information to be updated.
      *
-     * @return \int
+     * @return int ID of the address just updated.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function patchByUser(array $params, AddressEdit $requestBody)
+    public function patchByUser(int $user_id, int $address_id, AddressEdit $requestBody): int
     {
-        return $this->send("patch", ["{user_id}" => $params["user_id"],
-        "{address_id}" => $params["address_id"]], [], $requestBody);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($address_id !== null, new ArgumentException("Parameter `address_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", ["{user_id}" => $user_id,
+        "{address_id}" => $address_id], [], $requestBody);
     }
 
     /**
@@ -110,22 +132,40 @@ class addresses extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{user_id: int, address_id: int, address_type_id: int}
-     *   $params An associative array
-     *     - user_id: Format - int32. The ID of the user
-     *     - address_id: Format - int32. The ID of the user's address to
+     * @param int $user_id Format - int32. The ID of the user
+     * @param int $address_id Format - int32. The ID of the user's address to
      *   delete.
-     *     - address_type_id: Format - int32. The ID of the user's address
-     *   type to delete.
+     * @param int $address_type_id Format - int32. The ID of the user's
+     *   address type to delete.
      *
-     * @return \void
+     * @return void Returned when the operation succeeds.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function deleteByUserAndAddress(array $params)
+    public function deleteByUserAndAddress(int $user_id, int $address_id, int $address_type_id): void
     {
-        return $this->send("delete", ["{user_id}" => $params["user_id"],
-        "{address_id}" => $params["address_id"],
-        "{address_type_id}" => $params["address_type_id"]], []);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert($address_id !== null, new ArgumentException("Parameter `address_id` is required"));
+        assert($address_type_id !== null, new ArgumentException("Parameter `address_type_id` is required"));
+
+        return $this->send("delete", ["{user_id}" => $user_id,
+        "{address_id}" => $address_id,
+        "{address_type_id}" => $address_type_id], []);
+    }
+
+    /**
+     * @return \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share
+     *
+     * @api
+     */
+    public function share(): Share
+    {
+        if ($this->_share === null) {
+            $this->_share = new Share($this->api);
+        }
+        return $this->_share;
     }
 }

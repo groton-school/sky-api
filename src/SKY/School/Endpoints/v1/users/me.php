@@ -1,28 +1,28 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\UserMe;
+use Blackbaud\SKY\School\Components\UserMe;
 
 /**
  * @api
  */
-class me extends BaseEndpoint
+class Me extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/me";
 
     /**
      * Returns information about the caller.
      *
-     * @return \Blackbaud\SKY\School\Objects\UserMe
+     * @return \Blackbaud\SKY\School\Components\UserMe Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): UserMe
     {
         return new UserMe($this->send("get", [], []));
     }

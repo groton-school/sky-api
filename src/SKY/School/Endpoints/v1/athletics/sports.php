@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\SportCollection;
+use Blackbaud\SKY\School\Components\SportCollection;
 
 /**
  * @api
  */
-class sports extends BaseEndpoint
+class Sports extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/sports";
 
@@ -33,15 +33,14 @@ class sports extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{season_id?: int} $params An associative array
-     *     - season_id: (Optional) Format - int32. Season ID
+     * @param ?int $season_id (Optional) Format - int32. Season ID
      *
-     * @return \Blackbaud\SKY\School\Objects\SportCollection
+     * @return \Blackbaud\SKY\School\Components\SportCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $season_id = null): SportCollection
     {
-        return new SportCollection($this->send("get", [], ["season_id" => $params["season_id"]]));
+        return new SportCollection($this->send("get", [], ["season_id" => $season_id]));
     }
 }

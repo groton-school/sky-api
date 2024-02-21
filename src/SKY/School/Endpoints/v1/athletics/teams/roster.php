@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics\teams;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\Roster;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\Roster as RosterDisambiguate;
 
 /**
  * @api
  */
-class roster extends BaseEndpoint
+class Roster extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/roster";
 
@@ -33,16 +34,20 @@ class roster extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{team_id: int} $params An associative array
-     *     - team_id: Format - int32. The ID for the team to get the roster
-     *   for.
+     * @param int $team_id Format - int32. The ID for the team to get the
+     *   roster for.
      *
-     * @return \Blackbaud\SKY\School\Objects\Roster
+     * @return \Blackbaud\SKY\School\Components\Roster Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByTeam(array $params)
+    public function getByTeam(int $team_id): RosterDisambiguate
     {
-        return new Roster($this->send("get", ["{team_id}" => $params["team_id"]], []));
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+
+        return new RosterDisambiguate($this->send("get", ["{team_id}" => $team_id], []));
     }
 }

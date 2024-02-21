@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\content;
+namespace Blackbaud\SKY\School\Endpoints\V1\Content;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ResourceCollection;
+use Blackbaud\SKY\School\Components\ResourceCollection;
 
 /**
  * @api
  */
-class resources extends BaseEndpoint
+class Resources extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/content/resources";
 
@@ -28,11 +28,11 @@ class resources extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Objects\ResourceCollection
+     * @return \Blackbaud\SKY\School\Components\ResourceCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): ResourceCollection
     {
         return new ResourceCollection($this->send("get", [], []));
     }

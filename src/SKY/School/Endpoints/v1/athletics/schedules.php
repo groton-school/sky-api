@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ScheduleItemCollection;
+use Blackbaud\SKY\School\Components\ScheduleItemCollection;
 
 /**
  * @api
  */
-class schedules extends BaseEndpoint
+class Schedules extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/schedules";
 
@@ -40,34 +40,31 @@ class schedules extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{start_date?: string, end_date?: string, school_year?:
-     *   string, include_practice?: bool, team_id?: int, last_modified?: string}
-     *   $params An associative array
-     *     - start_date: (Optional) Format - date-time (as date-time in
-     *   RFC3339). Filter games/practices after this date
-     *     - end_date: (Optional) Format - date-time (as date-time in
+     * @param ?string $start_date (Optional) Format - date-time (as date-time
+     *   in RFC3339). Filter games/practices after this date
+     * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339). Filter games/practices before this date
-     *     - school_year: (Optional) Filter on a specific school year.
-     *   Defaults to current school year.
-     *     - include_practice: (Optional) Set to ```true``` to include
+     * @param ?string $school_year (Optional) Filter on a specific school
+     *   year. Defaults to current school year.
+     * @param ?bool $include_practice (Optional) Set to ```true``` to include
      *   practices with games. Defaults to false.
-     *     - team_id: (Optional) Format - int32. Filter games/practices for a
-     *   specific team. Defaults to all teams.
-     *     - last_modified: (Optional) Format - date-time (as date-time in
-     *   RFC3339). Set date to limit results to games with information changed
-     *   on and after that date.
+     * @param ?int $team_id (Optional) Format - int32. Filter games/practices
+     *   for a specific team. Defaults to all teams.
+     * @param ?string $last_modified (Optional) Format - date-time (as
+     *   date-time in RFC3339). Set date to limit results to games with
+     *   information changed on and after that date.
      *
-     * @return \Blackbaud\SKY\School\Objects\ScheduleItemCollection
+     * @return \Blackbaud\SKY\School\Components\ScheduleItemCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $start_date = null, ?string $end_date = null, ?string $school_year = null, ?bool $include_practice = null, ?int $team_id = null, ?string $last_modified = null): ScheduleItemCollection
     {
-        return new ScheduleItemCollection($this->send("get", [], ["start_date" => $params["start_date"],
-        "end_date" => $params["end_date"],
-        "school_year" => $params["school_year"],
-        "include_practice" => $params["include_practice"],
-        "team_id" => $params["team_id"],
-        "last_modified" => $params["last_modified"]]));
+        return new ScheduleItemCollection($this->send("get", [], ["start_date" => $start_date,
+        "end_date" => $end_date,
+        "school_year" => $school_year,
+        "include_practice" => $include_practice,
+        "team_id" => $team_id,
+        "last_modified" => $last_modified]));
     }
 }

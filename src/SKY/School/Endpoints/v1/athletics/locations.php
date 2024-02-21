@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\LocationCollection;
-use Blackbaud\SKY\School\Objects\LocationCreateModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\LocationCollection;
+use Blackbaud\SKY\School\Components\LocationCreateModel;
 
 /**
  * @api
  */
-class locations extends BaseEndpoint
+class Locations extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/locations";
 
@@ -32,11 +33,11 @@ class locations extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Objects\LocationCollection
+     * @return \Blackbaud\SKY\School\Components\LocationCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): LocationCollection
     {
         return new LocationCollection($this->send("get", [], []));
     }
@@ -60,15 +61,20 @@ class locations extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param Blackbaud\SKY\School\Objects\LocationCreateModel $requestBody
-     *   The location to be created
+     * @param \Blackbaud\SKY\School\Components\LocationCreateModel
+     *   $requestBody The location to be created
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(LocationCreateModel $requestBody)
+    public function post(LocationCreateModel $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

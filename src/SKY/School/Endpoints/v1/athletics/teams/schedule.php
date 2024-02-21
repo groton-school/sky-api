@@ -1,20 +1,28 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics\teams;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\GameCreate;
-use Blackbaud\SKY\School\Objects\GameUpdate;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\GameCreate;
+use Blackbaud\SKY\School\Components\GameUpdate;
+use Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice;
 
 /**
  * @api
  */
-class schedule extends BaseEndpoint
+class Schedule extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/schedule/{game_id}";
+
+    /**
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
+     *   $_practice
+     */
+    public Practice $_practice;
 
     /**
      * Creates a new athletic game for the specified ```team_id```.
@@ -32,19 +40,24 @@ class schedule extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{team_id: int} $params An associative array
-     *     - team_id: Format - int32. ID of the team for the game to be
+     * @param int $team_id Format - int32. ID of the team for the game to be
      *   created
-     * @param Blackbaud\SKY\School\Objects\GameCreate $requestBody Information
-     *   about the game to be created
+     * @param \Blackbaud\SKY\School\Components\GameCreate $requestBody
+     *   Information about the game to be created
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByTeam(array $params, GameCreate $requestBody)
+    public function postByTeam(int $team_id, GameCreate $requestBody): int
     {
-        return $this->send("post", ["{team_id}" => $params["team_id"]], [], $requestBody);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{team_id}" => $team_id], [], $requestBody);
     }
 
     /**
@@ -64,19 +77,24 @@ class schedule extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param array{team_id: int} $params An associative array
-     *     - team_id: Format - int32. ID of the team for the game to be
+     * @param int $team_id Format - int32. ID of the team for the game to be
      *   updated
-     * @param Blackbaud\SKY\School\Objects\GameUpdate $requestBody Information
-     *   for the game to be updated
+     * @param \Blackbaud\SKY\School\Components\GameUpdate $requestBody
+     *   Information for the game to be updated
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function patchByTeam(array $params, GameUpdate $requestBody)
+    public function patchByTeam(int $team_id, GameUpdate $requestBody): void
     {
-        return $this->send("patch", ["{team_id}" => $params["team_id"]], [], $requestBody);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", ["{team_id}" => $team_id], [], $requestBody);
     }
 
     /**
@@ -89,18 +107,37 @@ class schedule extends BaseEndpoint
      *
      * - Page Manager
      *
-     * @param array{team_id: int, game_id: int} $params An associative array
-     *     - team_id: Format - int32. ID of the team for the game to be
+     * @param int $team_id Format - int32. ID of the team for the game to be
      *   deleted
-     *     - game_id: Format - int32. ID of the game to be deleted
+     * @param int $game_id Format - int32. ID of the game to be deleted
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function deleteByTeam(array $params)
+    public function deleteByTeam(int $team_id, int $game_id): void
     {
-        return $this->send("delete", ["{team_id}" => $params["team_id"],
-        "{game_id}" => $params["game_id"]], []);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($game_id !== null, new ArgumentException("Parameter `game_id` is required"));
+
+        return $this->send("delete", ["{team_id}" => $team_id,
+        "{game_id}" => $game_id], []);
+    }
+
+    /**
+     * @return \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
+
+     *
+     * @api
+     */
+    public function practice(): Practice
+    {
+        if ($this->_practice === null) {
+            $this->_practice = new Practice($this->api);
+        }
+        return $this->_practice;
     }
 }

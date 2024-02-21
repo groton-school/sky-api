@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\dorms;
+namespace Blackbaud\SKY\School\Endpoints\V1\Dorms;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\DormCollection;
+use Blackbaud\SKY\School\Components\DormCollection;
 
 /**
  * @api
  */
-class all extends BaseEndpoint
+class All extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/dorms/all";
 
@@ -25,19 +25,17 @@ class all extends BaseEndpoint
      *
      * - Pending Dorm Supervisor
      *
-     * @param array{level_number?: int, school_year?: string} $params An
-     *   associative array
-     *     - level_number: (Optional) Format - int32. Identifier for the
+     * @param ?int $level_number (Optional) Format - int32. Identifier for the
      *   school level
-     *     - school_year: (Optional) Identifier for the school year
+     * @param ?string $school_year (Optional) Identifier for the school year
      *
-     * @return \Blackbaud\SKY\School\Objects\DormCollection
+     * @return \Blackbaud\SKY\School\Components\DormCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $level_number = null, ?string $school_year = null): DormCollection
     {
-        return new DormCollection($this->send("get", [], ["level_number" => $params["level_number"],
-        "school_year" => $params["school_year"]]));
+        return new DormCollection($this->send("get", [], ["level_number" => $level_number,
+        "school_year" => $school_year]));
     }
 }

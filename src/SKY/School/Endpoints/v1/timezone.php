@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\Timezone;
+use Blackbaud\SKY\School\Components\Timezone as TimezoneDisambiguate;
 
 /**
  * @api
  */
-class timezone extends BaseEndpoint
+class Timezone extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/timezone";
 
@@ -27,12 +27,12 @@ class timezone extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\Timezone
+     * @return \Blackbaud\SKY\School\Components\Timezone Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): TimezoneDisambiguate
     {
-        return new Timezone($this->send("get", [], []));
+        return new TimezoneDisambiguate($this->send("get", [], []));
     }
 }

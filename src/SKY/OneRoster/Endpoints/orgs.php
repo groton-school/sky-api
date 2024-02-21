@@ -3,27 +3,29 @@
 namespace Blackbaud\SKY\OneRoster\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\OneRoster\Objects\OrgOutputModel;
-use Blackbaud\SKY\OneRoster\Objects\OrgsOutputModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\OneRoster\Components\OrgOutputModel;
+use Blackbaud\SKY\OneRoster\Components\OrgsOutputModel;
 
 /**
  * @api
  */
-class orgs extends BaseEndpoint
+class Orgs extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/orgs/{id}";
 
     /**
      * Returns a collection of organizations.
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\OrgsOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
+     *   possible to read the collection.
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): OrgsOutputModel
     {
         return new OrgsOutputModel($this->send("get", [], []));
     }
@@ -31,15 +33,20 @@ class orgs extends BaseEndpoint
     /**
      * Returns a specific org.
      *
-     * @param array{id: string} $params An associative array
-     *     - id: sourcedId for the org
+     * @param string $id sourcedId for the org
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\OrgOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModel OK - It was
+     *   possible to read the resource.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function get(array $params)
+    public function get(string $id): OrgOutputModel
     {
-        return new OrgOutputModel($this->send("get", ["{id}" => $params["id"]], []));
+        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+
+        return new OrgOutputModel($this->send("get", ["{id}" => $id], []));
     }
 }

@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\SchoolSessionCollection;
+use Blackbaud\SKY\School\Components\SchoolSessionCollection;
 
 /**
  * @api
  */
-class sessions extends BaseEndpoint
+class Sessions extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/sessions";
 
@@ -25,20 +25,19 @@ class sessions extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @param array{level_num?: int, school_year?: string} $params An
-     *   associative array
-     *     - level_num: (Optional) Format - int32. Filter for a specific
+     * @param ?int $level_num (Optional) Format - int32. Filter for a specific
      *   ```level_num``` (level number)
-     *     - school_year: (Optional) Filter for a specific ```school_year```
-     *   (required format YYYY - YYYY (11 chars))
+     * @param ?string $school_year (Optional) Filter for a specific
+     *   ```school_year``` (required format YYYY - YYYY (11 chars))
      *
-     * @return \Blackbaud\SKY\School\Objects\SchoolSessionCollection
+     * @return \Blackbaud\SKY\School\Components\SchoolSessionCollection
+     *   Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $level_num = null, ?string $school_year = null): SchoolSessionCollection
     {
-        return new SchoolSessionCollection($this->send("get", [], ["level_num" => $params["level_num"],
-        "school_year" => $params["school_year"]]));
+        return new SchoolSessionCollection($this->send("get", [], ["level_num" => $level_num,
+        "school_year" => $school_year]));
     }
 }

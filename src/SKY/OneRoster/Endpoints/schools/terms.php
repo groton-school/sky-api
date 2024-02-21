@@ -1,32 +1,38 @@
 <?php
 
-namespace Blackbaud\SKY\OneRoster\Endpoints\schools;
+namespace Blackbaud\SKY\OneRoster\Endpoints\Schools;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\OneRoster\Objects\AcademicSessionsOutputModel;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel;
 
 /**
  * @api
  */
-class terms extends BaseEndpoint
+class Terms extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/terms";
 
     /**
      * Returns a collection of terms for the specified `school_id`.
      *
-     * @param array{school_id: string} $params An associative array
-     *     - school_id: sourcedId for the school
+     * @param string $school_id sourcedId for the school
      *
-     * @return \Blackbaud\SKY\OneRoster\Objects\AcademicSessionsOutputModel
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
+     *   OK - It was possible to read the collection.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getBySchool(array $params)
+    public function getBySchool(string $school_id): AcademicSessionsOutputModel
     {
-        return new AcademicSessionsOutputModel($this->send("get", ["{school_id}" => $params["school_id"]], []));
+        assert($school_id !== null, new ArgumentException("Parameter `school_id` is required"));
+
+        return new AcademicSessionsOutputModel($this->send("get", ["{school_id}" => $school_id], []));
     }
 }

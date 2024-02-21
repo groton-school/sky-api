@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\SpecialDayCollection;
+use Blackbaud\SKY\School\Components\SpecialDayCollection;
 
 /**
  * @api
  */
-class specialdays extends BaseEndpoint
+class Specialdays extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/specialdays";
 
@@ -25,16 +25,15 @@ class specialdays extends BaseEndpoint
      *
      * - Schedule Manager
      *
-     * @param array{level_id?: int} $params An associative array
-     *     - level_id: (Optional) Format - int32. Identifier for a specific
-     *   school level.
+     * @param ?int $level_id (Optional) Format - int32. Identifier for a
+     *   specific school level.
      *
-     * @return \Blackbaud\SKY\School\Objects\SpecialDayCollection
+     * @return \Blackbaud\SKY\School\Components\SpecialDayCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $level_id = null): SpecialDayCollection
     {
-        return new SpecialDayCollection($this->send("get", [], ["level_id" => $params["level_id"]]));
+        return new SpecialDayCollection($this->send("get", [], ["level_id" => $level_id]));
     }
 }

@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics\teams\schedule;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\PracticeCreate;
-use Blackbaud\SKY\School\Objects\PracticeUpdate;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\PracticeCreate;
+use Blackbaud\SKY\School\Components\PracticeUpdate;
 
 /**
  * @api
  */
-class practice extends BaseEndpoint
+class Practice extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/schedule/practice/{practice_id}";
 
@@ -26,19 +27,24 @@ class practice extends BaseEndpoint
      *
      * - Page Manager
      *
-     * @param array{team_id: int} $params An associative array
-     *     - team_id: Format - int32. ID of the team for the practice to be
-     *   created
-     * @param Blackbaud\SKY\School\Objects\PracticeCreate $requestBody
+     * @param int $team_id Format - int32. ID of the team for the practice to
+     *   be created
+     * @param \Blackbaud\SKY\School\Components\PracticeCreate $requestBody
      *   Information about the practice to be created
      *
-     * @return \int
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function postByTeam(array $params, PracticeCreate $requestBody)
+    public function postByTeam(int $team_id, PracticeCreate $requestBody): int
     {
-        return $this->send("post", ["{team_id}" => $params["team_id"]], [], $requestBody);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("post", ["{team_id}" => $team_id], [], $requestBody);
     }
 
     /**
@@ -50,19 +56,24 @@ class practice extends BaseEndpoint
      *
      * - Athletic Group Manager
      *
-     * @param array{team_id: int} $params An associative array
-     *     - team_id: Format - int32. The ID of the team for the practice to
-     *   be updated
-     * @param Blackbaud\SKY\School\Objects\PracticeUpdate $requestBody
+     * @param int $team_id Format - int32. The ID of the team for the practice
+     *   to be updated
+     * @param \Blackbaud\SKY\School\Components\PracticeUpdate $requestBody
      *   Information about the practice to be updated
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function patchByTeam(array $params, PracticeUpdate $requestBody)
+    public function patchByTeam(int $team_id, PracticeUpdate $requestBody): void
     {
-        return $this->send("patch", ["{team_id}" => $params["team_id"]], [], $requestBody);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", ["{team_id}" => $team_id], [], $requestBody);
     }
 
     /**
@@ -76,19 +87,24 @@ class practice extends BaseEndpoint
      *
      * - Page Manager
      *
-     * @param array{team_id: int, practice_id: int} $params An associative
-     *   array
-     *     - team_id: Format - int32. ID of the team for the practice to be
+     * @param int $team_id Format - int32. ID of the team for the practice to
+     *   be deleted
+     * @param int $practice_id Format - int32. ID of the practice to be
      *   deleted
-     *     - practice_id: Format - int32. ID of the practice to be deleted
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function deleteByTeam(array $params)
+    public function deleteByTeam(int $team_id, int $practice_id): void
     {
-        return $this->send("delete", ["{team_id}" => $params["team_id"],
-        "{practice_id}" => $params["practice_id"]], []);
+        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert($practice_id !== null, new ArgumentException("Parameter `practice_id` is required"));
+
+        return $this->send("delete", ["{team_id}" => $team_id,
+        "{practice_id}" => $practice_id], []);
     }
 }

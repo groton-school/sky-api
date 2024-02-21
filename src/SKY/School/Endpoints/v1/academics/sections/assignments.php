@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics\sections;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Sections;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AssignmentCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\AssignmentCollection;
 
 /**
  * @api
  */
-class assignments extends BaseEndpoint
+class Assignments extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/assignments";
 
@@ -30,33 +31,35 @@ class assignments extends BaseEndpoint
      *
      * - Pending Teacher
      *
-     * @param array{section_id: int, types?: string, status?: string,
-     *   persona_id?: int, filter?: string, search?: string} $params An
-     *   associative array
-     *     - section_id: Format - int32. The ID of the section.
-     *     - types: (Optional) Returns results that match a comma separated
-     *   list of assignment type IDs.
-     *     - status: (Optional) The status of the assignment. The status
-     *   corresponds with static system options. Allowed values: "0" for In
-     *   Progress, "1" for Completed, "2" for Overdue, and "-1" for To Do.
-     *     - persona_id: (Optional) Format - int32. The ID of the persona to
-     *   get assignments. 3 = Faculty, 2 = Student. Defaults to 3.
-     *     - filter: (Optional) Return assignments based on the entered
-     *   string: ```expired```, ```future```, or ```all```. All is the default
-     *   sort value.
-     *     - search: (Optional) Returns results with Descriptions or Titles
-     *   that match search string.
+     * @param int $section_id Format - int32. The ID of the section.
+     * @param ?string $types (Optional) Returns results that match a comma
+     *   separated list of assignment type IDs.
+     * @param ?string $status (Optional) The status of the assignment. The
+     *   status corresponds with static system options. Allowed values: "0" for
+     *   In Progress, "1" for Completed, "2" for Overdue, and "-1" for To Do.
+     * @param ?int $persona_id (Optional) Format - int32. The ID of the
+     *   persona to get assignments. 3 = Faculty, 2 = Student. Defaults to 3.
+     * @param ?string $filter (Optional) Return assignments based on the
+     *   entered string: ```expired```, ```future```, or ```all```. All is the
+     *   default sort value.
+     * @param ?string $search (Optional) Returns results with Descriptions or
+     *   Titles that match search string.
      *
-     * @return \Blackbaud\SKY\School\Objects\AssignmentCollection
+     * @return \Blackbaud\SKY\School\Components\AssignmentCollection Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getBySection(array $params)
+    public function getBySection(int $section_id, ?string $types = null, ?string $status = null, ?int $persona_id = null, ?string $filter = null, ?string $search = null): AssignmentCollection
     {
-        return new AssignmentCollection($this->send("get", ["{section_id}" => $params["section_id"]], ["types" => $params["types"],
-        "status" => $params["status"],
-        "persona_id" => $params["persona_id"],
-        "filter" => $params["filter"],
-        "search" => $params["search"]]));
+        assert($section_id !== null, new ArgumentException("Parameter `section_id` is required"));
+
+        return new AssignmentCollection($this->send("get", ["{section_id}" => $section_id], ["types" => $types,
+        "status" => $status,
+        "persona_id" => $persona_id,
+        "filter" => $filter,
+        "search" => $search]));
     }
 }

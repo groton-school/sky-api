@@ -1,16 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentAthleticRequirementRead;
 
 /**
  * @api
  */
-class athleticrequirements extends BaseEndpoint
+class Athleticrequirements extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/athleticrequirements";
 
@@ -27,23 +29,28 @@ class athleticrequirements extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param array{user_id: int, schoolYear?: string, season?: string,
-     *   include?: string} $params An associative array
-     *     - user_id: Format - int32. The ID of the student
-     *     - schoolYear: (Optional) The description of the school year
-     *     - season: (Optional) The description of the season
-     *     - include: (Optional) Show all athletic requirements or only those
-     *   completed or missing. School year and season are required if not set to
-     *   completed. Allowed values: all, completed, missing
+     * @param int $user_id Format - int32. The ID of the student
+     * @param ?string $schoolYear (Optional) The description of the school
+     *   year
+     * @param ?string $season (Optional) The description of the season
+     * @param ?string $include (Optional) Show all athletic requirements or
+     *   only those completed or missing. School year and season are required if
+     *   not set to completed. Allowed values: all, completed, missing
      *
-     * @return \Blackbaud\SKY\School\Objects\StudentAthleticRequirementRead[]
+     * @return \Blackbaud\SKY\School\Components\StudentAthleticRequirementRead[]
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByUser(array $params)
+    public function getByUser(int $user_id, ?string $schoolYear = null, ?string $season = null, ?string $include = null): array
     {
-        return $this->send("get", ["{user_id}" => $params["user_id"]], ["schoolYear" => $params["schoolYear"],
-        "season" => $params["season"],
-        "include" => $params["include"]]);
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+
+        return array_map(fn($a) => new StudentAthleticRequirementRead($a), $this->send("get", ["{user_id}" => $user_id], ["schoolYear" => $schoolYear,
+        "season" => $season,
+        "include" => $include]));
     }
 }

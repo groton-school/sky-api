@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\OfferingTypeCollection;
+use Blackbaud\SKY\School\Components\OfferingTypeCollection;
 
 /**
  * @api
  */
-class offeringtypes extends BaseEndpoint
+class Offeringtypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/offeringtypes";
 
@@ -27,11 +27,11 @@ class offeringtypes extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Objects\OfferingTypeCollection
+     * @return \Blackbaud\SKY\School\Components\OfferingTypeCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): OfferingTypeCollection
     {
         return new OfferingTypeCollection($this->send("get", [], []));
     }

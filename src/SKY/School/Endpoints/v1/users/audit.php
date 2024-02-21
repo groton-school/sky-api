@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\UserAuditReadCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\UserAuditReadCollection;
 
 /**
  * @api
  */
-class audit extends BaseEndpoint
+class Audit extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/audit";
 
@@ -24,24 +25,28 @@ class audit extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{role_id: string, start_date?: string, end_date?: string}
-     *   $params An associative array
-     *     - role_id: Role to return audit information for.
-     *     - start_date: (Optional) Format - date-time (as date-time in
-     *   RFC3339). The date to begin looking for changes. Must be greater than
-     *   01/01/1990.
-     *     - end_date: (Optional) Format - date-time (as date-time in
+     * @param string $role_id Role to return audit information for.
+     * @param ?string $start_date (Optional) Format - date-time (as date-time
+     *   in RFC3339). The date to begin looking for changes. Must be greater
+     *   than 01/01/1990.
+     * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339). The date to end looking for changes.  Must be within 1 year
      *   of start_date. Null returns start_date + 7 days.
      *
-     * @return \Blackbaud\SKY\School\Objects\UserAuditReadCollection
+     * @return \Blackbaud\SKY\School\Components\UserAuditReadCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function filterBy(array $params)
+    public function filterBy(string $role_id, ?string $start_date = null, ?string $end_date = null): UserAuditReadCollection
     {
-        return new UserAuditReadCollection($this->send("get", [], ["role_id" => $params["role_id"],
-        "start_date" => $params["start_date"],
-        "end_date" => $params["end_date"]]));
+        assert($role_id !== null, new ArgumentException("Parameter `role_id` is required"));
+
+        return new UserAuditReadCollection($this->send("get", [], ["role_id" => $role_id,
+        "start_date" => $start_date,
+        "end_date" => $end_date]));
     }
 }

@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\DepartmentCollection;
+use Blackbaud\SKY\School\Components\DepartmentCollection;
 
 /**
  * @api
  */
-class departments extends BaseEndpoint
+class Departments extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/departments";
 
@@ -27,15 +27,14 @@ class departments extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @param array{level_id?: int} $params An associative array
-     *     - level_id: (Optional) Format - int32. Level number.
+     * @param ?int $level_id (Optional) Format - int32. Level number.
      *
-     * @return \Blackbaud\SKY\School\Objects\DepartmentCollection
+     * @return \Blackbaud\SKY\School\Components\DepartmentCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $level_id = null): DepartmentCollection
     {
-        return new DepartmentCollection($this->send("get", [], ["level_id" => $params["level_id"]]));
+        return new DepartmentCollection($this->send("get", [], ["level_id" => $level_id]));
     }
 }

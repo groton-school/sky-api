@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics\enrollments;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\EnrollmentChangesCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\EnrollmentChangesCollection;
 
 /**
  * @api
  */
-class changes extends BaseEndpoint
+class Changes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/enrollments/changes";
 
@@ -30,21 +31,25 @@ class changes extends BaseEndpoint
      *
      * - Academic Group Manager
      *
-     * @param array{start_date: string, end_date?: string} $params An
-     *   associative array
-     *     - start_date: Format - date-time (as date-time in RFC3339). The
-     *   DateTime of changes to academics enrollments to begin with
-     *     - end_date: (Optional) Format - date-time (as date-time in
+     * @param string $start_date Format - date-time (as date-time in RFC3339).
+     *   The DateTime of changes to academics enrollments to begin with
+     * @param ?string $end_date (Optional) Format - date-time (as date-time in
      *   RFC3339). The DateTime of changes to academics enrollments to end with.
 
      *
-     * @return \Blackbaud\SKY\School\Objects\EnrollmentChangesCollection
+     * @return \Blackbaud\SKY\School\Components\EnrollmentChangesCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function filterBy(array $params)
+    public function filterBy(string $start_date, ?string $end_date = null): EnrollmentChangesCollection
     {
-        return new EnrollmentChangesCollection($this->send("get", [], ["start_date" => $params["start_date"],
-        "end_date" => $params["end_date"]]));
+        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
+
+        return new EnrollmentChangesCollection($this->send("get", [], ["start_date" => $start_date,
+        "end_date" => $end_date]));
     }
 }

@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AttendanceCreate;
-use Blackbaud\SKY\School\Objects\AttendanceGetCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\AttendanceCreate;
+use Blackbaud\SKY\School\Components\AttendanceGetCollection;
 
 /**
  * @api
  */
-class attendance extends BaseEndpoint
+class Attendance extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/attendance";
 
@@ -27,27 +28,33 @@ class attendance extends BaseEndpoint
      *
      * - Attendance Manager
      *
-     * @param array{level_id: int, day: string, offering_type: int,
-     *   excuse_type?: int} $params An associative array
-     *     - level_id: Format - int32. The ID of the school level to retrieve
-     *   attendance records.
-     *     - day: Format - date-time (as date-time in RFC3339). The date to
-     *   return attendance for.
-     *     - offering_type: Format - int32. The offering type to retrieve
+     * @param int $level_id Format - int32. The ID of the school level to
+     *   retrieve attendance records.
+     * @param string $day Format - date-time (as date-time in RFC3339). The
+     *   date to return attendance for.
+     * @param int $offering_type Format - int32. The offering type to retrieve
      *   records for.
-     *     - excuse_type: (Optional) Format - int32. Filters results to a
-     *   specific excuse type.
+     * @param ?int $excuse_type (Optional) Format - int32. Filters results to
+     *   a specific excuse type.
      *
-     * @return \Blackbaud\SKY\School\Objects\AttendanceGetCollection
+     * @return \Blackbaud\SKY\School\Components\AttendanceGetCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function filterBy(array $params)
+    public function filterBy(int $level_id, string $day, int $offering_type, ?int $excuse_type = null): AttendanceGetCollection
     {
-        return new AttendanceGetCollection($this->send("get", [], ["level_id" => $params["level_id"],
-        "day" => $params["day"],
-        "offering_type" => $params["offering_type"],
-        "excuse_type" => $params["excuse_type"]]));
+        assert($level_id !== null, new ArgumentException("Parameter `level_id` is required"));
+        assert($day !== null, new ArgumentException("Parameter `day` is required"));
+        assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
+
+        return new AttendanceGetCollection($this->send("get", [], ["level_id" => $level_id,
+        "day" => $day,
+        "offering_type" => $offering_type,
+        "excuse_type" => $excuse_type]));
     }
 
     /**
@@ -60,15 +67,20 @@ class attendance extends BaseEndpoint
      *
      * - Attendance Manager
      *
-     * @param Blackbaud\SKY\School\Objects\AttendanceCreate $requestBody
+     * @param \Blackbaud\SKY\School\Components\AttendanceCreate $requestBody
      *   Information about the attendance report
      *
-     * @return \void
+     * @return void Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(AttendanceCreate $requestBody)
+    public function post(AttendanceCreate $requestBody): void
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

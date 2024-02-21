@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics\schedules;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\MasterScheduleDayCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\MasterScheduleDayCollection;
 
 /**
  * @api
  */
-class master extends BaseEndpoint
+class Master extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/schedules/master";
 
@@ -26,30 +27,36 @@ class master extends BaseEndpoint
      *
      * - Schedule Manager
      *
-     * @param array{level_num: int, start_date: string, end_date: string,
-     *   offering_type?: int} $params An associative array
-     *     - level_num: Format - int32. Level Number indicates which school
-     *   you are working with.
-     *     - start_date: Format - date-time (as date-time in RFC3339). Start
-     *   of the date range (inclusive).  The earliest possible start_date is
-     *   1/1/1900, any date entered before that date will be overwritten with
+     * @param int $level_num Format - int32. Level Number indicates which
+     *   school you are working with.
+     * @param string $start_date Format - date-time (as date-time in RFC3339).
+     *   Start of the date range (inclusive).  The earliest possible start_date
+     *   is 1/1/1900, any date entered before that date will be overwritten with
      *   1/1/1900.
-     *     - end_date: Format - date-time (as date-time in RFC3339). End of
-     *   the date range (inclusive). If the end_date is earlier than the
+     * @param string $end_date Format - date-time (as date-time in RFC3339).
+     *   End of the date range (inclusive). If the end_date is earlier than the
      *   start_date the end_date wil be overwritten with the start_date plus 7
      *   days.
-     *     - offering_type: (Optional) Format - int32. Filters the results by
-     *   a specific group type. Defaults to "All" offering types.
+     * @param ?int $offering_type (Optional) Format - int32. Filters the
+     *   results by a specific group type. Defaults to "All" offering types.
      *
-     * @return \Blackbaud\SKY\School\Objects\MasterScheduleDayCollection
+     * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function filterBy(array $params)
+    public function filterBy(int $level_num, string $start_date, string $end_date, ?int $offering_type = null): MasterScheduleDayCollection
     {
-        return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $params["level_num"],
-        "start_date" => $params["start_date"],
-        "end_date" => $params["end_date"],
-        "offering_type" => $params["offering_type"]]));
+        assert($level_num !== null, new ArgumentException("Parameter `level_num` is required"));
+        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
+        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
+
+        return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $level_num,
+        "start_date" => $start_date,
+        "end_date" => $end_date,
+        "offering_type" => $offering_type]));
     }
 }

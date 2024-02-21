@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\admissions;
+namespace Blackbaud\SKY\School\Endpoints\V1\Admissions;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AdmissionsStatusesCollection;
+use Blackbaud\SKY\School\Components\AdmissionsStatusesCollection;
 
 /**
  * @api
  */
-class status extends BaseEndpoint
+class Status extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/admissions/status";
 
@@ -26,11 +26,12 @@ class status extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @return \Blackbaud\SKY\School\Objects\AdmissionsStatusesCollection
+     * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AdmissionsStatusesCollection
     {
         return new AdmissionsStatusesCollection($this->send("get", [], []));
     }

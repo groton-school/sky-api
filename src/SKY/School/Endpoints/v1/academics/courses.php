@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\CourseCollection;
+use Blackbaud\SKY\School\Components\CourseCollection;
 
 /**
  * @api
  */
-class courses extends BaseEndpoint
+class Courses extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/courses";
 
@@ -26,20 +26,18 @@ class courses extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @param array{department_id?: int, level_id?: int} $params An
-     *   associative array
-     *     - department_id: (Optional) Format - int32. Identifier for a
+     * @param ?int $department_id (Optional) Format - int32. Identifier for a
      *   specific department.
-     *     - level_id: (Optional) Format - int32. Identifier for a specific
-     *   school level.
+     * @param ?int $level_id (Optional) Format - int32. Identifier for a
+     *   specific school level.
      *
-     * @return \Blackbaud\SKY\School\Objects\CourseCollection
+     * @return \Blackbaud\SKY\School\Components\CourseCollection Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?int $department_id = null, ?int $level_id = null): CourseCollection
     {
-        return new CourseCollection($this->send("get", [], ["department_id" => $params["department_id"],
-        "level_id" => $params["level_id"]]));
+        return new CourseCollection($this->send("get", [], ["department_id" => $department_id,
+        "level_id" => $level_id]));
     }
 }

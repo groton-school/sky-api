@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\RoleCollection;
+use Blackbaud\SKY\School\Components\RoleCollection;
 
 /**
  * @api
  */
-class roles extends BaseEndpoint
+class Roles extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/roles";
 
@@ -25,11 +25,11 @@ class roles extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\RoleCollection
+     * @return \Blackbaud\SKY\School\Components\RoleCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): RoleCollection
     {
         return new RoleCollection($this->send("get", [], []));
     }

@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\SportsLevelCollection;
+use Blackbaud\SKY\School\Components\SportsLevelCollection;
 
 /**
  * @api
  */
-class sportslevels extends BaseEndpoint
+class Sportslevels extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/sportslevels";
 
@@ -29,11 +29,11 @@ class sportslevels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\SportsLevelCollection
+     * @return \Blackbaud\SKY\School\Components\SportsLevelCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): SportsLevelCollection
     {
         return new SportsLevelCollection($this->send("get", [], []));
     }

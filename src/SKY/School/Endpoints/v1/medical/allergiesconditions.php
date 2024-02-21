@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\medical;
+namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\StudentMedicalAllergyCondition;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition;
 
 /**
  * @api
  */
-class allergiesconditions extends BaseEndpoint
+class Allergiesconditions extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/allergiesconditions";
 
@@ -27,15 +28,20 @@ class allergiesconditions extends BaseEndpoint
      * ***This endpoint is in BETA. It may be removed or replaced with a 90
      * day deprecation period.***
      *
-     * @param Blackbaud\SKY\School\Objects\StudentMedicalAllergyCondition
+     * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
      *
-     * @return \int
+     * @return int ID of the student medical allergy/condition just created.
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(StudentMedicalAllergyCondition $requestBody)
+    public function post(StudentMedicalAllergyCondition $requestBody): int
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return $this->send("post", [], [], $requestBody);
     }
 }

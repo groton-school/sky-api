@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\athletics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\AthleticVenueCollection;
+use Blackbaud\SKY\School\Components\AthleticVenueCollection;
 
 /**
  * @api
  */
-class venues extends BaseEndpoint
+class Venues extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/venues";
 
@@ -29,11 +29,12 @@ class venues extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Objects\AthleticVenueCollection
+     * @return \Blackbaud\SKY\School\Components\AthleticVenueCollection
+     *   Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): AthleticVenueCollection
     {
         return new AthleticVenueCollection($this->send("get", [], []));
     }

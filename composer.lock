@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "443151cadb82b8b20e0c47d16d88036f",
+    "content-hash": "c6d3c2347ab31c28d38261a63dbe657c",
     "packages": [
         {
             "name": "battis/data-utilities",
-            "version": "v1.2.3",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/data-utilities.git",
-                "reference": "bf7af938e51894717951c397e4bd4d00c5447fa8"
+                "reference": "9bf8dc8385a8563b2a7a6534eedd3c359acb90de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/data-utilities/zipball/bf7af938e51894717951c397e4bd4d00c5447fa8",
-                "reference": "bf7af938e51894717951c397e4bd4d00c5447fa8",
+                "url": "https://api.github.com/repos/battis/data-utilities/zipball/9bf8dc8385a8563b2a7a6534eedd3c359acb90de",
+                "reference": "9bf8dc8385a8563b2a7a6534eedd3c359acb90de",
                 "shasum": ""
             },
             "require": {
@@ -45,9 +45,9 @@
             "description": "A handful of useful helper functions to process data",
             "support": {
                 "issues": "https://github.com/battis/data-utilities/issues",
-                "source": "https://github.com/battis/data-utilities/tree/v1.2.3"
+                "source": "https://github.com/battis/data-utilities/tree/v1.2.6"
             },
-            "time": "2024-02-14T00:57:22+00:00"
+            "time": "2024-02-18T20:14:24+00:00"
         },
         {
             "name": "battis/hydratable",
@@ -914,12 +914,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/loggable.git",
-                "reference": "39f1b5e6a543a763e08991c43eb0909d002e3893"
+                "reference": "551edb0b14aa7f9d3cf8f137172095f24e46c56f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/loggable/zipball/39f1b5e6a543a763e08991c43eb0909d002e3893",
-                "reference": "39f1b5e6a543a763e08991c43eb0909d002e3893",
+                "url": "https://api.github.com/repos/battis/loggable/zipball/551edb0b14aa7f9d3cf8f137172095f24e46c56f",
+                "reference": "551edb0b14aa7f9d3cf8f137172095f24e46c56f",
                 "shasum": ""
             },
             "require": {
@@ -947,7 +947,7 @@
                 "issues": "https://github.com/battis/loggable/issues",
                 "source": "https://github.com/battis/loggable/tree/main"
             },
-            "time": "2024-02-16T17:24:10+00:00"
+            "time": "2024-02-18T16:34:08+00:00"
         },
         {
             "name": "battis/openapi-client-generator",
@@ -955,11 +955,12 @@
             "dist": {
                 "type": "path",
                 "url": "../openapi-client-generator",
-                "reference": "434b7710ab4ef9cd87c79675663a2ce85a83d29b"
+                "reference": "6a3c7e56350f2a99082c71a2a261ac3287d7535f"
             },
             "require": {
                 "battis/data-utilities": "^1.2",
                 "battis/loggable": "dev-main",
+                "battis/php-generator": "dev-main",
                 "cebe/php-openapi": "^1.7",
                 "friendsofphp/php-cs-fixer": "^3.49",
                 "league/html-to-markdown": "^5.1",
@@ -986,6 +987,38 @@
                 }
             ],
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "battis/php-generator",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../php-generator",
+                "reference": "b1ac850f802fb3c37374df54524aafa39f0a88a4"
+            },
+            "require": {
+                "battis/data-utilities": "^1.2",
+                "league/html-to-markdown": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Battis\\PHPGenerator\\": "src"
+                }
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Seth Battis",
+                    "email": "seth@battis.net"
+                }
+            ],
+            "description": "Generate PHP code dynamically",
             "transport-options": {
                 "relative": true
             }
@@ -3639,7 +3672,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "battis/openapi-client-generator": 20
+        "battis/openapi-client-generator": 20,
+        "battis/php-generator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

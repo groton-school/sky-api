@@ -1,19 +1,25 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1;
+namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ListReadCollection;
+use Blackbaud\SKY\School\Components\ListReadCollection;
+use Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced;
 
 /**
  * @api
  */
-class lists extends BaseEndpoint
+class Lists extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/lists";
+
+    /**
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
+     */
+    public Advanced $_advanced;
 
     /**
      * Returns a list of basic or advanced lists the authorized user has
@@ -69,12 +75,25 @@ class lists extends BaseEndpoint
      *
      * - SkyApi Data Sync
      *
-     * @return \Blackbaud\SKY\School\Objects\ListReadCollection
+     * @return \Blackbaud\SKY\School\Components\ListReadCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): ListReadCollection
     {
         return new ListReadCollection($this->send("get", [], []));
+    }
+
+    /**
+     * @return \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced
+     *
+     * @api
+     */
+    public function advanced(): Advanced
+    {
+        if ($this->_advanced === null) {
+            $this->_advanced = new Advanced($this->api);
+        }
+        return $this->_advanced;
     }
 }

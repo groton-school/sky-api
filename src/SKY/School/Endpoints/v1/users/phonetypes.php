@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\PhoneTypeCollection;
+use Blackbaud\SKY\School\Components\PhoneTypeCollection;
 
 /**
  * @api
  */
-class phonetypes extends BaseEndpoint
+class Phonetypes extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/phonetypes";
 
@@ -23,11 +23,11 @@ class phonetypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Objects\PhoneTypeCollection
+     * @return \Blackbaud\SKY\School\Components\PhoneTypeCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): PhoneTypeCollection
     {
         return new PhoneTypeCollection($this->send("get", [], []));
     }

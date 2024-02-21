@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users\emergencycontacts;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\EmergencyContactChangeCollection;
+use Blackbaud\SKY\School\Components\EmergencyContactChangeCollection;
 
 /**
  * @api
  */
-class changed extends BaseEndpoint
+class Changed extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/emergencycontacts/changed";
 
@@ -30,21 +30,22 @@ class changed extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{start_date?: string, marker?: int} $params An associative
-     *   array - start_date: (Optional) Format - date-time (as date-time in
-     *   RFC3339). The date to begin looking for changes. Use
+     * @param ?string $start_date (Optional) Format - date-time (as date-time
+     *   in RFC3339). The date to begin looking for changes. Use
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
-     *   2022-04-16. - marker: (Optional) Format - int32. The user's ID to start
+     *   2022-04-16.
+     * @param ?int $marker (Optional) Format - int32. The user's ID to start
      *   at to return the next batch of data. Results will start with the next
      *   user in the result set.
      *
-     * @return \Blackbaud\SKY\School\Objects\EmergencyContactChangeCollection
+     * @return \Blackbaud\SKY\School\Components\EmergencyContactChangeCollection
+     *   Success
      *
      * @api
      */
-    public function filterBy(array $params = [])
+    public function filterBy(?string $start_date = null, ?int $marker = null): EmergencyContactChangeCollection
     {
-        return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $params["start_date"],
-        "marker" => $params["marker"]]));
+        return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $start_date,
+        "marker" => $marker]));
     }
 }

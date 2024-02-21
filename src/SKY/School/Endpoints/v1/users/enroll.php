@@ -1,18 +1,19 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\users;
+namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\UserEnrollmentCreate;
-use Blackbaud\SKY\School\Objects\UserEnrollmentResponse;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\UserEnrollmentCreate;
+use Blackbaud\SKY\School\Components\UserEnrollmentResponse;
 
 /**
  * @api
  */
-class enroll extends BaseEndpoint
+class Enroll extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/enroll";
 
@@ -24,14 +25,20 @@ class enroll extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param Blackbaud\SKY\School\Objects\UserEnrollmentCreate $requestBody
+     * @param \Blackbaud\SKY\School\Components\UserEnrollmentCreate
+     *   $requestBody
      *
-     * @return \Blackbaud\SKY\School\Objects\UserEnrollmentResponse
+     * @return \Blackbaud\SKY\School\Components\UserEnrollmentResponse Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function post(UserEnrollmentCreate $requestBody)
+    public function post(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
     {
+        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+
         return new UserEnrollmentResponse($this->send("post", [], [], $requestBody));
     }
 }

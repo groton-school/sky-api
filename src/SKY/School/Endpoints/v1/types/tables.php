@@ -1,17 +1,17 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\types;
+namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\TableCollection;
+use Blackbaud\SKY\School\Components\TableCollection;
 
 /**
  * @api
  */
-class tables extends BaseEndpoint
+class Tables extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/types/tables";
 
@@ -23,11 +23,11 @@ class tables extends BaseEndpoint
      * 100) ***This endpoint is in BETA. It may be removed or replaced with a
      * 90 day deprecation period.***
      *
-     * @return \Blackbaud\SKY\School\Objects\TableCollection
+     * @return \Blackbaud\SKY\School\Components\TableCollection Success
      *
      * @api
      */
-    public function getAll()
+    public function getAll(): TableCollection
     {
         return new TableCollection($this->send("get", [], []));
     }

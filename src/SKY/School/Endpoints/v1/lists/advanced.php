@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\lists;
+namespace Blackbaud\SKY\School\Endpoints\V1\Lists;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\ListResult;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\ListResult;
 
 /**
  * @api
  */
-class advanced extends BaseEndpoint
+class Advanced extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/lists/advanced/{list_id}";
 
@@ -72,21 +73,26 @@ class advanced extends BaseEndpoint
      *
      * - SkyApi Data Sync
      *
-     * @param array{list_id: int, page?: int, page_size?: int} $params An
-     *   associative array - list_id: Format - int32. The ID of the list. To
-     *   learn how to find the list ID, see [KB article
-     *   108336](https://kb.blackbaud.com/articles/Article/108336). - page:
-     *   (Optional) Format - int32. The number of the page to return. Defaults
-     *   to **1**. - page_size: (Optional) Format - int32. Number of rows to
+     * @param int $list_id Format - int32. The ID of the list. To learn how to
+     *   find the list ID, see [KB article
+     *   108336](https://kb.blackbaud.com/articles/Article/108336).
+     * @param ?int $page (Optional) Format - int32. The number of the page to
+     *   return. Defaults to **1**.
+     * @param ?int $page_size (Optional) Format - int32. Number of rows to
      *   return per page. Default is 1000. Maximum allowed is 1000.
      *
-     * @return \Blackbaud\SKY\School\Objects\ListResult
+     * @return \Blackbaud\SKY\School\Components\ListResult Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function get(array $params)
+    public function get(int $list_id, ?int $page = null, ?int $page_size = null): ListResult
     {
-        return new ListResult($this->send("get", ["{list_id}" => $params["list_id"]], ["page" => $params["page"],
-        "page_size" => $params["page_size"]]));
+        assert($list_id !== null, new ArgumentException("Parameter `list_id` is required"));
+
+        return new ListResult($this->send("get", ["{list_id}" => $list_id], ["page" => $page,
+        "page_size" => $page_size]));
     }
 }

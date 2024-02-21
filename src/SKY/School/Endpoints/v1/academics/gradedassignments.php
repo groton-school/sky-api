@@ -1,17 +1,18 @@
 <?php
 
-namespace Blackbaud\SKY\School\Endpoints\v1\academics;
+namespace Blackbaud\SKY\School\Endpoints\V1\Academics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Objects\StudentGradedAssignmentCollection;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\School\Components\StudentGradedAssignmentCollection;
 
 /**
  * @api
  */
-class gradedassignments extends BaseEndpoint
+class Gradedassignments extends BaseEndpoint
 {
     /**
-     * @var string url
+     * @var string $url
      */
     protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/{student_id}/{section_id}/gradedassignments";
 
@@ -26,22 +27,28 @@ class gradedassignments extends BaseEndpoint
      *
      * - Parent
      *
-     * @param array{student_id: int, section_id: int, marking_period_id: int}
-     *   $params An associative array
-     *     - student_id: Format - int32. The ID of the student to view graded
-     *   assignments for.
-     *     - section_id: Format - int32. The ID of the lead section for the
-     *   student.
-     *     - marking_period_id: Format - int32. The ID of the marking period
-     *   to return grades for.
+     * @param int $student_id Format - int32. The ID of the student to view
+     *   graded assignments for.
+     * @param int $section_id Format - int32. The ID of the lead section for
+     *   the student.
+     * @param int $marking_period_id Format - int32. The ID of the marking
+     *   period to return grades for.
      *
-     * @return \Blackbaud\SKY\School\Objects\StudentGradedAssignmentCollection
+     * @return \Blackbaud\SKY\School\Components\StudentGradedAssignmentCollection
+     *   Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      *
      * @api
      */
-    public function getByStudentAndSection(array $params)
+    public function getByStudentAndSection(int $student_id, int $section_id, int $marking_period_id): StudentGradedAssignmentCollection
     {
-        return new StudentGradedAssignmentCollection($this->send("get", ["{student_id}" => $params["student_id"],
-        "{section_id}" => $params["section_id"]], ["marking_period_id" => $params["marking_period_id"]]));
+        assert($student_id !== null, new ArgumentException("Parameter `student_id` is required"));
+        assert($section_id !== null, new ArgumentException("Parameter `section_id` is required"));
+        assert($marking_period_id !== null, new ArgumentException("Parameter `marking_period_id` is required"));
+
+        return new StudentGradedAssignmentCollection($this->send("get", ["{student_id}" => $student_id,
+        "{section_id}" => $section_id], ["marking_period_id" => $marking_period_id]));
     }
 }
