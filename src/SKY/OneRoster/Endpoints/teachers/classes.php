@@ -21,13 +21,11 @@ class Classes extends BaseEndpoint
      *
      * @param string $teacher_id sourcedId for the teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModelOK - It was
-     *   possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModel OK - It
+     *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByTeacher(string $teacher_id): ClassOutputModel
     {

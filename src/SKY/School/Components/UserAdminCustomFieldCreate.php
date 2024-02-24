@@ -16,9 +16,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $int_value If the field format is Number, use this property
  *   for the value of the custom field. Values must be a whole number (positive
  *   or negative).
- * If the field format is Dropdown or Checkbox List, use this property for the
- *   value of the custom field. The value is the table value ID returned from
- *   [Core custom
+ *  If the field format is Dropdown or Checkbox List, use this property for
+ *   the value of the custom field. The value is the table value ID returned
+ *   from [Core custom
  *   fields](https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet).
  * @property ?string $text_value If the field format is Text input or Text
  *   paragraph, use this property for the value of the custom field.

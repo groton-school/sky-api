@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\StudentConditionUpdate;
 use Blackbaud\SKY\School\Components\StudentMedicalCondition;
 
@@ -15,27 +16,26 @@ class Conditions extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/medical/conditions/{condition_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/conditions/{condition_id}";
 
     /**
      * Delete a medical condition for a student.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $condition_id Format - int32. The ID of the student's
      *   condition.
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function delete(int $condition_id): int
     {
@@ -47,24 +47,23 @@ class Conditions extends BaseEndpoint
     /**
      * Update a medical condition for a student.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $condition_id Format - int32. The ID of the student's
      *   condition.
      * @param \Blackbaud\SKY\School\Components\StudentConditionUpdate
      *   $requestBody The condition changes
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function patch(int $condition_id, StudentConditionUpdate $requestBody): int
     {
@@ -77,24 +76,23 @@ class Conditions extends BaseEndpoint
     /**
      * Creates a condition for a student.
      *
-     * Returns the newly created ID.
+     *  Returns the newly created ID.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalCondition
      *   $requestBody The medical condition to be created for student
      *
-     * @return intID of the student medical condition just created.
+     * @return int ID of the student medical condition just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(StudentMedicalCondition $requestBody): int
     {

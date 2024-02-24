@@ -21,13 +21,11 @@ class Results extends BaseEndpoint
      *
      * @param string $class_id sourcedId for the class
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByClass(string $class_id): ResultsOutputModelSvc
     {

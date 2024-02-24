@@ -10,7 +10,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Types\Tables;
 use Blackbaud\SKY\School\Endpoints\V1\Types\Tablevalues;
 
 /**
- * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Types
+ * Routing class for the subnamespace `Types`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Types\Attendancetypes
  *   $attendancetypes
@@ -26,8 +26,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Types\Tablevalues;
 class Types extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "attendancetypes" => "\Blackbaud\SKY\School\Endpoints\V1\Types\Attendancetypes",
@@ -38,31 +38,30 @@ class Types extends BaseEndpoint
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types\Attendancetypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Types\Attendancetypes
      *   $_attendancetypes
      */
-    protected ?Attendancetypes $_attendancetypes = null;
+    protected Attendancetypes $_attendancetypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types\Excusedurationtypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Types\Excusedurationtypes
      *   $_excusedurationtypes
      */
-    protected ?Excusedurationtypes $_excusedurationtypes = null;
+    protected Excusedurationtypes $_excusedurationtypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types\Excusedtypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Types\Excusedtypes
      *   $_excusedtypes
      */
-    protected ?Excusedtypes $_excusedtypes = null;
+    protected Excusedtypes $_excusedtypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types\Tables $_tables
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Types\Tables $_tables
      */
-    protected ?Tables $_tables = null;
+    protected Tables $_tables = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Types\Tablevalues
-     *   $_tablevalues
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Types\Tablevalues $_tablevalues
      */
-    protected ?Tablevalues $_tablevalues = null;
+    protected Tablevalues $_tablevalues = null;
 }

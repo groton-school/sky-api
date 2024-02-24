@@ -23,7 +23,8 @@ class Advanced extends BaseEndpoint
      * role listed below or the user requesting the list needs read permission
      * to that list.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Page Manager
      *
@@ -76,21 +77,21 @@ class Advanced extends BaseEndpoint
      * @param int $list_id Format - int32. The ID of the list. To learn how to
      *   find the list ID, see [KB article
      *   108336](https://kb.blackbaud.com/articles/Article/108336).
-     * @param ?int $page (Optional) Format - int32. The number of the page to
-     *   return. Defaults to **1**.
-     * @param ?int $page_size (Optional) Format - int32. Number of rows to
-     *   return per page. Default is 1000. Maximum allowed is 1000.
+     * @param ?int $page Format - int32. The number of the page to return.
+     *   Defaults to **1**.
+     * @param ?int $page_size Format - int32. Number of rows to return per
+     *   page. Default is 1000. Maximum allowed is 1000.
      *
-     * @return \Blackbaud\SKY\School\Components\ListResultSuccess
+     * @return \Blackbaud\SKY\School\Components\ListResult Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
-    public function get(int $list_id, ?int $page = null, ?int $page_size = null): ListResult
+    public function get(int $list_id, ?int $page, ?int $page_size): ListResult
     {
         assert($list_id !== null, new ArgumentException("Parameter `list_id` is required"));
+        assert($page !== null, new ArgumentException("Parameter `page` is required"));
+        assert($page_size !== null, new ArgumentException("Parameter `page_size` is required"));
 
         return new ListResult($this->send("get", ["{list_id}" => $list_id], ["page" => $page,
         "page_size" => $page_size]));

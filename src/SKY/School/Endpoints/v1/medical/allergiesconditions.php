@@ -19,24 +19,23 @@ class Allergiesconditions extends BaseEndpoint
     /**
      * Creates medical allergy/condition record for a student.
      *
-     * Returns the newly created ID.
+     *  Returns the newly created ID.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
      *
-     * @return intID of the student medical allergy/condition just created.
+     * @return int ID of the student medical allergy/condition just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(StudentMedicalAllergyCondition $requestBody): int
     {

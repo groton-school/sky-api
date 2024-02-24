@@ -30,9 +30,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $custom_field_two A custom field on the user profile (two
  *   of ten)
  * @property bool $deceased Returns true if deceased is selected under
- *   sensitive information in a personal profile ex: {last_name} {suffix*},
- *   {first_name} {(maidenname*}) {grad_year*} *If not populated fields will not
- *   appear (read only)
+ *   sensitive information in a personal profile ex: {last\_name} {suffix\*},
+ *   {first\_name} {(maidenname\*}) {grad\_year\*} \*If not populated fields
+ *   will not appear (read only)
  * @property ?string $display Display name field generated from first name,
  *   last name, nickname, and grad year (read only)
  * @property ?string $email The email address of a user

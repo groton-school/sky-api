@@ -18,15 +18,13 @@ class Testtypes extends BaseEndpoint
     /**
      * Returns a collection of test and subtest types for a school.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Grading Manager
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\TestTypeCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\TestTypeCollection Success
      */
     public function getAll(): TestTypeCollection
     {

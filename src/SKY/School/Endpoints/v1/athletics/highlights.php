@@ -18,12 +18,12 @@ class Highlights extends BaseEndpoint
 
     /**
      * Returns an athletic game's highlights for the specified
-     * ```highlight_id```.
+     * ```highlight\_id```.
      *
-     * This ID can be obtained via the GET athletics schedules endpoint for a
+     *  This ID can be obtained via the GET athletics schedules endpoint for a
      * game if highlights exist for that game.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -41,12 +41,10 @@ class Highlights extends BaseEndpoint
      * @param int $highlight_id Format - int32. ID of the highlight to be
      *   returned.
      *
-     * @return \Blackbaud\SKY\School\Components\HighlightSuccess
+     * @return \Blackbaud\SKY\School\Components\Highlight Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(int $highlight_id): Highlight
     {

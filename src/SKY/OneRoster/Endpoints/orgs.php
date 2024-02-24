@@ -15,15 +15,13 @@ class Orgs extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/orgs/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/orgs/{id}";
 
     /**
      * Returns a collection of organizations.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModelOK - It was
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
      *   possible to read the collection.
-     *
-     * @api
      */
     public function getAll(): OrgsOutputModel
     {
@@ -35,13 +33,11 @@ class Orgs extends BaseEndpoint
      *
      * @param string $id sourcedId for the org
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModelOK - It was
+     * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModel OK - It was
      *   possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): OrgOutputModel
     {

@@ -4,11 +4,14 @@ namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\TestScoreAdd;
 use Blackbaud\SKY\School\Components\TestScoreCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes;
 
 /**
+ * Routing class for the subnamespace `Testscores`
+ *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
  *   $testtypes
  *
@@ -19,56 +22,57 @@ class Testscores extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/testscores/{user_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/testscores/{user_id}";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "testtypes" => "\Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
      *   $_testtypes
      */
-    protected ?Testtypes $_testtypes = null;
+    protected Testtypes $_testtypes = null;
 
     /**
      * Returns a collection of test scores.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Grading Manager
      *
-     * @param ?int $user_id (Optional) Format - int32. The ID of the user.
+     * @param ?int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\TestScoreCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\TestScoreCollection Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?int $user_id = null): TestScoreCollection
+    public function filterBy(?int $user_id): TestScoreCollection
     {
+        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+
         return new TestScoreCollection($this->send("get", [], ["user_id" => $user_id]));
     }
 
     /**
-     * Creates a test score for a student ```user_id```
+     * Creates a test score for a student ```user\_id```
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Grading Manager
      *
      * @param int $user_id Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\TestScoreAdd $requestBody
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(int $user_id, TestScoreAdd $requestBody): int
     {

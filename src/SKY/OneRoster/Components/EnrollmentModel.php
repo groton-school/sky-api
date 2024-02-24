@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseComponent;
 
 /**
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $user
- * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $class
+ * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $class_
  * @property \Blackbaud\SKY\OneRoster\Components\GuidRefModel $school
  * @property ?string $role
  * @property ?bool $primary
@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified
- * @property ?string[] $metadata
+ * @property ?array{...<string, string>} $metadata
  *
  * @api
  */
@@ -35,6 +35,6 @@ class EnrollmentModel extends BaseComponent
         "sourcedId" => "string",
         "status" => "string",
         "dateLastModified" => "string",
-        "metadata" => "string[]",
+        "metadata" => "array{...<string, string>}",
     ];
 }

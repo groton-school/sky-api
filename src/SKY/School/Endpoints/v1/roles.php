@@ -18,16 +18,14 @@ class Roles extends BaseEndpoint
     /**
      * Returns a collection of core school user roles.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\RoleCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\RoleCollection Success
      */
     public function getAll(): RoleCollection
     {

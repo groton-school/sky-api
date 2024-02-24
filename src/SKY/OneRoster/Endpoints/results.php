@@ -7,6 +7,7 @@ use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\OneRoster\Components\ResultInputModelSvc;
 use Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc;
 use Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc;
+use Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc;
 
 /**
  * @api
@@ -16,15 +17,13 @@ class Results extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/results/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/results/{id}";
 
     /**
      * Returns a collection of results.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the collection.
-     *
-     * @api
      */
     public function getAll(): ResultsOutputModelSvc
     {
@@ -36,13 +35,11 @@ class Results extends BaseEndpoint
      *
      * @param string $id sourcedId for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvcOK - It
-     *   was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc OK -
+     *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): ResultOutputModelSvc
     {
@@ -58,13 +55,11 @@ class Results extends BaseEndpoint
      * @param \Blackbaud\SKY\OneRoster\Components\ResultInputModelSvc
      *   $requestBody input model for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvcOK - It
-     *   was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc OK -
+     *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function put(string $id, ResultInputModelSvc $requestBody): ResultOutputModelSvc
     {
@@ -79,13 +74,11 @@ class Results extends BaseEndpoint
      *
      * @param string $id sourcedId for the result
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvcOK -
+     * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   Resource has been deleted.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function delete(string $id): ResultsOutputModelSvc
     {

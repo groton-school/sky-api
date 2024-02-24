@@ -18,7 +18,7 @@ class Venues extends BaseEndpoint
     /**
      * Returns a collection of athletic venues.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -29,9 +29,8 @@ class Venues extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\AthleticVenueCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AthleticVenueCollection
+     *   Success
      */
     public function getAll(): AthleticVenueCollection
     {

@@ -20,7 +20,7 @@ class Enroll extends BaseEndpoint
     /**
      * Creates the users enrollment record.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -28,12 +28,10 @@ class Enroll extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserEnrollmentCreate
      *   $requestBody
      *
-     * @return \Blackbaud\SKY\School\Components\UserEnrollmentResponseSuccess
+     * @return \Blackbaud\SKY\School\Components\UserEnrollmentResponse Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
     {

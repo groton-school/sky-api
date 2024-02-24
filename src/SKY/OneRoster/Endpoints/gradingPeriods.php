@@ -15,15 +15,13 @@ class GradingPeriods extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/gradingPeriods/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/gradingPeriods/{id}";
 
     /**
      * Returns a collection of grading periods.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModelOK
-     *   - It was possible to read the collection.
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
+     *   OK - It was possible to read the collection.
      */
     public function getAll(): AcademicSessionsOutputModel
     {
@@ -35,13 +33,11 @@ class GradingPeriods extends BaseEndpoint
      *
      * @param string $id sourcedId for the grading period
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModelOK
-     *   - It was possible to read the collection.
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModel
+     *   OK - It was possible to read the collection.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): AcademicSessionOutputModel
     {

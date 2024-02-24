@@ -9,6 +9,8 @@ use Blackbaud\SKY\OneRoster\Components\UsersOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes;
 
 /**
+ * Routing class for the subnamespace `Teachers`
+ *
  * @property \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $classes
  *
  * @api
@@ -18,33 +20,31 @@ class Teachers extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/teachers/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/teachers/{id}";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "classes" => "\Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
+     * @var \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
      */
-    protected ?Classes $_classes = null;
+    protected Classes $_classes = null;
 
     /**
      * Returns a collection of teacher user data.
      *
-     * Roles returned include:
+     *  Roles returned include:
      *
      * - Teacher
      *
      * - Pending Teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
     public function getAll(): UsersOutputModel
     {
@@ -54,7 +54,7 @@ class Teachers extends BaseEndpoint
     /**
      * Returns a single teacher user for the specified `id`.
      *
-     * Roles returned include:
+     *  Roles returned include:
      *
      * - Teacher
      *
@@ -62,12 +62,10 @@ class Teachers extends BaseEndpoint
      *
      * @param string $id sourcedId for the teacher
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModelSuccess
+     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModel Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): UserOutputModel
     {

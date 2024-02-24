@@ -8,6 +8,8 @@ use Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results;
 
 /**
+ * Routing class for the subnamespace `LineItems`
+ *
  * @property \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results
  *   $results
  *
@@ -21,31 +23,29 @@ class LineItems extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/lineItems";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "results" => "\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results
+     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results
      *   $_results
      */
-    protected ?Results $_results = null;
+    protected Results $_results = null;
 
     /**
      * Returns a collection of lineItems for the specified `class_id`.
      *
      * @param string $class_id sourcedId for the class
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModelOK - It
-     *   was possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
+     *   It was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByClass(string $class_id): LineItemsOutputModel
     {

@@ -19,9 +19,9 @@ class Share extends BaseEndpoint
     /**
      * For an existing user, create a link to an existing phone number.
      *
-     * Returns the ID of the phone number just shared.
+     *  Returns the ID of the phone number just shared.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Contact Card Manager
@@ -30,20 +30,18 @@ class Share extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $user_id Format - int32. The Id of the user the existing
      *   address should be shared.
      * @param \Blackbaud\SKY\School\Components\PhoneShare $requestBody The
      *   details about the phone number that should be shared with the user.
      *
-     * @return intID of the address just shared.
+     * @return int ID of the address just shared.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByUser(int $user_id, PhoneShare $requestBody): int
     {

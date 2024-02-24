@@ -20,7 +20,7 @@ class Teachers extends BaseEndpoint
      * Returns a collection of teacher user data for the specified
      * `school_id`.
      *
-     * Roles returned include:
+     *  Roles returned include:
      *
      * - Teacher
      *
@@ -28,12 +28,10 @@ class Teachers extends BaseEndpoint
      *
      * @param string $school_id sourcedId for the school
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getBySchool(string $school_id): UsersOutputModel
     {

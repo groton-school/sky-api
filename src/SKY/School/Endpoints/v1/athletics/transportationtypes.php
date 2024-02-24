@@ -18,7 +18,7 @@ class Transportationtypes extends BaseEndpoint
     /**
      * Returns a collection of athletic transportation types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -33,10 +33,8 @@ class Transportationtypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\TransportationCollectionSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\TransportationCollection
+     *   Success
      */
     public function getAll(): TransportationCollection
     {

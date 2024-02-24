@@ -18,13 +18,11 @@ class Excusedurationtypes extends BaseEndpoint
     /**
      * Returns a collection of excuse duration types.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypesSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypes Success
      */
     public function getAll(): ExcuseDurationTypes
     {

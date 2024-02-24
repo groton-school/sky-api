@@ -12,7 +12,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $course_description
  * @property bool $inactive
  * @property ?int $level_num
- * @property ?string $block_type_id
+ * @property null|"Homeroom"|"Academic"|"Lunch"|"Double"|"NonAcademic"
+ *   $block_type_id
  * @property ?int $room_type_id
  * @property ?int $room_id
  * @property ?int $building_id

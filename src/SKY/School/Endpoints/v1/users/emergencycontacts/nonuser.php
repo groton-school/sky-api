@@ -19,7 +19,7 @@ class Nonuser extends BaseEndpoint
     /**
      * Creates a non-user emergency contact for the given user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -28,12 +28,10 @@ class Nonuser extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EmergencyContactNonUserCreate
      *   $requestBody
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByUser(int $user_id, EmergencyContactNonUserCreate $requestBody): void
     {

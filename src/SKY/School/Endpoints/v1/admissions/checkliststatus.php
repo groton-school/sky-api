@@ -18,14 +18,12 @@ class Checkliststatus extends BaseEndpoint
     /**
      * Returns a collection of admissions checklist statuses.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Admissions Manager
      *
-     * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollectionSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection
+     *   Success
      */
     public function getAll(): AdmissionsChecklistStatusCollection
     {

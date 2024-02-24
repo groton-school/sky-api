@@ -10,7 +10,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   in
  * @property int $school_level_id ID of the school level
  * @property ?string $school_year_label School Year individual is enrolling
- *   in.  Defaults to the current school year.
+ *   in. Defaults to the current school year.
  * @property string $enroll_date Date of the enrollment
  * @property ?string $depart_date Date departed
  * @property bool $current_year Toggles current year

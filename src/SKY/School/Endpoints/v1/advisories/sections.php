@@ -20,26 +20,25 @@ class Sections extends BaseEndpoint
      * Returns a collection of advisory sections for the specified school
      * level
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Sky API Advisory Group Manager
      *
      * @param int $level_num Format - int32. Level number
-     * @param ?string $school_year (Optional) The school year to get advisory
-     *   sections for.
+     * @param ?string $school_year The school year to get advisory sections
+     *   for.
      * Defaults to the current school year.
      *
-     * @return \Blackbaud\SKY\School\Components\AdvisoriesSectionCollectionSuccess
-
+     * @return \Blackbaud\SKY\School\Components\AdvisoriesSectionCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
-    public function filterBy(int $level_num, ?string $school_year = null): AdvisoriesSectionCollection
+    public function filterBy(int $level_num, ?string $school_year): AdvisoriesSectionCollection
     {
         assert($level_num !== null, new ArgumentException("Parameter `level_num` is required"));
+        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
 
         return new AdvisoriesSectionCollection($this->send("get", [], ["level_num" => $level_num,
         "school_year" => $school_year]));

@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Endpoints\V1\Dorms\All;
 
 /**
- * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Dorms
+ * Routing class for the subnamespace `Dorms`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Dorms\All $all
  *
@@ -15,15 +15,15 @@ use Blackbaud\SKY\School\Endpoints\V1\Dorms\All;
 class Dorms extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "all" => "\Blackbaud\SKY\School\Endpoints\V1\Dorms\All",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
      */
-    protected ?All $_all = null;
+    protected All $_all = null;
 }

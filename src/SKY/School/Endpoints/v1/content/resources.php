@@ -25,12 +25,10 @@ class Resources extends BaseEndpoint
      *
      * - Student
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
-     * @return \Blackbaud\SKY\School\Components\ResourceCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\ResourceCollection Success
      */
     public function getAll(): ResourceCollection
     {

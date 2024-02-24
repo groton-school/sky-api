@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Dorms;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\DormCollection;
 
 /**
@@ -25,16 +26,20 @@ class All extends BaseEndpoint
      *
      * - Pending Dorm Supervisor
      *
-     * @param ?int $level_number (Optional) Format - int32. Identifier for the
-     *   school level
-     * @param ?string $school_year (Optional) Identifier for the school year
+     * @param ?int $level_number Format - int32. Identifier for the school
+     *   level
+     * @param ?string $school_year Identifier for the school year
      *
-     * @return \Blackbaud\SKY\School\Components\DormCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\DormCollection Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?int $level_number = null, ?string $school_year = null): DormCollection
+    public function filterBy(?int $level_number, ?string $school_year): DormCollection
     {
+        assert($level_number !== null, new ArgumentException("Parameter `level_number` is required"));
+        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
+
         return new DormCollection($this->send("get", [], ["level_number" => $level_number,
         "school_year" => $school_year]));
     }

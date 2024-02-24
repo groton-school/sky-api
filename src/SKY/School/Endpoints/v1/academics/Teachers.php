@@ -6,8 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections;
 
 /**
- * Routing class for the namespace
- * Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers
+ * Routing class for the subnamespace `Teachers`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections
  *   $sections
@@ -17,16 +16,16 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections;
 class Teachers extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "sections" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections
      *   $_sections
      */
-    protected ?Sections $_sections = null;
+    protected Sections $_sections = null;
 }

@@ -20,7 +20,7 @@ class Locations extends BaseEndpoint
     /**
      * Returns a collection of athletic locations.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -33,9 +33,7 @@ class Locations extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\LocationCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\LocationCollection Success
      */
     public function getAll(): LocationCollection
     {
@@ -45,10 +43,10 @@ class Locations extends BaseEndpoint
     /**
      * Creates a new athletic location.
      *
-     * The location can optionally be tied to an opponent using the
-     * ```opponent_id``` from the GET opponents endpoint.
+     *  The location can optionally be tied to an opponent using the
+     * ```opponent\_id``` from the GET opponents endpoint.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -64,12 +62,10 @@ class Locations extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\LocationCreateModel
      *   $requestBody The location to be created
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(LocationCreateModel $requestBody): int
     {

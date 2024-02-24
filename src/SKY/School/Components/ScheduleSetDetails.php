@@ -8,7 +8,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $ScheduleSetId
  * @property ?string $ScheduleSetDescription
  * @property ?string $ShortDescription
- * @property ?string $OfferingType
+ * @property null|"_0"|"_1"|"_2"|"_3"|"_4"|"_5"|"_6"|"_8"|"_9"|"_10"|"_11"|"_12"|"_13"
+ *   $OfferingType
  * @property ?string $SchoolYearLabel
  * @property ?int $LevelNum
  * @property ?string $Effdate

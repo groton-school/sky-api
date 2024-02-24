@@ -6,7 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees;
 
 /**
- * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Degrees
+ * Routing class for the subnamespace `Degrees`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
  *   $studentdegrees
@@ -16,16 +16,16 @@ use Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees;
 class Degrees extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "studentdegrees" => "\Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
      *   $_studentdegrees
      */
-    protected ?Studentdegrees $_studentdegrees = null;
+    protected Studentdegrees $_studentdegrees = null;
 }

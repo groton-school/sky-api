@@ -15,11 +15,12 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues;
 
 /**
- * Routing class for the namespace Blackbaud\SKY\School\Endpoints\V1\Athletics
+ * Routing class for the subnamespace `Athletics`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $sports
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules $schedules
- * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $teams
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $teams Routing
+ *   class for the subnamespace `Teams`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
  *   $sportslevels
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $venues
@@ -36,8 +37,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues;
 class Athletics extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "sports" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports",
@@ -53,58 +54,56 @@ class Athletics extends BaseEndpoint
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $_sports
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports $_sports
      */
-    protected ?Sports $_sports = null;
+    protected Sports $_sports = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules
-     *   $_schedules
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules $_schedules
      */
-    protected ?Schedules $_schedules = null;
+    protected Schedules $_schedules = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $_teams
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams $_teams Routing
+     *   class for the subnamespace `Teams`
      */
-    protected ?Teams $_teams = null;
+    protected Teams $_teams = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels
      *   $_sportslevels
      */
-    protected ?Sportslevels $_sportslevels = null;
+    protected Sportslevels $_sportslevels = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $_venues
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues $_venues
      */
-    protected ?Venues $_venues = null;
+    protected Venues $_venues = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Transportationtypes
      *   $_transportationtypes
      */
-    protected ?Transportationtypes $_transportationtypes = null;
+    protected Transportationtypes $_transportationtypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations
-     *   $_locations
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations $_locations
      */
-    protected ?Locations $_locations = null;
+    protected Locations $_locations = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents
-     *   $_opponents
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents $_opponents
      */
-    protected ?Opponents $_opponents = null;
+    protected Opponents $_opponents = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
      *   $_highlights
      */
-    protected ?Highlights $_highlights = null;
+    protected Highlights $_highlights = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $_result
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $_result
      */
-    protected ?Result $_result = null;
+    protected Result $_result = null;
 }

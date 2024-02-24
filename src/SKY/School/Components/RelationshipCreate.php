@@ -5,8 +5,9 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * @property string $relationship_type The nature of the relationship; modeled
- *   where left_user 'is a' relationship to this individual. Required.
+ * @property "NOT_SET"|"StepParent_StepChild"|"GrGrandParent_GrGrandChild"|"Guardian_Ward"|"AuntUncle_NieceNephew"|"Grandparent_Grandchild"|"Parent_Child"|"Custodian_Student"|"Consultant_Student"|"Caretaker_Charge"|"SpousePartner_SpousePartner"|"StepSibling_StepSibling"|"ExHusband_ExWife"|"Associate_Associate"|"HalfSibling_HalfSibling"|"Husband_Wife"|"Spouse_Spouse"|"Sibling_Sibling"|"Cousin_Cousin"|"Friend_Friend"
+ *   $relationship_type The nature of the relationship; modeled where left\_user
+ *   'is a' relationship to this individual. Required.
  * @property ?bool $give_parental_access Toggles 'Give Parental Access'
  *   option.
  * @property ?bool $list_as_parent Toggles 'List as a Parent' option.

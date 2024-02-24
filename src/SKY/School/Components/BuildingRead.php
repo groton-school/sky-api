@@ -7,7 +7,8 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * @property ?int $building_id ID of the building
  * @property ?string $building_name Building Name
- * @property ?string[] $building_types Building group types
+ * @property null|"Academics"|"Activities"|"Advisory"|"ResidenceLife"|"Athletics"|"Events"[]
+ *   $building_types Building group types
  * @property ?\Blackbaud\SKY\School\Components\BuildingRoomRead[] $rooms
  *   Collection of rooms within the building
  *
@@ -21,7 +22,7 @@ class BuildingRead extends BaseComponent
     protected static array $fields = [
         "building_id" => "int",
         "building_name" => "string",
-        "building_types" => "string[]",
+        "building_types" => "array",
         "rooms" => "\Blackbaud\SKY\School\Components\BuildingRoomRead[]",
     ];
 }

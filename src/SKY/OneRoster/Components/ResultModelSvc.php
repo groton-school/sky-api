@@ -17,7 +17,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $status Status for the instance
  * @property ?string $dateLastModified Date and time the instance was last
  *   modified
- * @property ?string[] $metadata Extension properties for the instance
+ * @property ?array{...<string, string>} $metadata Extension properties for
+ *   the instance
  *
  * @api
  */
@@ -36,6 +37,6 @@ class ResultModelSvc extends BaseComponent
         "sourcedId" => "string",
         "status" => "string",
         "dateLastModified" => "string",
-        "metadata" => "string[]",
+        "metadata" => "array{...<string, string>}",
     ];
 }

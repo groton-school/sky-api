@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Content\News;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\NewsItemCollection;
 
 /**
@@ -25,14 +26,17 @@ class Items extends BaseEndpoint
      *
      * - Student
      *
-     * @param ?string $categories (Optional)
+     * @param ?string $categories
      *
-     * @return \Blackbaud\SKY\School\Components\NewsItemCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\NewsItemCollection Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?string $categories = null): NewsItemCollection
+    public function filterBy(?string $categories): NewsItemCollection
     {
+        assert($categories !== null, new ArgumentException("Parameter `categories` is required"));
+
         return new NewsItemCollection($this->send("get", [], ["categories" => $categories]));
     }
 }

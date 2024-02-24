@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Events;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\CalendarItemCollection;
 
 /**
@@ -25,20 +26,23 @@ class Calendar extends BaseEndpoint
      *
      * - Teacher
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
-     * @param ?string $start_date (Optional) Format - date-time (as date-time
-     *   in RFC3339).
-     * @param ?string $end_date (Optional) Format - date-time (as date-time in
+     * @param ?string $start_date Format - date-time (as date-time in
      *   RFC3339).
+     * @param ?string $end_date Format - date-time (as date-time in RFC3339).
      *
-     * @return \Blackbaud\SKY\School\Components\CalendarItemCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\CalendarItemCollection Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?string $start_date = null, ?string $end_date = null): CalendarItemCollection
+    public function filterBy(?string $start_date, ?string $end_date): CalendarItemCollection
     {
+        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
+        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
+
         return new CalendarItemCollection($this->send("get", [], ["start_date" => $start_date,
         "end_date" => $end_date]));
     }

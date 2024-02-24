@@ -9,8 +9,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus;
 use Blackbaud\SKY\School\Endpoints\V1\Admissions\Status;
 
 /**
- * Routing class for the namespace
- * Blackbaud\SKY\School\Endpoints\V1\Admissions
+ * Routing class for the subnamespace `Admissions`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
  *   $checklists
@@ -25,8 +24,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Admissions\Status;
 class Admissions extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "checklists" => "\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists",
@@ -36,25 +35,25 @@ class Admissions extends BaseEndpoint
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
      *   $_checklists
      */
-    protected ?Checklists $_checklists = null;
+    protected Checklists $_checklists = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
      *   $_candidates
      */
-    protected ?Candidates $_candidates = null;
+    protected Candidates $_candidates = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
      *   $_checkliststatus
      */
-    protected ?Checkliststatus $_checkliststatus = null;
+    protected Checkliststatus $_checkliststatus = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
      */
-    protected ?Status $_status = null;
+    protected Status $_status = null;
 }

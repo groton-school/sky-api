@@ -25,9 +25,7 @@ class Categories extends BaseEndpoint
      *
      * - Student
      *
-     * @return \Blackbaud\SKY\School\Components\NewsCategoryCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\NewsCategoryCollection Success
      */
     public function getAll(): NewsCategoryCollection
     {

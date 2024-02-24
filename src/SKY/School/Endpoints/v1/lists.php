@@ -7,6 +7,8 @@ use Blackbaud\SKY\School\Components\ListReadCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced;
 
 /**
+ * Routing class for the subnamespace `Lists`
+ *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $advanced
  *
  * @api
@@ -19,23 +21,23 @@ class Lists extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/lists";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "advanced" => "\Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
      */
-    protected ?Advanced $_advanced = null;
+    protected Advanced $_advanced = null;
 
     /**
      * Returns a list of basic or advanced lists the authorized user has
      * access to
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Page Manager
      *
@@ -85,9 +87,7 @@ class Lists extends BaseEndpoint
      *
      * - SkyApi Data Sync
      *
-     * @return \Blackbaud\SKY\School\Components\ListReadCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\ListReadCollection Success
      */
     public function getAll(): ListReadCollection
     {

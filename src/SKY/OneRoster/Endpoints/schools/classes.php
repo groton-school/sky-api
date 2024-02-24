@@ -8,6 +8,8 @@ use Blackbaud\SKY\OneRoster\Components\ClassOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments;
 
 /**
+ * Routing class for the subnamespace `Classes`
+ *
  * @property \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
  *   $enrollments
  *
@@ -21,31 +23,29 @@ class Classes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/classes";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "enrollments" => "\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
+     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
      *   $_enrollments
      */
-    protected ?Enrollments $_enrollments = null;
+    protected Enrollments $_enrollments = null;
 
     /**
      * Returns a collection of classes for the specified `school_id`.
      *
      * @param string $school_id sourcedId for the school
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModelOK - It was
-     *   possible to read the resource.
+     * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModel OK - It
+     *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getBySchool(string $school_id): ClassOutputModel
     {

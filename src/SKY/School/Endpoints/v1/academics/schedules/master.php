@@ -20,7 +20,7 @@ class Master extends BaseEndpoint
      * Returns a collection of Master Schedule days within the date range
      * provided.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -30,29 +30,28 @@ class Master extends BaseEndpoint
      * @param int $level_num Format - int32. Level Number indicates which
      *   school you are working with.
      * @param string $start_date Format - date-time (as date-time in RFC3339).
-     *   Start of the date range (inclusive).  The earliest possible start_date
+     *   Start of the date range (inclusive). The earliest possible start\_date
      *   is 1/1/1900, any date entered before that date will be overwritten with
      *   1/1/1900.
      * @param string $end_date Format - date-time (as date-time in RFC3339).
-     *   End of the date range (inclusive). If the end_date is earlier than the
-     *   start_date the end_date wil be overwritten with the start_date plus 7
-     *   days.
-     * @param ?int $offering_type (Optional) Format - int32. Filters the
-     *   results by a specific group type. Defaults to "All" offering types.
+     *   End of the date range (inclusive). If the end\_date is earlier than the
+     *   start\_date the end\_date wil be overwritten with the start\_date plus
+     *   7 days.
+     * @param ?int $offering_type Format - int32. Filters the results by a
+     *   specific group type. Defaults to "All" offering types.
      *
-     * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollectionSuccess
-
+     * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
-    public function filterBy(int $level_num, string $start_date, string $end_date, ?int $offering_type = null): MasterScheduleDayCollection
+    public function filterBy(int $level_num, string $start_date, string $end_date, ?int $offering_type): MasterScheduleDayCollection
     {
         assert($level_num !== null, new ArgumentException("Parameter `level_num` is required"));
         assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
         assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
+        assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
 
         return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $level_num,
         "start_date" => $start_date,

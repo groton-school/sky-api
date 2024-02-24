@@ -17,22 +17,21 @@ class Students extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{parent_id}/students";
 
     /**
-     * Returns a collection of children of the specified ```parent_id```.
+     * Returns a collection of children of the specified ```parent\_id```.
      *
-     * Requires the logged in ```user_id``` matches the specified
-     * ```parent_id```. Requires the following role in the Education
+     *  Requires the logged in ```user\_id``` matches the specified
+     * ```parent\_id```. Requires the following role in the Education
      * Management system:
      *
      * - Parent
      *
      * @param int $parent_id Format - int32.
      *
-     * @return \Blackbaud\SKY\School\Components\ChildOfParentCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\ChildOfParentCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByParent(int $parent_id): ChildOfParentCollection
     {

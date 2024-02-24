@@ -9,6 +9,8 @@ use Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel;
 use Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods;
 
 /**
+ * Routing class for the subnamespace `Terms`
+ *
  * @property \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
  *   $gradingPeriods
  *
@@ -19,29 +21,27 @@ class Terms extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{id}";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "gradingPeriods" => "\Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods",
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
+     * @var \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
      *   $_gradingPeriods
      */
-    protected ?GradingPeriods $_gradingPeriods = null;
+    protected GradingPeriods $_gradingPeriods = null;
 
     /**
      * Returns a collection of terms.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModelOK
-     *   - It was possible to read the collection.
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
+     *   OK - It was possible to read the collection.
      */
     public function getAll(): AcademicSessionsOutputModel
     {
@@ -53,13 +53,11 @@ class Terms extends BaseEndpoint
      *
      * @param string $id sourcedId for the term
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModelOK
-     *   - It was possible to read the collection.
+     * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModel
+     *   OK - It was possible to read the collection.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): AcademicSessionOutputModel
     {

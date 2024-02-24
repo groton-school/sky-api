@@ -21,10 +21,10 @@ class Attendance extends BaseEndpoint
      * Returns a collection of student attendance records for the specified
      * day.
      *
-     * Please use this [ Attendance Setup
+     *  Please use this [ Attendance Setup
      * Guide](https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html) to verify your attendance settings.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Attendance Manager
      *
@@ -34,21 +34,21 @@ class Attendance extends BaseEndpoint
      *   date to return attendance for.
      * @param int $offering_type Format - int32. The offering type to retrieve
      *   records for.
-     * @param ?int $excuse_type (Optional) Format - int32. Filters results to
-     *   a specific excuse type.
+     * @param ?int $excuse_type Format - int32. Filters results to a specific
+     *   excuse type.
      *
-     * @return \Blackbaud\SKY\School\Components\AttendanceGetCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\AttendanceGetCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
-    public function filterBy(int $level_id, string $day, int $offering_type, ?int $excuse_type = null): AttendanceGetCollection
+    public function filterBy(int $level_id, string $day, int $offering_type, ?int $excuse_type): AttendanceGetCollection
     {
         assert($level_id !== null, new ArgumentException("Parameter `level_id` is required"));
         assert($day !== null, new ArgumentException("Parameter `day` is required"));
         assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
+        assert($excuse_type !== null, new ArgumentException("Parameter `excuse_type` is required"));
 
         return new AttendanceGetCollection($this->send("get", [], ["level_id" => $level_id,
         "day" => $day,
@@ -59,22 +59,20 @@ class Attendance extends BaseEndpoint
     /**
      * Creates a new attendance record for the specified student.
      *
-     * Please use this [ Attendance Setup
+     *  Please use this [ Attendance Setup
      * Guide](https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html) to verify your attendance settings.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Attendance Manager
      *
      * @param \Blackbaud\SKY\School\Components\AttendanceCreate $requestBody
      *   Information about the attendance report
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(AttendanceCreate $requestBody): void
     {

@@ -22,12 +22,10 @@ class Students extends BaseEndpoint
      *
      * @param string $school_id sourcedId for the school
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getBySchool(string $school_id): UsersOutputModel
     {

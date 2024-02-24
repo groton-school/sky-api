@@ -17,10 +17,10 @@ class Gradedassignments extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/{student_id}/{section_id}/gradedassignments";
 
     /**
-     * Returns the graded assignments for the specified ```student_id``` and
-     * their ```section_id```.
+     * Returns the graded assignments for the specified ```student\_id``` and
+     * their ```section\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Student
@@ -34,13 +34,11 @@ class Gradedassignments extends BaseEndpoint
      * @param int $marking_period_id Format - int32. The ID of the marking
      *   period to return grades for.
      *
-     * @return \Blackbaud\SKY\School\Components\StudentGradedAssignmentCollectionSuccess
-
+     * @return \Blackbaud\SKY\School\Components\StudentGradedAssignmentCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByStudentAndSection(int $student_id, int $section_id, int $marking_period_id): StudentGradedAssignmentCollection
     {

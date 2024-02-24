@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Sections;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\BulkEnrollment;
 use Blackbaud\SKY\School\Components\PostResponse;
 use Blackbaud\SKY\School\Components\StudentCollection;
@@ -16,12 +17,12 @@ class Students extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/students";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/students";
 
     /**
-     * Returns a collection of students in the specified ```section_id```.
+     * Returns a collection of students in the specified ```section\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -32,12 +33,10 @@ class Students extends BaseEndpoint
      *   be found using [Section
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet).
      *
-     * @return \Blackbaud\SKY\School\Components\StudentCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\StudentCollection Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getBySection(int $section_id): StudentCollection
     {
@@ -50,9 +49,9 @@ class Students extends BaseEndpoint
      * Adds bulk enrollment data (students and/or teachers) for the specified
      * section(s).
      *
-     * Returns True if successful, otherwise false.
+     *  Returns True if successful, otherwise false.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -61,14 +60,12 @@ class Students extends BaseEndpoint
      *
      * @param \Blackbaud\SKY\School\Components\BulkEnrollment $requestBody
      *   Defines which users (students and/or teachers) should be added to which
-     *   offerings (via ```section_id``` and duration ```id```)
+     *   offerings (via ```section\_id``` and duration ```id```)
      *
-     * @return \Blackbaud\SKY\School\Components\PostResponseSuccess
+     * @return \Blackbaud\SKY\School\Components\PostResponse Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(BulkEnrollment $requestBody): PostResponse
     {

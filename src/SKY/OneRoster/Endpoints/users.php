@@ -15,14 +15,12 @@ class Users extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/users/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/users/{id}";
 
     /**
      * Returns a collection of user data.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModelSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
     public function getAll(): UsersOutputModel
     {
@@ -34,12 +32,10 @@ class Users extends BaseEndpoint
      *
      * @param string $id sourcedId for the user
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModelSuccess
+     * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModel Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): UserOutputModel
     {

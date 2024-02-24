@@ -18,13 +18,11 @@ class Attendancetypes extends BaseEndpoint
     /**
      * Returns a collection of attendance types.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - SKY API Basic
      *
-     * @return \Blackbaud\SKY\School\Components\AttendanceTypesSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AttendanceTypes Success
      */
     public function getAll(): AttendanceTypes
     {

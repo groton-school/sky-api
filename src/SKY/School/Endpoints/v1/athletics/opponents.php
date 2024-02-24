@@ -20,7 +20,7 @@ class Opponents extends BaseEndpoint
     /**
      * Returns a collection of athletic opponents.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -33,10 +33,8 @@ class Opponents extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollectionSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
+     *   Success
      */
     public function getAll(): OpponentFlyweightCollection
     {
@@ -46,7 +44,7 @@ class Opponents extends BaseEndpoint
     /**
      * Creates a new athletic opponent.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -64,12 +62,10 @@ class Opponents extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\OpponentUpdateModel
      *   $requestBody The opponent to be created
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(OpponentUpdateModel $requestBody): int
     {

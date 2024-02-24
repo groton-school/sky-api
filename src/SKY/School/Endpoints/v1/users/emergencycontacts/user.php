@@ -21,10 +21,10 @@ class User extends BaseEndpoint
      * user. To add a new user emergency contact, add the correct relationship
      * between users first.
      *
-     * To add a non-user emergency contact please see the Emergency Contact
+     *  To add a non-user emergency contact please see the Emergency Contact
      * Non-User Create route.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -33,12 +33,10 @@ class User extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EmergencyContactUserCreate
      *   $requestBody
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByUser(int $user_id, EmergencyContactUserCreate $requestBody): void
     {

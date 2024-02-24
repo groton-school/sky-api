@@ -3,6 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Athletics;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\SportCollection;
 
 /**
@@ -18,9 +19,9 @@ class Sports extends BaseEndpoint
     /**
      * Returns a collection of athletic sports.
      *
-     * Use the optional ```season_id``` to filter the results by season.
+     *  Use the optional ```season\_id``` to filter the results by season.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -33,14 +34,17 @@ class Sports extends BaseEndpoint
      *
      * - Pending Coach
      *
-     * @param ?int $season_id (Optional) Format - int32. Season ID
+     * @param ?int $season_id Format - int32. Season ID
      *
-     * @return \Blackbaud\SKY\School\Components\SportCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\SportCollection Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?int $season_id = null): SportCollection
+    public function filterBy(?int $season_id): SportCollection
     {
+        assert($season_id !== null, new ArgumentException("Parameter `season_id` is required"));
+
         return new SportCollection($this->send("get", [], ["season_id" => $season_id]));
     }
 }

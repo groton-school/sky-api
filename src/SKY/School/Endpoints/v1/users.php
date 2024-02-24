@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\UserAdd;
 use Blackbaud\SKY\School\Components\UserEdit;
 use Blackbaud\SKY\School\Components\UserRead;
@@ -29,16 +30,20 @@ use Blackbaud\SKY\School\Endpoints\V1\Users\Relationships;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Students;
 
 /**
+ * Routing class for the subnamespace `Users`
+ *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Relationships
  *   $relationships
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Phonetypes $phonetypes
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Extended $extended
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Changed $changed
- * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Phones $phones
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Phones $phones Routing
+ *   class for the subnamespace `Phones`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Occupations $occupations
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts
- *   $emergencycontacts
+ *   $emergencycontacts Routing class for the subnamespace `Emergencycontacts`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses $addresses
+ *   Routing class for the subnamespace `Addresses`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Addresstypes
  *   $addresstypes
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Education $education
@@ -50,7 +55,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Users\Students;
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Students $students
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Me $me
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields
- *   $customfields
+ *   $customfields Routing class for the subnamespace `Customfields`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Users\Enrollments $enrollments
  *
  * @api
@@ -60,11 +65,11 @@ class Users extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}";
 
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "relationships" => "\Blackbaud\SKY\School\Endpoints\V1\Users\Relationships",
@@ -89,118 +94,118 @@ class Users extends BaseEndpoint
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Relationships
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Relationships
      *   $_relationships
      */
-    protected ?Relationships $_relationships = null;
+    protected Relationships $_relationships = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phonetypes $_phonetypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phonetypes $_phonetypes
      */
-    protected ?Phonetypes $_phonetypes = null;
+    protected Phonetypes $_phonetypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Extended $_extended
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Extended $_extended
      */
-    protected ?Extended $_extended = null;
+    protected Extended $_extended = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Changed $_changed
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Changed $_changed
      */
-    protected ?Changed $_changed = null;
+    protected Changed $_changed = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phones $_phones
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phones $_phones Routing
+     *   class for the subnamespace `Phones`
      */
-    protected ?Phones $_phones = null;
+    protected Phones $_phones = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Occupations
-     *   $_occupations
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Occupations $_occupations
      */
-    protected ?Occupations $_occupations = null;
+    protected Occupations $_occupations = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts
-     *   $_emergencycontacts
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts
+     *   $_emergencycontacts Routing class for the subnamespace
+     *   `Emergencycontacts`
      */
-    protected ?Emergencycontacts $_emergencycontacts = null;
+    protected Emergencycontacts $_emergencycontacts = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresses $_addresses
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses $_addresses
+     *   Routing class for the subnamespace `Addresses`
      */
-    protected ?Addresses $_addresses = null;
+    protected Addresses $_addresses = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresstypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresstypes
      *   $_addresstypes
      */
-    protected ?Addresstypes $_addresstypes = null;
+    protected Addresstypes $_addresstypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Education $_education
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Education $_education
      */
-    protected ?Education $_education = null;
+    protected Education $_education = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Audit $_audit
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Audit $_audit
      */
-    protected ?Audit $_audit = null;
+    protected Audit $_audit = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Enroll $_enroll
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Enroll $_enroll
      */
-    protected ?Enroll $_enroll = null;
+    protected Enroll $_enroll = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Employment $_employment
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Employment $_employment
      */
-    protected ?Employment $_employment = null;
+    protected Employment $_employment = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Gendertypes
-     *   $_gendertypes
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Gendertypes $_gendertypes
      */
-    protected ?Gendertypes $_gendertypes = null;
+    protected Gendertypes $_gendertypes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Bbidstatus $_bbidstatus
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Bbidstatus $_bbidstatus
      */
-    protected ?Bbidstatus $_bbidstatus = null;
+    protected Bbidstatus $_bbidstatus = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Students $_students
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Students $_students
      */
-    protected ?Students $_students = null;
+    protected Students $_students = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Me $_me
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Me $_me
      */
-    protected ?Me $_me = null;
+    protected Me $_me = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Customfields
-     *   $_customfields
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields
+     *   $_customfields Routing class for the subnamespace `Customfields`
      */
-    protected ?Customfields $_customfields = null;
+    protected Customfields $_customfields = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Enrollments
-     *   $_enrollments
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Enrollments $_enrollments
      */
-    protected ?Enrollments $_enrollments = null;
+    protected Enrollments $_enrollments = null;
 
     /**
      * Returns a paginated collection of users, limited to 100 users per page.
      *
      *
-     * Use the record number as the ```marker``` value to return the next set
+     *  Use the record number as the ```marker``` value to return the next set
      * of results. For example: ```marker=101``` will return the second set of
      * results.
      *
-     * Results dependant on the directory settings of each user.
+     *  Results dependant on the directory settings of each user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Billing Clerk
@@ -212,28 +217,33 @@ class Users extends BaseEndpoint
      * - Platform Manager
      *
      * @param string $roles Comma delimited list of role IDs to get users for.
-     * @param ?string $first_name (Optional) Filter results by first name.
-     * @param ?string $last_name (Optional) Filter results by last name.
-     * @param ?string $email (Optional) Filter results by e-mail.
-     * @param ?string $maiden_name (Optional) Filter results by maiden name.
-     * @param ?string $grad_year (Optional) The beginning date in a school
-     *   year (ex. 2017).
-     * @param ?string $end_grad_year (Optional) The end date in a school year
-     *   (ex. 2018). Enter a grad_year and end_grad_year to find matching
-     *   results in the date range.
-     * @param ?int $marker (Optional) Format - int32. The record number start
-     *   at to return the next batch of data.
+     * @param ?string $first_name Filter results by first name.
+     * @param ?string $last_name Filter results by last name.
+     * @param ?string $email Filter results by e-mail.
+     * @param ?string $maiden_name Filter results by maiden name.
+     * @param ?string $grad_year The beginning date in a school year (ex.
+     *   2017).
+     * @param ?string $end_grad_year The end date in a school year (ex. 2018).
+     *   Enter a grad\_year and end\_grad\_year to find matching results in the
+     *   date range.
+     * @param ?int $marker Format - int32. The record number start at to
+     *   return the next batch of data.
      *
-     * @return \Blackbaud\SKY\School\Components\UserReadCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\UserReadCollection Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
-    public function filterBy(string $roles, ?string $first_name = null, ?string $last_name = null, ?string $email = null, ?string $maiden_name = null, ?string $grad_year = null, ?string $end_grad_year = null, ?int $marker = null): UserReadCollection
+    public function filterBy(string $roles, ?string $first_name, ?string $last_name, ?string $email, ?string $maiden_name, ?string $grad_year, ?string $end_grad_year, ?int $marker): UserReadCollection
     {
         assert($roles !== null, new ArgumentException("Parameter `roles` is required"));
+        assert($first_name !== null, new ArgumentException("Parameter `first_name` is required"));
+        assert($last_name !== null, new ArgumentException("Parameter `last_name` is required"));
+        assert($email !== null, new ArgumentException("Parameter `email` is required"));
+        assert($maiden_name !== null, new ArgumentException("Parameter `maiden_name` is required"));
+        assert($grad_year !== null, new ArgumentException("Parameter `grad_year` is required"));
+        assert($end_grad_year !== null, new ArgumentException("Parameter `end_grad_year` is required"));
+        assert($marker !== null, new ArgumentException("Parameter `marker` is required"));
 
         return new UserReadCollection($this->send("get", [], ["roles" => $roles,
         "first_name" => $first_name,
@@ -248,9 +258,9 @@ class Users extends BaseEndpoint
     /**
      * Creates a new user record.
      *
-     * Returns the newly created ID.
+     *  Returns the newly created ID.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Platform Manager
@@ -260,12 +270,10 @@ class Users extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserAdd $requestBody The user
      *   to be created
      *
-     * @return intID of the user just created.
+     * @return int ID of the user just created.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(UserAdd $requestBody): int
     {
@@ -277,9 +285,9 @@ class Users extends BaseEndpoint
     /**
      * Updates the record of a single user.
      *
-     * Returns the ID of the user just updated upon success.
+     *  Returns the ID of the user just updated upon success.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Platform Manager
@@ -289,12 +297,10 @@ class Users extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\UserEdit $requestBody User
      *   information to be updated
      *
-     * @return intID of the user just updated.
+     * @return int ID of the user just updated.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function patch(UserEdit $requestBody): int
     {
@@ -304,21 +310,19 @@ class Users extends BaseEndpoint
     }
 
     /**
-     * Returns data for the specified ```user_id```.
+     * Returns data for the specified ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
      *
      * @param int $user_id Format - int32. ID of the user to be returned.
      *
-     * @return \Blackbaud\SKY\School\Components\UserReadSuccess
+     * @return \Blackbaud\SKY\School\Components\UserRead Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(int $user_id): UserRead
     {

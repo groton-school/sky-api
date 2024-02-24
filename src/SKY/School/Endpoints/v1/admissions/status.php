@@ -18,7 +18,8 @@ class Status extends BaseEndpoint
     /**
      * Returns a collection of admissions statuses.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Admissions Manager
      *
@@ -26,10 +27,8 @@ class Status extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollectionSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollection
+     *   Success
      */
     public function getAll(): AdmissionsStatusesCollection
     {

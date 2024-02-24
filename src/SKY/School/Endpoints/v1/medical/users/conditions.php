@@ -19,22 +19,20 @@ class Conditions extends BaseEndpoint
     /**
      * Returns the medical conditions for a student.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $user_id Format - int32. ID of the student
      *
-     * @return \Blackbaud\SKY\School\Components\StudentConditionView[]Success
+     * @return \Blackbaud\SKY\School\Components\StudentConditionView[] Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByUser(int $user_id): array
     {

@@ -19,10 +19,10 @@ class Studentdegrees extends BaseEndpoint
     /**
      * Returns a collection of degree/diplomas assigned to the student.
      *
-     * Each degree/diploma has a collection of majors, minors and/or
+     *  Each degree/diploma has a collection of majors, minors and/or
      * concentrations as appropriate for that degree or diploma.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - Degree Manager
      *
@@ -34,13 +34,11 @@ class Studentdegrees extends BaseEndpoint
      *
      * @param int $student_id Format - int32. user Id
      *
-     * @return \Blackbaud\SKY\School\Components\UserDegreeOutputModelCollectionSuccess
-
+     * @return \Blackbaud\SKY\School\Components\UserDegreeOutputModelCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(int $student_id): UserDegreeOutputModelCollection
     {

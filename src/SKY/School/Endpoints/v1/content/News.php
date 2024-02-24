@@ -7,8 +7,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories;
 use Blackbaud\SKY\School\Endpoints\V1\Content\News\Items;
 
 /**
- * Routing class for the namespace
- * Blackbaud\SKY\School\Endpoints\V1\Content\News
+ * Routing class for the subnamespace `News`
  *
  * @property \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
  *   $categories
@@ -19,8 +18,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Content\News\Items;
 class News extends BaseEndpoint
 {
     /**
-     * @var \array<string class-string=""> $endpoints Routing
-     *   subpaths</string>
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
         "categories" => "\Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories",
@@ -28,13 +27,13 @@ class News extends BaseEndpoint
     ];
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
      *   $_categories
      */
-    protected ?Categories $_categories = null;
+    protected Categories $_categories = null;
 
     /**
-     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
+     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
      */
-    protected ?Items $_items = null;
+    protected Items $_items = null;
 }

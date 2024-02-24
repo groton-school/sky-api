@@ -23,9 +23,7 @@ class Phonetypes extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\PhoneTypeCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\PhoneTypeCollection Success
      */
     public function getAll(): PhoneTypeCollection
     {

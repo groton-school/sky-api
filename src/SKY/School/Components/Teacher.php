@@ -13,8 +13,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $firstname The first name of the teacher
  * @property ?string $lastname The last name of the teacher
  * @property ?string $preferred_name The teachers preferred name
- * @property ?string $formatted_name The formatted name of the teacher.  If
- *   the teacher has a preferred name, it is used in place of the first name.
+ * @property ?string $formatted_name The formatted name of the teacher. If the
+ *   teacher has a preferred name, it is used in place of the first name.
  * @property ?string $email The teacher's email address
  * @property ?string $cell_phone The teacher's cellular phone
  *

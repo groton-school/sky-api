@@ -15,15 +15,13 @@ class Demographics extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/demographics/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/demographics/{id}";
 
     /**
      * Returns a collection of user's demographic data.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModelSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModel
+     *   Success
      */
     public function getAll(): DemographicsOutputModel
     {
@@ -35,13 +33,11 @@ class Demographics extends BaseEndpoint
      *
      * @param string $id sourcedId for the user
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModelSuccess
-
+     * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModel
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): DemographicOutputModel
     {

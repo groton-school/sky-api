@@ -20,8 +20,10 @@
     }
   ],
   "require": {
-    "groton-school/oauth2-blackbaudsky": "^0.2.3",
-    "psr/simple-cache": "^3.0"
+    "groton-school/oauth2-blackbaudsky": "^0.2.3"
+  },
+  "require-dev": {
+    "battis/openapi-client-generator": "dev-main"
   },
   "autoload": {
     "psr-4": {
@@ -31,16 +33,7 @@
   "config": {
     "sort-packages": true
   },
-  "require-dev": {
-    "battis/openapi-client-generator": "dev-main",
-    "battis/php-generator": "dev-main",
-    "monolog/monolog": "^3.0",
-    "pahanini/monolog-cli-formatter": "^2.0",
-    "php-di/php-di": "^7.0",
-    "splitbrain/php-cli": "^1.3",
-    "sspat/reserved-words": "^3.0"
-  },
   "scripts": {
-    "build": "./scripts/map -d 'var/2022-04-01_preview/Education Management' src/SKY 'Blackbaud\\SKY'"
+    "build": "./scripts/map -d var src/SKY 'Blackbaud\\SKY'"
   }
 }

@@ -18,16 +18,14 @@ class Addresstypes extends BaseEndpoint
     /**
      * Returns a collection of address types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\AddressTypeCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AddressTypeCollection Success
      */
     public function getAll(): AddressTypeCollection
     {

@@ -16,15 +16,13 @@ class LineItems extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/lineItems/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/lineItems/{id}";
 
     /**
      * Returns a collection of lineItems.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModelOK - It
-     *   was possible to read the collection.
-     *
-     * @api
+     * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
+     *   It was possible to read the collection.
      */
     public function getAll(): LineItemsOutputModel
     {
@@ -36,13 +34,11 @@ class LineItems extends BaseEndpoint
      *
      * @param string $id sourcedId for the lineItem
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\LineItemOutputModelOK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\LineItemOutputModel OK - It
      *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): LineItemOutputModel
     {
@@ -58,13 +54,11 @@ class LineItems extends BaseEndpoint
      * @param \Blackbaud\SKY\OneRoster\Components\LineItemInputModel
      *   $requestBody input model for the lineItem
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\LineItemOutputModelOK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\LineItemOutputModel OK - It
      *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function put(string $id, LineItemInputModel $requestBody): LineItemOutputModel
     {

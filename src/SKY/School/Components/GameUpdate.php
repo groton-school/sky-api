@@ -9,22 +9,22 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $schedule_type The Type of the event
  * @property ?string $title Title of the game
  * @property ?string $game_date Date and time of the game
- * Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
+ *  Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```
  * @property ?string $game_date_end Date and time the game is set to end
- * Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
+ *  Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```
  * @property ?int $cancel_type Set to 0 to Uncancel a game
- * Set to 1 to Cancel a game
- * Set to 2 to Reschedule a game
+ *  Set to 1 to Cancel a game
+ *  Set to 2 to Reschedule a game
  * @property ?int $home_away_type Set to 0 for Home
- * Set to 1 for Away
- * Set to 2 for Neutral
- * Set to 3 for TBD
+ *  Set to 1 for Away
+ *  Set to 2 for Neutral
+ *  Set to 3 for TBD
  * @property ?int $location_id ID of the location/venue of the game
  * @property ?int $location_ind Set to 0 when using a venue for
- *   ```location_id```
- * Set to 1 when using a location for ```location_id```
+ *   ```location\_id```
+ *  Set to 1 when using a location for ```location\_id```
  * @property ?string $dismissal_time Time for dismissal using 24-hour format:
  *   ```HH:mm```
  * @property ?string $departure_time Time for departure using 24-hour format:

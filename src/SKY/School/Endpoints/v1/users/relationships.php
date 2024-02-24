@@ -19,7 +19,7 @@ class Relationships extends BaseEndpoint
 
     /**
      * Returns a collection of a relationships for the specified
-     * ```user_id```. Requires at least one of the following roles in the
+     * ```user\_id```. Requires at least one of the following roles in the
      * Education Management system:
      *
      * - Payment Services Manager
@@ -32,13 +32,11 @@ class Relationships extends BaseEndpoint
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\RelationshipReadCollectionSuccess
-
+     * @return \Blackbaud\SKY\School\Components\RelationshipReadCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByUser(int $user_id): RelationshipReadCollection
     {
@@ -48,11 +46,11 @@ class Relationships extends BaseEndpoint
     }
 
     /**
-     * Creates a relationship record for the specified ```user_id```.
+     * Creates a relationship record for the specified ```user\_id```.
      *
-     * This doesn't create a user profile for the related individual.
+     *  This doesn't create a user profile for the related individual.
      *
-     * Returns 200 OK Requires at least one of the following roles in the
+     *  Returns 200 OK Requires at least one of the following roles in the
      * Education Management system:
      *
      * - Payment Services Manager
@@ -67,12 +65,10 @@ class Relationships extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\RelationshipCreate $requestBody
      *   Defines the relationship to be created.
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByUser(int $user_id, RelationshipCreate $requestBody): void
     {
@@ -83,12 +79,12 @@ class Relationships extends BaseEndpoint
     }
 
     /**
-     * Removes a relationship record from the specified ```user_id```.
+     * Removes a relationship record from the specified ```user\_id```.
      *
-     * If the related individual is also a user, the user profile of that user
-     * is preserved. Individuals may need to review or update their emergency
-     * contacts. Requires at least one of the following roles in the Education
-     * Management system:
+     *  If the related individual is also a user, the user profile of that
+     * user is preserved. Individuals may need to review or update their
+     * emergency contacts. Requires at least one of the following roles in the
+     * Education Management system:
      *
      * - Payment Services Manager
      *
@@ -102,15 +98,14 @@ class Relationships extends BaseEndpoint
      *   deleting the relationship.
      * @param int $left_user Format - int32. ID of the other user in the
      *   relationship.
-     * @param string $relationship_type Defines the relationship between
-     *   left_user and this user.
+     * @param "NOT_SET"|"StepParent_StepChild"|"GrGrandParent_GrGrandChild"|"Guardian_Ward"|"AuntUncle_NieceNephew"|"Grandparent_Grandchild"|"Parent_Child"|"Custodian_Student"|"Consultant_Student"|"Caretaker_Charge"|"SpousePartner_SpousePartner"|"StepSibling_StepSibling"|"ExHusband_ExWife"|"Associate_Associate"|"HalfSibling_HalfSibling"|"Husband_Wife"|"Spouse_Spouse"|"Sibling_Sibling"|"Cousin_Cousin"|"Friend_Friend"
+     *   $relationship_type Defines the relationship between left\_user and this
+     *   user.
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function deleteByUser(int $user_id, int $left_user, string $relationship_type): void
     {

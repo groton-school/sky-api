@@ -18,7 +18,7 @@ class Offeringtypes extends BaseEndpoint
     /**
      * Returns a collection of core school offering types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -27,9 +27,7 @@ class Offeringtypes extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Components\OfferingTypeCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\OfferingTypeCollection Success
      */
     public function getAll(): OfferingTypeCollection
     {

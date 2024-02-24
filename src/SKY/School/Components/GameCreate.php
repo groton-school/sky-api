@@ -8,21 +8,21 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $schedule_type The Type of the event
  * @property ?string $title Title of the game
  * @property string $game_date Date and time of the game
- * Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
+ *  Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```
  * @property ?string $game_date_end Date and time the game is set to end
- * Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
+ *  Uses [ISO-8601](https://tools.ietf.org/html/rfc3339) format:
  *   ```2022-01-20T16:30:00-05:00```
  * @property ?int $cancel_type Defaults to 0 for a new game
  * @property ?int $home_away_type Set to 0 for Home
- * Set to 1 for Away
- * Set to 2 for Neutral
- * Set to 3 for TBD
+ *  Set to 1 for Away
+ *  Set to 2 for Neutral
+ *  Set to 3 for TBD
  * @property ?int $location_id ID of the location/venue for the game
- * @property ?int $location_ind For Home games (location_ind=0), the
- *   ```location_id``` is an ID for an athletic field or room/building. Both of
+ * @property ?int $location_ind For Home games (location\_ind=0), the
+ *   ```location\_id``` is an ID for an athletic field or room/building. Both of
  *   these are returned by GET Athletics venues.
- * For Away games (location_ind=1), the ```location_id``` is an ID for an
+ *  For Away games (location\_ind=1), the ```location\_id``` is an ID for an
  *   opponent location. These are returned by GET Athletics locations.
  * @property ?string $dismissal_time Time for dismissal using 24-hour format:
  *   ```HH:mm```

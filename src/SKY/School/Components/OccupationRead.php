@@ -18,7 +18,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   [ISO-8601](https://tools.ietf.org/html/rfc3339) (24H) format:
  *   2003-04-21T10:29:43
  * @property ?string $industry The industry
- * @property ?string $job_function The function of the job*
+ * @property ?string $job_function The function of the job\*
  * @property bool $matching_gift Returns True if the organization matches
  *   gifts
  * @property ?string $organization The organization

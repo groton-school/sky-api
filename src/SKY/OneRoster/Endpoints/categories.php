@@ -16,15 +16,13 @@ class Categories extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/categories/{id}";
+    protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/categories/{id}";
 
     /**
      * Returns a collection of categories.
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModelOK -
+     * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel OK -
      *   It was possible to read the collection.
-     *
-     * @api
      */
     public function getAll(): CategoriesOutputModel
     {
@@ -36,13 +34,11 @@ class Categories extends BaseEndpoint
      *
      * @param string $id sourcedId for the category
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CategoryOutputModelOK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\CategoryOutputModel OK - It
      *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function get(string $id): CategoryOutputModel
     {
@@ -58,13 +54,11 @@ class Categories extends BaseEndpoint
      * @param \Blackbaud\SKY\OneRoster\Components\CategoryInputModel
      *   $requestBody input model for a category
      *
-     * @return \Blackbaud\SKY\OneRoster\Components\CategoryOutputModelOK - It
+     * @return \Blackbaud\SKY\OneRoster\Components\CategoryOutputModel OK - It
      *   was possible to read the resource.
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function put(string $id, CategoryInputModel $requestBody): CategoryOutputModel
     {

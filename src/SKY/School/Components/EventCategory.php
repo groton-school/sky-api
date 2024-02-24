@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   description is included in events in the category
  * @property ?bool $include_long_description If set to True, long description
  *   is included in events in the category
- * @property ?bool $public If set to True, the event category is public.  If
+ * @property ?bool $public_ If set to True, the event category is public. If
  *   set to False, it is secure and only users with the allowed list of roles
  *   can see the events in the category
  * @property ?int[] $roles List of Role IDs that are allowed to see a secure

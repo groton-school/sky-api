@@ -23,7 +23,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property bool $primary Returns True if the user in a relationship is the
  *   primary user
  * @property ?int $relationship The enum value that describes the relationship
- *   (ex. Parent_Child = 6)
+ *   (ex. Parent\_Child = 6)
  * @property bool $resides_with Returns True if Resides With is enabled in the
  *   UI. If enabled, then the user in a relationship resides with the queried
  *   user
@@ -34,9 +34,11 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   signs enrollment contracts in onBoard
  * @property ?int $type_id The ID of the relationship type. The ID corresponds
  *   with static options in the UI
- * @property ?int $user_one_id The ID of the user associated with user_two_id
+ * @property ?int $user_one_id The ID of the user associated with
+ *   user\_two\_id
  * @property ?string $user_one_role The role of the user being queried
- * @property ?int $user_two_id The ID of the user associated with user_one_id
+ * @property ?int $user_two_id The ID of the user associated with
+ *   user\_one\_id
  *
  * @api
  */

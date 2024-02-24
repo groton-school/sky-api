@@ -21,7 +21,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $sourcedId
  * @property ?string $status
  * @property ?string $dateLastModified
- * @property ?string[] $metadata
+ * @property ?array{...<string, string>} $metadata
  *
  * @api
  */
@@ -47,6 +47,6 @@ class ORDemographicModel extends BaseComponent
         "sourcedId" => "string",
         "status" => "string",
         "dateLastModified" => "string",
-        "metadata" => "string[]",
+        "metadata" => "array{...<string, string>}",
     ];
 }

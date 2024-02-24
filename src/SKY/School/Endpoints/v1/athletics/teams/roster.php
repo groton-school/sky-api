@@ -20,10 +20,10 @@ class Roster extends BaseEndpoint
      * Returns a collection of players and coaches for the specified athletic
      * team's ID.
      *
-     * The ```team_id``` can be retrieved using the GET athletics teams
+     *  The ```team\_id``` can be retrieved using the GET athletics teams
      * endpoint.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -37,12 +37,10 @@ class Roster extends BaseEndpoint
      * @param int $team_id Format - int32. The ID for the team to get the
      *   roster for.
      *
-     * @return \Blackbaud\SKY\School\Components\RosterSuccess
+     * @return \Blackbaud\SKY\School\Components\Roster Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByTeam(int $team_id): RosterDisambiguate
     {

@@ -14,7 +14,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $firstname First Name
  * @property ?string $lastname Last Name
  * @property ?string $phone_number Phone Number
- * @property ?string $phone_type Phone  Type
+ * @property ?string $phone_type Phone Type
  * @property ?int $phone_call_type Phone Call Type
  * @property ?string $email Email
  * @property ?int $email_call_type Email Call Type

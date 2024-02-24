@@ -18,15 +18,13 @@ class Excusedtypes extends BaseEndpoint
     /**
      * Returns a collection of excused types.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - SKY API Basic
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollection Success
      */
     public function getAll(): ExcusedTypesCollection
     {

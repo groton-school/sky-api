@@ -61,7 +61,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   value: true, false. Defaults to false.
  * @property ?bool $is_international Set to true if user is international
  *   (will be deprecated 02/15/2024)
- * @property ?bool $is_latino_hispanic Set to true if  user is latino or
+ * @property ?bool $is_latino_hispanic Set to true if user is latino or
  *   hispanic (will be deprecated 02/15/2024).
  * @property ?string $latino_hispanic Whether the user is Latino/Hispanic.
  *   Allowed values: Yes, No, or No answer.

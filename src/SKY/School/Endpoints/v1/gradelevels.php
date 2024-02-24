@@ -18,7 +18,7 @@ class Gradelevels extends BaseEndpoint
     /**
      * Returns a collection of core school grade levels.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -29,9 +29,7 @@ class Gradelevels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\GradeLevelCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\GradeLevelCollection Success
      */
     public function getAll(): GradeLevelCollection
     {

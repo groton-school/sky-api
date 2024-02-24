@@ -62,7 +62,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   value: true, false. Defaults to false.
  * @property bool $is_international Set to true if user is international (will
  *   be deprecated 02/15/2024)
- * @property ?bool $is_latino_hispanic Set to true if  user is latino or
+ * @property ?bool $is_latino_hispanic Set to true if user is latino or
  *   hispanic (will be deprecated 02/15/2024).
  * @property ?string $latino_hispanic Whether the user is Latino/Hispanic.
  *   Allowed values: Yes, No, or No answer.
@@ -108,17 +108,16 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property \Blackbaud\SKY\School\Components\UserVisaAdd $visa An object for
  *   visa information
  * @property ?string[] $fields_to_delete An array of strings representing
- *   field names.
- * Due to an inherent check against deleting data only accessible through the
- *   UI, this unusual step is necessary. To delete or clear data from a user
- *   field (such as middle_name or living_status), you must include the field in
- *   this array. If a field is included in this array, the data for that field
- *   will be deleted and this will override any other value set for the field in
- *   the request body. Only fields that can be cleared will be processed. Any
- *   required fields, Booleans or fields with no blank option will be ignored.
- * Allowed values: The field name as listed for the request body (e.g.
- *   "middle_name" or "living_status"). Fields within an object will include the
- *   object name and the field name separated by a period (e.g.
+ *   field names. Due to an inherent check against deleting data only accessible
+ *   through the UI, this unusual step is necessary. To delete or clear data
+ *   from a user field (such as middle\_name or living\_status), you must
+ *   include the field in this array. If a field is included in this array, the
+ *   data for that field will be deleted and this will override any other value
+ *   set for the field in the request body. Only fields that can be cleared will
+ *   be processed. Any required fields, Booleans or fields with no blank option
+ *   will be ignored. Allowed values: The field name as listed for the request
+ *   body (e.g. "middle\_name" or "living\_status"). Fields within an object
+ *   will include the object name and the field name separated by a period (e.g.
  *   "passport.number" or "locker.number").
  *
  * @api

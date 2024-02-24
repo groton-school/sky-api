@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\PracticeCreate;
 use Blackbaud\SKY\School\Components\PracticeUpdate;
 
@@ -15,12 +16,12 @@ class Practice extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/schedule/practice/{practice_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/teams/{team_id}/schedule/practice/{practice_id}";
 
     /**
-     * Creates a new athletic practice for the specified ```team_id```.
+     * Creates a new athletic practice for the specified ```team\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Team Schedule Manager
@@ -32,12 +33,10 @@ class Practice extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PracticeCreate $requestBody
      *   Information about the practice to be created
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByTeam(int $team_id, PracticeCreate $requestBody): int
     {
@@ -51,7 +50,7 @@ class Practice extends BaseEndpoint
      * Updates the practice data for the specified athletic practice ```id```.
      *
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Athletic Group Manager
@@ -61,12 +60,10 @@ class Practice extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PracticeUpdate $requestBody
      *   Information about the practice to be updated
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function patchByTeam(int $team_id, PracticeUpdate $requestBody): void
     {
@@ -77,10 +74,10 @@ class Practice extends BaseEndpoint
     }
 
     /**
-     * Removes the athletic ```practice_id``` for the specified ```team_id```.
+     * Removes the athletic ```practice\_id``` for the specified
+     * ```team\_id```.
      *
-     *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Team Schedule Manager
@@ -92,12 +89,10 @@ class Practice extends BaseEndpoint
      * @param int $practice_id Format - int32. ID of the practice to be
      *   deleted
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function deleteByTeam(int $team_id, int $practice_id): void
     {

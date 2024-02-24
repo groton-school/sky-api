@@ -18,16 +18,14 @@ class Gendertypes extends BaseEndpoint
     /**
      * Returns a collection of gender types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\GenderTypeCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\GenderTypeCollection Success
      */
     public function getAll(): GenderTypeCollection
     {

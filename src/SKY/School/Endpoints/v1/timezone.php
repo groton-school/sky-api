@@ -18,7 +18,7 @@ class Timezone extends BaseEndpoint
     /**
      * Returns the current time zone set for the school.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Academic Group Manager
@@ -27,9 +27,7 @@ class Timezone extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\TimezoneSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\Timezone Success
      */
     public function getAll(): TimezoneDisambiguate
     {

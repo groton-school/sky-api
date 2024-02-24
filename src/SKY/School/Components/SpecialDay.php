@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $id
  * @property ?string $day_description
  * @property ?int $sort_order
- * @property ?string $rotation_behavior
+ * @property null|"Bump"|"Skip" $rotation_behavior
  * @property ?\Blackbaud\SKY\School\Components\SpecialDayBlock[] $blocks
  *
  * @api

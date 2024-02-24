@@ -19,9 +19,9 @@ class Changed extends BaseEndpoint
     /**
      * Returns a paginated collection of users that have been created or
      * modified within the specified timeframe. The timeframe is from the
-     * start_date to the start_date plus seven days.
+     * start\_date to the start\_date plus seven days.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
      * - SKY API Data Sync
      *
@@ -32,12 +32,10 @@ class Changed extends BaseEndpoint
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2003-04-21.
      *
-     * @return \Blackbaud\SKY\School\Components\UserExtendedCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\UserExtendedCollection Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function filterBy(string $base_role_ids, string $start_date): UserExtendedCollection
     {

@@ -18,7 +18,7 @@ class Sportslevels extends BaseEndpoint
     /**
      * Returns a collection of athletic sports levels.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Team Schedule Manager
@@ -29,9 +29,7 @@ class Sportslevels extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @return \Blackbaud\SKY\School\Components\SportsLevelCollectionSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\SportsLevelCollection Success
      */
     public function getAll(): SportsLevelCollection
     {

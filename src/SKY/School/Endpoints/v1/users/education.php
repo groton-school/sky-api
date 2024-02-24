@@ -4,6 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\EducationAdd;
 use Blackbaud\SKY\School\Components\EducationReadCollection;
 use Blackbaud\SKY\School\Components\EducationUpdate;
@@ -16,25 +17,24 @@ class Education extends BaseEndpoint
     /**
      * @var string $url
      */
-    protected static string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/education/{education_id}";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/education/{education_id}";
 
     /**
      * Returns a collection of education information for the specified
-     * ```user_id```.
+     * ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
      *
      * @param int $user_id Format - int32. The ID of the user.
      *
-     * @return \Blackbaud\SKY\School\Components\EducationReadCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\EducationReadCollection
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function getByUser(int $user_id): EducationReadCollection
     {
@@ -46,7 +46,7 @@ class Education extends BaseEndpoint
     /**
      * Creates an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -55,19 +55,17 @@ class Education extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $user_id Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\EducationAdd $requestBody The
      *   education model.
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function postByUser(int $user_id, EducationAdd $requestBody): int
     {
@@ -80,7 +78,7 @@ class Education extends BaseEndpoint
     /**
      * Deletes an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -89,18 +87,16 @@ class Education extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $user_id Format - int32.
      * @param int $education_id Format - int32.
      *
-     * @return voidSuccess
+     * @return void Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function deleteByUser(int $user_id, int $education_id): void
     {
@@ -114,7 +110,7 @@ class Education extends BaseEndpoint
     /**
      * Updates an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - SKY API Data Sync
@@ -123,20 +119,18 @@ class Education extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param int $user_id Format - int32. The ID of the user.
      * @param int $education_id Format - int32. The ID of the education.
      * @param \Blackbaud\SKY\School\Components\EducationUpdate $requestBody
      *   The education model.
      *
-     * @return intSuccess
+     * @return int Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function patchByUser(int $user_id, int $education_id, EducationUpdate $requestBody): int
     {

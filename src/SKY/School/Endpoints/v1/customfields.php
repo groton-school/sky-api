@@ -18,15 +18,13 @@ class Customfields extends BaseEndpoint
     /**
      * Returns a collection of admin custom fields.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
      * - Platform Manager
      *
-     * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollectionSuccess
-
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollection
+     *   Success
      */
     public function getAll(): AdminCustomFieldsCollection
     {

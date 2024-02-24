@@ -18,9 +18,7 @@ class Me extends BaseEndpoint
     /**
      * Returns information about the caller.
      *
-     * @return \Blackbaud\SKY\School\Components\UserMeSuccess
-     *
-     * @api
+     * @return \Blackbaud\SKY\School\Components\UserMe Success
      */
     public function getAll(): UserMe
     {

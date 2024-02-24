@@ -21,28 +21,33 @@ class Categories extends BaseEndpoint
     /**
      * Returns a collection of event categories.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Content Manager
      *
      * - Platform Manager
      *
-     * @param ?int $page (Optional) Format - int32. The page of results to
-     *   start from.
+     * @param ?int $page Format - int32. The page of results to start from.
      *
-     * @return \Blackbaud\SKY\School\Components\EventCategoryCollectionSuccess
+     * @return \Blackbaud\SKY\School\Components\EventCategoryCollection
+     *   Success
      *
-     * @api
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
      */
-    public function filterBy(?int $page = null): EventCategoryCollection
+    public function filterBy(?int $page): EventCategoryCollection
     {
+        assert($page !== null, new ArgumentException("Parameter `page` is required"));
+
         return new EventCategoryCollection($this->send("get", [], ["page" => $page]));
     }
 
     /**
      * Returns the Id of the created Events Category
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
      * - Content Manager
      *
@@ -53,13 +58,11 @@ class Categories extends BaseEndpoint
      *
      * @param \Blackbaud\SKY\School\Components\EventCategory $requestBody
      *
-     * @return \Blackbaud\SKY\School\Components\EventCategoryCreateResponseExampleSuccess
-
+     * @return \Blackbaud\SKY\School\Components\EventCategoryCreateResponseExample
+     *   Success
      *
-     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentExceptionif required
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
-     *
-     * @api
      */
     public function post(EventCategory $requestBody): EventCategoryCreateResponseExample
     {

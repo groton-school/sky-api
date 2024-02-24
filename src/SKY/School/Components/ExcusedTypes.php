@@ -12,9 +12,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $excuse_type_id The ID of the excuse type
  * @property ?string $excuse_description The description of the excuse type
  * @property ?bool $use_in_calculations The Use In Calculations flag
- * @property ?string $excused The Excused/Unexecused status
- * @property ?string $duration The Full Day/Half day status
- * @property ?string $attendance_type The attendance type
+ * @property null|"Present"|"Excused"|"Unexcused" $excused The
+ *   Excused/Unexecused status
+ * @property null|"NA"|"FullDay"|"HalfDay" $duration The Full Day/Half day
+ *   status
+ * @property null|"Present"|"Absence"|"Tardy"|"Virtual" $attendance_type The
+ *   attendance type
  *
  * @api
  */
