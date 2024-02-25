@@ -18,15 +18,14 @@ class Athleticclearance extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/athleticclearance";
 
     /**
-     * Updates a medical athletic requirements for a student.
+     * Updates a medical athletic requirements for a student.<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
      * @param \Blackbaud\SKY\School\Components\StudentAthleticRequirementUpdate
      *   $requestBody The athletics requirements to update
@@ -38,7 +37,7 @@ class Athleticclearance extends BaseEndpoint
      */
     public function post(StudentAthleticRequirementUpdate $requestBody): array
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return array_map(fn($a) => new string($a), $this->send("post", [], [], $requestBody));
     }

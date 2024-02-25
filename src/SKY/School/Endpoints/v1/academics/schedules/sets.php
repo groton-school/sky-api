@@ -20,21 +20,21 @@ class Sets extends BaseEndpoint
 
     /**
      * Returns a collection of Schedule Sets for the specified
-     * ```level\_num```.
+     * ```level_num```.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
      *
-     * - Schedule Manager
-     *
-     * @param int $level_num Format - int32. Level Number indicates which
-     *   school you are working with.
-     * @param ?string $school_year The school year to get Schedule Sets for.
+     * @param array{level_num: int, school_year: string, group_type: int}
+     *   $params An associative array
+     *     - level_num: Format - int32. Level Number indicates which school
+     *   you are working with.
+     *     - school_year: The school year to get Schedule Sets for.
      *   Corresponds to ```school\_year\_label``` in the [Year
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget). Defaults to the current school year.
-     * @param ?int $group_type Format - int32. The Group Type to filter the
+     *     - group_type: Format - int32. The Group Type to filter the
      *   collection of Schedule Sets. Defaults to the 'Academics' (1).
      *
      * @return \Blackbaud\SKY\School\Components\ScheduleSetCollection Success
@@ -42,11 +42,11 @@ class Sets extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(int $level_num, ?string $school_year, ?int $group_type): ScheduleSetCollection
+    public function filterBy(array $params): ScheduleSetCollection
     {
-        assert($level_num !== null, new ArgumentException("Parameter `level_num` is required"));
-        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
-        assert($group_type !== null, new ArgumentException("Parameter `group_type` is required"));
+        assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
+        assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
+        assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
         return new ScheduleSetCollection($this->send("get", [], ["level_num" => $level_num,
         "school_year" => $school_year,
@@ -54,27 +54,25 @@ class Sets extends BaseEndpoint
     }
 
     /**
-     * Returns details about the specified ```schedule\_set\_id```.
+     * Returns details about the specified ```schedule_set_id```.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
      *
-     * - Schedule Manager
-     *
-     * @param int $schedule_set_id Format - int32. ID of the Schedule Set you
-     *   seek.
+     * @param array{schedule_set_id: int} $params An associative array
+     *     - schedule_set_id: Format - int32. ID of the Schedule Set you seek.
      *
      * @return \Blackbaud\SKY\School\Components\ScheduleSetDetails Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(int $schedule_set_id): ScheduleSetDetails
+    public function get(array $params): ScheduleSetDetails
     {
-        assert($schedule_set_id !== null, new ArgumentException("Parameter `schedule_set_id` is required"));
+        assert(isset($params['schedule_set_id']), new ArgumentException("Parameter `schedule_set_id` is required"));
 
-        return new ScheduleSetDetails($this->send("get", ["{schedule_set_id}" => $schedule_set_id], []));
+        return new ScheduleSetDetails($this->send("get", ["{schedule_set_id}" => $params['schedule_set_id']], []));
     }
 }

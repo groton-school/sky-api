@@ -18,21 +18,16 @@ class Result extends BaseEndpoint
 
     /**
      * Creates a result/score for the specified athletic game
-     * ```schedule\_id```.
+     * ```schedule_id```. <br />
      *
-     *  Existing IDs can be retrieved via the GET athletics schedules endpoint
-     * as well as after a POST athletics game.
+     * Existing IDs can be retrieved via the GET athletics schedules endpoint
+     * as well as after a POST athletics game. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Team Schedule Manager
-     *
-     * - Page Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
+     * <ul><li>Team Schedule Manager</li><li>Page
+     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\ResultCreate $requestBody
      *
@@ -43,7 +38,7 @@ class Result extends BaseEndpoint
      */
     public function post(ResultCreate $requestBody): void
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

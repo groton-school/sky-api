@@ -17,9 +17,11 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/categories";
 
     /**
-     * Returns a collection of categories for a specified `class_id`.
+     * Returns a collection of categories for a specified
+     * <code>class_id</code>.
      *
-     * @param string $class_id sourcedId for the category
+     * @param array{class_id: string} $params An associative array
+     *     - class_id: sourcedId for the category
      *
      * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel OK -
      *   It was possible to read the resource.
@@ -27,10 +29,10 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(string $class_id): CategoriesOutputModel
+    public function getByClass(array $params): CategoriesOutputModel
     {
-        assert($class_id !== null, new ArgumentException("Parameter `class_id` is required"));
+        assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new CategoriesOutputModel($this->send("get", ["{class_id}" => $class_id], []));
+        return new CategoriesOutputModel($this->send("get", ["{class_id}" => $params['class_id']], []));
     }
 }

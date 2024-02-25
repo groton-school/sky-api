@@ -42,29 +42,34 @@ class Customfields extends BaseEndpoint
 
     /**
      * Returns a paginated collection of users with custom admin fields,
-     * limited to 100 users per page. This includes both user custom fields
-     * and administration view only custom fields.
+     * limited to 100 users per page.
      *
-     *  Use the last user ```id``` number as the ```marker``` value to return
-     * the next set of results. For example: ```marker=23232323``` will return
-     * a second set of results beginning with the next user ID in the result
-     * set.
+     * This includes both user custom fields and administration view only
+     * custom fields.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Use the last user ```id``` number as the ```marker``` value to return
+     * the next set of results.
+     *
+     * For example: ```marker=23232323``` will return a second set of results
+     * beginning with the next user ID in the result set.<br />
+     *
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
+     * <ul><li>Platform Manager</li></ul>
      *
-     * @param string $base_role_ids A comma delimited list of base role IDs to
-     *   get users for. Example: ```base\_role\_ids=14,16``` for Students and
+     * @param array{base_role_ids: string, marker: int, field_ids: string}
+     *   $params An associative array
+     *     - base_role_ids: A comma delimited list of base role IDs to get
+     *   users for. Example: ```base\_role\_ids=14,16``` for Students and
      *   Parents.
-     * @param ?int $marker Format - int32. The user's ```id``` to start at to
-     *   return the next batch of data. Results will start with the next user in
-     *   the result set.
-     * @param ?string $field_ids A comma delimited list of field IDs to filter
-     *   the result set down to. Only matching custom fields will be returned
-     *   from that result set for all users in that set even if they don't have
-     *   any data for the given ```field\_ids```.
+     *     - marker: Format - int32. The user's ```id``` to start at to return
+     *   the next batch of data. Results will start with the next user in the
+     *   result set.
+     *     - field_ids: A comma delimited list of field IDs to filter the
+     *   result set down to. Only matching custom fields will be returned from
+     *   that result set for all users in that set even if they don't have any
+     *   data for the given ```field\_ids```.
      *
      * @return \Blackbaud\SKY\School\Components\UserAdminCustomFieldCollection
      *   Success
@@ -72,11 +77,11 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(string $base_role_ids, ?int $marker, ?string $field_ids): UserAdminCustomFieldCollection
+    public function filterBy(array $params): UserAdminCustomFieldCollection
     {
-        assert($base_role_ids !== null, new ArgumentException("Parameter `base_role_ids` is required"));
-        assert($marker !== null, new ArgumentException("Parameter `marker` is required"));
-        assert($field_ids !== null, new ArgumentException("Parameter `field_ids` is required"));
+        assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
+        assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
+        assert(isset($params['field_ids']), new ArgumentException("Parameter `field_ids` is required"));
 
         return new UserAdminCustomFieldCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
         "marker" => $marker,
@@ -84,44 +89,47 @@ class Customfields extends BaseEndpoint
     }
 
     /**
-     * Returns a collection of custom fields for a single ```user\_id```. This
-     * includes both user custom fields and administration view only custom
-     * fields.
+     * Returns a collection of custom fields for a single ```user_id```.
      *
-     *  Requires at least one of the following roles in the Education
+     * This includes both user custom fields and administration view only
+     * custom fields.<br />
+     *
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
+     * <ul><li>Platform Manager</li></ul>
      *
-     * @param int $user_id Format - int32. The id of the user to get custom
-     *   fields for.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The id of the user to get custom fields
+     *   for.
      *
      * @return \Blackbaud\SKY\School\Components\UserAdminCustomField Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): UserAdminCustomField
+    public function getByUser(array $params): UserAdminCustomField
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserAdminCustomField($this->send("get", ["{user_id}" => $user_id], []));
+        return new UserAdminCustomField($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 
     /**
-     * Creates an admin custom field for a user.
+     * Creates an admin custom field for a user. <br />
      *
-     *  Does not create any of the ten default custom fields, every user has
-     * those fields created for them by default. To update those fields see
-     * User Custom Field Values Update.
+     * Does not create any of the ten default custom fields, every user has
+     * those fields created for them by default.  To update those fields see
+     * User Custom Field Values Update. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
+     * <ul><li>Platform Manager</li></ul>
      *
-     * @param int $user_id Format - int32. The Id of the user to create a
-     *   custom field for
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The Id of the user to create a custom
+     *   field for
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldCreate
      *   $requestBody Object that describes the custom field that will be
      *   created.
@@ -131,24 +139,25 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, UserAdminCustomFieldCreate $requestBody): bool
+    public function postByUser(array $params, UserAdminCustomFieldCreate $requestBody): bool
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 
     /**
-     * Updates an admin custom field for a user.
+     * Updates an admin custom field for a user. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
+     * <ul><li>Platform Manager</li></ul>
      *
-     * @param int $user_id Format - int32. The Id of the user to update an
-     *   existing custom field for.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The Id of the user to update an existing
+     *   custom field for.
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldUpdate
      *   $requestBody Object that describes the custom field that should be
      *   updated.
@@ -158,11 +167,11 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(int $user_id, UserAdminCustomFieldUpdate $requestBody): bool
+    public function patchByUser(array $params, UserAdminCustomFieldUpdate $requestBody): bool
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("patch", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 }

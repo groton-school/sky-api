@@ -17,9 +17,10 @@ class Results extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/results";
 
     /**
-     * Returns a collection of results for a specified `class_id`.
+     * Returns a collection of results for a specified <code>class_id</code>.
      *
-     * @param string $class_id sourcedId for the class
+     * @param array{class_id: string} $params An associative array
+     *     - class_id: sourcedId for the class
      *
      * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the resource.
@@ -27,10 +28,10 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(string $class_id): ResultsOutputModelSvc
+    public function getByClass(array $params): ResultsOutputModelSvc
     {
-        assert($class_id !== null, new ArgumentException("Parameter `class_id` is required"));
+        assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new ResultsOutputModelSvc($this->send("get", ["{class_id}" => $class_id], []));
+        return new ResultsOutputModelSvc($this->send("get", ["{class_id}" => $params['class_id']], []));
     }
 }

@@ -18,8 +18,8 @@ class Buildings extends BaseEndpoint
     /**
      * Returns a collection of buildings.
      *
-     * **Requires the 'Team Schedule Manager', 'Coach', 'Athletic Group
-     * Manager' or 'Pending Coach' role in the K12 system.**
+     * <p><b>Requires the 'Team Schedule Manager', 'Coach', 'Athletic Group
+     * Manager' or 'Pending Coach' role in the K12 system.</b></p>
      *
      * @return \Blackbaud\SKY\School\Components\BuildingReadCollection Success
      */

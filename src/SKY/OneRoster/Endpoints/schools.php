@@ -93,7 +93,8 @@ class Schools extends BaseEndpoint
     /**
      * Returns a specific school.
      *
-     * @param string $id sourcedId for the school
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the school
      *
      * @return \Blackbaud\SKY\OneRoster\Components\OrgOutputModel OK - It was
      *   possible to read the resource.
@@ -101,10 +102,10 @@ class Schools extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): OrgOutputModel
+    public function get(array $params): OrgOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new OrgOutputModel($this->send("get", ["{id}" => $id], []));
+        return new OrgOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

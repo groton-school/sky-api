@@ -16,22 +16,14 @@ class Transportationtypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/transportationtypes";
 
     /**
-     * Returns a collection of athletic transportation types.
+     * Returns a collection of athletic transportation types. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
-     *
-     * - Team Schedule Manager
-     *
-     * - Schedule Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
-     *
-     * - Any Manager Role
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Schedule Manager</li><li>Coach</li><li>Pending
+     * Coach</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\TransportationCollection
      *   Success

@@ -16,11 +16,11 @@ class Checkliststatus extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checkliststatus";
 
     /**
-     * Returns a collection of admissions checklist statuses.
+     * Returns a collection of admissions checklist statuses.<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Admissions Manager
+     * <ul><li>Admissions Manager</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection
      *   Success

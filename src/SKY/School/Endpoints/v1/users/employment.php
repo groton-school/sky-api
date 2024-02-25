@@ -17,24 +17,25 @@ class Employment extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/employment";
 
     /**
-     * Returns the employment details for the specified ```user\_id```.
+     * Returns the employment details for the specified ```user_id```.  <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\FacultyEmploymentRead Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): FacultyEmploymentRead
+    public function getByUser(array $params): FacultyEmploymentRead
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new FacultyEmploymentRead($this->send("get", ["{user_id}" => $user_id], []));
+        return new FacultyEmploymentRead($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 }

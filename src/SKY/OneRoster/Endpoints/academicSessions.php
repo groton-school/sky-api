@@ -31,7 +31,8 @@ class AcademicSessions extends BaseEndpoint
     /**
      * Returns a specific academic session.
      *
-     * @param string $id sourcedId for the academic session
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the academic session
      *
      * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionOutputModel
      *   OK - It was possible to read the collection.
@@ -39,10 +40,10 @@ class AcademicSessions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): AcademicSessionOutputModel
+    public function get(array $params): AcademicSessionOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new AcademicSessionOutputModel($this->send("get", ["{id}" => $id], []));
+        return new AcademicSessionOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

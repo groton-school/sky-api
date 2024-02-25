@@ -38,18 +38,18 @@ class Enrollments extends BaseEndpoint
 
     /**
      * Returns a collection of course sections in which the provided student
-     * is enrolled.
+     * is enrolled.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
      *
-     * - Schedule Manager
-     *
-     * @param int $user_id Format - int32. User identifier.
-     * @param ?string $school_year The school year to filter the collection of
-     *   sections by. Corresponds to ```school\_year\_label``` in the [Year
+     * @param array{user_id: int, school_year: string} $params An associative
+     *   array
+     *     - user_id: Format - int32. User identifier.
+     *     - school_year: The school year to filter the collection of sections
+     *   by. Corresponds to ```school\_year\_label``` in the [Year
      *   list](https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget). Defaults to the current school year.
      *
      * @return \Blackbaud\SKY\School\Components\EnrollmentCollection Success
@@ -57,11 +57,11 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(int $user_id, ?string $school_year): EnrollmentCollection
+    public function get(array $params): EnrollmentCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new EnrollmentCollection($this->send("get", ["{user_id}" => $user_id], ["school_year" => $school_year]));
+        return new EnrollmentCollection($this->send("get", ["{user_id}" => $params['user_id']], ["school_year" => $school_year]));
     }
 }

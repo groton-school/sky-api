@@ -18,27 +18,27 @@ class Master extends BaseEndpoint
 
     /**
      * Returns a collection of Master Schedule days within the date range
-     * provided.
+     * provided.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
      *
-     * - Schedule Manager
-     *
-     * @param int $level_num Format - int32. Level Number indicates which
-     *   school you are working with.
-     * @param string $start_date Format - date-time (as date-time in RFC3339).
-     *   Start of the date range (inclusive). The earliest possible start\_date
-     *   is 1/1/1900, any date entered before that date will be overwritten with
+     * @param array{level_num: int, start_date: string, end_date: string,
+     *   offering_type: int} $params An associative array
+     *     - level_num: Format - int32. Level Number indicates which school
+     *   you are working with.
+     *     - start_date: Format - date-time (as date-time in RFC3339). Start
+     *   of the date range (inclusive). The earliest possible start\_date is
+     *   1/1/1900, any date entered before that date will be overwritten with
      *   1/1/1900.
-     * @param string $end_date Format - date-time (as date-time in RFC3339).
-     *   End of the date range (inclusive). If the end\_date is earlier than the
+     *     - end_date: Format - date-time (as date-time in RFC3339). End of
+     *   the date range (inclusive). If the end\_date is earlier than the
      *   start\_date the end\_date wil be overwritten with the start\_date plus
      *   7 days.
-     * @param ?int $offering_type Format - int32. Filters the results by a
-     *   specific group type. Defaults to "All" offering types.
+     *     - offering_type: Format - int32. Filters the results by a specific
+     *   group type. Defaults to "All" offering types.
      *
      * @return \Blackbaud\SKY\School\Components\MasterScheduleDayCollection
      *   Success
@@ -46,12 +46,12 @@ class Master extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(int $level_num, string $start_date, string $end_date, ?int $offering_type): MasterScheduleDayCollection
+    public function filterBy(array $params): MasterScheduleDayCollection
     {
-        assert($level_num !== null, new ArgumentException("Parameter `level_num` is required"));
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
-        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
-        assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
+        assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
+        assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
         return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $level_num,
         "start_date" => $start_date,

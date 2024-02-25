@@ -36,13 +36,11 @@ class Teachers extends BaseEndpoint
     protected Classes $_classes = null;
 
     /**
-     * Returns a collection of teacher user data.
+     * Returns a collection of teacher user data. <br />
      *
-     *  Roles returned include:
+     * Roles returned include:
      *
-     * - Teacher
-     *
-     * - Pending Teacher
+     * <ul><li>Teacher</li><li>Pending Teacher</li></ul>
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
@@ -52,25 +50,24 @@ class Teachers extends BaseEndpoint
     }
 
     /**
-     * Returns a single teacher user for the specified `id`.
+     * Returns a single teacher user for the specified <code>id</code>. <br />
      *
-     *  Roles returned include:
+     * Roles returned include:
      *
-     * - Teacher
+     * <ul><li>Teacher</li><li>Pending Teacher</li></ul>
      *
-     * - Pending Teacher
-     *
-     * @param string $id sourcedId for the teacher
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the teacher
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UserOutputModel Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): UserOutputModel
+    public function get(array $params): UserOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new UserOutputModel($this->send("get", ["{id}" => $id], []));
+        return new UserOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

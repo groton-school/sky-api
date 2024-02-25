@@ -17,17 +17,16 @@ class Allergiesconditions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/allergiesconditions";
 
     /**
-     * Creates medical allergy/condition record for a student.
+     * Creates medical allergy/condition record for a student.<br />
      *
-     *  Returns the newly created ID.
+     * Returns the newly created ID. <br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
@@ -39,7 +38,7 @@ class Allergiesconditions extends BaseEndpoint
      */
     public function post(StudentMedicalAllergyCondition $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

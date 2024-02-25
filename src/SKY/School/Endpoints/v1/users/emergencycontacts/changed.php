@@ -18,26 +18,28 @@ class Changed extends BaseEndpoint
 
     /**
      * Returns a paginated collection of all emergency contacts for all users
-     * that have had changes since the specified ```start\_date```.
+     * that have had changes since the specified ```start_date```. <br />
      *
-     *  If no date is specified then this returns a paginated collection of
-     * all emergency contacts for all users.
+     * If no date is specified then this returns a paginated collection of all
+     * emergency contacts for all users. <br />
      *
-     *  Use the last user's ID as the ```marker``` value to return the next
-     * set of results.
+     * Use the last user's ID as the ```marker``` value to return the next set
+     * of results.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param ?string $start_date Format - date-time (as date-time in
-     *   RFC3339). The date to begin looking for changes. Use
+     * @param array{start_date: string, marker: int} $params An associative
+     *   array
+     *     - start_date: Format - date-time (as date-time in RFC3339). The
+     *   date to begin looking for changes. Use
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2022-04-16.
-     * @param ?int $marker Format - int32. The user's ID to start at to return
-     *   the next batch of data. Results will start with the next user in the
-     *   result set.
+     *     - marker: Format - int32. The user's ID to start at to return the
+     *   next batch of data. Results will start with the next user in the result
+     *   set.
      *
      * @return \Blackbaud\SKY\School\Components\EmergencyContactChangeCollection
      *   Success
@@ -45,10 +47,10 @@ class Changed extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?string $start_date, ?int $marker): EmergencyContactChangeCollection
+    public function filterBy(array $params): EmergencyContactChangeCollection
     {
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
-        assert($marker !== null, new ArgumentException("Parameter `marker` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
         return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $start_date,
         "marker" => $marker]));

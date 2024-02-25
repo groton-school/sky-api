@@ -20,14 +20,16 @@ class Occupations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/occupations/{occupation_id}";
 
     /**
-     * Returns a collection of occupations for the specified ```user\_id```.
+     * Returns a collection of occupations for the specified ```user_id```.
+     * <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\OccupationReadCollection
      *   Success
@@ -35,28 +37,26 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): OccupationReadCollection
+    public function getByUser(array $params): OccupationReadCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new OccupationReadCollection($this->send("get", ["{user_id}" => $user_id], []));
+        return new OccupationReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 
     /**
-     * Creates an occupation record for the specified ```user\_id```.
+     * Creates an occupation record for the specified ```user_id```.<br />
      *
-     *  Returns the ID of the occupation created.
+     * Returns the ID of the occupation created. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\OccupationCreate $requestBody
      *   The occupation information to be created.
      *
@@ -65,64 +65,62 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, OccupationCreate $requestBody): int
+    public function postByUser(array $params, OccupationCreate $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 
     /**
-     * Deletes an occupation entry for a user.
+     * Deletes an occupation entry for a user.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * - Contact Card Manager
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
-     * @param int $user_id Format - int32. The ID of the user.
-     * @param int $occupation_id Format - int32. The ID of the occupation.
-     * @param ?bool $current Current Employment Status
+     * @param array{user_id: int, occupation_id: int, current: bool} $params
+     *   An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - occupation_id: Format - int32. The ID of the occupation.
+     *     - current: Current Employment Status
      *
      * @return int Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUser(int $user_id, int $occupation_id, ?bool $current): int
+    public function deleteByUser(array $params): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($occupation_id !== null, new ArgumentException("Parameter `occupation_id` is required"));
-        assert($current !== null, new ArgumentException("Parameter `current` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['occupation_id']), new ArgumentException("Parameter `occupation_id` is required"));
+        assert(isset($params['current']), new ArgumentException("Parameter `current` is required"));
 
-        return $this->send("delete", ["{user_id}" => $user_id,
-        "{occupation_id}" => $occupation_id], ["current" => $current]);
+        return $this->send("delete", ["{user_id}" => $params['user_id'],
+        "{occupation_id}" => $params['occupation_id']], ["current" => $current]);
     }
 
     /**
-     * Updates an occupation entry for a user.
+     * Updates an occupation entry for a user.<br />
      *
-     *  Returns the ID of the occupation updated.
+     * Returns the ID of the occupation updated. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
-     * @param int $occupation_id Format - int32. The ID of the occupation.
+     * @param array{user_id: int, occupation_id: int} $params An associative
+     *   array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - occupation_id: Format - int32. The ID of the occupation.
      * @param \Blackbaud\SKY\School\Components\OccupationUpdate $requestBody
      *   The occupation information to be updated.
      *
@@ -131,13 +129,13 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(int $user_id, int $occupation_id, OccupationUpdate $requestBody): int
+    public function patchByUser(array $params, OccupationUpdate $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($occupation_id !== null, new ArgumentException("Parameter `occupation_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['occupation_id']), new ArgumentException("Parameter `occupation_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $user_id,
-        "{occupation_id}" => $occupation_id], [], $requestBody);
+        return $this->send("patch", ["{user_id}" => $params['user_id'],
+        "{occupation_id}" => $params['occupation_id']], [], $requestBody);
     }
 }

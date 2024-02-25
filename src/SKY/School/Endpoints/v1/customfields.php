@@ -16,12 +16,12 @@ class Customfields extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/customfields";
 
     /**
-     * Returns a collection of admin custom fields.
+     * Returns a collection of admin custom fields.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
+     * <ul><li>Platform Manager</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollection
      *   Success

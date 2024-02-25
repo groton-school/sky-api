@@ -18,20 +18,14 @@ class Opponents extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
 
     /**
-     * Returns a collection of athletic opponents.
+     * Returns a collection of athletic opponents. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
-     *
-     * - Team Schedule Manager
-     *
-     * - Page Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Page Manager</li><li>Coach</li><li>Pending
+     * Coach</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
      *   Success
@@ -42,22 +36,14 @@ class Opponents extends BaseEndpoint
     }
 
     /**
-     * Creates a new athletic opponent.
+     * Creates a new athletic opponent. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
-     *
-     * - Team Schedule Manager
-     *
-     * - Schedule Manager
-     *
-     * - Page Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Schedule Manager</li><li>Page
+     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\OpponentUpdateModel
      *   $requestBody The opponent to be created
@@ -69,7 +55,7 @@ class Opponents extends BaseEndpoint
      */
     public function post(OpponentUpdateModel $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

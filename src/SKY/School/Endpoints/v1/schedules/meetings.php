@@ -19,54 +19,43 @@ class Meetings extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/schedules/{student_id}/meetings";
 
     /**
-     * Returns a list of section meetings for a given date. When
-     * ```end\_date``` is supplied a range of meetings between the given dates
-     * is returned.
+     * Returns a list of section meetings for a given date.  When
+     * ```end_date``` is supplied a range of meetings between the given dates
+     * is returned.<br />```offering_types``` can take a single or multiple
+     * values as a comma delimited ```string``` of integers, defaults to 1<br
+     * />```end_date``` cannot be more than 30 days past the ```start_date```.
+     * Default date range is 30 days.<br /><ul><li>Academics:
+     * 1</li><li>Activities: 2</li><li>Advisory: 3</li><li>Athletics:
+     * 9</li></ul>
      *
-     * ```offering\_types``` can take a single or multiple values as a comma
-     * delimited ```string``` of integers, defaults to 1
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * ```end\_date``` cannot be more than 30 days past the ```start\_date```.
-     * Default date range is 30 days.
+     * <ul><li>Academics Group Manager</li><li>Advisory Group
+     * Manager</li><li>Platform Manager</li><li>Activity Group
+     * Manager</li><li>Athletic Group Manager</li><li>Scheduling
+     * Manager</li></ul>
      *
-     * - Academics: 1
-     *
-     * - Activities: 2
-     *
-     * - Advisory: 3
-     *
-     * - Athletics: 9
-     *
-     *  Requires at least one of the following roles in the Education
-     * Management system: - Academics Group Manager
-     *
-     * - Advisory Group Manager
-     *
-     * - Platform Manager
-     *
-     * - Activity Group Manager
-     *
-     * - Athletic Group Manager
-     *
-     * - Scheduling Manager
-     *
-     * @param string $start_date Format - date-time (as date-time in RFC3339).
-     *   Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
+     * @param array{start_date: string, end_date: string, offering_types:
+     *   string, section_ids: string, last_modified: string,
+     *   show_time_for_current_date: bool} $params An associative array
+     *     - start_date: Format - date-time (as date-time in RFC3339). Use
+     *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2022-04-01.
-     * @param ?string $end_date Format - date-time (as date-time in RFC3339).
-     *   Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
+     *     - end_date: Format - date-time (as date-time in RFC3339). Use
+     *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2022-04-08.
-     * @param ?string $offering_types Comma delimited list of integer values
-     *   above. Defaults to 1.
-     * @param ?string $section_ids Comma delimited list of integer values for
-     *   the section identifiers to return. By default the route returns all
+     *     - offering_types: Comma delimited list of integer values above.
+     *   Defaults to 1.
+     *     - section_ids: Comma delimited list of integer values for the
+     *   section identifiers to return. By default the route returns all
      *   sections.
-     * @param ?string $last_modified Format - date-time (as date-time in
-     *   RFC3339). Filters meetings to sections that were modified on or after
-     *   the date provided.
+     *     - last_modified: Format - date-time (as date-time in RFC3339).
+     *   Filters meetings to sections that were modified on or after the date
+     *   provided.
      *  Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2022-04-01.
-     * @param ?bool $show_time_for_current_date Set to true to calculate the
+     *     - show_time_for_current_date: Set to true to calculate the
      *   ```start\_time``` and ```end\_time``` or meetings based on the current
      *   day instead of the meeting day. Defaults to false.
      *
@@ -75,14 +64,14 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(string $start_date, ?string $end_date, ?string $offering_types, ?string $section_ids, ?string $last_modified, ?bool $show_time_for_current_date): MeetingCollection
+    public function filterBy(array $params): MeetingCollection
     {
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
-        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
-        assert($offering_types !== null, new ArgumentException("Parameter `offering_types` is required"));
-        assert($section_ids !== null, new ArgumentException("Parameter `section_ids` is required"));
-        assert($last_modified !== null, new ArgumentException("Parameter `last_modified` is required"));
-        assert($show_time_for_current_date !== null, new ArgumentException("Parameter `show_time_for_current_date` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
+        assert(isset($params['offering_types']), new ArgumentException("Parameter `offering_types` is required"));
+        assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
+        assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
+        assert(isset($params['show_time_for_current_date']), new ArgumentException("Parameter `show_time_for_current_date` is required"));
 
         return new MeetingCollection($this->send("get", [], ["start_date" => $start_date,
         "end_date" => $end_date,
@@ -94,28 +83,21 @@ class Meetings extends BaseEndpoint
 
     /**
      * Returns a list of meetings for a given student for a specific date.
-     * When ```end\_date``` is supplied a range of meetings between the given
-     * dates is returned.
+     * When ```end_date``` is supplied a range of meetings between the given
+     * dates is returned.<br />```end_date``` cannot be more than 30 days past
+     * the ```start_date```. Default date range is 30 days.<br />
      *
-     * ```end\_date``` cannot be more than 30 days past the ```start\_date```.
-     * Default date range is 30 days.
-     *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Student
+     * <ul><li>Student</li><li>Parent</li><li>Platform
+     * Manager</li><li>Attendance Manager</li><li>Schedule Manager</li></ul>
      *
-     * - Parent
-     *
-     * - Platform Manager
-     *
-     * - Attendance Manager
-     *
-     * - Schedule Manager
-     *
-     * @param int $student_id Format - int32.
-     * @param string $start_date Format - date-time (as date-time in RFC3339).
-     * @param ?string $end_date Format - date-time (as date-time in RFC3339).
+     * @param array{student_id: int, start_date: string, end_date: string}
+     *   $params An associative array
+     *     - student_id: Format - int32.
+     *     - start_date: Format - date-time (as date-time in RFC3339).
+     *     - end_date: Format - date-time (as date-time in RFC3339).
      *
      * @return \Blackbaud\SKY\School\Components\StudentScheduleCollection
      *   Success
@@ -123,13 +105,13 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudent(int $student_id, string $start_date, ?string $end_date): StudentScheduleCollection
+    public function getByStudent(array $params): StudentScheduleCollection
     {
-        assert($student_id !== null, new ArgumentException("Parameter `student_id` is required"));
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
-        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
+        assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new StudentScheduleCollection($this->send("get", ["{student_id}" => $student_id], ["start_date" => $start_date,
+        return new StudentScheduleCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $start_date,
         "end_date" => $end_date]));
     }
 }

@@ -16,17 +16,15 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/content/events/categories";
 
     /**
-     * Returns a collection of Content Events Categories Requires at least one
-     * of the following roles in the Education Management System:
+     * Returns a collection of Content Events Categories
      *
-     * - Parent
+     * Requires at least one of the following roles in the Education
+     * Management System:
      *
-     * - Faculty
+     * <ul><li>Parent</li><li>Faculty</li><li>Student</li></ul>
      *
-     * - Student
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
      * @return \Blackbaud\SKY\School\Components\EventsCategoryCollection
      *   Success

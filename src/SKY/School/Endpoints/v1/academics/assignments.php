@@ -18,20 +18,22 @@ class Assignments extends BaseEndpoint
 
     /**
      * Returns assignments for a student that are assigned or due within the
-     * date range specified.
+     * date range specified.<br />
      *
-     *  If no ```end\_date``` is supplied it defaults to 31 days past the
-     * ```start\_date``` Requires at least one of the following roles in the
-     * Education Management system:
+     * If no ```end_date``` is supplied it defaults to 31 days past the
+     * ```start_date```
      *
-     * - Student
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Parent
+     * <ul><li>Student</li><li>Parent</li></ul>
      *
-     * @param int $student_id Format - int32.
-     * @param string $start_date Format - date-time (as date-time in RFC3339).
-     * @param ?string $end_date Format - date-time (as date-time in RFC3339).
-     * @param ?string $section_ids
+     * @param array{student_id: int, start_date: string, end_date: string,
+     *   section_ids: string} $params An associative array
+     *     - student_id: Format - int32.
+     *     - start_date: Format - date-time (as date-time in RFC3339).
+     *     - end_date: Format - date-time (as date-time in RFC3339).
+     *     - section_ids:
      *
      * @return \Blackbaud\SKY\School\Components\StudentAssignmentCollection
      *   Success
@@ -39,14 +41,14 @@ class Assignments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudent(int $student_id, string $start_date, ?string $end_date, ?string $section_ids): StudentAssignmentCollection
+    public function getByStudent(array $params): StudentAssignmentCollection
     {
-        assert($student_id !== null, new ArgumentException("Parameter `student_id` is required"));
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
-        assert($end_date !== null, new ArgumentException("Parameter `end_date` is required"));
-        assert($section_ids !== null, new ArgumentException("Parameter `section_ids` is required"));
+        assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
+        assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
 
-        return new StudentAssignmentCollection($this->send("get", ["{student_id}" => $student_id], ["start_date" => $start_date,
+        return new StudentAssignmentCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $start_date,
         "end_date" => $end_date,
         "section_ids" => $section_ids]));
     }

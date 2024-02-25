@@ -16,13 +16,11 @@ class Excusedtypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedtypes";
 
     /**
-     * Returns a collection of excused types.
+     * Returns a collection of excused types.<br></br>
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - SKY API Basic
-     *
-     * - Any Manager Role
+     * <ul><li>SKY API Basic</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollection Success
      */

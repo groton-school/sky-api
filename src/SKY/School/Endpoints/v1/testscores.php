@@ -39,34 +39,36 @@ class Testscores extends BaseEndpoint
     protected Testtypes $_testtypes = null;
 
     /**
-     * Returns a collection of test scores.
+     * Returns a collection of test scores.<br></br>
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Grading Manager
+     * <ul><li>Grading Manager</li></ul>
      *
-     * @param ?int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\TestScoreCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?int $user_id): TestScoreCollection
+    public function filterBy(array $params): TestScoreCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
         return new TestScoreCollection($this->send("get", [], ["user_id" => $user_id]));
     }
 
     /**
-     * Creates a test score for a student ```user\_id```
+     * Creates a test score for a student ```user_id```<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Grading Manager
+     * <ul><li>Grading Manager</li></ul>
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\TestScoreAdd $requestBody
      *
      * @return int Success
@@ -74,11 +76,11 @@ class Testscores extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(int $user_id, TestScoreAdd $requestBody): int
+    public function post(array $params, TestScoreAdd $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 }

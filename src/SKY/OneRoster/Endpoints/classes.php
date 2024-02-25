@@ -85,7 +85,8 @@ class Classes extends BaseEndpoint
     /**
      * Returns a specific class.
      *
-     * @param string $id sourcedId for the class
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the class
      *
      * @return \Blackbaud\SKY\OneRoster\Components\ClassOutputModel OK - It
      *   was possible to read the resource.
@@ -93,10 +94,10 @@ class Classes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): ClassOutputModel
+    public function get(array $params): ClassOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new ClassOutputModel($this->send("get", ["{id}" => $id], []));
+        return new ClassOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

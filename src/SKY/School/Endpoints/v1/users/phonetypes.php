@@ -16,12 +16,12 @@ class Phonetypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/phonetypes";
 
     /**
-     * Returns a collection of phone types. Requires at least one of the
-     * following roles in the Education Management system:
+     * Returns a collection of phone types.
      *
-     * - SKY API Data Sync
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Any Manager Role
+     * <ul><li>SKY API Data Sync</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\PhoneTypeCollection Success
      */

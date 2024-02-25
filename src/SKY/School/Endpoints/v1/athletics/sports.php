@@ -17,33 +17,27 @@ class Sports extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/sports";
 
     /**
-     * Returns a collection of athletic sports.
+     * Returns a collection of athletic sports.<br />
      *
-     *  Use the optional ```season\_id``` to filter the results by season.
+     * Use the optional ```season_id``` to filter the results by season.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
+     * <ul><li>Athletic Group Manager</li><li>Schedule Manager</li><li>Page
+     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
      *
-     * - Schedule Manager
-     *
-     * - Page Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
-     *
-     * @param ?int $season_id Format - int32. Season ID
+     * @param array{season_id: int} $params An associative array
+     *     - season_id: Format - int32. Season ID
      *
      * @return \Blackbaud\SKY\School\Components\SportCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?int $season_id): SportCollection
+    public function filterBy(array $params): SportCollection
     {
-        assert($season_id !== null, new ArgumentException("Parameter `season_id` is required"));
+        assert(isset($params['season_id']), new ArgumentException("Parameter `season_id` is required"));
 
         return new SportCollection($this->send("get", [], ["season_id" => $season_id]));
     }

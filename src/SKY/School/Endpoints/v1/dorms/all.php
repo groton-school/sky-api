@@ -20,25 +20,23 @@ class All extends BaseEndpoint
      * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Dorm Group Manager
+     * <ul><li>Dorm Group Manager</li><li>Dorm Supervisor</li><li>Pending Dorm
+     * Supervisor</li></ul>
      *
-     * - Dorm Supervisor
-     *
-     * - Pending Dorm Supervisor
-     *
-     * @param ?int $level_number Format - int32. Identifier for the school
-     *   level
-     * @param ?string $school_year Identifier for the school year
+     * @param array{level_number: int, school_year: string} $params An
+     *   associative array
+     *     - level_number: Format - int32. Identifier for the school level
+     *     - school_year: Identifier for the school year
      *
      * @return \Blackbaud\SKY\School\Components\DormCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?int $level_number, ?string $school_year): DormCollection
+    public function filterBy(array $params): DormCollection
     {
-        assert($level_number !== null, new ArgumentException("Parameter `level_number` is required"));
-        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
+        assert(isset($params['level_number']), new ArgumentException("Parameter `level_number` is required"));
+        assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
         return new DormCollection($this->send("get", [], ["level_number" => $level_number,
         "school_year" => $school_year]));

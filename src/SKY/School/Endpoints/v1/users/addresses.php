@@ -39,40 +39,39 @@ class Addresses extends BaseEndpoint
     protected Share $_share = null;
 
     /**
-     * Returns a collection of addresses.
+     * Returns a collection of addresses. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\AddressReadCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): AddressReadCollection
+    public function getByUser(array $params): AddressReadCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new AddressReadCollection($this->send("get", ["{user_id}" => $user_id], []));
+        return new AddressReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 
     /**
-     * Returns the ID of the address just created.
+     * Returns the ID of the address just created. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\AddressAdd $requestBody Address
      *   information to be updated.
      *
@@ -81,29 +80,27 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, AddressAdd $requestBody): int
+    public function postByUser(array $params, AddressAdd $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 
     /**
-     * Returns ID of the address just updated.
+     * Returns ID of the address just updated. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
-     * @param int $address_id Format - int32. The ID of the address to be
-     *   updated.
+     * @param array{user_id: int, address_id: int} $params An associative
+     *   array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - address_id: Format - int32. The ID of the address to be updated.
      * @param \Blackbaud\SKY\School\Components\AddressEdit $requestBody
      *   Address information to be updated.
      *
@@ -112,53 +109,52 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(int $user_id, int $address_id, AddressEdit $requestBody): int
+    public function patchByUser(array $params, AddressEdit $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($address_id !== null, new ArgumentException("Parameter `address_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $user_id,
-        "{address_id}" => $address_id], [], $requestBody);
+        return $this->send("patch", ["{user_id}" => $params['user_id'],
+        "{address_id}" => $params['address_id']], [], $requestBody);
     }
 
     /**
-     * Removes the specified address from the user.
+     * Removes the specified address from the user. <br />
      *
-     *  If the address is shared, other users linked to the address will not
-     * be affected.
+     * If the address is shared, other users linked to the address will not be
+     * affected. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * - Contact Card Manager
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
-     * @param int $user_id Format - int32. The ID of the user
-     * @param int $address_id Format - int32. The ID of the user's address to
+     * @param array{user_id: int, address_id: int, address_type_id: int}
+     *   $params An associative array
+     *     - user_id: Format - int32. The ID of the user
+     *     - address_id: Format - int32. The ID of the user's address to
      *   delete.
-     * @param int $address_type_id Format - int32. The ID of the user's
-     *   address type to delete.
+     *     - address_type_id: Format - int32. The ID of the user's address
+     *   type to delete.
      *
      * @return void Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserAndAddress(int $user_id, int $address_id, int $address_type_id): void
+    public function deleteByUserAndAddress(array $params): void
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($address_id !== null, new ArgumentException("Parameter `address_id` is required"));
-        assert($address_type_id !== null, new ArgumentException("Parameter `address_type_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
+        assert(isset($params['address_type_id']), new ArgumentException("Parameter `address_type_id` is required"));
 
-        return $this->send("delete", ["{user_id}" => $user_id,
-        "{address_id}" => $address_id,
-        "{address_type_id}" => $address_type_id], []);
+        return $this->send("delete", ["{user_id}" => $params['user_id'],
+        "{address_id}" => $params['address_id'],
+        "{address_type_id}" => $params['address_type_id']], []);
     }
 }

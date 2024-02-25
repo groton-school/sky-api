@@ -17,25 +17,24 @@ class Items extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/content/news/items";
 
     /**
-     * Returns a collection of Content News Items Requires at least one of the
-     * following roles in the Education Management System:
+     * Returns a collection of Content News Items
      *
-     * - Parent
+     * Requires at least one of the following roles in the Education
+     * Management System:
      *
-     * - Faculty
+     * <ul><li>Parent</li><li>Faculty</li><li>Student</li></ul>
      *
-     * - Student
-     *
-     * @param ?string $categories
+     * @param array{categories: string} $params An associative array
+     *     - categories:
      *
      * @return \Blackbaud\SKY\School\Components\NewsItemCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?string $categories): NewsItemCollection
+    public function filterBy(array $params): NewsItemCollection
     {
-        assert($categories !== null, new ArgumentException("Parameter `categories` is required"));
+        assert(isset($params['categories']), new ArgumentException("Parameter `categories` is required"));
 
         return new NewsItemCollection($this->send("get", [], ["categories" => $categories]));
     }

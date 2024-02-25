@@ -32,7 +32,8 @@ class Categories extends BaseEndpoint
     /**
      * Returns a specific category.
      *
-     * @param string $id sourcedId for the category
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the category
      *
      * @return \Blackbaud\SKY\OneRoster\Components\CategoryOutputModel OK - It
      *   was possible to read the resource.
@@ -40,17 +41,18 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): CategoryOutputModel
+    public function get(array $params): CategoryOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new CategoryOutputModel($this->send("get", ["{id}" => $id], []));
+        return new CategoryOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 
     /**
      * Returns the category object that was created or updated.
      *
-     * @param string $id sourcedId for the category
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the category
      * @param \Blackbaud\SKY\OneRoster\Components\CategoryInputModel
      *   $requestBody input model for a category
      *
@@ -60,11 +62,11 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(string $id, CategoryInputModel $requestBody): CategoryOutputModel
+    public function put(array $params, CategoryInputModel $requestBody): CategoryOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new CategoryOutputModel($this->send("put", ["{id}" => $id], [], $requestBody));
+        return new CategoryOutputModel($this->send("put", ["{id}" => $params['id']], [], $requestBody));
     }
 }

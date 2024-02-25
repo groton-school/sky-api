@@ -19,44 +19,42 @@ class Conditions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/conditions/{condition_id}";
 
     /**
-     * Delete a medical condition for a student.
+     * Delete a medical condition for a student.<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * @param int $condition_id Format - int32. The ID of the student's
-     *   condition.
+     * @param array{condition_id: int} $params An associative array
+     *     - condition_id: Format - int32. The ID of the student's condition.
      *
      * @return int Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function delete(int $condition_id): int
+    public function delete(array $params): int
     {
-        assert($condition_id !== null, new ArgumentException("Parameter `condition_id` is required"));
+        assert(isset($params['condition_id']), new ArgumentException("Parameter `condition_id` is required"));
 
-        return $this->send("delete", ["{condition_id}" => $condition_id], []);
+        return $this->send("delete", ["{condition_id}" => $params['condition_id']], []);
     }
 
     /**
-     * Update a medical condition for a student.
+     * Update a medical condition for a student.<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * @param int $condition_id Format - int32. The ID of the student's
-     *   condition.
+     * @param array{condition_id: int} $params An associative array
+     *     - condition_id: Format - int32. The ID of the student's condition.
      * @param \Blackbaud\SKY\School\Components\StudentConditionUpdate
      *   $requestBody The condition changes
      *
@@ -65,26 +63,25 @@ class Conditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patch(int $condition_id, StudentConditionUpdate $requestBody): int
+    public function patch(array $params, StudentConditionUpdate $requestBody): int
     {
-        assert($condition_id !== null, new ArgumentException("Parameter `condition_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['condition_id']), new ArgumentException("Parameter `condition_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{condition_id}" => $condition_id], [], $requestBody);
+        return $this->send("patch", ["{condition_id}" => $params['condition_id']], [], $requestBody);
     }
 
     /**
-     * Creates a condition for a student.
+     * Creates a condition for a student.<br />
      *
-     *  Returns the newly created ID.
+     * Returns the newly created ID. <br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalCondition
      *   $requestBody The medical condition to be created for student
@@ -96,7 +93,7 @@ class Conditions extends BaseEndpoint
      */
     public function post(StudentMedicalCondition $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

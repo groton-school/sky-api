@@ -31,7 +31,8 @@ class Enrollments extends BaseEndpoint
     /**
      * Returns a specific enrollment.
      *
-     * @param string $id sourcedId for the enrollment
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the enrollment
      *
      * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentOutputModel OK -
      *   It was possible to read the resource.
@@ -39,10 +40,10 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): EnrollmentOutputModel
+    public function get(array $params): EnrollmentOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new EnrollmentOutputModel($this->send("get", ["{id}" => $id], []));
+        return new EnrollmentOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

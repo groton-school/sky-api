@@ -17,33 +17,30 @@ class Terms extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/terms";
 
     /**
-     * Returns a collection of core school terms.
+     * Returns a collection of core school terms.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Schedule
+     * Manager</li><li>Platform Manager</li><li>Any Manager Role</li></ul>
      *
-     * - Schedule Manager
-     *
-     * - Platform Manager
-     *
-     * - Any Manager Role
-     *
-     * @param ?string $school_year The school year to get terms for. Defaults
-     *   to the current school year.
-     * @param ?int $offering_type Format - int32. The offering type to filter
-     *   terms by.
+     * @param array{school_year: string, offering_type: int} $params An
+     *   associative array
+     *     - school_year: The school year to get terms for. Defaults to the
+     *   current school year.
+     *     - offering_type: Format - int32. The offering type to filter terms
+     *   by.
      *
      * @return \Blackbaud\SKY\School\Components\TermCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?string $school_year, ?int $offering_type): TermCollection
+    public function filterBy(array $params): TermCollection
     {
-        assert($school_year !== null, new ArgumentException("Parameter `school_year` is required"));
-        assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
+        assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
+        assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
         return new TermCollection($this->send("get", [], ["school_year" => $school_year,
         "offering_type" => $offering_type]));

@@ -18,34 +18,30 @@ class Roster extends BaseEndpoint
 
     /**
      * Returns a collection of players and coaches for the specified athletic
-     * team's ID.
+     * team's ID. <br />
      *
-     *  The ```team\_id``` can be retrieved using the GET athletics teams
-     * endpoint.
+     * The ```team_id``` can be retrieved using the GET athletics teams
+     * endpoint. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
      *
-     * - Team Schedule Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
-     *
-     * @param int $team_id Format - int32. The ID for the team to get the
-     *   roster for.
+     * @param array{team_id: int} $params An associative array
+     *     - team_id: Format - int32. The ID for the team to get the roster
+     *   for.
      *
      * @return \Blackbaud\SKY\School\Components\Roster Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTeam(int $team_id): RosterDisambiguate
+    public function getByTeam(array $params): Roster
     {
-        assert($team_id !== null, new ArgumentException("Parameter `team_id` is required"));
+        assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
 
-        return new RosterDisambiguate($this->send("get", ["{team_id}" => $team_id], []));
+        return new RosterDisambiguate($this->send("get", ["{team_id}" => $params['team_id']], []));
     }
 }

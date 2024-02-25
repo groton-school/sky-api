@@ -18,48 +18,47 @@ class Assignments extends BaseEndpoint
 
     /**
      * Returns a collection of assignments for the specified
-     * ```section\_id```.
+     * ```section_id```.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group
+     * Manager</li><li>Student</li><li>Teacher</li><li>Pending
+     * Teacher</li></ul>
      *
-     * - Student
-     *
-     * - Teacher
-     *
-     * - Pending Teacher
-     *
-     * @param int $section_id Format - int32. The ID of the section.
-     * @param ?string $types Returns results that match a comma separated list
-     *   of assignment type IDs.
-     * @param ?string $status The status of the assignment. The status
-     *   corresponds with static system options. Allowed values: "0" for In
-     *   Progress, "1" for Completed, "2" for Overdue, and "-1" for To Do.
-     * @param ?int $persona_id Format - int32. The ID of the persona to get
+     * @param array{section_id: int, types: string, status: string,
+     *   persona_id: int, filter: string, search: string} $params An associative
+     *   array
+     *     - section_id: Format - int32. The ID of the section.
+     *     - types: Returns results that match a comma separated list of
+     *   assignment type IDs.
+     *     - status: The status of the assignment. The status corresponds with
+     *   static system options. Allowed values: "0" for In Progress, "1" for
+     *   Completed, "2" for Overdue, and "-1" for To Do.
+     *     - persona_id: Format - int32. The ID of the persona to get
      *   assignments. 3 = Faculty, 2 = Student. Defaults to 3.
-     * @param ?string $filter Return assignments based on the entered string:
+     *     - filter: Return assignments based on the entered string:
      *   ```expired```, ```future```, or ```all```. All is the default sort
      *   value.
-     * @param ?string $search Returns results with Descriptions or Titles that
-     *   match search string.
+     *     - search: Returns results with Descriptions or Titles that match
+     *   search string.
      *
      * @return \Blackbaud\SKY\School\Components\AssignmentCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySection(int $section_id, ?string $types, ?string $status, ?int $persona_id, ?string $filter, ?string $search): AssignmentCollection
+    public function getBySection(array $params): AssignmentCollection
     {
-        assert($section_id !== null, new ArgumentException("Parameter `section_id` is required"));
-        assert($types !== null, new ArgumentException("Parameter `types` is required"));
-        assert($status !== null, new ArgumentException("Parameter `status` is required"));
-        assert($persona_id !== null, new ArgumentException("Parameter `persona_id` is required"));
-        assert($filter !== null, new ArgumentException("Parameter `filter` is required"));
-        assert($search !== null, new ArgumentException("Parameter `search` is required"));
+        assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
+        assert(isset($params['types']), new ArgumentException("Parameter `types` is required"));
+        assert(isset($params['status']), new ArgumentException("Parameter `status` is required"));
+        assert(isset($params['persona_id']), new ArgumentException("Parameter `persona_id` is required"));
+        assert(isset($params['filter']), new ArgumentException("Parameter `filter` is required"));
+        assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
 
-        return new AssignmentCollection($this->send("get", ["{section_id}" => $section_id], ["types" => $types,
+        return new AssignmentCollection($this->send("get", ["{section_id}" => $params['section_id']], ["types" => $types,
         "status" => $status,
         "persona_id" => $persona_id,
         "filter" => $filter,

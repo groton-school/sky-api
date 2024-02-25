@@ -19,18 +19,16 @@ class Relationships extends BaseEndpoint
 
     /**
      * Returns a collection of a relationships for the specified
-     * ```user\_id```. Requires at least one of the following roles in the
-     * Education Management system:
+     * ```user_id```.
      *
-     * - Payment Services Manager
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Integration Manager
+     * <ul><li>Payment Services Manager</li><li>Integration
+     * Manager</li><li>Contact Card Manager</li><li>Platform Manager</li></ul>
      *
-     * - Contact Card Manager
-     *
-     * - Platform Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\RelationshipReadCollection
      *   Success
@@ -38,30 +36,28 @@ class Relationships extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): RelationshipReadCollection
+    public function getByUser(array $params): RelationshipReadCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new RelationshipReadCollection($this->send("get", ["{user_id}" => $user_id], []));
+        return new RelationshipReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 
     /**
-     * Creates a relationship record for the specified ```user\_id```.
+     * Creates a relationship record for the specified ```user_id```.<br />
      *
-     *  This doesn't create a user profile for the related individual.
+     * This doesn't create a user profile for the related individual.<br />
      *
-     *  Returns 200 OK Requires at least one of the following roles in the
-     * Education Management system:
+     * Returns 200 OK
      *
-     * - Payment Services Manager
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Integration Manager
+     * <ul><li>Payment Services Manager</li><li>Integration
+     * Manager</li><li>Contact Card Manager</li><li>Platform Manager</li></ul>
      *
-     * - Contact Card Manager
-     *
-     * - Platform Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\RelationshipCreate $requestBody
      *   Defines the relationship to be created.
      *
@@ -70,50 +66,48 @@ class Relationships extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, RelationshipCreate $requestBody): void
+    public function postByUser(array $params, RelationshipCreate $requestBody): void
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 
     /**
-     * Removes a relationship record from the specified ```user\_id```.
+     * Removes a relationship record from the specified ```user_id```.<br />
      *
-     *  If the related individual is also a user, the user profile of that
-     * user is preserved. Individuals may need to review or update their
-     * emergency contacts. Requires at least one of the following roles in the
-     * Education Management system:
+     * If the related individual is also a user, the user profile of that user
+     * is preserved. Individuals may need to review or update their emergency
+     * contacts.
      *
-     * - Payment Services Manager
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Integration Manager
+     * <ul><li>Payment Services Manager</li><li>Integration
+     * Manager</li><li>Contact Card Manager</li><li>Platform Manager</li></ul>
      *
-     * - Contact Card Manager
-     *
-     * - Platform Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user for whom you are
+     * @param array{user_id: int, left_user: int, relationship_type:
+     *   "NOT_SET"|"StepParent_StepChild"|"GrGrandParent_GrGrandChild"|"Guardian_Ward"|"AuntUncle_NieceNephew"|"Grandparent_Grandchild"|"Parent_Child"|"Custodian_Student"|"Consultant_Student"|"Caretaker_Charge"|"SpousePartner_SpousePartner"|"StepSibling_StepSibling"|"ExHusband_ExWife"|"Associate_Associate"|"HalfSibling_HalfSibling"|"Husband_Wife"|"Spouse_Spouse"|"Sibling_Sibling"|"Cousin_Cousin"|"Friend_Friend"} $params An associative array
+     *     - user_id: Format - int32. The ID of the user for whom you are
      *   deleting the relationship.
-     * @param int $left_user Format - int32. ID of the other user in the
+     *     - left_user: Format - int32. ID of the other user in the
      *   relationship.
-     * @param "NOT_SET"|"StepParent_StepChild"|"GrGrandParent_GrGrandChild"|"Guardian_Ward"|"AuntUncle_NieceNephew"|"Grandparent_Grandchild"|"Parent_Child"|"Custodian_Student"|"Consultant_Student"|"Caretaker_Charge"|"SpousePartner_SpousePartner"|"StepSibling_StepSibling"|"ExHusband_ExWife"|"Associate_Associate"|"HalfSibling_HalfSibling"|"Husband_Wife"|"Spouse_Spouse"|"Sibling_Sibling"|"Cousin_Cousin"|"Friend_Friend"
-     *   $relationship_type Defines the relationship between left\_user and this
-     *   user.
+     *     - relationship_type: Defines the relationship between left\_user
+     *   and this user.
      *
      * @return void Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUser(int $user_id, int $left_user, string $relationship_type): void
+    public function deleteByUser(array $params): void
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($left_user !== null, new ArgumentException("Parameter `left_user` is required"));
-        assert($relationship_type !== null, new ArgumentException("Parameter `relationship_type` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['left_user']), new ArgumentException("Parameter `left_user` is required"));
+        assert(isset($params['relationship_type']), new ArgumentException("Parameter `relationship_type` is required"));
 
-        return $this->send("delete", ["{user_id}" => $user_id], ["left_user" => $left_user,
+        return $this->send("delete", ["{user_id}" => $params['user_id']], ["left_user" => $left_user,
         "relationship_type" => $relationship_type]);
     }
 }

@@ -37,9 +37,11 @@ class LineItems extends BaseEndpoint
     protected Results $_results = null;
 
     /**
-     * Returns a collection of lineItems for the specified `class_id`.
+     * Returns a collection of lineItems for the specified
+     * <code>class_id</code>.
      *
-     * @param string $class_id sourcedId for the class
+     * @param array{class_id: string} $params An associative array
+     *     - class_id: sourcedId for the class
      *
      * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
      *   It was possible to read the resource.
@@ -47,10 +49,10 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(string $class_id): LineItemsOutputModel
+    public function getByClass(array $params): LineItemsOutputModel
     {
-        assert($class_id !== null, new ArgumentException("Parameter `class_id` is required"));
+        assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new LineItemsOutputModel($this->send("get", ["{class_id}" => $class_id], []));
+        return new LineItemsOutputModel($this->send("get", ["{class_id}" => $params['class_id']], []));
     }
 }

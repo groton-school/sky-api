@@ -17,11 +17,13 @@ class Results extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/students/{student_id}/results";
 
     /**
-     * Returns a collection of results for a specified `class_id` and
-     * `student_id`.
+     * Returns a collection of results for a specified <code>class_id</code>
+     * and <code>student_id</code>.
      *
-     * @param string $class_id sourcedId for the class
-     * @param string $student_id sourcedId for the student
+     * @param array{class_id: string, student_id: string} $params An
+     *   associative array
+     *     - class_id: sourcedId for the class
+     *     - student_id: sourcedId for the student
      *
      * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the resource.
@@ -29,12 +31,12 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClassAndStudent(string $class_id, string $student_id): ResultsOutputModelSvc
+    public function getByClassAndStudent(array $params): ResultsOutputModelSvc
     {
-        assert($class_id !== null, new ArgumentException("Parameter `class_id` is required"));
-        assert($student_id !== null, new ArgumentException("Parameter `student_id` is required"));
+        assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
+        assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
 
-        return new ResultsOutputModelSvc($this->send("get", ["{class_id}" => $class_id,
-        "{student_id}" => $student_id], []));
+        return new ResultsOutputModelSvc($this->send("get", ["{class_id}" => $params['class_id'],
+        "{student_id}" => $params['student_id']], []));
     }
 }

@@ -29,9 +29,11 @@ class Demographics extends BaseEndpoint
     }
 
     /**
-     * Returns a single user's demographic data for the specified `id`..
+     * Returns a single user's demographic data for the specified
+     * <code>id</code>..
      *
-     * @param string $id sourcedId for the user
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the user
      *
      * @return \Blackbaud\SKY\OneRoster\Components\DemographicOutputModel
      *   Success
@@ -39,10 +41,10 @@ class Demographics extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): DemographicOutputModel
+    public function get(array $params): DemographicOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new DemographicOutputModel($this->send("get", ["{id}" => $id], []));
+        return new DemographicOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 }

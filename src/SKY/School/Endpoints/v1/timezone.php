@@ -16,20 +16,17 @@ class Timezone extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/timezone";
 
     /**
-     * Returns the current time zone set for the school.
+     * Returns the current time zone set for the school.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
-     *
-     * - Platform Manager
-     *
-     * - Any Manager Role
+     * <ul><li>Academic Group Manager</li><li>Platform Manager</li><li>Any
+     * Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\Timezone Success
      */
-    public function getAll(): TimezoneDisambiguate
+    public function getAll(): Timezone
     {
         return new TimezoneDisambiguate($this->send("get", [], []));
     }

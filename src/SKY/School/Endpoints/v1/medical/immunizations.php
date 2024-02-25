@@ -17,15 +17,14 @@ class Immunizations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/immunizations";
 
     /**
-     * Updates a medical immunization for a student.
+     * Updates a medical immunization for a student.<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
      * @param \Blackbaud\SKY\School\Components\StudentImmunizationUpdate
      *   $requestBody The immunizations to update
@@ -37,7 +36,7 @@ class Immunizations extends BaseEndpoint
      */
     public function post(StudentImmunizationUpdate $requestBody): void
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

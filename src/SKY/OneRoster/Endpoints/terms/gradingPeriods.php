@@ -17,9 +17,11 @@ class GradingPeriods extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{term_id}/gradingPeriods";
 
     /**
-     * Returns a collection of grading periods for the specified `term_id`
+     * Returns a collection of grading periods for the specified
+     * <code>term_id</code>
      *
-     * @param string $term_id sourcedId for the term
+     * @param array{term_id: string} $params An associative array
+     *     - term_id: sourcedId for the term
      *
      * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
      *   OK - It was possible to read the collection.
@@ -27,10 +29,10 @@ class GradingPeriods extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTerm(string $term_id): AcademicSessionsOutputModel
+    public function getByTerm(array $params): AcademicSessionsOutputModel
     {
-        assert($term_id !== null, new ArgumentException("Parameter `term_id` is required"));
+        assert(isset($params['term_id']), new ArgumentException("Parameter `term_id` is required"));
 
-        return new AcademicSessionsOutputModel($this->send("get", ["{term_id}" => $term_id], []));
+        return new AcademicSessionsOutputModel($this->send("get", ["{term_id}" => $params['term_id']], []));
     }
 }

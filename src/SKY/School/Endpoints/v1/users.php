@@ -196,54 +196,51 @@ class Users extends BaseEndpoint
     protected Enrollments $_enrollments = null;
 
     /**
-     * Returns a paginated collection of users, limited to 100 users per page.
+     * Returns a paginated collection of users, limited to 100 users per
+     * page.<br />
      *
-     *
-     *  Use the record number as the ```marker``` value to return the next set
+     * Use the record number as the ```marker``` value to return the next set
      * of results. For example: ```marker=101``` will return the second set of
-     * results.
+     * results.<br />
      *
-     *  Results dependant on the directory settings of each user.
+     * Results dependant on the directory settings of each user.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Billing Clerk
+     * <ul><li>Billing Clerk</li><li>Password Manager</li><li>Contact Card
+     * Manager</li><li>Platform Manager</li></ul>
      *
-     * - Password Manager
-     *
-     * - Contact Card Manager
-     *
-     * - Platform Manager
-     *
-     * @param string $roles Comma delimited list of role IDs to get users for.
-     * @param ?string $first_name Filter results by first name.
-     * @param ?string $last_name Filter results by last name.
-     * @param ?string $email Filter results by e-mail.
-     * @param ?string $maiden_name Filter results by maiden name.
-     * @param ?string $grad_year The beginning date in a school year (ex.
-     *   2017).
-     * @param ?string $end_grad_year The end date in a school year (ex. 2018).
-     *   Enter a grad\_year and end\_grad\_year to find matching results in the
-     *   date range.
-     * @param ?int $marker Format - int32. The record number start at to
-     *   return the next batch of data.
+     * @param array{roles: string, first_name: string, last_name: string,
+     *   email: string, maiden_name: string, grad_year: string, end_grad_year:
+     *   string, marker: int} $params An associative array
+     *     - roles: Comma delimited list of role IDs to get users for.
+     *     - first_name: Filter results by first name.
+     *     - last_name: Filter results by last name.
+     *     - email: Filter results by e-mail.
+     *     - maiden_name: Filter results by maiden name.
+     *     - grad_year: The beginning date in a school year (ex. 2017).
+     *     - end_grad_year: The end date in a school year (ex. 2018). Enter a
+     *   grad\_year and end\_grad\_year to find matching results in the date
+     *   range.
+     *     - marker: Format - int32. The record number start at to return the
+     *   next batch of data.
      *
      * @return \Blackbaud\SKY\School\Components\UserReadCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(string $roles, ?string $first_name, ?string $last_name, ?string $email, ?string $maiden_name, ?string $grad_year, ?string $end_grad_year, ?int $marker): UserReadCollection
+    public function filterBy(array $params): UserReadCollection
     {
-        assert($roles !== null, new ArgumentException("Parameter `roles` is required"));
-        assert($first_name !== null, new ArgumentException("Parameter `first_name` is required"));
-        assert($last_name !== null, new ArgumentException("Parameter `last_name` is required"));
-        assert($email !== null, new ArgumentException("Parameter `email` is required"));
-        assert($maiden_name !== null, new ArgumentException("Parameter `maiden_name` is required"));
-        assert($grad_year !== null, new ArgumentException("Parameter `grad_year` is required"));
-        assert($end_grad_year !== null, new ArgumentException("Parameter `end_grad_year` is required"));
-        assert($marker !== null, new ArgumentException("Parameter `marker` is required"));
+        assert(isset($params['roles']), new ArgumentException("Parameter `roles` is required"));
+        assert(isset($params['first_name']), new ArgumentException("Parameter `first_name` is required"));
+        assert(isset($params['last_name']), new ArgumentException("Parameter `last_name` is required"));
+        assert(isset($params['email']), new ArgumentException("Parameter `email` is required"));
+        assert(isset($params['maiden_name']), new ArgumentException("Parameter `maiden_name` is required"));
+        assert(isset($params['grad_year']), new ArgumentException("Parameter `grad_year` is required"));
+        assert(isset($params['end_grad_year']), new ArgumentException("Parameter `end_grad_year` is required"));
+        assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
         return new UserReadCollection($this->send("get", [], ["roles" => $roles,
         "first_name" => $first_name,
@@ -256,16 +253,14 @@ class Users extends BaseEndpoint
     }
 
     /**
-     * Creates a new user record.
+     * Creates a new user record.<br />
      *
-     *  Returns the newly created ID.
+     * Returns the newly created ID. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
+     * <ul><li>Platform Manager</li><li>Contact Card Manager</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\UserAdd $requestBody The user
      *   to be created
@@ -277,22 +272,20 @@ class Users extends BaseEndpoint
      */
     public function post(UserAdd $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }
 
     /**
-     * Updates the record of a single user.
+     * Updates the record of a single user.<br />
      *
-     *  Returns the ID of the user just updated upon success.
+     * Returns the ID of the user just updated upon success. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Platform Manager
-     *
-     * - Contact Card Manager
+     * <ul><li>Platform Manager</li><li>Contact Card Manager</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\UserEdit $requestBody User
      *   information to be updated
@@ -304,30 +297,31 @@ class Users extends BaseEndpoint
      */
     public function patch(UserEdit $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", [], [], $requestBody);
     }
 
     /**
-     * Returns data for the specified ```user\_id```.
+     * Returns data for the specified ```user_id```. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param int $user_id Format - int32. ID of the user to be returned.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. ID of the user to be returned.
      *
      * @return \Blackbaud\SKY\School\Components\UserRead Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(int $user_id): UserRead
+    public function get(array $params): UserRead
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserRead($this->send("get", ["{user_id}" => $user_id], []));
+        return new UserRead($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 }

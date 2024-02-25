@@ -18,19 +18,20 @@ class Students extends BaseEndpoint
 
     /**
      * Returns a collection of student user data for the specified
-     * `school_id`.
+     * <code>school_id</code>.
      *
-     * @param string $school_id sourcedId for the school
+     * @param array{school_id: string} $params An associative array
+     *     - school_id: sourcedId for the school
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySchool(string $school_id): UsersOutputModel
+    public function getBySchool(array $params): UsersOutputModel
     {
-        assert($school_id !== null, new ArgumentException("Parameter `school_id` is required"));
+        assert(isset($params['school_id']), new ArgumentException("Parameter `school_id` is required"));
 
-        return new UsersOutputModel($this->send("get", ["{school_id}" => $school_id], []));
+        return new UsersOutputModel($this->send("get", ["{school_id}" => $params['school_id']], []));
     }
 }

@@ -16,13 +16,11 @@ class Testtypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/testscores/testtypes";
 
     /**
-     * Returns a collection of test and subtest types for a school.
+     * Returns a collection of test and subtest types for a school.<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Grading Manager
-     *
-     * - Any Manager Role
+     * <ul><li>Grading Manager</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\TestTypeCollection Success
      */

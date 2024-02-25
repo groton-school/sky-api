@@ -19,23 +19,25 @@ class Attendance extends BaseEndpoint
 
     /**
      * Returns a collection of student attendance records for the specified
-     * day.
+     * day.<br></br>
      *
-     *  Please use this [ Attendance Setup
-     * Guide](https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html) to verify your attendance settings.
+     * Please use this <a
+     * href="https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html"> Attendance Setup Guide</a> to verify your attendance settings.<br></br>
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Attendance Manager
+     * <ul><li>Attendance Manager</li></ul>
      *
-     * @param int $level_id Format - int32. The ID of the school level to
-     *   retrieve attendance records.
-     * @param string $day Format - date-time (as date-time in RFC3339). The
-     *   date to return attendance for.
-     * @param int $offering_type Format - int32. The offering type to retrieve
+     * @param array{level_id: int, day: string, offering_type: int,
+     *   excuse_type: int} $params An associative array
+     *     - level_id: Format - int32. The ID of the school level to retrieve
+     *   attendance records.
+     *     - day: Format - date-time (as date-time in RFC3339). The date to
+     *   return attendance for.
+     *     - offering_type: Format - int32. The offering type to retrieve
      *   records for.
-     * @param ?int $excuse_type Format - int32. Filters results to a specific
-     *   excuse type.
+     *     - excuse_type: Format - int32. Filters results to a specific excuse
+     *   type.
      *
      * @return \Blackbaud\SKY\School\Components\AttendanceGetCollection
      *   Success
@@ -43,12 +45,12 @@ class Attendance extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(int $level_id, string $day, int $offering_type, ?int $excuse_type): AttendanceGetCollection
+    public function filterBy(array $params): AttendanceGetCollection
     {
-        assert($level_id !== null, new ArgumentException("Parameter `level_id` is required"));
-        assert($day !== null, new ArgumentException("Parameter `day` is required"));
-        assert($offering_type !== null, new ArgumentException("Parameter `offering_type` is required"));
-        assert($excuse_type !== null, new ArgumentException("Parameter `excuse_type` is required"));
+        assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
+        assert(isset($params['day']), new ArgumentException("Parameter `day` is required"));
+        assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
+        assert(isset($params['excuse_type']), new ArgumentException("Parameter `excuse_type` is required"));
 
         return new AttendanceGetCollection($this->send("get", [], ["level_id" => $level_id,
         "day" => $day,
@@ -57,14 +59,14 @@ class Attendance extends BaseEndpoint
     }
 
     /**
-     * Creates a new attendance record for the specified student.
+     * Creates a new attendance record for the specified student.<br></br>
      *
-     *  Please use this [ Attendance Setup
-     * Guide](https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html) to verify your attendance settings.
+     * Please use this <a
+     * href="https://webfiles-sc1.blackbaud.com/support/helpfiles/k12-kb/sis-tutorial-attendance-setup.html"> Attendance Setup Guide</a> to verify your attendance settings.<br></br>
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Attendance Manager
+     * <ul><li>Attendance Manager</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\AttendanceCreate $requestBody
      *   Information about the attendance report
@@ -76,7 +78,7 @@ class Attendance extends BaseEndpoint
      */
     public function post(AttendanceCreate $requestBody): void
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

@@ -17,18 +17,19 @@ class Allergiesconditions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/allergiesconditions";
 
     /**
-     * Returns a list of allergies/conditions for the specified
-     * ```user\_id```.
+     * Returns a list of allergies/conditions for the specified ```user_id```.
+     * <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Nurse
+     * <ul><li>Nurse</li></ul>
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * @param int $user_id Format - int32. ID of the student
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. ID of the student
      *
      * @return \Blackbaud\SKY\School\Components\AllergiesAndConditionsView[]
      *   Success
@@ -36,10 +37,10 @@ class Allergiesconditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): array
+    public function getByUser(array $params): array
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return array_map(fn($a) => new AllergiesAndConditionsView($a), $this->send("get", ["{user_id}" => $user_id], []));
+        return array_map(fn($a) => new AllergiesAndConditionsView($a), $this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 }

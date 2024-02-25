@@ -58,22 +58,25 @@ class Emergencycontacts extends BaseEndpoint
 
     /**
      * Returns a collection of a emergency contacts for the specified
-     * ```user\_id```. Requires at least one of the following roles in the
-     * Education Management system:
+     * ```user_id```.
      *
-     * - SKY API Data Sync
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * <ul><li>SKY API Data Sync</li></ul>
+     *
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\EmergencyContactList Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): EmergencyContactList
+    public function getByUser(array $params): EmergencyContactList
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new EmergencyContactList($this->send("get", ["{user_id}" => $user_id], []));
+        return new EmergencyContactList($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 }

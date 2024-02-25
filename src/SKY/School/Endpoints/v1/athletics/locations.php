@@ -18,20 +18,14 @@ class Locations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/locations";
 
     /**
-     * Returns a collection of athletic locations.
+     * Returns a collection of athletic locations. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
-     *
-     * - Team Schedule Manager
-     *
-     * - Schedule Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Schedule Manager</li><li>Coach</li><li>Pending
+     * Coach</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\LocationCollection Success
      */
@@ -41,23 +35,17 @@ class Locations extends BaseEndpoint
     }
 
     /**
-     * Creates a new athletic location.
+     * Creates a new athletic location. <br />
      *
-     *  The location can optionally be tied to an opponent using the
-     * ```opponent\_id``` from the GET opponents endpoint.
+     * The location can optionally be tied to an opponent using the
+     * ```opponent_id``` from the GET opponents endpoint. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
-     *
-     * - Team Schedule Manager
-     *
-     * - Schedule Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Schedule Manager</li><li>Coach</li><li>Pending
+     * Coach</li></ul>
      *
      * @param \Blackbaud\SKY\School\Components\LocationCreateModel
      *   $requestBody The location to be created
@@ -69,7 +57,7 @@ class Locations extends BaseEndpoint
      */
     public function post(LocationCreateModel $requestBody): int
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("post", [], [], $requestBody);
     }

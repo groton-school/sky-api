@@ -16,18 +16,13 @@ class Years extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/years";
 
     /**
-     * Returns a collection of core school years.
+     * Returns a collection of core school years.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
-     *
-     * - Schedule Manager
-     *
-     * - Platform Manager
-     *
-     * - Any Manager Role
+     * <ul><li>Academic Group Manager</li><li>Schedule
+     * Manager</li><li>Platform Manager</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\YearCollection Success
      */

@@ -32,7 +32,8 @@ class LineItems extends BaseEndpoint
     /**
      * Returns a specific lineItem.
      *
-     * @param string $id sourcedId for the lineItem
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the lineItem
      *
      * @return \Blackbaud\SKY\OneRoster\Components\LineItemOutputModel OK - It
      *   was possible to read the resource.
@@ -40,17 +41,18 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): LineItemOutputModel
+    public function get(array $params): LineItemOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new LineItemOutputModel($this->send("get", ["{id}" => $id], []));
+        return new LineItemOutputModel($this->send("get", ["{id}" => $params['id']], []));
     }
 
     /**
      * Returns the lineItem object that was created or updated.
      *
-     * @param string $id sourcedId for the lineItem
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the lineItem
      * @param \Blackbaud\SKY\OneRoster\Components\LineItemInputModel
      *   $requestBody input model for the lineItem
      *
@@ -60,11 +62,11 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(string $id, LineItemInputModel $requestBody): LineItemOutputModel
+    public function put(array $params, LineItemInputModel $requestBody): LineItemOutputModel
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new LineItemOutputModel($this->send("put", ["{id}" => $id], [], $requestBody));
+        return new LineItemOutputModel($this->send("put", ["{id}" => $params['id']], [], $requestBody));
     }
 }

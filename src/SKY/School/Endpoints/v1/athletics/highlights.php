@@ -18,38 +18,30 @@ class Highlights extends BaseEndpoint
 
     /**
      * Returns an athletic game's highlights for the specified
-     * ```highlight\_id```.
+     * ```highlight_id```. <br />
      *
-     *  This ID can be obtained via the GET athletics schedules endpoint for a
-     * game if highlights exist for that game.
+     * This ID can be obtained via the GET athletics schedules endpoint for a
+     * game if highlights exist for that game. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Athletic Group Manager
+     * <ul><li>Athletic Group Manager</li><li>Team Schedule
+     * Manager</li><li>Schedule Manager</li><li>Page
+     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
      *
-     * - Team Schedule Manager
-     *
-     * - Schedule Manager
-     *
-     * - Page Manager
-     *
-     * - Coach
-     *
-     * - Pending Coach
-     *
-     * @param int $highlight_id Format - int32. ID of the highlight to be
-     *   returned.
+     * @param array{highlight_id: int} $params An associative array
+     *     - highlight_id: Format - int32. ID of the highlight to be returned.
      *
      * @return \Blackbaud\SKY\School\Components\Highlight Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(int $highlight_id): Highlight
+    public function get(array $params): Highlight
     {
-        assert($highlight_id !== null, new ArgumentException("Parameter `highlight_id` is required"));
+        assert(isset($params['highlight_id']), new ArgumentException("Parameter `highlight_id` is required"));
 
-        return new Highlight($this->send("get", ["{highlight_id}" => $highlight_id], []));
+        return new Highlight($this->send("get", ["{highlight_id}" => $params['highlight_id']], []));
     }
 }

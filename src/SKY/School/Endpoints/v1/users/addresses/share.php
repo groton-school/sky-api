@@ -17,24 +17,22 @@ class Share extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/addresses/share";
 
     /**
-     * For an existing user, create a link to an existing address.
+     * For an existing user, create a link to an existing address.<br />
      *
-     *  Returns the ID of the address just shared.
+     * Returns the ID of the address just shared. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Contact Card Manager
+     * <ul><li>Contact Card Manager</li><li>Platform Manager</li><li>SKY API
+     * Data Sync</li></ul>
      *
-     * - Platform Manager
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * - SKY API Data Sync
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
-     * @param int $user_id Format - int32. The Id of the user the existing
-     *   address should be shared.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The Id of the user the existing address
+     *   should be shared.
      * @param \Blackbaud\SKY\School\Components\AddressShare $requestBody The
      *   details about the address that should be shared with the user.
      *
@@ -43,11 +41,11 @@ class Share extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, AddressShare $requestBody): int
+    public function postByUser(array $params, AddressShare $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 }

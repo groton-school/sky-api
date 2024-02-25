@@ -19,16 +19,14 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/events/categories";
 
     /**
-     * Returns a collection of event categories.
+     * Returns a collection of event categories.<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Content Manager
+     * <ul><li>Content Manager</li><li>Platform Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * @param ?int $page Format - int32. The page of results to start from.
+     * @param array{page: int} $params An associative array
+     *     - page: Format - int32. The page of results to start from.
      *
      * @return \Blackbaud\SKY\School\Components\EventCategoryCollection
      *   Success
@@ -36,25 +34,20 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?int $page): EventCategoryCollection
+    public function filterBy(array $params): EventCategoryCollection
     {
-        assert($page !== null, new ArgumentException("Parameter `page` is required"));
+        assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
 
         return new EventCategoryCollection($this->send("get", [], ["page" => $page]));
     }
 
     /**
-     * Returns the Id of the created Events Category
+     * Returns the Id of the created Events Category<br />
      *
-     *  Requires one of the following roles in the Education Management
-     * system:
+     * Requires one of the following roles in the Education Management system:
      *
-     * - Content Manager
-     *
-     * - Platform Manager
-     *
-     * <param name="eventCategory"></param><param
-     * name="cancellationToken"></param>
+     * <ul><li>Content Manager</li><li>Platform Manager</li></ul><param
+     * name="eventCategory"></param><param name="cancellationToken"></param>
      *
      * @param \Blackbaud\SKY\School\Components\EventCategory $requestBody
      *
@@ -66,7 +59,7 @@ class Categories extends BaseEndpoint
      */
     public function post(EventCategory $requestBody): EventCategoryCreateResponseExample
     {
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return new EventCategoryCreateResponseExample($this->send("post", [], [], $requestBody));
     }

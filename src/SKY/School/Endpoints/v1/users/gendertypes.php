@@ -16,14 +16,12 @@ class Gendertypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/gendertypes";
 
     /**
-     * Returns a collection of gender types.
+     * Returns a collection of gender types. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
-     *
-     * - Any Manager Role
+     * <ul><li>SKY API Data Sync</li><li>Any Manager Role</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\GenderTypeCollection Success
      */

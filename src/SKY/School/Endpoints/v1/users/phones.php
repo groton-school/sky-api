@@ -39,35 +39,36 @@ class Phones extends BaseEndpoint
     protected Share $_share = null;
 
     /**
-     * Returns a collection phone numbers for the specified ```user\_id```.
+     * Returns a collection phone numbers for the specified ```user_id```.
      *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      *
      * @return \Blackbaud\SKY\School\Components\PhoneReadCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(int $user_id): PhoneReadCollection
+    public function getByUser(array $params): PhoneReadCollection
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new PhoneReadCollection($this->send("get", ["{user_id}" => $user_id], []));
+        return new PhoneReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
     }
 
     /**
-     * Creates a new phone record for the specified ```user\_id```.
+     * Creates a new phone record for the specified ```user_id```.<br />
      *
-     *  Returns the ID of the phone number created. Requires at least one of
-     * the following roles in the Education Management system:
+     * Returns the ID of the phone number created.
      *
-     * - SKY API Data Sync
+     * Requires at least one of the following roles in the Education
+     * Management system:
      *
-     * - Platform Manager
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Contact Card Manager
-     *
-     * @param int $user_id Format - int32. The ID of the user.
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\PhoneAdd $requestBody The phone
      *   information to be created.
      *
@@ -76,62 +77,61 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(int $user_id, PhoneAdd $requestBody): int
+    public function postByUser(array $params, PhoneAdd $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $user_id], [], $requestBody);
+        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
     }
 
     /**
-     * Removes the specified phone from the user.
+     * Removes the specified phone from the user. <br />
      *
-     *  If the phone is shared, other users linked to the phone will not be
-     * affected.
+     * If the phone is shared, other users linked to the phone will not be
+     * affected. <br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
+     * Manager</li></ul>
      *
-     * - Platform Manager
+     * ***This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.***
      *
-     * - Contact Card Manager
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
-     * @param int $user_id Format - int32. The ID of the user.
-     * @param int $phone_id Format - int32. The ID of the user's phone to
-     *   delete.
-     * @param int $phone_type_id Format - int32. The ID of the phone type.
+     * @param array{user_id: int, phone_id: int, phone_type_id: int} $params
+     *   An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - phone_id: Format - int32. The ID of the user's phone to delete.
+     *     - phone_type_id: Format - int32. The ID of the phone type.
      *
      * @return void Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserAndPhone(int $user_id, int $phone_id, int $phone_type_id): void
+    public function deleteByUserAndPhone(array $params): void
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($phone_id !== null, new ArgumentException("Parameter `phone_id` is required"));
-        assert($phone_type_id !== null, new ArgumentException("Parameter `phone_type_id` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
+        assert(isset($params['phone_type_id']), new ArgumentException("Parameter `phone_type_id` is required"));
 
-        return $this->send("delete", ["{user_id}" => $user_id,
-        "{phone_id}" => $phone_id,
-        "{phone_type_id}" => $phone_type_id], []);
+        return $this->send("delete", ["{user_id}" => $params['user_id'],
+        "{phone_id}" => $params['phone_id'],
+        "{phone_type_id}" => $params['phone_type_id']], []);
     }
 
     /**
-     * Updates an exising phone record for the specified ```user\_id```.
+     * Updates an exising phone record for the specified ```user_id```.<br />
      *
-     *  Returns the ID of the phone number updated.
+     * Returns the ID of the phone number updated.
      *
-     * @param int $user_id Format - int32. The ID of the user.
-     * @param int $phone_id Format - int32. The phone id to be updated.
-     * @param ?bool $split_phone_if_shared Set to true if phone number is
-     *   shared
+     * @param array{user_id: int, phone_id: int, split_phone_if_shared: bool}
+     *   $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - phone_id: Format - int32. The phone id to be updated.
+     *     - split_phone_if_shared: Set to true if phone number is shared
      * @param \Blackbaud\SKY\School\Components\PhoneUpdate $requestBody The
      *   phone information to be updated.
      *
@@ -140,14 +140,14 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(int $user_id, int $phone_id, ?bool $split_phone_if_shared, PhoneUpdate $requestBody): int
+    public function patchByUser(array $params, PhoneUpdate $requestBody): int
     {
-        assert($user_id !== null, new ArgumentException("Parameter `user_id` is required"));
-        assert($phone_id !== null, new ArgumentException("Parameter `phone_id` is required"));
-        assert($split_phone_if_shared !== null, new ArgumentException("Parameter `split_phone_if_shared` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
+        assert(isset($params['split_phone_if_shared']), new ArgumentException("Parameter `split_phone_if_shared` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $user_id,
-        "{phone_id}" => $phone_id], ["split_phone_if_shared" => $split_phone_if_shared], $requestBody);
+        return $this->send("patch", ["{user_id}" => $params['user_id'],
+        "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $split_phone_if_shared], $requestBody);
     }
 }

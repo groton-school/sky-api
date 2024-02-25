@@ -17,22 +17,24 @@ class Checklists extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checklists";
 
     /**
-     * Returns a collection of admissions checklists.
+     * Returns a collection of admissions checklists.<br></br>
      *
-     *  Use the optional ```search\_text``` to apply a case-insensitive search
-     * against check lists "name".
+     * Use the optional ```search_text``` to apply a case-insensitive search
+     * against check lists "name".<br />
      *
-     *  Use the optional ```inactive``` to return only inactive checklists
-     * (default is both).
+     * Use the optional ```inactive``` to return only inactive checklists
+     * (default is both).<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Admissions Manager
+     * <ul><li>Admissions Manager</li></ul>
      *
-     * @param ?string $search_text Applies a case-insensitive search against
-     *   check lists "name".
-     * @param ?bool $inactive flag to return only inactive checklists (default
-     *   is both).
+     * @param array{search_text: string, inactive: bool} $params An
+     *   associative array
+     *     - search_text: Applies a case-insensitive search against check
+     *   lists "name".
+     *     - inactive: flag to return only inactive checklists (default is
+     *   both).
      *
      * @return \Blackbaud\SKY\School\Components\AdmissionsCheckListCollection
      *   Success
@@ -40,10 +42,10 @@ class Checklists extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?string $search_text, ?bool $inactive): AdmissionsCheckListCollection
+    public function filterBy(array $params): AdmissionsCheckListCollection
     {
-        assert($search_text !== null, new ArgumentException("Parameter `search_text` is required"));
-        assert($inactive !== null, new ArgumentException("Parameter `inactive` is required"));
+        assert(isset($params['search_text']), new ArgumentException("Parameter `search_text` is required"));
+        assert(isset($params['inactive']), new ArgumentException("Parameter `inactive` is required"));
 
         return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $search_text,
         "inactive" => $inactive]));

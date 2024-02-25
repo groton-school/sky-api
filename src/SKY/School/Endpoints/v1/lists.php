@@ -35,57 +35,21 @@ class Lists extends BaseEndpoint
 
     /**
      * Returns a list of basic or advanced lists the authorized user has
-     * access to
+     * access to<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - Page Manager
-     *
-     * - Content Editor
-     *
-     * - Teacher
-     *
-     * - Coach
-     *
-     * - Community Group Manager
-     *
-     * - Mentor Manager
-     *
-     * - Alumni Group Manager
-     *
-     * - Athletic Group Manager
-     *
-     * - Academic Group Manager
-     *
-     * - System Group Manager
-     *
-     * - Content Manager
-     *
-     * - Community Group Owner
-     *
-     * - Dorm Group Manager
-     *
-     * - Activity Group Manager
-     *
-     * - Advisory Group Manager
-     *
-     * - Advisor
-     *
-     * - Dorm Supervisor
-     *
-     * - Activity Leader
-     *
-     * - Pending Teacher
-     *
-     * - Pending Advisor
-     *
-     * - Pending Dorm Supervisor
-     *
-     * - Pending Activity Leader
-     *
-     * - Platform Manager
-     *
-     * - SkyApi Data Sync
+     * <ul><li>Page Manager</li><li>Content
+     * Editor</li><li>Teacher</li><li>Coach</li><li>Community Group
+     * Manager</li><li>Mentor Manager</li><li>Alumni Group
+     * Manager</li><li>Athletic Group Manager</li><li>Academic Group
+     * Manager</li><li>System Group Manager</li><li>Content
+     * Manager</li><li>Community Group Owner</li><li>Dorm Group
+     * Manager</li><li>Activity Group Manager</li><li>Advisory Group
+     * Manager</li><li>Advisor</li><li>Dorm Supervisor</li><li>Activity
+     * Leader</li><li>Pending Teacher</li><li>Pending Advisor</li><li>Pending
+     * Dorm Supervisor</li><li>Pending Activity Leader</li><li>Platform
+     * Manager</li><li>SkyApi Data Sync</li></ul>
      *
      * @return \Blackbaud\SKY\School\Components\ListReadCollection Success
      */

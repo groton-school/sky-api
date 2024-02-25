@@ -19,16 +19,18 @@ class Changed extends BaseEndpoint
     /**
      * Returns a paginated collection of users that have been created or
      * modified within the specified timeframe. The timeframe is from the
-     * start\_date to the start\_date plus seven days.
+     * start_date to the start_date plus seven days.<br />
      *
-     *  Requires the following role in the Education Management system:
+     * Requires the following role in the Education Management system:
      *
-     * - SKY API Data Sync
+     * <ul><li>SKY API Data Sync</li></ul>
      *
-     * @param string $base_role_ids Comma delimited list of base role IDs to
-     *   get users for.
-     * @param string $start_date Format - date-time (as date-time in RFC3339).
-     *   The date to begin looking for changes. Use
+     * @param array{base_role_ids: string, start_date: string} $params An
+     *   associative array
+     *     - base_role_ids: Comma delimited list of base role IDs to get users
+     *   for.
+     *     - start_date: Format - date-time (as date-time in RFC3339). The
+     *   date to begin looking for changes. Use
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2003-04-21.
      *
@@ -37,10 +39,10 @@ class Changed extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(string $base_role_ids, string $start_date): UserExtendedCollection
+    public function filterBy(array $params): UserExtendedCollection
     {
-        assert($base_role_ids !== null, new ArgumentException("Parameter `base_role_ids` is required"));
-        assert($start_date !== null, new ArgumentException("Parameter `start_date` is required"));
+        assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
+        assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
 
         return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
         "start_date" => $start_date]));

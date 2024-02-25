@@ -18,29 +18,28 @@ class Courses extends BaseEndpoint
 
     /**
      * Returns a collection of academic courses, filtered by department and/or
-     * school level.
+     * school level.<br />
      *
-     *  Requires at least one of the following roles in the Education
+     * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * - Academic Group Manager
+     * <ul><li>Academic Group Manager</li><li>Platform Manager</li></ul>
      *
-     * - Platform Manager
-     *
-     * @param ?int $department_id Format - int32. Identifier for a specific
+     * @param array{department_id: int, level_id: int} $params An associative
+     *   array
+     *     - department_id: Format - int32. Identifier for a specific
      *   department.
-     * @param ?int $level_id Format - int32. Identifier for a specific school
-     *   level.
+     *     - level_id: Format - int32. Identifier for a specific school level.
      *
      * @return \Blackbaud\SKY\School\Components\CourseCollection Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(?int $department_id, ?int $level_id): CourseCollection
+    public function filterBy(array $params): CourseCollection
     {
-        assert($department_id !== null, new ArgumentException("Parameter `department_id` is required"));
-        assert($level_id !== null, new ArgumentException("Parameter `level_id` is required"));
+        assert(isset($params['department_id']), new ArgumentException("Parameter `department_id` is required"));
+        assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
         return new CourseCollection($this->send("get", [], ["department_id" => $department_id,
         "level_id" => $level_id]));

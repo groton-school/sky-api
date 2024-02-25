@@ -33,7 +33,8 @@ class Results extends BaseEndpoint
     /**
      * Returns a specific result.
      *
-     * @param string $id sourcedId for the result
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
      *
      * @return \Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc OK -
      *   It was possible to read the resource.
@@ -41,17 +42,18 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(string $id): ResultOutputModelSvc
+    public function get(array $params): ResultOutputModelSvc
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new ResultOutputModelSvc($this->send("get", ["{id}" => $id], []));
+        return new ResultOutputModelSvc($this->send("get", ["{id}" => $params['id']], []));
     }
 
     /**
      * Returns the result object that was created or updated.
      *
-     * @param string $id sourcedId for the result
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
      * @param \Blackbaud\SKY\OneRoster\Components\ResultInputModelSvc
      *   $requestBody input model for the result
      *
@@ -61,18 +63,19 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(string $id, ResultInputModelSvc $requestBody): ResultOutputModelSvc
+    public function put(array $params, ResultInputModelSvc $requestBody): ResultOutputModelSvc
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
-        assert($requestBody !== null, new ArgumentException("Parameter `requestBody` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new ResultOutputModelSvc($this->send("put", ["{id}" => $id], [], $requestBody));
+        return new ResultOutputModelSvc($this->send("put", ["{id}" => $params['id']], [], $requestBody));
     }
 
     /**
      * Deletes the specified result sourcedId.
      *
-     * @param string $id sourcedId for the result
+     * @param array{id: string} $params An associative array
+     *     - id: sourcedId for the result
      *
      * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   Resource has been deleted.
@@ -80,10 +83,10 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function delete(string $id): ResultsOutputModelSvc
+    public function delete(array $params): ResultsOutputModelSvc
     {
-        assert($id !== null, new ArgumentException("Parameter `id` is required"));
+        assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new ResultsOutputModelSvc($this->send("delete", ["{id}" => $id], []));
+        return new ResultsOutputModelSvc($this->send("delete", ["{id}" => $params['id']], []));
     }
 }
