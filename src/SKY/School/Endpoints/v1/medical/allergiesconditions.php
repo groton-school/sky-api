@@ -17,16 +17,17 @@ class Allergiesconditions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/allergiesconditions";
 
     /**
-     * Creates medical allergy/condition record for a student.<br />
+     * Creates medical allergy/condition record for a student.
      *
-     * Returns the newly created ID. <br />
+     *  Returns the newly created ID.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
@@ -36,7 +37,7 @@ class Allergiesconditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(StudentMedicalAllergyCondition $requestBody): int
+    public function postBy(StudentMedicalAllergyCondition $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

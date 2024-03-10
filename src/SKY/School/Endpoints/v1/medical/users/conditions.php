@@ -17,15 +17,15 @@ class Conditions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/users/{user_id}/conditions";
 
     /**
-     * Returns the medical conditions for a student.<br />
+     * Returns the medical conditions for a student.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. ID of the student
@@ -35,7 +35,7 @@ class Conditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): array
+    public function getByUserId(array $params): array
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 

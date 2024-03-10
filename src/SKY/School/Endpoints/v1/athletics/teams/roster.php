@@ -18,16 +18,21 @@ class Roster extends BaseEndpoint
 
     /**
      * Returns a collection of players and coaches for the specified athletic
-     * team's ID. <br />
+     * team's ID.
      *
-     * The ```team_id``` can be retrieved using the GET athletics teams
-     * endpoint. <br />
+     *  The ```team\_id``` can be retrieved using the GET athletics teams
+     * endpoint.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param array{team_id: int} $params An associative array
      *     - team_id: Format - int32. The ID for the team to get the roster
@@ -38,7 +43,7 @@ class Roster extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTeam(array $params): Roster
+    public function getByTeamId(array $params): Roster
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
 

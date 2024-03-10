@@ -16,16 +16,18 @@ class Addresstypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/addresstypes";
 
     /**
-     * Returns a collection of address types. <br />
+     * Returns a collection of address types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Any Manager Role</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Any Manager Role
      *
      * @return \Blackbaud\SKY\School\Components\AddressTypeCollection Success
      */
-    public function getAll(): AddressTypeCollection
+    public function getAllBy(): AddressTypeCollection
     {
         return new AddressTypeCollection($this->send("get", [], []));
     }

@@ -18,12 +18,14 @@ class Courses extends BaseEndpoint
 
     /**
      * Returns a collection of academic courses, filtered by department and/or
-     * school level.<br />
+     * school level.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Platform Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Platform Manager
      *
      * @param array{department_id: int, level_id: int} $params An associative
      *   array
@@ -36,12 +38,12 @@ class Courses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): CourseCollection
+    public function filterByBy(array $params): CourseCollection
     {
         assert(isset($params['department_id']), new ArgumentException("Parameter `department_id` is required"));
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
-        return new CourseCollection($this->send("get", [], ["department_id" => $department_id,
-        "level_id" => $level_id]));
+        return new CourseCollection($this->send("get", [], ["department_id" => $params['department_id'],
+        "level_id" => $params['level_id']]));
     }
 }

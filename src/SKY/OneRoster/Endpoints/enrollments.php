@@ -23,7 +23,7 @@ class Enrollments extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentsOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAll(): EnrollmentsOutputModel
+    public function getAllBy(): EnrollmentsOutputModel
     {
         return new EnrollmentsOutputModel($this->send("get", [], []));
     }
@@ -40,7 +40,7 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): EnrollmentOutputModel
+    public function getById(array $params): EnrollmentOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\ScheduleSetCollection;
 use Blackbaud\SKY\School\Components\ScheduleSetDetails;
 
@@ -20,12 +19,14 @@ class Sets extends BaseEndpoint
 
     /**
      * Returns a collection of Schedule Sets for the specified
-     * ```level_num```.<br />
+     * ```level\_num```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
      *
      * @param array{level_num: int, school_year: string, group_type: int}
      *   $params An associative array
@@ -42,24 +43,26 @@ class Sets extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): ScheduleSetCollection
+    public function filterByBy(array $params): ScheduleSetCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
-        return new ScheduleSetCollection($this->send("get", [], ["level_num" => $level_num,
-        "school_year" => $school_year,
-        "group_type" => $group_type]));
+        return new ScheduleSetCollection($this->send("get", [], ["level_num" => $params['level_num'],
+        "school_year" => $params['school_year'],
+        "group_type" => $params['group_type']]));
     }
 
     /**
-     * Returns details about the specified ```schedule_set_id```.<br />
+     * Returns details about the specified ```schedule\_set\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
      *
      * @param array{schedule_set_id: int} $params An associative array
      *     - schedule_set_id: Format - int32. ID of the Schedule Set you seek.
@@ -69,7 +72,7 @@ class Sets extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): ScheduleSetDetails
+    public function getByScheduleSetId(array $params): ScheduleSetDetails
     {
         assert(isset($params['schedule_set_id']), new ArgumentException("Parameter `schedule_set_id` is required"));
 

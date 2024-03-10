@@ -18,14 +18,17 @@ class Bbidstatus extends BaseEndpoint
 
     /**
      * Returns a paginated collection of users education management BBID
-     * status, limited to 1000 users per page.<br />
+     * status, limited to 1000 users per page.
      *
-     * Use the last user's ID as the ```marker``` value to return the next set
-     * of results.<br />
+     *  Use the last user's ID as the ```marker``` value to return the next
+     * set of results.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
      *
      * @param array{base_role_ids: string, marker: int} $params An associative
      *   array
@@ -41,12 +44,12 @@ class Bbidstatus extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): SchoolBbidStatusCollection
+    public function filterByBy(array $params): SchoolBbidStatusCollection
     {
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new SchoolBbidStatusCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
-        "marker" => $marker]));
+        return new SchoolBbidStatusCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
+        "marker" => $params['marker']]));
     }
 }

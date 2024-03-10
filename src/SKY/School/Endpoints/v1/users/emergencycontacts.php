@@ -58,12 +58,10 @@ class Emergencycontacts extends BaseEndpoint
 
     /**
      * Returns a collection of a emergency contacts for the specified
-     * ```user_id```.
+     * ```user\_id```. Requires at least one of the following roles in the
+     * Education Management system:
      *
-     * Requires at least one of the following roles in the Education
-     * Management system:
-     *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -73,7 +71,7 @@ class Emergencycontacts extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): EmergencyContactList
+    public function getByUserId(array $params): EmergencyContactList
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 

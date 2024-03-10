@@ -18,7 +18,7 @@ class Students extends BaseEndpoint
 
     /**
      * Returns a collection of student user data for the specified
-     * <code>school_id</code>.
+     * `school_id`.
      *
      * @param array{school_id: string} $params An associative array
      *     - school_id: sourcedId for the school
@@ -28,7 +28,7 @@ class Students extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySchool(array $params): UsersOutputModel
+    public function getBySchoolId(array $params): UsersOutputModel
     {
         assert(isset($params['school_id']), new ArgumentException("Parameter `school_id` is required"));
 

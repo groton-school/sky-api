@@ -16,16 +16,18 @@ class Roles extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/roles";
 
     /**
-     * Returns a collection of core school user roles.<br />
+     * Returns a collection of core school user roles.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Any Manager Role</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Any Manager Role
      *
      * @return \Blackbaud\SKY\School\Components\RoleCollection Success
      */
-    public function getAll(): RoleCollection
+    public function getAllBy(): RoleCollection
     {
         return new RoleCollection($this->send("get", [], []));
     }

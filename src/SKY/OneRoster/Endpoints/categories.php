@@ -24,7 +24,7 @@ class Categories extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAll(): CategoriesOutputModel
+    public function getAllBy(): CategoriesOutputModel
     {
         return new CategoriesOutputModel($this->send("get", [], []));
     }
@@ -41,7 +41,7 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): CategoryOutputModel
+    public function getById(array $params): CategoryOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -62,7 +62,7 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(array $params, CategoryInputModel $requestBody): CategoryOutputModel
+    public function putById(array $params, CategoryInputModel $requestBody): CategoryOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

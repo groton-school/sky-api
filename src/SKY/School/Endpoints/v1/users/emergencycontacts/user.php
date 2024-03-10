@@ -18,16 +18,16 @@ class User extends BaseEndpoint
 
     /**
      * Activates an existing inactive or suggested emergency contact for a
-     * user.  To add a new user emergency contact, add the correct
-     * relationship between users first.<br />
+     * user. To add a new user emergency contact, add the correct relationship
+     * between users first.
      *
-     * To add a non-user emergency contact please see the Emergency Contact
-     * Non-User Create route.<br />
+     *  To add a non-user emergency contact please see the Emergency Contact
+     * Non-User Create route.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -39,7 +39,7 @@ class User extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, EmergencyContactUserCreate $requestBody): void
+    public function postByUserId(array $params, EmergencyContactUserCreate $requestBody): void
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

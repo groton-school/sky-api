@@ -16,16 +16,18 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/content/news/categories";
 
     /**
-     * Returns a collection of Content News Categories
+     * Returns a collection of Content News Categories Requires at least one
+     * of the following roles in the Education Management System:
      *
-     * Requires at least one of the following roles in the Education
-     * Management System:
+     * - Parent
      *
-     * <ul><li>Parent</li><li>Faculty</li><li>Student</li></ul>
+     * - Faculty
+     *
+     * - Student
      *
      * @return \Blackbaud\SKY\School\Components\NewsCategoryCollection Success
      */
-    public function getAll(): NewsCategoryCollection
+    public function getAllBy(): NewsCategoryCollection
     {
         return new NewsCategoryCollection($this->send("get", [], []));
     }

@@ -18,12 +18,12 @@ class Buildings extends BaseEndpoint
     /**
      * Returns a collection of buildings.
      *
-     * <p><b>Requires the 'Team Schedule Manager', 'Coach', 'Athletic Group
-     * Manager' or 'Pending Coach' role in the K12 system.</b></p>
+     * **Requires the 'Team Schedule Manager', 'Coach', 'Athletic Group
+     * Manager' or 'Pending Coach' role in the K12 system.**
      *
      * @return \Blackbaud\SKY\School\Components\BuildingReadCollection Success
      */
-    public function getAll(): BuildingReadCollection
+    public function getAllBy(): BuildingReadCollection
     {
         return new BuildingReadCollection($this->send("get", [], []));
     }

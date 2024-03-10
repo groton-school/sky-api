@@ -18,16 +18,18 @@ class Changes extends BaseEndpoint
 
     /**
      * Returns a collection of students with enrollment changes on or after
-     * the date parameter.<br />
+     * the date parameter.
      *
-     * The maximum period of time that can be specified is 30 days from
-     * start_date, if end_date is not provided or is greater than 30 days from
-     * start_date it will be set to start_date + 30 days.<br />
+     *  The maximum period of time that can be specified is 30 days from
+     * start\_date, if end\_date is not provided or is greater than 30 days
+     * from start\_date it will be set to start\_date + 30 days.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Schedule Manager</li><li>Academic Group Manager</li></ul>
+     * - Schedule Manager
+     *
+     * - Academic Group Manager
      *
      * @param array{start_date: string, end_date: string} $params An
      *   associative array
@@ -42,12 +44,12 @@ class Changes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): EnrollmentChangesCollection
+    public function filterByBy(array $params): EnrollmentChangesCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new EnrollmentChangesCollection($this->send("get", [], ["start_date" => $start_date,
-        "end_date" => $end_date]));
+        return new EnrollmentChangesCollection($this->send("get", [], ["start_date" => $params['start_date'],
+        "end_date" => $params['end_date']]));
     }
 }

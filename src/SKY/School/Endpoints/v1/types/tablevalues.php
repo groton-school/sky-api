@@ -17,17 +17,14 @@ class Tablevalues extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/types/tablevalues";
 
     /**
-     * Returns a collection of table values.<br></br>
+     * Returns a collection of table values.
      *
-     * Either ```tableId``` or ```tableName``` parameter is required, but not
-     * both.  For example, If a ```tableId``` is provided, then any value
-     * provided for ```tableName``` will be ignored.
-     *
-     * In the case that the calling user does not have permissions to view the
-     * data being requested no results will be returned.
-     *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     *  Either ```tableId``` or ```tableName``` parameter is required, but not
+     * both. For example, If a ```tableId``` is provided, then any value
+     * provided for ```tableName``` will be ignored. In the case that the
+     * calling user does not have permissions to view the data being requested
+     * no results will be returned. \*\*\*This endpoint is in BETA. It may be
+     * removed or replaced with a 90 day deprecation period.\*\*\*
      *
      * @param array{tableId: int, tableName: string, includeInactive: bool}
      *   $params An associative array
@@ -45,14 +42,14 @@ class Tablevalues extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): TableValueCollection
+    public function filterByBy(array $params): TableValueCollection
     {
         assert(isset($params['tableId']), new ArgumentException("Parameter `tableId` is required"));
         assert(isset($params['tableName']), new ArgumentException("Parameter `tableName` is required"));
         assert(isset($params['includeInactive']), new ArgumentException("Parameter `includeInactive` is required"));
 
-        return new TableValueCollection($this->send("get", [], ["tableId" => $tableId,
-        "tableName" => $tableName,
-        "includeInactive" => $includeInactive]));
+        return new TableValueCollection($this->send("get", [], ["tableId" => $params['tableId'],
+        "tableName" => $params['tableName'],
+        "includeInactive" => $params['includeInactive']]));
     }
 }

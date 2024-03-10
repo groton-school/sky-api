@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\UserExtended;
 use Blackbaud\SKY\School\Components\UserExtendedCollection;
 
@@ -20,14 +19,14 @@ class Extended extends BaseEndpoint
 
     /**
      * Returns a paginated collection of extended user details, limited to
-     * 1000 users per page.<br />
+     * 1000 users per page.
      *
-     * Use the last user's ID as the ```marker``` value to return the next set
-     * of results.<br />
+     *  Use the last user's ID as the ```marker``` value to return the next
+     * set of results.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{base_role_ids: string, marker: int} $params An associative
      *   array
@@ -42,21 +41,21 @@ class Extended extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): UserExtendedCollection
+    public function filterByBy(array $params): UserExtendedCollection
     {
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
-        "marker" => $marker]));
+        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
+        "marker" => $params['marker']]));
     }
 
     /**
-     * Returns extended user details for the specified ```user_id```.<br />
+     * Returns extended user details for the specified ```user\_id```.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -66,7 +65,7 @@ class Extended extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): UserExtended
+    public function getByUserId(array $params): UserExtended
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 

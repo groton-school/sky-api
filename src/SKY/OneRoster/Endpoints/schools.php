@@ -85,7 +85,7 @@ class Schools extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
      *   possible to read the collection.
      */
-    public function getAll(): OrgsOutputModel
+    public function getAllBy(): OrgsOutputModel
     {
         return new OrgsOutputModel($this->send("get", [], []));
     }
@@ -102,7 +102,7 @@ class Schools extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): OrgOutputModel
+    public function getById(array $params): OrgOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

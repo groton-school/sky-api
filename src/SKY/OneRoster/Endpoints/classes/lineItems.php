@@ -37,8 +37,7 @@ class LineItems extends BaseEndpoint
     protected Results $_results = null;
 
     /**
-     * Returns a collection of lineItems for the specified
-     * <code>class_id</code>.
+     * Returns a collection of lineItems for the specified `class_id`.
      *
      * @param array{class_id: string} $params An associative array
      *     - class_id: sourcedId for the class
@@ -49,7 +48,7 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(array $params): LineItemsOutputModel
+    public function getByClassId(array $params): LineItemsOutputModel
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 

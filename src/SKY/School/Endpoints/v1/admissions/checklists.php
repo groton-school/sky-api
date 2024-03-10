@@ -17,17 +17,17 @@ class Checklists extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/checklists";
 
     /**
-     * Returns a collection of admissions checklists.<br></br>
+     * Returns a collection of admissions checklists.
      *
-     * Use the optional ```search_text``` to apply a case-insensitive search
-     * against check lists "name".<br />
+     *  Use the optional ```search\_text``` to apply a case-insensitive search
+     * against check lists "name".
      *
-     * Use the optional ```inactive``` to return only inactive checklists
-     * (default is both).<br />
+     *  Use the optional ```inactive``` to return only inactive checklists
+     * (default is both).
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>Admissions Manager</li></ul>
+     * - Admissions Manager
      *
      * @param array{search_text: string, inactive: bool} $params An
      *   associative array
@@ -42,12 +42,12 @@ class Checklists extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): AdmissionsCheckListCollection
+    public function filterByBy(array $params): AdmissionsCheckListCollection
     {
         assert(isset($params['search_text']), new ArgumentException("Parameter `search_text` is required"));
         assert(isset($params['inactive']), new ArgumentException("Parameter `inactive` is required"));
 
-        return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $search_text,
-        "inactive" => $inactive]));
+        return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $params['search_text'],
+        "inactive" => $params['inactive']]));
     }
 }

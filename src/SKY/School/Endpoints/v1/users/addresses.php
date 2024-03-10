@@ -4,8 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\AddressAdd;
 use Blackbaud\SKY\School\Components\AddressEdit;
 use Blackbaud\SKY\School\Components\AddressReadCollection;
@@ -39,12 +37,12 @@ class Addresses extends BaseEndpoint
     protected Share $_share = null;
 
     /**
-     * Returns a collection of addresses. <br />
+     * Returns a collection of addresses.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -54,7 +52,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): AddressReadCollection
+    public function getByUserId(array $params): AddressReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -62,13 +60,16 @@ class Addresses extends BaseEndpoint
     }
 
     /**
-     * Returns the ID of the address just created. <br />
+     * Returns the ID of the address just created.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -80,7 +81,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, AddressAdd $requestBody): int
+    public function postByUserId(array $params, AddressAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -89,13 +90,16 @@ class Addresses extends BaseEndpoint
     }
 
     /**
-     * Returns ID of the address just updated. <br />
+     * Returns ID of the address just updated.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param array{user_id: int, address_id: int} $params An associative
      *   array
@@ -109,7 +113,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(array $params, AddressEdit $requestBody): int
+    public function patchByUserIdAndAddressId(array $params, AddressEdit $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
@@ -120,19 +124,22 @@ class Addresses extends BaseEndpoint
     }
 
     /**
-     * Removes the specified address from the user. <br />
+     * Removes the specified address from the user.
      *
-     * If the address is shared, other users linked to the address will not be
-     * affected. <br />
+     *  If the address is shared, other users linked to the address will not
+     * be affected.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, address_id: int, address_type_id: int}
      *   $params An associative array
@@ -147,7 +154,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserAndAddress(array $params): void
+    public function deleteByUserIdAndAddressIdAndAddressTypeId(array $params): void
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));

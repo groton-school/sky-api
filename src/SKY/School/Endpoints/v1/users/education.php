@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\EducationAdd;
 use Blackbaud\SKY\School\Components\EducationReadCollection;
 use Blackbaud\SKY\School\Components\EducationUpdate;
@@ -21,12 +20,12 @@ class Education extends BaseEndpoint
 
     /**
      * Returns a collection of education information for the specified
-     * ```user_id```. <br />
+     * ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -37,7 +36,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): EducationReadCollection
+    public function getByUserId(array $params): EducationReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -45,16 +44,19 @@ class Education extends BaseEndpoint
     }
 
     /**
-     * Creates an education entry for a user. <br />
+     * Creates an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -66,7 +68,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, EducationAdd $requestBody): int
+    public function postByUserId(array $params, EducationAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -75,16 +77,19 @@ class Education extends BaseEndpoint
     }
 
     /**
-     * Deletes an education entry for a user. <br />
+     * Deletes an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, education_id: int} $params An associative
      *   array
@@ -96,7 +101,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUser(array $params): void
+    public function deleteByUserIdAndEducationId(array $params): void
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['education_id']), new ArgumentException("Parameter `education_id` is required"));
@@ -106,16 +111,19 @@ class Education extends BaseEndpoint
     }
 
     /**
-     * Updates an education entry for a user. <br />
+     * Updates an education entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, education_id: int} $params An associative
      *   array
@@ -129,7 +137,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(array $params, EducationUpdate $requestBody): int
+    public function patchByUserIdAndEducationId(array $params, EducationUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['education_id']), new ArgumentException("Parameter `education_id` is required"));

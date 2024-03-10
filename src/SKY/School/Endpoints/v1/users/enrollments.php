@@ -18,13 +18,16 @@ class Enrollments extends BaseEndpoint
 
     /**
      * Returns a collection of users and their enrollments for a single school
-     * year.<br />
+     * year.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Admissions manager</li><li>Platform manager</li><li>SKY API
-     * Data Sync</li></ul>
+     * - Admissions manager
+     *
+     * - Platform manager
+     *
+     * - SKY API Data Sync
      *
      * @param array{school_year: string, school_level_id: int, grade_level_id:
      *   int, limit: int, offset: int} $params An associative array
@@ -45,7 +48,7 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): UserEnrollmentCollection
+    public function filterByBy(array $params): UserEnrollmentCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['school_level_id']), new ArgumentException("Parameter `school_level_id` is required"));
@@ -53,10 +56,10 @@ class Enrollments extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new UserEnrollmentCollection($this->send("get", [], ["school_year" => $school_year,
-        "school_level_id" => $school_level_id,
-        "grade_level_id" => $grade_level_id,
-        "limit" => $limit,
-        "offset" => $offset]));
+        return new UserEnrollmentCollection($this->send("get", [], ["school_year" => $params['school_year'],
+        "school_level_id" => $params['school_level_id'],
+        "grade_level_id" => $params['grade_level_id'],
+        "limit" => $params['limit'],
+        "offset" => $params['offset']]));
     }
 }

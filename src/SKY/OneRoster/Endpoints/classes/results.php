@@ -17,7 +17,7 @@ class Results extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/results";
 
     /**
-     * Returns a collection of results for a specified <code>class_id</code>.
+     * Returns a collection of results for a specified `class_id`.
      *
      * @param array{class_id: string} $params An associative array
      *     - class_id: sourcedId for the class
@@ -28,7 +28,7 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(array $params): ResultsOutputModelSvc
+    public function getByClassId(array $params): ResultsOutputModelSvc
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 

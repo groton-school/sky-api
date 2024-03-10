@@ -4,8 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\PhoneAdd;
 use Blackbaud\SKY\School\Components\PhoneReadCollection;
 use Blackbaud\SKY\School\Components\PhoneUpdate;
@@ -39,7 +37,7 @@ class Phones extends BaseEndpoint
     protected Share $_share = null;
 
     /**
-     * Returns a collection phone numbers for the specified ```user_id```.
+     * Returns a collection phone numbers for the specified ```user\_id```.
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -49,7 +47,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): PhoneReadCollection
+    public function getByUserId(array $params): PhoneReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -57,15 +55,16 @@ class Phones extends BaseEndpoint
     }
 
     /**
-     * Creates a new phone record for the specified ```user_id```.<br />
+     * Creates a new phone record for the specified ```user\_id```.
      *
-     * Returns the ID of the phone number created.
+     *  Returns the ID of the phone number created. Requires at least one of
+     * the following roles in the Education Management system:
      *
-     * Requires at least one of the following roles in the Education
-     * Management system:
+     * - SKY API Data Sync
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -77,7 +76,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, PhoneAdd $requestBody): int
+    public function postByUserId(array $params, PhoneAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -86,19 +85,22 @@ class Phones extends BaseEndpoint
     }
 
     /**
-     * Removes the specified phone from the user. <br />
+     * Removes the specified phone from the user.
      *
-     * If the phone is shared, other users linked to the phone will not be
-     * affected. <br />
+     *  If the phone is shared, other users linked to the phone will not be
+     * affected.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, phone_id: int, phone_type_id: int} $params
      *   An associative array
@@ -111,7 +113,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserAndPhone(array $params): void
+    public function deleteByUserIdAndPhoneIdAndPhoneTypeId(array $params): void
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
@@ -123,9 +125,9 @@ class Phones extends BaseEndpoint
     }
 
     /**
-     * Updates an exising phone record for the specified ```user_id```.<br />
+     * Updates an exising phone record for the specified ```user\_id```.
      *
-     * Returns the ID of the phone number updated.
+     *  Returns the ID of the phone number updated.
      *
      * @param array{user_id: int, phone_id: int, split_phone_if_shared: bool}
      *   $params An associative array
@@ -140,7 +142,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(array $params, PhoneUpdate $requestBody): int
+    public function patchByUserIdAndPhoneId(array $params, PhoneUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
@@ -148,6 +150,6 @@ class Phones extends BaseEndpoint
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $params['user_id'],
-        "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $split_phone_if_shared], $requestBody);
+        "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $params['split_phone_if_shared']], $requestBody);
     }
 }

@@ -17,18 +17,21 @@ class Share extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/phones/share";
 
     /**
-     * For an existing user, create a link to an existing phone number.<br />
+     * For an existing user, create a link to an existing phone number.
      *
-     * Returns the ID of the phone number just shared. <br />
+     *  Returns the ID of the phone number just shared.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Contact Card Manager</li><li>Platform Manager</li><li>SKY API
-     * Data Sync</li></ul>
+     * - Contact Card Manager
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - SKY API Data Sync
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The Id of the user the existing address
@@ -41,7 +44,7 @@ class Share extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, PhoneShare $requestBody): int
+    public function postByUserId(array $params, PhoneShare $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

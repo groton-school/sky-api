@@ -16,19 +16,16 @@ class Tables extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/types/tables";
 
     /**
-     * Returns a collection of table types.<br></br>
+     * Returns a collection of table types.
      *
-     * System tables will have an Id that is a negative number (Example: -100)
-     *
-     * User defined tables will have an Id that is a positive number (Example:
-     * 100)
-     *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     *  System tables will have an Id that is a negative number (Example:
+     * -100) User defined tables will have an Id that is a positive number
+     * (Example: 100) \*\*\*This endpoint is in BETA. It may be removed or
+     * replaced with a 90 day deprecation period.\*\*\*
      *
      * @return \Blackbaud\SKY\School\Components\TableCollection Success
      */
-    public function getAll(): TableCollection
+    public function getAllBy(): TableCollection
     {
         return new TableCollection($this->send("get", [], []));
     }

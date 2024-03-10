@@ -18,17 +18,25 @@ class Highlights extends BaseEndpoint
 
     /**
      * Returns an athletic game's highlights for the specified
-     * ```highlight_id```. <br />
+     * ```highlight\_id```.
      *
-     * This ID can be obtained via the GET athletics schedules endpoint for a
-     * game if highlights exist for that game. <br />
+     *  This ID can be obtained via the GET athletics schedules endpoint for a
+     * game if highlights exist for that game.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Schedule Manager</li><li>Page
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param array{highlight_id: int} $params An associative array
      *     - highlight_id: Format - int32. ID of the highlight to be returned.
@@ -38,7 +46,7 @@ class Highlights extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): Highlight
+    public function getByHighlightId(array $params): Highlight
     {
         assert(isset($params['highlight_id']), new ArgumentException("Parameter `highlight_id` is required"));
 

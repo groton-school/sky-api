@@ -17,13 +17,18 @@ class Terms extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/terms";
 
     /**
-     * Returns a collection of core school terms.<br />
+     * Returns a collection of core school terms.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule
-     * Manager</li><li>Platform Manager</li><li>Any Manager Role</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
+     *
+     * - Platform Manager
+     *
+     * - Any Manager Role
      *
      * @param array{school_year: string, offering_type: int} $params An
      *   associative array
@@ -37,12 +42,12 @@ class Terms extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): TermCollection
+    public function filterByBy(array $params): TermCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
-        return new TermCollection($this->send("get", [], ["school_year" => $school_year,
-        "offering_type" => $offering_type]));
+        return new TermCollection($this->send("get", [], ["school_year" => $params['school_year'],
+        "offering_type" => $params['offering_type']]));
     }
 }

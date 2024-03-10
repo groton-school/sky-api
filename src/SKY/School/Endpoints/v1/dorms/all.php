@@ -20,8 +20,11 @@ class All extends BaseEndpoint
      * Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Dorm Group Manager</li><li>Dorm Supervisor</li><li>Pending Dorm
-     * Supervisor</li></ul>
+     * - Dorm Group Manager
+     *
+     * - Dorm Supervisor
+     *
+     * - Pending Dorm Supervisor
      *
      * @param array{level_number: int, school_year: string} $params An
      *   associative array
@@ -33,12 +36,12 @@ class All extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): DormCollection
+    public function filterByBy(array $params): DormCollection
     {
         assert(isset($params['level_number']), new ArgumentException("Parameter `level_number` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new DormCollection($this->send("get", [], ["level_number" => $level_number,
-        "school_year" => $school_year]));
+        return new DormCollection($this->send("get", [], ["level_number" => $params['level_number'],
+        "school_year" => $params['school_year']]));
     }
 }

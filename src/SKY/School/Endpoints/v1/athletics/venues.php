@@ -16,18 +16,23 @@ class Venues extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/venues";
 
     /**
-     * Returns a collection of athletic venues. <br />
+     * Returns a collection of athletic venues.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @return \Blackbaud\SKY\School\Components\AthleticVenueCollection
      *   Success
      */
-    public function getAll(): AthleticVenueCollection
+    public function getAllBy(): AthleticVenueCollection
     {
         return new AthleticVenueCollection($this->send("get", [], []));
     }

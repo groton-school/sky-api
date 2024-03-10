@@ -17,12 +17,11 @@ class Cycles extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/sections/{section_id}/cycles";
 
     /**
-     * Returns a collection of cycles for the specified ```section_id```.<br
-     * />
+     * Returns a collection of cycles for the specified ```section\_id```.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>Academic Group Manager</li></ul>
+     * - Academic Group Manager
      *
      * @param array{section_id: int, duration_id: int, group_type: int}
      *   $params An associative array
@@ -38,13 +37,13 @@ class Cycles extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySection(array $params): SectionCycles
+    public function getBySectionId(array $params): SectionCycles
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['duration_id']), new ArgumentException("Parameter `duration_id` is required"));
         assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
-        return new SectionCycles($this->send("get", ["{section_id}" => $params['section_id']], ["duration_id" => $duration_id,
-        "group_type" => $group_type]));
+        return new SectionCycles($this->send("get", ["{section_id}" => $params['section_id']], ["duration_id" => $params['duration_id'],
+        "group_type" => $params['group_type']]));
     }
 }

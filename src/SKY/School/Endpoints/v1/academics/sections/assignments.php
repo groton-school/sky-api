@@ -18,14 +18,18 @@ class Assignments extends BaseEndpoint
 
     /**
      * Returns a collection of assignments for the specified
-     * ```section_id```.<br />
+     * ```section\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group
-     * Manager</li><li>Student</li><li>Teacher</li><li>Pending
-     * Teacher</li></ul>
+     * - Academic Group Manager
+     *
+     * - Student
+     *
+     * - Teacher
+     *
+     * - Pending Teacher
      *
      * @param array{section_id: int, types: string, status: string,
      *   persona_id: int, filter: string, search: string} $params An associative
@@ -49,7 +53,7 @@ class Assignments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySection(array $params): AssignmentCollection
+    public function getBySectionId(array $params): AssignmentCollection
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['types']), new ArgumentException("Parameter `types` is required"));
@@ -58,10 +62,10 @@ class Assignments extends BaseEndpoint
         assert(isset($params['filter']), new ArgumentException("Parameter `filter` is required"));
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
 
-        return new AssignmentCollection($this->send("get", ["{section_id}" => $params['section_id']], ["types" => $types,
-        "status" => $status,
-        "persona_id" => $persona_id,
-        "filter" => $filter,
-        "search" => $search]));
+        return new AssignmentCollection($this->send("get", ["{section_id}" => $params['section_id']], ["types" => $params['types'],
+        "status" => $params['status'],
+        "persona_id" => $params['persona_id'],
+        "filter" => $params['filter'],
+        "search" => $params['search']]));
     }
 }

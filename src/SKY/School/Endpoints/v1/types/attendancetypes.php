@@ -16,15 +16,15 @@ class Attendancetypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/types/attendancetypes";
 
     /**
-     * Returns a collection of attendance types.<br></br>
+     * Returns a collection of attendance types.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>SKY API Basic</li></ul>
+     * - SKY API Basic
      *
      * @return \Blackbaud\SKY\School\Components\AttendanceTypes Success
      */
-    public function getAll(): AttendanceTypes
+    public function getAllBy(): AttendanceTypes
     {
         return new AttendanceTypes($this->send("get", [], []));
     }

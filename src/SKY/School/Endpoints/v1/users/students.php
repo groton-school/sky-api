@@ -17,15 +17,13 @@ class Students extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{parent_id}/students";
 
     /**
-     * Returns a collection of children of the specified ```parent_id```.<br
-     * />
+     * Returns a collection of children of the specified ```parent\_id```.
      *
-     * Requires the logged in ```user_id``` matches the specified
-     * ```parent_id```.
+     *  Requires the logged in ```user\_id``` matches the specified
+     * ```parent\_id```. Requires the following role in the Education
+     * Management system:
      *
-     * Requires the following role in the Education Management system:
-     *
-     * <ul><li>Parent</li></ul>
+     * - Parent
      *
      * @param array{parent_id: int} $params An associative array
      *     - parent_id: Format - int32.
@@ -36,7 +34,7 @@ class Students extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByParent(array $params): ChildOfParentCollection
+    public function getByParentId(array $params): ChildOfParentCollection
     {
         assert(isset($params['parent_id']), new ArgumentException("Parameter `parent_id` is required"));
 

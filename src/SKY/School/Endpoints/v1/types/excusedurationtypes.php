@@ -16,15 +16,15 @@ class Excusedurationtypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/types/excusedurationtypes";
 
     /**
-     * Returns a collection of excuse duration types.<br></br>
+     * Returns a collection of excuse duration types.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>SKY API Basic</li></ul>
+     * - SKY API Basic
      *
      * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypes Success
      */
-    public function getAll(): ExcuseDurationTypes
+    public function getAllBy(): ExcuseDurationTypes
     {
         return new ExcuseDurationTypes($this->send("get", [], []));
     }

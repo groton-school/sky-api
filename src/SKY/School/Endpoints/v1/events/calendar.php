@@ -17,14 +17,17 @@ class Calendar extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/events/calendar";
 
     /**
-     * Returns a list of events for the calling user.
+     * Returns a list of events for the calling user. Requires one of the
+     * following roles in the Education Management system:
      *
-     * Requires one of the following roles in the Education Management system:
+     * - Student
      *
-     * <ul><li>Student</li><li>Parent</li><li>Teacher</li></ul>
+     * - Parent
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Teacher
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{start_date: string, end_date: string} $params An
      *   associative array
@@ -36,12 +39,12 @@ class Calendar extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): CalendarItemCollection
+    public function filterByBy(array $params): CalendarItemCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new CalendarItemCollection($this->send("get", [], ["start_date" => $start_date,
-        "end_date" => $end_date]));
+        return new CalendarItemCollection($this->send("get", [], ["start_date" => $params['start_date'],
+        "end_date" => $params['end_date']]));
     }
 }

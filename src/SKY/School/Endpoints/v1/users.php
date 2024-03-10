@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\UserAdd;
 use Blackbaud\SKY\School\Components\UserEdit;
 use Blackbaud\SKY\School\Components\UserRead;
@@ -196,20 +195,25 @@ class Users extends BaseEndpoint
     protected Enrollments $_enrollments = null;
 
     /**
-     * Returns a paginated collection of users, limited to 100 users per
-     * page.<br />
+     * Returns a paginated collection of users, limited to 100 users per page.
      *
-     * Use the record number as the ```marker``` value to return the next set
+     *
+     *  Use the record number as the ```marker``` value to return the next set
      * of results. For example: ```marker=101``` will return the second set of
-     * results.<br />
+     * results.
      *
-     * Results dependant on the directory settings of each user.<br />
+     *  Results dependant on the directory settings of each user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Billing Clerk</li><li>Password Manager</li><li>Contact Card
-     * Manager</li><li>Platform Manager</li></ul>
+     * - Billing Clerk
+     *
+     * - Password Manager
+     *
+     * - Contact Card Manager
+     *
+     * - Platform Manager
      *
      * @param array{roles: string, first_name: string, last_name: string,
      *   email: string, maiden_name: string, grad_year: string, end_grad_year:
@@ -231,7 +235,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): UserReadCollection
+    public function filterByBy(array $params): UserReadCollection
     {
         assert(isset($params['roles']), new ArgumentException("Parameter `roles` is required"));
         assert(isset($params['first_name']), new ArgumentException("Parameter `first_name` is required"));
@@ -242,25 +246,27 @@ class Users extends BaseEndpoint
         assert(isset($params['end_grad_year']), new ArgumentException("Parameter `end_grad_year` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new UserReadCollection($this->send("get", [], ["roles" => $roles,
-        "first_name" => $first_name,
-        "last_name" => $last_name,
-        "email" => $email,
-        "maiden_name" => $maiden_name,
-        "grad_year" => $grad_year,
-        "end_grad_year" => $end_grad_year,
-        "marker" => $marker]));
+        return new UserReadCollection($this->send("get", [], ["roles" => $params['roles'],
+        "first_name" => $params['first_name'],
+        "last_name" => $params['last_name'],
+        "email" => $params['email'],
+        "maiden_name" => $params['maiden_name'],
+        "grad_year" => $params['grad_year'],
+        "end_grad_year" => $params['end_grad_year'],
+        "marker" => $params['marker']]));
     }
 
     /**
-     * Creates a new user record.<br />
+     * Creates a new user record.
      *
-     * Returns the newly created ID. <br />
+     *  Returns the newly created ID.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Platform Manager</li><li>Contact Card Manager</li></ul>
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param \Blackbaud\SKY\School\Components\UserAdd $requestBody The user
      *   to be created
@@ -270,7 +276,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(UserAdd $requestBody): int
+    public function postBy(UserAdd $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -278,14 +284,16 @@ class Users extends BaseEndpoint
     }
 
     /**
-     * Updates the record of a single user.<br />
+     * Updates the record of a single user.
      *
-     * Returns the ID of the user just updated upon success. <br />
+     *  Returns the ID of the user just updated upon success.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Platform Manager</li><li>Contact Card Manager</li></ul>
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param \Blackbaud\SKY\School\Components\UserEdit $requestBody User
      *   information to be updated
@@ -295,7 +303,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patch(UserEdit $requestBody): int
+    public function patchBy(UserEdit $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -303,12 +311,12 @@ class Users extends BaseEndpoint
     }
 
     /**
-     * Returns data for the specified ```user_id```. <br />
+     * Returns data for the specified ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. ID of the user to be returned.
@@ -318,7 +326,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): UserRead
+    public function getByUserId(array $params): UserRead
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 

@@ -17,8 +17,8 @@ class Enrollments extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/classes/{class_id}/enrollments";
 
     /**
-     * Returns a collection of enrollments for the specified
-     * <code>class_id</code> in the <code>school_id</code>.
+     * Returns a collection of enrollments for the specified `class_id` in the
+     * `school_id`.
      *
      * @param array{school_id: string, class_id: string} $params An
      *   associative array
@@ -31,7 +31,7 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySchoolAndClass(array $params): EnrollmentsOutputModel
+    public function getBySchoolIdAndClassId(array $params): EnrollmentsOutputModel
     {
         assert(isset($params['school_id']), new ArgumentException("Parameter `school_id` is required"));
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));

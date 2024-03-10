@@ -16,19 +16,21 @@ class Resources extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/content/resources";
 
     /**
-     * Returns a collection of Resources
+     * Returns a collection of Resources Requires at least one of the
+     * following roles in the Education Management System:
      *
-     * Requires at least one of the following roles in the Education
-     * Management System:
+     * - Parent
      *
-     * <ul><li>Parent</li><li>Faculty</li><li>Student</li></ul>
+     * - Faculty
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Student
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @return \Blackbaud\SKY\School\Components\ResourceCollection Success
      */
-    public function getAll(): ResourceCollection
+    public function getAllBy(): ResourceCollection
     {
         return new ResourceCollection($this->send("get", [], []));
     }

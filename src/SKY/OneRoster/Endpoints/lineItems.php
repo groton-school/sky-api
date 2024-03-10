@@ -24,7 +24,7 @@ class LineItems extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAll(): LineItemsOutputModel
+    public function getAllBy(): LineItemsOutputModel
     {
         return new LineItemsOutputModel($this->send("get", [], []));
     }
@@ -41,7 +41,7 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): LineItemOutputModel
+    public function getById(array $params): LineItemOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -62,7 +62,7 @@ class LineItems extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(array $params, LineItemInputModel $requestBody): LineItemOutputModel
+    public function putById(array $params, LineItemInputModel $requestBody): LineItemOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

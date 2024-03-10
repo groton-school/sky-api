@@ -17,13 +17,16 @@ class Departments extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/departments";
 
     /**
-     * Returns a collection of academic departments.<br />
+     * Returns a collection of academic departments.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Platform Manager</li><li>Any
-     * Manager Role</li></ul>
+     * - Academic Group Manager
+     *
+     * - Platform Manager
+     *
+     * - Any Manager Role
      *
      * @param array{level_id: int} $params An associative array
      *     - level_id: Format - int32. Level number.
@@ -33,10 +36,10 @@ class Departments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): DepartmentCollection
+    public function filterByBy(array $params): DepartmentCollection
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
-        return new DepartmentCollection($this->send("get", [], ["level_id" => $level_id]));
+        return new DepartmentCollection($this->send("get", [], ["level_id" => $params['level_id']]));
     }
 }

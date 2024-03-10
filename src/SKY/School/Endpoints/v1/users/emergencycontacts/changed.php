@@ -18,18 +18,18 @@ class Changed extends BaseEndpoint
 
     /**
      * Returns a paginated collection of all emergency contacts for all users
-     * that have had changes since the specified ```start_date```. <br />
+     * that have had changes since the specified ```start\_date```.
      *
-     * If no date is specified then this returns a paginated collection of all
-     * emergency contacts for all users. <br />
+     *  If no date is specified then this returns a paginated collection of
+     * all emergency contacts for all users.
      *
-     * Use the last user's ID as the ```marker``` value to return the next set
-     * of results.<br />
+     *  Use the last user's ID as the ```marker``` value to return the next
+     * set of results.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{start_date: string, marker: int} $params An associative
      *   array
@@ -47,12 +47,12 @@ class Changed extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): EmergencyContactChangeCollection
+    public function filterByBy(array $params): EmergencyContactChangeCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $start_date,
-        "marker" => $marker]));
+        return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $params['start_date'],
+        "marker" => $params['marker']]));
     }
 }

@@ -16,17 +16,21 @@ class Status extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/status";
 
     /**
-     * Returns a collection of admissions statuses.<br />
+     * Returns a collection of admissions statuses.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Admissions Manager</li><li>Platform Manager</li><li>SKY API
-     * Data Sync</li></ul>
+     * - Admissions Manager
+     *
+     * - Platform Manager
+     *
+     * - SKY API Data Sync
      *
      * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollection
      *   Success
      */
-    public function getAll(): AdmissionsStatusesCollection
+    public function getAllBy(): AdmissionsStatusesCollection
     {
         return new AdmissionsStatusesCollection($this->send("get", [], []));
     }

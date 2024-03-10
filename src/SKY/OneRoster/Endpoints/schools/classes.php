@@ -37,8 +37,7 @@ class Classes extends BaseEndpoint
     protected Enrollments $_enrollments = null;
 
     /**
-     * Returns a collection of classes for the specified
-     * <code>school_id</code>.
+     * Returns a collection of classes for the specified `school_id`.
      *
      * @param array{school_id: string} $params An associative array
      *     - school_id: sourcedId for the school
@@ -49,7 +48,7 @@ class Classes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySchool(array $params): ClassOutputModel
+    public function getBySchoolId(array $params): ClassOutputModel
     {
         assert(isset($params['school_id']), new ArgumentException("Parameter `school_id` is required"));
 

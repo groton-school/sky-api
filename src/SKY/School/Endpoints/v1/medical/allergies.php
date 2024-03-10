@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\StudentAllergyUpdate;
 use Blackbaud\SKY\School\Components\StudentMedicalAllergy;
 
@@ -19,14 +18,15 @@ class Allergies extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/allergies/{allergy_id}";
 
     /**
-     * Delete a medical allergy for a student.<br />
+     * Delete a medical allergy for a student.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{allergy_id: int} $params An associative array
      *     - allergy_id: Format - int32. The ID of the student's allergy.
@@ -36,7 +36,7 @@ class Allergies extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function delete(array $params): int
+    public function deleteByAllergyId(array $params): int
     {
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
 
@@ -44,14 +44,15 @@ class Allergies extends BaseEndpoint
     }
 
     /**
-     * Update a medical allergy for a student.<br />
+     * Update a medical allergy for a student.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{allergy_id: int} $params An associative array
      *     - allergy_id: Format - int32. The ID of the student's allergy.
@@ -63,7 +64,7 @@ class Allergies extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patch(array $params, StudentAllergyUpdate $requestBody): int
+    public function patchByAllergyId(array $params, StudentAllergyUpdate $requestBody): int
     {
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -72,16 +73,17 @@ class Allergies extends BaseEndpoint
     }
 
     /**
-     * Creates an allergy for a student.<br />
+     * Creates an allergy for a student.
      *
-     * Returns the newly created ID. <br />
+     *  Returns the newly created ID.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergy
      *   $requestBody The medical allergy to be created for student
@@ -91,7 +93,7 @@ class Allergies extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(StudentMedicalAllergy $requestBody): int
+    public function postBy(StudentMedicalAllergy $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

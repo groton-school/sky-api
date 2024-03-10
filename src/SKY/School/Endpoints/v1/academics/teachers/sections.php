@@ -17,13 +17,14 @@ class Sections extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/teachers/{teacher_id}/sections";
 
     /**
-     * Returns a collection of sections for the specified ```teacher_id```.<br
-     * />
+     * Returns a collection of sections for the specified ```teacher\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Teacher</li></ul>
+     * - Academic Group Manager
+     *
+     * - Teacher
      *
      * @param array{teacher_id: int, school_year: string} $params An
      *   associative array
@@ -39,11 +40,11 @@ class Sections extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTeacher(array $params): AcademicsSectionCollection
+    public function getByTeacherId(array $params): AcademicsSectionCollection
     {
         assert(isset($params['teacher_id']), new ArgumentException("Parameter `teacher_id` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new AcademicsSectionCollection($this->send("get", ["{teacher_id}" => $params['teacher_id']], ["school_year" => $school_year]));
+        return new AcademicsSectionCollection($this->send("get", ["{teacher_id}" => $params['teacher_id']], ["school_year" => $params['school_year']]));
     }
 }

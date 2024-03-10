@@ -17,8 +17,7 @@ class GradingPeriods extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/terms/{term_id}/gradingPeriods";
 
     /**
-     * Returns a collection of grading periods for the specified
-     * <code>term_id</code>
+     * Returns a collection of grading periods for the specified `term_id`
      *
      * @param array{term_id: string} $params An associative array
      *     - term_id: sourcedId for the term
@@ -29,7 +28,7 @@ class GradingPeriods extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTerm(array $params): AcademicSessionsOutputModel
+    public function getByTermId(array $params): AcademicSessionsOutputModel
     {
         assert(isset($params['term_id']), new ArgumentException("Parameter `term_id` is required"));
 

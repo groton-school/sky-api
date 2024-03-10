@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Schedules;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\MeetingCollection;
 use Blackbaud\SKY\School\Components\StudentScheduleCollection;
 
@@ -19,22 +18,36 @@ class Meetings extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/schedules/{student_id}/meetings";
 
     /**
-     * Returns a list of section meetings for a given date.  When
-     * ```end_date``` is supplied a range of meetings between the given dates
-     * is returned.<br />```offering_types``` can take a single or multiple
-     * values as a comma delimited ```string``` of integers, defaults to 1<br
-     * />```end_date``` cannot be more than 30 days past the ```start_date```.
-     * Default date range is 30 days.<br /><ul><li>Academics:
-     * 1</li><li>Activities: 2</li><li>Advisory: 3</li><li>Athletics:
-     * 9</li></ul>
+     * Returns a list of section meetings for a given date. When
+     * ```end\_date``` is supplied a range of meetings between the given dates
+     * is returned.
      *
-     * Requires at least one of the following roles in the Education
-     * Management system:
+     * ```offering\_types``` can take a single or multiple values as a comma
+     * delimited ```string``` of integers, defaults to 1
      *
-     * <ul><li>Academics Group Manager</li><li>Advisory Group
-     * Manager</li><li>Platform Manager</li><li>Activity Group
-     * Manager</li><li>Athletic Group Manager</li><li>Scheduling
-     * Manager</li></ul>
+     * ```end\_date``` cannot be more than 30 days past the ```start\_date```.
+     * Default date range is 30 days.
+     *
+     * - Academics: 1
+     *
+     * - Activities: 2
+     *
+     * - Advisory: 3
+     *
+     * - Athletics: 9
+     *
+     *  Requires at least one of the following roles in the Education
+     * Management system: - Academics Group Manager
+     *
+     * - Advisory Group Manager
+     *
+     * - Platform Manager
+     *
+     * - Activity Group Manager
+     *
+     * - Athletic Group Manager
+     *
+     * - Scheduling Manager
      *
      * @param array{start_date: string, end_date: string, offering_types:
      *   string, section_ids: string, last_modified: string,
@@ -64,7 +77,7 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): MeetingCollection
+    public function filterByBy(array $params): MeetingCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
@@ -73,25 +86,34 @@ class Meetings extends BaseEndpoint
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
         assert(isset($params['show_time_for_current_date']), new ArgumentException("Parameter `show_time_for_current_date` is required"));
 
-        return new MeetingCollection($this->send("get", [], ["start_date" => $start_date,
-        "end_date" => $end_date,
-        "offering_types" => $offering_types,
-        "section_ids" => $section_ids,
-        "last_modified" => $last_modified,
-        "show_time_for_current_date" => $show_time_for_current_date]));
+        return new MeetingCollection($this->send("get", [], ["start_date" => $params['start_date'],
+        "end_date" => $params['end_date'],
+        "offering_types" => $params['offering_types'],
+        "section_ids" => $params['section_ids'],
+        "last_modified" => $params['last_modified'],
+        "show_time_for_current_date" => $params['show_time_for_current_date']]));
     }
 
     /**
      * Returns a list of meetings for a given student for a specific date.
-     * When ```end_date``` is supplied a range of meetings between the given
-     * dates is returned.<br />```end_date``` cannot be more than 30 days past
-     * the ```start_date```. Default date range is 30 days.<br />
+     * When ```end\_date``` is supplied a range of meetings between the given
+     * dates is returned.
      *
-     * Requires at least one of the following roles in the Education
+     * ```end\_date``` cannot be more than 30 days past the ```start\_date```.
+     * Default date range is 30 days.
+     *
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Student</li><li>Parent</li><li>Platform
-     * Manager</li><li>Attendance Manager</li><li>Schedule Manager</li></ul>
+     * - Student
+     *
+     * - Parent
+     *
+     * - Platform Manager
+     *
+     * - Attendance Manager
+     *
+     * - Schedule Manager
      *
      * @param array{student_id: int, start_date: string, end_date: string}
      *   $params An associative array
@@ -105,13 +127,13 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudent(array $params): StudentScheduleCollection
+    public function getByStudentId(array $params): StudentScheduleCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new StudentScheduleCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $start_date,
-        "end_date" => $end_date]));
+        return new StudentScheduleCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $params['start_date'],
+        "end_date" => $params['end_date']]));
     }
 }

@@ -18,32 +18,46 @@ class Opponents extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/opponents";
 
     /**
-     * Returns a collection of athletic opponents. <br />
+     * Returns a collection of athletic opponents.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Page Manager</li><li>Coach</li><li>Pending
-     * Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
      *   Success
      */
-    public function getAll(): OpponentFlyweightCollection
+    public function getAllBy(): OpponentFlyweightCollection
     {
         return new OpponentFlyweightCollection($this->send("get", [], []));
     }
 
     /**
-     * Creates a new athletic opponent. <br />
+     * Creates a new athletic opponent.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Schedule Manager</li><li>Page
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param \Blackbaud\SKY\School\Components\OpponentUpdateModel
      *   $requestBody The opponent to be created
@@ -53,7 +67,7 @@ class Opponents extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(OpponentUpdateModel $requestBody): int
+    public function postBy(OpponentUpdateModel $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

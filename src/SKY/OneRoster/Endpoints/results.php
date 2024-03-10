@@ -7,7 +7,6 @@ use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\OneRoster\Components\ResultInputModelSvc;
 use Blackbaud\SKY\OneRoster\Components\ResultOutputModelSvc;
 use Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc;
-use Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc;
 
 /**
  * @api
@@ -25,7 +24,7 @@ class Results extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the collection.
      */
-    public function getAll(): ResultsOutputModelSvc
+    public function getAllBy(): ResultsOutputModelSvc
     {
         return new ResultsOutputModelSvc($this->send("get", [], []));
     }
@@ -42,7 +41,7 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): ResultOutputModelSvc
+    public function getById(array $params): ResultOutputModelSvc
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -63,7 +62,7 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function put(array $params, ResultInputModelSvc $requestBody): ResultOutputModelSvc
+    public function putById(array $params, ResultInputModelSvc $requestBody): ResultOutputModelSvc
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -83,7 +82,7 @@ class Results extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function delete(array $params): ResultsOutputModelSvc
+    public function deleteById(array $params): ResultsOutputModelSvc
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

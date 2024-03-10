@@ -18,15 +18,15 @@ class Assignments extends BaseEndpoint
 
     /**
      * Returns assignments for a student that are assigned or due within the
-     * date range specified.<br />
+     * date range specified.
      *
-     * If no ```end_date``` is supplied it defaults to 31 days past the
-     * ```start_date```
+     *  If no ```end\_date``` is supplied it defaults to 31 days past the
+     * ```start\_date``` Requires at least one of the following roles in the
+     * Education Management system:
      *
-     * Requires at least one of the following roles in the Education
-     * Management system:
+     * - Student
      *
-     * <ul><li>Student</li><li>Parent</li></ul>
+     * - Parent
      *
      * @param array{student_id: int, start_date: string, end_date: string,
      *   section_ids: string} $params An associative array
@@ -41,15 +41,15 @@ class Assignments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudent(array $params): StudentAssignmentCollection
+    public function getByStudentId(array $params): StudentAssignmentCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
         assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
 
-        return new StudentAssignmentCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $start_date,
-        "end_date" => $end_date,
-        "section_ids" => $section_ids]));
+        return new StudentAssignmentCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $params['start_date'],
+        "end_date" => $params['end_date'],
+        "section_ids" => $params['section_ids']]));
     }
 }

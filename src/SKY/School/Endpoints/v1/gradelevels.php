@@ -16,17 +16,22 @@ class Gradelevels extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/gradelevels";
 
     /**
-     * Returns a collection of core school grade levels.<br />
+     * Returns a collection of core school grade levels.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule
-     * Manager</li><li>Platform Manager</li><li>Any Manager Role</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
+     *
+     * - Platform Manager
+     *
+     * - Any Manager Role
      *
      * @return \Blackbaud\SKY\School\Components\GradeLevelCollection Success
      */
-    public function getAll(): GradeLevelCollection
+    public function getAllBy(): GradeLevelCollection
     {
         return new GradeLevelCollection($this->send("get", [], []));
     }

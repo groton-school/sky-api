@@ -18,12 +18,14 @@ class Master extends BaseEndpoint
 
     /**
      * Returns a collection of Master Schedule days within the date range
-     * provided.<br />
+     * provided.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
      *
      * @param array{level_num: int, start_date: string, end_date: string,
      *   offering_type: int} $params An associative array
@@ -46,16 +48,16 @@ class Master extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): MasterScheduleDayCollection
+    public function filterByBy(array $params): MasterScheduleDayCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
-        return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $level_num,
-        "start_date" => $start_date,
-        "end_date" => $end_date,
-        "offering_type" => $offering_type]));
+        return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $params['level_num'],
+        "start_date" => $params['start_date'],
+        "end_date" => $params['end_date'],
+        "offering_type" => $params['offering_type']]));
     }
 }

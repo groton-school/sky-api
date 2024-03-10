@@ -18,15 +18,16 @@ class Athleticrequirements extends BaseEndpoint
 
     /**
      * Returns a collection of medical athletic requirements for a student.
-     * <br />
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Nurse</li><li>Coach</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Coach
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, schoolYear: string, season: string,
      *   include_: string} $params An associative array
@@ -43,15 +44,15 @@ class Athleticrequirements extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): array
+    public function getByUserId(array $params): array
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['schoolYear']), new ArgumentException("Parameter `schoolYear` is required"));
         assert(isset($params['season']), new ArgumentException("Parameter `season` is required"));
         assert(isset($params['include_']), new ArgumentException("Parameter `include_` is required"));
 
-        return array_map(fn($a) => new StudentAthleticRequirementRead($a), $this->send("get", ["{user_id}" => $params['user_id']], ["schoolYear" => $schoolYear,
-        "season" => $season,
-        "include_" => $include_]));
+        return array_map(fn($a) => new StudentAthleticRequirementRead($a), $this->send("get", ["{user_id}" => $params['user_id']], ["schoolYear" => $params['schoolYear'],
+        "season" => $params['season'],
+        "include_" => $params['include_']]));
     }
 }

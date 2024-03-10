@@ -38,12 +38,14 @@ class Enrollments extends BaseEndpoint
 
     /**
      * Returns a collection of course sections in which the provided student
-     * is enrolled.<br />
+     * is enrolled.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
      *
      * @param array{user_id: int, school_year: string} $params An associative
      *   array
@@ -57,11 +59,11 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): EnrollmentCollection
+    public function getByUserId(array $params): EnrollmentCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new EnrollmentCollection($this->send("get", ["{user_id}" => $params['user_id']], ["school_year" => $school_year]));
+        return new EnrollmentCollection($this->send("get", ["{user_id}" => $params['user_id']], ["school_year" => $params['school_year']]));
     }
 }

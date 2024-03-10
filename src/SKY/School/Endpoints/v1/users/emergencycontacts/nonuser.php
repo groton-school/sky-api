@@ -17,12 +17,12 @@ class Nonuser extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/emergencycontacts/nonuser";
 
     /**
-     * Creates a non-user emergency contact for the given user.<br />
+     * Creates a non-user emergency contact for the given user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -34,7 +34,7 @@ class Nonuser extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, EmergencyContactNonUserCreate $requestBody): void
+    public function postByUserId(array $params, EmergencyContactNonUserCreate $requestBody): void
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

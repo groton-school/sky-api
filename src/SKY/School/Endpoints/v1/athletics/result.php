@@ -18,16 +18,21 @@ class Result extends BaseEndpoint
 
     /**
      * Creates a result/score for the specified athletic game
-     * ```schedule_id```. <br />
+     * ```schedule\_id```.
      *
-     * Existing IDs can be retrieved via the GET athletics schedules endpoint
-     * as well as after a POST athletics game. <br />
+     *  Existing IDs can be retrieved via the GET athletics schedules endpoint
+     * as well as after a POST athletics game.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Team Schedule Manager</li><li>Page
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Team Schedule Manager
+     *
+     * - Page Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param \Blackbaud\SKY\School\Components\ResultCreate $requestBody
      *
@@ -36,7 +41,7 @@ class Result extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(ResultCreate $requestBody): void
+    public function postBy(ResultCreate $requestBody): void
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

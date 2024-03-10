@@ -23,7 +23,7 @@ class Courses extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\CoursesOutputModel OK - It
      *   was possible to read the collection.
      */
-    public function getAll(): CoursesOutputModel
+    public function getAllBy(): CoursesOutputModel
     {
         return new CoursesOutputModel($this->send("get", [], []));
     }
@@ -40,7 +40,7 @@ class Courses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): CourseOutputModel
+    public function getById(array $params): CourseOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

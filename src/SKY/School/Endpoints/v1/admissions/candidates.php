@@ -18,27 +18,33 @@ class Candidates extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/admissions/candidates";
 
     /**
-     * Returns a collection of admissions candidates.<br></br>
+     * Returns a collection of admissions candidates.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Admissions Manager</li><li>Platform Manager</li><li>SKY API
-     * Data Sync</li></ul>
+     * - Admissions Manager
      *
-     * NOTE: The following fields have been deprecated and are no longer
-     * returned as of 01/01/2023.
+     * - Platform Manager
      *
-     *  <ul><li>school_decision</li><li>school_decision_type</li><li>candidate_decision</li><li>candidate_decision_type</li></ul>
-
+     * - SKY API Data Sync
      *
-     * Use the school decision and candidate decision objects instead.<br
-     * /><br />
+     *  NOTE: The following fields have been deprecated and are no longer
+     * returned as of 01/01/2023. - school\_decision
      *
-     * NOTE: The filter for school_year_id has been replaced by
-     * school_year.<br />
+     * - school\_decision\_type
      *
-     * The school_year_id filter has been deprecated and no longer functions
-     * as of 01/01/2023.
+     * - candidate\_decision
+     *
+     * - candidate\_decision\_type
+     *
+     *  Use the school decision and candidate decision objects instead.
+     *
+     *  NOTE: The filter for school\_year\_id has been replaced by
+     * school\_year.
+     *
+     *  The school\_year\_id filter has been deprecated and no longer
+     * functions as of 01/01/2023.
      *
      * @param array{school_year: string, status_ids: string, modified_date:
      *   string} $params An associative array
@@ -59,25 +65,28 @@ class Candidates extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): CandidateReadCollection
+    public function filterByBy(array $params): CandidateReadCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['status_ids']), new ArgumentException("Parameter `status_ids` is required"));
         assert(isset($params['modified_date']), new ArgumentException("Parameter `modified_date` is required"));
 
-        return new CandidateReadCollection($this->send("get", [], ["school_year" => $school_year,
-        "status_ids" => $status_ids,
-        "modified_date" => $modified_date]));
+        return new CandidateReadCollection($this->send("get", [], ["school_year" => $params['school_year'],
+        "status_ids" => $params['status_ids'],
+        "modified_date" => $params['modified_date']]));
     }
 
     /**
-     * Creates a new admissions candidate record.<br></br>
+     * Creates a new admissions candidate record.
      *
-     * Returns the ID of the newly created candidate.<br></br>
+     *  Returns the ID of the newly created candidate.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Admissions Manager</li><li>Admissions Staff</li></ul>
+     * - Admissions Manager
+     *
+     * - Admissions Staff
      *
      * @param \Blackbaud\SKY\School\Components\CandidateCreate $requestBody
      *
@@ -86,7 +95,7 @@ class Candidates extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(CandidateCreate $requestBody): int
+    public function postBy(CandidateCreate $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

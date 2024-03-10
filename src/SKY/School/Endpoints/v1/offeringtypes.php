@@ -16,17 +16,20 @@ class Offeringtypes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/offeringtypes";
 
     /**
-     * Returns a collection of core school offering types.<br />
+     * Returns a collection of core school offering types.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule
-     * Manager</li><li>Platform Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
+     *
+     * - Platform Manager
      *
      * @return \Blackbaud\SKY\School\Components\OfferingTypeCollection Success
      */
-    public function getAll(): OfferingTypeCollection
+    public function getAllBy(): OfferingTypeCollection
     {
         return new OfferingTypeCollection($this->send("get", [], []));
     }

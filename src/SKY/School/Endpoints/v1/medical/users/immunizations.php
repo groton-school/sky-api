@@ -18,15 +18,15 @@ class Immunizations extends BaseEndpoint
 
     /**
      * Returns a collection of medical immunizations for the specified
-     * ```user_id```. <br />
+     * ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, include_: string} $params An associative
      *   array
@@ -40,11 +40,11 @@ class Immunizations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): array
+    public function getByUserId(array $params): array
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['include_']), new ArgumentException("Parameter `include_` is required"));
 
-        return array_map(fn($a) => new StudentImmunizationRead($a), $this->send("get", ["{user_id}" => $params['user_id']], ["include_" => $include_]));
+        return array_map(fn($a) => new StudentImmunizationRead($a), $this->send("get", ["{user_id}" => $params['user_id']], ["include_" => $params['include_']]));
     }
 }

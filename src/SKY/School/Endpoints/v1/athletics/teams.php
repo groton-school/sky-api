@@ -45,17 +45,21 @@ class Teams extends BaseEndpoint
     protected Schedule $_schedule = null;
 
     /**
-     * Returns a collection of athletic teams for the current school year. <br
-     * />
+     * Returns a collection of athletic teams for the current school year.
      *
-     * Use the optional ```school_year``` parameter to specify a different
-     * year. <br />
+     *  Use the optional ```school\_year``` parameter to specify a different
+     * year.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Coach</li><li>Pending Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param array{school_year: string} $params An associative array
      *     - school_year: School year
@@ -65,10 +69,10 @@ class Teams extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): TeamCollection
+    public function filterByBy(array $params): TeamCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new TeamCollection($this->send("get", [], ["school_year" => $school_year]));
+        return new TeamCollection($this->send("get", [], ["school_year" => $params['school_year']]));
     }
 }

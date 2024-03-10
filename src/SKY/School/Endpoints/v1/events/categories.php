@@ -19,11 +19,14 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/events/categories";
 
     /**
-     * Returns a collection of event categories.<br />
+     * Returns a collection of event categories.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Content Manager</li><li>Platform Manager</li></ul>
+     * - Content Manager
+     *
+     * - Platform Manager
      *
      * @param array{page: int} $params An associative array
      *     - page: Format - int32. The page of results to start from.
@@ -34,20 +37,25 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): EventCategoryCollection
+    public function filterByBy(array $params): EventCategoryCollection
     {
         assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
 
-        return new EventCategoryCollection($this->send("get", [], ["page" => $page]));
+        return new EventCategoryCollection($this->send("get", [], ["page" => $params['page']]));
     }
 
     /**
-     * Returns the Id of the created Events Category<br />
+     * Returns the Id of the created Events Category
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Content Manager</li><li>Platform Manager</li></ul><param
-     * name="eventCategory"></param><param name="cancellationToken"></param>
+     * - Content Manager
+     *
+     * - Platform Manager
+     *
+     * <param name="eventCategory"></param><param
+     * name="cancellationToken"></param>
      *
      * @param \Blackbaud\SKY\School\Components\EventCategory $requestBody
      *
@@ -57,7 +65,7 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(EventCategory $requestBody): EventCategoryCreateResponseExample
+    public function postBy(EventCategory $requestBody): EventCategoryCreateResponseExample
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

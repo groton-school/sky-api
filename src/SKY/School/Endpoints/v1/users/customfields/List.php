@@ -16,19 +16,19 @@ class List_ extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/customfields/list";
 
     /**
-     * Creates a list of admin custom field for a user. <br />
+     * Creates a list of admin custom field for a user.
      *
-     * Does not create any of the ten default custom fields, every user has
-     * those fields created for them by default.  To update those fields see
-     * User Custom Field Values Update. <br />
+     *  Does not create any of the ten default custom fields, every user has
+     * those fields created for them by default. To update those fields see
+     * User Custom Field Values Update.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Platform Manager</li></ul>
+     * - Platform Manager
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The Id of the user to create a custom
@@ -42,7 +42,7 @@ class List_ extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, array $requestBody): bool
+    public function postByUserId(array $params, array $requestBody): bool
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -51,12 +51,12 @@ class List_ extends BaseEndpoint
     }
 
     /**
-     * Updates a list of admin custom field for a user. <br />
+     * Updates a list of admin custom field for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Platform Manager</li></ul>
+     * - Platform Manager
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The Id of the user to update an existing
@@ -70,7 +70,7 @@ class List_ extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(array $params, array $requestBody): bool
+    public function patchByUserId(array $params, array $requestBody): bool
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

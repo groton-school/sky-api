@@ -13,17 +13,10 @@
     {
       "type": "path",
       "url": "../openapi-client-generator"
-    },
-    {
-      "type": "path",
-      "url": "../php-generator"
-    }
-  ],
+    }  ],
   "require": {
+    "battis/openapi-client-generator": "dev-main",
     "groton-school/oauth2-blackbaudsky": "^0.2.3"
-  },
-  "require-dev": {
-    "battis/openapi-client-generator": "dev-main"
   },
   "autoload": {
     "psr-4": {

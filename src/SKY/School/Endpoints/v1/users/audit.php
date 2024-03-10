@@ -18,12 +18,12 @@ class Audit extends BaseEndpoint
 
     /**
      * Returns a collection of audit information based on the specified
-     * ```role_id``` within the dates provided.<br />
+     * ```role\_id``` within the dates provided.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{role_id: string, start_date: string, end_date: string}
      *   $params An associative array
@@ -40,14 +40,14 @@ class Audit extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): UserAuditReadCollection
+    public function filterByBy(array $params): UserAuditReadCollection
     {
         assert(isset($params['role_id']), new ArgumentException("Parameter `role_id` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new UserAuditReadCollection($this->send("get", [], ["role_id" => $role_id,
-        "start_date" => $start_date,
-        "end_date" => $end_date]));
+        return new UserAuditReadCollection($this->send("get", [], ["role_id" => $params['role_id'],
+        "start_date" => $params['start_date'],
+        "end_date" => $params['end_date']]));
     }
 }

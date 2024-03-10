@@ -18,34 +18,46 @@ class Locations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/athletics/locations";
 
     /**
-     * Returns a collection of athletic locations. <br />
+     * Returns a collection of athletic locations.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Schedule Manager</li><li>Coach</li><li>Pending
-     * Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Schedule Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @return \Blackbaud\SKY\School\Components\LocationCollection Success
      */
-    public function getAll(): LocationCollection
+    public function getAllBy(): LocationCollection
     {
         return new LocationCollection($this->send("get", [], []));
     }
 
     /**
-     * Creates a new athletic location. <br />
+     * Creates a new athletic location.
      *
-     * The location can optionally be tied to an opponent using the
-     * ```opponent_id``` from the GET opponents endpoint. <br />
+     *  The location can optionally be tied to an opponent using the
+     * ```opponent\_id``` from the GET opponents endpoint.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Athletic Group Manager</li><li>Team Schedule
-     * Manager</li><li>Schedule Manager</li><li>Coach</li><li>Pending
-     * Coach</li></ul>
+     * - Athletic Group Manager
+     *
+     * - Team Schedule Manager
+     *
+     * - Schedule Manager
+     *
+     * - Coach
+     *
+     * - Pending Coach
      *
      * @param \Blackbaud\SKY\School\Components\LocationCreateModel
      *   $requestBody The location to be created
@@ -55,7 +67,7 @@ class Locations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(LocationCreateModel $requestBody): int
+    public function postBy(LocationCreateModel $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

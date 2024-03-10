@@ -16,16 +16,18 @@ class Levels extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/levels";
 
     /**
-     * Returns a collection of core school levels.<br />
+     * Returns a collection of core school levels.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Any Manager Role</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Any Manager Role
      *
      * @return \Blackbaud\SKY\School\Components\LevelCollection Success
      */
-    public function getAll(): LevelCollection
+    public function getAllBy(): LevelCollection
     {
         return new LevelCollection($this->send("get", [], []));
     }

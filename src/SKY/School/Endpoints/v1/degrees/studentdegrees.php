@@ -17,16 +17,20 @@ class Studentdegrees extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/degrees/studentdegrees/{student_id}";
 
     /**
-     * Returns a collection of degree/diplomas assigned to the
-     * student.<br></br>
+     * Returns a collection of degree/diplomas assigned to the student.
      *
-     * Each degree/diploma has a collection of majors, minors and/or
-     * concentrations as appropriate for that degree or diploma.<br></br>
+     *  Each degree/diploma has a collection of majors, minors and/or
+     * concentrations as appropriate for that degree or diploma.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>Degree Manager</li><li>Diploma
-     * Manager</li><li>Student</li><li>Parent</li></ul>
+     * - Degree Manager
+     *
+     * - Diploma Manager
+     *
+     * - Student
+     *
+     * - Parent
      *
      * @param array{student_id: int} $params An associative array
      *     - student_id: Format - int32. user Id
@@ -37,7 +41,7 @@ class Studentdegrees extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): UserDegreeOutputModelCollection
+    public function getByStudentId(array $params): UserDegreeOutputModelCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
 

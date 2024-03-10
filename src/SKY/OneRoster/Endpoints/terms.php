@@ -43,7 +43,7 @@ class Terms extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
      *   OK - It was possible to read the collection.
      */
-    public function getAll(): AcademicSessionsOutputModel
+    public function getAllBy(): AcademicSessionsOutputModel
     {
         return new AcademicSessionsOutputModel($this->send("get", [], []));
     }
@@ -60,7 +60,7 @@ class Terms extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): AcademicSessionOutputModel
+    public function getById(array $params): AcademicSessionOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

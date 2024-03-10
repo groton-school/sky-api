@@ -17,14 +17,15 @@ class Immunizations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/medical/immunizations";
 
     /**
-     * Updates a medical immunization for a student.<br />
+     * Updates a medical immunization for a student.
      *
-     * Requires one of the following roles in the Education Management system:
+     *  Requires one of the following roles in the Education Management
+     * system:
      *
-     * <ul><li>Nurse</li></ul>
+     * - Nurse
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentImmunizationUpdate
      *   $requestBody The immunizations to update
@@ -34,7 +35,7 @@ class Immunizations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(StudentImmunizationUpdate $requestBody): void
+    public function postBy(StudentImmunizationUpdate $requestBody): void
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

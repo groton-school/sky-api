@@ -22,13 +22,13 @@ class Users extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
-    public function getAll(): UsersOutputModel
+    public function getAllBy(): UsersOutputModel
     {
         return new UsersOutputModel($this->send("get", [], []));
     }
 
     /**
-     * Returns a single user for the specified <code>id</code>.
+     * Returns a single user for the specified `id`.
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the user
@@ -38,7 +38,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function get(array $params): UserOutputModel
+    public function getById(array $params): UserOutputModel
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

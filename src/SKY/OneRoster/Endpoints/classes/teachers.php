@@ -17,12 +17,14 @@ class Teachers extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/teachers";
 
     /**
-     * Returns a collection of teacher user data for the specified
-     * <code>class_id</code>. <br />
+     * Returns a collection of teacher user data for the specified `class_id`.
      *
-     * Roles returned include:
      *
-     * <ul><li>Teacher</li><li>Pending Teacher</li></ul>
+     *  Roles returned include:
+     *
+     * - Teacher
+     *
+     * - Pending Teacher
      *
      * @param array{class_id: string} $params An associative array
      *     - class_id: sourcedId for the class
@@ -32,7 +34,7 @@ class Teachers extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByClass(array $params): UsersOutputModel
+    public function getByClassId(array $params): UsersOutputModel
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 

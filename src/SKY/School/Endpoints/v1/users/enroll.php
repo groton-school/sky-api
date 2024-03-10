@@ -18,12 +18,12 @@ class Enroll extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/enroll";
 
     /**
-     * Creates the users enrollment record.<br />
+     * Creates the users enrollment record.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param \Blackbaud\SKY\School\Components\UserEnrollmentCreate
      *   $requestBody
@@ -33,7 +33,7 @@ class Enroll extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function post(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
+    public function postBy(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

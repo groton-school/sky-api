@@ -4,7 +4,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\OccupationCreate;
 use Blackbaud\SKY\School\Components\OccupationReadCollection;
 use Blackbaud\SKY\School\Components\OccupationUpdate;
@@ -20,13 +19,12 @@ class Occupations extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/occupations/{occupation_id}";
 
     /**
-     * Returns a collection of occupations for the specified ```user_id```.
-     * <br />
+     * Returns a collection of occupations for the specified ```user\_id```.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -37,7 +35,7 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUser(array $params): OccupationReadCollection
+    public function getByUserId(array $params): OccupationReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -45,15 +43,18 @@ class Occupations extends BaseEndpoint
     }
 
     /**
-     * Creates an occupation record for the specified ```user_id```.<br />
+     * Creates an occupation record for the specified ```user\_id```.
      *
-     * Returns the ID of the occupation created. <br />
+     *  Returns the ID of the occupation created.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
@@ -65,7 +66,7 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUser(array $params, OccupationCreate $requestBody): int
+    public function postByUserId(array $params, OccupationCreate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -74,16 +75,19 @@ class Occupations extends BaseEndpoint
     }
 
     /**
-     * Deletes an occupation entry for a user.<br />
+     * Deletes an occupation entry for a user.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
      *
-     * ***This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.***
+     * - Platform Manager
+     *
+     * - Contact Card Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, occupation_id: int, current: bool} $params
      *   An associative array
@@ -96,26 +100,29 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUser(array $params): int
+    public function deleteByUserIdAndOccupationId(array $params): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['occupation_id']), new ArgumentException("Parameter `occupation_id` is required"));
         assert(isset($params['current']), new ArgumentException("Parameter `current` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id'],
-        "{occupation_id}" => $params['occupation_id']], ["current" => $current]);
+        "{occupation_id}" => $params['occupation_id']], ["current" => $params['current']]);
     }
 
     /**
-     * Updates an occupation entry for a user.<br />
+     * Updates an occupation entry for a user.
      *
-     * Returns the ID of the occupation updated. <br />
+     *  Returns the ID of the occupation updated.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>SKY API Data Sync</li><li>Platform Manager</li><li>Contact Card
-     * Manager</li></ul>
+     * - SKY API Data Sync
+     *
+     * - Platform Manager
+     *
+     * - Contact Card Manager
      *
      * @param array{user_id: int, occupation_id: int} $params An associative
      *   array
@@ -129,7 +136,7 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUser(array $params, OccupationUpdate $requestBody): int
+    public function patchByUserIdAndOccupationId(array $params, OccupationUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['occupation_id']), new ArgumentException("Parameter `occupation_id` is required"));

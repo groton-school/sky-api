@@ -19,11 +19,11 @@ class Changed extends BaseEndpoint
     /**
      * Returns a paginated collection of users that have been created or
      * modified within the specified timeframe. The timeframe is from the
-     * start_date to the start_date plus seven days.<br />
+     * start\_date to the start\_date plus seven days.
      *
-     * Requires the following role in the Education Management system:
+     *  Requires the following role in the Education Management system:
      *
-     * <ul><li>SKY API Data Sync</li></ul>
+     * - SKY API Data Sync
      *
      * @param array{base_role_ids: string, start_date: string} $params An
      *   associative array
@@ -39,12 +39,12 @@ class Changed extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): UserExtendedCollection
+    public function filterByBy(array $params): UserExtendedCollection
     {
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
 
-        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $base_role_ids,
-        "start_date" => $start_date]));
+        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
+        "start_date" => $params['start_date']]));
     }
 }

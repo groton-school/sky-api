@@ -17,12 +17,14 @@ class Specialdays extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/specialdays";
 
     /**
-     * Returns a collection of special days.<br />
+     * Returns a collection of special days.
      *
-     * Requires at least one of the following roles in the Education
+     *  Requires at least one of the following roles in the Education
      * Management system:
      *
-     * <ul><li>Academic Group Manager</li><li>Schedule Manager</li></ul>
+     * - Academic Group Manager
+     *
+     * - Schedule Manager
      *
      * @param array{level_id: int} $params An associative array
      *     - level_id: Format - int32. Identifier for a specific school level.
@@ -32,10 +34,10 @@ class Specialdays extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterBy(array $params): SpecialDayCollection
+    public function filterByBy(array $params): SpecialDayCollection
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
-        return new SpecialDayCollection($this->send("get", [], ["level_id" => $level_id]));
+        return new SpecialDayCollection($this->send("get", [], ["level_id" => $params['level_id']]));
     }
 }
