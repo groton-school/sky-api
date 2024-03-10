@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1343a5f29efb3a1b488857a06b6ae002",
+    "content-hash": "524c489265ce6375b407608c7b8d32f1",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -91,11 +91,17 @@
         },
         {
             "name": "battis/openapi-client-generator",
-            "version": "dev-main",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/battis/openapi-client-generator.git",
+                "reference": "6c6c21edfc1b6efd72cd4993a96e12b3583507e3"
+            },
             "dist": {
-                "type": "path",
-                "url": "../openapi-client-generator",
-                "reference": "dc6166032177974d74ea693c8cfb92d854c024fc"
+                "type": "zip",
+                "url": "https://api.github.com/repos/battis/openapi-client-generator/zipball/6c6c21edfc1b6efd72cd4993a96e12b3583507e3",
+                "reference": "6c6c21edfc1b6efd72cd4993a96e12b3583507e3",
+                "shasum": ""
             },
             "require": {
                 "battis/data-utilities": "^1.2",
@@ -118,6 +124,7 @@
                     "Battis\\OpenAPI\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -128,9 +135,11 @@
                 }
             ],
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/battis/openapi-client-generator/issues",
+                "source": "https://github.com/battis/openapi-client-generator/tree/v0.1.1"
+            },
+            "time": "2024-03-10T19:11:25+00:00"
         },
         {
             "name": "battis/php-generator",
@@ -3450,12 +3459,63 @@
             "time": "2023-04-05T11:54:14+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "symplify/monorepo-builder",
+            "version": "11.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symplify/monorepo-builder.git",
+                "reference": "444efe08701776cb1a03b9f3600e715697519aa6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symplify/monorepo-builder/zipball/444efe08701776cb1a03b9f3600e715697519aa6",
+                "reference": "444efe08701776cb1a03b9f3600e715697519aa6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "bin": [
+                "bin/monorepo-builder"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "10.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Prefixed version of Not only Composer tools to build a Monorepo.",
+            "support": {
+                "issues": "https://github.com/symplify/monorepo-builder/issues",
+                "source": "https://github.com/symplify/monorepo-builder/tree/11.2.20"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/rectorphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-17T08:30:16+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "battis/openapi-client-generator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

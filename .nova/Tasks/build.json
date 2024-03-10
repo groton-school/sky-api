@@ -2,7 +2,7 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "composer run build"
+      "script" : "vendor\/bin\/monorepo-builder merge\ncomposer run build"
     }
   },
   "openLogOnRun" : "start"

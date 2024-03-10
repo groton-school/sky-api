@@ -1,0 +1,23 @@
+{
+  "name": "groton-school/sky-api-nxt-data-integration",
+  "description": "PHP client for Blackbaud's SKY API - NXT Data Integration API",
+  "license": "GPL-3.0",
+  "autoload": {
+    "psr-4": {
+      "Blackbaud\\SKY\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Seth Battis",
+      "email": "sbattis@groton.org"
+    }
+  ],
+  "require": {
+    "battis/openapi-client-generator": "^0.1.1",
+    "groton-school/oauth2-blackbaudsky": "^0.2.3"
+  },
+  "extra": {
+    "build": "scripts/map -d 'var/2022-04-01_preview/Church Management/nxt-data-integration.json' 'packages/nxt-data-integration/src' 'Blackbaud\\SKY'"
+  }
+}

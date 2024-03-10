@@ -1,32 +1,54 @@
 {
-  "name": "groton-school/sky-api",
-  "description": "PHP client for Blackbaud's SKY API",
-  "license": "GPL-3.0",
-  "minimum-stability": "dev",
-  "authors": [
-    {
-      "name": "Seth Battis",
-      "email": "sbattis@groton.org"
+    "name": "groton-school/sky-api",
+    "description": "PHP client for Blackbaud's SKY API",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sbattis@groton.org"
+        }
+    ],
+    "require": {
+        "battis/openapi-client-generator": "^0.1.1",
+        "groton-school/oauth2-blackbaudsky": "^0.2.3"
+    },
+    "require-dev": {
+        "symplify/monorepo-builder": "^11.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blackbaud\\SKY\\": [
+                "packages/altru-administration/src/",
+                "packages/altru-analysis/src/",
+                "packages/altru-constituent/src/",
+                "packages/nxt-data-integration/src/",
+                "packages/oneroster/src/",
+                "packages/school/src/"
+            ],
+            "Build\\": "src"
+        }
+    },
+    "scripts": {
+        "build": "Build\\CLI::build"
+    },
+    "extra": {
+        "build": [
+            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-adnmg.json' 'packages/altru-administration/src' 'Blackbaud\\SKY'",
+            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-anamg.json' 'packages/altru-analysis/src' 'Blackbaud\\SKY'",
+            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-conmg.json' 'packages/altru-constituent/src' 'Blackbaud\\SKY'",
+            "scripts/map -d 'var/2022-04-01_preview/Church Management/nxt-data-integration.json' 'packages/nxt-data-integration/src' 'Blackbaud\\SKY'",
+            "scripts/map -d 'var/2022-04-01_preview/Education Management/afe-rostr.json' 'packages/oneroster/src' 'Blackbaud\\SKY'",
+            "scripts/map -d 'var/2022-04-01_preview/Education Management/school.json' 'packages/school/src' 'Blackbaud\\SKY'"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "replace": {
+        "groton-school/sky-api-altru-analysis": "self.version",
+        "groton-school/sky-api-altru-constituent": "self.version",
+        "groton-school/sky-api-nxt-data-integration": "self.version",
+        "groton-school/sky-api-oneroster": "self.version",
+        "groton-school/sky-api-school": "self.version"
     }
-  ],
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../openapi-client-generator"
-    }  ],
-  "require": {
-    "battis/openapi-client-generator": "dev-main",
-    "groton-school/oauth2-blackbaudsky": "^0.2.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "GrotonSchool\\Blackbaud\\": "src"
-    }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "scripts": {
-    "build": "./scripts/map -d var src/SKY 'Blackbaud\\SKY'"
-  }
 }
