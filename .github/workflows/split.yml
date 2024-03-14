@@ -1,5 +1,5 @@
 name: 'Packages Split'
-
+environment: 'actions'
 on:
     push:
         branches:
