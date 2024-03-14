@@ -14,13 +14,12 @@
         "guzzlehttp/guzzle": "^7.4",
         "battis/data-utilities": "^1.2"
     },
-	"autoload": {
-		"psr-4": {
-			"GrotonSchool\\OAuth2\\Client\\Provider\\": "src/"
-		}
-	},
+    "autoload": {
+        "psr-4": {
+            "GrotonSchool\\OAuth2\\Client\\Provider\\": "src/"
+        }
+    },
     "scripts": {
         "docs": "./tools/phpdocumentor -d src -t docs"
     }
-
 }

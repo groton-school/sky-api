@@ -9,8 +9,12 @@
         }
     ],
     "require": {
-        "battis/openapi-client-generator": "^0.1.1",
-        "groton-school/oauth2-blackbaudsky": "^0.2.3"
+        "ext-curl": "*",
+        "battis/data-utilities": "^1.2",
+        "battis/lazy-secrets": "^1.1",
+        "battis/openapi-client-generator": "^0.1",
+        "guzzlehttp/guzzle": "^7.4",
+        "league/oauth2-client": "^2.6"
     },
     "require-dev": {
         "symplify/monorepo-builder": "^11.2"
@@ -25,7 +29,9 @@
                 "packages/oneroster/src/",
                 "packages/school/src/"
             ],
-            "Build\\": "src"
+            "Build\\": "src",
+            "GrotonSchool\\OAuth2\\Client\\Provider\\": "packages/oauth2/src/",
+            "GrotonSchool\\SKY\\AppEngine\\": "packages/appengine-client/src"
         }
     },
     "scripts": {
@@ -45,10 +51,19 @@
         "sort-packages": true
     },
     "replace": {
+        "battis/sky-api-appengine": "self.version",
+        "groton-school/oauth2-blackbaudsky": "self.version",
+        "groton-school/oauth2-blackbaudsky-example": "self.version",
         "groton-school/sky-api-altru-analysis": "self.version",
         "groton-school/sky-api-altru-constituent": "self.version",
         "groton-school/sky-api-nxt-data-integration": "self.version",
         "groton-school/sky-api-oneroster": "self.version",
-        "groton-school/sky-api-school": "self.version"
-    }
+        "groton-school/sky-api-school": "self.version",
+        "groton-school/sky-api.altru-analysis": "self.version",
+        "groton-school/sky-api.altru-constituent": "self.version",
+        "groton-school/sky-api.nxt-data-integration": "self.version",
+        "groton-school/sky-api.oneroster": "self.version",
+        "groton-school/sky-api.school": "self.version"
+    },
+    "minimum-stability": "dev"
 }
