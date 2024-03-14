@@ -10,3 +10,4 @@ jobs:
         with:
           AUTO_ASSIGN: true
           IDENTIFIERS: '[{"name": "TODO", "labels": []}, {"name": "FIXME", "labels": ["bug"]}]'
+          IGNORE: ".*\/packages\/oauth2-example\/.*"
