@@ -4,22 +4,18 @@ on:
     push:
         branches:
             - main
-
-        # see https://github.community/t/how-to-run-github-actions-workflow-only-for-new-tags/16075/10?u=tomasvotruba
         tags:
             - '*'
-
-    pull_request: null
-
-    release:
-        types: [created]
 
 env:
     # 1. for Github split
     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
+    # 2. for Gitlab split
+    # GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+
 jobs:
-    split:
+    packages_split:
         runs-on: ubuntu-latest
 
         strategy:
@@ -33,19 +29,46 @@ jobs:
                     -
                         local_path: 'school'
                         split_repository: 'sky-api-school-READONLY'
-        steps:
-            -
-                uses: actions/checkout@v2
 
+        steps:
+            -   uses: actions/checkout@v2
+
+            # no tag
             -
-                # run action.yaml in the root directory
-                # see https://github.community/t/self-reference-an-action-for-testing/17891
+                if: "!startsWith(github.ref, 'refs/tags/')"
                 uses: "danharrin/monorepo-split-github-action@v2.3.0"
-                env:
-                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 with:
+                    # ↓ split "packages/easy-coding-standard" directory
                     package_directory: 'packages/${{ matrix.package.local_path }}'
+
+                    # ↓ into https://github.com/symplify/easy-coding-standard repository
                     repository_organization: 'groton-school'
                     repository_name: '${{ matrix.package.split_repository }}'
-                    user_name: 'battis'
-                    user_email: 'sbattis@groton.org'
+
+                    # [optional, with "github.com" as default]
+                    # repository_host: git.private.com:1234
+
+                    # ↓ the user signed under the split commit
+                    user_name: "battis"
+                    user_email: "sbattis@groton.org"
+
+            # with tag
+            -
+                if: "startsWith(github.ref, 'refs/tags/')"
+                uses: "danharrin/monorepo-split-github-action@v2.3.0"
+                with:
+                    tag: ${GITHUB_REF#refs/tags/}
+
+                    # ↓ split "packages/easy-coding-standard" directory
+                    package_directory: 'packages/${{ matrix.package.local_path }}'
+
+                    # ↓ into https://github.com/symplify/easy-coding-standard repository
+                    repository_organization: 'groton-school'
+                    repository_name: '${{ matrix.package.split_repository }}'
+
+                    # [optional, with "github.com" as default]
+                    # repository_host: git.private.com:1234
+
+                    # ↓ the user signed under the split commit
+                    user_name: "battis"
+                    user_email: "sbattis@groton.org"
