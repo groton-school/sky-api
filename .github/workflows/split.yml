@@ -19,16 +19,16 @@ jobs:
         runs-on: ubuntu-latest
 
         strategy:
-        fail-fast: false
-        matrix:
-            # define package to repository map
-            package:
-                -
-                    local_path: 'oneroster'
-                    split_repository: 'sky-api-oneroster-READONLY'
-                -
-                    local_path: 'school'
-                    split_repository: 'sky-api-school-READONLY'
+            fail-fast: false
+            matrix:
+                # define package to repository map
+                package:
+                    -
+                        local_path: 'oneroster'
+                        split_repository: 'sky-api-oneroster-READONLY'
+                    -
+                        local_path: 'school'
+                        split_repository: 'sky-api-school-READONLY'
         steps:
             -
                 uses: actions/checkout@v2
