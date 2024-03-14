@@ -1,0 +1,14 @@
+{
+    "name": "groton-school/oauth2-blackbaudsky-example",
+    "description": "Example use of groton-school/oauth2-blackbaudsky",
+    "require": {
+        "groton-school/oauth2-blackbaudsky": "^0.1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sbattis@groton.org"
+        }
+    ]
+}

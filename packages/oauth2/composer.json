@@ -1,0 +1,26 @@
+{
+    "name": "groton-school/oauth2-blackbaudsky",
+    "description": "This package provides Blackbaud SKY OAuth 2.0 support for the PHP League's OAuth 2.0 Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sbattis@groton.org"
+        }
+    ],
+    "require": {
+        "ext-curl": "*",
+        "league/oauth2-client": "^2.6",
+        "guzzlehttp/guzzle": "^7.4",
+        "battis/data-utilities": "^1.2"
+    },
+	"autoload": {
+		"psr-4": {
+			"GrotonSchool\\OAuth2\\Client\\Provider\\": "src/"
+		}
+	},
+    "scripts": {
+        "docs": "./tools/phpdocumentor -d src -t docs"
+    }
+
+}

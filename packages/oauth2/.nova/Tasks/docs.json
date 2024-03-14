@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "composer run-script docs"
+    }
+  },
+  "openLogOnRun" : "start"
+}
