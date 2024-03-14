@@ -24,7 +24,7 @@ The following versions of PHP are supported.
 
 ## Usage
 
-Refer to [example](https://github.com/groton-school/OAuth2-BlackbaudSKY-example) for example usage.
+Refer to [this project](https://github.com/groton-school/sky-api/tree/main/examples/oauth2) for example usage.
 
 ### Authorization Code Grant
 

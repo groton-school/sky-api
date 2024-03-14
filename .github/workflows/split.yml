@@ -19,8 +19,6 @@ jobs:
             split_repository: "sky-api.appengine-client"
           - local_path: "oauth2"
             split_repository: "OAuth2-BlackbaudSKY"
-          - local_path: "oauth2-example"
-            split_repository: "OAuth2-BlackbaudSKY-example"
           - local_path: "oneroster"
             split_repository: "sky-api.oneroster"
           - local_path: "school"
