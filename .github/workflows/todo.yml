@@ -1,4 +1,4 @@
-name: "Run TODO to Issue"
+name: "todo"
 on: ["push"]
 jobs:
   build:
@@ -8,5 +8,5 @@ jobs:
       - name: "TODO to Issue"
         uses: "alstr/todo-to-issue-action@v4"
         with:
-            AUTO_ASSIGN: true
-            IDENTIFIERS: "[{\"name\": \"TODO\", \"labels\": []}, {\"name\": \"FIXME\", \"labels\": [\"bug\"]}]"
+          AUTO_ASSIGN: true
+          IDENTIFIERS: '[{"name": "TODO", "labels": []}, {"name": "FIXME", "labels": ["bug"]}]'

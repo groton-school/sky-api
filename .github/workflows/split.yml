@@ -1,78 +1,47 @@
-name: 'Packages Split'
-
+name: "split"
 on:
-    push:
-        branches:
-            - main
-        tags:
-            - '*'
-
-# env:
-    # 1. for Github split
-    # GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
-
-    # 2. for Gitlab split
-    # GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
 jobs:
-    packages_split:
-        runs-on: ubuntu-latest
-
-        environment: 'actions'
-        env:
-            GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
-
-        strategy:
-            fail-fast: false
-            matrix:
-                # define package to repository map
-                package:
-                    -
-                        local_path: 'oneroster'
-                        split_repository: 'sky-api-oneroster-READONLY'
-                    -
-                        local_path: 'school'
-                        split_repository: 'sky-api-school-READONLY'
-
-        steps:
-            -   uses: actions/checkout@v2
-
-            # no tag
-            -
-                if: "!startsWith(github.ref, 'refs/tags/')"
-                uses: "danharrin/monorepo-split-github-action@v2.3.0"
-                with:
-                    # ↓ split "packages/easy-coding-standard" directory
-                    package_directory: 'packages/${{ matrix.package.local_path }}'
-
-                    # ↓ into https://github.com/symplify/easy-coding-standard repository
-                    repository_organization: 'groton-school'
-                    repository_name: '${{ matrix.package.split_repository }}'
-
-                    # [optional, with "github.com" as default]
-                    # repository_host: git.private.com:1234
-
-                    # ↓ the user signed under the split commit
-                    user_name: "battis"
-                    user_email: "sbattis@groton.org"
-
-            # with tag
-            -
-                if: "startsWith(github.ref, 'refs/tags/')"
-                uses: "danharrin/monorepo-split-github-action@v2.3.0"
-                with:
-                    tag: ${GITHUB_REF#refs/tags/}
-
-                    # ↓ split "packages/easy-coding-standard" directory
-                    package_directory: 'packages/${{ matrix.package.local_path }}'
-
-                    # ↓ into https://github.com/symplify/easy-coding-standard repository
-                    repository_organization: 'groton-school'
-                    repository_name: '${{ matrix.package.split_repository }}'
-
-                    # [optional, with "github.com" as default]
-                    repository_host: github.com
-
-                    # ↓ the user signed under the split commit
-                    user_name: "battis"
-                    user_email: "sbattis@groton.org"
+  packages_split:
+    runs-on: ubuntu-latest
+    environment: "actions"
+    env:
+      GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
+    strategy:
+      fail-fast: false
+      config:
+        organization: "groton-school"
+        user:
+          name: "battis"
+          email: "sbattis@groton.org"
+      matrix:
+        package:
+          - local_path: "oneroster"
+            split_repository: "sky-api.oneroster"
+          - local_path: "school"
+            split_repository: "sky-api.school"
+    steps:
+      - uses: actions/checkout@v2
+      # no tag
+      - if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: "danharrin/monorepo-split-github-action@v2.3.0"
+        with:
+          package_directory: "packages/${{ matrix.package.local_path }}"
+          repository_organization: "${{ config.organization }}"
+          repository_name: "${{ matrix.package.split_repository }}"
+          user_name: "${{ config.user.name }}"
+          user_email: "${{ config.user.email }}"
+      # with tag
+      - if: "startsWith(github.ref, 'refs/tags/')"
+        uses: "danharrin/monorepo-split-github-action@v2.3.0"
+        with:
+          tag: ${GITHUB_REF#refs/tags/}
+          package_directory: "packages/${{ matrix.package.local_path }}"
+          repository_organization: "${{ config.organization }}"
+          repository_name: "${{ matrix.package.split_repository }}"
+          user_name: "${{ config.user.name }}"
+          user_email: "${{ config.user.email }}"
