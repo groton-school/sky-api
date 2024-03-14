@@ -1,5 +1,5 @@
 name: 'Packages Split'
-environment: 'actions'
+
 on:
     push:
         branches:
@@ -7,9 +7,9 @@ on:
         tags:
             - '*'
 
-env:
+# env:
     # 1. for Github split
-    GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
+    # GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
 
     # 2. for Gitlab split
     # GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
@@ -17,6 +17,10 @@ env:
 jobs:
     packages_split:
         runs-on: ubuntu-latest
+
+        environment: 'actions'
+        env:
+            GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
 
         strategy:
             fail-fast: false
