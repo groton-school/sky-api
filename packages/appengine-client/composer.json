@@ -2,7 +2,6 @@
     "name": "battis/sky-api-appengine",
     "description": "Blackbaud SKY API PHP client native to Google App Engine",
     "license": "GPL-3.0",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Seth Battis",

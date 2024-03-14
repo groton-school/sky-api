@@ -1,0 +1,22 @@
+{
+  "name": "groton-school/sky-api.appengine-client-example",
+  "description": "Blackbaud SKY API AppEngine Client Example",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Seth Battis",
+      "email": "sbattis@groton.org"
+    }
+  ],
+  "require": {
+    "groton-school/sky-api.appengine-client": "^0.2",
+    "groton-school/sky-api.school": "^0.2"
+  },
+  "scripts": {
+    "setup": [
+      "pnpm install",
+      "bin/setup.mjs"
+    ],
+    "deploy": "bin/deploy.mjs"
+  }
+}

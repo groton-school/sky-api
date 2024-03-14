@@ -2,6 +2,7 @@
 *.cache
 /.cache/
 /coverage/
+node_modules
 /tools/
 /var/
 /vendor/

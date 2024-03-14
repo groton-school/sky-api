@@ -13,6 +13,7 @@
         "battis/data-utilities": "^1.2",
         "battis/lazy-secrets": "^1.1",
         "battis/openapi-client-generator": "^0.1",
+        "groton-school/sky-api.appengine-client": "^0.2",
         "guzzlehttp/guzzle": "^7.4",
         "league/oauth2-client": "^2.6"
     },
@@ -61,9 +62,9 @@
         "groton-school/sky-api-school": "self.version",
         "groton-school/sky-api.altru-analysis": "self.version",
         "groton-school/sky-api.altru-constituent": "self.version",
+        "groton-school/sky-api.appengine-client-example": "self.version",
         "groton-school/sky-api.nxt-data-integration": "self.version",
         "groton-school/sky-api.oneroster": "self.version",
         "groton-school/sky-api.school": "self.version"
-    },
-    "minimum-stability": "dev"
+    }
 }

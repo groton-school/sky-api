@@ -5,7 +5,6 @@ namespace GrotonSchool\SKY\AppEngine;
 use Battis\LazySecrets\Cache;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Client;
-use Blackbaud\SKY\School\Client as SchoolClient;
 use GrotonSchool\OAuth2\Client\Provider\BlackbaudSKY;
 
 /**
@@ -21,16 +20,16 @@ class ClientFactory
     private Cache $secrets;
     private TokenStorage $storage;
 
-    public function __construct(?string $projectId)
+    public function __construct(?string $projectId = null)
     {
         $this->secrets = new Cache($projectId ?? $_ENV["GOOGLE_CLOUD_PROJECT"]);
         $this->storage = new TokenStorage($this->secrets);
     }
 
     /**
-     * @param class-string<BaseEndpoint> $class
+     * @param class-string<\Battis\OpenAPI\Client\BaseEndpoint> $class
      *
-     * @return BaseEndpoint
+     * @return \Battis\OpenAPI\Client\BaseEndpoint
      *
      * @psalm-suppress UnsafeInstantiation
      */

@@ -14,7 +14,7 @@ class TokenStorage extends ClientTokenStorage
     private Cache $secrets;
 
     /**
-     * @param ?string|Cache $projectId
+     * @param ?string|\Battis\LazySecrets\Cache $projectId
      */
     public function __construct(mixed $projectId)
     {
