@@ -1,0 +1,47 @@
+name: Split Test
+
+on:
+    push:
+        branches:
+            - main
+
+        # see https://github.community/t/how-to-run-github-actions-workflow-only-for-new-tags/16075/10?u=tomasvotruba
+        tags:
+            - '*'
+
+    pull_request: null
+
+    release:
+        types: [created]
+
+jobs:
+    split:
+        runs-on: ubuntu-latest
+
+        strategy:
+        fail-fast: false
+        matrix:
+            # define package to repository map
+            package:
+                -
+                    local_path: 'oneroster'
+                    split_repository: 'sky-api-oneroster-READONLY'
+                -
+                    local_path: 'school'
+                    split_repository: 'sky-api-school-READONLY'
+        steps:
+            -
+                uses: actions/checkout@v2
+
+            -
+                # run action.yaml in the root directory
+                # see https://github.community/t/self-reference-an-action-for-testing/17891
+                uses: "./"
+                env:
+                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                with:
+                    package_directory: 'packages/${{ matrix.package.local_path }}'
+                    repository_organization: 'groton-school'
+                    repository_name: '${{ matrix.package.split_repository }}'
+                    user_name: 'battis'
+                    user_email: 'sbattis@groton.org'
