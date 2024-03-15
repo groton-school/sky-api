@@ -13,11 +13,11 @@
         "battis/data-utilities": "^1.2",
         "battis/lazy-secrets": "^1.1",
         "battis/openapi-client-generator": "^0.1",
-        "groton-school/sky-api.appengine-client": "^0.2",
         "guzzlehttp/guzzle": "^7.4",
         "league/oauth2-client": "^2.6"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.51",
         "symplify/monorepo-builder": "^11.2"
     },
     "autoload": {

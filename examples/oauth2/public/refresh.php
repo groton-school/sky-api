@@ -19,14 +19,14 @@ $sky = new BlackbaudSKY([
     // The client ID assigned to you by the provider
     'clientId' => getenv('OAUTH_CLIENT_ID'),
     // The client password assigned to you by the provider
-    'clientSecret' => getenv('OAUTH_CLIENT_SECRET')
+    'clientSecret' => getenv('OAUTH_CLIENT_SECRET'),
 ]);
 
 $existingAccessToken = new AccessToken($_POST); // get access token from your data store
 
 // FIXME normally we'd test $existingAccessToken->hasExpired() before refreshing
 $newAccessToken = $sky->getAccessToken('refresh_token', [
-    'refresh_token' => $existingAccessToken->getRefreshToken()
+    'refresh_token' => $existingAccessToken->getRefreshToken(),
 ]);
 
 // Purge old access token and store new access token to your data store.
@@ -46,10 +46,10 @@ $newAccessToken = $sky->getAccessToken('refresh_token', [
         <?php
         foreach ($newAccessToken->jsonSerialize() as $param => $value) {
             echo <<<EOT
-        <input name="{$param}" value="$value" type="hidden" />
-EOT;
+                        <input name="{$param}" value="$value" type="hidden" />
+                EOT;
         }
-        ?>
+?>
         <button type="submit">Refresh Token</button>
     </form>
     </body>

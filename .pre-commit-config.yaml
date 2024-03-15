@@ -16,7 +16,3 @@ repos:
     hooks:
       - id: php-lint-all
       - id: php-cs-fixer
-  - repo: https://github.com/matchory/pre-commit-psalm
-    rev: v1.0.0
-    hooks:
-      - id: psalm

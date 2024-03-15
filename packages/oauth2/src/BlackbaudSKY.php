@@ -73,13 +73,9 @@ class BlackbaudSKY extends AbstractProvider
         return [];
     }
 
-    protected function checkResponse(ResponseInterface $response, $data)
-    {
-    }
+    protected function checkResponse(ResponseInterface $response, $data) {}
 
-    protected function createResourceOwner(array $response, AccessToken $token)
-    {
-    }
+    protected function createResourceOwner(array $response, AccessToken $token) {}
 
     /**
      * Returns authorization headers for the 'bearer' grant.

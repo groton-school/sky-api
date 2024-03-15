@@ -2,10 +2,18 @@
 
 namespace Build;
 
-use Composer\Script\Event;
-
-class CLI {
-    public static function build (Event $event) {
+/**
+ * @api
+ */
+class CLI
+{
+    /**
+     * @param \Composer\Script\Event $event
+     *
+     * @return void
+     */
+    public static function build($event)
+    {
         foreach($event->getComposer()->getPackage()->getExtra()["build"] as $packageBuild) {
             shell_exec($packageBuild);
         }

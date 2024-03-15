@@ -23,7 +23,7 @@ $sky = new BlackbaudSKY([
     // The client password assigned to you by the provider
     'clientSecret' => getenv('OAUTH_CLIENT_SECRET'),
     // Redirect URI registered with the provider
-    'redirectUri' => getenv('OAUTH_REDIRECT_URL')
+    'redirectUri' => getenv('OAUTH_REDIRECT_URL'),
 ]);
 
 // If we don't have an authorization code then get one
@@ -40,7 +40,7 @@ if (!isset($_GET['code'])) {
     header('Location: ' . $authorizationUrl);
     exit;
 
-// Check given state against previously stored one to mitigate CSRF attack
+    // Check given state against previously stored one to mitigate CSRF attack
 } elseif (empty($_GET['state']) || (isset($_SESSION['oauth2state']) && $_GET['state'] !== $_SESSION['oauth2state'])) {
     if (isset($_SESSION['oauth2state'])) {
         unset($_SESSION['oauth2state']);
@@ -51,7 +51,7 @@ if (!isset($_GET['code'])) {
     try {
         // Try to get an access token using the authorization code grant.
         $accessToken = $sky->getAccessToken('authorization_code', [
-            'code' => $_GET['code']
+            'code' => $_GET['code'],
         ]);
 
         $school = $sky->endpoint('school/v1');
@@ -79,10 +79,10 @@ if (!isset($_GET['code'])) {
         <?php
         foreach ($accessToken->jsonSerialize() as $param => $value) {
             echo <<<EOT
-        <input name="{$param}" value="$value" type="hidden" />
-EOT;
+                        <input name="{$param}" value="$value" type="hidden" />
+                EOT;
         }
-        ?>
+?>
         <button type="submit">Refresh Token</button>
     </form>
 
