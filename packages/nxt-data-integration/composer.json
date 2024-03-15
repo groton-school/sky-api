@@ -16,8 +16,5 @@
   "require": {
     "battis/openapi-client-generator": "^0.1",
     "groton-school/oauth2-blackbaudsky": "^0.2"
-  },
-  "extra": {
-    "build": "src/map -d 'var/2022-04-01_preview/Church Management/nxt-data-integration.json' 'packages/nxt-data-integration/src' 'Blackbaud\\SKY'"
   }
 }
