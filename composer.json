@@ -36,27 +36,30 @@
         }
     },
     "scripts": {
-        "build": "Build\\CLI::build"
+        "build": [
+            "Build\\CLI::build",
+            "docker run --rm -v $(pwd):/data phpdoc/phpdoc:3"
+        ]
     },
     "extra": {
         "build": [
-            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-adnmg.json' 'packages/altru-administration/src' 'Blackbaud\\SKY'",
-            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-anamg.json' 'packages/altru-analysis/src' 'Blackbaud\\SKY'",
-            "scripts/map -d 'var/2022-04-01_preview/Altru/alt-conmg.json' 'packages/altru-constituent/src' 'Blackbaud\\SKY'",
-            "scripts/map -d 'var/2022-04-01_preview/Church Management/nxt-data-integration.json' 'packages/nxt-data-integration/src' 'Blackbaud\\SKY'",
-            "scripts/map -d 'var/2022-04-01_preview/Education Management/afe-rostr.json' 'packages/oneroster/src' 'Blackbaud\\SKY'",
-            "scripts/map -d 'var/2022-04-01_preview/Education Management/school.json' 'packages/school/src' 'Blackbaud\\SKY'"
+            "src/map -d 'var/2022-04-01_preview/Altru/alt-adnmg.json' 'packages/altru-administration/src' 'Blackbaud\\SKY'",
+            "src/map -d 'var/2022-04-01_preview/Altru/alt-anamg.json' 'packages/altru-analysis/src' 'Blackbaud\\SKY'",
+            "src/map -d 'var/2022-04-01_preview/Altru/alt-conmg.json' 'packages/altru-constituent/src' 'Blackbaud\\SKY'",
+            "src/map -d 'var/2022-04-01_preview/Church Management/nxt-data-integration.json' 'packages/nxt-data-integration/src' 'Blackbaud\\SKY'",
+            "src/map -d 'var/2022-04-01_preview/Education Management/afe-rostr.json' 'packages/oneroster/src' 'Blackbaud\\SKY'",
+            "src/map -d 'var/2022-04-01_preview/Education Management/school.json' 'packages/school/src' 'Blackbaud\\SKY'"
         ]
     },
     "config": {
         "sort-packages": true
     },
     "replace": {
-        "battis/sky-api-appengine": "self.version",
         "groton-school/oauth2-blackbaudsky": "self.version",
         "groton-school/oauth2-blackbaudsky-example": "self.version",
         "groton-school/sky-api-altru-analysis": "self.version",
         "groton-school/sky-api-altru-constituent": "self.version",
+        "groton-school/sky-api-appengine": "self.version",
         "groton-school/sky-api-nxt-data-integration": "self.version",
         "groton-school/sky-api-oneroster": "self.version",
         "groton-school/sky-api-school": "self.version",

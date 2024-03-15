@@ -1,6 +1,6 @@
 .DS_Store
 *.cache
-/.cache/
+.cache
 /coverage/
 node_modules
 /tools/
