@@ -1,9 +1,0 @@
-/.scrutinizer.yml export-ignore
-/phpcs.xml export-ignore
-/phpdoc.dist.xml export-ignore
-/phpunit.xml export-ignore
-/docs/ export-ignore
-/examples/ export-ignore
-/src/CLI.php export-ignore
-/src/OpenAPI/ export-ignore
-/tests/ export-ignore
