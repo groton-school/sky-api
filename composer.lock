@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abe2db66d0fa36990dbfd08d915842b4",
+    "content-hash": "d875f52bc2fb23d65d56e99a7589c034",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -132,16 +132,16 @@
         },
         {
             "name": "battis/openapi-client-generator",
-            "version": "v0.1.1",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client-generator.git",
-                "reference": "6c6c21edfc1b6efd72cd4993a96e12b3583507e3"
+                "reference": "6a7972332932d457a557fc498ec4d8258690a088"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client-generator/zipball/6c6c21edfc1b6efd72cd4993a96e12b3583507e3",
-                "reference": "6c6c21edfc1b6efd72cd4993a96e12b3583507e3",
+                "url": "https://api.github.com/repos/battis/openapi-client-generator/zipball/6a7972332932d457a557fc498ec4d8258690a088",
+                "reference": "6a7972332932d457a557fc498ec4d8258690a088",
                 "shasum": ""
             },
             "require": {
@@ -155,7 +155,6 @@
                 "pahanini/monolog-cli-formatter": "^2.0",
                 "psr/log": "^3.0",
                 "psr/simple-cache": "^3.0",
-                "splitbrain/php-cli": "^1.3",
                 "sspat/reserved-words": "^3.0",
                 "symfony/filesystem": "^7.0"
             },
@@ -178,9 +177,9 @@
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
             "support": {
                 "issues": "https://github.com/battis/openapi-client-generator/issues",
-                "source": "https://github.com/battis/openapi-client-generator/tree/v0.1.1"
+                "source": "https://github.com/battis/openapi-client-generator/tree/v0.2"
             },
-            "time": "2024-03-10T19:11:25+00:00"
+            "time": "2024-03-16T01:17:30+00:00"
         },
         {
             "name": "battis/php-generator",
@@ -2575,61 +2574,6 @@
             "time": "2024-03-02T07:30:33+00:00"
         },
         {
-            "name": "splitbrain/php-cli",
-            "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/splitbrain/php-cli.git",
-                "reference": "844609ef16b8486691b7fd892d54478918f27fe8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/splitbrain/php-cli/zipball/844609ef16b8486691b7fd892d54478918f27fe8",
-                "reference": "844609ef16b8486691b7fd892d54478918f27fe8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8"
-            },
-            "suggest": {
-                "psr/log": "Allows you to make the CLI available as PSR-3 logger"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "splitbrain\\phpcli\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Gohr",
-                    "email": "andi@splitbrain.org"
-                }
-            ],
-            "description": "Easy command line scripts for PHP with opt parsing and color output. No dependencies",
-            "keywords": [
-                "argparse",
-                "cli",
-                "command line",
-                "console",
-                "getopt",
-                "optparse",
-                "terminal"
-            ],
-            "support": {
-                "issues": "https://github.com/splitbrain/php-cli/issues",
-                "source": "https://github.com/splitbrain/php-cli/tree/1.3.1"
-            },
-            "time": "2024-01-17T12:03:34+00:00"
-        },
-        {
             "name": "sspat/reserved-words",
             "version": "3.0.1",
             "source": {
@@ -4175,6 +4119,66 @@
     ],
     "packages-dev": [
         {
+            "name": "laravel/serializable-closure",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/serializable-closure.git",
+                "reference": "3dbf8a8e914634c48d389c1234552666b3d43754"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/3dbf8a8e914634c48d389c1234552666b3d43754",
+                "reference": "3dbf8a8e914634c48d389c1234552666b3d43754",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "nesbot/carbon": "^2.61",
+                "pestphp/pest": "^1.21.3",
+                "phpstan/phpstan": "^1.8.2",
+                "symfony/var-dumper": "^5.4.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\SerializableClosure\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "nuno@laravel.com"
+                }
+            ],
+            "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
+            "keywords": [
+                "closure",
+                "laravel",
+                "serializable"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/serializable-closure/issues",
+                "source": "https://github.com/laravel/serializable-closure"
+            },
+            "time": "2023-11-08T14:08:06+00:00"
+        },
+        {
             "name": "phar-io/version",
             "version": "3.2.1",
             "source": {
@@ -4224,6 +4228,134 @@
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
+        },
+        {
+            "name": "php-di/invoker",
+            "version": "2.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI/Invoker.git",
+                "reference": "33234b32dafa8eb69202f950a1fc92055ed76a86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/33234b32dafa8eb69202f950a1fc92055ed76a86",
+                "reference": "33234b32dafa8eb69202f950a1fc92055ed76a86",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "psr/container": "^1.0|^2.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "mnapoli/hard-mode": "~0.3.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Invoker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Generic and extensible callable invoker",
+            "homepage": "https://github.com/PHP-DI/Invoker",
+            "keywords": [
+                "callable",
+                "dependency",
+                "dependency-injection",
+                "injection",
+                "invoke",
+                "invoker"
+            ],
+            "support": {
+                "issues": "https://github.com/PHP-DI/Invoker/issues",
+                "source": "https://github.com/PHP-DI/Invoker/tree/2.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-09-08T09:24:21+00:00"
+        },
+        {
+            "name": "php-di/php-di",
+            "version": "7.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI/PHP-DI.git",
+                "reference": "8097948a89f6ec782839b3e958432f427cac37fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/8097948a89f6ec782839b3e958432f427cac37fd",
+                "reference": "8097948a89f6ec782839b3e958432f427cac37fd",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/serializable-closure": "^1.0",
+                "php": ">=8.0",
+                "php-di/invoker": "^2.0",
+                "psr/container": "^1.1 || ^2.0"
+            },
+            "provide": {
+                "psr/container-implementation": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3",
+                "friendsofphp/proxy-manager-lts": "^1",
+                "mnapoli/phpunit-easymock": "^1.3",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.6"
+            },
+            "suggest": {
+                "friendsofphp/proxy-manager-lts": "Install it if you want to use lazy injection (version ^1)"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "DI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The dependency injection container for humans",
+            "homepage": "https://php-di.org/",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interop",
+                "dependency injection",
+                "di",
+                "ioc",
+                "psr11"
+            ],
+            "support": {
+                "issues": "https://github.com/PHP-DI/PHP-DI/issues",
+                "source": "https://github.com/PHP-DI/PHP-DI/tree/7.0.6"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/php-di/php-di",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-11-02T10:04:50+00:00"
         },
         {
             "name": "symplify/monorepo-builder",

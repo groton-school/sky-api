@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Build\TagDocsReleaseWorker;
+require __DIR__ . '/vendor/autoload.php';
+
+use GrotonSchool\SKY\MonorepoBuilder\TagDocsReleaseWorker;
 use Symplify\MonorepoBuilder\Config\MBConfig;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
-
-require __DIR__ . '/vendor/autoload.php';
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([

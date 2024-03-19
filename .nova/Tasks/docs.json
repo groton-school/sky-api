@@ -2,7 +2,7 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "composer run build"
+      "script" : "composer run docs"
     }
   },
   "openLogOnRun" : "start"

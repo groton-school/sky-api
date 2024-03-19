@@ -1,9 +1,0 @@
-{
-  "actions" : {
-    "run" : {
-      "enabled" : true,
-      "script" : "rm -rf docs\ntools\/phpdocumentor\nopen docs\/index.html"
-    }
-  },
-  "openLogOnRun" : "start"
-}

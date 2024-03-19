@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Work around a three-way version conflict between composer, monolog, and psr/logger
+ * @see https://github.com/Seldaek/monolog/issues/1808#issuecomment-1888663748
+ *
+ * Invoke any scripts from `composer.json` that instantiate a logger:
+ *
+ * ```json
+ * {
+ *   "scripts": {
+ *     "generate-error": "Example\\Builder::build",
+ *     "runs-without-error: "runner Example\\Builder::build"
+ *   }
+ * }
+ */
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+call_user_func("\\{$argv[1]}");
+

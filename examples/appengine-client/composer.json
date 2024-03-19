@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "battis/openapi-client-generator": "^0.1",
+    "battis/openapi-client-generator": "^0.2",
     "groton-school/sky-api.school": "^0.2"
   },
   "scripts": {

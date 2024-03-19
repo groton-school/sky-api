@@ -1,6 +1,6 @@
 <?php
 
-namespace Build;
+namespace GrotonSchool\SKY\MonorepoBuilder;
 
 use PharIo\Version\Version;
 use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterface;
