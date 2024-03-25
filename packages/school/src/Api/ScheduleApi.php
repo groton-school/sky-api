@@ -130,18 +130,18 @@ class ScheduleApi
      *
      * Schedules - Meetings for a student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesByStudentIdMeetingsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentScheduleCollection
      */
-    public function v1SchedulesByStudentIdMeetingsGet($student_id, $start_date, $end_date = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
+    public function v1SchedulesByStudentIdMeetingsGet($studentId, $startDate, $endDate = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
     {
-        [$response] = $this->v1SchedulesByStudentIdMeetingsGetWithHttpInfo($student_id, $start_date, $end_date, $contentType);
+        [$response] = $this->v1SchedulesByStudentIdMeetingsGetWithHttpInfo($studentId, $startDate, $endDate, $contentType);
         return $response;
     }
 
@@ -150,18 +150,18 @@ class ScheduleApi
      *
      * Schedules - Meetings for a student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesByStudentIdMeetingsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentScheduleCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1SchedulesByStudentIdMeetingsGetWithHttpInfo($student_id, $start_date, $end_date = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
+    public function v1SchedulesByStudentIdMeetingsGetWithHttpInfo($studentId, $startDate, $endDate = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
     {
-        $request = $this->v1SchedulesByStudentIdMeetingsGetRequest($student_id, $start_date, $end_date, $contentType);
+        $request = $this->v1SchedulesByStudentIdMeetingsGetRequest($studentId, $startDate, $endDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -276,17 +276,17 @@ class ScheduleApi
      *
      * Schedules - Meetings for a student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesByStudentIdMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SchedulesByStudentIdMeetingsGetAsync($student_id, $start_date, $end_date = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
+    public function v1SchedulesByStudentIdMeetingsGetAsync($studentId, $startDate, $endDate = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
     {
-        return $this->v1SchedulesByStudentIdMeetingsGetAsyncWithHttpInfo($student_id, $start_date, $end_date, $contentType)
+        return $this->v1SchedulesByStudentIdMeetingsGetAsyncWithHttpInfo($studentId, $startDate, $endDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,18 +299,18 @@ class ScheduleApi
      *
      * Schedules - Meetings for a student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesByStudentIdMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SchedulesByStudentIdMeetingsGetAsyncWithHttpInfo($student_id, $start_date, $end_date = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
+    public function v1SchedulesByStudentIdMeetingsGetAsyncWithHttpInfo($studentId, $startDate, $endDate = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentScheduleCollection';
-        $request = $this->v1SchedulesByStudentIdMeetingsGetRequest($student_id, $start_date, $end_date, $contentType);
+        $request = $this->v1SchedulesByStudentIdMeetingsGetRequest($studentId, $startDate, $endDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -351,28 +351,28 @@ class ScheduleApi
     /**
      * Create request for operation 'v1SchedulesByStudentIdMeetingsGet'
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesByStudentIdMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1SchedulesByStudentIdMeetingsGetRequest($student_id, $start_date, $end_date = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
+    public function v1SchedulesByStudentIdMeetingsGetRequest($studentId, $startDate, $endDate = null, string $contentType = self::contentTypes['v1SchedulesByStudentIdMeetingsGet'][0])
     {
 
-        // verify the required parameter 'student_id' is set
-        if ($student_id === null || (is_array($student_id) && count($student_id) === 0)) {
+        // verify the required parameter 'studentId' is set
+        if ($studentId === null || (is_array($studentId) && count($studentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $student_id when calling v1SchedulesByStudentIdMeetingsGet'
+                'Missing the required parameter $studentId when calling v1SchedulesByStudentIdMeetingsGet'
             );
         }
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1SchedulesByStudentIdMeetingsGet'
+                'Missing the required parameter $startDate when calling v1SchedulesByStudentIdMeetingsGet'
             );
         }
 
@@ -387,7 +387,7 @@ class ScheduleApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -396,7 +396,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -406,10 +406,10 @@ class ScheduleApi
 
 
         // path params
-        if ($student_id !== null) {
+        if ($studentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'student_id' . '}',
-                ObjectSerializer::toPathValue($student_id),
+                ObjectSerializer::toPathValue($studentId),
                 $resourcePath
             );
         }
@@ -483,21 +483,21 @@ class ScheduleApi
      *
      * Schedules meetings
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
-     * @param  string $offering_types Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
-     * @param  string $section_ids Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
-     * @param  bool $show_time_for_current_date Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
+     * @param  string $offeringTypes Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
+     * @param  string $sectionIds Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
+     * @param  bool $showTimeForCurrentDate Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesMeetingsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\MeetingCollection
      */
-    public function v1SchedulesMeetingsGet($start_date, $end_date = null, $offering_types = '1', $section_ids = null, $last_modified = null, $show_time_for_current_date = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
+    public function v1SchedulesMeetingsGet($startDate, $endDate = null, $offeringTypes = '1', $sectionIds = null, $lastModified = null, $showTimeForCurrentDate = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
     {
-        [$response] = $this->v1SchedulesMeetingsGetWithHttpInfo($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date, $contentType);
+        [$response] = $this->v1SchedulesMeetingsGetWithHttpInfo($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate, $contentType);
         return $response;
     }
 
@@ -506,21 +506,21 @@ class ScheduleApi
      *
      * Schedules meetings
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
-     * @param  string $offering_types Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
-     * @param  string $section_ids Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
-     * @param  bool $show_time_for_current_date Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
+     * @param  string $offeringTypes Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
+     * @param  string $sectionIds Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
+     * @param  bool $showTimeForCurrentDate Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesMeetingsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\MeetingCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1SchedulesMeetingsGetWithHttpInfo($start_date, $end_date = null, $offering_types = '1', $section_ids = null, $last_modified = null, $show_time_for_current_date = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
+    public function v1SchedulesMeetingsGetWithHttpInfo($startDate, $endDate = null, $offeringTypes = '1', $sectionIds = null, $lastModified = null, $showTimeForCurrentDate = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
     {
-        $request = $this->v1SchedulesMeetingsGetRequest($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date, $contentType);
+        $request = $this->v1SchedulesMeetingsGetRequest($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -635,20 +635,20 @@ class ScheduleApi
      *
      * Schedules meetings
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
-     * @param  string $offering_types Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
-     * @param  string $section_ids Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
-     * @param  bool $show_time_for_current_date Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
+     * @param  string $offeringTypes Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
+     * @param  string $sectionIds Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
+     * @param  bool $showTimeForCurrentDate Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SchedulesMeetingsGetAsync($start_date, $end_date = null, $offering_types = '1', $section_ids = null, $last_modified = null, $show_time_for_current_date = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
+    public function v1SchedulesMeetingsGetAsync($startDate, $endDate = null, $offeringTypes = '1', $sectionIds = null, $lastModified = null, $showTimeForCurrentDate = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
     {
-        return $this->v1SchedulesMeetingsGetAsyncWithHttpInfo($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date, $contentType)
+        return $this->v1SchedulesMeetingsGetAsyncWithHttpInfo($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -661,21 +661,21 @@ class ScheduleApi
      *
      * Schedules meetings
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
-     * @param  string $offering_types Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
-     * @param  string $section_ids Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
-     * @param  bool $show_time_for_current_date Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
+     * @param  string $offeringTypes Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
+     * @param  string $sectionIds Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
+     * @param  bool $showTimeForCurrentDate Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SchedulesMeetingsGetAsyncWithHttpInfo($start_date, $end_date = null, $offering_types = '1', $section_ids = null, $last_modified = null, $show_time_for_current_date = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
+    public function v1SchedulesMeetingsGetAsyncWithHttpInfo($startDate, $endDate = null, $offeringTypes = '1', $sectionIds = null, $lastModified = null, $showTimeForCurrentDate = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
     {
         $returnType = '\SKY\School\Model\MeetingCollection';
-        $request = $this->v1SchedulesMeetingsGetRequest($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date, $contentType);
+        $request = $this->v1SchedulesMeetingsGetRequest($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -716,24 +716,24 @@ class ScheduleApi
     /**
      * Create request for operation 'v1SchedulesMeetingsGet'
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
-     * @param  string $offering_types Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
-     * @param  string $section_ids Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
-     * @param  bool $show_time_for_current_date Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. (optional)
+     * @param  string $offeringTypes Comma delimited list of integer values above. Defaults to 1. (optional, default to '1')
+     * @param  string $sectionIds Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. (optional)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. (optional)
+     * @param  bool $showTimeForCurrentDate Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SchedulesMeetingsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1SchedulesMeetingsGetRequest($start_date, $end_date = null, $offering_types = '1', $section_ids = null, $last_modified = null, $show_time_for_current_date = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
+    public function v1SchedulesMeetingsGetRequest($startDate, $endDate = null, $offeringTypes = '1', $sectionIds = null, $lastModified = null, $showTimeForCurrentDate = false, string $contentType = self::contentTypes['v1SchedulesMeetingsGet'][0])
     {
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1SchedulesMeetingsGet'
+                'Missing the required parameter $startDate when calling v1SchedulesMeetingsGet'
             );
         }
 
@@ -752,7 +752,7 @@ class ScheduleApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -761,7 +761,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -770,7 +770,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $offering_types,
+            $offeringTypes,
             'offering_types', // param base name
             'string', // openApiType
             'form', // style
@@ -779,7 +779,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $section_ids,
+            $sectionIds,
             'section_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -788,7 +788,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $last_modified,
+            $lastModified,
             'last_modified', // param base name
             'string', // openApiType
             'form', // style
@@ -797,7 +797,7 @@ class ScheduleApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $show_time_for_current_date,
+            $showTimeForCurrentDate,
             'show_time_for_current_date', // param base name
             'boolean', // openApiType
             'form', // style

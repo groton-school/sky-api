@@ -57,15 +57,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_set_id' => 'int',
-        'role_description' => 'string',
-        'role_id' => 'int',
-        'publish_date' => '\DateTime',
-        'insert_date' => '\DateTime',
-        'last_modify_date' => '\DateTime',
-        'last_modify_user_id' => 'int',
-        'fields_to_null' => 'string[]',
-        'vendor_external_id' => 'string',
+        'scheduleSetId' => 'int',
+        'roleDescription' => 'string',
+        'roleId' => 'int',
+        'publishDate' => '\DateTime',
+        'insertDate' => '\DateTime',
+        'lastModifyDate' => '\DateTime',
+        'lastModifyUserId' => 'int',
+        'fieldsToNull' => 'string[]',
+        'vendorExternalId' => 'string',
     ];
 
     /**
@@ -76,15 +76,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_set_id' => 'int32',
-        'role_description' => null,
-        'role_id' => 'int32',
-        'publish_date' => 'date-time',
-        'insert_date' => 'date-time',
-        'last_modify_date' => 'date-time',
-        'last_modify_user_id' => 'int32',
-        'fields_to_null' => null,
-        'vendor_external_id' => null,
+        'scheduleSetId' => 'int32',
+        'roleDescription' => null,
+        'roleId' => 'int32',
+        'publishDate' => 'date-time',
+        'insertDate' => 'date-time',
+        'lastModifyDate' => 'date-time',
+        'lastModifyUserId' => 'int32',
+        'fieldsToNull' => null,
+        'vendorExternalId' => null,
     ];
 
     /**
@@ -93,15 +93,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_set_id' => true,
-        'role_description' => true,
-        'role_id' => true,
-        'publish_date' => true,
-        'insert_date' => true,
-        'last_modify_date' => true,
-        'last_modify_user_id' => true,
-        'fields_to_null' => true,
-        'vendor_external_id' => true,
+        'scheduleSetId' => true,
+        'roleDescription' => true,
+        'roleId' => true,
+        'publishDate' => true,
+        'insertDate' => true,
+        'lastModifyDate' => true,
+        'lastModifyUserId' => true,
+        'fieldsToNull' => true,
+        'vendorExternalId' => true,
     ];
 
     /**
@@ -190,15 +190,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_set_id' => 'ScheduleSetId',
-        'role_description' => 'RoleDescription',
-        'role_id' => 'RoleId',
-        'publish_date' => 'PublishDate',
-        'insert_date' => 'InsertDate',
-        'last_modify_date' => 'LastModifyDate',
-        'last_modify_user_id' => 'LastModifyUserId',
-        'fields_to_null' => 'FieldsToNull',
-        'vendor_external_id' => 'vendor_external_id',
+        'scheduleSetId' => 'ScheduleSetId',
+        'roleDescription' => 'RoleDescription',
+        'roleId' => 'RoleId',
+        'publishDate' => 'PublishDate',
+        'insertDate' => 'InsertDate',
+        'lastModifyDate' => 'LastModifyDate',
+        'lastModifyUserId' => 'LastModifyUserId',
+        'fieldsToNull' => 'FieldsToNull',
+        'vendorExternalId' => 'vendor_external_id',
     ];
 
     /**
@@ -207,15 +207,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'schedule_set_id' => 'setScheduleSetId',
-        'role_description' => 'setRoleDescription',
-        'role_id' => 'setRoleId',
-        'publish_date' => 'setPublishDate',
-        'insert_date' => 'setInsertDate',
-        'last_modify_date' => 'setLastModifyDate',
-        'last_modify_user_id' => 'setLastModifyUserId',
-        'fields_to_null' => 'setFieldsToNull',
-        'vendor_external_id' => 'setVendorExternalId',
+        'scheduleSetId' => 'setScheduleSetId',
+        'roleDescription' => 'setRoleDescription',
+        'roleId' => 'setRoleId',
+        'publishDate' => 'setPublishDate',
+        'insertDate' => 'setInsertDate',
+        'lastModifyDate' => 'setLastModifyDate',
+        'lastModifyUserId' => 'setLastModifyUserId',
+        'fieldsToNull' => 'setFieldsToNull',
+        'vendorExternalId' => 'setVendorExternalId',
     ];
 
     /**
@@ -224,15 +224,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'schedule_set_id' => 'getScheduleSetId',
-        'role_description' => 'getRoleDescription',
-        'role_id' => 'getRoleId',
-        'publish_date' => 'getPublishDate',
-        'insert_date' => 'getInsertDate',
-        'last_modify_date' => 'getLastModifyDate',
-        'last_modify_user_id' => 'getLastModifyUserId',
-        'fields_to_null' => 'getFieldsToNull',
-        'vendor_external_id' => 'getVendorExternalId',
+        'scheduleSetId' => 'getScheduleSetId',
+        'roleDescription' => 'getRoleDescription',
+        'roleId' => 'getRoleId',
+        'publishDate' => 'getPublishDate',
+        'insertDate' => 'getInsertDate',
+        'lastModifyDate' => 'getLastModifyDate',
+        'lastModifyUserId' => 'getLastModifyUserId',
+        'fieldsToNull' => 'getFieldsToNull',
+        'vendorExternalId' => 'getVendorExternalId',
     ];
 
     /**
@@ -292,15 +292,15 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_set_id', $data ?? [], null);
-        $this->setIfExists('role_description', $data ?? [], null);
-        $this->setIfExists('role_id', $data ?? [], null);
-        $this->setIfExists('publish_date', $data ?? [], null);
-        $this->setIfExists('insert_date', $data ?? [], null);
-        $this->setIfExists('last_modify_date', $data ?? [], null);
-        $this->setIfExists('last_modify_user_id', $data ?? [], null);
-        $this->setIfExists('fields_to_null', $data ?? [], null);
-        $this->setIfExists('vendor_external_id', $data ?? [], null);
+        $this->setIfExists('scheduleSetId', $data ?? [], null);
+        $this->setIfExists('roleDescription', $data ?? [], null);
+        $this->setIfExists('roleId', $data ?? [], null);
+        $this->setIfExists('publishDate', $data ?? [], null);
+        $this->setIfExists('insertDate', $data ?? [], null);
+        $this->setIfExists('lastModifyDate', $data ?? [], null);
+        $this->setIfExists('lastModifyUserId', $data ?? [], null);
+        $this->setIfExists('fieldsToNull', $data ?? [], null);
+        $this->setIfExists('vendorExternalId', $data ?? [], null);
     }
 
     /**
@@ -346,307 +346,307 @@ class ScheduleSetAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets schedule_set_id
+     * Gets scheduleSetId
      *
      * @return int|null
      */
     public function getScheduleSetId()
     {
-        return $this->container['schedule_set_id'];
+        return $this->container['scheduleSetId'];
     }
 
     /**
-     * Sets schedule_set_id
+     * Sets scheduleSetId
      *
-     * @param int|null $schedule_set_id schedule_set_id
+     * @param int|null $scheduleSetId scheduleSetId
      *
      * @return self
      */
-    public function setScheduleSetId($schedule_set_id)
+    public function setScheduleSetId($scheduleSetId)
     {
-        if (is_null($schedule_set_id)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set_id');
+        if (is_null($scheduleSetId)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSetId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set_id', $nullablesSetToNull);
+            $index = array_search('scheduleSetId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set_id'] = $schedule_set_id;
+        $this->container['scheduleSetId'] = $scheduleSetId;
 
         return $this;
     }
 
     /**
-     * Gets role_description
+     * Gets roleDescription
      *
      * @return string|null
      */
     public function getRoleDescription()
     {
-        return $this->container['role_description'];
+        return $this->container['roleDescription'];
     }
 
     /**
-     * Sets role_description
+     * Sets roleDescription
      *
-     * @param string|null $role_description role_description
+     * @param string|null $roleDescription roleDescription
      *
      * @return self
      */
-    public function setRoleDescription($role_description)
+    public function setRoleDescription($roleDescription)
     {
-        if (is_null($role_description)) {
-            array_push($this->openAPINullablesSetToNull, 'role_description');
+        if (is_null($roleDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'roleDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_description', $nullablesSetToNull);
+            $index = array_search('roleDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_description'] = $role_description;
+        $this->container['roleDescription'] = $roleDescription;
 
         return $this;
     }
 
     /**
-     * Gets role_id
+     * Gets roleId
      *
      * @return int|null
      */
     public function getRoleId()
     {
-        return $this->container['role_id'];
+        return $this->container['roleId'];
     }
 
     /**
-     * Sets role_id
+     * Sets roleId
      *
-     * @param int|null $role_id role_id
+     * @param int|null $roleId roleId
      *
      * @return self
      */
-    public function setRoleId($role_id)
+    public function setRoleId($roleId)
     {
-        if (is_null($role_id)) {
-            array_push($this->openAPINullablesSetToNull, 'role_id');
+        if (is_null($roleId)) {
+            array_push($this->openAPINullablesSetToNull, 'roleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_id', $nullablesSetToNull);
+            $index = array_search('roleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_id'] = $role_id;
+        $this->container['roleId'] = $roleId;
 
         return $this;
     }
 
     /**
-     * Gets publish_date
+     * Gets publishDate
      *
      * @return \DateTime|null
      */
     public function getPublishDate()
     {
-        return $this->container['publish_date'];
+        return $this->container['publishDate'];
     }
 
     /**
-     * Sets publish_date
+     * Sets publishDate
      *
-     * @param \DateTime|null $publish_date publish_date
+     * @param \DateTime|null $publishDate publishDate
      *
      * @return self
      */
-    public function setPublishDate($publish_date)
+    public function setPublishDate($publishDate)
     {
-        if (is_null($publish_date)) {
-            array_push($this->openAPINullablesSetToNull, 'publish_date');
+        if (is_null($publishDate)) {
+            array_push($this->openAPINullablesSetToNull, 'publishDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publish_date', $nullablesSetToNull);
+            $index = array_search('publishDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publish_date'] = $publish_date;
+        $this->container['publishDate'] = $publishDate;
 
         return $this;
     }
 
     /**
-     * Gets insert_date
+     * Gets insertDate
      *
      * @return \DateTime|null
      */
     public function getInsertDate()
     {
-        return $this->container['insert_date'];
+        return $this->container['insertDate'];
     }
 
     /**
-     * Sets insert_date
+     * Sets insertDate
      *
-     * @param \DateTime|null $insert_date insert_date
+     * @param \DateTime|null $insertDate insertDate
      *
      * @return self
      */
-    public function setInsertDate($insert_date)
+    public function setInsertDate($insertDate)
     {
-        if (is_null($insert_date)) {
-            array_push($this->openAPINullablesSetToNull, 'insert_date');
+        if (is_null($insertDate)) {
+            array_push($this->openAPINullablesSetToNull, 'insertDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('insert_date', $nullablesSetToNull);
+            $index = array_search('insertDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['insert_date'] = $insert_date;
+        $this->container['insertDate'] = $insertDate;
 
         return $this;
     }
 
     /**
-     * Gets last_modify_date
+     * Gets lastModifyDate
      *
      * @return \DateTime|null
      */
     public function getLastModifyDate()
     {
-        return $this->container['last_modify_date'];
+        return $this->container['lastModifyDate'];
     }
 
     /**
-     * Sets last_modify_date
+     * Sets lastModifyDate
      *
-     * @param \DateTime|null $last_modify_date last_modify_date
+     * @param \DateTime|null $lastModifyDate lastModifyDate
      *
      * @return self
      */
-    public function setLastModifyDate($last_modify_date)
+    public function setLastModifyDate($lastModifyDate)
     {
-        if (is_null($last_modify_date)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modify_date');
+        if (is_null($lastModifyDate)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModifyDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modify_date', $nullablesSetToNull);
+            $index = array_search('lastModifyDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modify_date'] = $last_modify_date;
+        $this->container['lastModifyDate'] = $lastModifyDate;
 
         return $this;
     }
 
     /**
-     * Gets last_modify_user_id
+     * Gets lastModifyUserId
      *
      * @return int|null
      */
     public function getLastModifyUserId()
     {
-        return $this->container['last_modify_user_id'];
+        return $this->container['lastModifyUserId'];
     }
 
     /**
-     * Sets last_modify_user_id
+     * Sets lastModifyUserId
      *
-     * @param int|null $last_modify_user_id last_modify_user_id
+     * @param int|null $lastModifyUserId lastModifyUserId
      *
      * @return self
      */
-    public function setLastModifyUserId($last_modify_user_id)
+    public function setLastModifyUserId($lastModifyUserId)
     {
-        if (is_null($last_modify_user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modify_user_id');
+        if (is_null($lastModifyUserId)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModifyUserId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modify_user_id', $nullablesSetToNull);
+            $index = array_search('lastModifyUserId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modify_user_id'] = $last_modify_user_id;
+        $this->container['lastModifyUserId'] = $lastModifyUserId;
 
         return $this;
     }
 
     /**
-     * Gets fields_to_null
+     * Gets fieldsToNull
      *
      * @return string[]|null
      */
     public function getFieldsToNull()
     {
-        return $this->container['fields_to_null'];
+        return $this->container['fieldsToNull'];
     }
 
     /**
-     * Sets fields_to_null
+     * Sets fieldsToNull
      *
-     * @param string[]|null $fields_to_null fields_to_null
+     * @param string[]|null $fieldsToNull fieldsToNull
      *
      * @return self
      */
-    public function setFieldsToNull($fields_to_null)
+    public function setFieldsToNull($fieldsToNull)
     {
-        if (is_null($fields_to_null)) {
-            array_push($this->openAPINullablesSetToNull, 'fields_to_null');
+        if (is_null($fieldsToNull)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldsToNull');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('fields_to_null', $nullablesSetToNull);
+            $index = array_search('fieldsToNull', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['fields_to_null'] = $fields_to_null;
+        $this->container['fieldsToNull'] = $fieldsToNull;
 
         return $this;
     }
 
     /**
-     * Gets vendor_external_id
+     * Gets vendorExternalId
      *
      * @return string|null
      */
     public function getVendorExternalId()
     {
-        return $this->container['vendor_external_id'];
+        return $this->container['vendorExternalId'];
     }
 
     /**
-     * Sets vendor_external_id
+     * Sets vendorExternalId
      *
-     * @param string|null $vendor_external_id vendor_external_id
+     * @param string|null $vendorExternalId vendorExternalId
      *
      * @return self
      */
-    public function setVendorExternalId($vendor_external_id)
+    public function setVendorExternalId($vendorExternalId)
     {
-        if (is_null($vendor_external_id)) {
-            array_push($this->openAPINullablesSetToNull, 'vendor_external_id');
+        if (is_null($vendorExternalId)) {
+            array_push($this->openAPINullablesSetToNull, 'vendorExternalId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('vendor_external_id', $nullablesSetToNull);
+            $index = array_search('vendorExternalId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['vendor_external_id'] = $vendor_external_id;
+        $this->container['vendorExternalId'] = $vendorExternalId;
 
         return $this;
     }

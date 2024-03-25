@@ -58,10 +58,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'transportation_id' => 'int',
-        'full_day' => 'bool',
-        'begin_use' => '\DateTime',
-        'end_use' => '\DateTime',
+        'transportationId' => 'int',
+        'fullDay' => 'bool',
+        'beginUse' => '\DateTime',
+        'endUse' => '\DateTime',
     ];
 
     /**
@@ -72,10 +72,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'transportation_id' => 'int32',
-        'full_day' => null,
-        'begin_use' => 'date-time',
-        'end_use' => 'date-time',
+        'transportationId' => 'int32',
+        'fullDay' => null,
+        'beginUse' => 'date-time',
+        'endUse' => 'date-time',
     ];
 
     /**
@@ -84,10 +84,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'transportation_id' => false,
-        'full_day' => true,
-        'begin_use' => true,
-        'end_use' => true,
+        'transportationId' => false,
+        'fullDay' => true,
+        'beginUse' => true,
+        'endUse' => true,
     ];
 
     /**
@@ -176,10 +176,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'transportation_id' => 'transportation_id',
-        'full_day' => 'full_day',
-        'begin_use' => 'begin_use',
-        'end_use' => 'end_use',
+        'transportationId' => 'transportation_id',
+        'fullDay' => 'full_day',
+        'beginUse' => 'begin_use',
+        'endUse' => 'end_use',
     ];
 
     /**
@@ -188,10 +188,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'transportation_id' => 'setTransportationId',
-        'full_day' => 'setFullDay',
-        'begin_use' => 'setBeginUse',
-        'end_use' => 'setEndUse',
+        'transportationId' => 'setTransportationId',
+        'fullDay' => 'setFullDay',
+        'beginUse' => 'setBeginUse',
+        'endUse' => 'setEndUse',
     ];
 
     /**
@@ -200,10 +200,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'transportation_id' => 'getTransportationId',
-        'full_day' => 'getFullDay',
-        'begin_use' => 'getBeginUse',
-        'end_use' => 'getEndUse',
+        'transportationId' => 'getTransportationId',
+        'fullDay' => 'getFullDay',
+        'beginUse' => 'getBeginUse',
+        'endUse' => 'getEndUse',
     ];
 
     /**
@@ -263,10 +263,10 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('transportation_id', $data ?? [], null);
-        $this->setIfExists('full_day', $data ?? [], null);
-        $this->setIfExists('begin_use', $data ?? [], null);
-        $this->setIfExists('end_use', $data ?? [], null);
+        $this->setIfExists('transportationId', $data ?? [], null);
+        $this->setIfExists('fullDay', $data ?? [], null);
+        $this->setIfExists('beginUse', $data ?? [], null);
+        $this->setIfExists('endUse', $data ?? [], null);
     }
 
     /**
@@ -312,130 +312,130 @@ class GameTransportation implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets transportation_id
+     * Gets transportationId
      *
      * @return int|null
      */
     public function getTransportationId()
     {
-        return $this->container['transportation_id'];
+        return $this->container['transportationId'];
     }
 
     /**
-     * Sets transportation_id
+     * Sets transportationId
      *
-     * @param int|null $transportation_id ID of the transportation item to be used
+     * @param int|null $transportationId ID of the transportation item to be used
      *
      * @return self
      */
-    public function setTransportationId($transportation_id)
+    public function setTransportationId($transportationId)
     {
-        if (is_null($transportation_id)) {
-            throw new \InvalidArgumentException('non-nullable transportation_id cannot be null');
+        if (is_null($transportationId)) {
+            throw new \InvalidArgumentException('non-nullable transportationId cannot be null');
         }
-        $this->container['transportation_id'] = $transportation_id;
+        $this->container['transportationId'] = $transportationId;
 
         return $this;
     }
 
     /**
-     * Gets full_day
+     * Gets fullDay
      *
      * @return bool|null
      */
     public function getFullDay()
     {
-        return $this->container['full_day'];
+        return $this->container['fullDay'];
     }
 
     /**
-     * Sets full_day
+     * Sets fullDay
      *
-     * @param bool|null $full_day Toggle if transportation should be booked for the full day
+     * @param bool|null $fullDay Toggle if transportation should be booked for the full day
      *
      * @return self
      */
-    public function setFullDay($full_day)
+    public function setFullDay($fullDay)
     {
-        if (is_null($full_day)) {
-            array_push($this->openAPINullablesSetToNull, 'full_day');
+        if (is_null($fullDay)) {
+            array_push($this->openAPINullablesSetToNull, 'fullDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('full_day', $nullablesSetToNull);
+            $index = array_search('fullDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['full_day'] = $full_day;
+        $this->container['fullDay'] = $fullDay;
 
         return $this;
     }
 
     /**
-     * Gets begin_use
+     * Gets beginUse
      *
      * @return \DateTime|null
      */
     public function getBeginUse()
     {
-        return $this->container['begin_use'];
+        return $this->container['beginUse'];
     }
 
     /**
-     * Sets begin_use
+     * Sets beginUse
      *
-     * @param \DateTime|null $begin_use Start date/time for transportation use <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $beginUse Start date/time for transportation use <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setBeginUse($begin_use)
+    public function setBeginUse($beginUse)
     {
-        if (is_null($begin_use)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_use');
+        if (is_null($beginUse)) {
+            array_push($this->openAPINullablesSetToNull, 'beginUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_use', $nullablesSetToNull);
+            $index = array_search('beginUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_use'] = $begin_use;
+        $this->container['beginUse'] = $beginUse;
 
         return $this;
     }
 
     /**
-     * Gets end_use
+     * Gets endUse
      *
      * @return \DateTime|null
      */
     public function getEndUse()
     {
-        return $this->container['end_use'];
+        return $this->container['endUse'];
     }
 
     /**
-     * Sets end_use
+     * Sets endUse
      *
-     * @param \DateTime|null $end_use End date/time for transportation use <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $endUse End date/time for transportation use <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setEndUse($end_use)
+    public function setEndUse($endUse)
     {
-        if (is_null($end_use)) {
-            array_push($this->openAPINullablesSetToNull, 'end_use');
+        if (is_null($endUse)) {
+            array_push($this->openAPINullablesSetToNull, 'endUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_use', $nullablesSetToNull);
+            $index = array_search('endUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_use'] = $end_use;
+        $this->container['endUse'] = $endUse;
 
         return $this;
     }

@@ -59,9 +59,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'enrollment_date' => '\DateTime',
-        'section_ids' => 'string',
-        'user_ids' => 'string',
+        'enrollmentDate' => '\DateTime',
+        'sectionIds' => 'string',
+        'userIds' => 'string',
     ];
 
     /**
@@ -73,9 +73,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'enrollment_date' => 'date-time',
-        'section_ids' => null,
-        'user_ids' => null,
+        'enrollmentDate' => 'date-time',
+        'sectionIds' => null,
+        'userIds' => null,
     ];
 
     /**
@@ -85,9 +85,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'enrollment_date' => false,
-        'section_ids' => false,
-        'user_ids' => false,
+        'enrollmentDate' => false,
+        'sectionIds' => false,
+        'userIds' => false,
     ];
 
     /**
@@ -177,9 +177,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'enrollment_date' => 'enrollment_date',
-        'section_ids' => 'section_ids',
-        'user_ids' => 'user_ids',
+        'enrollmentDate' => 'enrollment_date',
+        'sectionIds' => 'section_ids',
+        'userIds' => 'user_ids',
     ];
 
     /**
@@ -189,9 +189,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'enrollment_date' => 'setEnrollmentDate',
-        'section_ids' => 'setSectionIds',
-        'user_ids' => 'setUserIds',
+        'enrollmentDate' => 'setEnrollmentDate',
+        'sectionIds' => 'setSectionIds',
+        'userIds' => 'setUserIds',
     ];
 
     /**
@@ -201,9 +201,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'enrollment_date' => 'getEnrollmentDate',
-        'section_ids' => 'getSectionIds',
-        'user_ids' => 'getUserIds',
+        'enrollmentDate' => 'getEnrollmentDate',
+        'sectionIds' => 'getSectionIds',
+        'userIds' => 'getUserIds',
     ];
 
     /**
@@ -264,9 +264,9 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('enrollment_date', $data ?? [], null);
-        $this->setIfExists('section_ids', $data ?? [], null);
-        $this->setIfExists('user_ids', $data ?? [], null);
+        $this->setIfExists('enrollmentDate', $data ?? [], null);
+        $this->setIfExists('sectionIds', $data ?? [], null);
+        $this->setIfExists('userIds', $data ?? [], null);
     }
 
     /**
@@ -299,14 +299,14 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['enrollment_date'] === null) {
-            $invalidProperties[] = "'enrollment_date' can't be null";
+        if ($this->container['enrollmentDate'] === null) {
+            $invalidProperties[] = "'enrollmentDate' can't be null";
         }
-        if ($this->container['section_ids'] === null) {
-            $invalidProperties[] = "'section_ids' can't be null";
+        if ($this->container['sectionIds'] === null) {
+            $invalidProperties[] = "'sectionIds' can't be null";
         }
-        if ($this->container['user_ids'] === null) {
-            $invalidProperties[] = "'user_ids' can't be null";
+        if ($this->container['userIds'] === null) {
+            $invalidProperties[] = "'userIds' can't be null";
         }
         return $invalidProperties;
     }
@@ -351,82 +351,82 @@ class BulkEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets enrollment_date
+     * Gets enrollmentDate
      *
      * @return \DateTime
      */
     public function getEnrollmentDate()
     {
-        return $this->container['enrollment_date'];
+        return $this->container['enrollmentDate'];
     }
 
     /**
-     * Sets enrollment_date
+     * Sets enrollmentDate
      *
-     * @param \DateTime $enrollment_date The effective date that users will be added to the sections. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime $enrollmentDate The effective date that users will be added to the sections. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setEnrollmentDate($enrollment_date)
+    public function setEnrollmentDate($enrollmentDate)
     {
-        if (is_null($enrollment_date)) {
-            throw new \InvalidArgumentException('non-nullable enrollment_date cannot be null');
+        if (is_null($enrollmentDate)) {
+            throw new \InvalidArgumentException('non-nullable enrollmentDate cannot be null');
         }
-        $this->container['enrollment_date'] = $enrollment_date;
+        $this->container['enrollmentDate'] = $enrollmentDate;
 
         return $this;
     }
 
     /**
-     * Gets section_ids
+     * Gets sectionIds
      *
      * @return string
      */
     public function getSectionIds()
     {
-        return $this->container['section_ids'];
+        return $this->container['sectionIds'];
     }
 
     /**
-     * Sets section_ids
+     * Sets sectionIds
      *
-     * @param string $section_ids Comma delimited list of sections to which you want to add the users listed above into
+     * @param string $sectionIds Comma delimited list of sections to which you want to add the users listed above into
      *
      * @return self
      */
-    public function setSectionIds($section_ids)
+    public function setSectionIds($sectionIds)
     {
-        if (is_null($section_ids)) {
-            throw new \InvalidArgumentException('non-nullable section_ids cannot be null');
+        if (is_null($sectionIds)) {
+            throw new \InvalidArgumentException('non-nullable sectionIds cannot be null');
         }
-        $this->container['section_ids'] = $section_ids;
+        $this->container['sectionIds'] = $sectionIds;
 
         return $this;
     }
 
     /**
-     * Gets user_ids
+     * Gets userIds
      *
      * @return string
      */
     public function getUserIds()
     {
-        return $this->container['user_ids'];
+        return $this->container['userIds'];
     }
 
     /**
-     * Sets user_ids
+     * Sets userIds
      *
-     * @param string $user_ids Comma delimited list of ids representing users to be added to the sections listed below
+     * @param string $userIds Comma delimited list of ids representing users to be added to the sections listed below
      *
      * @return self
      */
-    public function setUserIds($user_ids)
+    public function setUserIds($userIds)
     {
-        if (is_null($user_ids)) {
-            throw new \InvalidArgumentException('non-nullable user_ids cannot be null');
+        if (is_null($userIds)) {
+            throw new \InvalidArgumentException('non-nullable userIds cannot be null');
         }
-        $this->container['user_ids'] = $user_ids;
+        $this->container['userIds'] = $userIds;
 
         return $this;
     }

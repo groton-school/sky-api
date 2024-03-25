@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type_id** | **int** | The ID of the type | [optional]
+**typeId** | **int** | The ID of the type | [optional]
 **primary** | **bool** | Returns true if the address is primary | [optional]
 **shared** | **bool** | Returns true if changes to an address are made to all users with a shared relationship (Read Only) | [optional]
-**shared_relationship** | **string** | The relationship of the shared user | [optional]
-**shared_user** | **string** | The name of the shared user | [optional]
+**sharedRelationship** | **string** | The relationship of the shared user | [optional]
+**sharedUser** | **string** | The name of the shared user | [optional]
 **type** | **string** | The name of the address type | [optional]
-**user_id** | **int** | The ID of the user | [optional]
+**userId** | **int** | The ID of the user | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

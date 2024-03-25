@@ -130,18 +130,18 @@ class DirectoryApi
      *
      * Directories results
      *
-     * @param  int $directory_id Format - int32. (required)
+     * @param  int $directoryId Format - int32. (required)
      * @param  string $search  (optional)
-     * @param  bool $search_all  (optional, default to true)
+     * @param  bool $searchAll  (optional, default to true)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DirectoriesByDirectoryIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\DirectoryResultCollection
      */
-    public function v1DirectoriesByDirectoryIdGet($directory_id, $search = null, $search_all = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
+    public function v1DirectoriesByDirectoryIdGet($directoryId, $search = null, $searchAll = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
     {
-        [$response] = $this->v1DirectoriesByDirectoryIdGetWithHttpInfo($directory_id, $search, $search_all, $contentType);
+        [$response] = $this->v1DirectoriesByDirectoryIdGetWithHttpInfo($directoryId, $search, $searchAll, $contentType);
         return $response;
     }
 
@@ -150,18 +150,18 @@ class DirectoryApi
      *
      * Directories results
      *
-     * @param  int $directory_id Format - int32. (required)
+     * @param  int $directoryId Format - int32. (required)
      * @param  string $search  (optional)
-     * @param  bool $search_all  (optional, default to true)
+     * @param  bool $searchAll  (optional, default to true)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DirectoriesByDirectoryIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\DirectoryResultCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1DirectoriesByDirectoryIdGetWithHttpInfo($directory_id, $search = null, $search_all = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
+    public function v1DirectoriesByDirectoryIdGetWithHttpInfo($directoryId, $search = null, $searchAll = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
     {
-        $request = $this->v1DirectoriesByDirectoryIdGetRequest($directory_id, $search, $search_all, $contentType);
+        $request = $this->v1DirectoriesByDirectoryIdGetRequest($directoryId, $search, $searchAll, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -276,17 +276,17 @@ class DirectoryApi
      *
      * Directories results
      *
-     * @param  int $directory_id Format - int32. (required)
+     * @param  int $directoryId Format - int32. (required)
      * @param  string $search  (optional)
-     * @param  bool $search_all  (optional, default to true)
+     * @param  bool $searchAll  (optional, default to true)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DirectoriesByDirectoryIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DirectoriesByDirectoryIdGetAsync($directory_id, $search = null, $search_all = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
+    public function v1DirectoriesByDirectoryIdGetAsync($directoryId, $search = null, $searchAll = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
     {
-        return $this->v1DirectoriesByDirectoryIdGetAsyncWithHttpInfo($directory_id, $search, $search_all, $contentType)
+        return $this->v1DirectoriesByDirectoryIdGetAsyncWithHttpInfo($directoryId, $search, $searchAll, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,18 +299,18 @@ class DirectoryApi
      *
      * Directories results
      *
-     * @param  int $directory_id Format - int32. (required)
+     * @param  int $directoryId Format - int32. (required)
      * @param  string $search  (optional)
-     * @param  bool $search_all  (optional, default to true)
+     * @param  bool $searchAll  (optional, default to true)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DirectoriesByDirectoryIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DirectoriesByDirectoryIdGetAsyncWithHttpInfo($directory_id, $search = null, $search_all = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
+    public function v1DirectoriesByDirectoryIdGetAsyncWithHttpInfo($directoryId, $search = null, $searchAll = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
     {
         $returnType = '\SKY\School\Model\DirectoryResultCollection';
-        $request = $this->v1DirectoriesByDirectoryIdGetRequest($directory_id, $search, $search_all, $contentType);
+        $request = $this->v1DirectoriesByDirectoryIdGetRequest($directoryId, $search, $searchAll, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -351,21 +351,21 @@ class DirectoryApi
     /**
      * Create request for operation 'v1DirectoriesByDirectoryIdGet'
      *
-     * @param  int $directory_id Format - int32. (required)
+     * @param  int $directoryId Format - int32. (required)
      * @param  string $search  (optional)
-     * @param  bool $search_all  (optional, default to true)
+     * @param  bool $searchAll  (optional, default to true)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DirectoriesByDirectoryIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1DirectoriesByDirectoryIdGetRequest($directory_id, $search = null, $search_all = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
+    public function v1DirectoriesByDirectoryIdGetRequest($directoryId, $search = null, $searchAll = true, string $contentType = self::contentTypes['v1DirectoriesByDirectoryIdGet'][0])
     {
 
-        // verify the required parameter 'directory_id' is set
-        if ($directory_id === null || (is_array($directory_id) && count($directory_id) === 0)) {
+        // verify the required parameter 'directoryId' is set
+        if ($directoryId === null || (is_array($directoryId) && count($directoryId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directory_id when calling v1DirectoriesByDirectoryIdGet'
+                'Missing the required parameter $directoryId when calling v1DirectoriesByDirectoryIdGet'
             );
         }
 
@@ -390,7 +390,7 @@ class DirectoryApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $search_all,
+            $searchAll,
             'search_all', // param base name
             'boolean', // openApiType
             'form', // style
@@ -400,10 +400,10 @@ class DirectoryApi
 
 
         // path params
-        if ($directory_id !== null) {
+        if ($directoryId !== null) {
             $resourcePath = str_replace(
                 '{' . 'directory_id' . '}',
-                ObjectSerializer::toPathValue($directory_id),
+                ObjectSerializer::toPathValue($directoryId),
                 $resourcePath
             );
         }

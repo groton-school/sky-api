@@ -60,15 +60,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'leaders' => '\SKY\School\Model\Leader[]',
         'id' => 'int',
-        'course_code' => 'string',
+        'courseCode' => 'string',
         'duration' => '\SKY\School\Model\Duration',
-        'lead_section_id' => 'int',
+        'leadSectionId' => 'int',
         'name' => 'string',
-        'offering_id' => 'int',
-        'parent_section_id' => 'int',
-        'room_id' => 'int',
-        'school_year' => 'string',
-        'section_identifier' => 'string',
+        'offeringId' => 'int',
+        'parentSectionId' => 'int',
+        'roomId' => 'int',
+        'schoolYear' => 'string',
+        'sectionIdentifier' => 'string',
     ];
 
     /**
@@ -81,15 +81,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'leaders' => null,
         'id' => 'int32',
-        'course_code' => null,
+        'courseCode' => null,
         'duration' => null,
-        'lead_section_id' => 'int32',
+        'leadSectionId' => 'int32',
         'name' => null,
-        'offering_id' => 'int32',
-        'parent_section_id' => 'int32',
-        'room_id' => 'int32',
-        'school_year' => null,
-        'section_identifier' => null,
+        'offeringId' => 'int32',
+        'parentSectionId' => 'int32',
+        'roomId' => 'int32',
+        'schoolYear' => null,
+        'sectionIdentifier' => null,
     ];
 
     /**
@@ -100,15 +100,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static array $openAPINullables = [
         'leaders' => true,
         'id' => false,
-        'course_code' => true,
+        'courseCode' => true,
         'duration' => false,
-        'lead_section_id' => true,
+        'leadSectionId' => true,
         'name' => true,
-        'offering_id' => true,
-        'parent_section_id' => true,
-        'room_id' => true,
-        'school_year' => true,
-        'section_identifier' => true,
+        'offeringId' => true,
+        'parentSectionId' => true,
+        'roomId' => true,
+        'schoolYear' => true,
+        'sectionIdentifier' => true,
     ];
 
     /**
@@ -199,15 +199,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'leaders' => 'leaders',
         'id' => 'id',
-        'course_code' => 'course_code',
+        'courseCode' => 'course_code',
         'duration' => 'duration',
-        'lead_section_id' => 'lead_section_id',
+        'leadSectionId' => 'lead_section_id',
         'name' => 'name',
-        'offering_id' => 'offering_id',
-        'parent_section_id' => 'parent_section_id',
-        'room_id' => 'room_id',
-        'school_year' => 'school_year',
-        'section_identifier' => 'section_identifier',
+        'offeringId' => 'offering_id',
+        'parentSectionId' => 'parent_section_id',
+        'roomId' => 'room_id',
+        'schoolYear' => 'school_year',
+        'sectionIdentifier' => 'section_identifier',
     ];
 
     /**
@@ -218,15 +218,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'leaders' => 'setLeaders',
         'id' => 'setId',
-        'course_code' => 'setCourseCode',
+        'courseCode' => 'setCourseCode',
         'duration' => 'setDuration',
-        'lead_section_id' => 'setLeadSectionId',
+        'leadSectionId' => 'setLeadSectionId',
         'name' => 'setName',
-        'offering_id' => 'setOfferingId',
-        'parent_section_id' => 'setParentSectionId',
-        'room_id' => 'setRoomId',
-        'school_year' => 'setSchoolYear',
-        'section_identifier' => 'setSectionIdentifier',
+        'offeringId' => 'setOfferingId',
+        'parentSectionId' => 'setParentSectionId',
+        'roomId' => 'setRoomId',
+        'schoolYear' => 'setSchoolYear',
+        'sectionIdentifier' => 'setSectionIdentifier',
     ];
 
     /**
@@ -237,15 +237,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'leaders' => 'getLeaders',
         'id' => 'getId',
-        'course_code' => 'getCourseCode',
+        'courseCode' => 'getCourseCode',
         'duration' => 'getDuration',
-        'lead_section_id' => 'getLeadSectionId',
+        'leadSectionId' => 'getLeadSectionId',
         'name' => 'getName',
-        'offering_id' => 'getOfferingId',
-        'parent_section_id' => 'getParentSectionId',
-        'room_id' => 'getRoomId',
-        'school_year' => 'getSchoolYear',
-        'section_identifier' => 'getSectionIdentifier',
+        'offeringId' => 'getOfferingId',
+        'parentSectionId' => 'getParentSectionId',
+        'roomId' => 'getRoomId',
+        'schoolYear' => 'getSchoolYear',
+        'sectionIdentifier' => 'getSectionIdentifier',
     ];
 
     /**
@@ -307,15 +307,15 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->setIfExists('leaders', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
-        $this->setIfExists('lead_section_id', $data ?? [], null);
+        $this->setIfExists('leadSectionId', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('offering_id', $data ?? [], null);
-        $this->setIfExists('parent_section_id', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('school_year', $data ?? [], null);
-        $this->setIfExists('section_identifier', $data ?? [], null);
+        $this->setIfExists('offeringId', $data ?? [], null);
+        $this->setIfExists('parentSectionId', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('schoolYear', $data ?? [], null);
+        $this->setIfExists('sectionIdentifier', $data ?? [], null);
     }
 
     /**
@@ -422,35 +422,35 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code The identifier used to reference a course; the Course Code is a user-entered value
+     * @param string|null $courseCode The identifier used to reference a course; the Course Code is a user-entered value
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }
@@ -483,35 +483,35 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets lead_section_id
+     * Gets leadSectionId
      *
      * @return int|null
      */
     public function getLeadSectionId()
     {
-        return $this->container['lead_section_id'];
+        return $this->container['leadSectionId'];
     }
 
     /**
-     * Sets lead_section_id
+     * Sets leadSectionId
      *
-     * @param int|null $lead_section_id The ID of the first section in a series of terms
+     * @param int|null $leadSectionId The ID of the first section in a series of terms
      *
      * @return self
      */
-    public function setLeadSectionId($lead_section_id)
+    public function setLeadSectionId($leadSectionId)
     {
-        if (is_null($lead_section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'lead_section_id');
+        if (is_null($leadSectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'leadSectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('lead_section_id', $nullablesSetToNull);
+            $index = array_search('leadSectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['lead_section_id'] = $lead_section_id;
+        $this->container['leadSectionId'] = $leadSectionId;
 
         return $this;
     }
@@ -551,171 +551,171 @@ class ActivitiesSection implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets offering_id
+     * Gets offeringId
      *
      * @return int|null
      */
     public function getOfferingId()
     {
-        return $this->container['offering_id'];
+        return $this->container['offeringId'];
     }
 
     /**
-     * Sets offering_id
+     * Sets offeringId
      *
-     * @param int|null $offering_id The ID of an offered course
+     * @param int|null $offeringId The ID of an offered course
      *
      * @return self
      */
-    public function setOfferingId($offering_id)
+    public function setOfferingId($offeringId)
     {
-        if (is_null($offering_id)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_id');
+        if (is_null($offeringId)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_id', $nullablesSetToNull);
+            $index = array_search('offeringId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_id'] = $offering_id;
+        $this->container['offeringId'] = $offeringId;
 
         return $this;
     }
 
     /**
-     * Gets parent_section_id
+     * Gets parentSectionId
      *
      * @return int|null
      */
     public function getParentSectionId()
     {
-        return $this->container['parent_section_id'];
+        return $this->container['parentSectionId'];
     }
 
     /**
-     * Sets parent_section_id
+     * Sets parentSectionId
      *
-     * @param int|null $parent_section_id The ID that leads you back to the offered section
+     * @param int|null $parentSectionId The ID that leads you back to the offered section
      *
      * @return self
      */
-    public function setParentSectionId($parent_section_id)
+    public function setParentSectionId($parentSectionId)
     {
-        if (is_null($parent_section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'parent_section_id');
+        if (is_null($parentSectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'parentSectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('parent_section_id', $nullablesSetToNull);
+            $index = array_search('parentSectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['parent_section_id'] = $parent_section_id;
+        $this->container['parentSectionId'] = $parentSectionId;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id The ID of the room the section is held in
+     * @param int|null $roomId The ID of the room the section is held in
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets school_year
+     * Gets schoolYear
      *
      * @return string|null
      */
     public function getSchoolYear()
     {
-        return $this->container['school_year'];
+        return $this->container['schoolYear'];
     }
 
     /**
-     * Sets school_year
+     * Sets schoolYear
      *
-     * @param string|null $school_year The school year date range in which the section occurs
+     * @param string|null $schoolYear The school year date range in which the section occurs
      *
      * @return self
      */
-    public function setSchoolYear($school_year)
+    public function setSchoolYear($schoolYear)
     {
-        if (is_null($school_year)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year');
+        if (is_null($schoolYear)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year', $nullablesSetToNull);
+            $index = array_search('schoolYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year'] = $school_year;
+        $this->container['schoolYear'] = $schoolYear;
 
         return $this;
     }
 
     /**
-     * Gets section_identifier
+     * Gets sectionIdentifier
      *
      * @return string|null
      */
     public function getSectionIdentifier()
     {
-        return $this->container['section_identifier'];
+        return $this->container['sectionIdentifier'];
     }
 
     /**
-     * Sets section_identifier
+     * Sets sectionIdentifier
      *
-     * @param string|null $section_identifier The identifier used to differentiate between multiple sections that contain a course; the Section Identifier is a user-entered value
+     * @param string|null $sectionIdentifier The identifier used to differentiate between multiple sections that contain a course; the Section Identifier is a user-entered value
      *
      * @return self
      */
-    public function setSectionIdentifier($section_identifier)
+    public function setSectionIdentifier($sectionIdentifier)
     {
-        if (is_null($section_identifier)) {
-            array_push($this->openAPINullablesSetToNull, 'section_identifier');
+        if (is_null($sectionIdentifier)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionIdentifier');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_identifier', $nullablesSetToNull);
+            $index = array_search('sectionIdentifier', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_identifier'] = $section_identifier;
+        $this->container['sectionIdentifier'] = $sectionIdentifier;
 
         return $this;
     }

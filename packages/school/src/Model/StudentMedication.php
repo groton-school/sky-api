@@ -60,8 +60,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'id' => 'int',
         'medication' => '\SKY\School\Model\IdDescriptorField',
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
     ];
 
     /**
@@ -74,8 +74,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'id' => 'int32',
         'medication' => null,
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
     ];
 
     /**
@@ -86,8 +86,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static array $openAPINullables = [
         'id' => false,
         'medication' => false,
-        'date_as_of' => true,
-        'date_until' => true,
+        'dateAsOf' => true,
+        'dateUntil' => true,
     ];
 
     /**
@@ -178,8 +178,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'id' => 'id',
         'medication' => 'medication',
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
     ];
 
     /**
@@ -190,8 +190,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'id' => 'setId',
         'medication' => 'setMedication',
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
     ];
 
     /**
@@ -202,8 +202,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'id' => 'getId',
         'medication' => 'getMedication',
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
     ];
 
     /**
@@ -265,8 +265,8 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('medication', $data ?? [], null);
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
     }
 
     /**
@@ -366,69 +366,69 @@ class StudentMedication implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime|null
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime|null $date_as_of The start date for the medication.
+     * @param \DateTime|null $dateAsOf The start date for the medication.
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            array_push($this->openAPINullablesSetToNull, 'date_as_of');
+        if (is_null($dateAsOf)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAsOf');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_as_of', $nullablesSetToNull);
+            $index = array_search('dateAsOf', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The end date for the medication.
+     * @param \DateTime|null $dateUntil The end date for the medication.
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }

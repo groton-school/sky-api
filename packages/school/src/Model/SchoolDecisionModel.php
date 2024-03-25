@@ -60,12 +60,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'decision_type' => 'string',
-        'decision_type_id' => 'int',
+        'decisionType' => 'string',
+        'decisionTypeId' => 'int',
         'date' => '\DateTime',
-        'expire_date' => '\DateTime',
+        'expireDate' => '\DateTime',
         'comment' => 'string',
-        'candidate_response' => '\SKY\School\Model\CandidateDecisionModel',
+        'candidateResponse' => '\SKY\School\Model\CandidateDecisionModel',
     ];
 
     /**
@@ -78,12 +78,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'decision_type' => null,
-        'decision_type_id' => 'int32',
+        'decisionType' => null,
+        'decisionTypeId' => 'int32',
         'date' => 'date-time',
-        'expire_date' => 'date-time',
+        'expireDate' => 'date-time',
         'comment' => null,
-        'candidate_response' => null,
+        'candidateResponse' => null,
     ];
 
     /**
@@ -94,12 +94,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'decision_type' => true,
-        'decision_type_id' => true,
+        'decisionType' => true,
+        'decisionTypeId' => true,
         'date' => true,
-        'expire_date' => true,
+        'expireDate' => true,
         'comment' => true,
-        'candidate_response' => false,
+        'candidateResponse' => false,
     ];
 
     /**
@@ -190,12 +190,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'decision_type' => 'decision_type',
-        'decision_type_id' => 'decision_type_id',
+        'decisionType' => 'decision_type',
+        'decisionTypeId' => 'decision_type_id',
         'date' => 'date',
-        'expire_date' => 'expire_date',
+        'expireDate' => 'expire_date',
         'comment' => 'comment',
-        'candidate_response' => 'candidate_response',
+        'candidateResponse' => 'candidate_response',
     ];
 
     /**
@@ -206,12 +206,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'decision_type' => 'setDecisionType',
-        'decision_type_id' => 'setDecisionTypeId',
+        'decisionType' => 'setDecisionType',
+        'decisionTypeId' => 'setDecisionTypeId',
         'date' => 'setDate',
-        'expire_date' => 'setExpireDate',
+        'expireDate' => 'setExpireDate',
         'comment' => 'setComment',
-        'candidate_response' => 'setCandidateResponse',
+        'candidateResponse' => 'setCandidateResponse',
     ];
 
     /**
@@ -222,12 +222,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'decision_type' => 'getDecisionType',
-        'decision_type_id' => 'getDecisionTypeId',
+        'decisionType' => 'getDecisionType',
+        'decisionTypeId' => 'getDecisionTypeId',
         'date' => 'getDate',
-        'expire_date' => 'getExpireDate',
+        'expireDate' => 'getExpireDate',
         'comment' => 'getComment',
-        'candidate_response' => 'getCandidateResponse',
+        'candidateResponse' => 'getCandidateResponse',
     ];
 
     /**
@@ -289,12 +289,12 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('decision_type', $data ?? [], null);
-        $this->setIfExists('decision_type_id', $data ?? [], null);
+        $this->setIfExists('decisionType', $data ?? [], null);
+        $this->setIfExists('decisionTypeId', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('expire_date', $data ?? [], null);
+        $this->setIfExists('expireDate', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
-        $this->setIfExists('candidate_response', $data ?? [], null);
+        $this->setIfExists('candidateResponse', $data ?? [], null);
     }
 
     /**
@@ -408,69 +408,69 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets decision_type
+     * Gets decisionType
      *
      * @return string|null
      */
     public function getDecisionType()
     {
-        return $this->container['decision_type'];
+        return $this->container['decisionType'];
     }
 
     /**
-     * Sets decision_type
+     * Sets decisionType
      *
-     * @param string|null $decision_type
+     * @param string|null $decisionType
      *
      * @return self
      */
-    public function setDecisionType($decision_type)
+    public function setDecisionType($decisionType)
     {
-        if (is_null($decision_type)) {
-            array_push($this->openAPINullablesSetToNull, 'decision_type');
+        if (is_null($decisionType)) {
+            array_push($this->openAPINullablesSetToNull, 'decisionType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decision_type', $nullablesSetToNull);
+            $index = array_search('decisionType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decision_type'] = $decision_type;
+        $this->container['decisionType'] = $decisionType;
 
         return $this;
     }
 
     /**
-     * Gets decision_type_id
+     * Gets decisionTypeId
      *
      * @return int|null
      */
     public function getDecisionTypeId()
     {
-        return $this->container['decision_type_id'];
+        return $this->container['decisionTypeId'];
     }
 
     /**
-     * Sets decision_type_id
+     * Sets decisionTypeId
      *
-     * @param int|null $decision_type_id
+     * @param int|null $decisionTypeId
      *
      * @return self
      */
-    public function setDecisionTypeId($decision_type_id)
+    public function setDecisionTypeId($decisionTypeId)
     {
-        if (is_null($decision_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'decision_type_id');
+        if (is_null($decisionTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'decisionTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decision_type_id', $nullablesSetToNull);
+            $index = array_search('decisionTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decision_type_id'] = $decision_type_id;
+        $this->container['decisionTypeId'] = $decisionTypeId;
 
         return $this;
     }
@@ -510,35 +510,35 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets expire_date
+     * Gets expireDate
      *
      * @return \DateTime|null
      */
     public function getExpireDate()
     {
-        return $this->container['expire_date'];
+        return $this->container['expireDate'];
     }
 
     /**
-     * Sets expire_date
+     * Sets expireDate
      *
-     * @param \DateTime|null $expire_date
+     * @param \DateTime|null $expireDate
      *
      * @return self
      */
-    public function setExpireDate($expire_date)
+    public function setExpireDate($expireDate)
     {
-        if (is_null($expire_date)) {
-            array_push($this->openAPINullablesSetToNull, 'expire_date');
+        if (is_null($expireDate)) {
+            array_push($this->openAPINullablesSetToNull, 'expireDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('expire_date', $nullablesSetToNull);
+            $index = array_search('expireDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['expire_date'] = $expire_date;
+        $this->container['expireDate'] = $expireDate;
 
         return $this;
     }
@@ -578,28 +578,28 @@ class SchoolDecisionModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets candidate_response
+     * Gets candidateResponse
      *
      * @return \SKY\School\Model\CandidateDecisionModel|null
      */
     public function getCandidateResponse()
     {
-        return $this->container['candidate_response'];
+        return $this->container['candidateResponse'];
     }
 
     /**
-     * Sets candidate_response
+     * Sets candidateResponse
      *
-     * @param \SKY\School\Model\CandidateDecisionModel|null $candidate_response candidate_response
+     * @param \SKY\School\Model\CandidateDecisionModel|null $candidateResponse candidateResponse
      *
      * @return self
      */
-    public function setCandidateResponse($candidate_response)
+    public function setCandidateResponse($candidateResponse)
     {
-        if (is_null($candidate_response)) {
-            throw new \InvalidArgumentException('non-nullable candidate_response cannot be null');
+        if (is_null($candidateResponse)) {
+            throw new \InvalidArgumentException('non-nullable candidateResponse cannot be null');
         }
-        $this->container['candidate_response'] = $candidate_response;
+        $this->container['candidateResponse'] = $candidateResponse;
 
         return $this;
     }

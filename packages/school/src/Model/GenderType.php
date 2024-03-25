@@ -59,11 +59,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'gender_type_id' => 'int',
+        'genderTypeId' => 'int',
         'code' => 'string',
         'description' => 'string',
         'active' => 'bool',
-        'sort_order' => 'int',
+        'sortOrder' => 'int',
         'pronouns' => 'string',
     ];
 
@@ -76,11 +76,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'gender_type_id' => 'int32',
+        'genderTypeId' => 'int32',
         'code' => null,
         'description' => null,
         'active' => null,
-        'sort_order' => 'int32',
+        'sortOrder' => 'int32',
         'pronouns' => null,
     ];
 
@@ -91,11 +91,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'gender_type_id' => true,
+        'genderTypeId' => true,
         'code' => true,
         'description' => true,
         'active' => true,
-        'sort_order' => true,
+        'sortOrder' => true,
         'pronouns' => true,
     ];
 
@@ -186,11 +186,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'gender_type_id' => 'gender_type_id',
+        'genderTypeId' => 'gender_type_id',
         'code' => 'code',
         'description' => 'description',
         'active' => 'active',
-        'sort_order' => 'sort_order',
+        'sortOrder' => 'sort_order',
         'pronouns' => 'pronouns',
     ];
 
@@ -201,11 +201,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'gender_type_id' => 'setGenderTypeId',
+        'genderTypeId' => 'setGenderTypeId',
         'code' => 'setCode',
         'description' => 'setDescription',
         'active' => 'setActive',
-        'sort_order' => 'setSortOrder',
+        'sortOrder' => 'setSortOrder',
         'pronouns' => 'setPronouns',
     ];
 
@@ -216,11 +216,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'gender_type_id' => 'getGenderTypeId',
+        'genderTypeId' => 'getGenderTypeId',
         'code' => 'getCode',
         'description' => 'getDescription',
         'active' => 'getActive',
-        'sort_order' => 'getSortOrder',
+        'sortOrder' => 'getSortOrder',
         'pronouns' => 'getPronouns',
     ];
 
@@ -282,11 +282,11 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('gender_type_id', $data ?? [], null);
+        $this->setIfExists('genderTypeId', $data ?? [], null);
         $this->setIfExists('code', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('active', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
         $this->setIfExists('pronouns', $data ?? [], null);
     }
 
@@ -367,35 +367,35 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets gender_type_id
+     * Gets genderTypeId
      *
      * @return int|null
      */
     public function getGenderTypeId()
     {
-        return $this->container['gender_type_id'];
+        return $this->container['genderTypeId'];
     }
 
     /**
-     * Sets gender_type_id
+     * Sets genderTypeId
      *
-     * @param int|null $gender_type_id The ID of the gender type specific to the school
+     * @param int|null $genderTypeId The ID of the gender type specific to the school
      *
      * @return self
      */
-    public function setGenderTypeId($gender_type_id)
+    public function setGenderTypeId($genderTypeId)
     {
-        if (is_null($gender_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'gender_type_id');
+        if (is_null($genderTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'genderTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('gender_type_id', $nullablesSetToNull);
+            $index = array_search('genderTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['gender_type_id'] = $gender_type_id;
+        $this->container['genderTypeId'] = $genderTypeId;
 
         return $this;
     }
@@ -503,35 +503,35 @@ class GenderType implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order The sort order of the gender type
+     * @param int|null $sortOrder The sort order of the gender type
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }

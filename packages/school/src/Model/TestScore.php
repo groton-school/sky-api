@@ -60,13 +60,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'comment' => 'string',
-        'overall_score' => 'float',
-        'printon_report_card' => 'bool',
-        'printon_transcript' => 'bool',
-        'sub_tests' => '\SKY\School\Model\SubTest[]',
-        'test_date' => '\DateTime',
-        'test_type' => 'string',
-        'test_type_id' => 'int',
+        'overallScore' => 'float',
+        'printonReportCard' => 'bool',
+        'printonTranscript' => 'bool',
+        'subTests' => '\SKY\School\Model\SubTest[]',
+        'testDate' => '\DateTime',
+        'testType' => 'string',
+        'testTypeId' => 'int',
     ];
 
     /**
@@ -79,13 +79,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'comment' => null,
-        'overall_score' => 'double',
-        'printon_report_card' => null,
-        'printon_transcript' => null,
-        'sub_tests' => null,
-        'test_date' => 'date-time',
-        'test_type' => null,
-        'test_type_id' => 'int32',
+        'overallScore' => 'double',
+        'printonReportCard' => null,
+        'printonTranscript' => null,
+        'subTests' => null,
+        'testDate' => 'date-time',
+        'testType' => null,
+        'testTypeId' => 'int32',
     ];
 
     /**
@@ -96,13 +96,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'comment' => true,
-        'overall_score' => true,
-        'printon_report_card' => true,
-        'printon_transcript' => true,
-        'sub_tests' => true,
-        'test_date' => true,
-        'test_type' => true,
-        'test_type_id' => true,
+        'overallScore' => true,
+        'printonReportCard' => true,
+        'printonTranscript' => true,
+        'subTests' => true,
+        'testDate' => true,
+        'testType' => true,
+        'testTypeId' => true,
     ];
 
     /**
@@ -193,13 +193,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'comment' => 'comment',
-        'overall_score' => 'overall_score',
-        'printon_report_card' => 'printon_report_card',
-        'printon_transcript' => 'printon_transcript',
-        'sub_tests' => 'sub_tests',
-        'test_date' => 'test_date',
-        'test_type' => 'test_type',
-        'test_type_id' => 'test_type_id',
+        'overallScore' => 'overall_score',
+        'printonReportCard' => 'printon_report_card',
+        'printonTranscript' => 'printon_transcript',
+        'subTests' => 'sub_tests',
+        'testDate' => 'test_date',
+        'testType' => 'test_type',
+        'testTypeId' => 'test_type_id',
     ];
 
     /**
@@ -210,13 +210,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'comment' => 'setComment',
-        'overall_score' => 'setOverallScore',
-        'printon_report_card' => 'setPrintonReportCard',
-        'printon_transcript' => 'setPrintonTranscript',
-        'sub_tests' => 'setSubTests',
-        'test_date' => 'setTestDate',
-        'test_type' => 'setTestType',
-        'test_type_id' => 'setTestTypeId',
+        'overallScore' => 'setOverallScore',
+        'printonReportCard' => 'setPrintonReportCard',
+        'printonTranscript' => 'setPrintonTranscript',
+        'subTests' => 'setSubTests',
+        'testDate' => 'setTestDate',
+        'testType' => 'setTestType',
+        'testTypeId' => 'setTestTypeId',
     ];
 
     /**
@@ -227,13 +227,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'comment' => 'getComment',
-        'overall_score' => 'getOverallScore',
-        'printon_report_card' => 'getPrintonReportCard',
-        'printon_transcript' => 'getPrintonTranscript',
-        'sub_tests' => 'getSubTests',
-        'test_date' => 'getTestDate',
-        'test_type' => 'getTestType',
-        'test_type_id' => 'getTestTypeId',
+        'overallScore' => 'getOverallScore',
+        'printonReportCard' => 'getPrintonReportCard',
+        'printonTranscript' => 'getPrintonTranscript',
+        'subTests' => 'getSubTests',
+        'testDate' => 'getTestDate',
+        'testType' => 'getTestType',
+        'testTypeId' => 'getTestTypeId',
     ];
 
     /**
@@ -295,13 +295,13 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
-        $this->setIfExists('overall_score', $data ?? [], null);
-        $this->setIfExists('printon_report_card', $data ?? [], null);
-        $this->setIfExists('printon_transcript', $data ?? [], null);
-        $this->setIfExists('sub_tests', $data ?? [], null);
-        $this->setIfExists('test_date', $data ?? [], null);
-        $this->setIfExists('test_type', $data ?? [], null);
-        $this->setIfExists('test_type_id', $data ?? [], null);
+        $this->setIfExists('overallScore', $data ?? [], null);
+        $this->setIfExists('printonReportCard', $data ?? [], null);
+        $this->setIfExists('printonTranscript', $data ?? [], null);
+        $this->setIfExists('subTests', $data ?? [], null);
+        $this->setIfExists('testDate', $data ?? [], null);
+        $this->setIfExists('testType', $data ?? [], null);
+        $this->setIfExists('testTypeId', $data ?? [], null);
     }
 
     /**
@@ -415,239 +415,239 @@ class TestScore implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets overall_score
+     * Gets overallScore
      *
      * @return float|null
      */
     public function getOverallScore()
     {
-        return $this->container['overall_score'];
+        return $this->container['overallScore'];
     }
 
     /**
-     * Sets overall_score
+     * Sets overallScore
      *
-     * @param float|null $overall_score The Overall Score
+     * @param float|null $overallScore The Overall Score
      *
      * @return self
      */
-    public function setOverallScore($overall_score)
+    public function setOverallScore($overallScore)
     {
-        if (is_null($overall_score)) {
-            array_push($this->openAPINullablesSetToNull, 'overall_score');
+        if (is_null($overallScore)) {
+            array_push($this->openAPINullablesSetToNull, 'overallScore');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('overall_score', $nullablesSetToNull);
+            $index = array_search('overallScore', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['overall_score'] = $overall_score;
+        $this->container['overallScore'] = $overallScore;
 
         return $this;
     }
 
     /**
-     * Gets printon_report_card
+     * Gets printonReportCard
      *
      * @return bool|null
      */
     public function getPrintonReportCard()
     {
-        return $this->container['printon_report_card'];
+        return $this->container['printonReportCard'];
     }
 
     /**
-     * Sets printon_report_card
+     * Sets printonReportCard
      *
-     * @param bool|null $printon_report_card Print on Report Card?
+     * @param bool|null $printonReportCard Print on Report Card?
      *
      * @return self
      */
-    public function setPrintonReportCard($printon_report_card)
+    public function setPrintonReportCard($printonReportCard)
     {
-        if (is_null($printon_report_card)) {
-            array_push($this->openAPINullablesSetToNull, 'printon_report_card');
+        if (is_null($printonReportCard)) {
+            array_push($this->openAPINullablesSetToNull, 'printonReportCard');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('printon_report_card', $nullablesSetToNull);
+            $index = array_search('printonReportCard', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['printon_report_card'] = $printon_report_card;
+        $this->container['printonReportCard'] = $printonReportCard;
 
         return $this;
     }
 
     /**
-     * Gets printon_transcript
+     * Gets printonTranscript
      *
      * @return bool|null
      */
     public function getPrintonTranscript()
     {
-        return $this->container['printon_transcript'];
+        return $this->container['printonTranscript'];
     }
 
     /**
-     * Sets printon_transcript
+     * Sets printonTranscript
      *
-     * @param bool|null $printon_transcript Print on Transcript?
+     * @param bool|null $printonTranscript Print on Transcript?
      *
      * @return self
      */
-    public function setPrintonTranscript($printon_transcript)
+    public function setPrintonTranscript($printonTranscript)
     {
-        if (is_null($printon_transcript)) {
-            array_push($this->openAPINullablesSetToNull, 'printon_transcript');
+        if (is_null($printonTranscript)) {
+            array_push($this->openAPINullablesSetToNull, 'printonTranscript');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('printon_transcript', $nullablesSetToNull);
+            $index = array_search('printonTranscript', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['printon_transcript'] = $printon_transcript;
+        $this->container['printonTranscript'] = $printonTranscript;
 
         return $this;
     }
 
     /**
-     * Gets sub_tests
+     * Gets subTests
      *
      * @return \SKY\School\Model\SubTest[]|null
      */
     public function getSubTests()
     {
-        return $this->container['sub_tests'];
+        return $this->container['subTests'];
     }
 
     /**
-     * Sets sub_tests
+     * Sets subTests
      *
-     * @param \SKY\School\Model\SubTest[]|null $sub_tests List of Subtests
+     * @param \SKY\School\Model\SubTest[]|null $subTests List of Subtests
      *
      * @return self
      */
-    public function setSubTests($sub_tests)
+    public function setSubTests($subTests)
     {
-        if (is_null($sub_tests)) {
-            array_push($this->openAPINullablesSetToNull, 'sub_tests');
+        if (is_null($subTests)) {
+            array_push($this->openAPINullablesSetToNull, 'subTests');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sub_tests', $nullablesSetToNull);
+            $index = array_search('subTests', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sub_tests'] = $sub_tests;
+        $this->container['subTests'] = $subTests;
 
         return $this;
     }
 
     /**
-     * Gets test_date
+     * Gets testDate
      *
      * @return \DateTime|null
      */
     public function getTestDate()
     {
-        return $this->container['test_date'];
+        return $this->container['testDate'];
     }
 
     /**
-     * Sets test_date
+     * Sets testDate
      *
-     * @param \DateTime|null $test_date The Test Date
+     * @param \DateTime|null $testDate The Test Date
      *
      * @return self
      */
-    public function setTestDate($test_date)
+    public function setTestDate($testDate)
     {
-        if (is_null($test_date)) {
-            array_push($this->openAPINullablesSetToNull, 'test_date');
+        if (is_null($testDate)) {
+            array_push($this->openAPINullablesSetToNull, 'testDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_date', $nullablesSetToNull);
+            $index = array_search('testDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_date'] = $test_date;
+        $this->container['testDate'] = $testDate;
 
         return $this;
     }
 
     /**
-     * Gets test_type
+     * Gets testType
      *
      * @return string|null
      */
     public function getTestType()
     {
-        return $this->container['test_type'];
+        return $this->container['testType'];
     }
 
     /**
-     * Sets test_type
+     * Sets testType
      *
-     * @param string|null $test_type The Test Type
+     * @param string|null $testType The Test Type
      *
      * @return self
      */
-    public function setTestType($test_type)
+    public function setTestType($testType)
     {
-        if (is_null($test_type)) {
-            array_push($this->openAPINullablesSetToNull, 'test_type');
+        if (is_null($testType)) {
+            array_push($this->openAPINullablesSetToNull, 'testType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_type', $nullablesSetToNull);
+            $index = array_search('testType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_type'] = $test_type;
+        $this->container['testType'] = $testType;
 
         return $this;
     }
 
     /**
-     * Gets test_type_id
+     * Gets testTypeId
      *
      * @return int|null
      */
     public function getTestTypeId()
     {
-        return $this->container['test_type_id'];
+        return $this->container['testTypeId'];
     }
 
     /**
-     * Sets test_type_id
+     * Sets testTypeId
      *
-     * @param int|null $test_type_id The Test Type Id
+     * @param int|null $testTypeId The Test Type Id
      *
      * @return self
      */
-    public function setTestTypeId($test_type_id)
+    public function setTestTypeId($testTypeId)
     {
-        if (is_null($test_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'test_type_id');
+        if (is_null($testTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'testTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_type_id', $nullablesSetToNull);
+            $index = array_search('testTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_type_id'] = $test_type_id;
+        $this->container['testTypeId'] = $testTypeId;
 
         return $this;
     }

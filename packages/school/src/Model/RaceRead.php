@@ -58,10 +58,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'race_type_id' => 'int',
+        'raceTypeId' => 'int',
         'description' => 'string',
-        'user_race_id' => 'int',
-        'user_id' => 'int',
+        'userRaceId' => 'int',
+        'userId' => 'int',
     ];
 
     /**
@@ -72,10 +72,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'race_type_id' => 'int32',
+        'raceTypeId' => 'int32',
         'description' => null,
-        'user_race_id' => 'int32',
-        'user_id' => 'int32',
+        'userRaceId' => 'int32',
+        'userId' => 'int32',
     ];
 
     /**
@@ -84,10 +84,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'race_type_id' => false,
+        'raceTypeId' => false,
         'description' => true,
-        'user_race_id' => false,
-        'user_id' => false,
+        'userRaceId' => false,
+        'userId' => false,
     ];
 
     /**
@@ -176,10 +176,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'race_type_id' => 'race_type_id',
+        'raceTypeId' => 'race_type_id',
         'description' => 'description',
-        'user_race_id' => 'user_race_id',
-        'user_id' => 'user_id',
+        'userRaceId' => 'user_race_id',
+        'userId' => 'user_id',
     ];
 
     /**
@@ -188,10 +188,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'race_type_id' => 'setRaceTypeId',
+        'raceTypeId' => 'setRaceTypeId',
         'description' => 'setDescription',
-        'user_race_id' => 'setUserRaceId',
-        'user_id' => 'setUserId',
+        'userRaceId' => 'setUserRaceId',
+        'userId' => 'setUserId',
     ];
 
     /**
@@ -200,10 +200,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'race_type_id' => 'getRaceTypeId',
+        'raceTypeId' => 'getRaceTypeId',
         'description' => 'getDescription',
-        'user_race_id' => 'getUserRaceId',
-        'user_id' => 'getUserId',
+        'userRaceId' => 'getUserRaceId',
+        'userId' => 'getUserId',
     ];
 
     /**
@@ -263,10 +263,10 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('race_type_id', $data ?? [], null);
+        $this->setIfExists('raceTypeId', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('user_race_id', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('userRaceId', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
     }
 
     /**
@@ -312,28 +312,28 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets race_type_id
+     * Gets raceTypeId
      *
      * @return int|null
      */
     public function getRaceTypeId()
     {
-        return $this->container['race_type_id'];
+        return $this->container['raceTypeId'];
     }
 
     /**
-     * Sets race_type_id
+     * Sets raceTypeId
      *
-     * @param int|null $race_type_id The ID of a race type
+     * @param int|null $raceTypeId The ID of a race type
      *
      * @return self
      */
-    public function setRaceTypeId($race_type_id)
+    public function setRaceTypeId($raceTypeId)
     {
-        if (is_null($race_type_id)) {
-            throw new \InvalidArgumentException('non-nullable race_type_id cannot be null');
+        if (is_null($raceTypeId)) {
+            throw new \InvalidArgumentException('non-nullable raceTypeId cannot be null');
         }
-        $this->container['race_type_id'] = $race_type_id;
+        $this->container['raceTypeId'] = $raceTypeId;
 
         return $this;
     }
@@ -373,55 +373,55 @@ class RaceRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets user_race_id
+     * Gets userRaceId
      *
      * @return int|null
      */
     public function getUserRaceId()
     {
-        return $this->container['user_race_id'];
+        return $this->container['userRaceId'];
     }
 
     /**
-     * Sets user_race_id
+     * Sets userRaceId
      *
-     * @param int|null $user_race_id The ID of user and race type association
+     * @param int|null $userRaceId The ID of user and race type association
      *
      * @return self
      */
-    public function setUserRaceId($user_race_id)
+    public function setUserRaceId($userRaceId)
     {
-        if (is_null($user_race_id)) {
-            throw new \InvalidArgumentException('non-nullable user_race_id cannot be null');
+        if (is_null($userRaceId)) {
+            throw new \InvalidArgumentException('non-nullable userRaceId cannot be null');
         }
-        $this->container['user_race_id'] = $user_race_id;
+        $this->container['userRaceId'] = $userRaceId;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The ID of the user who is associated to race type
+     * @param int|null $userId The ID of the user who is associated to race type
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

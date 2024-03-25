@@ -1,0 +1,7 @@
+{
+  "!include": "../base.json",
+  "inputSpec": "var/2022-04-01_preview/Church Management/nxt-data-integration.json",
+  "outputDir": "packages/nxt-data-integration",
+  "gitRepoId": "sky-api.nxt-data-integration",
+  "invokerPackage": "SKY\\NXT\\DataIntegration"
+}

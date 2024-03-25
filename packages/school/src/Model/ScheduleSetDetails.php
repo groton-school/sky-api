@@ -57,24 +57,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_set_id' => 'int',
-        'schedule_set_description' => 'string',
-        'short_description' => 'string',
-        'offering_type' => 'string',
-        'school_year_label' => 'string',
-        'level_num' => 'int',
+        'scheduleSetId' => 'int',
+        'scheduleSetDescription' => 'string',
+        'shortDescription' => 'string',
+        'offeringType' => 'string',
+        'schoolYearLabel' => 'string',
+        'levelNum' => 'int',
         'effdate' => '\DateTime',
         'enddate' => '\DateTime',
-        'start_day' => 'int',
-        'start_week' => 'int',
-        'max_day' => 'int',
-        'max_week' => 'int',
-        'meeting_list' => '\SKY\School\Model\ScheduleSetMettingPattern[]',
-        'access_list' => '\SKY\School\Model\ScheduleSetAccess[]',
-        'rotation_list' => '\SKY\School\Model\ScheduleSetRotation[]',
-        'defined_rotation_pattern' => 'bool',
-        'meeting_time_created' => 'bool',
-        'block_rotation_created' => 'bool',
+        'startDay' => 'int',
+        'startWeek' => 'int',
+        'maxDay' => 'int',
+        'maxWeek' => 'int',
+        'meetingList' => '\SKY\School\Model\ScheduleSetMettingPattern[]',
+        'accessList' => '\SKY\School\Model\ScheduleSetAccess[]',
+        'rotationList' => '\SKY\School\Model\ScheduleSetRotation[]',
+        'definedRotationPattern' => 'bool',
+        'meetingTimeCreated' => 'bool',
+        'blockRotationCreated' => 'bool',
         'sun' => 'bool',
         'mon' => 'bool',
         'tue' => 'bool',
@@ -82,20 +82,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => 'bool',
         'fri' => 'bool',
         'sat' => 'bool',
-        'sun_in_use' => 'bool',
-        'mon_in_use' => 'bool',
-        'tue_in_use' => 'bool',
-        'wed_in_use' => 'bool',
-        'thu_in_use' => 'bool',
-        'fri_in_use' => 'bool',
-        'sat_in_use' => 'bool',
-        'block_group_id' => 'int',
-        'meeting_time_id' => 'int',
-        'insert_date' => '\DateTime',
-        'last_modify_date' => '\DateTime',
-        'last_modify_user_id' => 'int',
-        'fields_to_null' => 'string[]',
-        'vendor_external_id' => 'string',
+        'sunInUse' => 'bool',
+        'monInUse' => 'bool',
+        'tueInUse' => 'bool',
+        'wedInUse' => 'bool',
+        'thuInUse' => 'bool',
+        'friInUse' => 'bool',
+        'satInUse' => 'bool',
+        'blockGroupId' => 'int',
+        'meetingTimeId' => 'int',
+        'insertDate' => '\DateTime',
+        'lastModifyDate' => '\DateTime',
+        'lastModifyUserId' => 'int',
+        'fieldsToNull' => 'string[]',
+        'vendorExternalId' => 'string',
     ];
 
     /**
@@ -106,24 +106,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_set_id' => 'int32',
-        'schedule_set_description' => null,
-        'short_description' => null,
-        'offering_type' => null,
-        'school_year_label' => null,
-        'level_num' => 'int32',
+        'scheduleSetId' => 'int32',
+        'scheduleSetDescription' => null,
+        'shortDescription' => null,
+        'offeringType' => null,
+        'schoolYearLabel' => null,
+        'levelNum' => 'int32',
         'effdate' => 'date-time',
         'enddate' => 'date-time',
-        'start_day' => 'int32',
-        'start_week' => 'int32',
-        'max_day' => 'int32',
-        'max_week' => 'int32',
-        'meeting_list' => null,
-        'access_list' => null,
-        'rotation_list' => null,
-        'defined_rotation_pattern' => null,
-        'meeting_time_created' => null,
-        'block_rotation_created' => null,
+        'startDay' => 'int32',
+        'startWeek' => 'int32',
+        'maxDay' => 'int32',
+        'maxWeek' => 'int32',
+        'meetingList' => null,
+        'accessList' => null,
+        'rotationList' => null,
+        'definedRotationPattern' => null,
+        'meetingTimeCreated' => null,
+        'blockRotationCreated' => null,
         'sun' => null,
         'mon' => null,
         'tue' => null,
@@ -131,20 +131,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => null,
         'fri' => null,
         'sat' => null,
-        'sun_in_use' => null,
-        'mon_in_use' => null,
-        'tue_in_use' => null,
-        'wed_in_use' => null,
-        'thu_in_use' => null,
-        'fri_in_use' => null,
-        'sat_in_use' => null,
-        'block_group_id' => 'int32',
-        'meeting_time_id' => 'int32',
-        'insert_date' => 'date-time',
-        'last_modify_date' => 'date-time',
-        'last_modify_user_id' => 'int32',
-        'fields_to_null' => null,
-        'vendor_external_id' => null,
+        'sunInUse' => null,
+        'monInUse' => null,
+        'tueInUse' => null,
+        'wedInUse' => null,
+        'thuInUse' => null,
+        'friInUse' => null,
+        'satInUse' => null,
+        'blockGroupId' => 'int32',
+        'meetingTimeId' => 'int32',
+        'insertDate' => 'date-time',
+        'lastModifyDate' => 'date-time',
+        'lastModifyUserId' => 'int32',
+        'fieldsToNull' => null,
+        'vendorExternalId' => null,
     ];
 
     /**
@@ -153,24 +153,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_set_id' => true,
-        'schedule_set_description' => true,
-        'short_description' => true,
-        'offering_type' => true,
-        'school_year_label' => true,
-        'level_num' => true,
+        'scheduleSetId' => true,
+        'scheduleSetDescription' => true,
+        'shortDescription' => true,
+        'offeringType' => true,
+        'schoolYearLabel' => true,
+        'levelNum' => true,
         'effdate' => true,
         'enddate' => true,
-        'start_day' => true,
-        'start_week' => true,
-        'max_day' => true,
-        'max_week' => true,
-        'meeting_list' => true,
-        'access_list' => true,
-        'rotation_list' => true,
-        'defined_rotation_pattern' => true,
-        'meeting_time_created' => true,
-        'block_rotation_created' => true,
+        'startDay' => true,
+        'startWeek' => true,
+        'maxDay' => true,
+        'maxWeek' => true,
+        'meetingList' => true,
+        'accessList' => true,
+        'rotationList' => true,
+        'definedRotationPattern' => true,
+        'meetingTimeCreated' => true,
+        'blockRotationCreated' => true,
         'sun' => true,
         'mon' => true,
         'tue' => true,
@@ -178,20 +178,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => true,
         'fri' => true,
         'sat' => true,
-        'sun_in_use' => true,
-        'mon_in_use' => true,
-        'tue_in_use' => true,
-        'wed_in_use' => true,
-        'thu_in_use' => true,
-        'fri_in_use' => true,
-        'sat_in_use' => true,
-        'block_group_id' => true,
-        'meeting_time_id' => true,
-        'insert_date' => true,
-        'last_modify_date' => true,
-        'last_modify_user_id' => true,
-        'fields_to_null' => true,
-        'vendor_external_id' => true,
+        'sunInUse' => true,
+        'monInUse' => true,
+        'tueInUse' => true,
+        'wedInUse' => true,
+        'thuInUse' => true,
+        'friInUse' => true,
+        'satInUse' => true,
+        'blockGroupId' => true,
+        'meetingTimeId' => true,
+        'insertDate' => true,
+        'lastModifyDate' => true,
+        'lastModifyUserId' => true,
+        'fieldsToNull' => true,
+        'vendorExternalId' => true,
     ];
 
     /**
@@ -280,24 +280,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_set_id' => 'ScheduleSetId',
-        'schedule_set_description' => 'ScheduleSetDescription',
-        'short_description' => 'ShortDescription',
-        'offering_type' => 'OfferingType',
-        'school_year_label' => 'SchoolYearLabel',
-        'level_num' => 'LevelNum',
+        'scheduleSetId' => 'ScheduleSetId',
+        'scheduleSetDescription' => 'ScheduleSetDescription',
+        'shortDescription' => 'ShortDescription',
+        'offeringType' => 'OfferingType',
+        'schoolYearLabel' => 'SchoolYearLabel',
+        'levelNum' => 'LevelNum',
         'effdate' => 'Effdate',
         'enddate' => 'Enddate',
-        'start_day' => 'StartDay',
-        'start_week' => 'StartWeek',
-        'max_day' => 'MaxDay',
-        'max_week' => 'MaxWeek',
-        'meeting_list' => 'MeetingList',
-        'access_list' => 'AccessList',
-        'rotation_list' => 'RotationList',
-        'defined_rotation_pattern' => 'DefinedRotationPattern',
-        'meeting_time_created' => 'MeetingTimeCreated',
-        'block_rotation_created' => 'BlockRotationCreated',
+        'startDay' => 'StartDay',
+        'startWeek' => 'StartWeek',
+        'maxDay' => 'MaxDay',
+        'maxWeek' => 'MaxWeek',
+        'meetingList' => 'MeetingList',
+        'accessList' => 'AccessList',
+        'rotationList' => 'RotationList',
+        'definedRotationPattern' => 'DefinedRotationPattern',
+        'meetingTimeCreated' => 'MeetingTimeCreated',
+        'blockRotationCreated' => 'BlockRotationCreated',
         'sun' => 'Sun',
         'mon' => 'Mon',
         'tue' => 'Tue',
@@ -305,20 +305,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => 'Thu',
         'fri' => 'Fri',
         'sat' => 'Sat',
-        'sun_in_use' => 'SunInUse',
-        'mon_in_use' => 'MonInUse',
-        'tue_in_use' => 'TueInUse',
-        'wed_in_use' => 'WedInUse',
-        'thu_in_use' => 'ThuInUse',
-        'fri_in_use' => 'FriInUse',
-        'sat_in_use' => 'SatInUse',
-        'block_group_id' => 'BlockGroupId',
-        'meeting_time_id' => 'MeetingTimeId',
-        'insert_date' => 'InsertDate',
-        'last_modify_date' => 'LastModifyDate',
-        'last_modify_user_id' => 'LastModifyUserId',
-        'fields_to_null' => 'FieldsToNull',
-        'vendor_external_id' => 'vendor_external_id',
+        'sunInUse' => 'SunInUse',
+        'monInUse' => 'MonInUse',
+        'tueInUse' => 'TueInUse',
+        'wedInUse' => 'WedInUse',
+        'thuInUse' => 'ThuInUse',
+        'friInUse' => 'FriInUse',
+        'satInUse' => 'SatInUse',
+        'blockGroupId' => 'BlockGroupId',
+        'meetingTimeId' => 'MeetingTimeId',
+        'insertDate' => 'InsertDate',
+        'lastModifyDate' => 'LastModifyDate',
+        'lastModifyUserId' => 'LastModifyUserId',
+        'fieldsToNull' => 'FieldsToNull',
+        'vendorExternalId' => 'vendor_external_id',
     ];
 
     /**
@@ -327,24 +327,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'schedule_set_id' => 'setScheduleSetId',
-        'schedule_set_description' => 'setScheduleSetDescription',
-        'short_description' => 'setShortDescription',
-        'offering_type' => 'setOfferingType',
-        'school_year_label' => 'setSchoolYearLabel',
-        'level_num' => 'setLevelNum',
+        'scheduleSetId' => 'setScheduleSetId',
+        'scheduleSetDescription' => 'setScheduleSetDescription',
+        'shortDescription' => 'setShortDescription',
+        'offeringType' => 'setOfferingType',
+        'schoolYearLabel' => 'setSchoolYearLabel',
+        'levelNum' => 'setLevelNum',
         'effdate' => 'setEffdate',
         'enddate' => 'setEnddate',
-        'start_day' => 'setStartDay',
-        'start_week' => 'setStartWeek',
-        'max_day' => 'setMaxDay',
-        'max_week' => 'setMaxWeek',
-        'meeting_list' => 'setMeetingList',
-        'access_list' => 'setAccessList',
-        'rotation_list' => 'setRotationList',
-        'defined_rotation_pattern' => 'setDefinedRotationPattern',
-        'meeting_time_created' => 'setMeetingTimeCreated',
-        'block_rotation_created' => 'setBlockRotationCreated',
+        'startDay' => 'setStartDay',
+        'startWeek' => 'setStartWeek',
+        'maxDay' => 'setMaxDay',
+        'maxWeek' => 'setMaxWeek',
+        'meetingList' => 'setMeetingList',
+        'accessList' => 'setAccessList',
+        'rotationList' => 'setRotationList',
+        'definedRotationPattern' => 'setDefinedRotationPattern',
+        'meetingTimeCreated' => 'setMeetingTimeCreated',
+        'blockRotationCreated' => 'setBlockRotationCreated',
         'sun' => 'setSun',
         'mon' => 'setMon',
         'tue' => 'setTue',
@@ -352,20 +352,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => 'setThu',
         'fri' => 'setFri',
         'sat' => 'setSat',
-        'sun_in_use' => 'setSunInUse',
-        'mon_in_use' => 'setMonInUse',
-        'tue_in_use' => 'setTueInUse',
-        'wed_in_use' => 'setWedInUse',
-        'thu_in_use' => 'setThuInUse',
-        'fri_in_use' => 'setFriInUse',
-        'sat_in_use' => 'setSatInUse',
-        'block_group_id' => 'setBlockGroupId',
-        'meeting_time_id' => 'setMeetingTimeId',
-        'insert_date' => 'setInsertDate',
-        'last_modify_date' => 'setLastModifyDate',
-        'last_modify_user_id' => 'setLastModifyUserId',
-        'fields_to_null' => 'setFieldsToNull',
-        'vendor_external_id' => 'setVendorExternalId',
+        'sunInUse' => 'setSunInUse',
+        'monInUse' => 'setMonInUse',
+        'tueInUse' => 'setTueInUse',
+        'wedInUse' => 'setWedInUse',
+        'thuInUse' => 'setThuInUse',
+        'friInUse' => 'setFriInUse',
+        'satInUse' => 'setSatInUse',
+        'blockGroupId' => 'setBlockGroupId',
+        'meetingTimeId' => 'setMeetingTimeId',
+        'insertDate' => 'setInsertDate',
+        'lastModifyDate' => 'setLastModifyDate',
+        'lastModifyUserId' => 'setLastModifyUserId',
+        'fieldsToNull' => 'setFieldsToNull',
+        'vendorExternalId' => 'setVendorExternalId',
     ];
 
     /**
@@ -374,24 +374,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'schedule_set_id' => 'getScheduleSetId',
-        'schedule_set_description' => 'getScheduleSetDescription',
-        'short_description' => 'getShortDescription',
-        'offering_type' => 'getOfferingType',
-        'school_year_label' => 'getSchoolYearLabel',
-        'level_num' => 'getLevelNum',
+        'scheduleSetId' => 'getScheduleSetId',
+        'scheduleSetDescription' => 'getScheduleSetDescription',
+        'shortDescription' => 'getShortDescription',
+        'offeringType' => 'getOfferingType',
+        'schoolYearLabel' => 'getSchoolYearLabel',
+        'levelNum' => 'getLevelNum',
         'effdate' => 'getEffdate',
         'enddate' => 'getEnddate',
-        'start_day' => 'getStartDay',
-        'start_week' => 'getStartWeek',
-        'max_day' => 'getMaxDay',
-        'max_week' => 'getMaxWeek',
-        'meeting_list' => 'getMeetingList',
-        'access_list' => 'getAccessList',
-        'rotation_list' => 'getRotationList',
-        'defined_rotation_pattern' => 'getDefinedRotationPattern',
-        'meeting_time_created' => 'getMeetingTimeCreated',
-        'block_rotation_created' => 'getBlockRotationCreated',
+        'startDay' => 'getStartDay',
+        'startWeek' => 'getStartWeek',
+        'maxDay' => 'getMaxDay',
+        'maxWeek' => 'getMaxWeek',
+        'meetingList' => 'getMeetingList',
+        'accessList' => 'getAccessList',
+        'rotationList' => 'getRotationList',
+        'definedRotationPattern' => 'getDefinedRotationPattern',
+        'meetingTimeCreated' => 'getMeetingTimeCreated',
+        'blockRotationCreated' => 'getBlockRotationCreated',
         'sun' => 'getSun',
         'mon' => 'getMon',
         'tue' => 'getTue',
@@ -399,20 +399,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         'thu' => 'getThu',
         'fri' => 'getFri',
         'sat' => 'getSat',
-        'sun_in_use' => 'getSunInUse',
-        'mon_in_use' => 'getMonInUse',
-        'tue_in_use' => 'getTueInUse',
-        'wed_in_use' => 'getWedInUse',
-        'thu_in_use' => 'getThuInUse',
-        'fri_in_use' => 'getFriInUse',
-        'sat_in_use' => 'getSatInUse',
-        'block_group_id' => 'getBlockGroupId',
-        'meeting_time_id' => 'getMeetingTimeId',
-        'insert_date' => 'getInsertDate',
-        'last_modify_date' => 'getLastModifyDate',
-        'last_modify_user_id' => 'getLastModifyUserId',
-        'fields_to_null' => 'getFieldsToNull',
-        'vendor_external_id' => 'getVendorExternalId',
+        'sunInUse' => 'getSunInUse',
+        'monInUse' => 'getMonInUse',
+        'tueInUse' => 'getTueInUse',
+        'wedInUse' => 'getWedInUse',
+        'thuInUse' => 'getThuInUse',
+        'friInUse' => 'getFriInUse',
+        'satInUse' => 'getSatInUse',
+        'blockGroupId' => 'getBlockGroupId',
+        'meetingTimeId' => 'getMeetingTimeId',
+        'insertDate' => 'getInsertDate',
+        'lastModifyDate' => 'getLastModifyDate',
+        'lastModifyUserId' => 'getLastModifyUserId',
+        'fieldsToNull' => 'getFieldsToNull',
+        'vendorExternalId' => 'getVendorExternalId',
     ];
 
     /**
@@ -509,24 +509,24 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_set_id', $data ?? [], null);
-        $this->setIfExists('schedule_set_description', $data ?? [], null);
-        $this->setIfExists('short_description', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
-        $this->setIfExists('school_year_label', $data ?? [], null);
-        $this->setIfExists('level_num', $data ?? [], null);
+        $this->setIfExists('scheduleSetId', $data ?? [], null);
+        $this->setIfExists('scheduleSetDescription', $data ?? [], null);
+        $this->setIfExists('shortDescription', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
+        $this->setIfExists('schoolYearLabel', $data ?? [], null);
+        $this->setIfExists('levelNum', $data ?? [], null);
         $this->setIfExists('effdate', $data ?? [], null);
         $this->setIfExists('enddate', $data ?? [], null);
-        $this->setIfExists('start_day', $data ?? [], null);
-        $this->setIfExists('start_week', $data ?? [], null);
-        $this->setIfExists('max_day', $data ?? [], null);
-        $this->setIfExists('max_week', $data ?? [], null);
-        $this->setIfExists('meeting_list', $data ?? [], null);
-        $this->setIfExists('access_list', $data ?? [], null);
-        $this->setIfExists('rotation_list', $data ?? [], null);
-        $this->setIfExists('defined_rotation_pattern', $data ?? [], null);
-        $this->setIfExists('meeting_time_created', $data ?? [], null);
-        $this->setIfExists('block_rotation_created', $data ?? [], null);
+        $this->setIfExists('startDay', $data ?? [], null);
+        $this->setIfExists('startWeek', $data ?? [], null);
+        $this->setIfExists('maxDay', $data ?? [], null);
+        $this->setIfExists('maxWeek', $data ?? [], null);
+        $this->setIfExists('meetingList', $data ?? [], null);
+        $this->setIfExists('accessList', $data ?? [], null);
+        $this->setIfExists('rotationList', $data ?? [], null);
+        $this->setIfExists('definedRotationPattern', $data ?? [], null);
+        $this->setIfExists('meetingTimeCreated', $data ?? [], null);
+        $this->setIfExists('blockRotationCreated', $data ?? [], null);
         $this->setIfExists('sun', $data ?? [], null);
         $this->setIfExists('mon', $data ?? [], null);
         $this->setIfExists('tue', $data ?? [], null);
@@ -534,20 +534,20 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('thu', $data ?? [], null);
         $this->setIfExists('fri', $data ?? [], null);
         $this->setIfExists('sat', $data ?? [], null);
-        $this->setIfExists('sun_in_use', $data ?? [], null);
-        $this->setIfExists('mon_in_use', $data ?? [], null);
-        $this->setIfExists('tue_in_use', $data ?? [], null);
-        $this->setIfExists('wed_in_use', $data ?? [], null);
-        $this->setIfExists('thu_in_use', $data ?? [], null);
-        $this->setIfExists('fri_in_use', $data ?? [], null);
-        $this->setIfExists('sat_in_use', $data ?? [], null);
-        $this->setIfExists('block_group_id', $data ?? [], null);
-        $this->setIfExists('meeting_time_id', $data ?? [], null);
-        $this->setIfExists('insert_date', $data ?? [], null);
-        $this->setIfExists('last_modify_date', $data ?? [], null);
-        $this->setIfExists('last_modify_user_id', $data ?? [], null);
-        $this->setIfExists('fields_to_null', $data ?? [], null);
-        $this->setIfExists('vendor_external_id', $data ?? [], null);
+        $this->setIfExists('sunInUse', $data ?? [], null);
+        $this->setIfExists('monInUse', $data ?? [], null);
+        $this->setIfExists('tueInUse', $data ?? [], null);
+        $this->setIfExists('wedInUse', $data ?? [], null);
+        $this->setIfExists('thuInUse', $data ?? [], null);
+        $this->setIfExists('friInUse', $data ?? [], null);
+        $this->setIfExists('satInUse', $data ?? [], null);
+        $this->setIfExists('blockGroupId', $data ?? [], null);
+        $this->setIfExists('meetingTimeId', $data ?? [], null);
+        $this->setIfExists('insertDate', $data ?? [], null);
+        $this->setIfExists('lastModifyDate', $data ?? [], null);
+        $this->setIfExists('lastModifyUserId', $data ?? [], null);
+        $this->setIfExists('fieldsToNull', $data ?? [], null);
+        $this->setIfExists('vendorExternalId', $data ?? [], null);
     }
 
     /**
@@ -578,10 +578,10 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
         $invalidProperties = [];
 
         $allowedValues = $this->getOfferingTypeAllowableValues();
-        if (!is_null($this->container['offering_type']) && !in_array($this->container['offering_type'], $allowedValues, true)) {
+        if (!is_null($this->container['offeringType']) && !in_array($this->container['offeringType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'offering_type', must be one of '%s'",
-                $this->container['offering_type'],
+                "invalid value '%s' for 'offeringType', must be one of '%s'",
+                $this->container['offeringType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -602,215 +602,215 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets schedule_set_id
+     * Gets scheduleSetId
      *
      * @return int|null
      */
     public function getScheduleSetId()
     {
-        return $this->container['schedule_set_id'];
+        return $this->container['scheduleSetId'];
     }
 
     /**
-     * Sets schedule_set_id
+     * Sets scheduleSetId
      *
-     * @param int|null $schedule_set_id schedule_set_id
+     * @param int|null $scheduleSetId scheduleSetId
      *
      * @return self
      */
-    public function setScheduleSetId($schedule_set_id)
+    public function setScheduleSetId($scheduleSetId)
     {
-        if (is_null($schedule_set_id)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set_id');
+        if (is_null($scheduleSetId)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSetId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set_id', $nullablesSetToNull);
+            $index = array_search('scheduleSetId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set_id'] = $schedule_set_id;
+        $this->container['scheduleSetId'] = $scheduleSetId;
 
         return $this;
     }
 
     /**
-     * Gets schedule_set_description
+     * Gets scheduleSetDescription
      *
      * @return string|null
      */
     public function getScheduleSetDescription()
     {
-        return $this->container['schedule_set_description'];
+        return $this->container['scheduleSetDescription'];
     }
 
     /**
-     * Sets schedule_set_description
+     * Sets scheduleSetDescription
      *
-     * @param string|null $schedule_set_description schedule_set_description
+     * @param string|null $scheduleSetDescription scheduleSetDescription
      *
      * @return self
      */
-    public function setScheduleSetDescription($schedule_set_description)
+    public function setScheduleSetDescription($scheduleSetDescription)
     {
-        if (is_null($schedule_set_description)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set_description');
+        if (is_null($scheduleSetDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSetDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set_description', $nullablesSetToNull);
+            $index = array_search('scheduleSetDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set_description'] = $schedule_set_description;
+        $this->container['scheduleSetDescription'] = $scheduleSetDescription;
 
         return $this;
     }
 
     /**
-     * Gets short_description
+     * Gets shortDescription
      *
      * @return string|null
      */
     public function getShortDescription()
     {
-        return $this->container['short_description'];
+        return $this->container['shortDescription'];
     }
 
     /**
-     * Sets short_description
+     * Sets shortDescription
      *
-     * @param string|null $short_description short_description
+     * @param string|null $shortDescription shortDescription
      *
      * @return self
      */
-    public function setShortDescription($short_description)
+    public function setShortDescription($shortDescription)
     {
-        if (is_null($short_description)) {
-            array_push($this->openAPINullablesSetToNull, 'short_description');
+        if (is_null($shortDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'shortDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('short_description', $nullablesSetToNull);
+            $index = array_search('shortDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['short_description'] = $short_description;
+        $this->container['shortDescription'] = $shortDescription;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return string|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param string|null $offering_type offering_type
+     * @param string|null $offeringType offeringType
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_type');
+        if (is_null($offeringType)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_type', $nullablesSetToNull);
+            $index = array_search('offeringType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
         $allowedValues = $this->getOfferingTypeAllowableValues();
-        if (!is_null($offering_type) && !in_array($offering_type, $allowedValues, true)) {
+        if (!is_null($offeringType) && !in_array($offeringType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'offering_type', must be one of '%s'",
-                    $offering_type,
+                    "Invalid value '%s' for 'offeringType', must be one of '%s'",
+                    $offeringType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }
 
     /**
-     * Gets school_year_label
+     * Gets schoolYearLabel
      *
      * @return string|null
      */
     public function getSchoolYearLabel()
     {
-        return $this->container['school_year_label'];
+        return $this->container['schoolYearLabel'];
     }
 
     /**
-     * Sets school_year_label
+     * Sets schoolYearLabel
      *
-     * @param string|null $school_year_label school_year_label
+     * @param string|null $schoolYearLabel schoolYearLabel
      *
      * @return self
      */
-    public function setSchoolYearLabel($school_year_label)
+    public function setSchoolYearLabel($schoolYearLabel)
     {
-        if (is_null($school_year_label)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_label');
+        if (is_null($schoolYearLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_label', $nullablesSetToNull);
+            $index = array_search('schoolYearLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_label'] = $school_year_label;
+        $this->container['schoolYearLabel'] = $schoolYearLabel;
 
         return $this;
     }
 
     /**
-     * Gets level_num
+     * Gets levelNum
      *
      * @return int|null
      */
     public function getLevelNum()
     {
-        return $this->container['level_num'];
+        return $this->container['levelNum'];
     }
 
     /**
-     * Sets level_num
+     * Sets levelNum
      *
-     * @param int|null $level_num level_num
+     * @param int|null $levelNum levelNum
      *
      * @return self
      */
-    public function setLevelNum($level_num)
+    public function setLevelNum($levelNum)
     {
-        if (is_null($level_num)) {
-            array_push($this->openAPINullablesSetToNull, 'level_num');
+        if (is_null($levelNum)) {
+            array_push($this->openAPINullablesSetToNull, 'levelNum');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_num', $nullablesSetToNull);
+            $index = array_search('levelNum', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_num'] = $level_num;
+        $this->container['levelNum'] = $levelNum;
 
         return $this;
     }
@@ -884,341 +884,341 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets start_day
+     * Gets startDay
      *
      * @return int|null
      */
     public function getStartDay()
     {
-        return $this->container['start_day'];
+        return $this->container['startDay'];
     }
 
     /**
-     * Sets start_day
+     * Sets startDay
      *
-     * @param int|null $start_day start_day
+     * @param int|null $startDay startDay
      *
      * @return self
      */
-    public function setStartDay($start_day)
+    public function setStartDay($startDay)
     {
-        if (is_null($start_day)) {
-            array_push($this->openAPINullablesSetToNull, 'start_day');
+        if (is_null($startDay)) {
+            array_push($this->openAPINullablesSetToNull, 'startDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_day', $nullablesSetToNull);
+            $index = array_search('startDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_day'] = $start_day;
+        $this->container['startDay'] = $startDay;
 
         return $this;
     }
 
     /**
-     * Gets start_week
+     * Gets startWeek
      *
      * @return int|null
      */
     public function getStartWeek()
     {
-        return $this->container['start_week'];
+        return $this->container['startWeek'];
     }
 
     /**
-     * Sets start_week
+     * Sets startWeek
      *
-     * @param int|null $start_week start_week
+     * @param int|null $startWeek startWeek
      *
      * @return self
      */
-    public function setStartWeek($start_week)
+    public function setStartWeek($startWeek)
     {
-        if (is_null($start_week)) {
-            array_push($this->openAPINullablesSetToNull, 'start_week');
+        if (is_null($startWeek)) {
+            array_push($this->openAPINullablesSetToNull, 'startWeek');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_week', $nullablesSetToNull);
+            $index = array_search('startWeek', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_week'] = $start_week;
+        $this->container['startWeek'] = $startWeek;
 
         return $this;
     }
 
     /**
-     * Gets max_day
+     * Gets maxDay
      *
      * @return int|null
      */
     public function getMaxDay()
     {
-        return $this->container['max_day'];
+        return $this->container['maxDay'];
     }
 
     /**
-     * Sets max_day
+     * Sets maxDay
      *
-     * @param int|null $max_day max_day
+     * @param int|null $maxDay maxDay
      *
      * @return self
      */
-    public function setMaxDay($max_day)
+    public function setMaxDay($maxDay)
     {
-        if (is_null($max_day)) {
-            array_push($this->openAPINullablesSetToNull, 'max_day');
+        if (is_null($maxDay)) {
+            array_push($this->openAPINullablesSetToNull, 'maxDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('max_day', $nullablesSetToNull);
+            $index = array_search('maxDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['max_day'] = $max_day;
+        $this->container['maxDay'] = $maxDay;
 
         return $this;
     }
 
     /**
-     * Gets max_week
+     * Gets maxWeek
      *
      * @return int|null
      */
     public function getMaxWeek()
     {
-        return $this->container['max_week'];
+        return $this->container['maxWeek'];
     }
 
     /**
-     * Sets max_week
+     * Sets maxWeek
      *
-     * @param int|null $max_week max_week
+     * @param int|null $maxWeek maxWeek
      *
      * @return self
      */
-    public function setMaxWeek($max_week)
+    public function setMaxWeek($maxWeek)
     {
-        if (is_null($max_week)) {
-            array_push($this->openAPINullablesSetToNull, 'max_week');
+        if (is_null($maxWeek)) {
+            array_push($this->openAPINullablesSetToNull, 'maxWeek');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('max_week', $nullablesSetToNull);
+            $index = array_search('maxWeek', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['max_week'] = $max_week;
+        $this->container['maxWeek'] = $maxWeek;
 
         return $this;
     }
 
     /**
-     * Gets meeting_list
+     * Gets meetingList
      *
      * @return \SKY\School\Model\ScheduleSetMettingPattern[]|null
      */
     public function getMeetingList()
     {
-        return $this->container['meeting_list'];
+        return $this->container['meetingList'];
     }
 
     /**
-     * Sets meeting_list
+     * Sets meetingList
      *
-     * @param \SKY\School\Model\ScheduleSetMettingPattern[]|null $meeting_list meeting_list
+     * @param \SKY\School\Model\ScheduleSetMettingPattern[]|null $meetingList meetingList
      *
      * @return self
      */
-    public function setMeetingList($meeting_list)
+    public function setMeetingList($meetingList)
     {
-        if (is_null($meeting_list)) {
-            array_push($this->openAPINullablesSetToNull, 'meeting_list');
+        if (is_null($meetingList)) {
+            array_push($this->openAPINullablesSetToNull, 'meetingList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('meeting_list', $nullablesSetToNull);
+            $index = array_search('meetingList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['meeting_list'] = $meeting_list;
+        $this->container['meetingList'] = $meetingList;
 
         return $this;
     }
 
     /**
-     * Gets access_list
+     * Gets accessList
      *
      * @return \SKY\School\Model\ScheduleSetAccess[]|null
      */
     public function getAccessList()
     {
-        return $this->container['access_list'];
+        return $this->container['accessList'];
     }
 
     /**
-     * Sets access_list
+     * Sets accessList
      *
-     * @param \SKY\School\Model\ScheduleSetAccess[]|null $access_list access_list
+     * @param \SKY\School\Model\ScheduleSetAccess[]|null $accessList accessList
      *
      * @return self
      */
-    public function setAccessList($access_list)
+    public function setAccessList($accessList)
     {
-        if (is_null($access_list)) {
-            array_push($this->openAPINullablesSetToNull, 'access_list');
+        if (is_null($accessList)) {
+            array_push($this->openAPINullablesSetToNull, 'accessList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('access_list', $nullablesSetToNull);
+            $index = array_search('accessList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['access_list'] = $access_list;
+        $this->container['accessList'] = $accessList;
 
         return $this;
     }
 
     /**
-     * Gets rotation_list
+     * Gets rotationList
      *
      * @return \SKY\School\Model\ScheduleSetRotation[]|null
      */
     public function getRotationList()
     {
-        return $this->container['rotation_list'];
+        return $this->container['rotationList'];
     }
 
     /**
-     * Sets rotation_list
+     * Sets rotationList
      *
-     * @param \SKY\School\Model\ScheduleSetRotation[]|null $rotation_list rotation_list
+     * @param \SKY\School\Model\ScheduleSetRotation[]|null $rotationList rotationList
      *
      * @return self
      */
-    public function setRotationList($rotation_list)
+    public function setRotationList($rotationList)
     {
-        if (is_null($rotation_list)) {
-            array_push($this->openAPINullablesSetToNull, 'rotation_list');
+        if (is_null($rotationList)) {
+            array_push($this->openAPINullablesSetToNull, 'rotationList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rotation_list', $nullablesSetToNull);
+            $index = array_search('rotationList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rotation_list'] = $rotation_list;
+        $this->container['rotationList'] = $rotationList;
 
         return $this;
     }
 
     /**
-     * Gets defined_rotation_pattern
+     * Gets definedRotationPattern
      *
      * @return bool|null
      */
     public function getDefinedRotationPattern()
     {
-        return $this->container['defined_rotation_pattern'];
+        return $this->container['definedRotationPattern'];
     }
 
     /**
-     * Sets defined_rotation_pattern
+     * Sets definedRotationPattern
      *
-     * @param bool|null $defined_rotation_pattern defined_rotation_pattern
+     * @param bool|null $definedRotationPattern definedRotationPattern
      *
      * @return self
      */
-    public function setDefinedRotationPattern($defined_rotation_pattern)
+    public function setDefinedRotationPattern($definedRotationPattern)
     {
-        if (is_null($defined_rotation_pattern)) {
-            array_push($this->openAPINullablesSetToNull, 'defined_rotation_pattern');
+        if (is_null($definedRotationPattern)) {
+            array_push($this->openAPINullablesSetToNull, 'definedRotationPattern');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('defined_rotation_pattern', $nullablesSetToNull);
+            $index = array_search('definedRotationPattern', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['defined_rotation_pattern'] = $defined_rotation_pattern;
+        $this->container['definedRotationPattern'] = $definedRotationPattern;
 
         return $this;
     }
 
     /**
-     * Gets meeting_time_created
+     * Gets meetingTimeCreated
      *
      * @return bool|null
      */
     public function getMeetingTimeCreated()
     {
-        return $this->container['meeting_time_created'];
+        return $this->container['meetingTimeCreated'];
     }
 
     /**
-     * Sets meeting_time_created
+     * Sets meetingTimeCreated
      *
-     * @param bool|null $meeting_time_created meeting_time_created
+     * @param bool|null $meetingTimeCreated meetingTimeCreated
      *
      * @return self
      */
-    public function setMeetingTimeCreated($meeting_time_created)
+    public function setMeetingTimeCreated($meetingTimeCreated)
     {
-        if (is_null($meeting_time_created)) {
-            array_push($this->openAPINullablesSetToNull, 'meeting_time_created');
+        if (is_null($meetingTimeCreated)) {
+            array_push($this->openAPINullablesSetToNull, 'meetingTimeCreated');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('meeting_time_created', $nullablesSetToNull);
+            $index = array_search('meetingTimeCreated', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['meeting_time_created'] = $meeting_time_created;
+        $this->container['meetingTimeCreated'] = $meetingTimeCreated;
 
         return $this;
     }
 
     /**
-     * Gets block_rotation_created
+     * Gets blockRotationCreated
      *
      * @return bool|null
      */
     public function getBlockRotationCreated()
     {
-        return $this->container['block_rotation_created'];
+        return $this->container['blockRotationCreated'];
     }
 
     /**
-     * Sets block_rotation_created
+     * Sets blockRotationCreated
      *
-     * @param bool|null $block_rotation_created block_rotation_created
+     * @param bool|null $blockRotationCreated blockRotationCreated
      *
      * @return self
      */
-    public function setBlockRotationCreated($block_rotation_created)
+    public function setBlockRotationCreated($blockRotationCreated)
     {
-        if (is_null($block_rotation_created)) {
-            array_push($this->openAPINullablesSetToNull, 'block_rotation_created');
+        if (is_null($blockRotationCreated)) {
+            array_push($this->openAPINullablesSetToNull, 'blockRotationCreated');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_rotation_created', $nullablesSetToNull);
+            $index = array_search('blockRotationCreated', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_rotation_created'] = $block_rotation_created;
+        $this->container['blockRotationCreated'] = $blockRotationCreated;
 
         return $this;
     }
@@ -1462,477 +1462,477 @@ class ScheduleSetDetails implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets sun_in_use
+     * Gets sunInUse
      *
      * @return bool|null
      */
     public function getSunInUse()
     {
-        return $this->container['sun_in_use'];
+        return $this->container['sunInUse'];
     }
 
     /**
-     * Sets sun_in_use
+     * Sets sunInUse
      *
-     * @param bool|null $sun_in_use sun_in_use
+     * @param bool|null $sunInUse sunInUse
      *
      * @return self
      */
-    public function setSunInUse($sun_in_use)
+    public function setSunInUse($sunInUse)
     {
-        if (is_null($sun_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'sun_in_use');
+        if (is_null($sunInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'sunInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sun_in_use', $nullablesSetToNull);
+            $index = array_search('sunInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sun_in_use'] = $sun_in_use;
+        $this->container['sunInUse'] = $sunInUse;
 
         return $this;
     }
 
     /**
-     * Gets mon_in_use
+     * Gets monInUse
      *
      * @return bool|null
      */
     public function getMonInUse()
     {
-        return $this->container['mon_in_use'];
+        return $this->container['monInUse'];
     }
 
     /**
-     * Sets mon_in_use
+     * Sets monInUse
      *
-     * @param bool|null $mon_in_use mon_in_use
+     * @param bool|null $monInUse monInUse
      *
      * @return self
      */
-    public function setMonInUse($mon_in_use)
+    public function setMonInUse($monInUse)
     {
-        if (is_null($mon_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'mon_in_use');
+        if (is_null($monInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'monInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mon_in_use', $nullablesSetToNull);
+            $index = array_search('monInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['mon_in_use'] = $mon_in_use;
+        $this->container['monInUse'] = $monInUse;
 
         return $this;
     }
 
     /**
-     * Gets tue_in_use
+     * Gets tueInUse
      *
      * @return bool|null
      */
     public function getTueInUse()
     {
-        return $this->container['tue_in_use'];
+        return $this->container['tueInUse'];
     }
 
     /**
-     * Sets tue_in_use
+     * Sets tueInUse
      *
-     * @param bool|null $tue_in_use tue_in_use
+     * @param bool|null $tueInUse tueInUse
      *
      * @return self
      */
-    public function setTueInUse($tue_in_use)
+    public function setTueInUse($tueInUse)
     {
-        if (is_null($tue_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'tue_in_use');
+        if (is_null($tueInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'tueInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('tue_in_use', $nullablesSetToNull);
+            $index = array_search('tueInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['tue_in_use'] = $tue_in_use;
+        $this->container['tueInUse'] = $tueInUse;
 
         return $this;
     }
 
     /**
-     * Gets wed_in_use
+     * Gets wedInUse
      *
      * @return bool|null
      */
     public function getWedInUse()
     {
-        return $this->container['wed_in_use'];
+        return $this->container['wedInUse'];
     }
 
     /**
-     * Sets wed_in_use
+     * Sets wedInUse
      *
-     * @param bool|null $wed_in_use wed_in_use
+     * @param bool|null $wedInUse wedInUse
      *
      * @return self
      */
-    public function setWedInUse($wed_in_use)
+    public function setWedInUse($wedInUse)
     {
-        if (is_null($wed_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'wed_in_use');
+        if (is_null($wedInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'wedInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('wed_in_use', $nullablesSetToNull);
+            $index = array_search('wedInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['wed_in_use'] = $wed_in_use;
+        $this->container['wedInUse'] = $wedInUse;
 
         return $this;
     }
 
     /**
-     * Gets thu_in_use
+     * Gets thuInUse
      *
      * @return bool|null
      */
     public function getThuInUse()
     {
-        return $this->container['thu_in_use'];
+        return $this->container['thuInUse'];
     }
 
     /**
-     * Sets thu_in_use
+     * Sets thuInUse
      *
-     * @param bool|null $thu_in_use thu_in_use
+     * @param bool|null $thuInUse thuInUse
      *
      * @return self
      */
-    public function setThuInUse($thu_in_use)
+    public function setThuInUse($thuInUse)
     {
-        if (is_null($thu_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'thu_in_use');
+        if (is_null($thuInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'thuInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('thu_in_use', $nullablesSetToNull);
+            $index = array_search('thuInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['thu_in_use'] = $thu_in_use;
+        $this->container['thuInUse'] = $thuInUse;
 
         return $this;
     }
 
     /**
-     * Gets fri_in_use
+     * Gets friInUse
      *
      * @return bool|null
      */
     public function getFriInUse()
     {
-        return $this->container['fri_in_use'];
+        return $this->container['friInUse'];
     }
 
     /**
-     * Sets fri_in_use
+     * Sets friInUse
      *
-     * @param bool|null $fri_in_use fri_in_use
+     * @param bool|null $friInUse friInUse
      *
      * @return self
      */
-    public function setFriInUse($fri_in_use)
+    public function setFriInUse($friInUse)
     {
-        if (is_null($fri_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'fri_in_use');
+        if (is_null($friInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'friInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('fri_in_use', $nullablesSetToNull);
+            $index = array_search('friInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['fri_in_use'] = $fri_in_use;
+        $this->container['friInUse'] = $friInUse;
 
         return $this;
     }
 
     /**
-     * Gets sat_in_use
+     * Gets satInUse
      *
      * @return bool|null
      */
     public function getSatInUse()
     {
-        return $this->container['sat_in_use'];
+        return $this->container['satInUse'];
     }
 
     /**
-     * Sets sat_in_use
+     * Sets satInUse
      *
-     * @param bool|null $sat_in_use sat_in_use
+     * @param bool|null $satInUse satInUse
      *
      * @return self
      */
-    public function setSatInUse($sat_in_use)
+    public function setSatInUse($satInUse)
     {
-        if (is_null($sat_in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'sat_in_use');
+        if (is_null($satInUse)) {
+            array_push($this->openAPINullablesSetToNull, 'satInUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sat_in_use', $nullablesSetToNull);
+            $index = array_search('satInUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sat_in_use'] = $sat_in_use;
+        $this->container['satInUse'] = $satInUse;
 
         return $this;
     }
 
     /**
-     * Gets block_group_id
+     * Gets blockGroupId
      *
      * @return int|null
      */
     public function getBlockGroupId()
     {
-        return $this->container['block_group_id'];
+        return $this->container['blockGroupId'];
     }
 
     /**
-     * Sets block_group_id
+     * Sets blockGroupId
      *
-     * @param int|null $block_group_id block_group_id
+     * @param int|null $blockGroupId blockGroupId
      *
      * @return self
      */
-    public function setBlockGroupId($block_group_id)
+    public function setBlockGroupId($blockGroupId)
     {
-        if (is_null($block_group_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_group_id');
+        if (is_null($blockGroupId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockGroupId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_group_id', $nullablesSetToNull);
+            $index = array_search('blockGroupId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_group_id'] = $block_group_id;
+        $this->container['blockGroupId'] = $blockGroupId;
 
         return $this;
     }
 
     /**
-     * Gets meeting_time_id
+     * Gets meetingTimeId
      *
      * @return int|null
      */
     public function getMeetingTimeId()
     {
-        return $this->container['meeting_time_id'];
+        return $this->container['meetingTimeId'];
     }
 
     /**
-     * Sets meeting_time_id
+     * Sets meetingTimeId
      *
-     * @param int|null $meeting_time_id meeting_time_id
+     * @param int|null $meetingTimeId meetingTimeId
      *
      * @return self
      */
-    public function setMeetingTimeId($meeting_time_id)
+    public function setMeetingTimeId($meetingTimeId)
     {
-        if (is_null($meeting_time_id)) {
-            array_push($this->openAPINullablesSetToNull, 'meeting_time_id');
+        if (is_null($meetingTimeId)) {
+            array_push($this->openAPINullablesSetToNull, 'meetingTimeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('meeting_time_id', $nullablesSetToNull);
+            $index = array_search('meetingTimeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['meeting_time_id'] = $meeting_time_id;
+        $this->container['meetingTimeId'] = $meetingTimeId;
 
         return $this;
     }
 
     /**
-     * Gets insert_date
+     * Gets insertDate
      *
      * @return \DateTime|null
      */
     public function getInsertDate()
     {
-        return $this->container['insert_date'];
+        return $this->container['insertDate'];
     }
 
     /**
-     * Sets insert_date
+     * Sets insertDate
      *
-     * @param \DateTime|null $insert_date insert_date
+     * @param \DateTime|null $insertDate insertDate
      *
      * @return self
      */
-    public function setInsertDate($insert_date)
+    public function setInsertDate($insertDate)
     {
-        if (is_null($insert_date)) {
-            array_push($this->openAPINullablesSetToNull, 'insert_date');
+        if (is_null($insertDate)) {
+            array_push($this->openAPINullablesSetToNull, 'insertDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('insert_date', $nullablesSetToNull);
+            $index = array_search('insertDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['insert_date'] = $insert_date;
+        $this->container['insertDate'] = $insertDate;
 
         return $this;
     }
 
     /**
-     * Gets last_modify_date
+     * Gets lastModifyDate
      *
      * @return \DateTime|null
      */
     public function getLastModifyDate()
     {
-        return $this->container['last_modify_date'];
+        return $this->container['lastModifyDate'];
     }
 
     /**
-     * Sets last_modify_date
+     * Sets lastModifyDate
      *
-     * @param \DateTime|null $last_modify_date last_modify_date
+     * @param \DateTime|null $lastModifyDate lastModifyDate
      *
      * @return self
      */
-    public function setLastModifyDate($last_modify_date)
+    public function setLastModifyDate($lastModifyDate)
     {
-        if (is_null($last_modify_date)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modify_date');
+        if (is_null($lastModifyDate)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModifyDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modify_date', $nullablesSetToNull);
+            $index = array_search('lastModifyDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modify_date'] = $last_modify_date;
+        $this->container['lastModifyDate'] = $lastModifyDate;
 
         return $this;
     }
 
     /**
-     * Gets last_modify_user_id
+     * Gets lastModifyUserId
      *
      * @return int|null
      */
     public function getLastModifyUserId()
     {
-        return $this->container['last_modify_user_id'];
+        return $this->container['lastModifyUserId'];
     }
 
     /**
-     * Sets last_modify_user_id
+     * Sets lastModifyUserId
      *
-     * @param int|null $last_modify_user_id last_modify_user_id
+     * @param int|null $lastModifyUserId lastModifyUserId
      *
      * @return self
      */
-    public function setLastModifyUserId($last_modify_user_id)
+    public function setLastModifyUserId($lastModifyUserId)
     {
-        if (is_null($last_modify_user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modify_user_id');
+        if (is_null($lastModifyUserId)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModifyUserId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modify_user_id', $nullablesSetToNull);
+            $index = array_search('lastModifyUserId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modify_user_id'] = $last_modify_user_id;
+        $this->container['lastModifyUserId'] = $lastModifyUserId;
 
         return $this;
     }
 
     /**
-     * Gets fields_to_null
+     * Gets fieldsToNull
      *
      * @return string[]|null
      */
     public function getFieldsToNull()
     {
-        return $this->container['fields_to_null'];
+        return $this->container['fieldsToNull'];
     }
 
     /**
-     * Sets fields_to_null
+     * Sets fieldsToNull
      *
-     * @param string[]|null $fields_to_null fields_to_null
+     * @param string[]|null $fieldsToNull fieldsToNull
      *
      * @return self
      */
-    public function setFieldsToNull($fields_to_null)
+    public function setFieldsToNull($fieldsToNull)
     {
-        if (is_null($fields_to_null)) {
-            array_push($this->openAPINullablesSetToNull, 'fields_to_null');
+        if (is_null($fieldsToNull)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldsToNull');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('fields_to_null', $nullablesSetToNull);
+            $index = array_search('fieldsToNull', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['fields_to_null'] = $fields_to_null;
+        $this->container['fieldsToNull'] = $fieldsToNull;
 
         return $this;
     }
 
     /**
-     * Gets vendor_external_id
+     * Gets vendorExternalId
      *
      * @return string|null
      */
     public function getVendorExternalId()
     {
-        return $this->container['vendor_external_id'];
+        return $this->container['vendorExternalId'];
     }
 
     /**
-     * Sets vendor_external_id
+     * Sets vendorExternalId
      *
-     * @param string|null $vendor_external_id vendor_external_id
+     * @param string|null $vendorExternalId vendorExternalId
      *
      * @return self
      */
-    public function setVendorExternalId($vendor_external_id)
+    public function setVendorExternalId($vendorExternalId)
     {
-        if (is_null($vendor_external_id)) {
-            array_push($this->openAPINullablesSetToNull, 'vendor_external_id');
+        if (is_null($vendorExternalId)) {
+            array_push($this->openAPINullablesSetToNull, 'vendorExternalId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('vendor_external_id', $nullablesSetToNull);
+            $index = array_search('vendorExternalId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['vendor_external_id'] = $vendor_external_id;
+        $this->container['vendorExternalId'] = $vendorExternalId;
 
         return $this;
     }

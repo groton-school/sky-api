@@ -58,10 +58,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'block_id' => 'int',
-        'block_description' => 'string',
-        'start_time' => '\DateTime',
-        'end_time' => '\DateTime',
+        'blockId' => 'int',
+        'blockDescription' => 'string',
+        'startTime' => '\DateTime',
+        'endTime' => '\DateTime',
     ];
 
     /**
@@ -72,10 +72,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'block_id' => 'int32',
-        'block_description' => null,
-        'start_time' => 'date-time',
-        'end_time' => 'date-time',
+        'blockId' => 'int32',
+        'blockDescription' => null,
+        'startTime' => 'date-time',
+        'endTime' => 'date-time',
     ];
 
     /**
@@ -84,10 +84,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'block_id' => true,
-        'block_description' => true,
-        'start_time' => true,
-        'end_time' => true,
+        'blockId' => true,
+        'blockDescription' => true,
+        'startTime' => true,
+        'endTime' => true,
     ];
 
     /**
@@ -176,10 +176,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'block_id' => 'block_id',
-        'block_description' => 'block_description',
-        'start_time' => 'start_time',
-        'end_time' => 'end_time',
+        'blockId' => 'block_id',
+        'blockDescription' => 'block_description',
+        'startTime' => 'start_time',
+        'endTime' => 'end_time',
     ];
 
     /**
@@ -188,10 +188,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'block_id' => 'setBlockId',
-        'block_description' => 'setBlockDescription',
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime',
+        'blockId' => 'setBlockId',
+        'blockDescription' => 'setBlockDescription',
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime',
     ];
 
     /**
@@ -200,10 +200,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'block_id' => 'getBlockId',
-        'block_description' => 'getBlockDescription',
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime',
+        'blockId' => 'getBlockId',
+        'blockDescription' => 'getBlockDescription',
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime',
     ];
 
     /**
@@ -263,10 +263,10 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('block_id', $data ?? [], null);
-        $this->setIfExists('block_description', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
+        $this->setIfExists('blockDescription', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
     }
 
     /**
@@ -312,137 +312,137 @@ class SpecialDayBlock implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id
+     * @param int|null $blockId
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_id');
+        if (is_null($blockId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_id', $nullablesSetToNull);
+            $index = array_search('blockId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
 
     /**
-     * Gets block_description
+     * Gets blockDescription
      *
      * @return string|null
      */
     public function getBlockDescription()
     {
-        return $this->container['block_description'];
+        return $this->container['blockDescription'];
     }
 
     /**
-     * Sets block_description
+     * Sets blockDescription
      *
-     * @param string|null $block_description
+     * @param string|null $blockDescription
      *
      * @return self
      */
-    public function setBlockDescription($block_description)
+    public function setBlockDescription($blockDescription)
     {
-        if (is_null($block_description)) {
-            array_push($this->openAPINullablesSetToNull, 'block_description');
+        if (is_null($blockDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'blockDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_description', $nullablesSetToNull);
+            $index = array_search('blockDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_description'] = $block_description;
+        $this->container['blockDescription'] = $blockDescription;
 
         return $this;
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime|null $start_time
+     * @param \DateTime|null $startTime
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            array_push($this->openAPINullablesSetToNull, 'start_time');
+        if (is_null($startTime)) {
+            array_push($this->openAPINullablesSetToNull, 'startTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_time', $nullablesSetToNull);
+            $index = array_search('startTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time
+     * @param \DateTime|null $endTime
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }

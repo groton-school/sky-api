@@ -59,12 +59,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'active' => 'bool',
-        'automated_email' => 'string',
+        'automatedEmail' => 'string',
         'email' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'relationship' => 'string',
-        'sort_order' => 'int',
+        'sortOrder' => 'int',
     ];
 
     /**
@@ -76,12 +76,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'active' => null,
-        'automated_email' => null,
+        'automatedEmail' => null,
         'email' => null,
-        'first_name' => null,
-        'last_name' => null,
+        'firstName' => null,
+        'lastName' => null,
         'relationship' => null,
-        'sort_order' => 'int32',
+        'sortOrder' => 'int32',
     ];
 
     /**
@@ -91,12 +91,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'active' => false,
-        'automated_email' => true,
+        'automatedEmail' => true,
         'email' => true,
-        'first_name' => true,
-        'last_name' => true,
+        'firstName' => true,
+        'lastName' => true,
         'relationship' => true,
-        'sort_order' => true,
+        'sortOrder' => true,
     ];
 
     /**
@@ -186,12 +186,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'active' => 'active',
-        'automated_email' => 'automated_email',
+        'automatedEmail' => 'automated_email',
         'email' => 'email',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'relationship' => 'relationship',
-        'sort_order' => 'sort_order',
+        'sortOrder' => 'sort_order',
     ];
 
     /**
@@ -201,12 +201,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'active' => 'setActive',
-        'automated_email' => 'setAutomatedEmail',
+        'automatedEmail' => 'setAutomatedEmail',
         'email' => 'setEmail',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'relationship' => 'setRelationship',
-        'sort_order' => 'setSortOrder',
+        'sortOrder' => 'setSortOrder',
     ];
 
     /**
@@ -216,12 +216,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'active' => 'getActive',
-        'automated_email' => 'getAutomatedEmail',
+        'automatedEmail' => 'getAutomatedEmail',
         'email' => 'getEmail',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'relationship' => 'getRelationship',
-        'sort_order' => 'getSortOrder',
+        'sortOrder' => 'getSortOrder',
     ];
 
     /**
@@ -282,12 +282,12 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(array $data = null)
     {
         $this->setIfExists('active', $data ?? [], null);
-        $this->setIfExists('automated_email', $data ?? [], null);
+        $this->setIfExists('automatedEmail', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('relationship', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
     }
 
     /**
@@ -360,35 +360,35 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets automated_email
+     * Gets automatedEmail
      *
      * @return string|null
      */
     public function getAutomatedEmail()
     {
-        return $this->container['automated_email'];
+        return $this->container['automatedEmail'];
     }
 
     /**
-     * Sets automated_email
+     * Sets automatedEmail
      *
-     * @param string|null $automated_email Automated email type
+     * @param string|null $automatedEmail Automated email type
      *
      * @return self
      */
-    public function setAutomatedEmail($automated_email)
+    public function setAutomatedEmail($automatedEmail)
     {
-        if (is_null($automated_email)) {
-            array_push($this->openAPINullablesSetToNull, 'automated_email');
+        if (is_null($automatedEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'automatedEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('automated_email', $nullablesSetToNull);
+            $index = array_search('automatedEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['automated_email'] = $automated_email;
+        $this->container['automatedEmail'] = $automatedEmail;
 
         return $this;
     }
@@ -428,69 +428,69 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the emergency contact
+     * @param string|null $firstName The first name of the emergency contact
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the emergency contact
+     * @param string|null $lastName The last name of the emergency contact
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -530,35 +530,35 @@ class EmergencyContactChangeEmail implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order Sort order
+     * @param int|null $sortOrder Sort order
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }

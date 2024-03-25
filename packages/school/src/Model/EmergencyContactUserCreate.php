@@ -58,10 +58,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'automated_email' => 'int',
-        'call_dialer' => 'int',
+        'automatedEmail' => 'int',
+        'callDialer' => 'int',
         'email' => 'string',
-        'phone_number' => 'string',
+        'phoneNumber' => 'string',
     ];
 
     /**
@@ -72,10 +72,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'automated_email' => 'int32',
-        'call_dialer' => 'int32',
+        'automatedEmail' => 'int32',
+        'callDialer' => 'int32',
         'email' => null,
-        'phone_number' => null,
+        'phoneNumber' => null,
     ];
 
     /**
@@ -84,10 +84,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'automated_email' => false,
-        'call_dialer' => false,
+        'automatedEmail' => false,
+        'callDialer' => false,
         'email' => true,
-        'phone_number' => true,
+        'phoneNumber' => true,
     ];
 
     /**
@@ -176,10 +176,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'automated_email' => 'automated_email',
-        'call_dialer' => 'call_dialer',
+        'automatedEmail' => 'automated_email',
+        'callDialer' => 'call_dialer',
         'email' => 'email',
-        'phone_number' => 'phone_number',
+        'phoneNumber' => 'phone_number',
     ];
 
     /**
@@ -188,10 +188,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'automated_email' => 'setAutomatedEmail',
-        'call_dialer' => 'setCallDialer',
+        'automatedEmail' => 'setAutomatedEmail',
+        'callDialer' => 'setCallDialer',
         'email' => 'setEmail',
-        'phone_number' => 'setPhoneNumber',
+        'phoneNumber' => 'setPhoneNumber',
     ];
 
     /**
@@ -200,10 +200,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'automated_email' => 'getAutomatedEmail',
-        'call_dialer' => 'getCallDialer',
+        'automatedEmail' => 'getAutomatedEmail',
+        'callDialer' => 'getCallDialer',
         'email' => 'getEmail',
-        'phone_number' => 'getPhoneNumber',
+        'phoneNumber' => 'getPhoneNumber',
     ];
 
     /**
@@ -263,10 +263,10 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('automated_email', $data ?? [], null);
-        $this->setIfExists('call_dialer', $data ?? [], null);
+        $this->setIfExists('automatedEmail', $data ?? [], null);
+        $this->setIfExists('callDialer', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('phone_number', $data ?? [], null);
+        $this->setIfExists('phoneNumber', $data ?? [], null);
     }
 
     /**
@@ -312,55 +312,55 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets automated_email
+     * Gets automatedEmail
      *
      * @return int|null
      */
     public function getAutomatedEmail()
     {
-        return $this->container['automated_email'];
+        return $this->container['automatedEmail'];
     }
 
     /**
-     * Sets automated_email
+     * Sets automatedEmail
      *
-     * @param int|null $automated_email The value to be used for the automated email field.  0 = Never, 1 = Every Time, 2 = Emergency Only
+     * @param int|null $automatedEmail The value to be used for the automated email field.  0 = Never, 1 = Every Time, 2 = Emergency Only
      *
      * @return self
      */
-    public function setAutomatedEmail($automated_email)
+    public function setAutomatedEmail($automatedEmail)
     {
-        if (is_null($automated_email)) {
-            throw new \InvalidArgumentException('non-nullable automated_email cannot be null');
+        if (is_null($automatedEmail)) {
+            throw new \InvalidArgumentException('non-nullable automatedEmail cannot be null');
         }
-        $this->container['automated_email'] = $automated_email;
+        $this->container['automatedEmail'] = $automatedEmail;
 
         return $this;
     }
 
     /**
-     * Gets call_dialer
+     * Gets callDialer
      *
      * @return int|null
      */
     public function getCallDialer()
     {
-        return $this->container['call_dialer'];
+        return $this->container['callDialer'];
     }
 
     /**
-     * Sets call_dialer
+     * Sets callDialer
      *
-     * @param int|null $call_dialer The value to be used for the automated call dialer field.  0 = Never, 1 = Every Time, 2 = Emergency Only
+     * @param int|null $callDialer The value to be used for the automated call dialer field.  0 = Never, 1 = Every Time, 2 = Emergency Only
      *
      * @return self
      */
-    public function setCallDialer($call_dialer)
+    public function setCallDialer($callDialer)
     {
-        if (is_null($call_dialer)) {
-            throw new \InvalidArgumentException('non-nullable call_dialer cannot be null');
+        if (is_null($callDialer)) {
+            throw new \InvalidArgumentException('non-nullable callDialer cannot be null');
         }
-        $this->container['call_dialer'] = $call_dialer;
+        $this->container['callDialer'] = $callDialer;
 
         return $this;
     }
@@ -400,35 +400,35 @@ class EmergencyContactUserCreate implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets phone_number
+     * Gets phoneNumber
      *
      * @return string|null
      */
     public function getPhoneNumber()
     {
-        return $this->container['phone_number'];
+        return $this->container['phoneNumber'];
     }
 
     /**
-     * Sets phone_number
+     * Sets phoneNumber
      *
-     * @param string|null $phone_number The phone number for the emergency contact
+     * @param string|null $phoneNumber The phone number for the emergency contact
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        if (is_null($phone_number)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_number');
+        if (is_null($phoneNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_number', $nullablesSetToNull);
+            $index = array_search('phoneNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
     }

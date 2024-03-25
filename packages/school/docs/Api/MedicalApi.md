@@ -28,7 +28,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1MedicalAllergiesByAllergyIdDelete()`
 
 ```php
-v1MedicalAllergiesByAllergyIdDelete($allergy_id): int
+v1MedicalAllergiesByAllergyIdDelete($allergyId): int
 ```
 
 Medical allergies delete (BETA)
@@ -59,10 +59,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$allergy_id = 56; // int | Format - int32. The ID of the student's allergy.
+$allergyId = 56; // int | Format - int32. The ID of the student's allergy.
 
 try {
-    $result = $apiInstance->v1MedicalAllergiesByAllergyIdDelete($allergy_id);
+    $result = $apiInstance->v1MedicalAllergiesByAllergyIdDelete($allergyId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalAllergiesByAllergyIdDelete: ', $e->getMessage(), PHP_EOL;
@@ -73,7 +73,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **allergy_id** | **int**| Format - int32. The ID of the student&#39;s allergy. | |
+| **allergyId** | **int**| Format - int32. The ID of the student&#39;s allergy. | |
 
 ### Return type
 
@@ -95,7 +95,7 @@ try {
 ## `v1MedicalAllergiesByAllergyIdPatch()`
 
 ```php
-v1MedicalAllergiesByAllergyIdPatch($allergy_id, $student_allergy_update): int
+v1MedicalAllergiesByAllergyIdPatch($allergyId, $studentAllergyUpdate): int
 ```
 
 Medical allergies update (BETA)
@@ -126,11 +126,11 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$allergy_id = 56; // int | Format - int32. The ID of the student's allergy.
-$student_allergy_update = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","notes":"notes","allergy_signs":"allergy signs","minor_reaction_response":"minor reaction response","major_reaction_response":"major reaction response","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentAllergyUpdate | The allergy changes
+$allergyId = 56; // int | Format - int32. The ID of the student's allergy.
+$studentAllergyUpdate = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","notes":"notes","allergy_signs":"allergy signs","minor_reaction_response":"minor reaction response","major_reaction_response":"major reaction response","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentAllergyUpdate | The allergy changes
 
 try {
-    $result = $apiInstance->v1MedicalAllergiesByAllergyIdPatch($allergy_id, $student_allergy_update);
+    $result = $apiInstance->v1MedicalAllergiesByAllergyIdPatch($allergyId, $studentAllergyUpdate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalAllergiesByAllergyIdPatch: ', $e->getMessage(), PHP_EOL;
@@ -141,8 +141,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **allergy_id** | **int**| Format - int32. The ID of the student&#39;s allergy. | |
-| **student_allergy_update** | [**\SKY\School\Model\StudentAllergyUpdate**](../Model/StudentAllergyUpdate.md)| The allergy changes | [optional] |
+| **allergyId** | **int**| Format - int32. The ID of the student&#39;s allergy. | |
+| **studentAllergyUpdate** | [**\SKY\School\Model\StudentAllergyUpdate**](../Model/StudentAllergyUpdate.md)| The allergy changes | [optional] |
 
 ### Return type
 
@@ -164,7 +164,7 @@ try {
 ## `v1MedicalAllergiesPost()`
 
 ```php
-v1MedicalAllergiesPost($student_medical_allergy): int
+v1MedicalAllergiesPost($studentMedicalAllergy): int
 ```
 
 Medical allergies create (BETA)
@@ -195,10 +195,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_medical_allergy = {"user_id":1,"allergy":"Peanut butter","date_as_of":"2023-08-31T12:00:00.0000000+00:00","date_until":"2024-02-01T12:00:00.0000000+00:00","notes":"Life threatening","allergy_signs":"Rash and wheezing","minor_reaction_response":"Give Benadryl","major_reaction_response":"Use epi pen","access_roles":[{"id":1,"has_access":true},{"id":2,"has_access":false}],"student_medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalAllergy | The medical allergy to be created for student
+$studentMedicalAllergy = {"user_id":1,"allergy":"Peanut butter","date_as_of":"2023-08-31T12:00:00.0000000+00:00","date_until":"2024-02-01T12:00:00.0000000+00:00","notes":"Life threatening","allergy_signs":"Rash and wheezing","minor_reaction_response":"Give Benadryl","major_reaction_response":"Use epi pen","access_roles":[{"id":1,"has_access":true},{"id":2,"has_access":false}],"student_medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalAllergy | The medical allergy to be created for student
 
 try {
-    $result = $apiInstance->v1MedicalAllergiesPost($student_medical_allergy);
+    $result = $apiInstance->v1MedicalAllergiesPost($studentMedicalAllergy);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalAllergiesPost: ', $e->getMessage(), PHP_EOL;
@@ -209,7 +209,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_medical_allergy** | [**\SKY\School\Model\StudentMedicalAllergy**](../Model/StudentMedicalAllergy.md)| The medical allergy to be created for student | [optional] |
+| **studentMedicalAllergy** | [**\SKY\School\Model\StudentMedicalAllergy**](../Model/StudentMedicalAllergy.md)| The medical allergy to be created for student | [optional] |
 
 ### Return type
 
@@ -231,7 +231,7 @@ try {
 ## `v1MedicalAllergiesconditionsPost()`
 
 ```php
-v1MedicalAllergiesconditionsPost($student_medical_allergy_condition): int
+v1MedicalAllergiesconditionsPost($studentMedicalAllergyCondition): int
 ```
 
 Medical allergies/conditions create (BETA)
@@ -262,10 +262,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_medical_allergy_condition = {"user_id":1,"type":"allergy or condition","allergy_condition_type":"12","date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","allergy_signs":"allergy signs","minor_reaction_response":"minor reaction response","major_reaction_response":"major reaction response","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalAllergyCondition | The medical allergy/condition to be created for student
+$studentMedicalAllergyCondition = {"user_id":1,"type":"allergy or condition","allergy_condition_type":"12","date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","allergy_signs":"allergy signs","minor_reaction_response":"minor reaction response","major_reaction_response":"major reaction response","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalAllergyCondition | The medical allergy/condition to be created for student
 
 try {
-    $result = $apiInstance->v1MedicalAllergiesconditionsPost($student_medical_allergy_condition);
+    $result = $apiInstance->v1MedicalAllergiesconditionsPost($studentMedicalAllergyCondition);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalAllergiesconditionsPost: ', $e->getMessage(), PHP_EOL;
@@ -276,7 +276,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_medical_allergy_condition** | [**\SKY\School\Model\StudentMedicalAllergyCondition**](../Model/StudentMedicalAllergyCondition.md)| The medical allergy/condition to be created for student | [optional] |
+| **studentMedicalAllergyCondition** | [**\SKY\School\Model\StudentMedicalAllergyCondition**](../Model/StudentMedicalAllergyCondition.md)| The medical allergy/condition to be created for student | [optional] |
 
 ### Return type
 
@@ -298,7 +298,7 @@ try {
 ## `v1MedicalAthleticclearancePost()`
 
 ```php
-v1MedicalAthleticclearancePost($student_athletic_requirement_update): string[]
+v1MedicalAthleticclearancePost($studentAthleticRequirementUpdate): string[]
 ```
 
 Athletic requirements update (BETA)
@@ -329,10 +329,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_athletic_requirement_update = {"user_id":123,"school_year":"2023 - 2024","season":"156057","athletics_requirement":[{"athletic_type":"Swim Test","athletic_date":"2022-01-01T01:00:00.0000000+00:00"},{"athletic_type":"Can Actively Play"}]}; // \SKY\School\Model\StudentAthleticRequirementUpdate | The athletics requirements to update
+$studentAthleticRequirementUpdate = {"user_id":123,"school_year":"2023 - 2024","season":"156057","athletics_requirement":[{"athletic_type":"Swim Test","athletic_date":"2022-01-01T01:00:00.0000000+00:00"},{"athletic_type":"Can Actively Play"}]}; // \SKY\School\Model\StudentAthleticRequirementUpdate | The athletics requirements to update
 
 try {
-    $result = $apiInstance->v1MedicalAthleticclearancePost($student_athletic_requirement_update);
+    $result = $apiInstance->v1MedicalAthleticclearancePost($studentAthleticRequirementUpdate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalAthleticclearancePost: ', $e->getMessage(), PHP_EOL;
@@ -343,7 +343,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_athletic_requirement_update** | [**\SKY\School\Model\StudentAthleticRequirementUpdate**](../Model/StudentAthleticRequirementUpdate.md)| The athletics requirements to update | [optional] |
+| **studentAthleticRequirementUpdate** | [**\SKY\School\Model\StudentAthleticRequirementUpdate**](../Model/StudentAthleticRequirementUpdate.md)| The athletics requirements to update | [optional] |
 
 ### Return type
 
@@ -365,7 +365,7 @@ try {
 ## `v1MedicalConditionsByConditionIdDelete()`
 
 ```php
-v1MedicalConditionsByConditionIdDelete($condition_id): int
+v1MedicalConditionsByConditionIdDelete($conditionId): int
 ```
 
 Medical conditions delete (BETA)
@@ -396,10 +396,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$condition_id = 56; // int | Format - int32. The ID of the student's condition.
+$conditionId = 56; // int | Format - int32. The ID of the student's condition.
 
 try {
-    $result = $apiInstance->v1MedicalConditionsByConditionIdDelete($condition_id);
+    $result = $apiInstance->v1MedicalConditionsByConditionIdDelete($conditionId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalConditionsByConditionIdDelete: ', $e->getMessage(), PHP_EOL;
@@ -410,7 +410,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **condition_id** | **int**| Format - int32. The ID of the student&#39;s condition. | |
+| **conditionId** | **int**| Format - int32. The ID of the student&#39;s condition. | |
 
 ### Return type
 
@@ -432,7 +432,7 @@ try {
 ## `v1MedicalConditionsByConditionIdPatch()`
 
 ```php
-v1MedicalConditionsByConditionIdPatch($condition_id, $student_condition_update): int
+v1MedicalConditionsByConditionIdPatch($conditionId, $studentConditionUpdate): int
 ```
 
 Medical conditions update (BETA)
@@ -463,11 +463,11 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$condition_id = 56; // int | Format - int32. The ID of the student's condition.
-$student_condition_update = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","notes":"notes","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentConditionUpdate | The condition changes
+$conditionId = 56; // int | Format - int32. The ID of the student's condition.
+$studentConditionUpdate = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","notes":"notes","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}],"medications":[1,2,3]}; // \SKY\School\Model\StudentConditionUpdate | The condition changes
 
 try {
-    $result = $apiInstance->v1MedicalConditionsByConditionIdPatch($condition_id, $student_condition_update);
+    $result = $apiInstance->v1MedicalConditionsByConditionIdPatch($conditionId, $studentConditionUpdate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalConditionsByConditionIdPatch: ', $e->getMessage(), PHP_EOL;
@@ -478,8 +478,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **condition_id** | **int**| Format - int32. The ID of the student&#39;s condition. | |
-| **student_condition_update** | [**\SKY\School\Model\StudentConditionUpdate**](../Model/StudentConditionUpdate.md)| The condition changes | [optional] |
+| **conditionId** | **int**| Format - int32. The ID of the student&#39;s condition. | |
+| **studentConditionUpdate** | [**\SKY\School\Model\StudentConditionUpdate**](../Model/StudentConditionUpdate.md)| The condition changes | [optional] |
 
 ### Return type
 
@@ -501,7 +501,7 @@ try {
 ## `v1MedicalConditionsPost()`
 
 ```php
-v1MedicalConditionsPost($student_medical_condition): int
+v1MedicalConditionsPost($studentMedicalCondition): int
 ```
 
 Medical conditions create (BETA)
@@ -532,10 +532,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_medical_condition = {"user_id":1,"condition":"Asthma","date_as_of":"2023-08-31T12:00:00.0000000+00:00","date_until":"2024-02-01T12:00:00.0000000+00:00","notes":"Can cause panic attack","access_roles":[{"id":1,"has_access":true},{"id":2,"has_access":false}],"student_medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalCondition | The medical condition to be created for student
+$studentMedicalCondition = {"user_id":1,"condition":"Asthma","date_as_of":"2023-08-31T12:00:00.0000000+00:00","date_until":"2024-02-01T12:00:00.0000000+00:00","notes":"Can cause panic attack","access_roles":[{"id":1,"has_access":true},{"id":2,"has_access":false}],"student_medications":[1,2,3]}; // \SKY\School\Model\StudentMedicalCondition | The medical condition to be created for student
 
 try {
-    $result = $apiInstance->v1MedicalConditionsPost($student_medical_condition);
+    $result = $apiInstance->v1MedicalConditionsPost($studentMedicalCondition);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalConditionsPost: ', $e->getMessage(), PHP_EOL;
@@ -546,7 +546,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_medical_condition** | [**\SKY\School\Model\StudentMedicalCondition**](../Model/StudentMedicalCondition.md)| The medical condition to be created for student | [optional] |
+| **studentMedicalCondition** | [**\SKY\School\Model\StudentMedicalCondition**](../Model/StudentMedicalCondition.md)| The medical condition to be created for student | [optional] |
 
 ### Return type
 
@@ -568,7 +568,7 @@ try {
 ## `v1MedicalImmunizationsPost()`
 
 ```php
-v1MedicalImmunizationsPost($student_immunization_update)
+v1MedicalImmunizationsPost($studentImmunizationUpdate)
 ```
 
 Medical immunizations update (BETA)
@@ -599,10 +599,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_immunization_update = {"user_id":123,"immunizations":[{"immunization_type":"dtap"},{"immunization_type":"12","immunization_date":"2022-01-01T01:00:00.0000000+00:00"}]}; // \SKY\School\Model\StudentImmunizationUpdate | The immunizations to update
+$studentImmunizationUpdate = {"user_id":123,"immunizations":[{"immunization_type":"dtap"},{"immunization_type":"12","immunization_date":"2022-01-01T01:00:00.0000000+00:00"}]}; // \SKY\School\Model\StudentImmunizationUpdate | The immunizations to update
 
 try {
-    $apiInstance->v1MedicalImmunizationsPost($student_immunization_update);
+    $apiInstance->v1MedicalImmunizationsPost($studentImmunizationUpdate);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalImmunizationsPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -612,7 +612,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_immunization_update** | [**\SKY\School\Model\StudentImmunizationUpdate**](../Model/StudentImmunizationUpdate.md)| The immunizations to update | [optional] |
+| **studentImmunizationUpdate** | [**\SKY\School\Model\StudentImmunizationUpdate**](../Model/StudentImmunizationUpdate.md)| The immunizations to update | [optional] |
 
 ### Return type
 
@@ -634,7 +634,7 @@ void (empty response body)
 ## `v1MedicalMedicationsByMedicationIdDelete()`
 
 ```php
-v1MedicalMedicationsByMedicationIdDelete($medication_id): int
+v1MedicalMedicationsByMedicationIdDelete($medicationId): int
 ```
 
 Medical medications delete (BETA)
@@ -665,10 +665,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$medication_id = 56; // int | Format - int32. The ID of the student's medication.
+$medicationId = 56; // int | Format - int32. The ID of the student's medication.
 
 try {
-    $result = $apiInstance->v1MedicalMedicationsByMedicationIdDelete($medication_id);
+    $result = $apiInstance->v1MedicalMedicationsByMedicationIdDelete($medicationId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalMedicationsByMedicationIdDelete: ', $e->getMessage(), PHP_EOL;
@@ -679,7 +679,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **medication_id** | **int**| Format - int32. The ID of the student&#39;s medication. | |
+| **medicationId** | **int**| Format - int32. The ID of the student&#39;s medication. | |
 
 ### Return type
 
@@ -701,7 +701,7 @@ try {
 ## `v1MedicalMedicationsByMedicationIdPatch()`
 
 ```php
-v1MedicalMedicationsByMedicationIdPatch($medication_id, $student_medication_update): int
+v1MedicalMedicationsByMedicationIdPatch($medicationId, $studentMedicationUpdate): int
 ```
 
 Medical medication update (BETA)
@@ -732,11 +732,11 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$medication_id = 56; // int | Format - int32. >The student medication ID
-$student_medication_update = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","location":"Admin Office","dosage":"1","despense_times_a_day":2,"dispense_frequency":"specificdays","dispense_days":{"sunday":false,"monday":false,"tuesday":false,"wednesday":true,"thursday":false,"friday":false,"saturday":false},"conditions":[1,2],"allergies":[1,2,3]}; // \SKY\School\Model\StudentMedicationUpdate | The medication changes to update
+$medicationId = 56; // int | Format - int32. >The student medication ID
+$studentMedicationUpdate = {"date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","location":"Admin Office","dosage":"1","despense_times_a_day":2,"dispense_frequency":"specificdays","dispense_days":{"sunday":false,"monday":false,"tuesday":false,"wednesday":true,"thursday":false,"friday":false,"saturday":false},"conditions":[1,2],"allergies":[1,2,3]}; // \SKY\School\Model\StudentMedicationUpdate | The medication changes to update
 
 try {
-    $result = $apiInstance->v1MedicalMedicationsByMedicationIdPatch($medication_id, $student_medication_update);
+    $result = $apiInstance->v1MedicalMedicationsByMedicationIdPatch($medicationId, $studentMedicationUpdate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalMedicationsByMedicationIdPatch: ', $e->getMessage(), PHP_EOL;
@@ -747,8 +747,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **medication_id** | **int**| Format - int32. &gt;The student medication ID | |
-| **student_medication_update** | [**\SKY\School\Model\StudentMedicationUpdate**](../Model/StudentMedicationUpdate.md)| The medication changes to update | [optional] |
+| **medicationId** | **int**| Format - int32. &gt;The student medication ID | |
+| **studentMedicationUpdate** | [**\SKY\School\Model\StudentMedicationUpdate**](../Model/StudentMedicationUpdate.md)| The medication changes to update | [optional] |
 
 ### Return type
 
@@ -770,7 +770,7 @@ try {
 ## `v1MedicalMedicationsPost()`
 
 ```php
-v1MedicalMedicationsPost($student_medication_create): int
+v1MedicalMedicationsPost($studentMedicationCreate): int
 ```
 
 Medical medications create (BETA)
@@ -801,10 +801,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_medication_create = {"user_id":123,"medication_type":"Insulin","date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","location":"At home","dosage":"1","dispense":{"times_a_day":2,"frequency":"specific days","days":{"sunday":false,"monday":false,"tuesday":false,"wednesday":true,"thursday":false,"friday":false,"saturday":false}},"conditions":[1,2],"allergies":[1,2],"notes":"Comments","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}]}; // \SKY\School\Model\StudentMedicationCreate | The medication to be created for student
+$studentMedicationCreate = {"user_id":123,"medication_type":"Insulin","date_as_of":"2023-01-01T12:00:00.0000000+00:00","date_until":"2023-02-01T12:00:00.0000000+00:00","location":"At home","dosage":"1","dispense":{"times_a_day":2,"frequency":"specific days","days":{"sunday":false,"monday":false,"tuesday":false,"wednesday":true,"thursday":false,"friday":false,"saturday":false}},"conditions":[1,2],"allergies":[1,2],"notes":"Comments","role_access":[{"role_id":1,"has_access":true},{"role_id":2,"has_access":false}]}; // \SKY\School\Model\StudentMedicationCreate | The medication to be created for student
 
 try {
-    $result = $apiInstance->v1MedicalMedicationsPost($student_medication_create);
+    $result = $apiInstance->v1MedicalMedicationsPost($studentMedicationCreate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalMedicationsPost: ', $e->getMessage(), PHP_EOL;
@@ -815,7 +815,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_medication_create** | [**\SKY\School\Model\StudentMedicationCreate**](../Model/StudentMedicationCreate.md)| The medication to be created for student | [optional] |
+| **studentMedicationCreate** | [**\SKY\School\Model\StudentMedicationCreate**](../Model/StudentMedicationCreate.md)| The medication to be created for student | [optional] |
 
 ### Return type
 
@@ -901,7 +901,7 @@ This endpoint does not need any parameter.
 ## `v1MedicalUsersByUserIdAllergiesGet()`
 
 ```php
-v1MedicalUsersByUserIdAllergiesGet($user_id): \SKY\School\Model\StudentAllergiesView[]
+v1MedicalUsersByUserIdAllergiesGet($userId): \SKY\School\Model\StudentAllergiesView[]
 ```
 
 Medical allergies for a student (BETA)
@@ -932,10 +932,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. ID of the student
+$userId = 56; // int | Format - int32. ID of the student
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdAllergiesGet($user_id);
+    $result = $apiInstance->v1MedicalUsersByUserIdAllergiesGet($userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdAllergiesGet: ', $e->getMessage(), PHP_EOL;
@@ -946,7 +946,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. ID of the student | |
+| **userId** | **int**| Format - int32. ID of the student | |
 
 ### Return type
 
@@ -968,7 +968,7 @@ try {
 ## `v1MedicalUsersByUserIdAllergiesconditionsGet()`
 
 ```php
-v1MedicalUsersByUserIdAllergiesconditionsGet($user_id): \SKY\School\Model\AllergiesAndConditionsView[]
+v1MedicalUsersByUserIdAllergiesconditionsGet($userId): \SKY\School\Model\AllergiesAndConditionsView[]
 ```
 
 Medical allergies/conditions for a student (BETA)
@@ -999,10 +999,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. ID of the student
+$userId = 56; // int | Format - int32. ID of the student
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdAllergiesconditionsGet($user_id);
+    $result = $apiInstance->v1MedicalUsersByUserIdAllergiesconditionsGet($userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdAllergiesconditionsGet: ', $e->getMessage(), PHP_EOL;
@@ -1013,7 +1013,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. ID of the student | |
+| **userId** | **int**| Format - int32. ID of the student | |
 
 ### Return type
 
@@ -1035,7 +1035,7 @@ try {
 ## `v1MedicalUsersByUserIdAthleticrequirementsGet()`
 
 ```php
-v1MedicalUsersByUserIdAthleticrequirementsGet($user_id, $school_year, $season, $include): \SKY\School\Model\StudentAthleticRequirementRead[]
+v1MedicalUsersByUserIdAthleticrequirementsGet($userId, $schoolYear, $season, $include): \SKY\School\Model\StudentAthleticRequirementRead[]
 ```
 
 Medical athletic requirements for a student (BETA)
@@ -1066,13 +1066,13 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. The ID of the student
-$school_year = 'school_year_example'; // string | The description of the school year
+$userId = 56; // int | Format - int32. The ID of the student
+$schoolYear = 'schoolYear_example'; // string | The description of the school year
 $season = 'season_example'; // string | The description of the season
 $include = 'include_example'; // string | Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdAthleticrequirementsGet($user_id, $school_year, $season, $include);
+    $result = $apiInstance->v1MedicalUsersByUserIdAthleticrequirementsGet($userId, $schoolYear, $season, $include);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdAthleticrequirementsGet: ', $e->getMessage(), PHP_EOL;
@@ -1083,8 +1083,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. The ID of the student | |
-| **school_year** | **string**| The description of the school year | [optional] |
+| **userId** | **int**| Format - int32. The ID of the student | |
+| **schoolYear** | **string**| The description of the school year | [optional] |
 | **season** | **string**| The description of the season | [optional] |
 | **include** | **string**| Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing | [optional] |
 
@@ -1108,7 +1108,7 @@ try {
 ## `v1MedicalUsersByUserIdConditionsGet()`
 
 ```php
-v1MedicalUsersByUserIdConditionsGet($user_id): \SKY\School\Model\StudentConditionView[]
+v1MedicalUsersByUserIdConditionsGet($userId): \SKY\School\Model\StudentConditionView[]
 ```
 
 Medical conditions for a student (BETA)
@@ -1139,10 +1139,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. ID of the student
+$userId = 56; // int | Format - int32. ID of the student
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdConditionsGet($user_id);
+    $result = $apiInstance->v1MedicalUsersByUserIdConditionsGet($userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdConditionsGet: ', $e->getMessage(), PHP_EOL;
@@ -1153,7 +1153,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. ID of the student | |
+| **userId** | **int**| Format - int32. ID of the student | |
 
 ### Return type
 
@@ -1175,7 +1175,7 @@ try {
 ## `v1MedicalUsersByUserIdImmunizationsGet()`
 
 ```php
-v1MedicalUsersByUserIdImmunizationsGet($user_id, $include): \SKY\School\Model\StudentImmunizationRead[]
+v1MedicalUsersByUserIdImmunizationsGet($userId, $include): \SKY\School\Model\StudentImmunizationRead[]
 ```
 
 Medical immunizations for a student (BETA)
@@ -1206,11 +1206,11 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. The ID of the student
+$userId = 56; // int | Format - int32. The ID of the student
 $include = 'include_example'; // string | Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing.
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdImmunizationsGet($user_id, $include);
+    $result = $apiInstance->v1MedicalUsersByUserIdImmunizationsGet($userId, $include);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdImmunizationsGet: ', $e->getMessage(), PHP_EOL;
@@ -1221,7 +1221,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. The ID of the student | |
+| **userId** | **int**| Format - int32. The ID of the student | |
 | **include** | **string**| Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. | [optional] |
 
 ### Return type
@@ -1244,7 +1244,7 @@ try {
 ## `v1MedicalUsersByUserIdMedicationsGet()`
 
 ```php
-v1MedicalUsersByUserIdMedicationsGet($user_id): \SKY\School\Model\StudentMedicationRead[]
+v1MedicalUsersByUserIdMedicationsGet($userId): \SKY\School\Model\StudentMedicationRead[]
 ```
 
 Medical medications for a student (BETA)
@@ -1275,10 +1275,10 @@ $apiInstance = new SKY\School\Api\MedicalApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. ID of the student
+$userId = 56; // int | Format - int32. ID of the student
 
 try {
-    $result = $apiInstance->v1MedicalUsersByUserIdMedicationsGet($user_id);
+    $result = $apiInstance->v1MedicalUsersByUserIdMedicationsGet($userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MedicalApi->v1MedicalUsersByUserIdMedicationsGet: ', $e->getMessage(), PHP_EOL;
@@ -1289,7 +1289,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. ID of the student | |
+| **userId** | **int**| Format - int32. ID of the student | |
 
 ### Return type
 

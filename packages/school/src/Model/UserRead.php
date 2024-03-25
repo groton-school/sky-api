@@ -60,36 +60,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'affiliation' => 'string',
-        'custom_field_eight' => 'string',
-        'custom_field_five' => 'string',
-        'custom_field_four' => 'string',
-        'custom_field_nine' => 'string',
-        'custom_field_one' => 'string',
-        'custom_field_seven' => 'string',
-        'custom_field_six' => 'string',
-        'custom_field_ten' => 'string',
-        'custom_field_three' => 'string',
-        'custom_field_two' => 'string',
+        'customFieldEight' => 'string',
+        'customFieldFive' => 'string',
+        'customFieldFour' => 'string',
+        'customFieldNine' => 'string',
+        'customFieldOne' => 'string',
+        'customFieldSeven' => 'string',
+        'customFieldSix' => 'string',
+        'customFieldTen' => 'string',
+        'customFieldThree' => 'string',
+        'customFieldTwo' => 'string',
         'deceased' => 'bool',
         'display' => 'string',
         'email' => 'string',
-        'email_active' => 'bool',
-        'first_name' => 'string',
+        'emailActive' => 'bool',
+        'firstName' => 'string',
         'gender' => 'string',
-        'gender_description' => 'string',
+        'genderDescription' => 'string',
         'greeting' => 'string',
-        'host_id' => 'string',
-        'last_name' => 'string',
+        'hostId' => 'string',
+        'lastName' => 'string',
         'lost' => 'bool',
-        'maiden_name' => 'string',
-        'middle_name' => 'string',
-        'nick_name' => 'string',
-        'preferred_name' => 'string',
+        'maidenName' => 'string',
+        'middleName' => 'string',
+        'nickName' => 'string',
+        'preferredName' => 'string',
         'dob' => '\DateTime',
         'prefix' => 'string',
         'suffix' => 'string',
-        'profile_pictures' => '\SKY\School\Model\ProfilePictureUrls',
-        'home_languages' => '\SKY\School\Model\HomeLanguageRead[]',
+        'profilePictures' => '\SKY\School\Model\ProfilePictureUrls',
+        'homeLanguages' => '\SKY\School\Model\HomeLanguageRead[]',
     ];
 
     /**
@@ -102,36 +102,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'affiliation' => null,
-        'custom_field_eight' => null,
-        'custom_field_five' => null,
-        'custom_field_four' => null,
-        'custom_field_nine' => null,
-        'custom_field_one' => null,
-        'custom_field_seven' => null,
-        'custom_field_six' => null,
-        'custom_field_ten' => null,
-        'custom_field_three' => null,
-        'custom_field_two' => null,
+        'customFieldEight' => null,
+        'customFieldFive' => null,
+        'customFieldFour' => null,
+        'customFieldNine' => null,
+        'customFieldOne' => null,
+        'customFieldSeven' => null,
+        'customFieldSix' => null,
+        'customFieldTen' => null,
+        'customFieldThree' => null,
+        'customFieldTwo' => null,
         'deceased' => null,
         'display' => null,
         'email' => null,
-        'email_active' => null,
-        'first_name' => null,
+        'emailActive' => null,
+        'firstName' => null,
         'gender' => null,
-        'gender_description' => null,
+        'genderDescription' => null,
         'greeting' => null,
-        'host_id' => null,
-        'last_name' => null,
+        'hostId' => null,
+        'lastName' => null,
         'lost' => null,
-        'maiden_name' => null,
-        'middle_name' => null,
-        'nick_name' => null,
-        'preferred_name' => null,
+        'maidenName' => null,
+        'middleName' => null,
+        'nickName' => null,
+        'preferredName' => null,
         'dob' => 'date-time',
         'prefix' => null,
         'suffix' => null,
-        'profile_pictures' => null,
-        'home_languages' => null,
+        'profilePictures' => null,
+        'homeLanguages' => null,
     ];
 
     /**
@@ -142,36 +142,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'affiliation' => true,
-        'custom_field_eight' => true,
-        'custom_field_five' => true,
-        'custom_field_four' => true,
-        'custom_field_nine' => true,
-        'custom_field_one' => true,
-        'custom_field_seven' => true,
-        'custom_field_six' => true,
-        'custom_field_ten' => true,
-        'custom_field_three' => true,
-        'custom_field_two' => true,
+        'customFieldEight' => true,
+        'customFieldFive' => true,
+        'customFieldFour' => true,
+        'customFieldNine' => true,
+        'customFieldOne' => true,
+        'customFieldSeven' => true,
+        'customFieldSix' => true,
+        'customFieldTen' => true,
+        'customFieldThree' => true,
+        'customFieldTwo' => true,
         'deceased' => false,
         'display' => true,
         'email' => true,
-        'email_active' => false,
-        'first_name' => true,
+        'emailActive' => false,
+        'firstName' => true,
         'gender' => true,
-        'gender_description' => true,
+        'genderDescription' => true,
         'greeting' => true,
-        'host_id' => true,
-        'last_name' => true,
+        'hostId' => true,
+        'lastName' => true,
         'lost' => false,
-        'maiden_name' => true,
-        'middle_name' => true,
-        'nick_name' => true,
-        'preferred_name' => true,
+        'maidenName' => true,
+        'middleName' => true,
+        'nickName' => true,
+        'preferredName' => true,
         'dob' => true,
         'prefix' => true,
         'suffix' => true,
-        'profile_pictures' => false,
-        'home_languages' => true,
+        'profilePictures' => false,
+        'homeLanguages' => true,
     ];
 
     /**
@@ -262,36 +262,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'affiliation' => 'affiliation',
-        'custom_field_eight' => 'custom_field_eight',
-        'custom_field_five' => 'custom_field_five',
-        'custom_field_four' => 'custom_field_four',
-        'custom_field_nine' => 'custom_field_nine',
-        'custom_field_one' => 'custom_field_one',
-        'custom_field_seven' => 'custom_field_seven',
-        'custom_field_six' => 'custom_field_six',
-        'custom_field_ten' => 'custom_field_ten',
-        'custom_field_three' => 'custom_field_three',
-        'custom_field_two' => 'custom_field_two',
+        'customFieldEight' => 'custom_field_eight',
+        'customFieldFive' => 'custom_field_five',
+        'customFieldFour' => 'custom_field_four',
+        'customFieldNine' => 'custom_field_nine',
+        'customFieldOne' => 'custom_field_one',
+        'customFieldSeven' => 'custom_field_seven',
+        'customFieldSix' => 'custom_field_six',
+        'customFieldTen' => 'custom_field_ten',
+        'customFieldThree' => 'custom_field_three',
+        'customFieldTwo' => 'custom_field_two',
         'deceased' => 'deceased',
         'display' => 'display',
         'email' => 'email',
-        'email_active' => 'email_active',
-        'first_name' => 'first_name',
+        'emailActive' => 'email_active',
+        'firstName' => 'first_name',
         'gender' => 'gender',
-        'gender_description' => 'gender_description',
+        'genderDescription' => 'gender_description',
         'greeting' => 'greeting',
-        'host_id' => 'host_id',
-        'last_name' => 'last_name',
+        'hostId' => 'host_id',
+        'lastName' => 'last_name',
         'lost' => 'lost',
-        'maiden_name' => 'maiden_name',
-        'middle_name' => 'middle_name',
-        'nick_name' => 'nick_name',
-        'preferred_name' => 'preferred_name',
+        'maidenName' => 'maiden_name',
+        'middleName' => 'middle_name',
+        'nickName' => 'nick_name',
+        'preferredName' => 'preferred_name',
         'dob' => 'dob',
         'prefix' => 'prefix',
         'suffix' => 'suffix',
-        'profile_pictures' => 'profile_pictures',
-        'home_languages' => 'home_languages',
+        'profilePictures' => 'profile_pictures',
+        'homeLanguages' => 'home_languages',
     ];
 
     /**
@@ -302,36 +302,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'affiliation' => 'setAffiliation',
-        'custom_field_eight' => 'setCustomFieldEight',
-        'custom_field_five' => 'setCustomFieldFive',
-        'custom_field_four' => 'setCustomFieldFour',
-        'custom_field_nine' => 'setCustomFieldNine',
-        'custom_field_one' => 'setCustomFieldOne',
-        'custom_field_seven' => 'setCustomFieldSeven',
-        'custom_field_six' => 'setCustomFieldSix',
-        'custom_field_ten' => 'setCustomFieldTen',
-        'custom_field_three' => 'setCustomFieldThree',
-        'custom_field_two' => 'setCustomFieldTwo',
+        'customFieldEight' => 'setCustomFieldEight',
+        'customFieldFive' => 'setCustomFieldFive',
+        'customFieldFour' => 'setCustomFieldFour',
+        'customFieldNine' => 'setCustomFieldNine',
+        'customFieldOne' => 'setCustomFieldOne',
+        'customFieldSeven' => 'setCustomFieldSeven',
+        'customFieldSix' => 'setCustomFieldSix',
+        'customFieldTen' => 'setCustomFieldTen',
+        'customFieldThree' => 'setCustomFieldThree',
+        'customFieldTwo' => 'setCustomFieldTwo',
         'deceased' => 'setDeceased',
         'display' => 'setDisplay',
         'email' => 'setEmail',
-        'email_active' => 'setEmailActive',
-        'first_name' => 'setFirstName',
+        'emailActive' => 'setEmailActive',
+        'firstName' => 'setFirstName',
         'gender' => 'setGender',
-        'gender_description' => 'setGenderDescription',
+        'genderDescription' => 'setGenderDescription',
         'greeting' => 'setGreeting',
-        'host_id' => 'setHostId',
-        'last_name' => 'setLastName',
+        'hostId' => 'setHostId',
+        'lastName' => 'setLastName',
         'lost' => 'setLost',
-        'maiden_name' => 'setMaidenName',
-        'middle_name' => 'setMiddleName',
-        'nick_name' => 'setNickName',
-        'preferred_name' => 'setPreferredName',
+        'maidenName' => 'setMaidenName',
+        'middleName' => 'setMiddleName',
+        'nickName' => 'setNickName',
+        'preferredName' => 'setPreferredName',
         'dob' => 'setDob',
         'prefix' => 'setPrefix',
         'suffix' => 'setSuffix',
-        'profile_pictures' => 'setProfilePictures',
-        'home_languages' => 'setHomeLanguages',
+        'profilePictures' => 'setProfilePictures',
+        'homeLanguages' => 'setHomeLanguages',
     ];
 
     /**
@@ -342,36 +342,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'affiliation' => 'getAffiliation',
-        'custom_field_eight' => 'getCustomFieldEight',
-        'custom_field_five' => 'getCustomFieldFive',
-        'custom_field_four' => 'getCustomFieldFour',
-        'custom_field_nine' => 'getCustomFieldNine',
-        'custom_field_one' => 'getCustomFieldOne',
-        'custom_field_seven' => 'getCustomFieldSeven',
-        'custom_field_six' => 'getCustomFieldSix',
-        'custom_field_ten' => 'getCustomFieldTen',
-        'custom_field_three' => 'getCustomFieldThree',
-        'custom_field_two' => 'getCustomFieldTwo',
+        'customFieldEight' => 'getCustomFieldEight',
+        'customFieldFive' => 'getCustomFieldFive',
+        'customFieldFour' => 'getCustomFieldFour',
+        'customFieldNine' => 'getCustomFieldNine',
+        'customFieldOne' => 'getCustomFieldOne',
+        'customFieldSeven' => 'getCustomFieldSeven',
+        'customFieldSix' => 'getCustomFieldSix',
+        'customFieldTen' => 'getCustomFieldTen',
+        'customFieldThree' => 'getCustomFieldThree',
+        'customFieldTwo' => 'getCustomFieldTwo',
         'deceased' => 'getDeceased',
         'display' => 'getDisplay',
         'email' => 'getEmail',
-        'email_active' => 'getEmailActive',
-        'first_name' => 'getFirstName',
+        'emailActive' => 'getEmailActive',
+        'firstName' => 'getFirstName',
         'gender' => 'getGender',
-        'gender_description' => 'getGenderDescription',
+        'genderDescription' => 'getGenderDescription',
         'greeting' => 'getGreeting',
-        'host_id' => 'getHostId',
-        'last_name' => 'getLastName',
+        'hostId' => 'getHostId',
+        'lastName' => 'getLastName',
         'lost' => 'getLost',
-        'maiden_name' => 'getMaidenName',
-        'middle_name' => 'getMiddleName',
-        'nick_name' => 'getNickName',
-        'preferred_name' => 'getPreferredName',
+        'maidenName' => 'getMaidenName',
+        'middleName' => 'getMiddleName',
+        'nickName' => 'getNickName',
+        'preferredName' => 'getPreferredName',
         'dob' => 'getDob',
         'prefix' => 'getPrefix',
         'suffix' => 'getSuffix',
-        'profile_pictures' => 'getProfilePictures',
-        'home_languages' => 'getHomeLanguages',
+        'profilePictures' => 'getProfilePictures',
+        'homeLanguages' => 'getHomeLanguages',
     ];
 
     /**
@@ -433,36 +433,36 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('affiliation', $data ?? [], null);
-        $this->setIfExists('custom_field_eight', $data ?? [], null);
-        $this->setIfExists('custom_field_five', $data ?? [], null);
-        $this->setIfExists('custom_field_four', $data ?? [], null);
-        $this->setIfExists('custom_field_nine', $data ?? [], null);
-        $this->setIfExists('custom_field_one', $data ?? [], null);
-        $this->setIfExists('custom_field_seven', $data ?? [], null);
-        $this->setIfExists('custom_field_six', $data ?? [], null);
-        $this->setIfExists('custom_field_ten', $data ?? [], null);
-        $this->setIfExists('custom_field_three', $data ?? [], null);
-        $this->setIfExists('custom_field_two', $data ?? [], null);
+        $this->setIfExists('customFieldEight', $data ?? [], null);
+        $this->setIfExists('customFieldFive', $data ?? [], null);
+        $this->setIfExists('customFieldFour', $data ?? [], null);
+        $this->setIfExists('customFieldNine', $data ?? [], null);
+        $this->setIfExists('customFieldOne', $data ?? [], null);
+        $this->setIfExists('customFieldSeven', $data ?? [], null);
+        $this->setIfExists('customFieldSix', $data ?? [], null);
+        $this->setIfExists('customFieldTen', $data ?? [], null);
+        $this->setIfExists('customFieldThree', $data ?? [], null);
+        $this->setIfExists('customFieldTwo', $data ?? [], null);
         $this->setIfExists('deceased', $data ?? [], null);
         $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('email_active', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
+        $this->setIfExists('emailActive', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
-        $this->setIfExists('gender_description', $data ?? [], null);
+        $this->setIfExists('genderDescription', $data ?? [], null);
         $this->setIfExists('greeting', $data ?? [], null);
-        $this->setIfExists('host_id', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('hostId', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('lost', $data ?? [], null);
-        $this->setIfExists('maiden_name', $data ?? [], null);
-        $this->setIfExists('middle_name', $data ?? [], null);
-        $this->setIfExists('nick_name', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('maidenName', $data ?? [], null);
+        $this->setIfExists('middleName', $data ?? [], null);
+        $this->setIfExists('nickName', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
         $this->setIfExists('dob', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
-        $this->setIfExists('profile_pictures', $data ?? [], null);
-        $this->setIfExists('home_languages', $data ?? [], null);
+        $this->setIfExists('profilePictures', $data ?? [], null);
+        $this->setIfExists('homeLanguages', $data ?? [], null);
     }
 
     /**
@@ -569,341 +569,341 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets custom_field_eight
+     * Gets customFieldEight
      *
      * @return string|null
      */
     public function getCustomFieldEight()
     {
-        return $this->container['custom_field_eight'];
+        return $this->container['customFieldEight'];
     }
 
     /**
-     * Sets custom_field_eight
+     * Sets customFieldEight
      *
-     * @param string|null $custom_field_eight A custom field on the user profile (eight of ten)
+     * @param string|null $customFieldEight A custom field on the user profile (eight of ten)
      *
      * @return self
      */
-    public function setCustomFieldEight($custom_field_eight)
+    public function setCustomFieldEight($customFieldEight)
     {
-        if (is_null($custom_field_eight)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_eight');
+        if (is_null($customFieldEight)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldEight');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_eight', $nullablesSetToNull);
+            $index = array_search('customFieldEight', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_eight'] = $custom_field_eight;
+        $this->container['customFieldEight'] = $customFieldEight;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_five
+     * Gets customFieldFive
      *
      * @return string|null
      */
     public function getCustomFieldFive()
     {
-        return $this->container['custom_field_five'];
+        return $this->container['customFieldFive'];
     }
 
     /**
-     * Sets custom_field_five
+     * Sets customFieldFive
      *
-     * @param string|null $custom_field_five A custom field on the user profile (five of ten)
+     * @param string|null $customFieldFive A custom field on the user profile (five of ten)
      *
      * @return self
      */
-    public function setCustomFieldFive($custom_field_five)
+    public function setCustomFieldFive($customFieldFive)
     {
-        if (is_null($custom_field_five)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_five');
+        if (is_null($customFieldFive)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldFive');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_five', $nullablesSetToNull);
+            $index = array_search('customFieldFive', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_five'] = $custom_field_five;
+        $this->container['customFieldFive'] = $customFieldFive;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_four
+     * Gets customFieldFour
      *
      * @return string|null
      */
     public function getCustomFieldFour()
     {
-        return $this->container['custom_field_four'];
+        return $this->container['customFieldFour'];
     }
 
     /**
-     * Sets custom_field_four
+     * Sets customFieldFour
      *
-     * @param string|null $custom_field_four A custom field on the user profile (four of ten)
+     * @param string|null $customFieldFour A custom field on the user profile (four of ten)
      *
      * @return self
      */
-    public function setCustomFieldFour($custom_field_four)
+    public function setCustomFieldFour($customFieldFour)
     {
-        if (is_null($custom_field_four)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_four');
+        if (is_null($customFieldFour)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldFour');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_four', $nullablesSetToNull);
+            $index = array_search('customFieldFour', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_four'] = $custom_field_four;
+        $this->container['customFieldFour'] = $customFieldFour;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_nine
+     * Gets customFieldNine
      *
      * @return string|null
      */
     public function getCustomFieldNine()
     {
-        return $this->container['custom_field_nine'];
+        return $this->container['customFieldNine'];
     }
 
     /**
-     * Sets custom_field_nine
+     * Sets customFieldNine
      *
-     * @param string|null $custom_field_nine A custom field on the user profile (nine of ten)
+     * @param string|null $customFieldNine A custom field on the user profile (nine of ten)
      *
      * @return self
      */
-    public function setCustomFieldNine($custom_field_nine)
+    public function setCustomFieldNine($customFieldNine)
     {
-        if (is_null($custom_field_nine)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_nine');
+        if (is_null($customFieldNine)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldNine');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_nine', $nullablesSetToNull);
+            $index = array_search('customFieldNine', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_nine'] = $custom_field_nine;
+        $this->container['customFieldNine'] = $customFieldNine;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_one
+     * Gets customFieldOne
      *
      * @return string|null
      */
     public function getCustomFieldOne()
     {
-        return $this->container['custom_field_one'];
+        return $this->container['customFieldOne'];
     }
 
     /**
-     * Sets custom_field_one
+     * Sets customFieldOne
      *
-     * @param string|null $custom_field_one A custom field on the user profile (one of ten)
+     * @param string|null $customFieldOne A custom field on the user profile (one of ten)
      *
      * @return self
      */
-    public function setCustomFieldOne($custom_field_one)
+    public function setCustomFieldOne($customFieldOne)
     {
-        if (is_null($custom_field_one)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_one');
+        if (is_null($customFieldOne)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldOne');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_one', $nullablesSetToNull);
+            $index = array_search('customFieldOne', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_one'] = $custom_field_one;
+        $this->container['customFieldOne'] = $customFieldOne;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_seven
+     * Gets customFieldSeven
      *
      * @return string|null
      */
     public function getCustomFieldSeven()
     {
-        return $this->container['custom_field_seven'];
+        return $this->container['customFieldSeven'];
     }
 
     /**
-     * Sets custom_field_seven
+     * Sets customFieldSeven
      *
-     * @param string|null $custom_field_seven A custom field on the user profile (seven of ten)
+     * @param string|null $customFieldSeven A custom field on the user profile (seven of ten)
      *
      * @return self
      */
-    public function setCustomFieldSeven($custom_field_seven)
+    public function setCustomFieldSeven($customFieldSeven)
     {
-        if (is_null($custom_field_seven)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_seven');
+        if (is_null($customFieldSeven)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldSeven');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_seven', $nullablesSetToNull);
+            $index = array_search('customFieldSeven', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_seven'] = $custom_field_seven;
+        $this->container['customFieldSeven'] = $customFieldSeven;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_six
+     * Gets customFieldSix
      *
      * @return string|null
      */
     public function getCustomFieldSix()
     {
-        return $this->container['custom_field_six'];
+        return $this->container['customFieldSix'];
     }
 
     /**
-     * Sets custom_field_six
+     * Sets customFieldSix
      *
-     * @param string|null $custom_field_six A custom field on the user profile (six of ten)
+     * @param string|null $customFieldSix A custom field on the user profile (six of ten)
      *
      * @return self
      */
-    public function setCustomFieldSix($custom_field_six)
+    public function setCustomFieldSix($customFieldSix)
     {
-        if (is_null($custom_field_six)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_six');
+        if (is_null($customFieldSix)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldSix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_six', $nullablesSetToNull);
+            $index = array_search('customFieldSix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_six'] = $custom_field_six;
+        $this->container['customFieldSix'] = $customFieldSix;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_ten
+     * Gets customFieldTen
      *
      * @return string|null
      */
     public function getCustomFieldTen()
     {
-        return $this->container['custom_field_ten'];
+        return $this->container['customFieldTen'];
     }
 
     /**
-     * Sets custom_field_ten
+     * Sets customFieldTen
      *
-     * @param string|null $custom_field_ten A custom field on the user profile (ten of ten)
+     * @param string|null $customFieldTen A custom field on the user profile (ten of ten)
      *
      * @return self
      */
-    public function setCustomFieldTen($custom_field_ten)
+    public function setCustomFieldTen($customFieldTen)
     {
-        if (is_null($custom_field_ten)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_ten');
+        if (is_null($customFieldTen)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldTen');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_ten', $nullablesSetToNull);
+            $index = array_search('customFieldTen', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_ten'] = $custom_field_ten;
+        $this->container['customFieldTen'] = $customFieldTen;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_three
+     * Gets customFieldThree
      *
      * @return string|null
      */
     public function getCustomFieldThree()
     {
-        return $this->container['custom_field_three'];
+        return $this->container['customFieldThree'];
     }
 
     /**
-     * Sets custom_field_three
+     * Sets customFieldThree
      *
-     * @param string|null $custom_field_three A custom field on the user profile (three of ten)
+     * @param string|null $customFieldThree A custom field on the user profile (three of ten)
      *
      * @return self
      */
-    public function setCustomFieldThree($custom_field_three)
+    public function setCustomFieldThree($customFieldThree)
     {
-        if (is_null($custom_field_three)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_three');
+        if (is_null($customFieldThree)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldThree');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_three', $nullablesSetToNull);
+            $index = array_search('customFieldThree', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_three'] = $custom_field_three;
+        $this->container['customFieldThree'] = $customFieldThree;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_two
+     * Gets customFieldTwo
      *
      * @return string|null
      */
     public function getCustomFieldTwo()
     {
-        return $this->container['custom_field_two'];
+        return $this->container['customFieldTwo'];
     }
 
     /**
-     * Sets custom_field_two
+     * Sets customFieldTwo
      *
-     * @param string|null $custom_field_two A custom field on the user profile (two of ten)
+     * @param string|null $customFieldTwo A custom field on the user profile (two of ten)
      *
      * @return self
      */
-    public function setCustomFieldTwo($custom_field_two)
+    public function setCustomFieldTwo($customFieldTwo)
     {
-        if (is_null($custom_field_two)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_two');
+        if (is_null($customFieldTwo)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldTwo');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_two', $nullablesSetToNull);
+            $index = array_search('customFieldTwo', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_two'] = $custom_field_two;
+        $this->container['customFieldTwo'] = $customFieldTwo;
 
         return $this;
     }
@@ -1004,62 +1004,62 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets email_active
+     * Gets emailActive
      *
      * @return bool|null
      */
     public function getEmailActive()
     {
-        return $this->container['email_active'];
+        return $this->container['emailActive'];
     }
 
     /**
-     * Sets email_active
+     * Sets emailActive
      *
-     * @param bool|null $email_active Returns true if the users e-mail is ok to send to
+     * @param bool|null $emailActive Returns true if the users e-mail is ok to send to
      *
      * @return self
      */
-    public function setEmailActive($email_active)
+    public function setEmailActive($emailActive)
     {
-        if (is_null($email_active)) {
-            throw new \InvalidArgumentException('non-nullable email_active cannot be null');
+        if (is_null($emailActive)) {
+            throw new \InvalidArgumentException('non-nullable emailActive cannot be null');
         }
-        $this->container['email_active'] = $email_active;
+        $this->container['emailActive'] = $emailActive;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of a user
+     * @param string|null $firstName The first name of a user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
@@ -1099,35 +1099,35 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets gender_description
+     * Gets genderDescription
      *
      * @return string|null
      */
     public function getGenderDescription()
     {
-        return $this->container['gender_description'];
+        return $this->container['genderDescription'];
     }
 
     /**
-     * Sets gender_description
+     * Sets genderDescription
      *
-     * @param string|null $gender_description The gender of a user
+     * @param string|null $genderDescription The gender of a user
      *
      * @return self
      */
-    public function setGenderDescription($gender_description)
+    public function setGenderDescription($genderDescription)
     {
-        if (is_null($gender_description)) {
-            array_push($this->openAPINullablesSetToNull, 'gender_description');
+        if (is_null($genderDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'genderDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('gender_description', $nullablesSetToNull);
+            $index = array_search('genderDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['gender_description'] = $gender_description;
+        $this->container['genderDescription'] = $genderDescription;
 
         return $this;
     }
@@ -1167,69 +1167,69 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets host_id
+     * Gets hostId
      *
      * @return string|null
      */
     public function getHostId()
     {
-        return $this->container['host_id'];
+        return $this->container['hostId'];
     }
 
     /**
-     * Sets host_id
+     * Sets hostId
      *
-     * @param string|null $host_id The HostId of a user
+     * @param string|null $hostId The HostId of a user
      *
      * @return self
      */
-    public function setHostId($host_id)
+    public function setHostId($hostId)
     {
-        if (is_null($host_id)) {
-            array_push($this->openAPINullablesSetToNull, 'host_id');
+        if (is_null($hostId)) {
+            array_push($this->openAPINullablesSetToNull, 'hostId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('host_id', $nullablesSetToNull);
+            $index = array_search('hostId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['host_id'] = $host_id;
+        $this->container['hostId'] = $hostId;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of a user
+     * @param string|null $lastName The last name of a user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -1262,137 +1262,137 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets maiden_name
+     * Gets maidenName
      *
      * @return string|null
      */
     public function getMaidenName()
     {
-        return $this->container['maiden_name'];
+        return $this->container['maidenName'];
     }
 
     /**
-     * Sets maiden_name
+     * Sets maidenName
      *
-     * @param string|null $maiden_name The maiden name of a user
+     * @param string|null $maidenName The maiden name of a user
      *
      * @return self
      */
-    public function setMaidenName($maiden_name)
+    public function setMaidenName($maidenName)
     {
-        if (is_null($maiden_name)) {
-            array_push($this->openAPINullablesSetToNull, 'maiden_name');
+        if (is_null($maidenName)) {
+            array_push($this->openAPINullablesSetToNull, 'maidenName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('maiden_name', $nullablesSetToNull);
+            $index = array_search('maidenName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['maiden_name'] = $maiden_name;
+        $this->container['maidenName'] = $maidenName;
 
         return $this;
     }
 
     /**
-     * Gets middle_name
+     * Gets middleName
      *
      * @return string|null
      */
     public function getMiddleName()
     {
-        return $this->container['middle_name'];
+        return $this->container['middleName'];
     }
 
     /**
-     * Sets middle_name
+     * Sets middleName
      *
-     * @param string|null $middle_name The middle name of a user
+     * @param string|null $middleName The middle name of a user
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function setMiddleName($middleName)
     {
-        if (is_null($middle_name)) {
-            array_push($this->openAPINullablesSetToNull, 'middle_name');
+        if (is_null($middleName)) {
+            array_push($this->openAPINullablesSetToNull, 'middleName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middle_name', $nullablesSetToNull);
+            $index = array_search('middleName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['middle_name'] = $middle_name;
+        $this->container['middleName'] = $middleName;
 
         return $this;
     }
 
     /**
-     * Gets nick_name
+     * Gets nickName
      *
      * @return string|null
      */
     public function getNickName()
     {
-        return $this->container['nick_name'];
+        return $this->container['nickName'];
     }
 
     /**
-     * Sets nick_name
+     * Sets nickName
      *
-     * @param string|null $nick_name The nickname of a user  <b>This field will be deprecated after 90 days.</b>
+     * @param string|null $nickName The nickname of a user  <b>This field will be deprecated after 90 days.</b>
      *
      * @return self
      */
-    public function setNickName($nick_name)
+    public function setNickName($nickName)
     {
-        if (is_null($nick_name)) {
-            array_push($this->openAPINullablesSetToNull, 'nick_name');
+        if (is_null($nickName)) {
+            array_push($this->openAPINullablesSetToNull, 'nickName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nick_name', $nullablesSetToNull);
+            $index = array_search('nickName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['nick_name'] = $nick_name;
+        $this->container['nickName'] = $nickName;
 
         return $this;
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The preferred name of the user
+     * @param string|null $preferredName The preferred name of the user
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
@@ -1500,62 +1500,62 @@ class UserRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets profile_pictures
+     * Gets profilePictures
      *
      * @return \SKY\School\Model\ProfilePictureUrls|null
      */
     public function getProfilePictures()
     {
-        return $this->container['profile_pictures'];
+        return $this->container['profilePictures'];
     }
 
     /**
-     * Sets profile_pictures
+     * Sets profilePictures
      *
-     * @param \SKY\School\Model\ProfilePictureUrls|null $profile_pictures profile_pictures
+     * @param \SKY\School\Model\ProfilePictureUrls|null $profilePictures profilePictures
      *
      * @return self
      */
-    public function setProfilePictures($profile_pictures)
+    public function setProfilePictures($profilePictures)
     {
-        if (is_null($profile_pictures)) {
-            throw new \InvalidArgumentException('non-nullable profile_pictures cannot be null');
+        if (is_null($profilePictures)) {
+            throw new \InvalidArgumentException('non-nullable profilePictures cannot be null');
         }
-        $this->container['profile_pictures'] = $profile_pictures;
+        $this->container['profilePictures'] = $profilePictures;
 
         return $this;
     }
 
     /**
-     * Gets home_languages
+     * Gets homeLanguages
      *
      * @return \SKY\School\Model\HomeLanguageRead[]|null
      */
     public function getHomeLanguages()
     {
-        return $this->container['home_languages'];
+        return $this->container['homeLanguages'];
     }
 
     /**
-     * Sets home_languages
+     * Sets homeLanguages
      *
-     * @param \SKY\School\Model\HomeLanguageRead[]|null $home_languages List of languages spoken at home by the user
+     * @param \SKY\School\Model\HomeLanguageRead[]|null $homeLanguages List of languages spoken at home by the user
      *
      * @return self
      */
-    public function setHomeLanguages($home_languages)
+    public function setHomeLanguages($homeLanguages)
     {
-        if (is_null($home_languages)) {
-            array_push($this->openAPINullablesSetToNull, 'home_languages');
+        if (is_null($homeLanguages)) {
+            array_push($this->openAPINullablesSetToNull, 'homeLanguages');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_languages', $nullablesSetToNull);
+            $index = array_search('homeLanguages', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_languages'] = $home_languages;
+        $this->container['homeLanguages'] = $homeLanguages;
 
         return $this;
     }

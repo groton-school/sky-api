@@ -59,17 +59,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'declared_on' => '\DateTime',
-        'completed_on' => '\DateTime',
-        'conferred_on' => '\DateTime',
-        'credits_completed' => 'float',
-        'credits_in_progress' => 'float',
-        'credits_remaining' => 'float',
-        'created_by' => 'string',
-        'modified_by' => 'string',
+        'declaredOn' => '\DateTime',
+        'completedOn' => '\DateTime',
+        'conferredOn' => '\DateTime',
+        'creditsCompleted' => 'float',
+        'creditsInProgress' => 'float',
+        'creditsRemaining' => 'float',
+        'createdBy' => 'string',
+        'modifiedBy' => 'string',
         'created' => '\DateTime',
         'modified' => '\DateTime',
-        'requirement_set' => '\SKY\School\Model\AreaOfStudyOutputModel[]',
+        'requirementSet' => '\SKY\School\Model\AreaOfStudyOutputModel[]',
         'majors' => '\SKY\School\Model\UserAreaOfStudyReferenceOutputModel[]',
         'minors' => '\SKY\School\Model\UserAreaOfStudyReferenceOutputModel[]',
         'concentrations' => '\SKY\School\Model\UserAreaOfStudyReferenceOutputModel[]',
@@ -84,17 +84,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'declared_on' => 'date-time',
-        'completed_on' => 'date-time',
-        'conferred_on' => 'date-time',
-        'credits_completed' => 'double',
-        'credits_in_progress' => 'double',
-        'credits_remaining' => 'double',
-        'created_by' => null,
-        'modified_by' => null,
+        'declaredOn' => 'date-time',
+        'completedOn' => 'date-time',
+        'conferredOn' => 'date-time',
+        'creditsCompleted' => 'double',
+        'creditsInProgress' => 'double',
+        'creditsRemaining' => 'double',
+        'createdBy' => null,
+        'modifiedBy' => null,
         'created' => 'date-time',
         'modified' => 'date-time',
-        'requirement_set' => null,
+        'requirementSet' => null,
         'majors' => null,
         'minors' => null,
         'concentrations' => null,
@@ -107,17 +107,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'declared_on' => true,
-        'completed_on' => true,
-        'conferred_on' => true,
-        'credits_completed' => true,
-        'credits_in_progress' => true,
-        'credits_remaining' => true,
-        'created_by' => true,
-        'modified_by' => true,
+        'declaredOn' => true,
+        'completedOn' => true,
+        'conferredOn' => true,
+        'creditsCompleted' => true,
+        'creditsInProgress' => true,
+        'creditsRemaining' => true,
+        'createdBy' => true,
+        'modifiedBy' => true,
         'created' => true,
         'modified' => true,
-        'requirement_set' => true,
+        'requirementSet' => true,
         'majors' => true,
         'minors' => true,
         'concentrations' => true,
@@ -210,17 +210,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'declared_on' => 'declared_on',
-        'completed_on' => 'completed_on',
-        'conferred_on' => 'conferred_on',
-        'credits_completed' => 'credits_completed',
-        'credits_in_progress' => 'credits_in_progress',
-        'credits_remaining' => 'credits_remaining',
-        'created_by' => 'created_by',
-        'modified_by' => 'modified_by',
+        'declaredOn' => 'declared_on',
+        'completedOn' => 'completed_on',
+        'conferredOn' => 'conferred_on',
+        'creditsCompleted' => 'credits_completed',
+        'creditsInProgress' => 'credits_in_progress',
+        'creditsRemaining' => 'credits_remaining',
+        'createdBy' => 'created_by',
+        'modifiedBy' => 'modified_by',
         'created' => 'created',
         'modified' => 'modified',
-        'requirement_set' => 'requirement_set',
+        'requirementSet' => 'requirement_set',
         'majors' => 'majors',
         'minors' => 'minors',
         'concentrations' => 'concentrations',
@@ -233,17 +233,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'id' => 'setId',
-        'declared_on' => 'setDeclaredOn',
-        'completed_on' => 'setCompletedOn',
-        'conferred_on' => 'setConferredOn',
-        'credits_completed' => 'setCreditsCompleted',
-        'credits_in_progress' => 'setCreditsInProgress',
-        'credits_remaining' => 'setCreditsRemaining',
-        'created_by' => 'setCreatedBy',
-        'modified_by' => 'setModifiedBy',
+        'declaredOn' => 'setDeclaredOn',
+        'completedOn' => 'setCompletedOn',
+        'conferredOn' => 'setConferredOn',
+        'creditsCompleted' => 'setCreditsCompleted',
+        'creditsInProgress' => 'setCreditsInProgress',
+        'creditsRemaining' => 'setCreditsRemaining',
+        'createdBy' => 'setCreatedBy',
+        'modifiedBy' => 'setModifiedBy',
         'created' => 'setCreated',
         'modified' => 'setModified',
-        'requirement_set' => 'setRequirementSet',
+        'requirementSet' => 'setRequirementSet',
         'majors' => 'setMajors',
         'minors' => 'setMinors',
         'concentrations' => 'setConcentrations',
@@ -256,17 +256,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'id' => 'getId',
-        'declared_on' => 'getDeclaredOn',
-        'completed_on' => 'getCompletedOn',
-        'conferred_on' => 'getConferredOn',
-        'credits_completed' => 'getCreditsCompleted',
-        'credits_in_progress' => 'getCreditsInProgress',
-        'credits_remaining' => 'getCreditsRemaining',
-        'created_by' => 'getCreatedBy',
-        'modified_by' => 'getModifiedBy',
+        'declaredOn' => 'getDeclaredOn',
+        'completedOn' => 'getCompletedOn',
+        'conferredOn' => 'getConferredOn',
+        'creditsCompleted' => 'getCreditsCompleted',
+        'creditsInProgress' => 'getCreditsInProgress',
+        'creditsRemaining' => 'getCreditsRemaining',
+        'createdBy' => 'getCreatedBy',
+        'modifiedBy' => 'getModifiedBy',
         'created' => 'getCreated',
         'modified' => 'getModified',
-        'requirement_set' => 'getRequirementSet',
+        'requirementSet' => 'getRequirementSet',
         'majors' => 'getMajors',
         'minors' => 'getMinors',
         'concentrations' => 'getConcentrations',
@@ -330,17 +330,17 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('declared_on', $data ?? [], null);
-        $this->setIfExists('completed_on', $data ?? [], null);
-        $this->setIfExists('conferred_on', $data ?? [], null);
-        $this->setIfExists('credits_completed', $data ?? [], null);
-        $this->setIfExists('credits_in_progress', $data ?? [], null);
-        $this->setIfExists('credits_remaining', $data ?? [], null);
-        $this->setIfExists('created_by', $data ?? [], null);
-        $this->setIfExists('modified_by', $data ?? [], null);
+        $this->setIfExists('declaredOn', $data ?? [], null);
+        $this->setIfExists('completedOn', $data ?? [], null);
+        $this->setIfExists('conferredOn', $data ?? [], null);
+        $this->setIfExists('creditsCompleted', $data ?? [], null);
+        $this->setIfExists('creditsInProgress', $data ?? [], null);
+        $this->setIfExists('creditsRemaining', $data ?? [], null);
+        $this->setIfExists('createdBy', $data ?? [], null);
+        $this->setIfExists('modifiedBy', $data ?? [], null);
         $this->setIfExists('created', $data ?? [], null);
         $this->setIfExists('modified', $data ?? [], null);
-        $this->setIfExists('requirement_set', $data ?? [], null);
+        $this->setIfExists('requirementSet', $data ?? [], null);
         $this->setIfExists('majors', $data ?? [], null);
         $this->setIfExists('minors', $data ?? [], null);
         $this->setIfExists('concentrations', $data ?? [], null);
@@ -423,273 +423,273 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets declared_on
+     * Gets declaredOn
      *
      * @return \DateTime|null
      */
     public function getDeclaredOn()
     {
-        return $this->container['declared_on'];
+        return $this->container['declaredOn'];
     }
 
     /**
-     * Sets declared_on
+     * Sets declaredOn
      *
-     * @param \DateTime|null $declared_on From User Area of Study Reference
+     * @param \DateTime|null $declaredOn From User Area of Study Reference
      *
      * @return self
      */
-    public function setDeclaredOn($declared_on)
+    public function setDeclaredOn($declaredOn)
     {
-        if (is_null($declared_on)) {
-            array_push($this->openAPINullablesSetToNull, 'declared_on');
+        if (is_null($declaredOn)) {
+            array_push($this->openAPINullablesSetToNull, 'declaredOn');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('declared_on', $nullablesSetToNull);
+            $index = array_search('declaredOn', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['declared_on'] = $declared_on;
+        $this->container['declaredOn'] = $declaredOn;
 
         return $this;
     }
 
     /**
-     * Gets completed_on
+     * Gets completedOn
      *
      * @return \DateTime|null
      */
     public function getCompletedOn()
     {
-        return $this->container['completed_on'];
+        return $this->container['completedOn'];
     }
 
     /**
-     * Sets completed_on
+     * Sets completedOn
      *
-     * @param \DateTime|null $completed_on From User Area of Study Group
+     * @param \DateTime|null $completedOn From User Area of Study Group
      *
      * @return self
      */
-    public function setCompletedOn($completed_on)
+    public function setCompletedOn($completedOn)
     {
-        if (is_null($completed_on)) {
-            array_push($this->openAPINullablesSetToNull, 'completed_on');
+        if (is_null($completedOn)) {
+            array_push($this->openAPINullablesSetToNull, 'completedOn');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('completed_on', $nullablesSetToNull);
+            $index = array_search('completedOn', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['completed_on'] = $completed_on;
+        $this->container['completedOn'] = $completedOn;
 
         return $this;
     }
 
     /**
-     * Gets conferred_on
+     * Gets conferredOn
      *
      * @return \DateTime|null
      */
     public function getConferredOn()
     {
-        return $this->container['conferred_on'];
+        return $this->container['conferredOn'];
     }
 
     /**
-     * Sets conferred_on
+     * Sets conferredOn
      *
-     * @param \DateTime|null $conferred_on From User Area of Study Group
+     * @param \DateTime|null $conferredOn From User Area of Study Group
      *
      * @return self
      */
-    public function setConferredOn($conferred_on)
+    public function setConferredOn($conferredOn)
     {
-        if (is_null($conferred_on)) {
-            array_push($this->openAPINullablesSetToNull, 'conferred_on');
+        if (is_null($conferredOn)) {
+            array_push($this->openAPINullablesSetToNull, 'conferredOn');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('conferred_on', $nullablesSetToNull);
+            $index = array_search('conferredOn', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['conferred_on'] = $conferred_on;
+        $this->container['conferredOn'] = $conferredOn;
 
         return $this;
     }
 
     /**
-     * Gets credits_completed
+     * Gets creditsCompleted
      *
      * @return float|null
      */
     public function getCreditsCompleted()
     {
-        return $this->container['credits_completed'];
+        return $this->container['creditsCompleted'];
     }
 
     /**
-     * Sets credits_completed
+     * Sets creditsCompleted
      *
-     * @param float|null $credits_completed From User Area of Study Reference
+     * @param float|null $creditsCompleted From User Area of Study Reference
      *
      * @return self
      */
-    public function setCreditsCompleted($credits_completed)
+    public function setCreditsCompleted($creditsCompleted)
     {
-        if (is_null($credits_completed)) {
-            array_push($this->openAPINullablesSetToNull, 'credits_completed');
+        if (is_null($creditsCompleted)) {
+            array_push($this->openAPINullablesSetToNull, 'creditsCompleted');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('credits_completed', $nullablesSetToNull);
+            $index = array_search('creditsCompleted', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['credits_completed'] = $credits_completed;
+        $this->container['creditsCompleted'] = $creditsCompleted;
 
         return $this;
     }
 
     /**
-     * Gets credits_in_progress
+     * Gets creditsInProgress
      *
      * @return float|null
      */
     public function getCreditsInProgress()
     {
-        return $this->container['credits_in_progress'];
+        return $this->container['creditsInProgress'];
     }
 
     /**
-     * Sets credits_in_progress
+     * Sets creditsInProgress
      *
-     * @param float|null $credits_in_progress From User Area of Study Reference
+     * @param float|null $creditsInProgress From User Area of Study Reference
      *
      * @return self
      */
-    public function setCreditsInProgress($credits_in_progress)
+    public function setCreditsInProgress($creditsInProgress)
     {
-        if (is_null($credits_in_progress)) {
-            array_push($this->openAPINullablesSetToNull, 'credits_in_progress');
+        if (is_null($creditsInProgress)) {
+            array_push($this->openAPINullablesSetToNull, 'creditsInProgress');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('credits_in_progress', $nullablesSetToNull);
+            $index = array_search('creditsInProgress', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['credits_in_progress'] = $credits_in_progress;
+        $this->container['creditsInProgress'] = $creditsInProgress;
 
         return $this;
     }
 
     /**
-     * Gets credits_remaining
+     * Gets creditsRemaining
      *
      * @return float|null
      */
     public function getCreditsRemaining()
     {
-        return $this->container['credits_remaining'];
+        return $this->container['creditsRemaining'];
     }
 
     /**
-     * Sets credits_remaining
+     * Sets creditsRemaining
      *
-     * @param float|null $credits_remaining From User Area of Study Reference
+     * @param float|null $creditsRemaining From User Area of Study Reference
      *
      * @return self
      */
-    public function setCreditsRemaining($credits_remaining)
+    public function setCreditsRemaining($creditsRemaining)
     {
-        if (is_null($credits_remaining)) {
-            array_push($this->openAPINullablesSetToNull, 'credits_remaining');
+        if (is_null($creditsRemaining)) {
+            array_push($this->openAPINullablesSetToNull, 'creditsRemaining');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('credits_remaining', $nullablesSetToNull);
+            $index = array_search('creditsRemaining', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['credits_remaining'] = $credits_remaining;
+        $this->container['creditsRemaining'] = $creditsRemaining;
 
         return $this;
     }
 
     /**
-     * Gets created_by
+     * Gets createdBy
      *
      * @return string|null
      */
     public function getCreatedBy()
     {
-        return $this->container['created_by'];
+        return $this->container['createdBy'];
     }
 
     /**
-     * Sets created_by
+     * Sets createdBy
      *
-     * @param string|null $created_by The BBID of the user who created the area of study
+     * @param string|null $createdBy The BBID of the user who created the area of study
      *
      * @return self
      */
-    public function setCreatedBy($created_by)
+    public function setCreatedBy($createdBy)
     {
-        if (is_null($created_by)) {
-            array_push($this->openAPINullablesSetToNull, 'created_by');
+        if (is_null($createdBy)) {
+            array_push($this->openAPINullablesSetToNull, 'createdBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('created_by', $nullablesSetToNull);
+            $index = array_search('createdBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['created_by'] = $created_by;
+        $this->container['createdBy'] = $createdBy;
 
         return $this;
     }
 
     /**
-     * Gets modified_by
+     * Gets modifiedBy
      *
      * @return string|null
      */
     public function getModifiedBy()
     {
-        return $this->container['modified_by'];
+        return $this->container['modifiedBy'];
     }
 
     /**
-     * Sets modified_by
+     * Sets modifiedBy
      *
-     * @param string|null $modified_by The BBID of the user who last modified the area of study
+     * @param string|null $modifiedBy The BBID of the user who last modified the area of study
      *
      * @return self
      */
-    public function setModifiedBy($modified_by)
+    public function setModifiedBy($modifiedBy)
     {
-        if (is_null($modified_by)) {
-            array_push($this->openAPINullablesSetToNull, 'modified_by');
+        if (is_null($modifiedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('modified_by', $nullablesSetToNull);
+            $index = array_search('modifiedBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['modified_by'] = $modified_by;
+        $this->container['modifiedBy'] = $modifiedBy;
 
         return $this;
     }
@@ -763,35 +763,35 @@ class DegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets requirement_set
+     * Gets requirementSet
      *
      * @return \SKY\School\Model\AreaOfStudyOutputModel[]|null
      */
     public function getRequirementSet()
     {
-        return $this->container['requirement_set'];
+        return $this->container['requirementSet'];
     }
 
     /**
-     * Sets requirement_set
+     * Sets requirementSet
      *
-     * @param \SKY\School\Model\AreaOfStudyOutputModel[]|null $requirement_set
+     * @param \SKY\School\Model\AreaOfStudyOutputModel[]|null $requirementSet
      *
      * @return self
      */
-    public function setRequirementSet($requirement_set)
+    public function setRequirementSet($requirementSet)
     {
-        if (is_null($requirement_set)) {
-            array_push($this->openAPINullablesSetToNull, 'requirement_set');
+        if (is_null($requirementSet)) {
+            array_push($this->openAPINullablesSetToNull, 'requirementSet');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('requirement_set', $nullablesSetToNull);
+            $index = array_search('requirementSet', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['requirement_set'] = $requirement_set;
+        $this->container['requirementSet'] = $requirementSet;
 
         return $this;
     }

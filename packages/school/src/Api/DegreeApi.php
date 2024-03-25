@@ -127,16 +127,16 @@ class DegreeApi
      *
      * Degrees student degrees by ID
      *
-     * @param  int $student_id Format - int32. user Id (required)
+     * @param  int $studentId Format - int32. user Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserDegreeOutputModelCollection
      */
-    public function v1DegreesStudentdegreesByStudentIdGet($student_id, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
+    public function v1DegreesStudentdegreesByStudentIdGet($studentId, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
     {
-        [$response] = $this->v1DegreesStudentdegreesByStudentIdGetWithHttpInfo($student_id, $contentType);
+        [$response] = $this->v1DegreesStudentdegreesByStudentIdGetWithHttpInfo($studentId, $contentType);
         return $response;
     }
 
@@ -145,16 +145,16 @@ class DegreeApi
      *
      * Degrees student degrees by ID
      *
-     * @param  int $student_id Format - int32. user Id (required)
+     * @param  int $studentId Format - int32. user Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserDegreeOutputModelCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1DegreesStudentdegreesByStudentIdGetWithHttpInfo($student_id, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
+    public function v1DegreesStudentdegreesByStudentIdGetWithHttpInfo($studentId, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
     {
-        $request = $this->v1DegreesStudentdegreesByStudentIdGetRequest($student_id, $contentType);
+        $request = $this->v1DegreesStudentdegreesByStudentIdGetRequest($studentId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -269,15 +269,15 @@ class DegreeApi
      *
      * Degrees student degrees by ID
      *
-     * @param  int $student_id Format - int32. user Id (required)
+     * @param  int $studentId Format - int32. user Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DegreesStudentdegreesByStudentIdGetAsync($student_id, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
+    public function v1DegreesStudentdegreesByStudentIdGetAsync($studentId, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
     {
-        return $this->v1DegreesStudentdegreesByStudentIdGetAsyncWithHttpInfo($student_id, $contentType)
+        return $this->v1DegreesStudentdegreesByStudentIdGetAsyncWithHttpInfo($studentId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -290,16 +290,16 @@ class DegreeApi
      *
      * Degrees student degrees by ID
      *
-     * @param  int $student_id Format - int32. user Id (required)
+     * @param  int $studentId Format - int32. user Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DegreesStudentdegreesByStudentIdGetAsyncWithHttpInfo($student_id, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
+    public function v1DegreesStudentdegreesByStudentIdGetAsyncWithHttpInfo($studentId, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
     {
         $returnType = '\SKY\School\Model\UserDegreeOutputModelCollection';
-        $request = $this->v1DegreesStudentdegreesByStudentIdGetRequest($student_id, $contentType);
+        $request = $this->v1DegreesStudentdegreesByStudentIdGetRequest($studentId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -340,19 +340,19 @@ class DegreeApi
     /**
      * Create request for operation 'v1DegreesStudentdegreesByStudentIdGet'
      *
-     * @param  int $student_id Format - int32. user Id (required)
+     * @param  int $studentId Format - int32. user Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1DegreesStudentdegreesByStudentIdGetRequest($student_id, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
+    public function v1DegreesStudentdegreesByStudentIdGetRequest($studentId, string $contentType = self::contentTypes['v1DegreesStudentdegreesByStudentIdGet'][0])
     {
 
-        // verify the required parameter 'student_id' is set
-        if ($student_id === null || (is_array($student_id) && count($student_id) === 0)) {
+        // verify the required parameter 'studentId' is set
+        if ($studentId === null || (is_array($studentId) && count($studentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $student_id when calling v1DegreesStudentdegreesByStudentIdGet'
+                'Missing the required parameter $studentId when calling v1DegreesStudentdegreesByStudentIdGet'
             );
         }
 
@@ -367,10 +367,10 @@ class DegreeApi
 
 
         // path params
-        if ($student_id !== null) {
+        if ($studentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'student_id' . '}',
-                ObjectSerializer::toPathValue($student_id),
+                ObjectSerializer::toPathValue($studentId),
                 $resourcePath
             );
         }

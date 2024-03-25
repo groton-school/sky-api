@@ -58,13 +58,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'grade_id' => 'int',
-        'grade_level_id' => 'int',
-        'grad_year' => 'string',
-        'grade_level' => 'string',
-        'grade_level_description' => 'string',
-        'grade_level_abbreviation' => 'string',
-        'grade_level_name' => 'string',
+        'gradeId' => 'int',
+        'gradeLevelId' => 'int',
+        'gradYear' => 'string',
+        'gradeLevel' => 'string',
+        'gradeLevelDescription' => 'string',
+        'gradeLevelAbbreviation' => 'string',
+        'gradeLevelName' => 'string',
     ];
 
     /**
@@ -75,13 +75,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'grade_id' => 'int32',
-        'grade_level_id' => 'int32',
-        'grad_year' => null,
-        'grade_level' => null,
-        'grade_level_description' => null,
-        'grade_level_abbreviation' => null,
-        'grade_level_name' => null,
+        'gradeId' => 'int32',
+        'gradeLevelId' => 'int32',
+        'gradYear' => null,
+        'gradeLevel' => null,
+        'gradeLevelDescription' => null,
+        'gradeLevelAbbreviation' => null,
+        'gradeLevelName' => null,
     ];
 
     /**
@@ -90,13 +90,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'grade_id' => false,
-        'grade_level_id' => false,
-        'grad_year' => true,
-        'grade_level' => true,
-        'grade_level_description' => true,
-        'grade_level_abbreviation' => true,
-        'grade_level_name' => true,
+        'gradeId' => false,
+        'gradeLevelId' => false,
+        'gradYear' => true,
+        'gradeLevel' => true,
+        'gradeLevelDescription' => true,
+        'gradeLevelAbbreviation' => true,
+        'gradeLevelName' => true,
     ];
 
     /**
@@ -185,13 +185,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'grade_id' => 'grade_id',
-        'grade_level_id' => 'grade_level_id',
-        'grad_year' => 'grad_year',
-        'grade_level' => 'grade_level',
-        'grade_level_description' => 'grade_level_description',
-        'grade_level_abbreviation' => 'grade_level_abbreviation',
-        'grade_level_name' => 'grade_level_name',
+        'gradeId' => 'grade_id',
+        'gradeLevelId' => 'grade_level_id',
+        'gradYear' => 'grad_year',
+        'gradeLevel' => 'grade_level',
+        'gradeLevelDescription' => 'grade_level_description',
+        'gradeLevelAbbreviation' => 'grade_level_abbreviation',
+        'gradeLevelName' => 'grade_level_name',
     ];
 
     /**
@@ -200,13 +200,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'grade_id' => 'setGradeId',
-        'grade_level_id' => 'setGradeLevelId',
-        'grad_year' => 'setGradYear',
-        'grade_level' => 'setGradeLevel',
-        'grade_level_description' => 'setGradeLevelDescription',
-        'grade_level_abbreviation' => 'setGradeLevelAbbreviation',
-        'grade_level_name' => 'setGradeLevelName',
+        'gradeId' => 'setGradeId',
+        'gradeLevelId' => 'setGradeLevelId',
+        'gradYear' => 'setGradYear',
+        'gradeLevel' => 'setGradeLevel',
+        'gradeLevelDescription' => 'setGradeLevelDescription',
+        'gradeLevelAbbreviation' => 'setGradeLevelAbbreviation',
+        'gradeLevelName' => 'setGradeLevelName',
     ];
 
     /**
@@ -215,13 +215,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'grade_id' => 'getGradeId',
-        'grade_level_id' => 'getGradeLevelId',
-        'grad_year' => 'getGradYear',
-        'grade_level' => 'getGradeLevel',
-        'grade_level_description' => 'getGradeLevelDescription',
-        'grade_level_abbreviation' => 'getGradeLevelAbbreviation',
-        'grade_level_name' => 'getGradeLevelName',
+        'gradeId' => 'getGradeId',
+        'gradeLevelId' => 'getGradeLevelId',
+        'gradYear' => 'getGradYear',
+        'gradeLevel' => 'getGradeLevel',
+        'gradeLevelDescription' => 'getGradeLevelDescription',
+        'gradeLevelAbbreviation' => 'getGradeLevelAbbreviation',
+        'gradeLevelName' => 'getGradeLevelName',
     ];
 
     /**
@@ -281,13 +281,13 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('grade_id', $data ?? [], null);
-        $this->setIfExists('grade_level_id', $data ?? [], null);
-        $this->setIfExists('grad_year', $data ?? [], null);
-        $this->setIfExists('grade_level', $data ?? [], null);
-        $this->setIfExists('grade_level_description', $data ?? [], null);
-        $this->setIfExists('grade_level_abbreviation', $data ?? [], null);
-        $this->setIfExists('grade_level_name', $data ?? [], null);
+        $this->setIfExists('gradeId', $data ?? [], null);
+        $this->setIfExists('gradeLevelId', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
+        $this->setIfExists('gradeLevel', $data ?? [], null);
+        $this->setIfExists('gradeLevelDescription', $data ?? [], null);
+        $this->setIfExists('gradeLevelAbbreviation', $data ?? [], null);
+        $this->setIfExists('gradeLevelName', $data ?? [], null);
     }
 
     /**
@@ -333,225 +333,225 @@ class StudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets grade_id
+     * Gets gradeId
      *
      * @return int|null
      */
     public function getGradeId()
     {
-        return $this->container['grade_id'];
+        return $this->container['gradeId'];
     }
 
     /**
-     * Sets grade_id
+     * Sets gradeId
      *
-     * @param int|null $grade_id The Id of the Grade Level
+     * @param int|null $gradeId The Id of the Grade Level
      *
      * @return self
      */
-    public function setGradeId($grade_id)
+    public function setGradeId($gradeId)
     {
-        if (is_null($grade_id)) {
-            throw new \InvalidArgumentException('non-nullable grade_id cannot be null');
+        if (is_null($gradeId)) {
+            throw new \InvalidArgumentException('non-nullable gradeId cannot be null');
         }
-        $this->container['grade_id'] = $grade_id;
+        $this->container['gradeId'] = $gradeId;
 
         return $this;
     }
 
     /**
-     * Gets grade_level_id
+     * Gets gradeLevelId
      *
      * @return int|null
      */
     public function getGradeLevelId()
     {
-        return $this->container['grade_level_id'];
+        return $this->container['gradeLevelId'];
     }
 
     /**
-     * Sets grade_level_id
+     * Sets gradeLevelId
      *
-     * @param int|null $grade_level_id The Id of the Grade Level
+     * @param int|null $gradeLevelId The Id of the Grade Level
      *
      * @return self
      */
-    public function setGradeLevelId($grade_level_id)
+    public function setGradeLevelId($gradeLevelId)
     {
-        if (is_null($grade_level_id)) {
-            throw new \InvalidArgumentException('non-nullable grade_level_id cannot be null');
+        if (is_null($gradeLevelId)) {
+            throw new \InvalidArgumentException('non-nullable gradeLevelId cannot be null');
         }
-        $this->container['grade_level_id'] = $grade_level_id;
+        $this->container['gradeLevelId'] = $gradeLevelId;
 
         return $this;
     }
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year The graduation year of the student
+     * @param string|null $gradYear The graduation year of the student
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }
 
     /**
-     * Gets grade_level
+     * Gets gradeLevel
      *
      * @return string|null
      */
     public function getGradeLevel()
     {
-        return $this->container['grade_level'];
+        return $this->container['gradeLevel'];
     }
 
     /**
-     * Sets grade_level
+     * Sets gradeLevel
      *
-     * @param string|null $grade_level The grade level of the student
+     * @param string|null $gradeLevel The grade level of the student
      *
      * @return self
      */
-    public function setGradeLevel($grade_level)
+    public function setGradeLevel($gradeLevel)
     {
-        if (is_null($grade_level)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_level');
+        if (is_null($gradeLevel)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeLevel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_level', $nullablesSetToNull);
+            $index = array_search('gradeLevel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_level'] = $grade_level;
+        $this->container['gradeLevel'] = $gradeLevel;
 
         return $this;
     }
 
     /**
-     * Gets grade_level_description
+     * Gets gradeLevelDescription
      *
      * @return string|null
      */
     public function getGradeLevelDescription()
     {
-        return $this->container['grade_level_description'];
+        return $this->container['gradeLevelDescription'];
     }
 
     /**
-     * Sets grade_level_description
+     * Sets gradeLevelDescription
      *
-     * @param string|null $grade_level_description The grade level description of the student
+     * @param string|null $gradeLevelDescription The grade level description of the student
      *
      * @return self
      */
-    public function setGradeLevelDescription($grade_level_description)
+    public function setGradeLevelDescription($gradeLevelDescription)
     {
-        if (is_null($grade_level_description)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_level_description');
+        if (is_null($gradeLevelDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeLevelDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_level_description', $nullablesSetToNull);
+            $index = array_search('gradeLevelDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_level_description'] = $grade_level_description;
+        $this->container['gradeLevelDescription'] = $gradeLevelDescription;
 
         return $this;
     }
 
     /**
-     * Gets grade_level_abbreviation
+     * Gets gradeLevelAbbreviation
      *
      * @return string|null
      */
     public function getGradeLevelAbbreviation()
     {
-        return $this->container['grade_level_abbreviation'];
+        return $this->container['gradeLevelAbbreviation'];
     }
 
     /**
-     * Sets grade_level_abbreviation
+     * Sets gradeLevelAbbreviation
      *
-     * @param string|null $grade_level_abbreviation The grade level abbreviation of the student
+     * @param string|null $gradeLevelAbbreviation The grade level abbreviation of the student
      *
      * @return self
      */
-    public function setGradeLevelAbbreviation($grade_level_abbreviation)
+    public function setGradeLevelAbbreviation($gradeLevelAbbreviation)
     {
-        if (is_null($grade_level_abbreviation)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_level_abbreviation');
+        if (is_null($gradeLevelAbbreviation)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeLevelAbbreviation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_level_abbreviation', $nullablesSetToNull);
+            $index = array_search('gradeLevelAbbreviation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_level_abbreviation'] = $grade_level_abbreviation;
+        $this->container['gradeLevelAbbreviation'] = $gradeLevelAbbreviation;
 
         return $this;
     }
 
     /**
-     * Gets grade_level_name
+     * Gets gradeLevelName
      *
      * @return string|null
      */
     public function getGradeLevelName()
     {
-        return $this->container['grade_level_name'];
+        return $this->container['gradeLevelName'];
     }
 
     /**
-     * Sets grade_level_name
+     * Sets gradeLevelName
      *
-     * @param string|null $grade_level_name The grade level name of the student
+     * @param string|null $gradeLevelName The grade level name of the student
      *
      * @return self
      */
-    public function setGradeLevelName($grade_level_name)
+    public function setGradeLevelName($gradeLevelName)
     {
-        if (is_null($grade_level_name)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_level_name');
+        if (is_null($gradeLevelName)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeLevelName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_level_name', $nullablesSetToNull);
+            $index = array_search('gradeLevelName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_level_name'] = $grade_level_name;
+        $this->container['gradeLevelName'] = $gradeLevelName;
 
         return $this;
     }

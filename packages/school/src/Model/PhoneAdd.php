@@ -59,7 +59,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'number' => 'string',
-        'type_id' => 'int',
+        'typeId' => 'int',
     ];
 
     /**
@@ -71,7 +71,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'number' => null,
-        'type_id' => 'int32',
+        'typeId' => 'int32',
     ];
 
     /**
@@ -81,7 +81,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'number' => true,
-        'type_id' => true,
+        'typeId' => true,
     ];
 
     /**
@@ -171,7 +171,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'number' => 'number',
-        'type_id' => 'type_id',
+        'typeId' => 'type_id',
     ];
 
     /**
@@ -181,7 +181,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'number' => 'setNumber',
-        'type_id' => 'setTypeId',
+        'typeId' => 'setTypeId',
     ];
 
     /**
@@ -191,7 +191,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'number' => 'getNumber',
-        'type_id' => 'getTypeId',
+        'typeId' => 'getTypeId',
     ];
 
     /**
@@ -252,7 +252,7 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('number', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
     }
 
     /**
@@ -332,35 +332,35 @@ class PhoneAdd implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return int|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param int|null $type_id The type ID of a phone number; the type ID corresponds with the type of phone number (ex. Cell, Work, Home)
+     * @param int|null $typeId The type ID of a phone number; the type ID corresponds with the type of phone number (ex. Cell, Work, Home)
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }

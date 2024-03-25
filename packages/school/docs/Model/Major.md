@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cip_prefix** | **string** |  | [optional]
-**cip_suffix** | **string** |  | [optional]
+**cipPrefix** | **string** |  | [optional]
+**cipSuffix** | **string** |  | [optional]
 **id** | **int** | The Id of the Degree, Major, Minor, or Concentration | [optional]
 **name** | **string** | The name of the Degree, Major, Minor, or Concentration | [optional]
 **abbreviation** | **string** | The abbreviation of the Degree, Major, Minor, or Concentration | [optional]

@@ -130,19 +130,19 @@ class AttendanceApi
      *
      * Attendance record
      *
-     * @param  int $level_id Format - int32. The ID of the school level to retrieve attendance records. (required)
+     * @param  int $levelId Format - int32. The ID of the school level to retrieve attendance records. (required)
      * @param  \DateTime $day Format - date-time (as date-time in RFC3339). The date to return attendance for. (required)
-     * @param  int $offering_type Format - int32. The offering type to retrieve records for. (required)
-     * @param  int $excuse_type Format - int32. Filters results to a specific excuse type. (optional)
+     * @param  int $offeringType Format - int32. The offering type to retrieve records for. (required)
+     * @param  int $excuseType Format - int32. Filters results to a specific excuse type. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendanceGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AttendanceGetCollection
      */
-    public function v1AttendanceGet($level_id, $day, $offering_type, $excuse_type = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
+    public function v1AttendanceGet($levelId, $day, $offeringType, $excuseType = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
     {
-        [$response] = $this->v1AttendanceGetWithHttpInfo($level_id, $day, $offering_type, $excuse_type, $contentType);
+        [$response] = $this->v1AttendanceGetWithHttpInfo($levelId, $day, $offeringType, $excuseType, $contentType);
         return $response;
     }
 
@@ -151,19 +151,19 @@ class AttendanceApi
      *
      * Attendance record
      *
-     * @param  int $level_id Format - int32. The ID of the school level to retrieve attendance records. (required)
+     * @param  int $levelId Format - int32. The ID of the school level to retrieve attendance records. (required)
      * @param  \DateTime $day Format - date-time (as date-time in RFC3339). The date to return attendance for. (required)
-     * @param  int $offering_type Format - int32. The offering type to retrieve records for. (required)
-     * @param  int $excuse_type Format - int32. Filters results to a specific excuse type. (optional)
+     * @param  int $offeringType Format - int32. The offering type to retrieve records for. (required)
+     * @param  int $excuseType Format - int32. Filters results to a specific excuse type. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendanceGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AttendanceGetCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AttendanceGetWithHttpInfo($level_id, $day, $offering_type, $excuse_type = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
+    public function v1AttendanceGetWithHttpInfo($levelId, $day, $offeringType, $excuseType = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
     {
-        $request = $this->v1AttendanceGetRequest($level_id, $day, $offering_type, $excuse_type, $contentType);
+        $request = $this->v1AttendanceGetRequest($levelId, $day, $offeringType, $excuseType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -278,18 +278,18 @@ class AttendanceApi
      *
      * Attendance record
      *
-     * @param  int $level_id Format - int32. The ID of the school level to retrieve attendance records. (required)
+     * @param  int $levelId Format - int32. The ID of the school level to retrieve attendance records. (required)
      * @param  \DateTime $day Format - date-time (as date-time in RFC3339). The date to return attendance for. (required)
-     * @param  int $offering_type Format - int32. The offering type to retrieve records for. (required)
-     * @param  int $excuse_type Format - int32. Filters results to a specific excuse type. (optional)
+     * @param  int $offeringType Format - int32. The offering type to retrieve records for. (required)
+     * @param  int $excuseType Format - int32. Filters results to a specific excuse type. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendanceGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AttendanceGetAsync($level_id, $day, $offering_type, $excuse_type = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
+    public function v1AttendanceGetAsync($levelId, $day, $offeringType, $excuseType = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
     {
-        return $this->v1AttendanceGetAsyncWithHttpInfo($level_id, $day, $offering_type, $excuse_type, $contentType)
+        return $this->v1AttendanceGetAsyncWithHttpInfo($levelId, $day, $offeringType, $excuseType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -302,19 +302,19 @@ class AttendanceApi
      *
      * Attendance record
      *
-     * @param  int $level_id Format - int32. The ID of the school level to retrieve attendance records. (required)
+     * @param  int $levelId Format - int32. The ID of the school level to retrieve attendance records. (required)
      * @param  \DateTime $day Format - date-time (as date-time in RFC3339). The date to return attendance for. (required)
-     * @param  int $offering_type Format - int32. The offering type to retrieve records for. (required)
-     * @param  int $excuse_type Format - int32. Filters results to a specific excuse type. (optional)
+     * @param  int $offeringType Format - int32. The offering type to retrieve records for. (required)
+     * @param  int $excuseType Format - int32. Filters results to a specific excuse type. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendanceGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AttendanceGetAsyncWithHttpInfo($level_id, $day, $offering_type, $excuse_type = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
+    public function v1AttendanceGetAsyncWithHttpInfo($levelId, $day, $offeringType, $excuseType = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
     {
         $returnType = '\SKY\School\Model\AttendanceGetCollection';
-        $request = $this->v1AttendanceGetRequest($level_id, $day, $offering_type, $excuse_type, $contentType);
+        $request = $this->v1AttendanceGetRequest($levelId, $day, $offeringType, $excuseType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -355,22 +355,22 @@ class AttendanceApi
     /**
      * Create request for operation 'v1AttendanceGet'
      *
-     * @param  int $level_id Format - int32. The ID of the school level to retrieve attendance records. (required)
+     * @param  int $levelId Format - int32. The ID of the school level to retrieve attendance records. (required)
      * @param  \DateTime $day Format - date-time (as date-time in RFC3339). The date to return attendance for. (required)
-     * @param  int $offering_type Format - int32. The offering type to retrieve records for. (required)
-     * @param  int $excuse_type Format - int32. Filters results to a specific excuse type. (optional)
+     * @param  int $offeringType Format - int32. The offering type to retrieve records for. (required)
+     * @param  int $excuseType Format - int32. Filters results to a specific excuse type. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendanceGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AttendanceGetRequest($level_id, $day, $offering_type, $excuse_type = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
+    public function v1AttendanceGetRequest($levelId, $day, $offeringType, $excuseType = null, string $contentType = self::contentTypes['v1AttendanceGet'][0])
     {
 
-        // verify the required parameter 'level_id' is set
-        if ($level_id === null || (is_array($level_id) && count($level_id) === 0)) {
+        // verify the required parameter 'levelId' is set
+        if ($levelId === null || (is_array($levelId) && count($levelId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $level_id when calling v1AttendanceGet'
+                'Missing the required parameter $levelId when calling v1AttendanceGet'
             );
         }
 
@@ -381,10 +381,10 @@ class AttendanceApi
             );
         }
 
-        // verify the required parameter 'offering_type' is set
-        if ($offering_type === null || (is_array($offering_type) && count($offering_type) === 0)) {
+        // verify the required parameter 'offeringType' is set
+        if ($offeringType === null || (is_array($offeringType) && count($offeringType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $offering_type when calling v1AttendanceGet'
+                'Missing the required parameter $offeringType when calling v1AttendanceGet'
             );
         }
 
@@ -399,7 +399,7 @@ class AttendanceApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_id,
+            $levelId,
             'level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -417,7 +417,7 @@ class AttendanceApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $offering_type,
+            $offeringType,
             'offering_type', // param base name
             'integer', // openApiType
             'form', // style
@@ -426,7 +426,7 @@ class AttendanceApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $excuse_type,
+            $excuseType,
             'excuse_type', // param base name
             'integer', // openApiType
             'form', // style
@@ -505,16 +505,16 @@ class AttendanceApi
      *
      * Attendance record create
      *
-     * @param  \SKY\School\Model\AttendanceCreate $attendance_create Information about the attendance report (optional)
+     * @param  \SKY\School\Model\AttendanceCreate $attendanceCreate Information about the attendance report (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendancePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AttendancePost($attendance_create = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
+    public function v1AttendancePost($attendanceCreate = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
     {
-        $this->v1AttendancePostWithHttpInfo($attendance_create, $contentType);
+        $this->v1AttendancePostWithHttpInfo($attendanceCreate, $contentType);
     }
 
     /**
@@ -522,16 +522,16 @@ class AttendanceApi
      *
      * Attendance record create
      *
-     * @param  \SKY\School\Model\AttendanceCreate $attendance_create Information about the attendance report (optional)
+     * @param  \SKY\School\Model\AttendanceCreate $attendanceCreate Information about the attendance report (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendancePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AttendancePostWithHttpInfo($attendance_create = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
+    public function v1AttendancePostWithHttpInfo($attendanceCreate = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
     {
-        $request = $this->v1AttendancePostRequest($attendance_create, $contentType);
+        $request = $this->v1AttendancePostRequest($attendanceCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -582,15 +582,15 @@ class AttendanceApi
      *
      * Attendance record create
      *
-     * @param  \SKY\School\Model\AttendanceCreate $attendance_create Information about the attendance report (optional)
+     * @param  \SKY\School\Model\AttendanceCreate $attendanceCreate Information about the attendance report (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AttendancePostAsync($attendance_create = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
+    public function v1AttendancePostAsync($attendanceCreate = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
     {
-        return $this->v1AttendancePostAsyncWithHttpInfo($attendance_create, $contentType)
+        return $this->v1AttendancePostAsyncWithHttpInfo($attendanceCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -603,16 +603,16 @@ class AttendanceApi
      *
      * Attendance record create
      *
-     * @param  \SKY\School\Model\AttendanceCreate $attendance_create Information about the attendance report (optional)
+     * @param  \SKY\School\Model\AttendanceCreate $attendanceCreate Information about the attendance report (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AttendancePostAsyncWithHttpInfo($attendance_create = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
+    public function v1AttendancePostAsyncWithHttpInfo($attendanceCreate = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
     {
         $returnType = '';
-        $request = $this->v1AttendancePostRequest($attendance_create, $contentType);
+        $request = $this->v1AttendancePostRequest($attendanceCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -640,13 +640,13 @@ class AttendanceApi
     /**
      * Create request for operation 'v1AttendancePost'
      *
-     * @param  \SKY\School\Model\AttendanceCreate $attendance_create Information about the attendance report (optional)
+     * @param  \SKY\School\Model\AttendanceCreate $attendanceCreate Information about the attendance report (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AttendancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AttendancePostRequest($attendance_create = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
+    public function v1AttendancePostRequest($attendanceCreate = null, string $contentType = self::contentTypes['v1AttendancePost'][0])
     {
 
 
@@ -669,12 +669,12 @@ class AttendanceApi
         );
 
         // for model (json/xml)
-        if (isset($attendance_create)) {
+        if (isset($attendanceCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($attendance_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($attendanceCreate));
             } else {
-                $httpBody = $attendance_create;
+                $httpBody = $attendanceCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

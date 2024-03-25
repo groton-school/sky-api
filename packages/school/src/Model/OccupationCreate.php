@@ -58,19 +58,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'business_name' => 'string',
-        'job_title' => 'string',
-        'business_url' => 'string',
+        'businessName' => 'string',
+        'jobTitle' => 'string',
+        'businessUrl' => 'string',
         'industry' => 'string',
         'organization' => 'string',
         'occupation' => 'string',
-        'matching_gift' => 'bool',
-        'begin_date' => '\DateTime',
-        'end_date' => '\DateTime',
+        'matchingGift' => 'bool',
+        'beginDate' => '\DateTime',
+        'endDate' => '\DateTime',
         'specialty' => 'string',
-        'parent_company' => 'string',
-        'job_function' => 'string',
-        'years_employed' => 'int',
+        'parentCompany' => 'string',
+        'jobFunction' => 'string',
+        'yearsEmployed' => 'int',
         'current' => 'bool',
     ];
 
@@ -82,19 +82,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'business_name' => null,
-        'job_title' => null,
-        'business_url' => null,
+        'businessName' => null,
+        'jobTitle' => null,
+        'businessUrl' => null,
         'industry' => null,
         'organization' => null,
         'occupation' => null,
-        'matching_gift' => null,
-        'begin_date' => 'date-time',
-        'end_date' => 'date-time',
+        'matchingGift' => null,
+        'beginDate' => 'date-time',
+        'endDate' => 'date-time',
         'specialty' => null,
-        'parent_company' => null,
-        'job_function' => null,
-        'years_employed' => 'int32',
+        'parentCompany' => null,
+        'jobFunction' => null,
+        'yearsEmployed' => 'int32',
         'current' => null,
     ];
 
@@ -104,19 +104,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'business_name' => true,
-        'job_title' => true,
-        'business_url' => true,
+        'businessName' => true,
+        'jobTitle' => true,
+        'businessUrl' => true,
         'industry' => true,
         'organization' => true,
         'occupation' => true,
-        'matching_gift' => true,
-        'begin_date' => true,
-        'end_date' => true,
+        'matchingGift' => true,
+        'beginDate' => true,
+        'endDate' => true,
         'specialty' => true,
-        'parent_company' => true,
-        'job_function' => true,
-        'years_employed' => true,
+        'parentCompany' => true,
+        'jobFunction' => true,
+        'yearsEmployed' => true,
         'current' => true,
     ];
 
@@ -206,19 +206,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'business_name' => 'business_name',
-        'job_title' => 'job_title',
-        'business_url' => 'business_url',
+        'businessName' => 'business_name',
+        'jobTitle' => 'job_title',
+        'businessUrl' => 'business_url',
         'industry' => 'industry',
         'organization' => 'organization',
         'occupation' => 'occupation',
-        'matching_gift' => 'matching_gift',
-        'begin_date' => 'begin_date',
-        'end_date' => 'end_date',
+        'matchingGift' => 'matching_gift',
+        'beginDate' => 'begin_date',
+        'endDate' => 'end_date',
         'specialty' => 'specialty',
-        'parent_company' => 'parent_company',
-        'job_function' => 'job_function',
-        'years_employed' => 'years_employed',
+        'parentCompany' => 'parent_company',
+        'jobFunction' => 'job_function',
+        'yearsEmployed' => 'years_employed',
         'current' => 'current',
     ];
 
@@ -228,19 +228,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'business_name' => 'setBusinessName',
-        'job_title' => 'setJobTitle',
-        'business_url' => 'setBusinessUrl',
+        'businessName' => 'setBusinessName',
+        'jobTitle' => 'setJobTitle',
+        'businessUrl' => 'setBusinessUrl',
         'industry' => 'setIndustry',
         'organization' => 'setOrganization',
         'occupation' => 'setOccupation',
-        'matching_gift' => 'setMatchingGift',
-        'begin_date' => 'setBeginDate',
-        'end_date' => 'setEndDate',
+        'matchingGift' => 'setMatchingGift',
+        'beginDate' => 'setBeginDate',
+        'endDate' => 'setEndDate',
         'specialty' => 'setSpecialty',
-        'parent_company' => 'setParentCompany',
-        'job_function' => 'setJobFunction',
-        'years_employed' => 'setYearsEmployed',
+        'parentCompany' => 'setParentCompany',
+        'jobFunction' => 'setJobFunction',
+        'yearsEmployed' => 'setYearsEmployed',
         'current' => 'setCurrent',
     ];
 
@@ -250,19 +250,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'business_name' => 'getBusinessName',
-        'job_title' => 'getJobTitle',
-        'business_url' => 'getBusinessUrl',
+        'businessName' => 'getBusinessName',
+        'jobTitle' => 'getJobTitle',
+        'businessUrl' => 'getBusinessUrl',
         'industry' => 'getIndustry',
         'organization' => 'getOrganization',
         'occupation' => 'getOccupation',
-        'matching_gift' => 'getMatchingGift',
-        'begin_date' => 'getBeginDate',
-        'end_date' => 'getEndDate',
+        'matchingGift' => 'getMatchingGift',
+        'beginDate' => 'getBeginDate',
+        'endDate' => 'getEndDate',
         'specialty' => 'getSpecialty',
-        'parent_company' => 'getParentCompany',
-        'job_function' => 'getJobFunction',
-        'years_employed' => 'getYearsEmployed',
+        'parentCompany' => 'getParentCompany',
+        'jobFunction' => 'getJobFunction',
+        'yearsEmployed' => 'getYearsEmployed',
         'current' => 'getCurrent',
     ];
 
@@ -323,19 +323,19 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('business_name', $data ?? [], null);
-        $this->setIfExists('job_title', $data ?? [], null);
-        $this->setIfExists('business_url', $data ?? [], null);
+        $this->setIfExists('businessName', $data ?? [], null);
+        $this->setIfExists('jobTitle', $data ?? [], null);
+        $this->setIfExists('businessUrl', $data ?? [], null);
         $this->setIfExists('industry', $data ?? [], null);
         $this->setIfExists('organization', $data ?? [], null);
         $this->setIfExists('occupation', $data ?? [], null);
-        $this->setIfExists('matching_gift', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
+        $this->setIfExists('matchingGift', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
         $this->setIfExists('specialty', $data ?? [], null);
-        $this->setIfExists('parent_company', $data ?? [], null);
-        $this->setIfExists('job_function', $data ?? [], null);
-        $this->setIfExists('years_employed', $data ?? [], null);
+        $this->setIfExists('parentCompany', $data ?? [], null);
+        $this->setIfExists('jobFunction', $data ?? [], null);
+        $this->setIfExists('yearsEmployed', $data ?? [], null);
         $this->setIfExists('current', $data ?? [], null);
     }
 
@@ -382,103 +382,103 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets business_name
+     * Gets businessName
      *
      * @return string|null
      */
     public function getBusinessName()
     {
-        return $this->container['business_name'];
+        return $this->container['businessName'];
     }
 
     /**
-     * Sets business_name
+     * Sets businessName
      *
-     * @param string|null $business_name Name of the employing business
+     * @param string|null $businessName Name of the employing business
      *
      * @return self
      */
-    public function setBusinessName($business_name)
+    public function setBusinessName($businessName)
     {
-        if (is_null($business_name)) {
-            array_push($this->openAPINullablesSetToNull, 'business_name');
+        if (is_null($businessName)) {
+            array_push($this->openAPINullablesSetToNull, 'businessName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('business_name', $nullablesSetToNull);
+            $index = array_search('businessName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['business_name'] = $business_name;
+        $this->container['businessName'] = $businessName;
 
         return $this;
     }
 
     /**
-     * Gets job_title
+     * Gets jobTitle
      *
      * @return string|null
      */
     public function getJobTitle()
     {
-        return $this->container['job_title'];
+        return $this->container['jobTitle'];
     }
 
     /**
-     * Sets job_title
+     * Sets jobTitle
      *
-     * @param string|null $job_title Employed individuals job title
+     * @param string|null $jobTitle Employed individuals job title
      *
      * @return self
      */
-    public function setJobTitle($job_title)
+    public function setJobTitle($jobTitle)
     {
-        if (is_null($job_title)) {
-            array_push($this->openAPINullablesSetToNull, 'job_title');
+        if (is_null($jobTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'jobTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('job_title', $nullablesSetToNull);
+            $index = array_search('jobTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['job_title'] = $job_title;
+        $this->container['jobTitle'] = $jobTitle;
 
         return $this;
     }
 
     /**
-     * Gets business_url
+     * Gets businessUrl
      *
      * @return string|null
      */
     public function getBusinessUrl()
     {
-        return $this->container['business_url'];
+        return $this->container['businessUrl'];
     }
 
     /**
-     * Sets business_url
+     * Sets businessUrl
      *
-     * @param string|null $business_url Url of the employing business
+     * @param string|null $businessUrl Url of the employing business
      *
      * @return self
      */
-    public function setBusinessUrl($business_url)
+    public function setBusinessUrl($businessUrl)
     {
-        if (is_null($business_url)) {
-            array_push($this->openAPINullablesSetToNull, 'business_url');
+        if (is_null($businessUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'businessUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('business_url', $nullablesSetToNull);
+            $index = array_search('businessUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['business_url'] = $business_url;
+        $this->container['businessUrl'] = $businessUrl;
 
         return $this;
     }
@@ -586,103 +586,103 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets matching_gift
+     * Gets matchingGift
      *
      * @return bool|null
      */
     public function getMatchingGift()
     {
-        return $this->container['matching_gift'];
+        return $this->container['matchingGift'];
     }
 
     /**
-     * Sets matching_gift
+     * Sets matchingGift
      *
-     * @param bool|null $matching_gift Indicates if employer matches employee donations
+     * @param bool|null $matchingGift Indicates if employer matches employee donations
      *
      * @return self
      */
-    public function setMatchingGift($matching_gift)
+    public function setMatchingGift($matchingGift)
     {
-        if (is_null($matching_gift)) {
-            array_push($this->openAPINullablesSetToNull, 'matching_gift');
+        if (is_null($matchingGift)) {
+            array_push($this->openAPINullablesSetToNull, 'matchingGift');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('matching_gift', $nullablesSetToNull);
+            $index = array_search('matchingGift', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['matching_gift'] = $matching_gift;
+        $this->container['matchingGift'] = $matchingGift;
 
         return $this;
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date Employees start date at this business
+     * @param \DateTime|null $beginDate Employees start date at this business
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date Employees end date at this business
+     * @param \DateTime|null $endDate Employees end date at this business
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
@@ -722,103 +722,103 @@ class OccupationCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets parent_company
+     * Gets parentCompany
      *
      * @return string|null
      */
     public function getParentCompany()
     {
-        return $this->container['parent_company'];
+        return $this->container['parentCompany'];
     }
 
     /**
-     * Sets parent_company
+     * Sets parentCompany
      *
-     * @param string|null $parent_company Parent company of employing business
+     * @param string|null $parentCompany Parent company of employing business
      *
      * @return self
      */
-    public function setParentCompany($parent_company)
+    public function setParentCompany($parentCompany)
     {
-        if (is_null($parent_company)) {
-            array_push($this->openAPINullablesSetToNull, 'parent_company');
+        if (is_null($parentCompany)) {
+            array_push($this->openAPINullablesSetToNull, 'parentCompany');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('parent_company', $nullablesSetToNull);
+            $index = array_search('parentCompany', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['parent_company'] = $parent_company;
+        $this->container['parentCompany'] = $parentCompany;
 
         return $this;
     }
 
     /**
-     * Gets job_function
+     * Gets jobFunction
      *
      * @return string|null
      */
     public function getJobFunction()
     {
-        return $this->container['job_function'];
+        return $this->container['jobFunction'];
     }
 
     /**
-     * Sets job_function
+     * Sets jobFunction
      *
-     * @param string|null $job_function Description of the work done by the employee
+     * @param string|null $jobFunction Description of the work done by the employee
      *
      * @return self
      */
-    public function setJobFunction($job_function)
+    public function setJobFunction($jobFunction)
     {
-        if (is_null($job_function)) {
-            array_push($this->openAPINullablesSetToNull, 'job_function');
+        if (is_null($jobFunction)) {
+            array_push($this->openAPINullablesSetToNull, 'jobFunction');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('job_function', $nullablesSetToNull);
+            $index = array_search('jobFunction', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['job_function'] = $job_function;
+        $this->container['jobFunction'] = $jobFunction;
 
         return $this;
     }
 
     /**
-     * Gets years_employed
+     * Gets yearsEmployed
      *
      * @return int|null
      */
     public function getYearsEmployed()
     {
-        return $this->container['years_employed'];
+        return $this->container['yearsEmployed'];
     }
 
     /**
-     * Sets years_employed
+     * Sets yearsEmployed
      *
-     * @param int|null $years_employed Number of years employee has been at this business
+     * @param int|null $yearsEmployed Number of years employee has been at this business
      *
      * @return self
      */
-    public function setYearsEmployed($years_employed)
+    public function setYearsEmployed($yearsEmployed)
     {
-        if (is_null($years_employed)) {
-            array_push($this->openAPINullablesSetToNull, 'years_employed');
+        if (is_null($yearsEmployed)) {
+            array_push($this->openAPINullablesSetToNull, 'yearsEmployed');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('years_employed', $nullablesSetToNull);
+            $index = array_search('yearsEmployed', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['years_employed'] = $years_employed;
+        $this->container['yearsEmployed'] = $yearsEmployed;
 
         return $this;
     }

@@ -59,26 +59,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'attendance_of_record' => 'bool',
-        'attendance_type' => 'bool',
-        'block_name' => 'string',
+        'attendanceOfRecord' => 'bool',
+        'attendanceType' => 'bool',
+        'blockName' => 'string',
         'comment' => 'string',
         'date' => '\DateTime',
-        'excuse_category_description' => 'string',
-        'excuse_category_id' => 'int',
-        'excuse_description' => 'string',
-        'excuse_type_id' => 'int',
+        'excuseCategoryDescription' => 'string',
+        'excuseCategoryId' => 'int',
+        'excuseDescription' => 'string',
+        'excuseTypeId' => 'int',
         'excused' => 'int',
-        'grad_year' => 'string',
+        'gradYear' => 'string',
         'grade' => 'string',
-        'grade_level_sort' => 'int',
-        'group_name' => 'string',
-        'photo_file_name' => 'string',
+        'gradeLevelSort' => 'int',
+        'groupName' => 'string',
+        'photoFileName' => 'string',
         'section' => 'string',
-        'section_id' => 'int',
-        'student_name' => 'string',
-        'student_user_id' => 'int',
-        'teacher_name' => 'string',
+        'sectionId' => 'int',
+        'studentName' => 'string',
+        'studentUserId' => 'int',
+        'teacherName' => 'string',
     ];
 
     /**
@@ -90,26 +90,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int64',
-        'attendance_of_record' => null,
-        'attendance_type' => null,
-        'block_name' => null,
+        'attendanceOfRecord' => null,
+        'attendanceType' => null,
+        'blockName' => null,
         'comment' => null,
         'date' => 'date-time',
-        'excuse_category_description' => null,
-        'excuse_category_id' => 'int32',
-        'excuse_description' => null,
-        'excuse_type_id' => 'int32',
+        'excuseCategoryDescription' => null,
+        'excuseCategoryId' => 'int32',
+        'excuseDescription' => null,
+        'excuseTypeId' => 'int32',
         'excused' => 'int32',
-        'grad_year' => null,
+        'gradYear' => null,
         'grade' => null,
-        'grade_level_sort' => 'int32',
-        'group_name' => null,
-        'photo_file_name' => null,
+        'gradeLevelSort' => 'int32',
+        'groupName' => null,
+        'photoFileName' => null,
         'section' => null,
-        'section_id' => 'int32',
-        'student_name' => null,
-        'student_user_id' => 'int32',
-        'teacher_name' => null,
+        'sectionId' => 'int32',
+        'studentName' => null,
+        'studentUserId' => 'int32',
+        'teacherName' => null,
     ];
 
     /**
@@ -119,26 +119,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'attendance_of_record' => false,
-        'attendance_type' => false,
-        'block_name' => true,
+        'attendanceOfRecord' => false,
+        'attendanceType' => false,
+        'blockName' => true,
         'comment' => true,
         'date' => true,
-        'excuse_category_description' => true,
-        'excuse_category_id' => false,
-        'excuse_description' => true,
-        'excuse_type_id' => false,
+        'excuseCategoryDescription' => true,
+        'excuseCategoryId' => false,
+        'excuseDescription' => true,
+        'excuseTypeId' => false,
         'excused' => false,
-        'grad_year' => true,
+        'gradYear' => true,
         'grade' => true,
-        'grade_level_sort' => false,
-        'group_name' => true,
-        'photo_file_name' => true,
+        'gradeLevelSort' => false,
+        'groupName' => true,
+        'photoFileName' => true,
         'section' => true,
-        'section_id' => false,
-        'student_name' => true,
-        'student_user_id' => false,
-        'teacher_name' => true,
+        'sectionId' => false,
+        'studentName' => true,
+        'studentUserId' => false,
+        'teacherName' => true,
     ];
 
     /**
@@ -228,26 +228,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'attendance_of_record' => 'attendance_of_record',
-        'attendance_type' => 'attendance_type',
-        'block_name' => 'block_name',
+        'attendanceOfRecord' => 'attendance_of_record',
+        'attendanceType' => 'attendance_type',
+        'blockName' => 'block_name',
         'comment' => 'comment',
         'date' => 'date',
-        'excuse_category_description' => 'excuse_category_description',
-        'excuse_category_id' => 'excuse_category_id',
-        'excuse_description' => 'excuse_description',
-        'excuse_type_id' => 'excuse_type_id',
+        'excuseCategoryDescription' => 'excuse_category_description',
+        'excuseCategoryId' => 'excuse_category_id',
+        'excuseDescription' => 'excuse_description',
+        'excuseTypeId' => 'excuse_type_id',
         'excused' => 'excused',
-        'grad_year' => 'grad_year',
+        'gradYear' => 'grad_year',
         'grade' => 'grade',
-        'grade_level_sort' => 'grade_level_sort',
-        'group_name' => 'group_name',
-        'photo_file_name' => 'photo_file_name',
+        'gradeLevelSort' => 'grade_level_sort',
+        'groupName' => 'group_name',
+        'photoFileName' => 'photo_file_name',
         'section' => 'section',
-        'section_id' => 'section_id',
-        'student_name' => 'student_name',
-        'student_user_id' => 'student_user_id',
-        'teacher_name' => 'teacher_name',
+        'sectionId' => 'section_id',
+        'studentName' => 'student_name',
+        'studentUserId' => 'student_user_id',
+        'teacherName' => 'teacher_name',
     ];
 
     /**
@@ -257,26 +257,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'attendance_of_record' => 'setAttendanceOfRecord',
-        'attendance_type' => 'setAttendanceType',
-        'block_name' => 'setBlockName',
+        'attendanceOfRecord' => 'setAttendanceOfRecord',
+        'attendanceType' => 'setAttendanceType',
+        'blockName' => 'setBlockName',
         'comment' => 'setComment',
         'date' => 'setDate',
-        'excuse_category_description' => 'setExcuseCategoryDescription',
-        'excuse_category_id' => 'setExcuseCategoryId',
-        'excuse_description' => 'setExcuseDescription',
-        'excuse_type_id' => 'setExcuseTypeId',
+        'excuseCategoryDescription' => 'setExcuseCategoryDescription',
+        'excuseCategoryId' => 'setExcuseCategoryId',
+        'excuseDescription' => 'setExcuseDescription',
+        'excuseTypeId' => 'setExcuseTypeId',
         'excused' => 'setExcused',
-        'grad_year' => 'setGradYear',
+        'gradYear' => 'setGradYear',
         'grade' => 'setGrade',
-        'grade_level_sort' => 'setGradeLevelSort',
-        'group_name' => 'setGroupName',
-        'photo_file_name' => 'setPhotoFileName',
+        'gradeLevelSort' => 'setGradeLevelSort',
+        'groupName' => 'setGroupName',
+        'photoFileName' => 'setPhotoFileName',
         'section' => 'setSection',
-        'section_id' => 'setSectionId',
-        'student_name' => 'setStudentName',
-        'student_user_id' => 'setStudentUserId',
-        'teacher_name' => 'setTeacherName',
+        'sectionId' => 'setSectionId',
+        'studentName' => 'setStudentName',
+        'studentUserId' => 'setStudentUserId',
+        'teacherName' => 'setTeacherName',
     ];
 
     /**
@@ -286,26 +286,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'attendance_of_record' => 'getAttendanceOfRecord',
-        'attendance_type' => 'getAttendanceType',
-        'block_name' => 'getBlockName',
+        'attendanceOfRecord' => 'getAttendanceOfRecord',
+        'attendanceType' => 'getAttendanceType',
+        'blockName' => 'getBlockName',
         'comment' => 'getComment',
         'date' => 'getDate',
-        'excuse_category_description' => 'getExcuseCategoryDescription',
-        'excuse_category_id' => 'getExcuseCategoryId',
-        'excuse_description' => 'getExcuseDescription',
-        'excuse_type_id' => 'getExcuseTypeId',
+        'excuseCategoryDescription' => 'getExcuseCategoryDescription',
+        'excuseCategoryId' => 'getExcuseCategoryId',
+        'excuseDescription' => 'getExcuseDescription',
+        'excuseTypeId' => 'getExcuseTypeId',
         'excused' => 'getExcused',
-        'grad_year' => 'getGradYear',
+        'gradYear' => 'getGradYear',
         'grade' => 'getGrade',
-        'grade_level_sort' => 'getGradeLevelSort',
-        'group_name' => 'getGroupName',
-        'photo_file_name' => 'getPhotoFileName',
+        'gradeLevelSort' => 'getGradeLevelSort',
+        'groupName' => 'getGroupName',
+        'photoFileName' => 'getPhotoFileName',
         'section' => 'getSection',
-        'section_id' => 'getSectionId',
-        'student_name' => 'getStudentName',
-        'student_user_id' => 'getStudentUserId',
-        'teacher_name' => 'getTeacherName',
+        'sectionId' => 'getSectionId',
+        'studentName' => 'getStudentName',
+        'studentUserId' => 'getStudentUserId',
+        'teacherName' => 'getTeacherName',
     ];
 
     /**
@@ -366,26 +366,26 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('attendance_of_record', $data ?? [], null);
-        $this->setIfExists('attendance_type', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
+        $this->setIfExists('attendanceOfRecord', $data ?? [], null);
+        $this->setIfExists('attendanceType', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('excuse_category_description', $data ?? [], null);
-        $this->setIfExists('excuse_category_id', $data ?? [], null);
-        $this->setIfExists('excuse_description', $data ?? [], null);
-        $this->setIfExists('excuse_type_id', $data ?? [], null);
+        $this->setIfExists('excuseCategoryDescription', $data ?? [], null);
+        $this->setIfExists('excuseCategoryId', $data ?? [], null);
+        $this->setIfExists('excuseDescription', $data ?? [], null);
+        $this->setIfExists('excuseTypeId', $data ?? [], null);
         $this->setIfExists('excused', $data ?? [], null);
-        $this->setIfExists('grad_year', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
         $this->setIfExists('grade', $data ?? [], null);
-        $this->setIfExists('grade_level_sort', $data ?? [], null);
-        $this->setIfExists('group_name', $data ?? [], null);
-        $this->setIfExists('photo_file_name', $data ?? [], null);
+        $this->setIfExists('gradeLevelSort', $data ?? [], null);
+        $this->setIfExists('groupName', $data ?? [], null);
+        $this->setIfExists('photoFileName', $data ?? [], null);
         $this->setIfExists('section', $data ?? [], null);
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('student_name', $data ?? [], null);
-        $this->setIfExists('student_user_id', $data ?? [], null);
-        $this->setIfExists('teacher_name', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('studentName', $data ?? [], null);
+        $this->setIfExists('studentUserId', $data ?? [], null);
+        $this->setIfExists('teacherName', $data ?? [], null);
     }
 
     /**
@@ -458,89 +458,89 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets attendance_of_record
+     * Gets attendanceOfRecord
      *
      * @return bool|null
      */
     public function getAttendanceOfRecord()
     {
-        return $this->container['attendance_of_record'];
+        return $this->container['attendanceOfRecord'];
     }
 
     /**
-     * Sets attendance_of_record
+     * Sets attendanceOfRecord
      *
-     * @param bool|null $attendance_of_record Attendance of record
+     * @param bool|null $attendanceOfRecord Attendance of record
      *
      * @return self
      */
-    public function setAttendanceOfRecord($attendance_of_record)
+    public function setAttendanceOfRecord($attendanceOfRecord)
     {
-        if (is_null($attendance_of_record)) {
-            throw new \InvalidArgumentException('non-nullable attendance_of_record cannot be null');
+        if (is_null($attendanceOfRecord)) {
+            throw new \InvalidArgumentException('non-nullable attendanceOfRecord cannot be null');
         }
-        $this->container['attendance_of_record'] = $attendance_of_record;
+        $this->container['attendanceOfRecord'] = $attendanceOfRecord;
 
         return $this;
     }
 
     /**
-     * Gets attendance_type
+     * Gets attendanceType
      *
      * @return bool|null
      */
     public function getAttendanceType()
     {
-        return $this->container['attendance_type'];
+        return $this->container['attendanceType'];
     }
 
     /**
-     * Sets attendance_type
+     * Sets attendanceType
      *
-     * @param bool|null $attendance_type The type of the attendance
+     * @param bool|null $attendanceType The type of the attendance
      *
      * @return self
      */
-    public function setAttendanceType($attendance_type)
+    public function setAttendanceType($attendanceType)
     {
-        if (is_null($attendance_type)) {
-            throw new \InvalidArgumentException('non-nullable attendance_type cannot be null');
+        if (is_null($attendanceType)) {
+            throw new \InvalidArgumentException('non-nullable attendanceType cannot be null');
         }
-        $this->container['attendance_type'] = $attendance_type;
+        $this->container['attendanceType'] = $attendanceType;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name The name of the block
+     * @param string|null $blockName The name of the block
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
@@ -614,123 +614,123 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets excuse_category_description
+     * Gets excuseCategoryDescription
      *
      * @return string|null
      */
     public function getExcuseCategoryDescription()
     {
-        return $this->container['excuse_category_description'];
+        return $this->container['excuseCategoryDescription'];
     }
 
     /**
-     * Sets excuse_category_description
+     * Sets excuseCategoryDescription
      *
-     * @param string|null $excuse_category_description The category description of the excuse
+     * @param string|null $excuseCategoryDescription The category description of the excuse
      *
      * @return self
      */
-    public function setExcuseCategoryDescription($excuse_category_description)
+    public function setExcuseCategoryDescription($excuseCategoryDescription)
     {
-        if (is_null($excuse_category_description)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_category_description');
+        if (is_null($excuseCategoryDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseCategoryDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_category_description', $nullablesSetToNull);
+            $index = array_search('excuseCategoryDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_category_description'] = $excuse_category_description;
+        $this->container['excuseCategoryDescription'] = $excuseCategoryDescription;
 
         return $this;
     }
 
     /**
-     * Gets excuse_category_id
+     * Gets excuseCategoryId
      *
      * @return int|null
      */
     public function getExcuseCategoryId()
     {
-        return $this->container['excuse_category_id'];
+        return $this->container['excuseCategoryId'];
     }
 
     /**
-     * Sets excuse_category_id
+     * Sets excuseCategoryId
      *
-     * @param int|null $excuse_category_id The category of the excuse
+     * @param int|null $excuseCategoryId The category of the excuse
      *
      * @return self
      */
-    public function setExcuseCategoryId($excuse_category_id)
+    public function setExcuseCategoryId($excuseCategoryId)
     {
-        if (is_null($excuse_category_id)) {
-            throw new \InvalidArgumentException('non-nullable excuse_category_id cannot be null');
+        if (is_null($excuseCategoryId)) {
+            throw new \InvalidArgumentException('non-nullable excuseCategoryId cannot be null');
         }
-        $this->container['excuse_category_id'] = $excuse_category_id;
+        $this->container['excuseCategoryId'] = $excuseCategoryId;
 
         return $this;
     }
 
     /**
-     * Gets excuse_description
+     * Gets excuseDescription
      *
      * @return string|null
      */
     public function getExcuseDescription()
     {
-        return $this->container['excuse_description'];
+        return $this->container['excuseDescription'];
     }
 
     /**
-     * Sets excuse_description
+     * Sets excuseDescription
      *
-     * @param string|null $excuse_description The description of the excuse
+     * @param string|null $excuseDescription The description of the excuse
      *
      * @return self
      */
-    public function setExcuseDescription($excuse_description)
+    public function setExcuseDescription($excuseDescription)
     {
-        if (is_null($excuse_description)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_description');
+        if (is_null($excuseDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_description', $nullablesSetToNull);
+            $index = array_search('excuseDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_description'] = $excuse_description;
+        $this->container['excuseDescription'] = $excuseDescription;
 
         return $this;
     }
 
     /**
-     * Gets excuse_type_id
+     * Gets excuseTypeId
      *
      * @return int|null
      */
     public function getExcuseTypeId()
     {
-        return $this->container['excuse_type_id'];
+        return $this->container['excuseTypeId'];
     }
 
     /**
-     * Sets excuse_type_id
+     * Sets excuseTypeId
      *
-     * @param int|null $excuse_type_id The type of the excuse
+     * @param int|null $excuseTypeId The type of the excuse
      *
      * @return self
      */
-    public function setExcuseTypeId($excuse_type_id)
+    public function setExcuseTypeId($excuseTypeId)
     {
-        if (is_null($excuse_type_id)) {
-            throw new \InvalidArgumentException('non-nullable excuse_type_id cannot be null');
+        if (is_null($excuseTypeId)) {
+            throw new \InvalidArgumentException('non-nullable excuseTypeId cannot be null');
         }
-        $this->container['excuse_type_id'] = $excuse_type_id;
+        $this->container['excuseTypeId'] = $excuseTypeId;
 
         return $this;
     }
@@ -763,35 +763,35 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year The graduation year of the student
+     * @param string|null $gradYear The graduation year of the student
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }
@@ -831,96 +831,96 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets grade_level_sort
+     * Gets gradeLevelSort
      *
      * @return int|null
      */
     public function getGradeLevelSort()
     {
-        return $this->container['grade_level_sort'];
+        return $this->container['gradeLevelSort'];
     }
 
     /**
-     * Sets grade_level_sort
+     * Sets gradeLevelSort
      *
-     * @param int|null $grade_level_sort Grade level sort order
+     * @param int|null $gradeLevelSort Grade level sort order
      *
      * @return self
      */
-    public function setGradeLevelSort($grade_level_sort)
+    public function setGradeLevelSort($gradeLevelSort)
     {
-        if (is_null($grade_level_sort)) {
-            throw new \InvalidArgumentException('non-nullable grade_level_sort cannot be null');
+        if (is_null($gradeLevelSort)) {
+            throw new \InvalidArgumentException('non-nullable gradeLevelSort cannot be null');
         }
-        $this->container['grade_level_sort'] = $grade_level_sort;
+        $this->container['gradeLevelSort'] = $gradeLevelSort;
 
         return $this;
     }
 
     /**
-     * Gets group_name
+     * Gets groupName
      *
      * @return string|null
      */
     public function getGroupName()
     {
-        return $this->container['group_name'];
+        return $this->container['groupName'];
     }
 
     /**
-     * Sets group_name
+     * Sets groupName
      *
-     * @param string|null $group_name The group name
+     * @param string|null $groupName The group name
      *
      * @return self
      */
-    public function setGroupName($group_name)
+    public function setGroupName($groupName)
     {
-        if (is_null($group_name)) {
-            array_push($this->openAPINullablesSetToNull, 'group_name');
+        if (is_null($groupName)) {
+            array_push($this->openAPINullablesSetToNull, 'groupName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('group_name', $nullablesSetToNull);
+            $index = array_search('groupName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['group_name'] = $group_name;
+        $this->container['groupName'] = $groupName;
 
         return $this;
     }
 
     /**
-     * Gets photo_file_name
+     * Gets photoFileName
      *
      * @return string|null
      */
     public function getPhotoFileName()
     {
-        return $this->container['photo_file_name'];
+        return $this->container['photoFileName'];
     }
 
     /**
-     * Sets photo_file_name
+     * Sets photoFileName
      *
-     * @param string|null $photo_file_name The phone file name
+     * @param string|null $photoFileName The phone file name
      *
      * @return self
      */
-    public function setPhotoFileName($photo_file_name)
+    public function setPhotoFileName($photoFileName)
     {
-        if (is_null($photo_file_name)) {
-            array_push($this->openAPINullablesSetToNull, 'photo_file_name');
+        if (is_null($photoFileName)) {
+            array_push($this->openAPINullablesSetToNull, 'photoFileName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('photo_file_name', $nullablesSetToNull);
+            $index = array_search('photoFileName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['photo_file_name'] = $photo_file_name;
+        $this->container['photoFileName'] = $photoFileName;
 
         return $this;
     }
@@ -960,123 +960,123 @@ class AttendanceGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The ID of the section
+     * @param int|null $sectionId The ID of the section
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            throw new \InvalidArgumentException('non-nullable section_id cannot be null');
+        if (is_null($sectionId)) {
+            throw new \InvalidArgumentException('non-nullable sectionId cannot be null');
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets student_name
+     * Gets studentName
      *
      * @return string|null
      */
     public function getStudentName()
     {
-        return $this->container['student_name'];
+        return $this->container['studentName'];
     }
 
     /**
-     * Sets student_name
+     * Sets studentName
      *
-     * @param string|null $student_name The name of the student
+     * @param string|null $studentName The name of the student
      *
      * @return self
      */
-    public function setStudentName($student_name)
+    public function setStudentName($studentName)
     {
-        if (is_null($student_name)) {
-            array_push($this->openAPINullablesSetToNull, 'student_name');
+        if (is_null($studentName)) {
+            array_push($this->openAPINullablesSetToNull, 'studentName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_name', $nullablesSetToNull);
+            $index = array_search('studentName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_name'] = $student_name;
+        $this->container['studentName'] = $studentName;
 
         return $this;
     }
 
     /**
-     * Gets student_user_id
+     * Gets studentUserId
      *
      * @return int|null
      */
     public function getStudentUserId()
     {
-        return $this->container['student_user_id'];
+        return $this->container['studentUserId'];
     }
 
     /**
-     * Sets student_user_id
+     * Sets studentUserId
      *
-     * @param int|null $student_user_id The student user ID
+     * @param int|null $studentUserId The student user ID
      *
      * @return self
      */
-    public function setStudentUserId($student_user_id)
+    public function setStudentUserId($studentUserId)
     {
-        if (is_null($student_user_id)) {
-            throw new \InvalidArgumentException('non-nullable student_user_id cannot be null');
+        if (is_null($studentUserId)) {
+            throw new \InvalidArgumentException('non-nullable studentUserId cannot be null');
         }
-        $this->container['student_user_id'] = $student_user_id;
+        $this->container['studentUserId'] = $studentUserId;
 
         return $this;
     }
 
     /**
-     * Gets teacher_name
+     * Gets teacherName
      *
      * @return string|null
      */
     public function getTeacherName()
     {
-        return $this->container['teacher_name'];
+        return $this->container['teacherName'];
     }
 
     /**
-     * Sets teacher_name
+     * Sets teacherName
      *
-     * @param string|null $teacher_name The name of the teacher
+     * @param string|null $teacherName The name of the teacher
      *
      * @return self
      */
-    public function setTeacherName($teacher_name)
+    public function setTeacherName($teacherName)
     {
-        if (is_null($teacher_name)) {
-            array_push($this->openAPINullablesSetToNull, 'teacher_name');
+        if (is_null($teacherName)) {
+            array_push($this->openAPINullablesSetToNull, 'teacherName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('teacher_name', $nullablesSetToNull);
+            $index = array_search('teacherName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['teacher_name'] = $teacher_name;
+        $this->container['teacherName'] = $teacherName;
 
         return $this;
     }

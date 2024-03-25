@@ -60,10 +60,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'shared' => 'bool',
-        'shared_relationship' => 'string',
-        'shared_user' => 'string',
-        'type_id' => 'string',
-        'user_id' => 'int',
+        'sharedRelationship' => 'string',
+        'sharedUser' => 'string',
+        'typeId' => 'string',
+        'userId' => 'int',
     ];
 
     /**
@@ -76,10 +76,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'shared' => null,
-        'shared_relationship' => null,
-        'shared_user' => null,
-        'type_id' => null,
-        'user_id' => 'int32',
+        'sharedRelationship' => null,
+        'sharedUser' => null,
+        'typeId' => null,
+        'userId' => 'int32',
     ];
 
     /**
@@ -90,10 +90,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'shared' => false,
-        'shared_relationship' => true,
-        'shared_user' => true,
-        'type_id' => true,
-        'user_id' => true,
+        'sharedRelationship' => true,
+        'sharedUser' => true,
+        'typeId' => true,
+        'userId' => true,
     ];
 
     /**
@@ -184,10 +184,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'shared' => 'shared',
-        'shared_relationship' => 'shared_relationship',
-        'shared_user' => 'shared_user',
-        'type_id' => 'type_id',
-        'user_id' => 'user_id',
+        'sharedRelationship' => 'shared_relationship',
+        'sharedUser' => 'shared_user',
+        'typeId' => 'type_id',
+        'userId' => 'user_id',
     ];
 
     /**
@@ -198,10 +198,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'shared' => 'setShared',
-        'shared_relationship' => 'setSharedRelationship',
-        'shared_user' => 'setSharedUser',
-        'type_id' => 'setTypeId',
-        'user_id' => 'setUserId',
+        'sharedRelationship' => 'setSharedRelationship',
+        'sharedUser' => 'setSharedUser',
+        'typeId' => 'setTypeId',
+        'userId' => 'setUserId',
     ];
 
     /**
@@ -212,10 +212,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'shared' => 'getShared',
-        'shared_relationship' => 'getSharedRelationship',
-        'shared_user' => 'getSharedUser',
-        'type_id' => 'getTypeId',
-        'user_id' => 'getUserId',
+        'sharedRelationship' => 'getSharedRelationship',
+        'sharedUser' => 'getSharedUser',
+        'typeId' => 'getTypeId',
+        'userId' => 'getUserId',
     ];
 
     /**
@@ -277,10 +277,10 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('shared', $data ?? [], null);
-        $this->setIfExists('shared_relationship', $data ?? [], null);
-        $this->setIfExists('shared_user', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('sharedRelationship', $data ?? [], null);
+        $this->setIfExists('sharedUser', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
     }
 
     /**
@@ -387,137 +387,137 @@ class PhoneTypeLink implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets shared_relationship
+     * Gets sharedRelationship
      *
      * @return string|null
      */
     public function getSharedRelationship()
     {
-        return $this->container['shared_relationship'];
+        return $this->container['sharedRelationship'];
     }
 
     /**
-     * Sets shared_relationship
+     * Sets sharedRelationship
      *
-     * @param string|null $shared_relationship The relationship of the shared user
+     * @param string|null $sharedRelationship The relationship of the shared user
      *
      * @return self
      */
-    public function setSharedRelationship($shared_relationship)
+    public function setSharedRelationship($sharedRelationship)
     {
-        if (is_null($shared_relationship)) {
-            array_push($this->openAPINullablesSetToNull, 'shared_relationship');
+        if (is_null($sharedRelationship)) {
+            array_push($this->openAPINullablesSetToNull, 'sharedRelationship');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('shared_relationship', $nullablesSetToNull);
+            $index = array_search('sharedRelationship', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['shared_relationship'] = $shared_relationship;
+        $this->container['sharedRelationship'] = $sharedRelationship;
 
         return $this;
     }
 
     /**
-     * Gets shared_user
+     * Gets sharedUser
      *
      * @return string|null
      */
     public function getSharedUser()
     {
-        return $this->container['shared_user'];
+        return $this->container['sharedUser'];
     }
 
     /**
-     * Sets shared_user
+     * Sets sharedUser
      *
-     * @param string|null $shared_user The name of the shared user
+     * @param string|null $sharedUser The name of the shared user
      *
      * @return self
      */
-    public function setSharedUser($shared_user)
+    public function setSharedUser($sharedUser)
     {
-        if (is_null($shared_user)) {
-            array_push($this->openAPINullablesSetToNull, 'shared_user');
+        if (is_null($sharedUser)) {
+            array_push($this->openAPINullablesSetToNull, 'sharedUser');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('shared_user', $nullablesSetToNull);
+            $index = array_search('sharedUser', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['shared_user'] = $shared_user;
+        $this->container['sharedUser'] = $sharedUser;
 
         return $this;
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return string|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param string|null $type_id The name of the type
+     * @param string|null $typeId The name of the type
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The ID of the user
+     * @param int|null $userId The ID of the user
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

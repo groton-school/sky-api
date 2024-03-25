@@ -1,0 +1,11 @@
+{
+  "generatorName": "php",
+  "clean": true,
+  "srcBasePath": "src",
+  "gitUserId": "groton-school",
+  "licenseName": "Apache-2.0",
+  "disallowAdditionalPropertiesIfNotPresent": false,
+  "apiTests": false,
+  "modelTests": false,
+  "variableNamingConvention": "camelCase"
+}

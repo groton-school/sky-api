@@ -133,17 +133,17 @@ class EventsApi
      *
      * Calendar for User (BETA)
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCalendarGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\CalendarItemCollection
      */
-    public function v1EventsCalendarGet($start_date = null, $end_date = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
+    public function v1EventsCalendarGet($startDate = null, $endDate = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
     {
-        [$response] = $this->v1EventsCalendarGetWithHttpInfo($start_date, $end_date, $contentType);
+        [$response] = $this->v1EventsCalendarGetWithHttpInfo($startDate, $endDate, $contentType);
         return $response;
     }
 
@@ -152,17 +152,17 @@ class EventsApi
      *
      * Calendar for User (BETA)
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCalendarGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\CalendarItemCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1EventsCalendarGetWithHttpInfo($start_date = null, $end_date = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
+    public function v1EventsCalendarGetWithHttpInfo($startDate = null, $endDate = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
     {
-        $request = $this->v1EventsCalendarGetRequest($start_date, $end_date, $contentType);
+        $request = $this->v1EventsCalendarGetRequest($startDate, $endDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -277,16 +277,16 @@ class EventsApi
      *
      * Calendar for User (BETA)
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCalendarGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1EventsCalendarGetAsync($start_date = null, $end_date = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
+    public function v1EventsCalendarGetAsync($startDate = null, $endDate = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
     {
-        return $this->v1EventsCalendarGetAsyncWithHttpInfo($start_date, $end_date, $contentType)
+        return $this->v1EventsCalendarGetAsyncWithHttpInfo($startDate, $endDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,17 +299,17 @@ class EventsApi
      *
      * Calendar for User (BETA)
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCalendarGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1EventsCalendarGetAsyncWithHttpInfo($start_date = null, $end_date = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
+    public function v1EventsCalendarGetAsyncWithHttpInfo($startDate = null, $endDate = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
     {
         $returnType = '\SKY\School\Model\CalendarItemCollection';
-        $request = $this->v1EventsCalendarGetRequest($start_date, $end_date, $contentType);
+        $request = $this->v1EventsCalendarGetRequest($startDate, $endDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -350,14 +350,14 @@ class EventsApi
     /**
      * Create request for operation 'v1EventsCalendarGet'
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCalendarGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1EventsCalendarGetRequest($start_date = null, $end_date = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
+    public function v1EventsCalendarGetRequest($startDate = null, $endDate = null, string $contentType = self::contentTypes['v1EventsCalendarGet'][0])
     {
 
 
@@ -372,7 +372,7 @@ class EventsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -381,7 +381,7 @@ class EventsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -772,16 +772,16 @@ class EventsApi
      *
      * Events category create
      *
-     * @param  \SKY\School\Model\EventCategory $event_category event_category (optional)
+     * @param  \SKY\School\Model\EventCategory $eventCategory eventCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCategoriesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EventCategoryCreateResponseExample
      */
-    public function v1EventsCategoriesPost($event_category = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
+    public function v1EventsCategoriesPost($eventCategory = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
     {
-        [$response] = $this->v1EventsCategoriesPostWithHttpInfo($event_category, $contentType);
+        [$response] = $this->v1EventsCategoriesPostWithHttpInfo($eventCategory, $contentType);
         return $response;
     }
 
@@ -790,16 +790,16 @@ class EventsApi
      *
      * Events category create
      *
-     * @param  \SKY\School\Model\EventCategory $event_category (optional)
+     * @param  \SKY\School\Model\EventCategory $eventCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCategoriesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EventCategoryCreateResponseExample, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1EventsCategoriesPostWithHttpInfo($event_category = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
+    public function v1EventsCategoriesPostWithHttpInfo($eventCategory = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
     {
-        $request = $this->v1EventsCategoriesPostRequest($event_category, $contentType);
+        $request = $this->v1EventsCategoriesPostRequest($eventCategory, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -914,15 +914,15 @@ class EventsApi
      *
      * Events category create
      *
-     * @param  \SKY\School\Model\EventCategory $event_category (optional)
+     * @param  \SKY\School\Model\EventCategory $eventCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCategoriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1EventsCategoriesPostAsync($event_category = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
+    public function v1EventsCategoriesPostAsync($eventCategory = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
     {
-        return $this->v1EventsCategoriesPostAsyncWithHttpInfo($event_category, $contentType)
+        return $this->v1EventsCategoriesPostAsyncWithHttpInfo($eventCategory, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -935,16 +935,16 @@ class EventsApi
      *
      * Events category create
      *
-     * @param  \SKY\School\Model\EventCategory $event_category (optional)
+     * @param  \SKY\School\Model\EventCategory $eventCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCategoriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1EventsCategoriesPostAsyncWithHttpInfo($event_category = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
+    public function v1EventsCategoriesPostAsyncWithHttpInfo($eventCategory = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
     {
         $returnType = '\SKY\School\Model\EventCategoryCreateResponseExample';
-        $request = $this->v1EventsCategoriesPostRequest($event_category, $contentType);
+        $request = $this->v1EventsCategoriesPostRequest($eventCategory, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -985,13 +985,13 @@ class EventsApi
     /**
      * Create request for operation 'v1EventsCategoriesPost'
      *
-     * @param  \SKY\School\Model\EventCategory $event_category (optional)
+     * @param  \SKY\School\Model\EventCategory $eventCategory (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1EventsCategoriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1EventsCategoriesPostRequest($event_category = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
+    public function v1EventsCategoriesPostRequest($eventCategory = null, string $contentType = self::contentTypes['v1EventsCategoriesPost'][0])
     {
 
 
@@ -1014,12 +1014,12 @@ class EventsApi
         );
 
         // for model (json/xml)
-        if (isset($event_category)) {
+        if (isset($eventCategory)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($event_category));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($eventCategory));
             } else {
-                $httpBody = $event_category;
+                $httpBody = $eventCategory;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

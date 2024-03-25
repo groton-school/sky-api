@@ -1,5 +1,5 @@
 {
-  "name": "groton-school/sky-api-appengine",
+  "name": "groton-school/sky-api.appengine",
   "description": "Blackbaud SKY API PHP client native to Google App Engine",
   "license": "GPL-3.0",
   "authors": [
@@ -9,8 +9,7 @@
     }
   ],
   "require": {
-    "battis/lazy-secrets": "^1.1",
-    "battis/openapi-client-generator": "^0.1"
+    "battis/lazy-secrets": "^1.1"
   },
   "autoload": {
     "psr-4": {

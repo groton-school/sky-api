@@ -58,47 +58,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'middle_name' => 'string',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'middleName' => 'string',
         'prefix' => 'string',
         'suffix' => 'string',
         'nickname' => 'string',
         'role' => 'string',
-        'role_id' => 'int',
-        'current_status' => 'string',
-        'status_id' => 'int',
-        'entering_year' => 'string',
-        'entering_year_id' => 'int',
-        'entering_grade' => 'string',
-        'entering_grade_id' => 'int',
+        'roleId' => 'int',
+        'currentStatus' => 'string',
+        'statusId' => 'int',
+        'enteringYear' => 'string',
+        'enteringYearId' => 'int',
+        'enteringGrade' => 'string',
+        'enteringGradeId' => 'int',
         'email' => 'string',
         'comment' => 'string',
-        'parent1_email' => 'string',
-        'parent2_email' => 'string',
+        'parent1Email' => 'string',
+        'parent2Email' => 'string',
         'international' => 'bool',
-        'school_program' => 'string',
+        'schoolProgram' => 'string',
         'gender' => 'string',
         'ethnicity' => 'string',
-        'boarding_or_day' => 'string',
-        'financial_aid' => 'bool',
-        'admissions_staff_id' => 'int',
-        'admissions_staff' => 'string',
-        'inquiry_source' => 'string',
-        'inquiry_source_id' => 'int',
-        'referral_type' => 'string',
-        'referral_type_id' => 'int',
-        'has_iep' => 'bool',
-        'has_504' => 'bool',
-        'created_by' => 'string',
+        'boardingOrDay' => 'string',
+        'financialAid' => 'bool',
+        'admissionsStaffId' => 'int',
+        'admissionsStaff' => 'string',
+        'inquirySource' => 'string',
+        'inquirySourceId' => 'int',
+        'referralType' => 'string',
+        'referralTypeId' => 'int',
+        'hasIep' => 'bool',
+        'has504' => 'bool',
+        'createdBy' => 'string',
         'created' => '\DateTime',
-        'modified_by' => 'string',
+        'modifiedBy' => 'string',
         'modified' => '\DateTime',
-        'preferred_name' => 'string',
+        'preferredName' => 'string',
         'decision' => '\SKY\School\Model\SchoolDecisionModel',
-        'family_id' => 'int',
-        'current_status_date' => '\DateTime',
+        'familyId' => 'int',
+        'currentStatusDate' => '\DateTime',
         'application' => '\SKY\School\Model\ApplicationModel',
     ];
 
@@ -110,47 +110,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'middle_name' => null,
+        'userId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
+        'middleName' => null,
         'prefix' => null,
         'suffix' => null,
         'nickname' => null,
         'role' => null,
-        'role_id' => 'int32',
-        'current_status' => null,
-        'status_id' => 'int32',
-        'entering_year' => null,
-        'entering_year_id' => 'int32',
-        'entering_grade' => null,
-        'entering_grade_id' => 'int32',
+        'roleId' => 'int32',
+        'currentStatus' => null,
+        'statusId' => 'int32',
+        'enteringYear' => null,
+        'enteringYearId' => 'int32',
+        'enteringGrade' => null,
+        'enteringGradeId' => 'int32',
         'email' => null,
         'comment' => null,
-        'parent1_email' => null,
-        'parent2_email' => null,
+        'parent1Email' => null,
+        'parent2Email' => null,
         'international' => null,
-        'school_program' => null,
+        'schoolProgram' => null,
         'gender' => null,
         'ethnicity' => null,
-        'boarding_or_day' => null,
-        'financial_aid' => null,
-        'admissions_staff_id' => 'int32',
-        'admissions_staff' => null,
-        'inquiry_source' => null,
-        'inquiry_source_id' => 'int32',
-        'referral_type' => null,
-        'referral_type_id' => 'int32',
-        'has_iep' => null,
-        'has_504' => null,
-        'created_by' => null,
+        'boardingOrDay' => null,
+        'financialAid' => null,
+        'admissionsStaffId' => 'int32',
+        'admissionsStaff' => null,
+        'inquirySource' => null,
+        'inquirySourceId' => 'int32',
+        'referralType' => null,
+        'referralTypeId' => 'int32',
+        'hasIep' => null,
+        'has504' => null,
+        'createdBy' => null,
         'created' => 'date-time',
-        'modified_by' => null,
+        'modifiedBy' => null,
         'modified' => 'date-time',
-        'preferred_name' => null,
+        'preferredName' => null,
         'decision' => null,
-        'family_id' => 'int32',
-        'current_status_date' => 'date-time',
+        'familyId' => 'int32',
+        'currentStatusDate' => 'date-time',
         'application' => null,
     ];
 
@@ -160,47 +160,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'middle_name' => true,
+        'userId' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'middleName' => true,
         'prefix' => true,
         'suffix' => true,
         'nickname' => true,
         'role' => true,
-        'role_id' => true,
-        'current_status' => true,
-        'status_id' => true,
-        'entering_year' => true,
-        'entering_year_id' => true,
-        'entering_grade' => true,
-        'entering_grade_id' => true,
+        'roleId' => true,
+        'currentStatus' => true,
+        'statusId' => true,
+        'enteringYear' => true,
+        'enteringYearId' => true,
+        'enteringGrade' => true,
+        'enteringGradeId' => true,
         'email' => true,
         'comment' => true,
-        'parent1_email' => true,
-        'parent2_email' => true,
+        'parent1Email' => true,
+        'parent2Email' => true,
         'international' => true,
-        'school_program' => true,
+        'schoolProgram' => true,
         'gender' => true,
         'ethnicity' => true,
-        'boarding_or_day' => true,
-        'financial_aid' => true,
-        'admissions_staff_id' => true,
-        'admissions_staff' => true,
-        'inquiry_source' => true,
-        'inquiry_source_id' => true,
-        'referral_type' => true,
-        'referral_type_id' => true,
-        'has_iep' => true,
-        'has_504' => true,
-        'created_by' => true,
+        'boardingOrDay' => true,
+        'financialAid' => true,
+        'admissionsStaffId' => true,
+        'admissionsStaff' => true,
+        'inquirySource' => true,
+        'inquirySourceId' => true,
+        'referralType' => true,
+        'referralTypeId' => true,
+        'hasIep' => true,
+        'has504' => true,
+        'createdBy' => true,
         'created' => true,
-        'modified_by' => true,
+        'modifiedBy' => true,
         'modified' => true,
-        'preferred_name' => true,
+        'preferredName' => true,
         'decision' => false,
-        'family_id' => true,
-        'current_status_date' => true,
+        'familyId' => true,
+        'currentStatusDate' => true,
         'application' => false,
     ];
 
@@ -290,47 +290,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'middle_name' => 'middle_name',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'middleName' => 'middle_name',
         'prefix' => 'prefix',
         'suffix' => 'suffix',
         'nickname' => 'nickname',
         'role' => 'role',
-        'role_id' => 'role_id',
-        'current_status' => 'current_status',
-        'status_id' => 'status_id',
-        'entering_year' => 'entering_year',
-        'entering_year_id' => 'entering_year_id',
-        'entering_grade' => 'entering_grade',
-        'entering_grade_id' => 'entering_grade_id',
+        'roleId' => 'role_id',
+        'currentStatus' => 'current_status',
+        'statusId' => 'status_id',
+        'enteringYear' => 'entering_year',
+        'enteringYearId' => 'entering_year_id',
+        'enteringGrade' => 'entering_grade',
+        'enteringGradeId' => 'entering_grade_id',
         'email' => 'email',
         'comment' => 'comment',
-        'parent1_email' => 'parent1_email',
-        'parent2_email' => 'parent2_email',
+        'parent1Email' => 'parent1_email',
+        'parent2Email' => 'parent2_email',
         'international' => 'international',
-        'school_program' => 'school_program',
+        'schoolProgram' => 'school_program',
         'gender' => 'gender',
         'ethnicity' => 'ethnicity',
-        'boarding_or_day' => 'boarding_or_day',
-        'financial_aid' => 'financial_aid',
-        'admissions_staff_id' => 'admissions_staff_id',
-        'admissions_staff' => 'admissions_staff',
-        'inquiry_source' => 'inquiry_source',
-        'inquiry_source_id' => 'inquiry_source_id',
-        'referral_type' => 'referral_type',
-        'referral_type_id' => 'referral_type_id',
-        'has_iep' => 'has_iep',
-        'has_504' => 'has_504',
-        'created_by' => 'created_by',
+        'boardingOrDay' => 'boarding_or_day',
+        'financialAid' => 'financial_aid',
+        'admissionsStaffId' => 'admissions_staff_id',
+        'admissionsStaff' => 'admissions_staff',
+        'inquirySource' => 'inquiry_source',
+        'inquirySourceId' => 'inquiry_source_id',
+        'referralType' => 'referral_type',
+        'referralTypeId' => 'referral_type_id',
+        'hasIep' => 'has_iep',
+        'has504' => 'has_504',
+        'createdBy' => 'created_by',
         'created' => 'created',
-        'modified_by' => 'modified_by',
+        'modifiedBy' => 'modified_by',
         'modified' => 'modified',
-        'preferred_name' => 'preferred_name',
+        'preferredName' => 'preferred_name',
         'decision' => 'decision',
-        'family_id' => 'family_id',
-        'current_status_date' => 'current_status_date',
+        'familyId' => 'family_id',
+        'currentStatusDate' => 'current_status_date',
         'application' => 'application',
     ];
 
@@ -340,47 +340,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'middle_name' => 'setMiddleName',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'middleName' => 'setMiddleName',
         'prefix' => 'setPrefix',
         'suffix' => 'setSuffix',
         'nickname' => 'setNickname',
         'role' => 'setRole',
-        'role_id' => 'setRoleId',
-        'current_status' => 'setCurrentStatus',
-        'status_id' => 'setStatusId',
-        'entering_year' => 'setEnteringYear',
-        'entering_year_id' => 'setEnteringYearId',
-        'entering_grade' => 'setEnteringGrade',
-        'entering_grade_id' => 'setEnteringGradeId',
+        'roleId' => 'setRoleId',
+        'currentStatus' => 'setCurrentStatus',
+        'statusId' => 'setStatusId',
+        'enteringYear' => 'setEnteringYear',
+        'enteringYearId' => 'setEnteringYearId',
+        'enteringGrade' => 'setEnteringGrade',
+        'enteringGradeId' => 'setEnteringGradeId',
         'email' => 'setEmail',
         'comment' => 'setComment',
-        'parent1_email' => 'setParent1Email',
-        'parent2_email' => 'setParent2Email',
+        'parent1Email' => 'setParent1Email',
+        'parent2Email' => 'setParent2Email',
         'international' => 'setInternational',
-        'school_program' => 'setSchoolProgram',
+        'schoolProgram' => 'setSchoolProgram',
         'gender' => 'setGender',
         'ethnicity' => 'setEthnicity',
-        'boarding_or_day' => 'setBoardingOrDay',
-        'financial_aid' => 'setFinancialAid',
-        'admissions_staff_id' => 'setAdmissionsStaffId',
-        'admissions_staff' => 'setAdmissionsStaff',
-        'inquiry_source' => 'setInquirySource',
-        'inquiry_source_id' => 'setInquirySourceId',
-        'referral_type' => 'setReferralType',
-        'referral_type_id' => 'setReferralTypeId',
-        'has_iep' => 'setHasIep',
-        'has_504' => 'setHas504',
-        'created_by' => 'setCreatedBy',
+        'boardingOrDay' => 'setBoardingOrDay',
+        'financialAid' => 'setFinancialAid',
+        'admissionsStaffId' => 'setAdmissionsStaffId',
+        'admissionsStaff' => 'setAdmissionsStaff',
+        'inquirySource' => 'setInquirySource',
+        'inquirySourceId' => 'setInquirySourceId',
+        'referralType' => 'setReferralType',
+        'referralTypeId' => 'setReferralTypeId',
+        'hasIep' => 'setHasIep',
+        'has504' => 'setHas504',
+        'createdBy' => 'setCreatedBy',
         'created' => 'setCreated',
-        'modified_by' => 'setModifiedBy',
+        'modifiedBy' => 'setModifiedBy',
         'modified' => 'setModified',
-        'preferred_name' => 'setPreferredName',
+        'preferredName' => 'setPreferredName',
         'decision' => 'setDecision',
-        'family_id' => 'setFamilyId',
-        'current_status_date' => 'setCurrentStatusDate',
+        'familyId' => 'setFamilyId',
+        'currentStatusDate' => 'setCurrentStatusDate',
         'application' => 'setApplication',
     ];
 
@@ -390,47 +390,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'middle_name' => 'getMiddleName',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'middleName' => 'getMiddleName',
         'prefix' => 'getPrefix',
         'suffix' => 'getSuffix',
         'nickname' => 'getNickname',
         'role' => 'getRole',
-        'role_id' => 'getRoleId',
-        'current_status' => 'getCurrentStatus',
-        'status_id' => 'getStatusId',
-        'entering_year' => 'getEnteringYear',
-        'entering_year_id' => 'getEnteringYearId',
-        'entering_grade' => 'getEnteringGrade',
-        'entering_grade_id' => 'getEnteringGradeId',
+        'roleId' => 'getRoleId',
+        'currentStatus' => 'getCurrentStatus',
+        'statusId' => 'getStatusId',
+        'enteringYear' => 'getEnteringYear',
+        'enteringYearId' => 'getEnteringYearId',
+        'enteringGrade' => 'getEnteringGrade',
+        'enteringGradeId' => 'getEnteringGradeId',
         'email' => 'getEmail',
         'comment' => 'getComment',
-        'parent1_email' => 'getParent1Email',
-        'parent2_email' => 'getParent2Email',
+        'parent1Email' => 'getParent1Email',
+        'parent2Email' => 'getParent2Email',
         'international' => 'getInternational',
-        'school_program' => 'getSchoolProgram',
+        'schoolProgram' => 'getSchoolProgram',
         'gender' => 'getGender',
         'ethnicity' => 'getEthnicity',
-        'boarding_or_day' => 'getBoardingOrDay',
-        'financial_aid' => 'getFinancialAid',
-        'admissions_staff_id' => 'getAdmissionsStaffId',
-        'admissions_staff' => 'getAdmissionsStaff',
-        'inquiry_source' => 'getInquirySource',
-        'inquiry_source_id' => 'getInquirySourceId',
-        'referral_type' => 'getReferralType',
-        'referral_type_id' => 'getReferralTypeId',
-        'has_iep' => 'getHasIep',
-        'has_504' => 'getHas504',
-        'created_by' => 'getCreatedBy',
+        'boardingOrDay' => 'getBoardingOrDay',
+        'financialAid' => 'getFinancialAid',
+        'admissionsStaffId' => 'getAdmissionsStaffId',
+        'admissionsStaff' => 'getAdmissionsStaff',
+        'inquirySource' => 'getInquirySource',
+        'inquirySourceId' => 'getInquirySourceId',
+        'referralType' => 'getReferralType',
+        'referralTypeId' => 'getReferralTypeId',
+        'hasIep' => 'getHasIep',
+        'has504' => 'getHas504',
+        'createdBy' => 'getCreatedBy',
         'created' => 'getCreated',
-        'modified_by' => 'getModifiedBy',
+        'modifiedBy' => 'getModifiedBy',
         'modified' => 'getModified',
-        'preferred_name' => 'getPreferredName',
+        'preferredName' => 'getPreferredName',
         'decision' => 'getDecision',
-        'family_id' => 'getFamilyId',
-        'current_status_date' => 'getCurrentStatusDate',
+        'familyId' => 'getFamilyId',
+        'currentStatusDate' => 'getCurrentStatusDate',
         'application' => 'getApplication',
     ];
 
@@ -491,47 +491,47 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('middle_name', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('middleName', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
         $this->setIfExists('nickname', $data ?? [], null);
         $this->setIfExists('role', $data ?? [], null);
-        $this->setIfExists('role_id', $data ?? [], null);
-        $this->setIfExists('current_status', $data ?? [], null);
-        $this->setIfExists('status_id', $data ?? [], null);
-        $this->setIfExists('entering_year', $data ?? [], null);
-        $this->setIfExists('entering_year_id', $data ?? [], null);
-        $this->setIfExists('entering_grade', $data ?? [], null);
-        $this->setIfExists('entering_grade_id', $data ?? [], null);
+        $this->setIfExists('roleId', $data ?? [], null);
+        $this->setIfExists('currentStatus', $data ?? [], null);
+        $this->setIfExists('statusId', $data ?? [], null);
+        $this->setIfExists('enteringYear', $data ?? [], null);
+        $this->setIfExists('enteringYearId', $data ?? [], null);
+        $this->setIfExists('enteringGrade', $data ?? [], null);
+        $this->setIfExists('enteringGradeId', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
-        $this->setIfExists('parent1_email', $data ?? [], null);
-        $this->setIfExists('parent2_email', $data ?? [], null);
+        $this->setIfExists('parent1Email', $data ?? [], null);
+        $this->setIfExists('parent2Email', $data ?? [], null);
         $this->setIfExists('international', $data ?? [], null);
-        $this->setIfExists('school_program', $data ?? [], null);
+        $this->setIfExists('schoolProgram', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
         $this->setIfExists('ethnicity', $data ?? [], null);
-        $this->setIfExists('boarding_or_day', $data ?? [], null);
-        $this->setIfExists('financial_aid', $data ?? [], null);
-        $this->setIfExists('admissions_staff_id', $data ?? [], null);
-        $this->setIfExists('admissions_staff', $data ?? [], null);
-        $this->setIfExists('inquiry_source', $data ?? [], null);
-        $this->setIfExists('inquiry_source_id', $data ?? [], null);
-        $this->setIfExists('referral_type', $data ?? [], null);
-        $this->setIfExists('referral_type_id', $data ?? [], null);
-        $this->setIfExists('has_iep', $data ?? [], null);
-        $this->setIfExists('has_504', $data ?? [], null);
-        $this->setIfExists('created_by', $data ?? [], null);
+        $this->setIfExists('boardingOrDay', $data ?? [], null);
+        $this->setIfExists('financialAid', $data ?? [], null);
+        $this->setIfExists('admissionsStaffId', $data ?? [], null);
+        $this->setIfExists('admissionsStaff', $data ?? [], null);
+        $this->setIfExists('inquirySource', $data ?? [], null);
+        $this->setIfExists('inquirySourceId', $data ?? [], null);
+        $this->setIfExists('referralType', $data ?? [], null);
+        $this->setIfExists('referralTypeId', $data ?? [], null);
+        $this->setIfExists('hasIep', $data ?? [], null);
+        $this->setIfExists('has504', $data ?? [], null);
+        $this->setIfExists('createdBy', $data ?? [], null);
         $this->setIfExists('created', $data ?? [], null);
-        $this->setIfExists('modified_by', $data ?? [], null);
+        $this->setIfExists('modifiedBy', $data ?? [], null);
         $this->setIfExists('modified', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
         $this->setIfExists('decision', $data ?? [], null);
-        $this->setIfExists('family_id', $data ?? [], null);
-        $this->setIfExists('current_status_date', $data ?? [], null);
+        $this->setIfExists('familyId', $data ?? [], null);
+        $this->setIfExists('currentStatusDate', $data ?? [], null);
         $this->setIfExists('application', $data ?? [], null);
     }
 
@@ -578,137 +578,137 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id Unique Identifer for this candidate
+     * @param int|null $userId Unique Identifer for this candidate
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name Candidates first name
+     * @param string|null $firstName Candidates first name
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name Candidates last name
+     * @param string|null $lastName Candidates last name
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets middle_name
+     * Gets middleName
      *
      * @return string|null
      */
     public function getMiddleName()
     {
-        return $this->container['middle_name'];
+        return $this->container['middleName'];
     }
 
     /**
-     * Sets middle_name
+     * Sets middleName
      *
-     * @param string|null $middle_name Candidates middle name
+     * @param string|null $middleName Candidates middle name
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function setMiddleName($middleName)
     {
-        if (is_null($middle_name)) {
-            array_push($this->openAPINullablesSetToNull, 'middle_name');
+        if (is_null($middleName)) {
+            array_push($this->openAPINullablesSetToNull, 'middleName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middle_name', $nullablesSetToNull);
+            $index = array_search('middleName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['middle_name'] = $middle_name;
+        $this->container['middleName'] = $middleName;
 
         return $this;
     }
@@ -850,239 +850,239 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets role_id
+     * Gets roleId
      *
      * @return int|null
      */
     public function getRoleId()
     {
-        return $this->container['role_id'];
+        return $this->container['roleId'];
     }
 
     /**
-     * Sets role_id
+     * Sets roleId
      *
-     * @param int|null $role_id Identifier for thier role
+     * @param int|null $roleId Identifier for thier role
      *
      * @return self
      */
-    public function setRoleId($role_id)
+    public function setRoleId($roleId)
     {
-        if (is_null($role_id)) {
-            array_push($this->openAPINullablesSetToNull, 'role_id');
+        if (is_null($roleId)) {
+            array_push($this->openAPINullablesSetToNull, 'roleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_id', $nullablesSetToNull);
+            $index = array_search('roleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_id'] = $role_id;
+        $this->container['roleId'] = $roleId;
 
         return $this;
     }
 
     /**
-     * Gets current_status
+     * Gets currentStatus
      *
      * @return string|null
      */
     public function getCurrentStatus()
     {
-        return $this->container['current_status'];
+        return $this->container['currentStatus'];
     }
 
     /**
-     * Sets current_status
+     * Sets currentStatus
      *
-     * @param string|null $current_status Text representation of their current enrollment status
+     * @param string|null $currentStatus Text representation of their current enrollment status
      *
      * @return self
      */
-    public function setCurrentStatus($current_status)
+    public function setCurrentStatus($currentStatus)
     {
-        if (is_null($current_status)) {
-            array_push($this->openAPINullablesSetToNull, 'current_status');
+        if (is_null($currentStatus)) {
+            array_push($this->openAPINullablesSetToNull, 'currentStatus');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('current_status', $nullablesSetToNull);
+            $index = array_search('currentStatus', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['current_status'] = $current_status;
+        $this->container['currentStatus'] = $currentStatus;
 
         return $this;
     }
 
     /**
-     * Gets status_id
+     * Gets statusId
      *
      * @return int|null
      */
     public function getStatusId()
     {
-        return $this->container['status_id'];
+        return $this->container['statusId'];
     }
 
     /**
-     * Sets status_id
+     * Sets statusId
      *
-     * @param int|null $status_id Identifier for their enrollment status
+     * @param int|null $statusId Identifier for their enrollment status
      *
      * @return self
      */
-    public function setStatusId($status_id)
+    public function setStatusId($statusId)
     {
-        if (is_null($status_id)) {
-            array_push($this->openAPINullablesSetToNull, 'status_id');
+        if (is_null($statusId)) {
+            array_push($this->openAPINullablesSetToNull, 'statusId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('status_id', $nullablesSetToNull);
+            $index = array_search('statusId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['status_id'] = $status_id;
+        $this->container['statusId'] = $statusId;
 
         return $this;
     }
 
     /**
-     * Gets entering_year
+     * Gets enteringYear
      *
      * @return string|null
      */
     public function getEnteringYear()
     {
-        return $this->container['entering_year'];
+        return $this->container['enteringYear'];
     }
 
     /**
-     * Sets entering_year
+     * Sets enteringYear
      *
-     * @param string|null $entering_year Text representation of the school year the candidate will be joining
+     * @param string|null $enteringYear Text representation of the school year the candidate will be joining
      *
      * @return self
      */
-    public function setEnteringYear($entering_year)
+    public function setEnteringYear($enteringYear)
     {
-        if (is_null($entering_year)) {
-            array_push($this->openAPINullablesSetToNull, 'entering_year');
+        if (is_null($enteringYear)) {
+            array_push($this->openAPINullablesSetToNull, 'enteringYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('entering_year', $nullablesSetToNull);
+            $index = array_search('enteringYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['entering_year'] = $entering_year;
+        $this->container['enteringYear'] = $enteringYear;
 
         return $this;
     }
 
     /**
-     * Gets entering_year_id
+     * Gets enteringYearId
      *
      * @return int|null
      */
     public function getEnteringYearId()
     {
-        return $this->container['entering_year_id'];
+        return $this->container['enteringYearId'];
     }
 
     /**
-     * Sets entering_year_id
+     * Sets enteringYearId
      *
-     * @param int|null $entering_year_id Identifier for the school year the candidate will be joining
+     * @param int|null $enteringYearId Identifier for the school year the candidate will be joining
      *
      * @return self
      */
-    public function setEnteringYearId($entering_year_id)
+    public function setEnteringYearId($enteringYearId)
     {
-        if (is_null($entering_year_id)) {
-            array_push($this->openAPINullablesSetToNull, 'entering_year_id');
+        if (is_null($enteringYearId)) {
+            array_push($this->openAPINullablesSetToNull, 'enteringYearId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('entering_year_id', $nullablesSetToNull);
+            $index = array_search('enteringYearId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['entering_year_id'] = $entering_year_id;
+        $this->container['enteringYearId'] = $enteringYearId;
 
         return $this;
     }
 
     /**
-     * Gets entering_grade
+     * Gets enteringGrade
      *
      * @return string|null
      */
     public function getEnteringGrade()
     {
-        return $this->container['entering_grade'];
+        return $this->container['enteringGrade'];
     }
 
     /**
-     * Sets entering_grade
+     * Sets enteringGrade
      *
-     * @param string|null $entering_grade Text representation of the grade candidate will be joining
+     * @param string|null $enteringGrade Text representation of the grade candidate will be joining
      *
      * @return self
      */
-    public function setEnteringGrade($entering_grade)
+    public function setEnteringGrade($enteringGrade)
     {
-        if (is_null($entering_grade)) {
-            array_push($this->openAPINullablesSetToNull, 'entering_grade');
+        if (is_null($enteringGrade)) {
+            array_push($this->openAPINullablesSetToNull, 'enteringGrade');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('entering_grade', $nullablesSetToNull);
+            $index = array_search('enteringGrade', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['entering_grade'] = $entering_grade;
+        $this->container['enteringGrade'] = $enteringGrade;
 
         return $this;
     }
 
     /**
-     * Gets entering_grade_id
+     * Gets enteringGradeId
      *
      * @return int|null
      */
     public function getEnteringGradeId()
     {
-        return $this->container['entering_grade_id'];
+        return $this->container['enteringGradeId'];
     }
 
     /**
-     * Sets entering_grade_id
+     * Sets enteringGradeId
      *
-     * @param int|null $entering_grade_id Identifier for the grade candidate will be joining
+     * @param int|null $enteringGradeId Identifier for the grade candidate will be joining
      *
      * @return self
      */
-    public function setEnteringGradeId($entering_grade_id)
+    public function setEnteringGradeId($enteringGradeId)
     {
-        if (is_null($entering_grade_id)) {
-            array_push($this->openAPINullablesSetToNull, 'entering_grade_id');
+        if (is_null($enteringGradeId)) {
+            array_push($this->openAPINullablesSetToNull, 'enteringGradeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('entering_grade_id', $nullablesSetToNull);
+            $index = array_search('enteringGradeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['entering_grade_id'] = $entering_grade_id;
+        $this->container['enteringGradeId'] = $enteringGradeId;
 
         return $this;
     }
@@ -1156,69 +1156,69 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets parent1_email
+     * Gets parent1Email
      *
      * @return string|null
      */
     public function getParent1Email()
     {
-        return $this->container['parent1_email'];
+        return $this->container['parent1Email'];
     }
 
     /**
-     * Sets parent1_email
+     * Sets parent1Email
      *
-     * @param string|null $parent1_email 1st Email of candidates parent
+     * @param string|null $parent1Email 1st Email of candidates parent
      *
      * @return self
      */
-    public function setParent1Email($parent1_email)
+    public function setParent1Email($parent1Email)
     {
-        if (is_null($parent1_email)) {
-            array_push($this->openAPINullablesSetToNull, 'parent1_email');
+        if (is_null($parent1Email)) {
+            array_push($this->openAPINullablesSetToNull, 'parent1Email');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('parent1_email', $nullablesSetToNull);
+            $index = array_search('parent1Email', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['parent1_email'] = $parent1_email;
+        $this->container['parent1Email'] = $parent1Email;
 
         return $this;
     }
 
     /**
-     * Gets parent2_email
+     * Gets parent2Email
      *
      * @return string|null
      */
     public function getParent2Email()
     {
-        return $this->container['parent2_email'];
+        return $this->container['parent2Email'];
     }
 
     /**
-     * Sets parent2_email
+     * Sets parent2Email
      *
-     * @param string|null $parent2_email 2nd email of candidates parent
+     * @param string|null $parent2Email 2nd email of candidates parent
      *
      * @return self
      */
-    public function setParent2Email($parent2_email)
+    public function setParent2Email($parent2Email)
     {
-        if (is_null($parent2_email)) {
-            array_push($this->openAPINullablesSetToNull, 'parent2_email');
+        if (is_null($parent2Email)) {
+            array_push($this->openAPINullablesSetToNull, 'parent2Email');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('parent2_email', $nullablesSetToNull);
+            $index = array_search('parent2Email', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['parent2_email'] = $parent2_email;
+        $this->container['parent2Email'] = $parent2Email;
 
         return $this;
     }
@@ -1258,35 +1258,35 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets school_program
+     * Gets schoolProgram
      *
      * @return string|null
      */
     public function getSchoolProgram()
     {
-        return $this->container['school_program'];
+        return $this->container['schoolProgram'];
     }
 
     /**
-     * Sets school_program
+     * Sets schoolProgram
      *
-     * @param string|null $school_program
+     * @param string|null $schoolProgram
      *
      * @return self
      */
-    public function setSchoolProgram($school_program)
+    public function setSchoolProgram($schoolProgram)
     {
-        if (is_null($school_program)) {
-            array_push($this->openAPINullablesSetToNull, 'school_program');
+        if (is_null($schoolProgram)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolProgram');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_program', $nullablesSetToNull);
+            $index = array_search('schoolProgram', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_program'] = $school_program;
+        $this->container['schoolProgram'] = $schoolProgram;
 
         return $this;
     }
@@ -1360,375 +1360,375 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets boarding_or_day
+     * Gets boardingOrDay
      *
      * @return string|null
      */
     public function getBoardingOrDay()
     {
-        return $this->container['boarding_or_day'];
+        return $this->container['boardingOrDay'];
     }
 
     /**
-     * Sets boarding_or_day
+     * Sets boardingOrDay
      *
-     * @param string|null $boarding_or_day
+     * @param string|null $boardingOrDay
      *
      * @return self
      */
-    public function setBoardingOrDay($boarding_or_day)
+    public function setBoardingOrDay($boardingOrDay)
     {
-        if (is_null($boarding_or_day)) {
-            array_push($this->openAPINullablesSetToNull, 'boarding_or_day');
+        if (is_null($boardingOrDay)) {
+            array_push($this->openAPINullablesSetToNull, 'boardingOrDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('boarding_or_day', $nullablesSetToNull);
+            $index = array_search('boardingOrDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['boarding_or_day'] = $boarding_or_day;
+        $this->container['boardingOrDay'] = $boardingOrDay;
 
         return $this;
     }
 
     /**
-     * Gets financial_aid
+     * Gets financialAid
      *
      * @return bool|null
      */
     public function getFinancialAid()
     {
-        return $this->container['financial_aid'];
+        return $this->container['financialAid'];
     }
 
     /**
-     * Sets financial_aid
+     * Sets financialAid
      *
-     * @param bool|null $financial_aid
+     * @param bool|null $financialAid
      *
      * @return self
      */
-    public function setFinancialAid($financial_aid)
+    public function setFinancialAid($financialAid)
     {
-        if (is_null($financial_aid)) {
-            array_push($this->openAPINullablesSetToNull, 'financial_aid');
+        if (is_null($financialAid)) {
+            array_push($this->openAPINullablesSetToNull, 'financialAid');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('financial_aid', $nullablesSetToNull);
+            $index = array_search('financialAid', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['financial_aid'] = $financial_aid;
+        $this->container['financialAid'] = $financialAid;
 
         return $this;
     }
 
     /**
-     * Gets admissions_staff_id
+     * Gets admissionsStaffId
      *
      * @return int|null
      */
     public function getAdmissionsStaffId()
     {
-        return $this->container['admissions_staff_id'];
+        return $this->container['admissionsStaffId'];
     }
 
     /**
-     * Sets admissions_staff_id
+     * Sets admissionsStaffId
      *
-     * @param int|null $admissions_staff_id
+     * @param int|null $admissionsStaffId
      *
      * @return self
      */
-    public function setAdmissionsStaffId($admissions_staff_id)
+    public function setAdmissionsStaffId($admissionsStaffId)
     {
-        if (is_null($admissions_staff_id)) {
-            array_push($this->openAPINullablesSetToNull, 'admissions_staff_id');
+        if (is_null($admissionsStaffId)) {
+            array_push($this->openAPINullablesSetToNull, 'admissionsStaffId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('admissions_staff_id', $nullablesSetToNull);
+            $index = array_search('admissionsStaffId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['admissions_staff_id'] = $admissions_staff_id;
+        $this->container['admissionsStaffId'] = $admissionsStaffId;
 
         return $this;
     }
 
     /**
-     * Gets admissions_staff
+     * Gets admissionsStaff
      *
      * @return string|null
      */
     public function getAdmissionsStaff()
     {
-        return $this->container['admissions_staff'];
+        return $this->container['admissionsStaff'];
     }
 
     /**
-     * Sets admissions_staff
+     * Sets admissionsStaff
      *
-     * @param string|null $admissions_staff
+     * @param string|null $admissionsStaff
      *
      * @return self
      */
-    public function setAdmissionsStaff($admissions_staff)
+    public function setAdmissionsStaff($admissionsStaff)
     {
-        if (is_null($admissions_staff)) {
-            array_push($this->openAPINullablesSetToNull, 'admissions_staff');
+        if (is_null($admissionsStaff)) {
+            array_push($this->openAPINullablesSetToNull, 'admissionsStaff');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('admissions_staff', $nullablesSetToNull);
+            $index = array_search('admissionsStaff', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['admissions_staff'] = $admissions_staff;
+        $this->container['admissionsStaff'] = $admissionsStaff;
 
         return $this;
     }
 
     /**
-     * Gets inquiry_source
+     * Gets inquirySource
      *
      * @return string|null
      */
     public function getInquirySource()
     {
-        return $this->container['inquiry_source'];
+        return $this->container['inquirySource'];
     }
 
     /**
-     * Sets inquiry_source
+     * Sets inquirySource
      *
-     * @param string|null $inquiry_source
+     * @param string|null $inquirySource
      *
      * @return self
      */
-    public function setInquirySource($inquiry_source)
+    public function setInquirySource($inquirySource)
     {
-        if (is_null($inquiry_source)) {
-            array_push($this->openAPINullablesSetToNull, 'inquiry_source');
+        if (is_null($inquirySource)) {
+            array_push($this->openAPINullablesSetToNull, 'inquirySource');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('inquiry_source', $nullablesSetToNull);
+            $index = array_search('inquirySource', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['inquiry_source'] = $inquiry_source;
+        $this->container['inquirySource'] = $inquirySource;
 
         return $this;
     }
 
     /**
-     * Gets inquiry_source_id
+     * Gets inquirySourceId
      *
      * @return int|null
      */
     public function getInquirySourceId()
     {
-        return $this->container['inquiry_source_id'];
+        return $this->container['inquirySourceId'];
     }
 
     /**
-     * Sets inquiry_source_id
+     * Sets inquirySourceId
      *
-     * @param int|null $inquiry_source_id
+     * @param int|null $inquirySourceId
      *
      * @return self
      */
-    public function setInquirySourceId($inquiry_source_id)
+    public function setInquirySourceId($inquirySourceId)
     {
-        if (is_null($inquiry_source_id)) {
-            array_push($this->openAPINullablesSetToNull, 'inquiry_source_id');
+        if (is_null($inquirySourceId)) {
+            array_push($this->openAPINullablesSetToNull, 'inquirySourceId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('inquiry_source_id', $nullablesSetToNull);
+            $index = array_search('inquirySourceId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['inquiry_source_id'] = $inquiry_source_id;
+        $this->container['inquirySourceId'] = $inquirySourceId;
 
         return $this;
     }
 
     /**
-     * Gets referral_type
+     * Gets referralType
      *
      * @return string|null
      */
     public function getReferralType()
     {
-        return $this->container['referral_type'];
+        return $this->container['referralType'];
     }
 
     /**
-     * Sets referral_type
+     * Sets referralType
      *
-     * @param string|null $referral_type
+     * @param string|null $referralType
      *
      * @return self
      */
-    public function setReferralType($referral_type)
+    public function setReferralType($referralType)
     {
-        if (is_null($referral_type)) {
-            array_push($this->openAPINullablesSetToNull, 'referral_type');
+        if (is_null($referralType)) {
+            array_push($this->openAPINullablesSetToNull, 'referralType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('referral_type', $nullablesSetToNull);
+            $index = array_search('referralType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['referral_type'] = $referral_type;
+        $this->container['referralType'] = $referralType;
 
         return $this;
     }
 
     /**
-     * Gets referral_type_id
+     * Gets referralTypeId
      *
      * @return int|null
      */
     public function getReferralTypeId()
     {
-        return $this->container['referral_type_id'];
+        return $this->container['referralTypeId'];
     }
 
     /**
-     * Sets referral_type_id
+     * Sets referralTypeId
      *
-     * @param int|null $referral_type_id
+     * @param int|null $referralTypeId
      *
      * @return self
      */
-    public function setReferralTypeId($referral_type_id)
+    public function setReferralTypeId($referralTypeId)
     {
-        if (is_null($referral_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'referral_type_id');
+        if (is_null($referralTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'referralTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('referral_type_id', $nullablesSetToNull);
+            $index = array_search('referralTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['referral_type_id'] = $referral_type_id;
+        $this->container['referralTypeId'] = $referralTypeId;
 
         return $this;
     }
 
     /**
-     * Gets has_iep
+     * Gets hasIep
      *
      * @return bool|null
      */
     public function getHasIep()
     {
-        return $this->container['has_iep'];
+        return $this->container['hasIep'];
     }
 
     /**
-     * Sets has_iep
+     * Sets hasIep
      *
-     * @param bool|null $has_iep
+     * @param bool|null $hasIep
      *
      * @return self
      */
-    public function setHasIep($has_iep)
+    public function setHasIep($hasIep)
     {
-        if (is_null($has_iep)) {
-            array_push($this->openAPINullablesSetToNull, 'has_iep');
+        if (is_null($hasIep)) {
+            array_push($this->openAPINullablesSetToNull, 'hasIep');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_iep', $nullablesSetToNull);
+            $index = array_search('hasIep', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_iep'] = $has_iep;
+        $this->container['hasIep'] = $hasIep;
 
         return $this;
     }
 
     /**
-     * Gets has_504
+     * Gets has504
      *
      * @return bool|null
      */
     public function getHas504()
     {
-        return $this->container['has_504'];
+        return $this->container['has504'];
     }
 
     /**
-     * Sets has_504
+     * Sets has504
      *
-     * @param bool|null $has_504
+     * @param bool|null $has504
      *
      * @return self
      */
-    public function setHas504($has_504)
+    public function setHas504($has504)
     {
-        if (is_null($has_504)) {
-            array_push($this->openAPINullablesSetToNull, 'has_504');
+        if (is_null($has504)) {
+            array_push($this->openAPINullablesSetToNull, 'has504');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_504', $nullablesSetToNull);
+            $index = array_search('has504', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_504'] = $has_504;
+        $this->container['has504'] = $has504;
 
         return $this;
     }
 
     /**
-     * Gets created_by
+     * Gets createdBy
      *
      * @return string|null
      */
     public function getCreatedBy()
     {
-        return $this->container['created_by'];
+        return $this->container['createdBy'];
     }
 
     /**
-     * Sets created_by
+     * Sets createdBy
      *
-     * @param string|null $created_by
+     * @param string|null $createdBy
      *
      * @return self
      */
-    public function setCreatedBy($created_by)
+    public function setCreatedBy($createdBy)
     {
-        if (is_null($created_by)) {
-            array_push($this->openAPINullablesSetToNull, 'created_by');
+        if (is_null($createdBy)) {
+            array_push($this->openAPINullablesSetToNull, 'createdBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('created_by', $nullablesSetToNull);
+            $index = array_search('createdBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['created_by'] = $created_by;
+        $this->container['createdBy'] = $createdBy;
 
         return $this;
     }
@@ -1768,35 +1768,35 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets modified_by
+     * Gets modifiedBy
      *
      * @return string|null
      */
     public function getModifiedBy()
     {
-        return $this->container['modified_by'];
+        return $this->container['modifiedBy'];
     }
 
     /**
-     * Sets modified_by
+     * Sets modifiedBy
      *
-     * @param string|null $modified_by
+     * @param string|null $modifiedBy
      *
      * @return self
      */
-    public function setModifiedBy($modified_by)
+    public function setModifiedBy($modifiedBy)
     {
-        if (is_null($modified_by)) {
-            array_push($this->openAPINullablesSetToNull, 'modified_by');
+        if (is_null($modifiedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('modified_by', $nullablesSetToNull);
+            $index = array_search('modifiedBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['modified_by'] = $modified_by;
+        $this->container['modifiedBy'] = $modifiedBy;
 
         return $this;
     }
@@ -1836,35 +1836,35 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name
+     * @param string|null $preferredName
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
@@ -1897,69 +1897,69 @@ class CandidateRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets family_id
+     * Gets familyId
      *
      * @return int|null
      */
     public function getFamilyId()
     {
-        return $this->container['family_id'];
+        return $this->container['familyId'];
     }
 
     /**
-     * Sets family_id
+     * Sets familyId
      *
-     * @param int|null $family_id
+     * @param int|null $familyId
      *
      * @return self
      */
-    public function setFamilyId($family_id)
+    public function setFamilyId($familyId)
     {
-        if (is_null($family_id)) {
-            array_push($this->openAPINullablesSetToNull, 'family_id');
+        if (is_null($familyId)) {
+            array_push($this->openAPINullablesSetToNull, 'familyId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('family_id', $nullablesSetToNull);
+            $index = array_search('familyId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['family_id'] = $family_id;
+        $this->container['familyId'] = $familyId;
 
         return $this;
     }
 
     /**
-     * Gets current_status_date
+     * Gets currentStatusDate
      *
      * @return \DateTime|null
      */
     public function getCurrentStatusDate()
     {
-        return $this->container['current_status_date'];
+        return $this->container['currentStatusDate'];
     }
 
     /**
-     * Sets current_status_date
+     * Sets currentStatusDate
      *
-     * @param \DateTime|null $current_status_date Current status date
+     * @param \DateTime|null $currentStatusDate Current status date
      *
      * @return self
      */
-    public function setCurrentStatusDate($current_status_date)
+    public function setCurrentStatusDate($currentStatusDate)
     {
-        if (is_null($current_status_date)) {
-            array_push($this->openAPINullablesSetToNull, 'current_status_date');
+        if (is_null($currentStatusDate)) {
+            array_push($this->openAPINullablesSetToNull, 'currentStatusDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('current_status_date', $nullablesSetToNull);
+            $index = array_search('currentStatusDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['current_status_date'] = $current_status_date;
+        $this->container['currentStatusDate'] = $currentStatusDate;
 
         return $this;
     }

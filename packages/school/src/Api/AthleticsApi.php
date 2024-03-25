@@ -181,16 +181,16 @@ class AthleticsApi
      *
      * Athletics highlights by ID
      *
-     * @param  int $highlight_id Format - int32. ID of the highlight to be returned. (required)
+     * @param  int $highlightId Format - int32. ID of the highlight to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\Highlight
      */
-    public function v1AthleticsHighlightsByHighlightIdGet($highlight_id, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
+    public function v1AthleticsHighlightsByHighlightIdGet($highlightId, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
     {
-        [$response] = $this->v1AthleticsHighlightsByHighlightIdGetWithHttpInfo($highlight_id, $contentType);
+        [$response] = $this->v1AthleticsHighlightsByHighlightIdGetWithHttpInfo($highlightId, $contentType);
         return $response;
     }
 
@@ -199,16 +199,16 @@ class AthleticsApi
      *
      * Athletics highlights by ID
      *
-     * @param  int $highlight_id Format - int32. ID of the highlight to be returned. (required)
+     * @param  int $highlightId Format - int32. ID of the highlight to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\Highlight, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsHighlightsByHighlightIdGetWithHttpInfo($highlight_id, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
+    public function v1AthleticsHighlightsByHighlightIdGetWithHttpInfo($highlightId, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
     {
-        $request = $this->v1AthleticsHighlightsByHighlightIdGetRequest($highlight_id, $contentType);
+        $request = $this->v1AthleticsHighlightsByHighlightIdGetRequest($highlightId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -323,15 +323,15 @@ class AthleticsApi
      *
      * Athletics highlights by ID
      *
-     * @param  int $highlight_id Format - int32. ID of the highlight to be returned. (required)
+     * @param  int $highlightId Format - int32. ID of the highlight to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsHighlightsByHighlightIdGetAsync($highlight_id, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
+    public function v1AthleticsHighlightsByHighlightIdGetAsync($highlightId, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
     {
-        return $this->v1AthleticsHighlightsByHighlightIdGetAsyncWithHttpInfo($highlight_id, $contentType)
+        return $this->v1AthleticsHighlightsByHighlightIdGetAsyncWithHttpInfo($highlightId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -344,16 +344,16 @@ class AthleticsApi
      *
      * Athletics highlights by ID
      *
-     * @param  int $highlight_id Format - int32. ID of the highlight to be returned. (required)
+     * @param  int $highlightId Format - int32. ID of the highlight to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsHighlightsByHighlightIdGetAsyncWithHttpInfo($highlight_id, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
+    public function v1AthleticsHighlightsByHighlightIdGetAsyncWithHttpInfo($highlightId, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
     {
         $returnType = '\SKY\School\Model\Highlight';
-        $request = $this->v1AthleticsHighlightsByHighlightIdGetRequest($highlight_id, $contentType);
+        $request = $this->v1AthleticsHighlightsByHighlightIdGetRequest($highlightId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -394,19 +394,19 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsHighlightsByHighlightIdGet'
      *
-     * @param  int $highlight_id Format - int32. ID of the highlight to be returned. (required)
+     * @param  int $highlightId Format - int32. ID of the highlight to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsHighlightsByHighlightIdGetRequest($highlight_id, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
+    public function v1AthleticsHighlightsByHighlightIdGetRequest($highlightId, string $contentType = self::contentTypes['v1AthleticsHighlightsByHighlightIdGet'][0])
     {
 
-        // verify the required parameter 'highlight_id' is set
-        if ($highlight_id === null || (is_array($highlight_id) && count($highlight_id) === 0)) {
+        // verify the required parameter 'highlightId' is set
+        if ($highlightId === null || (is_array($highlightId) && count($highlightId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $highlight_id when calling v1AthleticsHighlightsByHighlightIdGet'
+                'Missing the required parameter $highlightId when calling v1AthleticsHighlightsByHighlightIdGet'
             );
         }
 
@@ -421,10 +421,10 @@ class AthleticsApi
 
 
         // path params
-        if ($highlight_id !== null) {
+        if ($highlightId !== null) {
             $resourcePath = str_replace(
                 '{' . 'highlight_id' . '}',
-                ObjectSerializer::toPathValue($highlight_id),
+                ObjectSerializer::toPathValue($highlightId),
                 $resourcePath
             );
         }
@@ -795,16 +795,16 @@ class AthleticsApi
      *
      * Athletics location create
      *
-     * @param  \SKY\School\Model\LocationCreateModel $location_create_model The location to be created (optional)
+     * @param  \SKY\School\Model\LocationCreateModel $locationCreateModel The location to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsLocationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1AthleticsLocationsPost($location_create_model = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
+    public function v1AthleticsLocationsPost($locationCreateModel = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
     {
-        [$response] = $this->v1AthleticsLocationsPostWithHttpInfo($location_create_model, $contentType);
+        [$response] = $this->v1AthleticsLocationsPostWithHttpInfo($locationCreateModel, $contentType);
         return $response;
     }
 
@@ -813,16 +813,16 @@ class AthleticsApi
      *
      * Athletics location create
      *
-     * @param  \SKY\School\Model\LocationCreateModel $location_create_model The location to be created (optional)
+     * @param  \SKY\School\Model\LocationCreateModel $locationCreateModel The location to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsLocationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsLocationsPostWithHttpInfo($location_create_model = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
+    public function v1AthleticsLocationsPostWithHttpInfo($locationCreateModel = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
     {
-        $request = $this->v1AthleticsLocationsPostRequest($location_create_model, $contentType);
+        $request = $this->v1AthleticsLocationsPostRequest($locationCreateModel, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -937,15 +937,15 @@ class AthleticsApi
      *
      * Athletics location create
      *
-     * @param  \SKY\School\Model\LocationCreateModel $location_create_model The location to be created (optional)
+     * @param  \SKY\School\Model\LocationCreateModel $locationCreateModel The location to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsLocationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsLocationsPostAsync($location_create_model = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
+    public function v1AthleticsLocationsPostAsync($locationCreateModel = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
     {
-        return $this->v1AthleticsLocationsPostAsyncWithHttpInfo($location_create_model, $contentType)
+        return $this->v1AthleticsLocationsPostAsyncWithHttpInfo($locationCreateModel, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -958,16 +958,16 @@ class AthleticsApi
      *
      * Athletics location create
      *
-     * @param  \SKY\School\Model\LocationCreateModel $location_create_model The location to be created (optional)
+     * @param  \SKY\School\Model\LocationCreateModel $locationCreateModel The location to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsLocationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsLocationsPostAsyncWithHttpInfo($location_create_model = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
+    public function v1AthleticsLocationsPostAsyncWithHttpInfo($locationCreateModel = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1AthleticsLocationsPostRequest($location_create_model, $contentType);
+        $request = $this->v1AthleticsLocationsPostRequest($locationCreateModel, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1008,13 +1008,13 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsLocationsPost'
      *
-     * @param  \SKY\School\Model\LocationCreateModel $location_create_model The location to be created (optional)
+     * @param  \SKY\School\Model\LocationCreateModel $locationCreateModel The location to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsLocationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsLocationsPostRequest($location_create_model = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
+    public function v1AthleticsLocationsPostRequest($locationCreateModel = null, string $contentType = self::contentTypes['v1AthleticsLocationsPost'][0])
     {
 
 
@@ -1037,12 +1037,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($location_create_model)) {
+        if (isset($locationCreateModel)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($location_create_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($locationCreateModel));
             } else {
-                $httpBody = $location_create_model;
+                $httpBody = $locationCreateModel;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1402,16 +1402,16 @@ class AthleticsApi
      *
      * Athletics opponent create
      *
-     * @param  \SKY\School\Model\OpponentUpdateModel $opponent_update_model The opponent to be created (optional)
+     * @param  \SKY\School\Model\OpponentUpdateModel $opponentUpdateModel The opponent to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsOpponentsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1AthleticsOpponentsPost($opponent_update_model = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
+    public function v1AthleticsOpponentsPost($opponentUpdateModel = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
     {
-        [$response] = $this->v1AthleticsOpponentsPostWithHttpInfo($opponent_update_model, $contentType);
+        [$response] = $this->v1AthleticsOpponentsPostWithHttpInfo($opponentUpdateModel, $contentType);
         return $response;
     }
 
@@ -1420,16 +1420,16 @@ class AthleticsApi
      *
      * Athletics opponent create
      *
-     * @param  \SKY\School\Model\OpponentUpdateModel $opponent_update_model The opponent to be created (optional)
+     * @param  \SKY\School\Model\OpponentUpdateModel $opponentUpdateModel The opponent to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsOpponentsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsOpponentsPostWithHttpInfo($opponent_update_model = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
+    public function v1AthleticsOpponentsPostWithHttpInfo($opponentUpdateModel = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
     {
-        $request = $this->v1AthleticsOpponentsPostRequest($opponent_update_model, $contentType);
+        $request = $this->v1AthleticsOpponentsPostRequest($opponentUpdateModel, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1544,15 +1544,15 @@ class AthleticsApi
      *
      * Athletics opponent create
      *
-     * @param  \SKY\School\Model\OpponentUpdateModel $opponent_update_model The opponent to be created (optional)
+     * @param  \SKY\School\Model\OpponentUpdateModel $opponentUpdateModel The opponent to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsOpponentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsOpponentsPostAsync($opponent_update_model = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
+    public function v1AthleticsOpponentsPostAsync($opponentUpdateModel = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
     {
-        return $this->v1AthleticsOpponentsPostAsyncWithHttpInfo($opponent_update_model, $contentType)
+        return $this->v1AthleticsOpponentsPostAsyncWithHttpInfo($opponentUpdateModel, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1565,16 +1565,16 @@ class AthleticsApi
      *
      * Athletics opponent create
      *
-     * @param  \SKY\School\Model\OpponentUpdateModel $opponent_update_model The opponent to be created (optional)
+     * @param  \SKY\School\Model\OpponentUpdateModel $opponentUpdateModel The opponent to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsOpponentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsOpponentsPostAsyncWithHttpInfo($opponent_update_model = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
+    public function v1AthleticsOpponentsPostAsyncWithHttpInfo($opponentUpdateModel = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1AthleticsOpponentsPostRequest($opponent_update_model, $contentType);
+        $request = $this->v1AthleticsOpponentsPostRequest($opponentUpdateModel, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1615,13 +1615,13 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsOpponentsPost'
      *
-     * @param  \SKY\School\Model\OpponentUpdateModel $opponent_update_model The opponent to be created (optional)
+     * @param  \SKY\School\Model\OpponentUpdateModel $opponentUpdateModel The opponent to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsOpponentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsOpponentsPostRequest($opponent_update_model = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
+    public function v1AthleticsOpponentsPostRequest($opponentUpdateModel = null, string $contentType = self::contentTypes['v1AthleticsOpponentsPost'][0])
     {
 
 
@@ -1644,12 +1644,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($opponent_update_model)) {
+        if (isset($opponentUpdateModel)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opponent_update_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opponentUpdateModel));
             } else {
-                $httpBody = $opponent_update_model;
+                $httpBody = $opponentUpdateModel;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1712,16 +1712,16 @@ class AthleticsApi
      *
      * Athletics game result
      *
-     * @param  \SKY\School\Model\ResultCreate $result_create  (optional)
+     * @param  \SKY\School\Model\ResultCreate $resultCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsResultPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AthleticsResultPost($result_create = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
+    public function v1AthleticsResultPost($resultCreate = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
     {
-        $this->v1AthleticsResultPostWithHttpInfo($result_create, $contentType);
+        $this->v1AthleticsResultPostWithHttpInfo($resultCreate, $contentType);
     }
 
     /**
@@ -1729,16 +1729,16 @@ class AthleticsApi
      *
      * Athletics game result
      *
-     * @param  \SKY\School\Model\ResultCreate $result_create  (optional)
+     * @param  \SKY\School\Model\ResultCreate $resultCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsResultPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsResultPostWithHttpInfo($result_create = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
+    public function v1AthleticsResultPostWithHttpInfo($resultCreate = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
     {
-        $request = $this->v1AthleticsResultPostRequest($result_create, $contentType);
+        $request = $this->v1AthleticsResultPostRequest($resultCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1789,15 +1789,15 @@ class AthleticsApi
      *
      * Athletics game result
      *
-     * @param  \SKY\School\Model\ResultCreate $result_create  (optional)
+     * @param  \SKY\School\Model\ResultCreate $resultCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsResultPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsResultPostAsync($result_create = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
+    public function v1AthleticsResultPostAsync($resultCreate = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
     {
-        return $this->v1AthleticsResultPostAsyncWithHttpInfo($result_create, $contentType)
+        return $this->v1AthleticsResultPostAsyncWithHttpInfo($resultCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1810,16 +1810,16 @@ class AthleticsApi
      *
      * Athletics game result
      *
-     * @param  \SKY\School\Model\ResultCreate $result_create  (optional)
+     * @param  \SKY\School\Model\ResultCreate $resultCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsResultPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsResultPostAsyncWithHttpInfo($result_create = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
+    public function v1AthleticsResultPostAsyncWithHttpInfo($resultCreate = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
     {
         $returnType = '';
-        $request = $this->v1AthleticsResultPostRequest($result_create, $contentType);
+        $request = $this->v1AthleticsResultPostRequest($resultCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1847,13 +1847,13 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsResultPost'
      *
-     * @param  \SKY\School\Model\ResultCreate $result_create  (optional)
+     * @param  \SKY\School\Model\ResultCreate $resultCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsResultPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsResultPostRequest($result_create = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
+    public function v1AthleticsResultPostRequest($resultCreate = null, string $contentType = self::contentTypes['v1AthleticsResultPost'][0])
     {
 
 
@@ -1876,12 +1876,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($result_create)) {
+        if (isset($resultCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($result_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($resultCreate));
             } else {
-                $httpBody = $result_create;
+                $httpBody = $resultCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1944,21 +1944,21 @@ class AthleticsApi
      *
      * Athletics schedules
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
-     * @param  string $school_year Filter on a specific school year. Defaults to current school year. (optional)
-     * @param  bool $include_practice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
-     * @param  int $team_id Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
+     * @param  string $schoolYear Filter on a specific school year. Defaults to current school year. (optional)
+     * @param  bool $includePractice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
+     * @param  int $teamId Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSchedulesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\ScheduleItemCollection
      */
-    public function v1AthleticsSchedulesGet($start_date = null, $end_date = null, $school_year = null, $include_practice = false, $team_id = 0, $last_modified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
+    public function v1AthleticsSchedulesGet($startDate = null, $endDate = null, $schoolYear = null, $includePractice = false, $teamId = 0, $lastModified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
     {
-        [$response] = $this->v1AthleticsSchedulesGetWithHttpInfo($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified, $contentType);
+        [$response] = $this->v1AthleticsSchedulesGetWithHttpInfo($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified, $contentType);
         return $response;
     }
 
@@ -1967,21 +1967,21 @@ class AthleticsApi
      *
      * Athletics schedules
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
-     * @param  string $school_year Filter on a specific school year. Defaults to current school year. (optional)
-     * @param  bool $include_practice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
-     * @param  int $team_id Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
+     * @param  string $schoolYear Filter on a specific school year. Defaults to current school year. (optional)
+     * @param  bool $includePractice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
+     * @param  int $teamId Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSchedulesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\ScheduleItemCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsSchedulesGetWithHttpInfo($start_date = null, $end_date = null, $school_year = null, $include_practice = false, $team_id = 0, $last_modified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
+    public function v1AthleticsSchedulesGetWithHttpInfo($startDate = null, $endDate = null, $schoolYear = null, $includePractice = false, $teamId = 0, $lastModified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
     {
-        $request = $this->v1AthleticsSchedulesGetRequest($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified, $contentType);
+        $request = $this->v1AthleticsSchedulesGetRequest($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2096,20 +2096,20 @@ class AthleticsApi
      *
      * Athletics schedules
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
-     * @param  string $school_year Filter on a specific school year. Defaults to current school year. (optional)
-     * @param  bool $include_practice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
-     * @param  int $team_id Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
+     * @param  string $schoolYear Filter on a specific school year. Defaults to current school year. (optional)
+     * @param  bool $includePractice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
+     * @param  int $teamId Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSchedulesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsSchedulesGetAsync($start_date = null, $end_date = null, $school_year = null, $include_practice = false, $team_id = 0, $last_modified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
+    public function v1AthleticsSchedulesGetAsync($startDate = null, $endDate = null, $schoolYear = null, $includePractice = false, $teamId = 0, $lastModified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
     {
-        return $this->v1AthleticsSchedulesGetAsyncWithHttpInfo($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified, $contentType)
+        return $this->v1AthleticsSchedulesGetAsyncWithHttpInfo($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2122,21 +2122,21 @@ class AthleticsApi
      *
      * Athletics schedules
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
-     * @param  string $school_year Filter on a specific school year. Defaults to current school year. (optional)
-     * @param  bool $include_practice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
-     * @param  int $team_id Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
+     * @param  string $schoolYear Filter on a specific school year. Defaults to current school year. (optional)
+     * @param  bool $includePractice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
+     * @param  int $teamId Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSchedulesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsSchedulesGetAsyncWithHttpInfo($start_date = null, $end_date = null, $school_year = null, $include_practice = false, $team_id = 0, $last_modified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
+    public function v1AthleticsSchedulesGetAsyncWithHttpInfo($startDate = null, $endDate = null, $schoolYear = null, $includePractice = false, $teamId = 0, $lastModified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
     {
         $returnType = '\SKY\School\Model\ScheduleItemCollection';
-        $request = $this->v1AthleticsSchedulesGetRequest($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified, $contentType);
+        $request = $this->v1AthleticsSchedulesGetRequest($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2177,18 +2177,18 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsSchedulesGet'
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
-     * @param  string $school_year Filter on a specific school year. Defaults to current school year. (optional)
-     * @param  bool $include_practice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
-     * @param  int $team_id Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
-     * @param  \DateTime $last_modified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Filter games/practices after this date (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). Filter games/practices before this date (optional)
+     * @param  string $schoolYear Filter on a specific school year. Defaults to current school year. (optional)
+     * @param  bool $includePractice Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. (optional, default to false)
+     * @param  int $teamId Format - int32. Filter games/practices for a specific team. Defaults to all teams. (optional, default to 0)
+     * @param  \DateTime $lastModified Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSchedulesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsSchedulesGetRequest($start_date = null, $end_date = null, $school_year = null, $include_practice = false, $team_id = 0, $last_modified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
+    public function v1AthleticsSchedulesGetRequest($startDate = null, $endDate = null, $schoolYear = null, $includePractice = false, $teamId = 0, $lastModified = null, string $contentType = self::contentTypes['v1AthleticsSchedulesGet'][0])
     {
 
 
@@ -2207,7 +2207,7 @@ class AthleticsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2216,7 +2216,7 @@ class AthleticsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2225,7 +2225,7 @@ class AthleticsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -2234,7 +2234,7 @@ class AthleticsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_practice,
+            $includePractice,
             'include_practice', // param base name
             'boolean', // openApiType
             'form', // style
@@ -2243,7 +2243,7 @@ class AthleticsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $team_id,
+            $teamId,
             'team_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -2252,7 +2252,7 @@ class AthleticsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $last_modified,
+            $lastModified,
             'last_modified', // param base name
             'string', // openApiType
             'form', // style
@@ -2331,16 +2331,16 @@ class AthleticsApi
      *
      * Athletics sports
      *
-     * @param  int $season_id Format - int32. Season ID (optional)
+     * @param  int $seasonId Format - int32. Season ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSportsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\SportCollection
      */
-    public function v1AthleticsSportsGet($season_id = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
+    public function v1AthleticsSportsGet($seasonId = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
     {
-        [$response] = $this->v1AthleticsSportsGetWithHttpInfo($season_id, $contentType);
+        [$response] = $this->v1AthleticsSportsGetWithHttpInfo($seasonId, $contentType);
         return $response;
     }
 
@@ -2349,16 +2349,16 @@ class AthleticsApi
      *
      * Athletics sports
      *
-     * @param  int $season_id Format - int32. Season ID (optional)
+     * @param  int $seasonId Format - int32. Season ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSportsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\SportCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsSportsGetWithHttpInfo($season_id = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
+    public function v1AthleticsSportsGetWithHttpInfo($seasonId = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
     {
-        $request = $this->v1AthleticsSportsGetRequest($season_id, $contentType);
+        $request = $this->v1AthleticsSportsGetRequest($seasonId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2473,15 +2473,15 @@ class AthleticsApi
      *
      * Athletics sports
      *
-     * @param  int $season_id Format - int32. Season ID (optional)
+     * @param  int $seasonId Format - int32. Season ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSportsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsSportsGetAsync($season_id = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
+    public function v1AthleticsSportsGetAsync($seasonId = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
     {
-        return $this->v1AthleticsSportsGetAsyncWithHttpInfo($season_id, $contentType)
+        return $this->v1AthleticsSportsGetAsyncWithHttpInfo($seasonId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2494,16 +2494,16 @@ class AthleticsApi
      *
      * Athletics sports
      *
-     * @param  int $season_id Format - int32. Season ID (optional)
+     * @param  int $seasonId Format - int32. Season ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSportsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsSportsGetAsyncWithHttpInfo($season_id = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
+    public function v1AthleticsSportsGetAsyncWithHttpInfo($seasonId = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
     {
         $returnType = '\SKY\School\Model\SportCollection';
-        $request = $this->v1AthleticsSportsGetRequest($season_id, $contentType);
+        $request = $this->v1AthleticsSportsGetRequest($seasonId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2544,13 +2544,13 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsSportsGet'
      *
-     * @param  int $season_id Format - int32. Season ID (optional)
+     * @param  int $seasonId Format - int32. Season ID (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsSportsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsSportsGetRequest($season_id = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
+    public function v1AthleticsSportsGetRequest($seasonId = null, string $contentType = self::contentTypes['v1AthleticsSportsGet'][0])
     {
 
 
@@ -2564,7 +2564,7 @@ class AthleticsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $season_id,
+            $seasonId,
             'season_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -2940,16 +2940,16 @@ class AthleticsApi
      *
      * Athletics team roster
      *
-     * @param  int $team_id Format - int32. The ID for the team to get the roster for. (required)
+     * @param  int $teamId Format - int32. The ID for the team to get the roster for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\Roster
      */
-    public function v1AthleticsTeamsByTeamIdRosterGet($team_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
+    public function v1AthleticsTeamsByTeamIdRosterGet($teamId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
     {
-        [$response] = $this->v1AthleticsTeamsByTeamIdRosterGetWithHttpInfo($team_id, $contentType);
+        [$response] = $this->v1AthleticsTeamsByTeamIdRosterGetWithHttpInfo($teamId, $contentType);
         return $response;
     }
 
@@ -2958,16 +2958,16 @@ class AthleticsApi
      *
      * Athletics team roster
      *
-     * @param  int $team_id Format - int32. The ID for the team to get the roster for. (required)
+     * @param  int $teamId Format - int32. The ID for the team to get the roster for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\Roster, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdRosterGetWithHttpInfo($team_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
+    public function v1AthleticsTeamsByTeamIdRosterGetWithHttpInfo($teamId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdRosterGetRequest($team_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdRosterGetRequest($teamId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3082,15 +3082,15 @@ class AthleticsApi
      *
      * Athletics team roster
      *
-     * @param  int $team_id Format - int32. The ID for the team to get the roster for. (required)
+     * @param  int $teamId Format - int32. The ID for the team to get the roster for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdRosterGetAsync($team_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
+    public function v1AthleticsTeamsByTeamIdRosterGetAsync($teamId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdRosterGetAsyncWithHttpInfo($team_id, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdRosterGetAsyncWithHttpInfo($teamId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3103,16 +3103,16 @@ class AthleticsApi
      *
      * Athletics team roster
      *
-     * @param  int $team_id Format - int32. The ID for the team to get the roster for. (required)
+     * @param  int $teamId Format - int32. The ID for the team to get the roster for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdRosterGetAsyncWithHttpInfo($team_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
+    public function v1AthleticsTeamsByTeamIdRosterGetAsyncWithHttpInfo($teamId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
     {
         $returnType = '\SKY\School\Model\Roster';
-        $request = $this->v1AthleticsTeamsByTeamIdRosterGetRequest($team_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdRosterGetRequest($teamId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3153,19 +3153,19 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdRosterGet'
      *
-     * @param  int $team_id Format - int32. The ID for the team to get the roster for. (required)
+     * @param  int $teamId Format - int32. The ID for the team to get the roster for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdRosterGetRequest($team_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
+    public function v1AthleticsTeamsByTeamIdRosterGetRequest($teamId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdRosterGet'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdRosterGet'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdRosterGet'
             );
         }
 
@@ -3180,10 +3180,10 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
@@ -3257,17 +3257,17 @@ class AthleticsApi
      *
      * Athletics game delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be deleted (required)
-     * @param  int $game_id Format - int32. ID of the game to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the game to be deleted (required)
+     * @param  int $gameId Format - int32. ID of the game to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($team_id, $game_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($teamId, $gameId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
     {
-        $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteWithHttpInfo($team_id, $game_id, $contentType);
+        $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteWithHttpInfo($teamId, $gameId, $contentType);
     }
 
     /**
@@ -3275,17 +3275,17 @@ class AthleticsApi
      *
      * Athletics game delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be deleted (required)
-     * @param  int $game_id Format - int32. ID of the game to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the game to be deleted (required)
+     * @param  int $gameId Format - int32. ID of the game to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteWithHttpInfo($team_id, $game_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteWithHttpInfo($teamId, $gameId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($team_id, $game_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($teamId, $gameId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3336,16 +3336,16 @@ class AthleticsApi
      *
      * Athletics game delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be deleted (required)
-     * @param  int $game_id Format - int32. ID of the game to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the game to be deleted (required)
+     * @param  int $gameId Format - int32. ID of the game to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsync($team_id, $game_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsync($teamId, $gameId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsyncWithHttpInfo($team_id, $game_id, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsyncWithHttpInfo($teamId, $gameId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3358,17 +3358,17 @@ class AthleticsApi
      *
      * Athletics game delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be deleted (required)
-     * @param  int $game_id Format - int32. ID of the game to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the game to be deleted (required)
+     * @param  int $gameId Format - int32. ID of the game to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsyncWithHttpInfo($team_id, $game_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteAsyncWithHttpInfo($teamId, $gameId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($team_id, $game_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($teamId, $gameId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3396,27 +3396,27 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be deleted (required)
-     * @param  int $game_id Format - int32. ID of the game to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the game to be deleted (required)
+     * @param  int $gameId Format - int32. ID of the game to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($team_id, $game_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdScheduleByGameIdDeleteRequest($teamId, $gameId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'
             );
         }
 
-        // verify the required parameter 'game_id' is set
-        if ($game_id === null || (is_array($game_id) && count($game_id) === 0)) {
+        // verify the required parameter 'gameId' is set
+        if ($gameId === null || (is_array($gameId) && count($gameId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $game_id when calling v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'
+                'Missing the required parameter $gameId when calling v1AthleticsTeamsByTeamIdScheduleByGameIdDelete'
             );
         }
 
@@ -3431,18 +3431,18 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
         // path params
-        if ($game_id !== null) {
+        if ($gameId !== null) {
             $resourcePath = str_replace(
                 '{' . 'game_id' . '}',
-                ObjectSerializer::toPathValue($game_id),
+                ObjectSerializer::toPathValue($gameId),
                 $resourcePath
             );
         }
@@ -3516,17 +3516,17 @@ class AthleticsApi
      *
      * Athletics game update
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be updated (required)
-     * @param  \SKY\School\Model\GameUpdate $game_update Information for the game to be updated (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be updated (required)
+     * @param  \SKY\School\Model\GameUpdate $gameUpdate Information for the game to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePatch($team_id, $game_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePatch($teamId, $gameUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
     {
-        $this->v1AthleticsTeamsByTeamIdSchedulePatchWithHttpInfo($team_id, $game_update, $contentType);
+        $this->v1AthleticsTeamsByTeamIdSchedulePatchWithHttpInfo($teamId, $gameUpdate, $contentType);
     }
 
     /**
@@ -3534,17 +3534,17 @@ class AthleticsApi
      *
      * Athletics game update
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be updated (required)
-     * @param  \SKY\School\Model\GameUpdate $game_update Information for the game to be updated (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be updated (required)
+     * @param  \SKY\School\Model\GameUpdate $gameUpdate Information for the game to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePatchWithHttpInfo($team_id, $game_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePatchWithHttpInfo($teamId, $gameUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePatchRequest($team_id, $game_update, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePatchRequest($teamId, $gameUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3595,16 +3595,16 @@ class AthleticsApi
      *
      * Athletics game update
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be updated (required)
-     * @param  \SKY\School\Model\GameUpdate $game_update Information for the game to be updated (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be updated (required)
+     * @param  \SKY\School\Model\GameUpdate $gameUpdate Information for the game to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePatchAsync($team_id, $game_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePatchAsync($teamId, $gameUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdSchedulePatchAsyncWithHttpInfo($team_id, $game_update, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdSchedulePatchAsyncWithHttpInfo($teamId, $gameUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3617,17 +3617,17 @@ class AthleticsApi
      *
      * Athletics game update
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be updated (required)
-     * @param  \SKY\School\Model\GameUpdate $game_update Information for the game to be updated (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be updated (required)
+     * @param  \SKY\School\Model\GameUpdate $gameUpdate Information for the game to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePatchAsyncWithHttpInfo($team_id, $game_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePatchAsyncWithHttpInfo($teamId, $gameUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
     {
         $returnType = '';
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePatchRequest($team_id, $game_update, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePatchRequest($teamId, $gameUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3655,20 +3655,20 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdSchedulePatch'
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be updated (required)
-     * @param  \SKY\School\Model\GameUpdate $game_update Information for the game to be updated (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be updated (required)
+     * @param  \SKY\School\Model\GameUpdate $gameUpdate Information for the game to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePatchRequest($team_id, $game_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePatchRequest($teamId, $gameUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePatch'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdSchedulePatch'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdSchedulePatch'
             );
         }
 
@@ -3684,10 +3684,10 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
@@ -3700,12 +3700,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($game_update)) {
+        if (isset($gameUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($game_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($gameUpdate));
             } else {
-                $httpBody = $game_update;
+                $httpBody = $gameUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3768,17 +3768,17 @@ class AthleticsApi
      *
      * Athletics game create
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be created (required)
-     * @param  \SKY\School\Model\GameCreate $game_create Information about the game to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be created (required)
+     * @param  \SKY\School\Model\GameCreate $gameCreate Information about the game to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePost($team_id, $game_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePost($teamId, $gameCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
     {
-        [$response] = $this->v1AthleticsTeamsByTeamIdSchedulePostWithHttpInfo($team_id, $game_create, $contentType);
+        [$response] = $this->v1AthleticsTeamsByTeamIdSchedulePostWithHttpInfo($teamId, $gameCreate, $contentType);
         return $response;
     }
 
@@ -3787,17 +3787,17 @@ class AthleticsApi
      *
      * Athletics game create
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be created (required)
-     * @param  \SKY\School\Model\GameCreate $game_create Information about the game to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be created (required)
+     * @param  \SKY\School\Model\GameCreate $gameCreate Information about the game to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePostWithHttpInfo($team_id, $game_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePostWithHttpInfo($teamId, $gameCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePostRequest($team_id, $game_create, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePostRequest($teamId, $gameCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3912,16 +3912,16 @@ class AthleticsApi
      *
      * Athletics game create
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be created (required)
-     * @param  \SKY\School\Model\GameCreate $game_create Information about the game to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be created (required)
+     * @param  \SKY\School\Model\GameCreate $gameCreate Information about the game to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePostAsync($team_id, $game_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePostAsync($teamId, $gameCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdSchedulePostAsyncWithHttpInfo($team_id, $game_create, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdSchedulePostAsyncWithHttpInfo($teamId, $gameCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3934,17 +3934,17 @@ class AthleticsApi
      *
      * Athletics game create
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be created (required)
-     * @param  \SKY\School\Model\GameCreate $game_create Information about the game to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be created (required)
+     * @param  \SKY\School\Model\GameCreate $gameCreate Information about the game to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePostAsyncWithHttpInfo($team_id, $game_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePostAsyncWithHttpInfo($teamId, $gameCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePostRequest($team_id, $game_create, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePostRequest($teamId, $gameCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3985,20 +3985,20 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdSchedulePost'
      *
-     * @param  int $team_id Format - int32. ID of the team for the game to be created (required)
-     * @param  \SKY\School\Model\GameCreate $game_create Information about the game to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the game to be created (required)
+     * @param  \SKY\School\Model\GameCreate $gameCreate Information about the game to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePostRequest($team_id, $game_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePostRequest($teamId, $gameCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePost'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdSchedulePost'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdSchedulePost'
             );
         }
 
@@ -4014,10 +4014,10 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
@@ -4030,12 +4030,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($game_create)) {
+        if (isset($gameCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($game_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($gameCreate));
             } else {
-                $httpBody = $game_create;
+                $httpBody = $gameCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4098,17 +4098,17 @@ class AthleticsApi
      *
      * Athletics practice delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be deleted (required)
-     * @param  int $practice_id Format - int32. ID of the practice to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be deleted (required)
+     * @param  int $practiceId Format - int32. ID of the practice to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($team_id, $practice_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($teamId, $practiceId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
     {
-        $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteWithHttpInfo($team_id, $practice_id, $contentType);
+        $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteWithHttpInfo($teamId, $practiceId, $contentType);
     }
 
     /**
@@ -4116,17 +4116,17 @@ class AthleticsApi
      *
      * Athletics practice delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be deleted (required)
-     * @param  int $practice_id Format - int32. ID of the practice to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be deleted (required)
+     * @param  int $practiceId Format - int32. ID of the practice to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteWithHttpInfo($team_id, $practice_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteWithHttpInfo($teamId, $practiceId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($team_id, $practice_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($teamId, $practiceId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4177,16 +4177,16 @@ class AthleticsApi
      *
      * Athletics practice delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be deleted (required)
-     * @param  int $practice_id Format - int32. ID of the practice to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be deleted (required)
+     * @param  int $practiceId Format - int32. ID of the practice to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsync($team_id, $practice_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsync($teamId, $practiceId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsyncWithHttpInfo($team_id, $practice_id, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsyncWithHttpInfo($teamId, $practiceId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4199,17 +4199,17 @@ class AthleticsApi
      *
      * Athletics practice delete
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be deleted (required)
-     * @param  int $practice_id Format - int32. ID of the practice to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be deleted (required)
+     * @param  int $practiceId Format - int32. ID of the practice to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsyncWithHttpInfo($team_id, $practice_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteAsyncWithHttpInfo($teamId, $practiceId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($team_id, $practice_id, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($teamId, $practiceId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4237,27 +4237,27 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be deleted (required)
-     * @param  int $practice_id Format - int32. ID of the practice to be deleted (required)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be deleted (required)
+     * @param  int $practiceId Format - int32. ID of the practice to be deleted (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($team_id, $practice_id, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDeleteRequest($teamId, $practiceId, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'
             );
         }
 
-        // verify the required parameter 'practice_id' is set
-        if ($practice_id === null || (is_array($practice_id) && count($practice_id) === 0)) {
+        // verify the required parameter 'practiceId' is set
+        if ($practiceId === null || (is_array($practiceId) && count($practiceId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $practice_id when calling v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'
+                'Missing the required parameter $practiceId when calling v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete'
             );
         }
 
@@ -4272,18 +4272,18 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
         // path params
-        if ($practice_id !== null) {
+        if ($practiceId !== null) {
             $resourcePath = str_replace(
                 '{' . 'practice_id' . '}',
-                ObjectSerializer::toPathValue($practice_id),
+                ObjectSerializer::toPathValue($practiceId),
                 $resourcePath
             );
         }
@@ -4357,17 +4357,17 @@ class AthleticsApi
      *
      * Athletics practice update
      *
-     * @param  int $team_id Format - int32. The ID of the team for the practice to be updated (required)
-     * @param  \SKY\School\Model\PracticeUpdate $practice_update Information about the practice to be updated (optional)
+     * @param  int $teamId Format - int32. The ID of the team for the practice to be updated (required)
+     * @param  \SKY\School\Model\PracticeUpdate $practiceUpdate Information about the practice to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePatch($team_id, $practice_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePatch($teamId, $practiceUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
     {
-        $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchWithHttpInfo($team_id, $practice_update, $contentType);
+        $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchWithHttpInfo($teamId, $practiceUpdate, $contentType);
     }
 
     /**
@@ -4375,17 +4375,17 @@ class AthleticsApi
      *
      * Athletics practice update
      *
-     * @param  int $team_id Format - int32. The ID of the team for the practice to be updated (required)
-     * @param  \SKY\School\Model\PracticeUpdate $practice_update Information about the practice to be updated (optional)
+     * @param  int $teamId Format - int32. The ID of the team for the practice to be updated (required)
+     * @param  \SKY\School\Model\PracticeUpdate $practiceUpdate Information about the practice to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchWithHttpInfo($team_id, $practice_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchWithHttpInfo($teamId, $practiceUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($team_id, $practice_update, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($teamId, $practiceUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4436,16 +4436,16 @@ class AthleticsApi
      *
      * Athletics practice update
      *
-     * @param  int $team_id Format - int32. The ID of the team for the practice to be updated (required)
-     * @param  \SKY\School\Model\PracticeUpdate $practice_update Information about the practice to be updated (optional)
+     * @param  int $teamId Format - int32. The ID of the team for the practice to be updated (required)
+     * @param  \SKY\School\Model\PracticeUpdate $practiceUpdate Information about the practice to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchAsync($team_id, $practice_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchAsync($teamId, $practiceUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchAsyncWithHttpInfo($team_id, $practice_update, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchAsyncWithHttpInfo($teamId, $practiceUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4458,17 +4458,17 @@ class AthleticsApi
      *
      * Athletics practice update
      *
-     * @param  int $team_id Format - int32. The ID of the team for the practice to be updated (required)
-     * @param  \SKY\School\Model\PracticeUpdate $practice_update Information about the practice to be updated (optional)
+     * @param  int $teamId Format - int32. The ID of the team for the practice to be updated (required)
+     * @param  \SKY\School\Model\PracticeUpdate $practiceUpdate Information about the practice to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchAsyncWithHttpInfo($team_id, $practice_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchAsyncWithHttpInfo($teamId, $practiceUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
     {
         $returnType = '';
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($team_id, $practice_update, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($teamId, $practiceUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4496,20 +4496,20 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdSchedulePracticePatch'
      *
-     * @param  int $team_id Format - int32. The ID of the team for the practice to be updated (required)
-     * @param  \SKY\School\Model\PracticeUpdate $practice_update Information about the practice to be updated (optional)
+     * @param  int $teamId Format - int32. The ID of the team for the practice to be updated (required)
+     * @param  \SKY\School\Model\PracticeUpdate $practiceUpdate Information about the practice to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($team_id, $practice_update = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePatchRequest($teamId, $practiceUpdate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePatch'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdSchedulePracticePatch'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdSchedulePracticePatch'
             );
         }
 
@@ -4525,10 +4525,10 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
@@ -4541,12 +4541,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($practice_update)) {
+        if (isset($practiceUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($practice_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($practiceUpdate));
             } else {
-                $httpBody = $practice_update;
+                $httpBody = $practiceUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4609,17 +4609,17 @@ class AthleticsApi
      *
      * Athletics practice create
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be created (required)
-     * @param  \SKY\School\Model\PracticeCreate $practice_create Information about the practice to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be created (required)
+     * @param  \SKY\School\Model\PracticeCreate $practiceCreate Information about the practice to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePost($team_id, $practice_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePost($teamId, $practiceCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
     {
-        [$response] = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostWithHttpInfo($team_id, $practice_create, $contentType);
+        [$response] = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostWithHttpInfo($teamId, $practiceCreate, $contentType);
         return $response;
     }
 
@@ -4628,17 +4628,17 @@ class AthleticsApi
      *
      * Athletics practice create
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be created (required)
-     * @param  \SKY\School\Model\PracticeCreate $practice_create Information about the practice to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be created (required)
+     * @param  \SKY\School\Model\PracticeCreate $practiceCreate Information about the practice to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePostWithHttpInfo($team_id, $practice_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePostWithHttpInfo($teamId, $practiceCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
     {
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($team_id, $practice_create, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($teamId, $practiceCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4753,16 +4753,16 @@ class AthleticsApi
      *
      * Athletics practice create
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be created (required)
-     * @param  \SKY\School\Model\PracticeCreate $practice_create Information about the practice to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be created (required)
+     * @param  \SKY\School\Model\PracticeCreate $practiceCreate Information about the practice to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePostAsync($team_id, $practice_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePostAsync($teamId, $practiceCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
     {
-        return $this->v1AthleticsTeamsByTeamIdSchedulePracticePostAsyncWithHttpInfo($team_id, $practice_create, $contentType)
+        return $this->v1AthleticsTeamsByTeamIdSchedulePracticePostAsyncWithHttpInfo($teamId, $practiceCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4775,17 +4775,17 @@ class AthleticsApi
      *
      * Athletics practice create
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be created (required)
-     * @param  \SKY\School\Model\PracticeCreate $practice_create Information about the practice to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be created (required)
+     * @param  \SKY\School\Model\PracticeCreate $practiceCreate Information about the practice to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePostAsyncWithHttpInfo($team_id, $practice_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePostAsyncWithHttpInfo($teamId, $practiceCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($team_id, $practice_create, $contentType);
+        $request = $this->v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($teamId, $practiceCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4826,20 +4826,20 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsByTeamIdSchedulePracticePost'
      *
-     * @param  int $team_id Format - int32. ID of the team for the practice to be created (required)
-     * @param  \SKY\School\Model\PracticeCreate $practice_create Information about the practice to be created (optional)
+     * @param  int $teamId Format - int32. ID of the team for the practice to be created (required)
+     * @param  \SKY\School\Model\PracticeCreate $practiceCreate Information about the practice to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($team_id, $practice_create = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
+    public function v1AthleticsTeamsByTeamIdSchedulePracticePostRequest($teamId, $practiceCreate = null, string $contentType = self::contentTypes['v1AthleticsTeamsByTeamIdSchedulePracticePost'][0])
     {
 
-        // verify the required parameter 'team_id' is set
-        if ($team_id === null || (is_array($team_id) && count($team_id) === 0)) {
+        // verify the required parameter 'teamId' is set
+        if ($teamId === null || (is_array($teamId) && count($teamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $team_id when calling v1AthleticsTeamsByTeamIdSchedulePracticePost'
+                'Missing the required parameter $teamId when calling v1AthleticsTeamsByTeamIdSchedulePracticePost'
             );
         }
 
@@ -4855,10 +4855,10 @@ class AthleticsApi
 
 
         // path params
-        if ($team_id !== null) {
+        if ($teamId !== null) {
             $resourcePath = str_replace(
                 '{' . 'team_id' . '}',
-                ObjectSerializer::toPathValue($team_id),
+                ObjectSerializer::toPathValue($teamId),
                 $resourcePath
             );
         }
@@ -4871,12 +4871,12 @@ class AthleticsApi
         );
 
         // for model (json/xml)
-        if (isset($practice_create)) {
+        if (isset($practiceCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($practice_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($practiceCreate));
             } else {
-                $httpBody = $practice_create;
+                $httpBody = $practiceCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4939,16 +4939,16 @@ class AthleticsApi
      *
      * Athletics teams
      *
-     * @param  string $school_year School year (optional)
+     * @param  string $schoolYear School year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\TeamCollection
      */
-    public function v1AthleticsTeamsGet($school_year = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
+    public function v1AthleticsTeamsGet($schoolYear = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
     {
-        [$response] = $this->v1AthleticsTeamsGetWithHttpInfo($school_year, $contentType);
+        [$response] = $this->v1AthleticsTeamsGetWithHttpInfo($schoolYear, $contentType);
         return $response;
     }
 
@@ -4957,16 +4957,16 @@ class AthleticsApi
      *
      * Athletics teams
      *
-     * @param  string $school_year School year (optional)
+     * @param  string $schoolYear School year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\TeamCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AthleticsTeamsGetWithHttpInfo($school_year = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
+    public function v1AthleticsTeamsGetWithHttpInfo($schoolYear = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
     {
-        $request = $this->v1AthleticsTeamsGetRequest($school_year, $contentType);
+        $request = $this->v1AthleticsTeamsGetRequest($schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5081,15 +5081,15 @@ class AthleticsApi
      *
      * Athletics teams
      *
-     * @param  string $school_year School year (optional)
+     * @param  string $schoolYear School year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsGetAsync($school_year = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
+    public function v1AthleticsTeamsGetAsync($schoolYear = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
     {
-        return $this->v1AthleticsTeamsGetAsyncWithHttpInfo($school_year, $contentType)
+        return $this->v1AthleticsTeamsGetAsyncWithHttpInfo($schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5102,16 +5102,16 @@ class AthleticsApi
      *
      * Athletics teams
      *
-     * @param  string $school_year School year (optional)
+     * @param  string $schoolYear School year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AthleticsTeamsGetAsyncWithHttpInfo($school_year = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
+    public function v1AthleticsTeamsGetAsyncWithHttpInfo($schoolYear = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
     {
         $returnType = '\SKY\School\Model\TeamCollection';
-        $request = $this->v1AthleticsTeamsGetRequest($school_year, $contentType);
+        $request = $this->v1AthleticsTeamsGetRequest($schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5152,13 +5152,13 @@ class AthleticsApi
     /**
      * Create request for operation 'v1AthleticsTeamsGet'
      *
-     * @param  string $school_year School year (optional)
+     * @param  string $schoolYear School year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AthleticsTeamsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AthleticsTeamsGetRequest($school_year = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
+    public function v1AthleticsTeamsGetRequest($schoolYear = null, string $contentType = self::contentTypes['v1AthleticsTeamsGet'][0])
     {
 
 
@@ -5172,7 +5172,7 @@ class AthleticsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style

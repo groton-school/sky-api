@@ -62,18 +62,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => '\DateTime',
         'description' => 'string',
         'discussion' => 'bool',
-        'due_date' => '\DateTime',
+        'dueDate' => '\DateTime',
         'enrolled' => 'int',
-        'graded_count' => 'int',
-        'index_id' => 'int',
+        'gradedCount' => 'int',
+        'indexId' => 'int',
         'major' => 'bool',
         'name' => 'string',
-        'publish_on_assigned' => 'bool',
+        'publishOnAssigned' => 'bool',
         'published' => 'bool',
         'rank' => 'int',
         'status' => 'int',
         'type' => 'string',
-        'type_id' => 'int',
+        'typeId' => 'int',
     ];
 
     /**
@@ -88,18 +88,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => 'date-time',
         'description' => null,
         'discussion' => null,
-        'due_date' => 'date-time',
+        'dueDate' => 'date-time',
         'enrolled' => 'int32',
-        'graded_count' => 'int32',
-        'index_id' => 'int32',
+        'gradedCount' => 'int32',
+        'indexId' => 'int32',
         'major' => null,
         'name' => null,
-        'publish_on_assigned' => null,
+        'publishOnAssigned' => null,
         'published' => null,
         'rank' => 'int32',
         'status' => 'int32',
         'type' => null,
-        'type_id' => 'int32',
+        'typeId' => 'int32',
     ];
 
     /**
@@ -112,18 +112,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => true,
         'description' => true,
         'discussion' => false,
-        'due_date' => true,
+        'dueDate' => true,
         'enrolled' => true,
-        'graded_count' => true,
-        'index_id' => true,
+        'gradedCount' => true,
+        'indexId' => true,
         'major' => false,
         'name' => true,
-        'publish_on_assigned' => false,
+        'publishOnAssigned' => false,
         'published' => false,
         'rank' => true,
         'status' => true,
         'type' => true,
-        'type_id' => true,
+        'typeId' => true,
     ];
 
     /**
@@ -216,18 +216,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => 'date',
         'description' => 'description',
         'discussion' => 'discussion',
-        'due_date' => 'due_date',
+        'dueDate' => 'due_date',
         'enrolled' => 'enrolled',
-        'graded_count' => 'graded_count',
-        'index_id' => 'index_id',
+        'gradedCount' => 'graded_count',
+        'indexId' => 'index_id',
         'major' => 'major',
         'name' => 'name',
-        'publish_on_assigned' => 'publish_on_assigned',
+        'publishOnAssigned' => 'publish_on_assigned',
         'published' => 'published',
         'rank' => 'rank',
         'status' => 'status',
         'type' => 'type',
-        'type_id' => 'type_id',
+        'typeId' => 'type_id',
     ];
 
     /**
@@ -240,18 +240,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => 'setDate',
         'description' => 'setDescription',
         'discussion' => 'setDiscussion',
-        'due_date' => 'setDueDate',
+        'dueDate' => 'setDueDate',
         'enrolled' => 'setEnrolled',
-        'graded_count' => 'setGradedCount',
-        'index_id' => 'setIndexId',
+        'gradedCount' => 'setGradedCount',
+        'indexId' => 'setIndexId',
         'major' => 'setMajor',
         'name' => 'setName',
-        'publish_on_assigned' => 'setPublishOnAssigned',
+        'publishOnAssigned' => 'setPublishOnAssigned',
         'published' => 'setPublished',
         'rank' => 'setRank',
         'status' => 'setStatus',
         'type' => 'setType',
-        'type_id' => 'setTypeId',
+        'typeId' => 'setTypeId',
     ];
 
     /**
@@ -264,18 +264,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => 'getDate',
         'description' => 'getDescription',
         'discussion' => 'getDiscussion',
-        'due_date' => 'getDueDate',
+        'dueDate' => 'getDueDate',
         'enrolled' => 'getEnrolled',
-        'graded_count' => 'getGradedCount',
-        'index_id' => 'getIndexId',
+        'gradedCount' => 'getGradedCount',
+        'indexId' => 'getIndexId',
         'major' => 'getMajor',
         'name' => 'getName',
-        'publish_on_assigned' => 'getPublishOnAssigned',
+        'publishOnAssigned' => 'getPublishOnAssigned',
         'published' => 'getPublished',
         'rank' => 'getRank',
         'status' => 'getStatus',
         'type' => 'getType',
-        'type_id' => 'getTypeId',
+        'typeId' => 'getTypeId',
     ];
 
     /**
@@ -339,18 +339,18 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('discussion', $data ?? [], null);
-        $this->setIfExists('due_date', $data ?? [], null);
+        $this->setIfExists('dueDate', $data ?? [], null);
         $this->setIfExists('enrolled', $data ?? [], null);
-        $this->setIfExists('graded_count', $data ?? [], null);
-        $this->setIfExists('index_id', $data ?? [], null);
+        $this->setIfExists('gradedCount', $data ?? [], null);
+        $this->setIfExists('indexId', $data ?? [], null);
         $this->setIfExists('major', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('publish_on_assigned', $data ?? [], null);
+        $this->setIfExists('publishOnAssigned', $data ?? [], null);
         $this->setIfExists('published', $data ?? [], null);
         $this->setIfExists('rank', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
     }
 
     /**
@@ -518,35 +518,35 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date The date the assignment is due; Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $dueDate The date the assignment is due; Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        if (is_null($due_date)) {
-            array_push($this->openAPINullablesSetToNull, 'due_date');
+        if (is_null($dueDate)) {
+            array_push($this->openAPINullablesSetToNull, 'dueDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('due_date', $nullablesSetToNull);
+            $index = array_search('dueDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
@@ -586,69 +586,69 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets graded_count
+     * Gets gradedCount
      *
      * @return int|null
      */
     public function getGradedCount()
     {
-        return $this->container['graded_count'];
+        return $this->container['gradedCount'];
     }
 
     /**
-     * Sets graded_count
+     * Sets gradedCount
      *
-     * @param int|null $graded_count Returns the number of assignments that have been graded
+     * @param int|null $gradedCount Returns the number of assignments that have been graded
      *
      * @return self
      */
-    public function setGradedCount($graded_count)
+    public function setGradedCount($gradedCount)
     {
-        if (is_null($graded_count)) {
-            array_push($this->openAPINullablesSetToNull, 'graded_count');
+        if (is_null($gradedCount)) {
+            array_push($this->openAPINullablesSetToNull, 'gradedCount');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('graded_count', $nullablesSetToNull);
+            $index = array_search('gradedCount', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['graded_count'] = $graded_count;
+        $this->container['gradedCount'] = $gradedCount;
 
         return $this;
     }
 
     /**
-     * Gets index_id
+     * Gets indexId
      *
      * @return int|null
      */
     public function getIndexId()
     {
-        return $this->container['index_id'];
+        return $this->container['indexId'];
     }
 
     /**
-     * Sets index_id
+     * Sets indexId
      *
-     * @param int|null $index_id The index ID of the assignment
+     * @param int|null $indexId The index ID of the assignment
      *
      * @return self
      */
-    public function setIndexId($index_id)
+    public function setIndexId($indexId)
     {
-        if (is_null($index_id)) {
-            array_push($this->openAPINullablesSetToNull, 'index_id');
+        if (is_null($indexId)) {
+            array_push($this->openAPINullablesSetToNull, 'indexId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('index_id', $nullablesSetToNull);
+            $index = array_search('indexId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['index_id'] = $index_id;
+        $this->container['indexId'] = $indexId;
 
         return $this;
     }
@@ -715,28 +715,28 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets publish_on_assigned
+     * Gets publishOnAssigned
      *
      * @return bool|null
      */
     public function getPublishOnAssigned()
     {
-        return $this->container['publish_on_assigned'];
+        return $this->container['publishOnAssigned'];
     }
 
     /**
-     * Sets publish_on_assigned
+     * Sets publishOnAssigned
      *
-     * @param bool|null $publish_on_assigned Returns True if assignment is published when it's assigned; based on the Date property
+     * @param bool|null $publishOnAssigned Returns True if assignment is published when it's assigned; based on the Date property
      *
      * @return self
      */
-    public function setPublishOnAssigned($publish_on_assigned)
+    public function setPublishOnAssigned($publishOnAssigned)
     {
-        if (is_null($publish_on_assigned)) {
-            throw new \InvalidArgumentException('non-nullable publish_on_assigned cannot be null');
+        if (is_null($publishOnAssigned)) {
+            throw new \InvalidArgumentException('non-nullable publishOnAssigned cannot be null');
         }
-        $this->container['publish_on_assigned'] = $publish_on_assigned;
+        $this->container['publishOnAssigned'] = $publishOnAssigned;
 
         return $this;
     }
@@ -871,35 +871,35 @@ class Assignment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return int|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param int|null $type_id The Type ID of the assignment; the Type ID is a static system value.
+     * @param int|null $typeId The Type ID of the assignment; the Type ID is a static system value.
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }

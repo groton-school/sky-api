@@ -59,13 +59,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'begin_date' => '\DateTime',
+        'beginDate' => '\DateTime',
         'description' => 'string',
-        'end_date' => '\DateTime',
-        'level_description' => 'string',
-        'level_id' => 'int',
-        'offering_type' => 'int',
-        'school_year_label' => 'string',
+        'endDate' => '\DateTime',
+        'levelDescription' => 'string',
+        'levelId' => 'int',
+        'offeringType' => 'int',
+        'schoolYearLabel' => 'string',
     ];
 
     /**
@@ -77,13 +77,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'begin_date' => 'date-time',
+        'beginDate' => 'date-time',
         'description' => null,
-        'end_date' => 'date-time',
-        'level_description' => null,
-        'level_id' => 'int32',
-        'offering_type' => 'int32',
-        'school_year_label' => null,
+        'endDate' => 'date-time',
+        'levelDescription' => null,
+        'levelId' => 'int32',
+        'offeringType' => 'int32',
+        'schoolYearLabel' => null,
     ];
 
     /**
@@ -93,13 +93,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'begin_date' => true,
+        'beginDate' => true,
         'description' => true,
-        'end_date' => true,
-        'level_description' => true,
-        'level_id' => true,
-        'offering_type' => true,
-        'school_year_label' => true,
+        'endDate' => true,
+        'levelDescription' => true,
+        'levelId' => true,
+        'offeringType' => true,
+        'schoolYearLabel' => true,
     ];
 
     /**
@@ -189,13 +189,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'begin_date' => 'begin_date',
+        'beginDate' => 'begin_date',
         'description' => 'description',
-        'end_date' => 'end_date',
-        'level_description' => 'level_description',
-        'level_id' => 'level_id',
-        'offering_type' => 'offering_type',
-        'school_year_label' => 'school_year_label',
+        'endDate' => 'end_date',
+        'levelDescription' => 'level_description',
+        'levelId' => 'level_id',
+        'offeringType' => 'offering_type',
+        'schoolYearLabel' => 'school_year_label',
     ];
 
     /**
@@ -205,13 +205,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'begin_date' => 'setBeginDate',
+        'beginDate' => 'setBeginDate',
         'description' => 'setDescription',
-        'end_date' => 'setEndDate',
-        'level_description' => 'setLevelDescription',
-        'level_id' => 'setLevelId',
-        'offering_type' => 'setOfferingType',
-        'school_year_label' => 'setSchoolYearLabel',
+        'endDate' => 'setEndDate',
+        'levelDescription' => 'setLevelDescription',
+        'levelId' => 'setLevelId',
+        'offeringType' => 'setOfferingType',
+        'schoolYearLabel' => 'setSchoolYearLabel',
     ];
 
     /**
@@ -221,13 +221,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'begin_date' => 'getBeginDate',
+        'beginDate' => 'getBeginDate',
         'description' => 'getDescription',
-        'end_date' => 'getEndDate',
-        'level_description' => 'getLevelDescription',
-        'level_id' => 'getLevelId',
-        'offering_type' => 'getOfferingType',
-        'school_year_label' => 'getSchoolYearLabel',
+        'endDate' => 'getEndDate',
+        'levelDescription' => 'getLevelDescription',
+        'levelId' => 'getLevelId',
+        'offeringType' => 'getOfferingType',
+        'schoolYearLabel' => 'getSchoolYearLabel',
     ];
 
     /**
@@ -288,13 +288,13 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('level_description', $data ?? [], null);
-        $this->setIfExists('level_id', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
-        $this->setIfExists('school_year_label', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
+        $this->setIfExists('levelDescription', $data ?? [], null);
+        $this->setIfExists('levelId', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
+        $this->setIfExists('schoolYearLabel', $data ?? [], null);
     }
 
     /**
@@ -374,35 +374,35 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date The begin date of the term. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $beginDate The begin date of the term. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
@@ -442,171 +442,171 @@ class Term implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date The end date of the term. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $endDate The end date of the term. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * Gets level_description
+     * Gets levelDescription
      *
      * @return string|null
      */
     public function getLevelDescription()
     {
-        return $this->container['level_description'];
+        return $this->container['levelDescription'];
     }
 
     /**
-     * Sets level_description
+     * Sets levelDescription
      *
-     * @param string|null $level_description The description of the level for the term
+     * @param string|null $levelDescription The description of the level for the term
      *
      * @return self
      */
-    public function setLevelDescription($level_description)
+    public function setLevelDescription($levelDescription)
     {
-        if (is_null($level_description)) {
-            array_push($this->openAPINullablesSetToNull, 'level_description');
+        if (is_null($levelDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'levelDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_description', $nullablesSetToNull);
+            $index = array_search('levelDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_description'] = $level_description;
+        $this->container['levelDescription'] = $levelDescription;
 
         return $this;
     }
 
     /**
-     * Gets level_id
+     * Gets levelId
      *
      * @return int|null
      */
     public function getLevelId()
     {
-        return $this->container['level_id'];
+        return $this->container['levelId'];
     }
 
     /**
-     * Sets level_id
+     * Sets levelId
      *
-     * @param int|null $level_id The school level for the term
+     * @param int|null $levelId The school level for the term
      *
      * @return self
      */
-    public function setLevelId($level_id)
+    public function setLevelId($levelId)
     {
-        if (is_null($level_id)) {
-            array_push($this->openAPINullablesSetToNull, 'level_id');
+        if (is_null($levelId)) {
+            array_push($this->openAPINullablesSetToNull, 'levelId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_id', $nullablesSetToNull);
+            $index = array_search('levelId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_id'] = $level_id;
+        $this->container['levelId'] = $levelId;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return int|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param int|null $offering_type The offering type for the term
+     * @param int|null $offeringType The offering type for the term
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_type');
+        if (is_null($offeringType)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_type', $nullablesSetToNull);
+            $index = array_search('offeringType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }
 
     /**
-     * Gets school_year_label
+     * Gets schoolYearLabel
      *
      * @return string|null
      */
     public function getSchoolYearLabel()
     {
-        return $this->container['school_year_label'];
+        return $this->container['schoolYearLabel'];
     }
 
     /**
-     * Sets school_year_label
+     * Sets schoolYearLabel
      *
-     * @param string|null $school_year_label The label used to identify the range of dates in a school year
+     * @param string|null $schoolYearLabel The label used to identify the range of dates in a school year
      *
      * @return self
      */
-    public function setSchoolYearLabel($school_year_label)
+    public function setSchoolYearLabel($schoolYearLabel)
     {
-        if (is_null($school_year_label)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_label');
+        if (is_null($schoolYearLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_label', $nullablesSetToNull);
+            $index = array_search('schoolYearLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_label'] = $school_year_label;
+        $this->container['schoolYearLabel'] = $schoolYearLabel;
 
         return $this;
     }

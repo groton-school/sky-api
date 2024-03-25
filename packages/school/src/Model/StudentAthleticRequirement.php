@@ -58,8 +58,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'athletic_type' => 'string',
-        'athletic_date' => '\DateTime',
+        'athleticType' => 'string',
+        'athleticDate' => '\DateTime',
     ];
 
     /**
@@ -70,8 +70,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'athletic_type' => null,
-        'athletic_date' => 'date-time',
+        'athleticType' => null,
+        'athleticDate' => 'date-time',
     ];
 
     /**
@@ -80,8 +80,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'athletic_type' => false,
-        'athletic_date' => true,
+        'athleticType' => false,
+        'athleticDate' => true,
     ];
 
     /**
@@ -170,8 +170,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'athletic_type' => 'athletic_type',
-        'athletic_date' => 'athletic_date',
+        'athleticType' => 'athletic_type',
+        'athleticDate' => 'athletic_date',
     ];
 
     /**
@@ -180,8 +180,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'athletic_type' => 'setAthleticType',
-        'athletic_date' => 'setAthleticDate',
+        'athleticType' => 'setAthleticType',
+        'athleticDate' => 'setAthleticDate',
     ];
 
     /**
@@ -190,8 +190,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'athletic_type' => 'getAthleticType',
-        'athletic_date' => 'getAthleticDate',
+        'athleticType' => 'getAthleticType',
+        'athleticDate' => 'getAthleticDate',
     ];
 
     /**
@@ -251,8 +251,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('athletic_type', $data ?? [], null);
-        $this->setIfExists('athletic_date', $data ?? [], null);
+        $this->setIfExists('athleticType', $data ?? [], null);
+        $this->setIfExists('athleticDate', $data ?? [], null);
     }
 
     /**
@@ -282,8 +282,8 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['athletic_type'] === null) {
-            $invalidProperties[] = "'athletic_type' can't be null";
+        if ($this->container['athleticType'] === null) {
+            $invalidProperties[] = "'athleticType' can't be null";
         }
         return $invalidProperties;
     }
@@ -301,62 +301,62 @@ class StudentAthleticRequirement implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets athletic_type
+     * Gets athleticType
      *
      * @return string
      */
     public function getAthleticType()
     {
-        return $this->container['athletic_type'];
+        return $this->container['athleticType'];
     }
 
     /**
-     * Sets athletic_type
+     * Sets athleticType
      *
-     * @param string $athletic_type The ID or description of the athletic requirement table value
+     * @param string $athleticType The ID or description of the athletic requirement table value
      *
      * @return self
      */
-    public function setAthleticType($athletic_type)
+    public function setAthleticType($athleticType)
     {
-        if (is_null($athletic_type)) {
-            throw new \InvalidArgumentException('non-nullable athletic_type cannot be null');
+        if (is_null($athleticType)) {
+            throw new \InvalidArgumentException('non-nullable athleticType cannot be null');
         }
-        $this->container['athletic_type'] = $athletic_type;
+        $this->container['athleticType'] = $athleticType;
 
         return $this;
     }
 
     /**
-     * Gets athletic_date
+     * Gets athleticDate
      *
      * @return \DateTime|null
      */
     public function getAthleticDate()
     {
-        return $this->container['athletic_date'];
+        return $this->container['athleticDate'];
     }
 
     /**
-     * Sets athletic_date
+     * Sets athleticDate
      *
-     * @param \DateTime|null $athletic_date The date the requirement was met. Use ISO-8601 date format: 2022-08-31.  Excluding a date here will clear the athletic requirements of the student.
+     * @param \DateTime|null $athleticDate The date the requirement was met. Use ISO-8601 date format: 2022-08-31.  Excluding a date here will clear the athletic requirements of the student.
      *
      * @return self
      */
-    public function setAthleticDate($athletic_date)
+    public function setAthleticDate($athleticDate)
     {
-        if (is_null($athletic_date)) {
-            array_push($this->openAPINullablesSetToNull, 'athletic_date');
+        if (is_null($athleticDate)) {
+            array_push($this->openAPINullablesSetToNull, 'athleticDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('athletic_date', $nullablesSetToNull);
+            $index = array_search('athleticDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['athletic_date'] = $athletic_date;
+        $this->container['athleticDate'] = $athleticDate;
 
         return $this;
     }

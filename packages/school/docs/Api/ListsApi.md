@@ -11,7 +11,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1ListsAdvancedByListIdGet()`
 
 ```php
-v1ListsAdvancedByListIdGet($list_id, $page, $page_size): \SKY\School\Model\ListResult
+v1ListsAdvancedByListIdGet($listId, $page, $pageSize): \SKY\School\Model\ListResult
 ```
 
 List Single
@@ -42,12 +42,12 @@ $apiInstance = new SKY\School\Api\ListsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$list_id = 56; // int | Format - int32. The ID of the list. To learn how to find the list ID, see <a href=\"https://kb.blackbaud.com/articles/Article/108336\" target=\"_blank\">KB article 108336</a>.
+$listId = 56; // int | Format - int32. The ID of the list. To learn how to find the list ID, see <a href=\"https://kb.blackbaud.com/articles/Article/108336\" target=\"_blank\">KB article 108336</a>.
 $page = 1; // int | Format - int32. The number of the page to return. Defaults to <b>1</b>.
-$page_size = 1000; // int | Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000.
+$pageSize = 1000; // int | Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000.
 
 try {
-    $result = $apiInstance->v1ListsAdvancedByListIdGet($list_id, $page, $page_size);
+    $result = $apiInstance->v1ListsAdvancedByListIdGet($listId, $page, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListsApi->v1ListsAdvancedByListIdGet: ', $e->getMessage(), PHP_EOL;
@@ -58,9 +58,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **list_id** | **int**| Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. | |
+| **listId** | **int**| Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. | |
 | **page** | **int**| Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. | [optional] [default to 1] |
-| **page_size** | **int**| Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. | [optional] [default to 1000] |
+| **pageSize** | **int**| Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. | [optional] [default to 1000] |
 
 ### Return type
 

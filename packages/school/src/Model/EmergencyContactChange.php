@@ -58,27 +58,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'call_dialer' => 'string',
-        'ec_user_id' => 'int',
+        'userId' => 'int',
+        'callDialer' => 'string',
+        'ecUserId' => 'int',
         'firstname' => 'string',
         'lastname' => 'string',
-        'phone_number' => 'string',
-        'phone_type' => 'string',
-        'phone_call_type' => 'int',
+        'phoneNumber' => 'string',
+        'phoneType' => 'string',
+        'phoneCallType' => 'int',
         'email' => 'string',
-        'email_call_type' => 'int',
-        'record_type' => 'int',
+        'emailCallType' => 'int',
+        'recordType' => 'int',
         'sort' => 'int',
         'inactive' => 'bool',
         'active' => 'bool',
-        'delete_indicator' => 'bool',
+        'deleteIndicator' => 'bool',
         'roles' => 'string',
-        'student_indicator' => 'bool',
-        'faculty_indicator' => 'bool',
-        'staff_indicator' => 'bool',
-        'emergency_contact_change_emails' => '\SKY\School\Model\EmergencyContactChangeEmail[]',
-        'emergency_contact_change_phones' => '\SKY\School\Model\EmergencyContactChangePhone[]',
+        'studentIndicator' => 'bool',
+        'facultyIndicator' => 'bool',
+        'staffIndicator' => 'bool',
+        'emergencyContactChangeEmails' => '\SKY\School\Model\EmergencyContactChangeEmail[]',
+        'emergencyContactChangePhones' => '\SKY\School\Model\EmergencyContactChangePhone[]',
     ];
 
     /**
@@ -89,27 +89,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'call_dialer' => null,
-        'ec_user_id' => 'int32',
+        'userId' => 'int32',
+        'callDialer' => null,
+        'ecUserId' => 'int32',
         'firstname' => null,
         'lastname' => null,
-        'phone_number' => null,
-        'phone_type' => null,
-        'phone_call_type' => 'int32',
+        'phoneNumber' => null,
+        'phoneType' => null,
+        'phoneCallType' => 'int32',
         'email' => null,
-        'email_call_type' => 'int32',
-        'record_type' => 'int32',
+        'emailCallType' => 'int32',
+        'recordType' => 'int32',
         'sort' => 'int32',
         'inactive' => null,
         'active' => null,
-        'delete_indicator' => null,
+        'deleteIndicator' => null,
         'roles' => null,
-        'student_indicator' => null,
-        'faculty_indicator' => null,
-        'staff_indicator' => null,
-        'emergency_contact_change_emails' => null,
-        'emergency_contact_change_phones' => null,
+        'studentIndicator' => null,
+        'facultyIndicator' => null,
+        'staffIndicator' => null,
+        'emergencyContactChangeEmails' => null,
+        'emergencyContactChangePhones' => null,
     ];
 
     /**
@@ -118,27 +118,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => true,
-        'call_dialer' => true,
-        'ec_user_id' => true,
+        'userId' => true,
+        'callDialer' => true,
+        'ecUserId' => true,
         'firstname' => true,
         'lastname' => true,
-        'phone_number' => true,
-        'phone_type' => true,
-        'phone_call_type' => true,
+        'phoneNumber' => true,
+        'phoneType' => true,
+        'phoneCallType' => true,
         'email' => true,
-        'email_call_type' => true,
-        'record_type' => true,
+        'emailCallType' => true,
+        'recordType' => true,
         'sort' => true,
         'inactive' => true,
         'active' => true,
-        'delete_indicator' => true,
+        'deleteIndicator' => true,
         'roles' => true,
-        'student_indicator' => true,
-        'faculty_indicator' => true,
-        'staff_indicator' => true,
-        'emergency_contact_change_emails' => true,
-        'emergency_contact_change_phones' => true,
+        'studentIndicator' => true,
+        'facultyIndicator' => true,
+        'staffIndicator' => true,
+        'emergencyContactChangeEmails' => true,
+        'emergencyContactChangePhones' => true,
     ];
 
     /**
@@ -227,27 +227,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'call_dialer' => 'call_dialer',
-        'ec_user_id' => 'ec_user_id',
+        'userId' => 'user_id',
+        'callDialer' => 'call_dialer',
+        'ecUserId' => 'ec_user_id',
         'firstname' => 'firstname',
         'lastname' => 'lastname',
-        'phone_number' => 'phone_number',
-        'phone_type' => 'phone_type',
-        'phone_call_type' => 'phone_call_type',
+        'phoneNumber' => 'phone_number',
+        'phoneType' => 'phone_type',
+        'phoneCallType' => 'phone_call_type',
         'email' => 'email',
-        'email_call_type' => 'email_call_type',
-        'record_type' => 'record_type',
+        'emailCallType' => 'email_call_type',
+        'recordType' => 'record_type',
         'sort' => 'sort',
         'inactive' => 'inactive',
         'active' => 'active',
-        'delete_indicator' => 'delete_indicator',
+        'deleteIndicator' => 'delete_indicator',
         'roles' => 'roles',
-        'student_indicator' => 'student_indicator',
-        'faculty_indicator' => 'faculty_indicator',
-        'staff_indicator' => 'staff_indicator',
-        'emergency_contact_change_emails' => 'emergency_contact_change_emails',
-        'emergency_contact_change_phones' => 'emergency_contact_change_phones',
+        'studentIndicator' => 'student_indicator',
+        'facultyIndicator' => 'faculty_indicator',
+        'staffIndicator' => 'staff_indicator',
+        'emergencyContactChangeEmails' => 'emergency_contact_change_emails',
+        'emergencyContactChangePhones' => 'emergency_contact_change_phones',
     ];
 
     /**
@@ -256,27 +256,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'call_dialer' => 'setCallDialer',
-        'ec_user_id' => 'setEcUserId',
+        'userId' => 'setUserId',
+        'callDialer' => 'setCallDialer',
+        'ecUserId' => 'setEcUserId',
         'firstname' => 'setFirstname',
         'lastname' => 'setLastname',
-        'phone_number' => 'setPhoneNumber',
-        'phone_type' => 'setPhoneType',
-        'phone_call_type' => 'setPhoneCallType',
+        'phoneNumber' => 'setPhoneNumber',
+        'phoneType' => 'setPhoneType',
+        'phoneCallType' => 'setPhoneCallType',
         'email' => 'setEmail',
-        'email_call_type' => 'setEmailCallType',
-        'record_type' => 'setRecordType',
+        'emailCallType' => 'setEmailCallType',
+        'recordType' => 'setRecordType',
         'sort' => 'setSort',
         'inactive' => 'setInactive',
         'active' => 'setActive',
-        'delete_indicator' => 'setDeleteIndicator',
+        'deleteIndicator' => 'setDeleteIndicator',
         'roles' => 'setRoles',
-        'student_indicator' => 'setStudentIndicator',
-        'faculty_indicator' => 'setFacultyIndicator',
-        'staff_indicator' => 'setStaffIndicator',
-        'emergency_contact_change_emails' => 'setEmergencyContactChangeEmails',
-        'emergency_contact_change_phones' => 'setEmergencyContactChangePhones',
+        'studentIndicator' => 'setStudentIndicator',
+        'facultyIndicator' => 'setFacultyIndicator',
+        'staffIndicator' => 'setStaffIndicator',
+        'emergencyContactChangeEmails' => 'setEmergencyContactChangeEmails',
+        'emergencyContactChangePhones' => 'setEmergencyContactChangePhones',
     ];
 
     /**
@@ -285,27 +285,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'call_dialer' => 'getCallDialer',
-        'ec_user_id' => 'getEcUserId',
+        'userId' => 'getUserId',
+        'callDialer' => 'getCallDialer',
+        'ecUserId' => 'getEcUserId',
         'firstname' => 'getFirstname',
         'lastname' => 'getLastname',
-        'phone_number' => 'getPhoneNumber',
-        'phone_type' => 'getPhoneType',
-        'phone_call_type' => 'getPhoneCallType',
+        'phoneNumber' => 'getPhoneNumber',
+        'phoneType' => 'getPhoneType',
+        'phoneCallType' => 'getPhoneCallType',
         'email' => 'getEmail',
-        'email_call_type' => 'getEmailCallType',
-        'record_type' => 'getRecordType',
+        'emailCallType' => 'getEmailCallType',
+        'recordType' => 'getRecordType',
         'sort' => 'getSort',
         'inactive' => 'getInactive',
         'active' => 'getActive',
-        'delete_indicator' => 'getDeleteIndicator',
+        'deleteIndicator' => 'getDeleteIndicator',
         'roles' => 'getRoles',
-        'student_indicator' => 'getStudentIndicator',
-        'faculty_indicator' => 'getFacultyIndicator',
-        'staff_indicator' => 'getStaffIndicator',
-        'emergency_contact_change_emails' => 'getEmergencyContactChangeEmails',
-        'emergency_contact_change_phones' => 'getEmergencyContactChangePhones',
+        'studentIndicator' => 'getStudentIndicator',
+        'facultyIndicator' => 'getFacultyIndicator',
+        'staffIndicator' => 'getStaffIndicator',
+        'emergencyContactChangeEmails' => 'getEmergencyContactChangeEmails',
+        'emergencyContactChangePhones' => 'getEmergencyContactChangePhones',
     ];
 
     /**
@@ -365,27 +365,27 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('call_dialer', $data ?? [], null);
-        $this->setIfExists('ec_user_id', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('callDialer', $data ?? [], null);
+        $this->setIfExists('ecUserId', $data ?? [], null);
         $this->setIfExists('firstname', $data ?? [], null);
         $this->setIfExists('lastname', $data ?? [], null);
-        $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('phone_type', $data ?? [], null);
-        $this->setIfExists('phone_call_type', $data ?? [], null);
+        $this->setIfExists('phoneNumber', $data ?? [], null);
+        $this->setIfExists('phoneType', $data ?? [], null);
+        $this->setIfExists('phoneCallType', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('email_call_type', $data ?? [], null);
-        $this->setIfExists('record_type', $data ?? [], null);
+        $this->setIfExists('emailCallType', $data ?? [], null);
+        $this->setIfExists('recordType', $data ?? [], null);
         $this->setIfExists('sort', $data ?? [], null);
         $this->setIfExists('inactive', $data ?? [], null);
         $this->setIfExists('active', $data ?? [], null);
-        $this->setIfExists('delete_indicator', $data ?? [], null);
+        $this->setIfExists('deleteIndicator', $data ?? [], null);
         $this->setIfExists('roles', $data ?? [], null);
-        $this->setIfExists('student_indicator', $data ?? [], null);
-        $this->setIfExists('faculty_indicator', $data ?? [], null);
-        $this->setIfExists('staff_indicator', $data ?? [], null);
-        $this->setIfExists('emergency_contact_change_emails', $data ?? [], null);
-        $this->setIfExists('emergency_contact_change_phones', $data ?? [], null);
+        $this->setIfExists('studentIndicator', $data ?? [], null);
+        $this->setIfExists('facultyIndicator', $data ?? [], null);
+        $this->setIfExists('staffIndicator', $data ?? [], null);
+        $this->setIfExists('emergencyContactChangeEmails', $data ?? [], null);
+        $this->setIfExists('emergencyContactChangePhones', $data ?? [], null);
     }
 
     /**
@@ -431,103 +431,103 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id UserId
+     * @param int|null $userId UserId
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets call_dialer
+     * Gets callDialer
      *
      * @return string|null
      */
     public function getCallDialer()
     {
-        return $this->container['call_dialer'];
+        return $this->container['callDialer'];
     }
 
     /**
-     * Sets call_dialer
+     * Sets callDialer
      *
-     * @param string|null $call_dialer The string representation of the call dialer settings in Education Management
+     * @param string|null $callDialer The string representation of the call dialer settings in Education Management
      *
      * @return self
      */
-    public function setCallDialer($call_dialer)
+    public function setCallDialer($callDialer)
     {
-        if (is_null($call_dialer)) {
-            array_push($this->openAPINullablesSetToNull, 'call_dialer');
+        if (is_null($callDialer)) {
+            array_push($this->openAPINullablesSetToNull, 'callDialer');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('call_dialer', $nullablesSetToNull);
+            $index = array_search('callDialer', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['call_dialer'] = $call_dialer;
+        $this->container['callDialer'] = $callDialer;
 
         return $this;
     }
 
     /**
-     * Gets ec_user_id
+     * Gets ecUserId
      *
      * @return int|null
      */
     public function getEcUserId()
     {
-        return $this->container['ec_user_id'];
+        return $this->container['ecUserId'];
     }
 
     /**
-     * Sets ec_user_id
+     * Sets ecUserId
      *
-     * @param int|null $ec_user_id EcUserId
+     * @param int|null $ecUserId EcUserId
      *
      * @return self
      */
-    public function setEcUserId($ec_user_id)
+    public function setEcUserId($ecUserId)
     {
-        if (is_null($ec_user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'ec_user_id');
+        if (is_null($ecUserId)) {
+            array_push($this->openAPINullablesSetToNull, 'ecUserId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ec_user_id', $nullablesSetToNull);
+            $index = array_search('ecUserId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['ec_user_id'] = $ec_user_id;
+        $this->container['ecUserId'] = $ecUserId;
 
         return $this;
     }
@@ -601,103 +601,103 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets phone_number
+     * Gets phoneNumber
      *
      * @return string|null
      */
     public function getPhoneNumber()
     {
-        return $this->container['phone_number'];
+        return $this->container['phoneNumber'];
     }
 
     /**
-     * Sets phone_number
+     * Sets phoneNumber
      *
-     * @param string|null $phone_number Phone Number
+     * @param string|null $phoneNumber Phone Number
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        if (is_null($phone_number)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_number');
+        if (is_null($phoneNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_number', $nullablesSetToNull);
+            $index = array_search('phoneNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Gets phone_type
+     * Gets phoneType
      *
      * @return string|null
      */
     public function getPhoneType()
     {
-        return $this->container['phone_type'];
+        return $this->container['phoneType'];
     }
 
     /**
-     * Sets phone_type
+     * Sets phoneType
      *
-     * @param string|null $phone_type Phone  Type
+     * @param string|null $phoneType Phone  Type
      *
      * @return self
      */
-    public function setPhoneType($phone_type)
+    public function setPhoneType($phoneType)
     {
-        if (is_null($phone_type)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_type');
+        if (is_null($phoneType)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_type', $nullablesSetToNull);
+            $index = array_search('phoneType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_type'] = $phone_type;
+        $this->container['phoneType'] = $phoneType;
 
         return $this;
     }
 
     /**
-     * Gets phone_call_type
+     * Gets phoneCallType
      *
      * @return int|null
      */
     public function getPhoneCallType()
     {
-        return $this->container['phone_call_type'];
+        return $this->container['phoneCallType'];
     }
 
     /**
-     * Sets phone_call_type
+     * Sets phoneCallType
      *
-     * @param int|null $phone_call_type Phone Call Type
+     * @param int|null $phoneCallType Phone Call Type
      *
      * @return self
      */
-    public function setPhoneCallType($phone_call_type)
+    public function setPhoneCallType($phoneCallType)
     {
-        if (is_null($phone_call_type)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_call_type');
+        if (is_null($phoneCallType)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneCallType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_call_type', $nullablesSetToNull);
+            $index = array_search('phoneCallType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_call_type'] = $phone_call_type;
+        $this->container['phoneCallType'] = $phoneCallType;
 
         return $this;
     }
@@ -737,69 +737,69 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets email_call_type
+     * Gets emailCallType
      *
      * @return int|null
      */
     public function getEmailCallType()
     {
-        return $this->container['email_call_type'];
+        return $this->container['emailCallType'];
     }
 
     /**
-     * Sets email_call_type
+     * Sets emailCallType
      *
-     * @param int|null $email_call_type Email Call Type
+     * @param int|null $emailCallType Email Call Type
      *
      * @return self
      */
-    public function setEmailCallType($email_call_type)
+    public function setEmailCallType($emailCallType)
     {
-        if (is_null($email_call_type)) {
-            array_push($this->openAPINullablesSetToNull, 'email_call_type');
+        if (is_null($emailCallType)) {
+            array_push($this->openAPINullablesSetToNull, 'emailCallType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('email_call_type', $nullablesSetToNull);
+            $index = array_search('emailCallType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['email_call_type'] = $email_call_type;
+        $this->container['emailCallType'] = $emailCallType;
 
         return $this;
     }
 
     /**
-     * Gets record_type
+     * Gets recordType
      *
      * @return int|null
      */
     public function getRecordType()
     {
-        return $this->container['record_type'];
+        return $this->container['recordType'];
     }
 
     /**
-     * Sets record_type
+     * Sets recordType
      *
-     * @param int|null $record_type Record Type
+     * @param int|null $recordType Record Type
      *
      * @return self
      */
-    public function setRecordType($record_type)
+    public function setRecordType($recordType)
     {
-        if (is_null($record_type)) {
-            array_push($this->openAPINullablesSetToNull, 'record_type');
+        if (is_null($recordType)) {
+            array_push($this->openAPINullablesSetToNull, 'recordType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('record_type', $nullablesSetToNull);
+            $index = array_search('recordType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['record_type'] = $record_type;
+        $this->container['recordType'] = $recordType;
 
         return $this;
     }
@@ -907,35 +907,35 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets delete_indicator
+     * Gets deleteIndicator
      *
      * @return bool|null
      */
     public function getDeleteIndicator()
     {
-        return $this->container['delete_indicator'];
+        return $this->container['deleteIndicator'];
     }
 
     /**
-     * Sets delete_indicator
+     * Sets deleteIndicator
      *
-     * @param bool|null $delete_indicator Deleted Indicator
+     * @param bool|null $deleteIndicator Deleted Indicator
      *
      * @return self
      */
-    public function setDeleteIndicator($delete_indicator)
+    public function setDeleteIndicator($deleteIndicator)
     {
-        if (is_null($delete_indicator)) {
-            array_push($this->openAPINullablesSetToNull, 'delete_indicator');
+        if (is_null($deleteIndicator)) {
+            array_push($this->openAPINullablesSetToNull, 'deleteIndicator');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('delete_indicator', $nullablesSetToNull);
+            $index = array_search('deleteIndicator', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['delete_indicator'] = $delete_indicator;
+        $this->container['deleteIndicator'] = $deleteIndicator;
 
         return $this;
     }
@@ -975,171 +975,171 @@ class EmergencyContactChange implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets student_indicator
+     * Gets studentIndicator
      *
      * @return bool|null
      */
     public function getStudentIndicator()
     {
-        return $this->container['student_indicator'];
+        return $this->container['studentIndicator'];
     }
 
     /**
-     * Sets student_indicator
+     * Sets studentIndicator
      *
-     * @param bool|null $student_indicator Student Indicator
+     * @param bool|null $studentIndicator Student Indicator
      *
      * @return self
      */
-    public function setStudentIndicator($student_indicator)
+    public function setStudentIndicator($studentIndicator)
     {
-        if (is_null($student_indicator)) {
-            array_push($this->openAPINullablesSetToNull, 'student_indicator');
+        if (is_null($studentIndicator)) {
+            array_push($this->openAPINullablesSetToNull, 'studentIndicator');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_indicator', $nullablesSetToNull);
+            $index = array_search('studentIndicator', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_indicator'] = $student_indicator;
+        $this->container['studentIndicator'] = $studentIndicator;
 
         return $this;
     }
 
     /**
-     * Gets faculty_indicator
+     * Gets facultyIndicator
      *
      * @return bool|null
      */
     public function getFacultyIndicator()
     {
-        return $this->container['faculty_indicator'];
+        return $this->container['facultyIndicator'];
     }
 
     /**
-     * Sets faculty_indicator
+     * Sets facultyIndicator
      *
-     * @param bool|null $faculty_indicator Faculty Indicator
+     * @param bool|null $facultyIndicator Faculty Indicator
      *
      * @return self
      */
-    public function setFacultyIndicator($faculty_indicator)
+    public function setFacultyIndicator($facultyIndicator)
     {
-        if (is_null($faculty_indicator)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_indicator');
+        if (is_null($facultyIndicator)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyIndicator');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_indicator', $nullablesSetToNull);
+            $index = array_search('facultyIndicator', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_indicator'] = $faculty_indicator;
+        $this->container['facultyIndicator'] = $facultyIndicator;
 
         return $this;
     }
 
     /**
-     * Gets staff_indicator
+     * Gets staffIndicator
      *
      * @return bool|null
      */
     public function getStaffIndicator()
     {
-        return $this->container['staff_indicator'];
+        return $this->container['staffIndicator'];
     }
 
     /**
-     * Sets staff_indicator
+     * Sets staffIndicator
      *
-     * @param bool|null $staff_indicator Staff Indicator
+     * @param bool|null $staffIndicator Staff Indicator
      *
      * @return self
      */
-    public function setStaffIndicator($staff_indicator)
+    public function setStaffIndicator($staffIndicator)
     {
-        if (is_null($staff_indicator)) {
-            array_push($this->openAPINullablesSetToNull, 'staff_indicator');
+        if (is_null($staffIndicator)) {
+            array_push($this->openAPINullablesSetToNull, 'staffIndicator');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('staff_indicator', $nullablesSetToNull);
+            $index = array_search('staffIndicator', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['staff_indicator'] = $staff_indicator;
+        $this->container['staffIndicator'] = $staffIndicator;
 
         return $this;
     }
 
     /**
-     * Gets emergency_contact_change_emails
+     * Gets emergencyContactChangeEmails
      *
      * @return \SKY\School\Model\EmergencyContactChangeEmail[]|null
      */
     public function getEmergencyContactChangeEmails()
     {
-        return $this->container['emergency_contact_change_emails'];
+        return $this->container['emergencyContactChangeEmails'];
     }
 
     /**
-     * Sets emergency_contact_change_emails
+     * Sets emergencyContactChangeEmails
      *
-     * @param \SKY\School\Model\EmergencyContactChangeEmail[]|null $emergency_contact_change_emails
+     * @param \SKY\School\Model\EmergencyContactChangeEmail[]|null $emergencyContactChangeEmails
      *
      * @return self
      */
-    public function setEmergencyContactChangeEmails($emergency_contact_change_emails)
+    public function setEmergencyContactChangeEmails($emergencyContactChangeEmails)
     {
-        if (is_null($emergency_contact_change_emails)) {
-            array_push($this->openAPINullablesSetToNull, 'emergency_contact_change_emails');
+        if (is_null($emergencyContactChangeEmails)) {
+            array_push($this->openAPINullablesSetToNull, 'emergencyContactChangeEmails');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('emergency_contact_change_emails', $nullablesSetToNull);
+            $index = array_search('emergencyContactChangeEmails', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['emergency_contact_change_emails'] = $emergency_contact_change_emails;
+        $this->container['emergencyContactChangeEmails'] = $emergencyContactChangeEmails;
 
         return $this;
     }
 
     /**
-     * Gets emergency_contact_change_phones
+     * Gets emergencyContactChangePhones
      *
      * @return \SKY\School\Model\EmergencyContactChangePhone[]|null
      */
     public function getEmergencyContactChangePhones()
     {
-        return $this->container['emergency_contact_change_phones'];
+        return $this->container['emergencyContactChangePhones'];
     }
 
     /**
-     * Sets emergency_contact_change_phones
+     * Sets emergencyContactChangePhones
      *
-     * @param \SKY\School\Model\EmergencyContactChangePhone[]|null $emergency_contact_change_phones
+     * @param \SKY\School\Model\EmergencyContactChangePhone[]|null $emergencyContactChangePhones
      *
      * @return self
      */
-    public function setEmergencyContactChangePhones($emergency_contact_change_phones)
+    public function setEmergencyContactChangePhones($emergencyContactChangePhones)
     {
-        if (is_null($emergency_contact_change_phones)) {
-            array_push($this->openAPINullablesSetToNull, 'emergency_contact_change_phones');
+        if (is_null($emergencyContactChangePhones)) {
+            array_push($this->openAPINullablesSetToNull, 'emergencyContactChangePhones');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('emergency_contact_change_phones', $nullablesSetToNull);
+            $index = array_search('emergencyContactChangePhones', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['emergency_contact_change_phones'] = $emergency_contact_change_phones;
+        $this->container['emergencyContactChangePhones'] = $emergencyContactChangePhones;
 
         return $this;
     }

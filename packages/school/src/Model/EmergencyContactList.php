@@ -59,8 +59,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'email_contact_list' => '\SKY\School\Model\EmergencyContactEmail[]',
-        'phone_contact_list' => '\SKY\School\Model\EmergencyContactPhone[]',
+        'emailContactList' => '\SKY\School\Model\EmergencyContactEmail[]',
+        'phoneContactList' => '\SKY\School\Model\EmergencyContactPhone[]',
     ];
 
     /**
@@ -72,8 +72,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'email_contact_list' => null,
-        'phone_contact_list' => null,
+        'emailContactList' => null,
+        'phoneContactList' => null,
     ];
 
     /**
@@ -83,8 +83,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'email_contact_list' => true,
-        'phone_contact_list' => true,
+        'emailContactList' => true,
+        'phoneContactList' => true,
     ];
 
     /**
@@ -174,8 +174,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'email_contact_list' => 'email_contact_list',
-        'phone_contact_list' => 'phone_contact_list',
+        'emailContactList' => 'email_contact_list',
+        'phoneContactList' => 'phone_contact_list',
     ];
 
     /**
@@ -185,8 +185,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'id' => 'setId',
-        'email_contact_list' => 'setEmailContactList',
-        'phone_contact_list' => 'setPhoneContactList',
+        'emailContactList' => 'setEmailContactList',
+        'phoneContactList' => 'setPhoneContactList',
     ];
 
     /**
@@ -196,8 +196,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'id' => 'getId',
-        'email_contact_list' => 'getEmailContactList',
-        'phone_contact_list' => 'getPhoneContactList',
+        'emailContactList' => 'getEmailContactList',
+        'phoneContactList' => 'getPhoneContactList',
     ];
 
     /**
@@ -258,8 +258,8 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('email_contact_list', $data ?? [], null);
-        $this->setIfExists('phone_contact_list', $data ?? [], null);
+        $this->setIfExists('emailContactList', $data ?? [], null);
+        $this->setIfExists('phoneContactList', $data ?? [], null);
     }
 
     /**
@@ -332,69 +332,69 @@ class EmergencyContactList implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets email_contact_list
+     * Gets emailContactList
      *
      * @return \SKY\School\Model\EmergencyContactEmail[]|null
      */
     public function getEmailContactList()
     {
-        return $this->container['email_contact_list'];
+        return $this->container['emailContactList'];
     }
 
     /**
-     * Sets email_contact_list
+     * Sets emailContactList
      *
-     * @param \SKY\School\Model\EmergencyContactEmail[]|null $email_contact_list List of emergency contact emails
+     * @param \SKY\School\Model\EmergencyContactEmail[]|null $emailContactList List of emergency contact emails
      *
      * @return self
      */
-    public function setEmailContactList($email_contact_list)
+    public function setEmailContactList($emailContactList)
     {
-        if (is_null($email_contact_list)) {
-            array_push($this->openAPINullablesSetToNull, 'email_contact_list');
+        if (is_null($emailContactList)) {
+            array_push($this->openAPINullablesSetToNull, 'emailContactList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('email_contact_list', $nullablesSetToNull);
+            $index = array_search('emailContactList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['email_contact_list'] = $email_contact_list;
+        $this->container['emailContactList'] = $emailContactList;
 
         return $this;
     }
 
     /**
-     * Gets phone_contact_list
+     * Gets phoneContactList
      *
      * @return \SKY\School\Model\EmergencyContactPhone[]|null
      */
     public function getPhoneContactList()
     {
-        return $this->container['phone_contact_list'];
+        return $this->container['phoneContactList'];
     }
 
     /**
-     * Sets phone_contact_list
+     * Sets phoneContactList
      *
-     * @param \SKY\School\Model\EmergencyContactPhone[]|null $phone_contact_list List of emergency contact phones
+     * @param \SKY\School\Model\EmergencyContactPhone[]|null $phoneContactList List of emergency contact phones
      *
      * @return self
      */
-    public function setPhoneContactList($phone_contact_list)
+    public function setPhoneContactList($phoneContactList)
     {
-        if (is_null($phone_contact_list)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_contact_list');
+        if (is_null($phoneContactList)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneContactList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_contact_list', $nullablesSetToNull);
+            $index = array_search('phoneContactList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_contact_list'] = $phone_contact_list;
+        $this->container['phoneContactList'] = $phoneContactList;
 
         return $this;
     }

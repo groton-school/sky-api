@@ -58,22 +58,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'grade_level_id' => 'int',
-        'school_level_id' => 'int',
-        'school_year_label' => 'string',
-        'enroll_date' => '\DateTime',
-        'depart_date' => '\DateTime',
-        'current_year' => 'bool',
-        'has_grades' => 'bool',
-        'grade_repeated' => 'bool',
+        'userId' => 'int',
+        'gradeLevelId' => 'int',
+        'schoolLevelId' => 'int',
+        'schoolYearLabel' => 'string',
+        'enrollDate' => '\DateTime',
+        'departDate' => '\DateTime',
+        'currentYear' => 'bool',
+        'hasGrades' => 'bool',
+        'gradeRepeated' => 'bool',
         'graduated' => 'bool',
-        'allow_edit' => 'bool',
-        'allow_delete' => 'bool',
-        'future_enrollments' => 'bool',
-        'duration_id' => 'int',
-        'session_id' => 'int',
-        'role_ids' => 'int[]',
+        'allowEdit' => 'bool',
+        'allowDelete' => 'bool',
+        'futureEnrollments' => 'bool',
+        'durationId' => 'int',
+        'sessionId' => 'int',
+        'roleIds' => 'int[]',
     ];
 
     /**
@@ -84,22 +84,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'grade_level_id' => 'int32',
-        'school_level_id' => 'int32',
-        'school_year_label' => null,
-        'enroll_date' => 'date-time',
-        'depart_date' => 'date-time',
-        'current_year' => null,
-        'has_grades' => null,
-        'grade_repeated' => null,
+        'userId' => 'int32',
+        'gradeLevelId' => 'int32',
+        'schoolLevelId' => 'int32',
+        'schoolYearLabel' => null,
+        'enrollDate' => 'date-time',
+        'departDate' => 'date-time',
+        'currentYear' => null,
+        'hasGrades' => null,
+        'gradeRepeated' => null,
         'graduated' => null,
-        'allow_edit' => null,
-        'allow_delete' => null,
-        'future_enrollments' => null,
-        'duration_id' => 'int32',
-        'session_id' => 'int32',
-        'role_ids' => 'int32',
+        'allowEdit' => null,
+        'allowDelete' => null,
+        'futureEnrollments' => null,
+        'durationId' => 'int32',
+        'sessionId' => 'int32',
+        'roleIds' => 'int32',
     ];
 
     /**
@@ -108,22 +108,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
-        'grade_level_id' => false,
-        'school_level_id' => false,
-        'school_year_label' => true,
-        'enroll_date' => false,
-        'depart_date' => true,
-        'current_year' => false,
-        'has_grades' => false,
-        'grade_repeated' => false,
+        'userId' => false,
+        'gradeLevelId' => false,
+        'schoolLevelId' => false,
+        'schoolYearLabel' => true,
+        'enrollDate' => false,
+        'departDate' => true,
+        'currentYear' => false,
+        'hasGrades' => false,
+        'gradeRepeated' => false,
         'graduated' => false,
-        'allow_edit' => false,
-        'allow_delete' => false,
-        'future_enrollments' => false,
-        'duration_id' => false,
-        'session_id' => false,
-        'role_ids' => false,
+        'allowEdit' => false,
+        'allowDelete' => false,
+        'futureEnrollments' => false,
+        'durationId' => false,
+        'sessionId' => false,
+        'roleIds' => false,
     ];
 
     /**
@@ -212,22 +212,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'grade_level_id' => 'grade_level_id',
-        'school_level_id' => 'school_level_id',
-        'school_year_label' => 'school_year_label',
-        'enroll_date' => 'enroll_date',
-        'depart_date' => 'depart_date',
-        'current_year' => 'current_year',
-        'has_grades' => 'has_grades',
-        'grade_repeated' => 'grade_repeated',
+        'userId' => 'user_id',
+        'gradeLevelId' => 'grade_level_id',
+        'schoolLevelId' => 'school_level_id',
+        'schoolYearLabel' => 'school_year_label',
+        'enrollDate' => 'enroll_date',
+        'departDate' => 'depart_date',
+        'currentYear' => 'current_year',
+        'hasGrades' => 'has_grades',
+        'gradeRepeated' => 'grade_repeated',
         'graduated' => 'graduated',
-        'allow_edit' => 'allow_edit',
-        'allow_delete' => 'allow_delete',
-        'future_enrollments' => 'future_enrollments',
-        'duration_id' => 'duration_id',
-        'session_id' => 'session_id',
-        'role_ids' => 'role_ids',
+        'allowEdit' => 'allow_edit',
+        'allowDelete' => 'allow_delete',
+        'futureEnrollments' => 'future_enrollments',
+        'durationId' => 'duration_id',
+        'sessionId' => 'session_id',
+        'roleIds' => 'role_ids',
     ];
 
     /**
@@ -236,22 +236,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'grade_level_id' => 'setGradeLevelId',
-        'school_level_id' => 'setSchoolLevelId',
-        'school_year_label' => 'setSchoolYearLabel',
-        'enroll_date' => 'setEnrollDate',
-        'depart_date' => 'setDepartDate',
-        'current_year' => 'setCurrentYear',
-        'has_grades' => 'setHasGrades',
-        'grade_repeated' => 'setGradeRepeated',
+        'userId' => 'setUserId',
+        'gradeLevelId' => 'setGradeLevelId',
+        'schoolLevelId' => 'setSchoolLevelId',
+        'schoolYearLabel' => 'setSchoolYearLabel',
+        'enrollDate' => 'setEnrollDate',
+        'departDate' => 'setDepartDate',
+        'currentYear' => 'setCurrentYear',
+        'hasGrades' => 'setHasGrades',
+        'gradeRepeated' => 'setGradeRepeated',
         'graduated' => 'setGraduated',
-        'allow_edit' => 'setAllowEdit',
-        'allow_delete' => 'setAllowDelete',
-        'future_enrollments' => 'setFutureEnrollments',
-        'duration_id' => 'setDurationId',
-        'session_id' => 'setSessionId',
-        'role_ids' => 'setRoleIds',
+        'allowEdit' => 'setAllowEdit',
+        'allowDelete' => 'setAllowDelete',
+        'futureEnrollments' => 'setFutureEnrollments',
+        'durationId' => 'setDurationId',
+        'sessionId' => 'setSessionId',
+        'roleIds' => 'setRoleIds',
     ];
 
     /**
@@ -260,22 +260,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'grade_level_id' => 'getGradeLevelId',
-        'school_level_id' => 'getSchoolLevelId',
-        'school_year_label' => 'getSchoolYearLabel',
-        'enroll_date' => 'getEnrollDate',
-        'depart_date' => 'getDepartDate',
-        'current_year' => 'getCurrentYear',
-        'has_grades' => 'getHasGrades',
-        'grade_repeated' => 'getGradeRepeated',
+        'userId' => 'getUserId',
+        'gradeLevelId' => 'getGradeLevelId',
+        'schoolLevelId' => 'getSchoolLevelId',
+        'schoolYearLabel' => 'getSchoolYearLabel',
+        'enrollDate' => 'getEnrollDate',
+        'departDate' => 'getDepartDate',
+        'currentYear' => 'getCurrentYear',
+        'hasGrades' => 'getHasGrades',
+        'gradeRepeated' => 'getGradeRepeated',
         'graduated' => 'getGraduated',
-        'allow_edit' => 'getAllowEdit',
-        'allow_delete' => 'getAllowDelete',
-        'future_enrollments' => 'getFutureEnrollments',
-        'duration_id' => 'getDurationId',
-        'session_id' => 'getSessionId',
-        'role_ids' => 'getRoleIds',
+        'allowEdit' => 'getAllowEdit',
+        'allowDelete' => 'getAllowDelete',
+        'futureEnrollments' => 'getFutureEnrollments',
+        'durationId' => 'getDurationId',
+        'sessionId' => 'getSessionId',
+        'roleIds' => 'getRoleIds',
     ];
 
     /**
@@ -335,22 +335,22 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('grade_level_id', $data ?? [], null);
-        $this->setIfExists('school_level_id', $data ?? [], null);
-        $this->setIfExists('school_year_label', $data ?? [], null);
-        $this->setIfExists('enroll_date', $data ?? [], null);
-        $this->setIfExists('depart_date', $data ?? [], null);
-        $this->setIfExists('current_year', $data ?? [], null);
-        $this->setIfExists('has_grades', $data ?? [], null);
-        $this->setIfExists('grade_repeated', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('gradeLevelId', $data ?? [], null);
+        $this->setIfExists('schoolLevelId', $data ?? [], null);
+        $this->setIfExists('schoolYearLabel', $data ?? [], null);
+        $this->setIfExists('enrollDate', $data ?? [], null);
+        $this->setIfExists('departDate', $data ?? [], null);
+        $this->setIfExists('currentYear', $data ?? [], null);
+        $this->setIfExists('hasGrades', $data ?? [], null);
+        $this->setIfExists('gradeRepeated', $data ?? [], null);
         $this->setIfExists('graduated', $data ?? [], null);
-        $this->setIfExists('allow_edit', $data ?? [], null);
-        $this->setIfExists('allow_delete', $data ?? [], null);
-        $this->setIfExists('future_enrollments', $data ?? [], null);
-        $this->setIfExists('duration_id', $data ?? [], null);
-        $this->setIfExists('session_id', $data ?? [], null);
-        $this->setIfExists('role_ids', $data ?? [], null);
+        $this->setIfExists('allowEdit', $data ?? [], null);
+        $this->setIfExists('allowDelete', $data ?? [], null);
+        $this->setIfExists('futureEnrollments', $data ?? [], null);
+        $this->setIfExists('durationId', $data ?? [], null);
+        $this->setIfExists('sessionId', $data ?? [], null);
+        $this->setIfExists('roleIds', $data ?? [], null);
     }
 
     /**
@@ -380,14 +380,14 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['grade_level_id'] === null) {
-            $invalidProperties[] = "'grade_level_id' can't be null";
+        if ($this->container['gradeLevelId'] === null) {
+            $invalidProperties[] = "'gradeLevelId' can't be null";
         }
-        if ($this->container['enroll_date'] === null) {
-            $invalidProperties[] = "'enroll_date' can't be null";
+        if ($this->container['enrollDate'] === null) {
+            $invalidProperties[] = "'enrollDate' can't be null";
         }
-        if ($this->container['role_ids'] === null) {
-            $invalidProperties[] = "'role_ids' can't be null";
+        if ($this->container['roleIds'] === null) {
+            $invalidProperties[] = "'roleIds' can't be null";
         }
         return $invalidProperties;
     }
@@ -405,258 +405,258 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id ID of the individual to be enrolled
+     * @param int|null $userId ID of the individual to be enrolled
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets grade_level_id
+     * Gets gradeLevelId
      *
      * @return int
      */
     public function getGradeLevelId()
     {
-        return $this->container['grade_level_id'];
+        return $this->container['gradeLevelId'];
     }
 
     /**
-     * Sets grade_level_id
+     * Sets gradeLevelId
      *
-     * @param int $grade_level_id ID of the grade the individual is enrolling in
+     * @param int $gradeLevelId ID of the grade the individual is enrolling in
      *
      * @return self
      */
-    public function setGradeLevelId($grade_level_id)
+    public function setGradeLevelId($gradeLevelId)
     {
-        if (is_null($grade_level_id)) {
-            throw new \InvalidArgumentException('non-nullable grade_level_id cannot be null');
+        if (is_null($gradeLevelId)) {
+            throw new \InvalidArgumentException('non-nullable gradeLevelId cannot be null');
         }
-        $this->container['grade_level_id'] = $grade_level_id;
+        $this->container['gradeLevelId'] = $gradeLevelId;
 
         return $this;
     }
 
     /**
-     * Gets school_level_id
+     * Gets schoolLevelId
      *
      * @return int|null
      */
     public function getSchoolLevelId()
     {
-        return $this->container['school_level_id'];
+        return $this->container['schoolLevelId'];
     }
 
     /**
-     * Sets school_level_id
+     * Sets schoolLevelId
      *
-     * @param int|null $school_level_id ID of the school level
+     * @param int|null $schoolLevelId ID of the school level
      *
      * @return self
      */
-    public function setSchoolLevelId($school_level_id)
+    public function setSchoolLevelId($schoolLevelId)
     {
-        if (is_null($school_level_id)) {
-            throw new \InvalidArgumentException('non-nullable school_level_id cannot be null');
+        if (is_null($schoolLevelId)) {
+            throw new \InvalidArgumentException('non-nullable schoolLevelId cannot be null');
         }
-        $this->container['school_level_id'] = $school_level_id;
+        $this->container['schoolLevelId'] = $schoolLevelId;
 
         return $this;
     }
 
     /**
-     * Gets school_year_label
+     * Gets schoolYearLabel
      *
      * @return string|null
      */
     public function getSchoolYearLabel()
     {
-        return $this->container['school_year_label'];
+        return $this->container['schoolYearLabel'];
     }
 
     /**
-     * Sets school_year_label
+     * Sets schoolYearLabel
      *
-     * @param string|null $school_year_label School Year individual is enrolling in.  Defaults to the current school year.
+     * @param string|null $schoolYearLabel School Year individual is enrolling in.  Defaults to the current school year.
      *
      * @return self
      */
-    public function setSchoolYearLabel($school_year_label)
+    public function setSchoolYearLabel($schoolYearLabel)
     {
-        if (is_null($school_year_label)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_label');
+        if (is_null($schoolYearLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_label', $nullablesSetToNull);
+            $index = array_search('schoolYearLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_label'] = $school_year_label;
+        $this->container['schoolYearLabel'] = $schoolYearLabel;
 
         return $this;
     }
 
     /**
-     * Gets enroll_date
+     * Gets enrollDate
      *
      * @return \DateTime
      */
     public function getEnrollDate()
     {
-        return $this->container['enroll_date'];
+        return $this->container['enrollDate'];
     }
 
     /**
-     * Sets enroll_date
+     * Sets enrollDate
      *
-     * @param \DateTime $enroll_date Date of the enrollment
+     * @param \DateTime $enrollDate Date of the enrollment
      *
      * @return self
      */
-    public function setEnrollDate($enroll_date)
+    public function setEnrollDate($enrollDate)
     {
-        if (is_null($enroll_date)) {
-            throw new \InvalidArgumentException('non-nullable enroll_date cannot be null');
+        if (is_null($enrollDate)) {
+            throw new \InvalidArgumentException('non-nullable enrollDate cannot be null');
         }
-        $this->container['enroll_date'] = $enroll_date;
+        $this->container['enrollDate'] = $enrollDate;
 
         return $this;
     }
 
     /**
-     * Gets depart_date
+     * Gets departDate
      *
      * @return \DateTime|null
      */
     public function getDepartDate()
     {
-        return $this->container['depart_date'];
+        return $this->container['departDate'];
     }
 
     /**
-     * Sets depart_date
+     * Sets departDate
      *
-     * @param \DateTime|null $depart_date Date departed
+     * @param \DateTime|null $departDate Date departed
      *
      * @return self
      */
-    public function setDepartDate($depart_date)
+    public function setDepartDate($departDate)
     {
-        if (is_null($depart_date)) {
-            array_push($this->openAPINullablesSetToNull, 'depart_date');
+        if (is_null($departDate)) {
+            array_push($this->openAPINullablesSetToNull, 'departDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('depart_date', $nullablesSetToNull);
+            $index = array_search('departDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['depart_date'] = $depart_date;
+        $this->container['departDate'] = $departDate;
 
         return $this;
     }
 
     /**
-     * Gets current_year
+     * Gets currentYear
      *
      * @return bool|null
      */
     public function getCurrentYear()
     {
-        return $this->container['current_year'];
+        return $this->container['currentYear'];
     }
 
     /**
-     * Sets current_year
+     * Sets currentYear
      *
-     * @param bool|null $current_year Toggles current year
+     * @param bool|null $currentYear Toggles current year
      *
      * @return self
      */
-    public function setCurrentYear($current_year)
+    public function setCurrentYear($currentYear)
     {
-        if (is_null($current_year)) {
-            throw new \InvalidArgumentException('non-nullable current_year cannot be null');
+        if (is_null($currentYear)) {
+            throw new \InvalidArgumentException('non-nullable currentYear cannot be null');
         }
-        $this->container['current_year'] = $current_year;
+        $this->container['currentYear'] = $currentYear;
 
         return $this;
     }
 
     /**
-     * Gets has_grades
+     * Gets hasGrades
      *
      * @return bool|null
      */
     public function getHasGrades()
     {
-        return $this->container['has_grades'];
+        return $this->container['hasGrades'];
     }
 
     /**
-     * Sets has_grades
+     * Sets hasGrades
      *
-     * @param bool|null $has_grades Toggles has grades
+     * @param bool|null $hasGrades Toggles has grades
      *
      * @return self
      */
-    public function setHasGrades($has_grades)
+    public function setHasGrades($hasGrades)
     {
-        if (is_null($has_grades)) {
-            throw new \InvalidArgumentException('non-nullable has_grades cannot be null');
+        if (is_null($hasGrades)) {
+            throw new \InvalidArgumentException('non-nullable hasGrades cannot be null');
         }
-        $this->container['has_grades'] = $has_grades;
+        $this->container['hasGrades'] = $hasGrades;
 
         return $this;
     }
 
     /**
-     * Gets grade_repeated
+     * Gets gradeRepeated
      *
      * @return bool|null
      */
     public function getGradeRepeated()
     {
-        return $this->container['grade_repeated'];
+        return $this->container['gradeRepeated'];
     }
 
     /**
-     * Sets grade_repeated
+     * Sets gradeRepeated
      *
-     * @param bool|null $grade_repeated Toggles grade repeated
+     * @param bool|null $gradeRepeated Toggles grade repeated
      *
      * @return self
      */
-    public function setGradeRepeated($grade_repeated)
+    public function setGradeRepeated($gradeRepeated)
     {
-        if (is_null($grade_repeated)) {
-            throw new \InvalidArgumentException('non-nullable grade_repeated cannot be null');
+        if (is_null($gradeRepeated)) {
+            throw new \InvalidArgumentException('non-nullable gradeRepeated cannot be null');
         }
-        $this->container['grade_repeated'] = $grade_repeated;
+        $this->container['gradeRepeated'] = $gradeRepeated;
 
         return $this;
     }
@@ -689,163 +689,163 @@ class UserEnrollmentCreate implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets allow_edit
+     * Gets allowEdit
      *
      * @return bool|null
      */
     public function getAllowEdit()
     {
-        return $this->container['allow_edit'];
+        return $this->container['allowEdit'];
     }
 
     /**
-     * Sets allow_edit
+     * Sets allowEdit
      *
-     * @param bool|null $allow_edit Toggles allow edit
+     * @param bool|null $allowEdit Toggles allow edit
      *
      * @return self
      */
-    public function setAllowEdit($allow_edit)
+    public function setAllowEdit($allowEdit)
     {
-        if (is_null($allow_edit)) {
-            throw new \InvalidArgumentException('non-nullable allow_edit cannot be null');
+        if (is_null($allowEdit)) {
+            throw new \InvalidArgumentException('non-nullable allowEdit cannot be null');
         }
-        $this->container['allow_edit'] = $allow_edit;
+        $this->container['allowEdit'] = $allowEdit;
 
         return $this;
     }
 
     /**
-     * Gets allow_delete
+     * Gets allowDelete
      *
      * @return bool|null
      */
     public function getAllowDelete()
     {
-        return $this->container['allow_delete'];
+        return $this->container['allowDelete'];
     }
 
     /**
-     * Sets allow_delete
+     * Sets allowDelete
      *
-     * @param bool|null $allow_delete Toggles allow delete
+     * @param bool|null $allowDelete Toggles allow delete
      *
      * @return self
      */
-    public function setAllowDelete($allow_delete)
+    public function setAllowDelete($allowDelete)
     {
-        if (is_null($allow_delete)) {
-            throw new \InvalidArgumentException('non-nullable allow_delete cannot be null');
+        if (is_null($allowDelete)) {
+            throw new \InvalidArgumentException('non-nullable allowDelete cannot be null');
         }
-        $this->container['allow_delete'] = $allow_delete;
+        $this->container['allowDelete'] = $allowDelete;
 
         return $this;
     }
 
     /**
-     * Gets future_enrollments
+     * Gets futureEnrollments
      *
      * @return bool|null
      */
     public function getFutureEnrollments()
     {
-        return $this->container['future_enrollments'];
+        return $this->container['futureEnrollments'];
     }
 
     /**
-     * Sets future_enrollments
+     * Sets futureEnrollments
      *
-     * @param bool|null $future_enrollments Toggles future enrollments
+     * @param bool|null $futureEnrollments Toggles future enrollments
      *
      * @return self
      */
-    public function setFutureEnrollments($future_enrollments)
+    public function setFutureEnrollments($futureEnrollments)
     {
-        if (is_null($future_enrollments)) {
-            throw new \InvalidArgumentException('non-nullable future_enrollments cannot be null');
+        if (is_null($futureEnrollments)) {
+            throw new \InvalidArgumentException('non-nullable futureEnrollments cannot be null');
         }
-        $this->container['future_enrollments'] = $future_enrollments;
+        $this->container['futureEnrollments'] = $futureEnrollments;
 
         return $this;
     }
 
     /**
-     * Gets duration_id
+     * Gets durationId
      *
      * @return int|null
      */
     public function getDurationId()
     {
-        return $this->container['duration_id'];
+        return $this->container['durationId'];
     }
 
     /**
-     * Sets duration_id
+     * Sets durationId
      *
-     * @param int|null $duration_id The Id of the duration the user should be enrolled in. Optional for all Education Enrollments.
+     * @param int|null $durationId The Id of the duration the user should be enrolled in. Optional for all Education Enrollments.
      *
      * @return self
      */
-    public function setDurationId($duration_id)
+    public function setDurationId($durationId)
     {
-        if (is_null($duration_id)) {
-            throw new \InvalidArgumentException('non-nullable duration_id cannot be null');
+        if (is_null($durationId)) {
+            throw new \InvalidArgumentException('non-nullable durationId cannot be null');
         }
-        $this->container['duration_id'] = $duration_id;
+        $this->container['durationId'] = $durationId;
 
         return $this;
     }
 
     /**
-     * Gets session_id
+     * Gets sessionId
      *
      * @return int|null
      */
     public function getSessionId()
     {
-        return $this->container['session_id'];
+        return $this->container['sessionId'];
     }
 
     /**
-     * Sets session_id
+     * Sets sessionId
      *
-     * @param int|null $session_id The Id of the session the user should be enrolled in. Required for Higher Education Enrollments.
+     * @param int|null $sessionId The Id of the session the user should be enrolled in. Required for Higher Education Enrollments.
      *
      * @return self
      */
-    public function setSessionId($session_id)
+    public function setSessionId($sessionId)
     {
-        if (is_null($session_id)) {
-            throw new \InvalidArgumentException('non-nullable session_id cannot be null');
+        if (is_null($sessionId)) {
+            throw new \InvalidArgumentException('non-nullable sessionId cannot be null');
         }
-        $this->container['session_id'] = $session_id;
+        $this->container['sessionId'] = $sessionId;
 
         return $this;
     }
 
     /**
-     * Gets role_ids
+     * Gets roleIds
      *
      * @return int[]
      */
     public function getRoleIds()
     {
-        return $this->container['role_ids'];
+        return $this->container['roleIds'];
     }
 
     /**
-     * Sets role_ids
+     * Sets roleIds
      *
-     * @param int[] $role_ids Collection of RoleIds the individual should be associated to
+     * @param int[] $roleIds Collection of RoleIds the individual should be associated to
      *
      * @return self
      */
-    public function setRoleIds($role_ids)
+    public function setRoleIds($roleIds)
     {
-        if (is_null($role_ids)) {
-            throw new \InvalidArgumentException('non-nullable role_ids cannot be null');
+        if (is_null($roleIds)) {
+            throw new \InvalidArgumentException('non-nullable roleIds cannot be null');
         }
-        $this->container['role_ids'] = $role_ids;
+        $this->container['roleIds'] = $roleIds;
 
         return $this;
     }

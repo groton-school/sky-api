@@ -62,8 +62,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => 'string',
         'major' => 'string',
         'field' => 'string',
-        'grad_year' => 'string',
-        'sort_order' => 'string',
+        'gradYear' => 'string',
+        'sortOrder' => 'string',
     ];
 
     /**
@@ -78,8 +78,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => null,
         'major' => null,
         'field' => null,
-        'grad_year' => null,
-        'sort_order' => null,
+        'gradYear' => null,
+        'sortOrder' => null,
     ];
 
     /**
@@ -92,8 +92,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => true,
         'major' => true,
         'field' => true,
-        'grad_year' => true,
-        'sort_order' => true,
+        'gradYear' => true,
+        'sortOrder' => true,
     ];
 
     /**
@@ -186,8 +186,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => 'degree',
         'major' => 'major',
         'field' => 'field',
-        'grad_year' => 'grad_year',
-        'sort_order' => 'sort_order',
+        'gradYear' => 'grad_year',
+        'sortOrder' => 'sort_order',
     ];
 
     /**
@@ -200,8 +200,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => 'setDegree',
         'major' => 'setMajor',
         'field' => 'setField',
-        'grad_year' => 'setGradYear',
-        'sort_order' => 'setSortOrder',
+        'gradYear' => 'setGradYear',
+        'sortOrder' => 'setSortOrder',
     ];
 
     /**
@@ -214,8 +214,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'degree' => 'getDegree',
         'major' => 'getMajor',
         'field' => 'getField',
-        'grad_year' => 'getGradYear',
-        'sort_order' => 'getSortOrder',
+        'gradYear' => 'getGradYear',
+        'sortOrder' => 'getSortOrder',
     ];
 
     /**
@@ -279,8 +279,8 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('degree', $data ?? [], null);
         $this->setIfExists('major', $data ?? [], null);
         $this->setIfExists('field', $data ?? [], null);
-        $this->setIfExists('grad_year', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
     }
 
     /**
@@ -462,69 +462,69 @@ class EducationUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year The graduation year.
+     * @param string|null $gradYear The graduation year.
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return string|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param string|null $sort_order The order to list the school.
+     * @param string|null $sortOrder The order to list the school.
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }

@@ -58,13 +58,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'student_user_id' => 'int',
-        'begin_date' => '\DateTime',
-        'end_date' => '\DateTime',
-        'start_time' => 'string',
-        'end_time' => 'string',
-        'excuse_type_id' => 'int',
-        'excuse_comment' => 'string',
+        'studentUserId' => 'int',
+        'beginDate' => '\DateTime',
+        'endDate' => '\DateTime',
+        'startTime' => 'string',
+        'endTime' => 'string',
+        'excuseTypeId' => 'int',
+        'excuseComment' => 'string',
     ];
 
     /**
@@ -75,13 +75,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'student_user_id' => 'int32',
-        'begin_date' => 'date-time',
-        'end_date' => 'date-time',
-        'start_time' => null,
-        'end_time' => null,
-        'excuse_type_id' => 'int32',
-        'excuse_comment' => null,
+        'studentUserId' => 'int32',
+        'beginDate' => 'date-time',
+        'endDate' => 'date-time',
+        'startTime' => null,
+        'endTime' => null,
+        'excuseTypeId' => 'int32',
+        'excuseComment' => null,
     ];
 
     /**
@@ -90,13 +90,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'student_user_id' => true,
-        'begin_date' => true,
-        'end_date' => true,
-        'start_time' => true,
-        'end_time' => true,
-        'excuse_type_id' => true,
-        'excuse_comment' => true,
+        'studentUserId' => true,
+        'beginDate' => true,
+        'endDate' => true,
+        'startTime' => true,
+        'endTime' => true,
+        'excuseTypeId' => true,
+        'excuseComment' => true,
     ];
 
     /**
@@ -185,13 +185,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'student_user_id' => 'student_user_id',
-        'begin_date' => 'begin_date',
-        'end_date' => 'end_date',
-        'start_time' => 'start_time',
-        'end_time' => 'end_time',
-        'excuse_type_id' => 'excuse_type_id',
-        'excuse_comment' => 'excuse_comment',
+        'studentUserId' => 'student_user_id',
+        'beginDate' => 'begin_date',
+        'endDate' => 'end_date',
+        'startTime' => 'start_time',
+        'endTime' => 'end_time',
+        'excuseTypeId' => 'excuse_type_id',
+        'excuseComment' => 'excuse_comment',
     ];
 
     /**
@@ -200,13 +200,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'student_user_id' => 'setStudentUserId',
-        'begin_date' => 'setBeginDate',
-        'end_date' => 'setEndDate',
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime',
-        'excuse_type_id' => 'setExcuseTypeId',
-        'excuse_comment' => 'setExcuseComment',
+        'studentUserId' => 'setStudentUserId',
+        'beginDate' => 'setBeginDate',
+        'endDate' => 'setEndDate',
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime',
+        'excuseTypeId' => 'setExcuseTypeId',
+        'excuseComment' => 'setExcuseComment',
     ];
 
     /**
@@ -215,13 +215,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'student_user_id' => 'getStudentUserId',
-        'begin_date' => 'getBeginDate',
-        'end_date' => 'getEndDate',
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime',
-        'excuse_type_id' => 'getExcuseTypeId',
-        'excuse_comment' => 'getExcuseComment',
+        'studentUserId' => 'getStudentUserId',
+        'beginDate' => 'getBeginDate',
+        'endDate' => 'getEndDate',
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime',
+        'excuseTypeId' => 'getExcuseTypeId',
+        'excuseComment' => 'getExcuseComment',
     ];
 
     /**
@@ -281,13 +281,13 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('student_user_id', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('excuse_type_id', $data ?? [], null);
-        $this->setIfExists('excuse_comment', $data ?? [], null);
+        $this->setIfExists('studentUserId', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('excuseTypeId', $data ?? [], null);
+        $this->setIfExists('excuseComment', $data ?? [], null);
     }
 
     /**
@@ -333,239 +333,239 @@ class AttendanceCreate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets student_user_id
+     * Gets studentUserId
      *
      * @return int|null
      */
     public function getStudentUserId()
     {
-        return $this->container['student_user_id'];
+        return $this->container['studentUserId'];
     }
 
     /**
-     * Sets student_user_id
+     * Sets studentUserId
      *
-     * @param int|null $student_user_id ID of the student
+     * @param int|null $studentUserId ID of the student
      *
      * @return self
      */
-    public function setStudentUserId($student_user_id)
+    public function setStudentUserId($studentUserId)
     {
-        if (is_null($student_user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'student_user_id');
+        if (is_null($studentUserId)) {
+            array_push($this->openAPINullablesSetToNull, 'studentUserId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_user_id', $nullablesSetToNull);
+            $index = array_search('studentUserId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_user_id'] = $student_user_id;
+        $this->container['studentUserId'] = $studentUserId;
 
         return $this;
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date Start date of the Attendance report. The timestamp is required, but only the date portion is used. To specify a specific start time, use the start_time field.
+     * @param \DateTime|null $beginDate Start date of the Attendance report. The timestamp is required, but only the date portion is used. To specify a specific start time, use the start_time field.
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date End date of the Attendance report. The timestamp is required, but only the date portion is used. To specific a specific end time, use the end_time field.
+     * @param \DateTime|null $endDate End date of the Attendance report. The timestamp is required, but only the date portion is used. To specific a specific end time, use the end_time field.
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return string|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param string|null $start_time Start time of the Attendance report. If blank, will default to the beginning of the day (\"00:00:00\").
+     * @param string|null $startTime Start time of the Attendance report. If blank, will default to the beginning of the day (\"00:00:00\").
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            array_push($this->openAPINullablesSetToNull, 'start_time');
+        if (is_null($startTime)) {
+            array_push($this->openAPINullablesSetToNull, 'startTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_time', $nullablesSetToNull);
+            $index = array_search('startTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return string|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param string|null $end_time End time of the Attendance report. If blank, will default to the end of the day (\"23:59:00\").
+     * @param string|null $endTime End time of the Attendance report. If blank, will default to the end of the day (\"23:59:00\").
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets excuse_type_id
+     * Gets excuseTypeId
      *
      * @return int|null
      */
     public function getExcuseTypeId()
     {
-        return $this->container['excuse_type_id'];
+        return $this->container['excuseTypeId'];
     }
 
     /**
-     * Sets excuse_type_id
+     * Sets excuseTypeId
      *
-     * @param int|null $excuse_type_id ID of the attendace execuse
+     * @param int|null $excuseTypeId ID of the attendace execuse
      *
      * @return self
      */
-    public function setExcuseTypeId($excuse_type_id)
+    public function setExcuseTypeId($excuseTypeId)
     {
-        if (is_null($excuse_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_type_id');
+        if (is_null($excuseTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_type_id', $nullablesSetToNull);
+            $index = array_search('excuseTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_type_id'] = $excuse_type_id;
+        $this->container['excuseTypeId'] = $excuseTypeId;
 
         return $this;
     }
 
     /**
-     * Gets excuse_comment
+     * Gets excuseComment
      *
      * @return string|null
      */
     public function getExcuseComment()
     {
-        return $this->container['excuse_comment'];
+        return $this->container['excuseComment'];
     }
 
     /**
-     * Sets excuse_comment
+     * Sets excuseComment
      *
-     * @param string|null $excuse_comment Description of the attendance report
+     * @param string|null $excuseComment Description of the attendance report
      *
      * @return self
      */
-    public function setExcuseComment($excuse_comment)
+    public function setExcuseComment($excuseComment)
     {
-        if (is_null($excuse_comment)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_comment');
+        if (is_null($excuseComment)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseComment');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_comment', $nullablesSetToNull);
+            $index = array_search('excuseComment', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_comment'] = $excuse_comment;
+        $this->container['excuseComment'] = $excuseComment;
 
         return $this;
     }

@@ -58,10 +58,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'opponent_id' => 'int',
+        'opponentId' => 'int',
         'score' => 'string',
-        'win_loss' => 'string',
-        'score_versus' => 'string',
+        'winLoss' => 'string',
+        'scoreVersus' => 'string',
     ];
 
     /**
@@ -72,10 +72,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'opponent_id' => 'int32',
+        'opponentId' => 'int32',
         'score' => null,
-        'win_loss' => null,
-        'score_versus' => null,
+        'winLoss' => null,
+        'scoreVersus' => null,
     ];
 
     /**
@@ -84,10 +84,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'opponent_id' => false,
+        'opponentId' => false,
         'score' => true,
-        'win_loss' => true,
-        'score_versus' => true,
+        'winLoss' => true,
+        'scoreVersus' => true,
     ];
 
     /**
@@ -176,10 +176,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'opponent_id' => 'opponent_id',
+        'opponentId' => 'opponent_id',
         'score' => 'score',
-        'win_loss' => 'win_loss',
-        'score_versus' => 'score_versus',
+        'winLoss' => 'win_loss',
+        'scoreVersus' => 'score_versus',
     ];
 
     /**
@@ -188,10 +188,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'opponent_id' => 'setOpponentId',
+        'opponentId' => 'setOpponentId',
         'score' => 'setScore',
-        'win_loss' => 'setWinLoss',
-        'score_versus' => 'setScoreVersus',
+        'winLoss' => 'setWinLoss',
+        'scoreVersus' => 'setScoreVersus',
     ];
 
     /**
@@ -200,10 +200,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'opponent_id' => 'getOpponentId',
+        'opponentId' => 'getOpponentId',
         'score' => 'getScore',
-        'win_loss' => 'getWinLoss',
-        'score_versus' => 'getScoreVersus',
+        'winLoss' => 'getWinLoss',
+        'scoreVersus' => 'getScoreVersus',
     ];
 
     /**
@@ -263,10 +263,10 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('opponent_id', $data ?? [], null);
+        $this->setIfExists('opponentId', $data ?? [], null);
         $this->setIfExists('score', $data ?? [], null);
-        $this->setIfExists('win_loss', $data ?? [], null);
-        $this->setIfExists('score_versus', $data ?? [], null);
+        $this->setIfExists('winLoss', $data ?? [], null);
+        $this->setIfExists('scoreVersus', $data ?? [], null);
     }
 
     /**
@@ -312,28 +312,28 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets opponent_id
+     * Gets opponentId
      *
      * @return int|null
      */
     public function getOpponentId()
     {
-        return $this->container['opponent_id'];
+        return $this->container['opponentId'];
     }
 
     /**
-     * Sets opponent_id
+     * Sets opponentId
      *
-     * @param int|null $opponent_id ID for the opponent
+     * @param int|null $opponentId ID for the opponent
      *
      * @return self
      */
-    public function setOpponentId($opponent_id)
+    public function setOpponentId($opponentId)
     {
-        if (is_null($opponent_id)) {
-            throw new \InvalidArgumentException('non-nullable opponent_id cannot be null');
+        if (is_null($opponentId)) {
+            throw new \InvalidArgumentException('non-nullable opponentId cannot be null');
         }
-        $this->container['opponent_id'] = $opponent_id;
+        $this->container['opponentId'] = $opponentId;
 
         return $this;
     }
@@ -373,69 +373,69 @@ class ResultCreateOpponent implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets win_loss
+     * Gets winLoss
      *
      * @return string|null
      */
     public function getWinLoss()
     {
-        return $this->container['win_loss'];
+        return $this->container['winLoss'];
     }
 
     /**
-     * Sets win_loss
+     * Sets winLoss
      *
-     * @param string|null $win_loss Set to \"Win\", \"Loss\" or \"Tie\" based on the home team
+     * @param string|null $winLoss Set to \"Win\", \"Loss\" or \"Tie\" based on the home team
      *
      * @return self
      */
-    public function setWinLoss($win_loss)
+    public function setWinLoss($winLoss)
     {
-        if (is_null($win_loss)) {
-            array_push($this->openAPINullablesSetToNull, 'win_loss');
+        if (is_null($winLoss)) {
+            array_push($this->openAPINullablesSetToNull, 'winLoss');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('win_loss', $nullablesSetToNull);
+            $index = array_search('winLoss', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['win_loss'] = $win_loss;
+        $this->container['winLoss'] = $winLoss;
 
         return $this;
     }
 
     /**
-     * Gets score_versus
+     * Gets scoreVersus
      *
      * @return string|null
      */
     public function getScoreVersus()
     {
-        return $this->container['score_versus'];
+        return $this->container['scoreVersus'];
     }
 
     /**
-     * Sets score_versus
+     * Sets scoreVersus
      *
-     * @param string|null $score_versus Set the score of the opponent when ScheduleType = 0
+     * @param string|null $scoreVersus Set the score of the opponent when ScheduleType = 0
      *
      * @return self
      */
-    public function setScoreVersus($score_versus)
+    public function setScoreVersus($scoreVersus)
     {
-        if (is_null($score_versus)) {
-            array_push($this->openAPINullablesSetToNull, 'score_versus');
+        if (is_null($scoreVersus)) {
+            array_push($this->openAPINullablesSetToNull, 'scoreVersus');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('score_versus', $nullablesSetToNull);
+            $index = array_search('scoreVersus', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['score_versus'] = $score_versus;
+        $this->container['scoreVersus'] = $scoreVersus;
 
         return $this;
     }

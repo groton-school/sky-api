@@ -1,39 +1,34 @@
 {
-    "name": "groton-school/sky-api.school",
-    "description": "This API is used to provide access to school information such as users, academics, admissions, athletics, content, lists, and general school info.",
-    "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "openapi",
-        "php",
-        "sdk",
-        "rest",
-        "api"
-    ],
-    "homepage": "https://openapi-generator.tech",
-    "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "OpenAPI",
-            "homepage": "https://openapi-generator.tech"
-        }
-    ],
-    "require": {
-        "php": "^7.4 || ^8.0",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^7.3",
-        "guzzlehttp/psr7": "^1.7 || ^2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0 || ^9.0",
-        "friendsofphp/php-cs-fixer": "^3.5"
-    },
-    "autoload": {
-        "psr-4": { "SKY\\School\\" : "src/" }
-    },
-    "autoload-dev": {
-        "psr-4": { "SKY\\School\\Test\\" : "test/" }
+  "name": "groton-school/sky-api.school",
+  "description": "This API is used to provide access to school information such as users, academics, admissions, athletics, content, lists, and general school info.",
+  "keywords": [
+    "openapitools",
+    "openapi-generator",
+    "openapi",
+    "php",
+    "sdk",
+    "rest",
+    "api"
+  ],
+  "homepage": "https://openapi-generator.tech",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "OpenAPI",
+      "homepage": "https://openapi-generator.tech"
     }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.4",
+    "guzzlehttp/psr7": "^1.7 || ^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SKY\\School\\": "src/"
+    }
+  }
 }

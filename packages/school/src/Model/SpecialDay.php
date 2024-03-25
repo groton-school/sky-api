@@ -59,9 +59,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'day_description' => 'string',
-        'sort_order' => 'int',
-        'rotation_behavior' => 'string',
+        'dayDescription' => 'string',
+        'sortOrder' => 'int',
+        'rotationBehavior' => 'string',
         'blocks' => '\SKY\School\Model\SpecialDayBlock[]',
     ];
 
@@ -74,9 +74,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'day_description' => null,
-        'sort_order' => 'int32',
-        'rotation_behavior' => null,
+        'dayDescription' => null,
+        'sortOrder' => 'int32',
+        'rotationBehavior' => null,
         'blocks' => null,
     ];
 
@@ -87,9 +87,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'day_description' => true,
-        'sort_order' => true,
-        'rotation_behavior' => true,
+        'dayDescription' => true,
+        'sortOrder' => true,
+        'rotationBehavior' => true,
         'blocks' => true,
     ];
 
@@ -180,9 +180,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'day_description' => 'day_description',
-        'sort_order' => 'sort_order',
-        'rotation_behavior' => 'rotation_behavior',
+        'dayDescription' => 'day_description',
+        'sortOrder' => 'sort_order',
+        'rotationBehavior' => 'rotation_behavior',
         'blocks' => 'blocks',
     ];
 
@@ -193,9 +193,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'day_description' => 'setDayDescription',
-        'sort_order' => 'setSortOrder',
-        'rotation_behavior' => 'setRotationBehavior',
+        'dayDescription' => 'setDayDescription',
+        'sortOrder' => 'setSortOrder',
+        'rotationBehavior' => 'setRotationBehavior',
         'blocks' => 'setBlocks',
     ];
 
@@ -206,9 +206,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'day_description' => 'getDayDescription',
-        'sort_order' => 'getSortOrder',
-        'rotation_behavior' => 'getRotationBehavior',
+        'dayDescription' => 'getDayDescription',
+        'sortOrder' => 'getSortOrder',
+        'rotationBehavior' => 'getRotationBehavior',
         'blocks' => 'getBlocks',
     ];
 
@@ -285,9 +285,9 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('day_description', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
-        $this->setIfExists('rotation_behavior', $data ?? [], null);
+        $this->setIfExists('dayDescription', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
+        $this->setIfExists('rotationBehavior', $data ?? [], null);
         $this->setIfExists('blocks', $data ?? [], null);
     }
 
@@ -319,10 +319,10 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getRotationBehaviorAllowableValues();
-        if (!is_null($this->container['rotation_behavior']) && !in_array($this->container['rotation_behavior'], $allowedValues, true)) {
+        if (!is_null($this->container['rotationBehavior']) && !in_array($this->container['rotationBehavior'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'rotation_behavior', must be one of '%s'",
-                $this->container['rotation_behavior'],
+                "invalid value '%s' for 'rotationBehavior', must be one of '%s'",
+                $this->container['rotationBehavior'],
                 implode("', '", $allowedValues)
             );
         }
@@ -377,113 +377,113 @@ class SpecialDay implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets day_description
+     * Gets dayDescription
      *
      * @return string|null
      */
     public function getDayDescription()
     {
-        return $this->container['day_description'];
+        return $this->container['dayDescription'];
     }
 
     /**
-     * Sets day_description
+     * Sets dayDescription
      *
-     * @param string|null $day_description
+     * @param string|null $dayDescription
      *
      * @return self
      */
-    public function setDayDescription($day_description)
+    public function setDayDescription($dayDescription)
     {
-        if (is_null($day_description)) {
-            array_push($this->openAPINullablesSetToNull, 'day_description');
+        if (is_null($dayDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'dayDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('day_description', $nullablesSetToNull);
+            $index = array_search('dayDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['day_description'] = $day_description;
+        $this->container['dayDescription'] = $dayDescription;
 
         return $this;
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }
 
     /**
-     * Gets rotation_behavior
+     * Gets rotationBehavior
      *
      * @return string|null
      */
     public function getRotationBehavior()
     {
-        return $this->container['rotation_behavior'];
+        return $this->container['rotationBehavior'];
     }
 
     /**
-     * Sets rotation_behavior
+     * Sets rotationBehavior
      *
-     * @param string|null $rotation_behavior
+     * @param string|null $rotationBehavior
      *
      * @return self
      */
-    public function setRotationBehavior($rotation_behavior)
+    public function setRotationBehavior($rotationBehavior)
     {
-        if (is_null($rotation_behavior)) {
-            array_push($this->openAPINullablesSetToNull, 'rotation_behavior');
+        if (is_null($rotationBehavior)) {
+            array_push($this->openAPINullablesSetToNull, 'rotationBehavior');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rotation_behavior', $nullablesSetToNull);
+            $index = array_search('rotationBehavior', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
         $allowedValues = $this->getRotationBehaviorAllowableValues();
-        if (!is_null($rotation_behavior) && !in_array($rotation_behavior, $allowedValues, true)) {
+        if (!is_null($rotationBehavior) && !in_array($rotationBehavior, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'rotation_behavior', must be one of '%s'",
-                    $rotation_behavior,
+                    "Invalid value '%s' for 'rotationBehavior', must be one of '%s'",
+                    $rotationBehavior,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['rotation_behavior'] = $rotation_behavior;
+        $this->container['rotationBehavior'] = $rotationBehavior;
 
         return $this;
     }

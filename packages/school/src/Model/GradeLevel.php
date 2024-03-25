@@ -63,7 +63,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'string',
         'abbreviation' => 'string',
         'name' => 'string',
-        'promote_to_code' => 'int',
+        'promoteToCode' => 'int',
     ];
 
     /**
@@ -79,7 +79,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => null,
         'abbreviation' => null,
         'name' => null,
-        'promote_to_code' => 'int32',
+        'promoteToCode' => 'int32',
     ];
 
     /**
@@ -93,7 +93,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => true,
         'abbreviation' => true,
         'name' => true,
-        'promote_to_code' => true,
+        'promoteToCode' => true,
     ];
 
     /**
@@ -187,7 +187,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'description',
         'abbreviation' => 'abbreviation',
         'name' => 'name',
-        'promote_to_code' => 'promote_to_code',
+        'promoteToCode' => 'promote_to_code',
     ];
 
     /**
@@ -201,7 +201,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'setDescription',
         'abbreviation' => 'setAbbreviation',
         'name' => 'setName',
-        'promote_to_code' => 'setPromoteToCode',
+        'promoteToCode' => 'setPromoteToCode',
     ];
 
     /**
@@ -215,7 +215,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'getDescription',
         'abbreviation' => 'getAbbreviation',
         'name' => 'getName',
-        'promote_to_code' => 'getPromoteToCode',
+        'promoteToCode' => 'getPromoteToCode',
     ];
 
     /**
@@ -280,7 +280,7 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('abbreviation', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('promote_to_code', $data ?? [], null);
+        $this->setIfExists('promoteToCode', $data ?? [], null);
     }
 
     /**
@@ -496,35 +496,35 @@ class GradeLevel implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets promote_to_code
+     * Gets promoteToCode
      *
      * @return int|null
      */
     public function getPromoteToCode()
     {
-        return $this->container['promote_to_code'];
+        return $this->container['promoteToCode'];
     }
 
     /**
-     * Sets promote_to_code
+     * Sets promoteToCode
      *
-     * @param int|null $promote_to_code Returns integer value denoting what promotion a student receives when completing this grade, 1 = Promoted to next grade level, 2 = Graduate, 3 = No action
+     * @param int|null $promoteToCode Returns integer value denoting what promotion a student receives when completing this grade, 1 = Promoted to next grade level, 2 = Graduate, 3 = No action
      *
      * @return self
      */
-    public function setPromoteToCode($promote_to_code)
+    public function setPromoteToCode($promoteToCode)
     {
-        if (is_null($promote_to_code)) {
-            array_push($this->openAPINullablesSetToNull, 'promote_to_code');
+        if (is_null($promoteToCode)) {
+            array_push($this->openAPINullablesSetToNull, 'promoteToCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('promote_to_code', $nullablesSetToNull);
+            $index = array_search('promoteToCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['promote_to_code'] = $promote_to_code;
+        $this->container['promoteToCode'] = $promoteToCode;
 
         return $this;
     }

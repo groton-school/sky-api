@@ -59,7 +59,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'phone_type_id' => 'int',
+        'phoneTypeId' => 'int',
     ];
 
     /**
@@ -71,7 +71,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'phone_type_id' => 'int32',
+        'phoneTypeId' => 'int32',
     ];
 
     /**
@@ -81,7 +81,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'phone_type_id' => false,
+        'phoneTypeId' => false,
     ];
 
     /**
@@ -171,7 +171,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'phone_type_id' => 'phone_type_id',
+        'phoneTypeId' => 'phone_type_id',
     ];
 
     /**
@@ -181,7 +181,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'phone_type_id' => 'setPhoneTypeId',
+        'phoneTypeId' => 'setPhoneTypeId',
     ];
 
     /**
@@ -191,7 +191,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'phone_type_id' => 'getPhoneTypeId',
+        'phoneTypeId' => 'getPhoneTypeId',
     ];
 
     /**
@@ -252,7 +252,7 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('phone_type_id', $data ?? [], null);
+        $this->setIfExists('phoneTypeId', $data ?? [], null);
     }
 
     /**
@@ -325,28 +325,28 @@ class PhoneShare implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets phone_type_id
+     * Gets phoneTypeId
      *
      * @return int|null
      */
     public function getPhoneTypeId()
     {
-        return $this->container['phone_type_id'];
+        return $this->container['phoneTypeId'];
     }
 
     /**
-     * Sets phone_type_id
+     * Sets phoneTypeId
      *
-     * @param int|null $phone_type_id The phone type ID that the phone number should be for the user
+     * @param int|null $phoneTypeId The phone type ID that the phone number should be for the user
      *
      * @return self
      */
-    public function setPhoneTypeId($phone_type_id)
+    public function setPhoneTypeId($phoneTypeId)
     {
-        if (is_null($phone_type_id)) {
-            throw new \InvalidArgumentException('non-nullable phone_type_id cannot be null');
+        if (is_null($phoneTypeId)) {
+            throw new \InvalidArgumentException('non-nullable phoneTypeId cannot be null');
         }
-        $this->container['phone_type_id'] = $phone_type_id;
+        $this->container['phoneTypeId'] = $phoneTypeId;
 
         return $this;
     }

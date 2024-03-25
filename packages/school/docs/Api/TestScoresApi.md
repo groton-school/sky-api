@@ -12,7 +12,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1TestscoresByUserIdPost()`
 
 ```php
-v1TestscoresByUserIdPost($user_id, $test_score_add): int
+v1TestscoresByUserIdPost($userId, $testScoreAdd): int
 ```
 
 Test Score create
@@ -43,11 +43,11 @@ $apiInstance = new SKY\School\Api\TestScoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. The ID of the user.
-$test_score_add = {"id":0,"comment":"string","overall_score":0,"printon_report_card":true,"printon_transcript":true,"sub_tests":[{"test_type_id":0,"sub_test_type":"string","score":0,"test_subtype_id":0,"percentile":0,"scale":0,"stanie":0}],"test_date":"string"}; // \SKY\School\Model\TestScoreAdd | 
+$userId = 56; // int | Format - int32. The ID of the user.
+$testScoreAdd = {"id":0,"comment":"string","overall_score":0,"printon_report_card":true,"printon_transcript":true,"sub_tests":[{"test_type_id":0,"sub_test_type":"string","score":0,"test_subtype_id":0,"percentile":0,"scale":0,"stanie":0}],"test_date":"string"}; // \SKY\School\Model\TestScoreAdd | 
 
 try {
-    $result = $apiInstance->v1TestscoresByUserIdPost($user_id, $test_score_add);
+    $result = $apiInstance->v1TestscoresByUserIdPost($userId, $testScoreAdd);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TestScoresApi->v1TestscoresByUserIdPost: ', $e->getMessage(), PHP_EOL;
@@ -58,8 +58,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. The ID of the user. | |
-| **test_score_add** | [**\SKY\School\Model\TestScoreAdd**](../Model/TestScoreAdd.md)|  | [optional] |
+| **userId** | **int**| Format - int32. The ID of the user. | |
+| **testScoreAdd** | [**\SKY\School\Model\TestScoreAdd**](../Model/TestScoreAdd.md)|  | [optional] |
 
 ### Return type
 
@@ -81,7 +81,7 @@ try {
 ## `v1TestscoresGet()`
 
 ```php
-v1TestscoresGet($user_id): \SKY\School\Model\TestScoreCollection
+v1TestscoresGet($userId): \SKY\School\Model\TestScoreCollection
 ```
 
 Test scores by user ID
@@ -112,10 +112,10 @@ $apiInstance = new SKY\School\Api\TestScoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. The ID of the user.
+$userId = 56; // int | Format - int32. The ID of the user.
 
 try {
-    $result = $apiInstance->v1TestscoresGet($user_id);
+    $result = $apiInstance->v1TestscoresGet($userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TestScoresApi->v1TestscoresGet: ', $e->getMessage(), PHP_EOL;
@@ -126,7 +126,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. The ID of the user. | [optional] |
+| **userId** | **int**| Format - int32. The ID of the user. | [optional] |
 
 ### Return type
 

@@ -58,15 +58,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'section_id' => 'int',
-        'section_display_name' => 'string',
-        'school_level_name' => 'string',
-        'room_name' => 'string',
-        'block_name' => 'string',
-        'lead_section_id' => 'int',
-        'marking_period_id' => 'int',
-        'duration_id' => 'int',
-        'cumulative_grade' => 'float',
+        'sectionId' => 'int',
+        'sectionDisplayName' => 'string',
+        'schoolLevelName' => 'string',
+        'roomName' => 'string',
+        'blockName' => 'string',
+        'leadSectionId' => 'int',
+        'markingPeriodId' => 'int',
+        'durationId' => 'int',
+        'cumulativeGrade' => 'float',
     ];
 
     /**
@@ -77,15 +77,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'section_id' => 'int32',
-        'section_display_name' => null,
-        'school_level_name' => null,
-        'room_name' => null,
-        'block_name' => null,
-        'lead_section_id' => 'int32',
-        'marking_period_id' => 'int32',
-        'duration_id' => 'int32',
-        'cumulative_grade' => 'double',
+        'sectionId' => 'int32',
+        'sectionDisplayName' => null,
+        'schoolLevelName' => null,
+        'roomName' => null,
+        'blockName' => null,
+        'leadSectionId' => 'int32',
+        'markingPeriodId' => 'int32',
+        'durationId' => 'int32',
+        'cumulativeGrade' => 'double',
     ];
 
     /**
@@ -94,15 +94,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'section_id' => false,
-        'section_display_name' => true,
-        'school_level_name' => true,
-        'room_name' => true,
-        'block_name' => true,
-        'lead_section_id' => true,
-        'marking_period_id' => true,
-        'duration_id' => true,
-        'cumulative_grade' => true,
+        'sectionId' => false,
+        'sectionDisplayName' => true,
+        'schoolLevelName' => true,
+        'roomName' => true,
+        'blockName' => true,
+        'leadSectionId' => true,
+        'markingPeriodId' => true,
+        'durationId' => true,
+        'cumulativeGrade' => true,
     ];
 
     /**
@@ -191,15 +191,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'section_id' => 'section_id',
-        'section_display_name' => 'section_display_name',
-        'school_level_name' => 'school_level_name',
-        'room_name' => 'room_name',
-        'block_name' => 'block_name',
-        'lead_section_id' => 'lead_section_id',
-        'marking_period_id' => 'marking_period_id',
-        'duration_id' => 'duration_id',
-        'cumulative_grade' => 'cumulative_grade',
+        'sectionId' => 'section_id',
+        'sectionDisplayName' => 'section_display_name',
+        'schoolLevelName' => 'school_level_name',
+        'roomName' => 'room_name',
+        'blockName' => 'block_name',
+        'leadSectionId' => 'lead_section_id',
+        'markingPeriodId' => 'marking_period_id',
+        'durationId' => 'duration_id',
+        'cumulativeGrade' => 'cumulative_grade',
     ];
 
     /**
@@ -208,15 +208,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'section_id' => 'setSectionId',
-        'section_display_name' => 'setSectionDisplayName',
-        'school_level_name' => 'setSchoolLevelName',
-        'room_name' => 'setRoomName',
-        'block_name' => 'setBlockName',
-        'lead_section_id' => 'setLeadSectionId',
-        'marking_period_id' => 'setMarkingPeriodId',
-        'duration_id' => 'setDurationId',
-        'cumulative_grade' => 'setCumulativeGrade',
+        'sectionId' => 'setSectionId',
+        'sectionDisplayName' => 'setSectionDisplayName',
+        'schoolLevelName' => 'setSchoolLevelName',
+        'roomName' => 'setRoomName',
+        'blockName' => 'setBlockName',
+        'leadSectionId' => 'setLeadSectionId',
+        'markingPeriodId' => 'setMarkingPeriodId',
+        'durationId' => 'setDurationId',
+        'cumulativeGrade' => 'setCumulativeGrade',
     ];
 
     /**
@@ -225,15 +225,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'section_id' => 'getSectionId',
-        'section_display_name' => 'getSectionDisplayName',
-        'school_level_name' => 'getSchoolLevelName',
-        'room_name' => 'getRoomName',
-        'block_name' => 'getBlockName',
-        'lead_section_id' => 'getLeadSectionId',
-        'marking_period_id' => 'getMarkingPeriodId',
-        'duration_id' => 'getDurationId',
-        'cumulative_grade' => 'getCumulativeGrade',
+        'sectionId' => 'getSectionId',
+        'sectionDisplayName' => 'getSectionDisplayName',
+        'schoolLevelName' => 'getSchoolLevelName',
+        'roomName' => 'getRoomName',
+        'blockName' => 'getBlockName',
+        'leadSectionId' => 'getLeadSectionId',
+        'markingPeriodId' => 'getMarkingPeriodId',
+        'durationId' => 'getDurationId',
+        'cumulativeGrade' => 'getCumulativeGrade',
     ];
 
     /**
@@ -293,15 +293,15 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('section_display_name', $data ?? [], null);
-        $this->setIfExists('school_level_name', $data ?? [], null);
-        $this->setIfExists('room_name', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
-        $this->setIfExists('lead_section_id', $data ?? [], null);
-        $this->setIfExists('marking_period_id', $data ?? [], null);
-        $this->setIfExists('duration_id', $data ?? [], null);
-        $this->setIfExists('cumulative_grade', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('sectionDisplayName', $data ?? [], null);
+        $this->setIfExists('schoolLevelName', $data ?? [], null);
+        $this->setIfExists('roomName', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
+        $this->setIfExists('leadSectionId', $data ?? [], null);
+        $this->setIfExists('markingPeriodId', $data ?? [], null);
+        $this->setIfExists('durationId', $data ?? [], null);
+        $this->setIfExists('cumulativeGrade', $data ?? [], null);
     }
 
     /**
@@ -347,300 +347,300 @@ class AcademicsSectionStudent implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The ID of the section
+     * @param int|null $sectionId The ID of the section
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            throw new \InvalidArgumentException('non-nullable section_id cannot be null');
+        if (is_null($sectionId)) {
+            throw new \InvalidArgumentException('non-nullable sectionId cannot be null');
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets section_display_name
+     * Gets sectionDisplayName
      *
      * @return string|null
      */
     public function getSectionDisplayName()
     {
-        return $this->container['section_display_name'];
+        return $this->container['sectionDisplayName'];
     }
 
     /**
-     * Sets section_display_name
+     * Sets sectionDisplayName
      *
-     * @param string|null $section_display_name The section display value (name and block)
+     * @param string|null $sectionDisplayName The section display value (name and block)
      *
      * @return self
      */
-    public function setSectionDisplayName($section_display_name)
+    public function setSectionDisplayName($sectionDisplayName)
     {
-        if (is_null($section_display_name)) {
-            array_push($this->openAPINullablesSetToNull, 'section_display_name');
+        if (is_null($sectionDisplayName)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionDisplayName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_display_name', $nullablesSetToNull);
+            $index = array_search('sectionDisplayName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_display_name'] = $section_display_name;
+        $this->container['sectionDisplayName'] = $sectionDisplayName;
 
         return $this;
     }
 
     /**
-     * Gets school_level_name
+     * Gets schoolLevelName
      *
      * @return string|null
      */
     public function getSchoolLevelName()
     {
-        return $this->container['school_level_name'];
+        return $this->container['schoolLevelName'];
     }
 
     /**
-     * Sets school_level_name
+     * Sets schoolLevelName
      *
-     * @param string|null $school_level_name The name of the room where the section takes place
+     * @param string|null $schoolLevelName The name of the room where the section takes place
      *
      * @return self
      */
-    public function setSchoolLevelName($school_level_name)
+    public function setSchoolLevelName($schoolLevelName)
     {
-        if (is_null($school_level_name)) {
-            array_push($this->openAPINullablesSetToNull, 'school_level_name');
+        if (is_null($schoolLevelName)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolLevelName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_level_name', $nullablesSetToNull);
+            $index = array_search('schoolLevelName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_level_name'] = $school_level_name;
+        $this->container['schoolLevelName'] = $schoolLevelName;
 
         return $this;
     }
 
     /**
-     * Gets room_name
+     * Gets roomName
      *
      * @return string|null
      */
     public function getRoomName()
     {
-        return $this->container['room_name'];
+        return $this->container['roomName'];
     }
 
     /**
-     * Sets room_name
+     * Sets roomName
      *
-     * @param string|null $room_name The name of the room where the section takes place
+     * @param string|null $roomName The name of the room where the section takes place
      *
      * @return self
      */
-    public function setRoomName($room_name)
+    public function setRoomName($roomName)
     {
-        if (is_null($room_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_name');
+        if (is_null($roomName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_name', $nullablesSetToNull);
+            $index = array_search('roomName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_name'] = $room_name;
+        $this->container['roomName'] = $roomName;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name The name of the schedule block for this section
+     * @param string|null $blockName The name of the schedule block for this section
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
 
     /**
-     * Gets lead_section_id
+     * Gets leadSectionId
      *
      * @return int|null
      */
     public function getLeadSectionId()
     {
-        return $this->container['lead_section_id'];
+        return $this->container['leadSectionId'];
     }
 
     /**
-     * Sets lead_section_id
+     * Sets leadSectionId
      *
-     * @param int|null $lead_section_id The ID of the first section in a series of terms
+     * @param int|null $leadSectionId The ID of the first section in a series of terms
      *
      * @return self
      */
-    public function setLeadSectionId($lead_section_id)
+    public function setLeadSectionId($leadSectionId)
     {
-        if (is_null($lead_section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'lead_section_id');
+        if (is_null($leadSectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'leadSectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('lead_section_id', $nullablesSetToNull);
+            $index = array_search('leadSectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['lead_section_id'] = $lead_section_id;
+        $this->container['leadSectionId'] = $leadSectionId;
 
         return $this;
     }
 
     /**
-     * Gets marking_period_id
+     * Gets markingPeriodId
      *
      * @return int|null
      */
     public function getMarkingPeriodId()
     {
-        return $this->container['marking_period_id'];
+        return $this->container['markingPeriodId'];
     }
 
     /**
-     * Sets marking_period_id
+     * Sets markingPeriodId
      *
-     * @param int|null $marking_period_id The ID of the marking period for this section
+     * @param int|null $markingPeriodId The ID of the marking period for this section
      *
      * @return self
      */
-    public function setMarkingPeriodId($marking_period_id)
+    public function setMarkingPeriodId($markingPeriodId)
     {
-        if (is_null($marking_period_id)) {
-            array_push($this->openAPINullablesSetToNull, 'marking_period_id');
+        if (is_null($markingPeriodId)) {
+            array_push($this->openAPINullablesSetToNull, 'markingPeriodId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('marking_period_id', $nullablesSetToNull);
+            $index = array_search('markingPeriodId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['marking_period_id'] = $marking_period_id;
+        $this->container['markingPeriodId'] = $markingPeriodId;
 
         return $this;
     }
 
     /**
-     * Gets duration_id
+     * Gets durationId
      *
      * @return int|null
      */
     public function getDurationId()
     {
-        return $this->container['duration_id'];
+        return $this->container['durationId'];
     }
 
     /**
-     * Sets duration_id
+     * Sets durationId
      *
-     * @param int|null $duration_id The duration ID for a section
+     * @param int|null $durationId The duration ID for a section
      *
      * @return self
      */
-    public function setDurationId($duration_id)
+    public function setDurationId($durationId)
     {
-        if (is_null($duration_id)) {
-            array_push($this->openAPINullablesSetToNull, 'duration_id');
+        if (is_null($durationId)) {
+            array_push($this->openAPINullablesSetToNull, 'durationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('duration_id', $nullablesSetToNull);
+            $index = array_search('durationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['duration_id'] = $duration_id;
+        $this->container['durationId'] = $durationId;
 
         return $this;
     }
 
     /**
-     * Gets cumulative_grade
+     * Gets cumulativeGrade
      *
      * @return float|null
      */
     public function getCumulativeGrade()
     {
-        return $this->container['cumulative_grade'];
+        return $this->container['cumulativeGrade'];
     }
 
     /**
-     * Sets cumulative_grade
+     * Sets cumulativeGrade
      *
-     * @param float|null $cumulative_grade The cumulative grade for this section and student
+     * @param float|null $cumulativeGrade The cumulative grade for this section and student
      *
      * @return self
      */
-    public function setCumulativeGrade($cumulative_grade)
+    public function setCumulativeGrade($cumulativeGrade)
     {
-        if (is_null($cumulative_grade)) {
-            array_push($this->openAPINullablesSetToNull, 'cumulative_grade');
+        if (is_null($cumulativeGrade)) {
+            array_push($this->openAPINullablesSetToNull, 'cumulativeGrade');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cumulative_grade', $nullablesSetToNull);
+            $index = array_search('cumulativeGrade', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cumulative_grade'] = $cumulative_grade;
+        $this->container['cumulativeGrade'] = $cumulativeGrade;
 
         return $this;
     }

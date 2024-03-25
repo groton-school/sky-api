@@ -58,44 +58,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'email' => 'string',
-        'address_line1' => 'string',
-        'address_line2' => 'string',
-        'address_line3' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressLine3' => 'string',
         'city' => 'string',
         'state' => 'string',
         'zip' => 'string',
         'country' => 'string',
-        'home_phone' => 'string',
-        'cell_phone' => 'string',
-        'office_phone' => 'string',
-        'home_phone2' => 'string',
-        'has_relationships' => 'bool',
+        'homePhone' => 'string',
+        'cellPhone' => 'string',
+        'officePhone' => 'string',
+        'homePhone2' => 'string',
+        'hasRelationships' => 'bool',
         'prefix' => 'string',
-        'preferred_name' => 'string',
-        'profile_photo' => 'string',
+        'preferredName' => 'string',
+        'profilePhoto' => 'string',
         'middlename' => 'string',
-        'maiden_name' => 'string',
+        'maidenName' => 'string',
         'suffix' => 'string',
-        'grad_year' => 'string',
+        'gradYear' => 'string',
         'grade' => 'string',
-        'grade_display' => 'string',
+        'gradeDisplay' => 'string',
         'department' => 'string',
-        'department_display' => 'string',
-        'spouse_id' => 'int',
-        'child_names' => 'string',
-        'grade_numeric' => 'int',
-        'grade_numeric_display' => 'string',
-        'total_count' => 'int',
+        'departmentDisplay' => 'string',
+        'spouseId' => 'int',
+        'childNames' => 'string',
+        'gradeNumeric' => 'int',
+        'gradeNumericDisplay' => 'string',
+        'totalCount' => 'int',
         'deceased' => 'bool',
         'student' => 'bool',
-        'preferred_address_id' => 'int',
-        'preferred_address_lat' => 'float',
-        'preferred_address_lng' => 'float',
-        'job_title' => 'string',
+        'preferredAddressId' => 'int',
+        'preferredAddressLat' => 'float',
+        'preferredAddressLng' => 'float',
+        'jobTitle' => 'string',
     ];
 
     /**
@@ -106,44 +106,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
+        'userId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
         'email' => null,
-        'address_line1' => null,
-        'address_line2' => null,
-        'address_line3' => null,
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'addressLine3' => null,
         'city' => null,
         'state' => null,
         'zip' => null,
         'country' => null,
-        'home_phone' => null,
-        'cell_phone' => null,
-        'office_phone' => null,
-        'home_phone2' => null,
-        'has_relationships' => null,
+        'homePhone' => null,
+        'cellPhone' => null,
+        'officePhone' => null,
+        'homePhone2' => null,
+        'hasRelationships' => null,
         'prefix' => null,
-        'preferred_name' => null,
-        'profile_photo' => null,
+        'preferredName' => null,
+        'profilePhoto' => null,
         'middlename' => null,
-        'maiden_name' => null,
+        'maidenName' => null,
         'suffix' => null,
-        'grad_year' => null,
+        'gradYear' => null,
         'grade' => null,
-        'grade_display' => null,
+        'gradeDisplay' => null,
         'department' => null,
-        'department_display' => null,
-        'spouse_id' => 'int32',
-        'child_names' => null,
-        'grade_numeric' => 'int32',
-        'grade_numeric_display' => null,
-        'total_count' => 'int32',
+        'departmentDisplay' => null,
+        'spouseId' => 'int32',
+        'childNames' => null,
+        'gradeNumeric' => 'int32',
+        'gradeNumericDisplay' => null,
+        'totalCount' => 'int32',
         'deceased' => null,
         'student' => null,
-        'preferred_address_id' => 'int32',
-        'preferred_address_lat' => 'double',
-        'preferred_address_lng' => 'double',
-        'job_title' => null,
+        'preferredAddressId' => 'int32',
+        'preferredAddressLat' => 'double',
+        'preferredAddressLng' => 'double',
+        'jobTitle' => null,
     ];
 
     /**
@@ -152,44 +152,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => true,
-        'first_name' => true,
-        'last_name' => true,
+        'userId' => true,
+        'firstName' => true,
+        'lastName' => true,
         'email' => true,
-        'address_line1' => true,
-        'address_line2' => true,
-        'address_line3' => true,
+        'addressLine1' => true,
+        'addressLine2' => true,
+        'addressLine3' => true,
         'city' => true,
         'state' => true,
         'zip' => true,
         'country' => true,
-        'home_phone' => true,
-        'cell_phone' => true,
-        'office_phone' => true,
-        'home_phone2' => true,
-        'has_relationships' => true,
+        'homePhone' => true,
+        'cellPhone' => true,
+        'officePhone' => true,
+        'homePhone2' => true,
+        'hasRelationships' => true,
         'prefix' => true,
-        'preferred_name' => true,
-        'profile_photo' => true,
+        'preferredName' => true,
+        'profilePhoto' => true,
         'middlename' => true,
-        'maiden_name' => true,
+        'maidenName' => true,
         'suffix' => true,
-        'grad_year' => true,
+        'gradYear' => true,
         'grade' => true,
-        'grade_display' => true,
+        'gradeDisplay' => true,
         'department' => true,
-        'department_display' => true,
-        'spouse_id' => true,
-        'child_names' => true,
-        'grade_numeric' => true,
-        'grade_numeric_display' => true,
-        'total_count' => true,
+        'departmentDisplay' => true,
+        'spouseId' => true,
+        'childNames' => true,
+        'gradeNumeric' => true,
+        'gradeNumericDisplay' => true,
+        'totalCount' => true,
         'deceased' => true,
         'student' => true,
-        'preferred_address_id' => true,
-        'preferred_address_lat' => true,
-        'preferred_address_lng' => true,
-        'job_title' => true,
+        'preferredAddressId' => true,
+        'preferredAddressLat' => true,
+        'preferredAddressLng' => true,
+        'jobTitle' => true,
     ];
 
     /**
@@ -278,44 +278,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'email' => 'email',
-        'address_line1' => 'address_line1',
-        'address_line2' => 'address_line2',
-        'address_line3' => 'address_line3',
+        'addressLine1' => 'address_line1',
+        'addressLine2' => 'address_line2',
+        'addressLine3' => 'address_line3',
         'city' => 'city',
         'state' => 'state',
         'zip' => 'zip',
         'country' => 'country',
-        'home_phone' => 'home_phone',
-        'cell_phone' => 'cell_phone',
-        'office_phone' => 'office_phone',
-        'home_phone2' => 'home_phone2',
-        'has_relationships' => 'has_relationships',
+        'homePhone' => 'home_phone',
+        'cellPhone' => 'cell_phone',
+        'officePhone' => 'office_phone',
+        'homePhone2' => 'home_phone2',
+        'hasRelationships' => 'has_relationships',
         'prefix' => 'prefix',
-        'preferred_name' => 'preferred_name',
-        'profile_photo' => 'profile_photo',
+        'preferredName' => 'preferred_name',
+        'profilePhoto' => 'profile_photo',
         'middlename' => 'middlename',
-        'maiden_name' => 'maiden_name',
+        'maidenName' => 'maiden_name',
         'suffix' => 'suffix',
-        'grad_year' => 'grad_year',
+        'gradYear' => 'grad_year',
         'grade' => 'grade',
-        'grade_display' => 'grade_display',
+        'gradeDisplay' => 'grade_display',
         'department' => 'department',
-        'department_display' => 'department_display',
-        'spouse_id' => 'spouse_id',
-        'child_names' => 'child_names',
-        'grade_numeric' => 'grade_numeric',
-        'grade_numeric_display' => 'grade_numeric_display',
-        'total_count' => 'total_count',
+        'departmentDisplay' => 'department_display',
+        'spouseId' => 'spouse_id',
+        'childNames' => 'child_names',
+        'gradeNumeric' => 'grade_numeric',
+        'gradeNumericDisplay' => 'grade_numeric_display',
+        'totalCount' => 'total_count',
         'deceased' => 'deceased',
         'student' => 'student',
-        'preferred_address_id' => 'preferred_address_id',
-        'preferred_address_lat' => 'preferred_address_lat',
-        'preferred_address_lng' => 'preferred_address_lng',
-        'job_title' => 'job_title',
+        'preferredAddressId' => 'preferred_address_id',
+        'preferredAddressLat' => 'preferred_address_lat',
+        'preferredAddressLng' => 'preferred_address_lng',
+        'jobTitle' => 'job_title',
     ];
 
     /**
@@ -324,44 +324,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'email' => 'setEmail',
-        'address_line1' => 'setAddressLine1',
-        'address_line2' => 'setAddressLine2',
-        'address_line3' => 'setAddressLine3',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressLine3' => 'setAddressLine3',
         'city' => 'setCity',
         'state' => 'setState',
         'zip' => 'setZip',
         'country' => 'setCountry',
-        'home_phone' => 'setHomePhone',
-        'cell_phone' => 'setCellPhone',
-        'office_phone' => 'setOfficePhone',
-        'home_phone2' => 'setHomePhone2',
-        'has_relationships' => 'setHasRelationships',
+        'homePhone' => 'setHomePhone',
+        'cellPhone' => 'setCellPhone',
+        'officePhone' => 'setOfficePhone',
+        'homePhone2' => 'setHomePhone2',
+        'hasRelationships' => 'setHasRelationships',
         'prefix' => 'setPrefix',
-        'preferred_name' => 'setPreferredName',
-        'profile_photo' => 'setProfilePhoto',
+        'preferredName' => 'setPreferredName',
+        'profilePhoto' => 'setProfilePhoto',
         'middlename' => 'setMiddlename',
-        'maiden_name' => 'setMaidenName',
+        'maidenName' => 'setMaidenName',
         'suffix' => 'setSuffix',
-        'grad_year' => 'setGradYear',
+        'gradYear' => 'setGradYear',
         'grade' => 'setGrade',
-        'grade_display' => 'setGradeDisplay',
+        'gradeDisplay' => 'setGradeDisplay',
         'department' => 'setDepartment',
-        'department_display' => 'setDepartmentDisplay',
-        'spouse_id' => 'setSpouseId',
-        'child_names' => 'setChildNames',
-        'grade_numeric' => 'setGradeNumeric',
-        'grade_numeric_display' => 'setGradeNumericDisplay',
-        'total_count' => 'setTotalCount',
+        'departmentDisplay' => 'setDepartmentDisplay',
+        'spouseId' => 'setSpouseId',
+        'childNames' => 'setChildNames',
+        'gradeNumeric' => 'setGradeNumeric',
+        'gradeNumericDisplay' => 'setGradeNumericDisplay',
+        'totalCount' => 'setTotalCount',
         'deceased' => 'setDeceased',
         'student' => 'setStudent',
-        'preferred_address_id' => 'setPreferredAddressId',
-        'preferred_address_lat' => 'setPreferredAddressLat',
-        'preferred_address_lng' => 'setPreferredAddressLng',
-        'job_title' => 'setJobTitle',
+        'preferredAddressId' => 'setPreferredAddressId',
+        'preferredAddressLat' => 'setPreferredAddressLat',
+        'preferredAddressLng' => 'setPreferredAddressLng',
+        'jobTitle' => 'setJobTitle',
     ];
 
     /**
@@ -370,44 +370,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'email' => 'getEmail',
-        'address_line1' => 'getAddressLine1',
-        'address_line2' => 'getAddressLine2',
-        'address_line3' => 'getAddressLine3',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressLine3' => 'getAddressLine3',
         'city' => 'getCity',
         'state' => 'getState',
         'zip' => 'getZip',
         'country' => 'getCountry',
-        'home_phone' => 'getHomePhone',
-        'cell_phone' => 'getCellPhone',
-        'office_phone' => 'getOfficePhone',
-        'home_phone2' => 'getHomePhone2',
-        'has_relationships' => 'getHasRelationships',
+        'homePhone' => 'getHomePhone',
+        'cellPhone' => 'getCellPhone',
+        'officePhone' => 'getOfficePhone',
+        'homePhone2' => 'getHomePhone2',
+        'hasRelationships' => 'getHasRelationships',
         'prefix' => 'getPrefix',
-        'preferred_name' => 'getPreferredName',
-        'profile_photo' => 'getProfilePhoto',
+        'preferredName' => 'getPreferredName',
+        'profilePhoto' => 'getProfilePhoto',
         'middlename' => 'getMiddlename',
-        'maiden_name' => 'getMaidenName',
+        'maidenName' => 'getMaidenName',
         'suffix' => 'getSuffix',
-        'grad_year' => 'getGradYear',
+        'gradYear' => 'getGradYear',
         'grade' => 'getGrade',
-        'grade_display' => 'getGradeDisplay',
+        'gradeDisplay' => 'getGradeDisplay',
         'department' => 'getDepartment',
-        'department_display' => 'getDepartmentDisplay',
-        'spouse_id' => 'getSpouseId',
-        'child_names' => 'getChildNames',
-        'grade_numeric' => 'getGradeNumeric',
-        'grade_numeric_display' => 'getGradeNumericDisplay',
-        'total_count' => 'getTotalCount',
+        'departmentDisplay' => 'getDepartmentDisplay',
+        'spouseId' => 'getSpouseId',
+        'childNames' => 'getChildNames',
+        'gradeNumeric' => 'getGradeNumeric',
+        'gradeNumericDisplay' => 'getGradeNumericDisplay',
+        'totalCount' => 'getTotalCount',
         'deceased' => 'getDeceased',
         'student' => 'getStudent',
-        'preferred_address_id' => 'getPreferredAddressId',
-        'preferred_address_lat' => 'getPreferredAddressLat',
-        'preferred_address_lng' => 'getPreferredAddressLng',
-        'job_title' => 'getJobTitle',
+        'preferredAddressId' => 'getPreferredAddressId',
+        'preferredAddressLat' => 'getPreferredAddressLat',
+        'preferredAddressLng' => 'getPreferredAddressLng',
+        'jobTitle' => 'getJobTitle',
     ];
 
     /**
@@ -467,44 +467,44 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('address_line1', $data ?? [], null);
-        $this->setIfExists('address_line2', $data ?? [], null);
-        $this->setIfExists('address_line3', $data ?? [], null);
+        $this->setIfExists('addressLine1', $data ?? [], null);
+        $this->setIfExists('addressLine2', $data ?? [], null);
+        $this->setIfExists('addressLine3', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('zip', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('home_phone', $data ?? [], null);
-        $this->setIfExists('cell_phone', $data ?? [], null);
-        $this->setIfExists('office_phone', $data ?? [], null);
-        $this->setIfExists('home_phone2', $data ?? [], null);
-        $this->setIfExists('has_relationships', $data ?? [], null);
+        $this->setIfExists('homePhone', $data ?? [], null);
+        $this->setIfExists('cellPhone', $data ?? [], null);
+        $this->setIfExists('officePhone', $data ?? [], null);
+        $this->setIfExists('homePhone2', $data ?? [], null);
+        $this->setIfExists('hasRelationships', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
-        $this->setIfExists('profile_photo', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
+        $this->setIfExists('profilePhoto', $data ?? [], null);
         $this->setIfExists('middlename', $data ?? [], null);
-        $this->setIfExists('maiden_name', $data ?? [], null);
+        $this->setIfExists('maidenName', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
-        $this->setIfExists('grad_year', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
         $this->setIfExists('grade', $data ?? [], null);
-        $this->setIfExists('grade_display', $data ?? [], null);
+        $this->setIfExists('gradeDisplay', $data ?? [], null);
         $this->setIfExists('department', $data ?? [], null);
-        $this->setIfExists('department_display', $data ?? [], null);
-        $this->setIfExists('spouse_id', $data ?? [], null);
-        $this->setIfExists('child_names', $data ?? [], null);
-        $this->setIfExists('grade_numeric', $data ?? [], null);
-        $this->setIfExists('grade_numeric_display', $data ?? [], null);
-        $this->setIfExists('total_count', $data ?? [], null);
+        $this->setIfExists('departmentDisplay', $data ?? [], null);
+        $this->setIfExists('spouseId', $data ?? [], null);
+        $this->setIfExists('childNames', $data ?? [], null);
+        $this->setIfExists('gradeNumeric', $data ?? [], null);
+        $this->setIfExists('gradeNumericDisplay', $data ?? [], null);
+        $this->setIfExists('totalCount', $data ?? [], null);
         $this->setIfExists('deceased', $data ?? [], null);
         $this->setIfExists('student', $data ?? [], null);
-        $this->setIfExists('preferred_address_id', $data ?? [], null);
-        $this->setIfExists('preferred_address_lat', $data ?? [], null);
-        $this->setIfExists('preferred_address_lng', $data ?? [], null);
-        $this->setIfExists('job_title', $data ?? [], null);
+        $this->setIfExists('preferredAddressId', $data ?? [], null);
+        $this->setIfExists('preferredAddressLat', $data ?? [], null);
+        $this->setIfExists('preferredAddressLng', $data ?? [], null);
+        $this->setIfExists('jobTitle', $data ?? [], null);
     }
 
     /**
@@ -550,103 +550,103 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The Id of the user
+     * @param int|null $userId The Id of the user
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the user
+     * @param string|null $firstName The first name of the user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the user
+     * @param string|null $lastName The last name of the user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -686,103 +686,103 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address_line1
+     * Gets addressLine1
      *
      * @return string|null
      */
     public function getAddressLine1()
     {
-        return $this->container['address_line1'];
+        return $this->container['addressLine1'];
     }
 
     /**
-     * Sets address_line1
+     * Sets addressLine1
      *
-     * @param string|null $address_line1 The first line of the user address
+     * @param string|null $addressLine1 The first line of the user address
      *
      * @return self
      */
-    public function setAddressLine1($address_line1)
+    public function setAddressLine1($addressLine1)
     {
-        if (is_null($address_line1)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line1');
+        if (is_null($addressLine1)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine1');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line1', $nullablesSetToNull);
+            $index = array_search('addressLine1', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line1'] = $address_line1;
+        $this->container['addressLine1'] = $addressLine1;
 
         return $this;
     }
 
     /**
-     * Gets address_line2
+     * Gets addressLine2
      *
      * @return string|null
      */
     public function getAddressLine2()
     {
-        return $this->container['address_line2'];
+        return $this->container['addressLine2'];
     }
 
     /**
-     * Sets address_line2
+     * Sets addressLine2
      *
-     * @param string|null $address_line2 The second line of the user address
+     * @param string|null $addressLine2 The second line of the user address
      *
      * @return self
      */
-    public function setAddressLine2($address_line2)
+    public function setAddressLine2($addressLine2)
     {
-        if (is_null($address_line2)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line2');
+        if (is_null($addressLine2)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine2');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line2', $nullablesSetToNull);
+            $index = array_search('addressLine2', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line2'] = $address_line2;
+        $this->container['addressLine2'] = $addressLine2;
 
         return $this;
     }
 
     /**
-     * Gets address_line3
+     * Gets addressLine3
      *
      * @return string|null
      */
     public function getAddressLine3()
     {
-        return $this->container['address_line3'];
+        return $this->container['addressLine3'];
     }
 
     /**
-     * Sets address_line3
+     * Sets addressLine3
      *
-     * @param string|null $address_line3 The third line of the user address
+     * @param string|null $addressLine3 The third line of the user address
      *
      * @return self
      */
-    public function setAddressLine3($address_line3)
+    public function setAddressLine3($addressLine3)
     {
-        if (is_null($address_line3)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line3');
+        if (is_null($addressLine3)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine3');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line3', $nullablesSetToNull);
+            $index = array_search('addressLine3', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line3'] = $address_line3;
+        $this->container['addressLine3'] = $addressLine3;
 
         return $this;
     }
@@ -924,171 +924,171 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets home_phone
+     * Gets homePhone
      *
      * @return string|null
      */
     public function getHomePhone()
     {
-        return $this->container['home_phone'];
+        return $this->container['homePhone'];
     }
 
     /**
-     * Sets home_phone
+     * Sets homePhone
      *
-     * @param string|null $home_phone The user's home phone number
+     * @param string|null $homePhone The user's home phone number
      *
      * @return self
      */
-    public function setHomePhone($home_phone)
+    public function setHomePhone($homePhone)
     {
-        if (is_null($home_phone)) {
-            array_push($this->openAPINullablesSetToNull, 'home_phone');
+        if (is_null($homePhone)) {
+            array_push($this->openAPINullablesSetToNull, 'homePhone');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_phone', $nullablesSetToNull);
+            $index = array_search('homePhone', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_phone'] = $home_phone;
+        $this->container['homePhone'] = $homePhone;
 
         return $this;
     }
 
     /**
-     * Gets cell_phone
+     * Gets cellPhone
      *
      * @return string|null
      */
     public function getCellPhone()
     {
-        return $this->container['cell_phone'];
+        return $this->container['cellPhone'];
     }
 
     /**
-     * Sets cell_phone
+     * Sets cellPhone
      *
-     * @param string|null $cell_phone The user's cell phone number
+     * @param string|null $cellPhone The user's cell phone number
      *
      * @return self
      */
-    public function setCellPhone($cell_phone)
+    public function setCellPhone($cellPhone)
     {
-        if (is_null($cell_phone)) {
-            array_push($this->openAPINullablesSetToNull, 'cell_phone');
+        if (is_null($cellPhone)) {
+            array_push($this->openAPINullablesSetToNull, 'cellPhone');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cell_phone', $nullablesSetToNull);
+            $index = array_search('cellPhone', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cell_phone'] = $cell_phone;
+        $this->container['cellPhone'] = $cellPhone;
 
         return $this;
     }
 
     /**
-     * Gets office_phone
+     * Gets officePhone
      *
      * @return string|null
      */
     public function getOfficePhone()
     {
-        return $this->container['office_phone'];
+        return $this->container['officePhone'];
     }
 
     /**
-     * Sets office_phone
+     * Sets officePhone
      *
-     * @param string|null $office_phone The user's office phone number
+     * @param string|null $officePhone The user's office phone number
      *
      * @return self
      */
-    public function setOfficePhone($office_phone)
+    public function setOfficePhone($officePhone)
     {
-        if (is_null($office_phone)) {
-            array_push($this->openAPINullablesSetToNull, 'office_phone');
+        if (is_null($officePhone)) {
+            array_push($this->openAPINullablesSetToNull, 'officePhone');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('office_phone', $nullablesSetToNull);
+            $index = array_search('officePhone', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['office_phone'] = $office_phone;
+        $this->container['officePhone'] = $officePhone;
 
         return $this;
     }
 
     /**
-     * Gets home_phone2
+     * Gets homePhone2
      *
      * @return string|null
      */
     public function getHomePhone2()
     {
-        return $this->container['home_phone2'];
+        return $this->container['homePhone2'];
     }
 
     /**
-     * Sets home_phone2
+     * Sets homePhone2
      *
-     * @param string|null $home_phone2 The user's secondary home phone number
+     * @param string|null $homePhone2 The user's secondary home phone number
      *
      * @return self
      */
-    public function setHomePhone2($home_phone2)
+    public function setHomePhone2($homePhone2)
     {
-        if (is_null($home_phone2)) {
-            array_push($this->openAPINullablesSetToNull, 'home_phone2');
+        if (is_null($homePhone2)) {
+            array_push($this->openAPINullablesSetToNull, 'homePhone2');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_phone2', $nullablesSetToNull);
+            $index = array_search('homePhone2', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_phone2'] = $home_phone2;
+        $this->container['homePhone2'] = $homePhone2;
 
         return $this;
     }
 
     /**
-     * Gets has_relationships
+     * Gets hasRelationships
      *
      * @return bool|null
      */
     public function getHasRelationships()
     {
-        return $this->container['has_relationships'];
+        return $this->container['hasRelationships'];
     }
 
     /**
-     * Sets has_relationships
+     * Sets hasRelationships
      *
-     * @param bool|null $has_relationships Returns true if the user has relationships
+     * @param bool|null $hasRelationships Returns true if the user has relationships
      *
      * @return self
      */
-    public function setHasRelationships($has_relationships)
+    public function setHasRelationships($hasRelationships)
     {
-        if (is_null($has_relationships)) {
-            array_push($this->openAPINullablesSetToNull, 'has_relationships');
+        if (is_null($hasRelationships)) {
+            array_push($this->openAPINullablesSetToNull, 'hasRelationships');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_relationships', $nullablesSetToNull);
+            $index = array_search('hasRelationships', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_relationships'] = $has_relationships;
+        $this->container['hasRelationships'] = $hasRelationships;
 
         return $this;
     }
@@ -1128,69 +1128,69 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The user's preferred name
+     * @param string|null $preferredName The user's preferred name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
 
     /**
-     * Gets profile_photo
+     * Gets profilePhoto
      *
      * @return string|null
      */
     public function getProfilePhoto()
     {
-        return $this->container['profile_photo'];
+        return $this->container['profilePhoto'];
     }
 
     /**
-     * Sets profile_photo
+     * Sets profilePhoto
      *
-     * @param string|null $profile_photo The user's profile photo
+     * @param string|null $profilePhoto The user's profile photo
      *
      * @return self
      */
-    public function setProfilePhoto($profile_photo)
+    public function setProfilePhoto($profilePhoto)
     {
-        if (is_null($profile_photo)) {
-            array_push($this->openAPINullablesSetToNull, 'profile_photo');
+        if (is_null($profilePhoto)) {
+            array_push($this->openAPINullablesSetToNull, 'profilePhoto');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('profile_photo', $nullablesSetToNull);
+            $index = array_search('profilePhoto', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['profile_photo'] = $profile_photo;
+        $this->container['profilePhoto'] = $profilePhoto;
 
         return $this;
     }
@@ -1230,35 +1230,35 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets maiden_name
+     * Gets maidenName
      *
      * @return string|null
      */
     public function getMaidenName()
     {
-        return $this->container['maiden_name'];
+        return $this->container['maidenName'];
     }
 
     /**
-     * Sets maiden_name
+     * Sets maidenName
      *
-     * @param string|null $maiden_name The user's maiden name
+     * @param string|null $maidenName The user's maiden name
      *
      * @return self
      */
-    public function setMaidenName($maiden_name)
+    public function setMaidenName($maidenName)
     {
-        if (is_null($maiden_name)) {
-            array_push($this->openAPINullablesSetToNull, 'maiden_name');
+        if (is_null($maidenName)) {
+            array_push($this->openAPINullablesSetToNull, 'maidenName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('maiden_name', $nullablesSetToNull);
+            $index = array_search('maidenName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['maiden_name'] = $maiden_name;
+        $this->container['maidenName'] = $maidenName;
 
         return $this;
     }
@@ -1298,35 +1298,35 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year The user's graduation year
+     * @param string|null $gradYear The user's graduation year
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }
@@ -1366,35 +1366,35 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets grade_display
+     * Gets gradeDisplay
      *
      * @return string|null
      */
     public function getGradeDisplay()
     {
-        return $this->container['grade_display'];
+        return $this->container['gradeDisplay'];
     }
 
     /**
-     * Sets grade_display
+     * Sets gradeDisplay
      *
-     * @param string|null $grade_display Grade display
+     * @param string|null $gradeDisplay Grade display
      *
      * @return self
      */
-    public function setGradeDisplay($grade_display)
+    public function setGradeDisplay($gradeDisplay)
     {
-        if (is_null($grade_display)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_display');
+        if (is_null($gradeDisplay)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeDisplay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_display', $nullablesSetToNull);
+            $index = array_search('gradeDisplay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_display'] = $grade_display;
+        $this->container['gradeDisplay'] = $gradeDisplay;
 
         return $this;
     }
@@ -1434,205 +1434,205 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets department_display
+     * Gets departmentDisplay
      *
      * @return string|null
      */
     public function getDepartmentDisplay()
     {
-        return $this->container['department_display'];
+        return $this->container['departmentDisplay'];
     }
 
     /**
-     * Sets department_display
+     * Sets departmentDisplay
      *
-     * @param string|null $department_display How the user's department should be displayed
+     * @param string|null $departmentDisplay How the user's department should be displayed
      *
      * @return self
      */
-    public function setDepartmentDisplay($department_display)
+    public function setDepartmentDisplay($departmentDisplay)
     {
-        if (is_null($department_display)) {
-            array_push($this->openAPINullablesSetToNull, 'department_display');
+        if (is_null($departmentDisplay)) {
+            array_push($this->openAPINullablesSetToNull, 'departmentDisplay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('department_display', $nullablesSetToNull);
+            $index = array_search('departmentDisplay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['department_display'] = $department_display;
+        $this->container['departmentDisplay'] = $departmentDisplay;
 
         return $this;
     }
 
     /**
-     * Gets spouse_id
+     * Gets spouseId
      *
      * @return int|null
      */
     public function getSpouseId()
     {
-        return $this->container['spouse_id'];
+        return $this->container['spouseId'];
     }
 
     /**
-     * Sets spouse_id
+     * Sets spouseId
      *
-     * @param int|null $spouse_id The Id of the user's spouse
+     * @param int|null $spouseId The Id of the user's spouse
      *
      * @return self
      */
-    public function setSpouseId($spouse_id)
+    public function setSpouseId($spouseId)
     {
-        if (is_null($spouse_id)) {
-            array_push($this->openAPINullablesSetToNull, 'spouse_id');
+        if (is_null($spouseId)) {
+            array_push($this->openAPINullablesSetToNull, 'spouseId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('spouse_id', $nullablesSetToNull);
+            $index = array_search('spouseId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['spouse_id'] = $spouse_id;
+        $this->container['spouseId'] = $spouseId;
 
         return $this;
     }
 
     /**
-     * Gets child_names
+     * Gets childNames
      *
      * @return string|null
      */
     public function getChildNames()
     {
-        return $this->container['child_names'];
+        return $this->container['childNames'];
     }
 
     /**
-     * Sets child_names
+     * Sets childNames
      *
-     * @param string|null $child_names The user's children
+     * @param string|null $childNames The user's children
      *
      * @return self
      */
-    public function setChildNames($child_names)
+    public function setChildNames($childNames)
     {
-        if (is_null($child_names)) {
-            array_push($this->openAPINullablesSetToNull, 'child_names');
+        if (is_null($childNames)) {
+            array_push($this->openAPINullablesSetToNull, 'childNames');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('child_names', $nullablesSetToNull);
+            $index = array_search('childNames', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['child_names'] = $child_names;
+        $this->container['childNames'] = $childNames;
 
         return $this;
     }
 
     /**
-     * Gets grade_numeric
+     * Gets gradeNumeric
      *
      * @return int|null
      */
     public function getGradeNumeric()
     {
-        return $this->container['grade_numeric'];
+        return $this->container['gradeNumeric'];
     }
 
     /**
-     * Sets grade_numeric
+     * Sets gradeNumeric
      *
-     * @param int|null $grade_numeric The numeric grade of the user
+     * @param int|null $gradeNumeric The numeric grade of the user
      *
      * @return self
      */
-    public function setGradeNumeric($grade_numeric)
+    public function setGradeNumeric($gradeNumeric)
     {
-        if (is_null($grade_numeric)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_numeric');
+        if (is_null($gradeNumeric)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeNumeric');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_numeric', $nullablesSetToNull);
+            $index = array_search('gradeNumeric', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_numeric'] = $grade_numeric;
+        $this->container['gradeNumeric'] = $gradeNumeric;
 
         return $this;
     }
 
     /**
-     * Gets grade_numeric_display
+     * Gets gradeNumericDisplay
      *
      * @return string|null
      */
     public function getGradeNumericDisplay()
     {
-        return $this->container['grade_numeric_display'];
+        return $this->container['gradeNumericDisplay'];
     }
 
     /**
-     * Sets grade_numeric_display
+     * Sets gradeNumericDisplay
      *
-     * @param string|null $grade_numeric_display The way the numeric grade should be displayed
+     * @param string|null $gradeNumericDisplay The way the numeric grade should be displayed
      *
      * @return self
      */
-    public function setGradeNumericDisplay($grade_numeric_display)
+    public function setGradeNumericDisplay($gradeNumericDisplay)
     {
-        if (is_null($grade_numeric_display)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_numeric_display');
+        if (is_null($gradeNumericDisplay)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeNumericDisplay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_numeric_display', $nullablesSetToNull);
+            $index = array_search('gradeNumericDisplay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_numeric_display'] = $grade_numeric_display;
+        $this->container['gradeNumericDisplay'] = $gradeNumericDisplay;
 
         return $this;
     }
 
     /**
-     * Gets total_count
+     * Gets totalCount
      *
      * @return int|null
      */
     public function getTotalCount()
     {
-        return $this->container['total_count'];
+        return $this->container['totalCount'];
     }
 
     /**
-     * Sets total_count
+     * Sets totalCount
      *
-     * @param int|null $total_count The total count of records
+     * @param int|null $totalCount The total count of records
      *
      * @return self
      */
-    public function setTotalCount($total_count)
+    public function setTotalCount($totalCount)
     {
-        if (is_null($total_count)) {
-            array_push($this->openAPINullablesSetToNull, 'total_count');
+        if (is_null($totalCount)) {
+            array_push($this->openAPINullablesSetToNull, 'totalCount');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('total_count', $nullablesSetToNull);
+            $index = array_search('totalCount', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['total_count'] = $total_count;
+        $this->container['totalCount'] = $totalCount;
 
         return $this;
     }
@@ -1706,137 +1706,137 @@ class DirectoryResult implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_address_id
+     * Gets preferredAddressId
      *
      * @return int|null
      */
     public function getPreferredAddressId()
     {
-        return $this->container['preferred_address_id'];
+        return $this->container['preferredAddressId'];
     }
 
     /**
-     * Sets preferred_address_id
+     * Sets preferredAddressId
      *
-     * @param int|null $preferred_address_id The Id of the preferred address for the user
+     * @param int|null $preferredAddressId The Id of the preferred address for the user
      *
      * @return self
      */
-    public function setPreferredAddressId($preferred_address_id)
+    public function setPreferredAddressId($preferredAddressId)
     {
-        if (is_null($preferred_address_id)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_address_id');
+        if (is_null($preferredAddressId)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredAddressId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_address_id', $nullablesSetToNull);
+            $index = array_search('preferredAddressId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_address_id'] = $preferred_address_id;
+        $this->container['preferredAddressId'] = $preferredAddressId;
 
         return $this;
     }
 
     /**
-     * Gets preferred_address_lat
+     * Gets preferredAddressLat
      *
      * @return float|null
      */
     public function getPreferredAddressLat()
     {
-        return $this->container['preferred_address_lat'];
+        return $this->container['preferredAddressLat'];
     }
 
     /**
-     * Sets preferred_address_lat
+     * Sets preferredAddressLat
      *
-     * @param float|null $preferred_address_lat Preferred address latitude
+     * @param float|null $preferredAddressLat Preferred address latitude
      *
      * @return self
      */
-    public function setPreferredAddressLat($preferred_address_lat)
+    public function setPreferredAddressLat($preferredAddressLat)
     {
-        if (is_null($preferred_address_lat)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_address_lat');
+        if (is_null($preferredAddressLat)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredAddressLat');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_address_lat', $nullablesSetToNull);
+            $index = array_search('preferredAddressLat', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_address_lat'] = $preferred_address_lat;
+        $this->container['preferredAddressLat'] = $preferredAddressLat;
 
         return $this;
     }
 
     /**
-     * Gets preferred_address_lng
+     * Gets preferredAddressLng
      *
      * @return float|null
      */
     public function getPreferredAddressLng()
     {
-        return $this->container['preferred_address_lng'];
+        return $this->container['preferredAddressLng'];
     }
 
     /**
-     * Sets preferred_address_lng
+     * Sets preferredAddressLng
      *
-     * @param float|null $preferred_address_lng Preferred address longitude
+     * @param float|null $preferredAddressLng Preferred address longitude
      *
      * @return self
      */
-    public function setPreferredAddressLng($preferred_address_lng)
+    public function setPreferredAddressLng($preferredAddressLng)
     {
-        if (is_null($preferred_address_lng)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_address_lng');
+        if (is_null($preferredAddressLng)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredAddressLng');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_address_lng', $nullablesSetToNull);
+            $index = array_search('preferredAddressLng', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_address_lng'] = $preferred_address_lng;
+        $this->container['preferredAddressLng'] = $preferredAddressLng;
 
         return $this;
     }
 
     /**
-     * Gets job_title
+     * Gets jobTitle
      *
      * @return string|null
      */
     public function getJobTitle()
     {
-        return $this->container['job_title'];
+        return $this->container['jobTitle'];
     }
 
     /**
-     * Sets job_title
+     * Sets jobTitle
      *
-     * @param string|null $job_title The user's job title
+     * @param string|null $jobTitle The user's job title
      *
      * @return self
      */
-    public function setJobTitle($job_title)
+    public function setJobTitle($jobTitle)
     {
-        if (is_null($job_title)) {
-            array_push($this->openAPINullablesSetToNull, 'job_title');
+        if (is_null($jobTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'jobTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('job_title', $nullablesSetToNull);
+            $index = array_search('jobTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['job_title'] = $job_title;
+        $this->container['jobTitle'] = $jobTitle;
 
         return $this;
     }

@@ -86,9 +86,9 @@ class BlackbaudSKY extends AbstractProvider
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-      self::ACCESS_KEY => $this->accessKey,
-      "Authorization" => "Bearer " . $token,
-    ];
+            self::ACCESS_KEY => $this->accessKey,
+            "Authorization" => "Bearer " . $token,
+        ];
     }
 
     public function getAccessToken($grant = "", array $options = [])

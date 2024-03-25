@@ -1327,18 +1327,18 @@ class TypesApi
      *
      * Types table values (BETA)
      *
-     * @param  int $table_id Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
-     * @param  string $table_name The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
-     * @param  bool $include_inactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
+     * @param  int $tableId Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
+     * @param  string $tableName The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
+     * @param  bool $includeInactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TypesTablevaluesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\TableValueCollection
      */
-    public function v1TypesTablevaluesGet($table_id = 0, $table_name = null, $include_inactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
+    public function v1TypesTablevaluesGet($tableId = 0, $tableName = null, $includeInactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
     {
-        [$response] = $this->v1TypesTablevaluesGetWithHttpInfo($table_id, $table_name, $include_inactive, $contentType);
+        [$response] = $this->v1TypesTablevaluesGetWithHttpInfo($tableId, $tableName, $includeInactive, $contentType);
         return $response;
     }
 
@@ -1347,18 +1347,18 @@ class TypesApi
      *
      * Types table values (BETA)
      *
-     * @param  int $table_id Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
-     * @param  string $table_name The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
-     * @param  bool $include_inactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
+     * @param  int $tableId Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
+     * @param  string $tableName The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
+     * @param  bool $includeInactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TypesTablevaluesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\TableValueCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1TypesTablevaluesGetWithHttpInfo($table_id = 0, $table_name = null, $include_inactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
+    public function v1TypesTablevaluesGetWithHttpInfo($tableId = 0, $tableName = null, $includeInactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
     {
-        $request = $this->v1TypesTablevaluesGetRequest($table_id, $table_name, $include_inactive, $contentType);
+        $request = $this->v1TypesTablevaluesGetRequest($tableId, $tableName, $includeInactive, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1473,17 +1473,17 @@ class TypesApi
      *
      * Types table values (BETA)
      *
-     * @param  int $table_id Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
-     * @param  string $table_name The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
-     * @param  bool $include_inactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
+     * @param  int $tableId Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
+     * @param  string $tableName The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
+     * @param  bool $includeInactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TypesTablevaluesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TypesTablevaluesGetAsync($table_id = 0, $table_name = null, $include_inactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
+    public function v1TypesTablevaluesGetAsync($tableId = 0, $tableName = null, $includeInactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
     {
-        return $this->v1TypesTablevaluesGetAsyncWithHttpInfo($table_id, $table_name, $include_inactive, $contentType)
+        return $this->v1TypesTablevaluesGetAsyncWithHttpInfo($tableId, $tableName, $includeInactive, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1496,18 +1496,18 @@ class TypesApi
      *
      * Types table values (BETA)
      *
-     * @param  int $table_id Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
-     * @param  string $table_name The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
-     * @param  bool $include_inactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
+     * @param  int $tableId Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
+     * @param  string $tableName The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
+     * @param  bool $includeInactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TypesTablevaluesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TypesTablevaluesGetAsyncWithHttpInfo($table_id = 0, $table_name = null, $include_inactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
+    public function v1TypesTablevaluesGetAsyncWithHttpInfo($tableId = 0, $tableName = null, $includeInactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
     {
         $returnType = '\SKY\School\Model\TableValueCollection';
-        $request = $this->v1TypesTablevaluesGetRequest($table_id, $table_name, $include_inactive, $contentType);
+        $request = $this->v1TypesTablevaluesGetRequest($tableId, $tableName, $includeInactive, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1548,15 +1548,15 @@ class TypesApi
     /**
      * Create request for operation 'v1TypesTablevaluesGet'
      *
-     * @param  int $table_id Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
-     * @param  string $table_name The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
-     * @param  bool $include_inactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
+     * @param  int $tableId Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional, default to 0)
+     * @param  string $tableName The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. (optional)
+     * @param  bool $includeInactive If set to true, returns inactive items for the table. Defaults to false. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TypesTablevaluesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1TypesTablevaluesGetRequest($table_id = 0, $table_name = null, $include_inactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
+    public function v1TypesTablevaluesGetRequest($tableId = 0, $tableName = null, $includeInactive = false, string $contentType = self::contentTypes['v1TypesTablevaluesGet'][0])
     {
 
 
@@ -1572,7 +1572,7 @@ class TypesApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $table_id,
+            $tableId,
             'tableId', // param base name
             'integer', // openApiType
             'form', // style
@@ -1581,7 +1581,7 @@ class TypesApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $table_name,
+            $tableName,
             'tableName', // param base name
             'string', // openApiType
             'form', // style
@@ -1590,7 +1590,7 @@ class TypesApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_inactive,
+            $includeInactive,
             'includeInactive', // param base name
             'boolean', // openApiType
             'form', // style

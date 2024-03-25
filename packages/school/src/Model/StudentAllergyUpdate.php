@@ -58,13 +58,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
         'notes' => 'string',
-        'allergy_signs' => 'string',
-        'minor_reaction_response' => 'string',
-        'major_reaction_response' => 'string',
-        'role_access' => '\SKY\School\Model\MedicalSecurityRole[]',
+        'allergySigns' => 'string',
+        'minorReactionResponse' => 'string',
+        'majorReactionResponse' => 'string',
+        'roleAccess' => '\SKY\School\Model\MedicalSecurityRole[]',
         'medications' => 'int[]',
     ];
 
@@ -76,13 +76,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
         'notes' => null,
-        'allergy_signs' => null,
-        'minor_reaction_response' => null,
-        'major_reaction_response' => null,
-        'role_access' => null,
+        'allergySigns' => null,
+        'minorReactionResponse' => null,
+        'majorReactionResponse' => null,
+        'roleAccess' => null,
         'medications' => 'int32',
     ];
 
@@ -92,13 +92,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'date_as_of' => true,
-        'date_until' => true,
+        'dateAsOf' => true,
+        'dateUntil' => true,
         'notes' => true,
-        'allergy_signs' => true,
-        'minor_reaction_response' => true,
-        'major_reaction_response' => true,
-        'role_access' => true,
+        'allergySigns' => true,
+        'minorReactionResponse' => true,
+        'majorReactionResponse' => true,
+        'roleAccess' => true,
         'medications' => true,
     ];
 
@@ -188,13 +188,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
         'notes' => 'notes',
-        'allergy_signs' => 'allergy_signs',
-        'minor_reaction_response' => 'minor_reaction_response',
-        'major_reaction_response' => 'major_reaction_response',
-        'role_access' => 'role_access',
+        'allergySigns' => 'allergy_signs',
+        'minorReactionResponse' => 'minor_reaction_response',
+        'majorReactionResponse' => 'major_reaction_response',
+        'roleAccess' => 'role_access',
         'medications' => 'medications',
     ];
 
@@ -204,13 +204,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
         'notes' => 'setNotes',
-        'allergy_signs' => 'setAllergySigns',
-        'minor_reaction_response' => 'setMinorReactionResponse',
-        'major_reaction_response' => 'setMajorReactionResponse',
-        'role_access' => 'setRoleAccess',
+        'allergySigns' => 'setAllergySigns',
+        'minorReactionResponse' => 'setMinorReactionResponse',
+        'majorReactionResponse' => 'setMajorReactionResponse',
+        'roleAccess' => 'setRoleAccess',
         'medications' => 'setMedications',
     ];
 
@@ -220,13 +220,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
         'notes' => 'getNotes',
-        'allergy_signs' => 'getAllergySigns',
-        'minor_reaction_response' => 'getMinorReactionResponse',
-        'major_reaction_response' => 'getMajorReactionResponse',
-        'role_access' => 'getRoleAccess',
+        'allergySigns' => 'getAllergySigns',
+        'minorReactionResponse' => 'getMinorReactionResponse',
+        'majorReactionResponse' => 'getMajorReactionResponse',
+        'roleAccess' => 'getRoleAccess',
         'medications' => 'getMedications',
     ];
 
@@ -287,13 +287,13 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('allergy_signs', $data ?? [], null);
-        $this->setIfExists('minor_reaction_response', $data ?? [], null);
-        $this->setIfExists('major_reaction_response', $data ?? [], null);
-        $this->setIfExists('role_access', $data ?? [], null);
+        $this->setIfExists('allergySigns', $data ?? [], null);
+        $this->setIfExists('minorReactionResponse', $data ?? [], null);
+        $this->setIfExists('majorReactionResponse', $data ?? [], null);
+        $this->setIfExists('roleAccess', $data ?? [], null);
         $this->setIfExists('medications', $data ?? [], null);
     }
 
@@ -340,69 +340,69 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime|null
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime|null $date_as_of The date the allergy began. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateAsOf The date the allergy began. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            array_push($this->openAPINullablesSetToNull, 'date_as_of');
+        if (is_null($dateAsOf)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAsOf');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_as_of', $nullablesSetToNull);
+            $index = array_search('dateAsOf', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The date the allergy ended. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateUntil The date the allergy ended. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }
@@ -442,137 +442,137 @@ class StudentAllergyUpdate implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets allergy_signs
+     * Gets allergySigns
      *
      * @return string|null
      */
     public function getAllergySigns()
     {
-        return $this->container['allergy_signs'];
+        return $this->container['allergySigns'];
     }
 
     /**
-     * Sets allergy_signs
+     * Sets allergySigns
      *
-     * @param string|null $allergy_signs The signs of an allergic reaction
+     * @param string|null $allergySigns The signs of an allergic reaction
      *
      * @return self
      */
-    public function setAllergySigns($allergy_signs)
+    public function setAllergySigns($allergySigns)
     {
-        if (is_null($allergy_signs)) {
-            array_push($this->openAPINullablesSetToNull, 'allergy_signs');
+        if (is_null($allergySigns)) {
+            array_push($this->openAPINullablesSetToNull, 'allergySigns');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('allergy_signs', $nullablesSetToNull);
+            $index = array_search('allergySigns', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['allergy_signs'] = $allergy_signs;
+        $this->container['allergySigns'] = $allergySigns;
 
         return $this;
     }
 
     /**
-     * Gets minor_reaction_response
+     * Gets minorReactionResponse
      *
      * @return string|null
      */
     public function getMinorReactionResponse()
     {
-        return $this->container['minor_reaction_response'];
+        return $this->container['minorReactionResponse'];
     }
 
     /**
-     * Sets minor_reaction_response
+     * Sets minorReactionResponse
      *
-     * @param string|null $minor_reaction_response The response for a minor allergic reaction
+     * @param string|null $minorReactionResponse The response for a minor allergic reaction
      *
      * @return self
      */
-    public function setMinorReactionResponse($minor_reaction_response)
+    public function setMinorReactionResponse($minorReactionResponse)
     {
-        if (is_null($minor_reaction_response)) {
-            array_push($this->openAPINullablesSetToNull, 'minor_reaction_response');
+        if (is_null($minorReactionResponse)) {
+            array_push($this->openAPINullablesSetToNull, 'minorReactionResponse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('minor_reaction_response', $nullablesSetToNull);
+            $index = array_search('minorReactionResponse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['minor_reaction_response'] = $minor_reaction_response;
+        $this->container['minorReactionResponse'] = $minorReactionResponse;
 
         return $this;
     }
 
     /**
-     * Gets major_reaction_response
+     * Gets majorReactionResponse
      *
      * @return string|null
      */
     public function getMajorReactionResponse()
     {
-        return $this->container['major_reaction_response'];
+        return $this->container['majorReactionResponse'];
     }
 
     /**
-     * Sets major_reaction_response
+     * Sets majorReactionResponse
      *
-     * @param string|null $major_reaction_response The response for a major allergic reaction
+     * @param string|null $majorReactionResponse The response for a major allergic reaction
      *
      * @return self
      */
-    public function setMajorReactionResponse($major_reaction_response)
+    public function setMajorReactionResponse($majorReactionResponse)
     {
-        if (is_null($major_reaction_response)) {
-            array_push($this->openAPINullablesSetToNull, 'major_reaction_response');
+        if (is_null($majorReactionResponse)) {
+            array_push($this->openAPINullablesSetToNull, 'majorReactionResponse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('major_reaction_response', $nullablesSetToNull);
+            $index = array_search('majorReactionResponse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['major_reaction_response'] = $major_reaction_response;
+        $this->container['majorReactionResponse'] = $majorReactionResponse;
 
         return $this;
     }
 
     /**
-     * Gets role_access
+     * Gets roleAccess
      *
      * @return \SKY\School\Model\MedicalSecurityRole[]|null
      */
     public function getRoleAccess()
     {
-        return $this->container['role_access'];
+        return $this->container['roleAccess'];
     }
 
     /**
-     * Sets role_access
+     * Sets roleAccess
      *
-     * @param \SKY\School\Model\MedicalSecurityRole[]|null $role_access Array of roles. If a role is not included, default access will be set to true
+     * @param \SKY\School\Model\MedicalSecurityRole[]|null $roleAccess Array of roles. If a role is not included, default access will be set to true
      *
      * @return self
      */
-    public function setRoleAccess($role_access)
+    public function setRoleAccess($roleAccess)
     {
-        if (is_null($role_access)) {
-            array_push($this->openAPINullablesSetToNull, 'role_access');
+        if (is_null($roleAccess)) {
+            array_push($this->openAPINullablesSetToNull, 'roleAccess');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_access', $nullablesSetToNull);
+            $index = array_search('roleAccess', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_access'] = $role_access;
+        $this->container['roleAccess'] = $roleAccess;
 
         return $this;
     }

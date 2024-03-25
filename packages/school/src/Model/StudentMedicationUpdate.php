@@ -58,13 +58,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
         'location' => 'string',
         'dosage' => 'string',
-        'despense_times_a_day' => 'int',
-        'dispense_frequency' => 'string',
-        'dispense_days' => '\SKY\School\Model\Days',
+        'despenseTimesADay' => 'int',
+        'dispenseFrequency' => 'string',
+        'dispenseDays' => '\SKY\School\Model\Days',
         'conditions' => 'int[]',
         'allergies' => 'int[]',
     ];
@@ -77,13 +77,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
         'location' => null,
         'dosage' => null,
-        'despense_times_a_day' => 'int32',
-        'dispense_frequency' => null,
-        'dispense_days' => null,
+        'despenseTimesADay' => 'int32',
+        'dispenseFrequency' => null,
+        'dispenseDays' => null,
         'conditions' => 'int32',
         'allergies' => 'int32',
     ];
@@ -94,13 +94,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'date_as_of' => true,
-        'date_until' => true,
+        'dateAsOf' => true,
+        'dateUntil' => true,
         'location' => true,
         'dosage' => true,
-        'despense_times_a_day' => false,
-        'dispense_frequency' => true,
-        'dispense_days' => false,
+        'despenseTimesADay' => false,
+        'dispenseFrequency' => true,
+        'dispenseDays' => false,
         'conditions' => true,
         'allergies' => true,
     ];
@@ -191,13 +191,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
         'location' => 'location',
         'dosage' => 'dosage',
-        'despense_times_a_day' => 'despense_times_a_day',
-        'dispense_frequency' => 'dispense_frequency',
-        'dispense_days' => 'dispense_days',
+        'despenseTimesADay' => 'despense_times_a_day',
+        'dispenseFrequency' => 'dispense_frequency',
+        'dispenseDays' => 'dispense_days',
         'conditions' => 'conditions',
         'allergies' => 'allergies',
     ];
@@ -208,13 +208,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
         'location' => 'setLocation',
         'dosage' => 'setDosage',
-        'despense_times_a_day' => 'setDespenseTimesADay',
-        'dispense_frequency' => 'setDispenseFrequency',
-        'dispense_days' => 'setDispenseDays',
+        'despenseTimesADay' => 'setDespenseTimesADay',
+        'dispenseFrequency' => 'setDispenseFrequency',
+        'dispenseDays' => 'setDispenseDays',
         'conditions' => 'setConditions',
         'allergies' => 'setAllergies',
     ];
@@ -225,13 +225,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
         'location' => 'getLocation',
         'dosage' => 'getDosage',
-        'despense_times_a_day' => 'getDespenseTimesADay',
-        'dispense_frequency' => 'getDispenseFrequency',
-        'dispense_days' => 'getDispenseDays',
+        'despenseTimesADay' => 'getDespenseTimesADay',
+        'dispenseFrequency' => 'getDispenseFrequency',
+        'dispenseDays' => 'getDispenseDays',
         'conditions' => 'getConditions',
         'allergies' => 'getAllergies',
     ];
@@ -293,13 +293,13 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
         $this->setIfExists('dosage', $data ?? [], null);
-        $this->setIfExists('despense_times_a_day', $data ?? [], null);
-        $this->setIfExists('dispense_frequency', $data ?? [], null);
-        $this->setIfExists('dispense_days', $data ?? [], null);
+        $this->setIfExists('despenseTimesADay', $data ?? [], null);
+        $this->setIfExists('dispenseFrequency', $data ?? [], null);
+        $this->setIfExists('dispenseDays', $data ?? [], null);
         $this->setIfExists('conditions', $data ?? [], null);
         $this->setIfExists('allergies', $data ?? [], null);
     }
@@ -347,69 +347,69 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime|null
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime|null $date_as_of The date to begin the medication. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateAsOf The date to begin the medication. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            array_push($this->openAPINullablesSetToNull, 'date_as_of');
+        if (is_null($dateAsOf)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAsOf');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_as_of', $nullablesSetToNull);
+            $index = array_search('dateAsOf', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The date to end the medication. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateUntil The date to end the medication. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }
@@ -483,89 +483,89 @@ class StudentMedicationUpdate implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets despense_times_a_day
+     * Gets despenseTimesADay
      *
      * @return int|null
      */
     public function getDespenseTimesADay()
     {
-        return $this->container['despense_times_a_day'];
+        return $this->container['despenseTimesADay'];
     }
 
     /**
-     * Sets despense_times_a_day
+     * Sets despenseTimesADay
      *
-     * @param int|null $despense_times_a_day The times per day to dispense the medication
+     * @param int|null $despenseTimesADay The times per day to dispense the medication
      *
      * @return self
      */
-    public function setDespenseTimesADay($despense_times_a_day)
+    public function setDespenseTimesADay($despenseTimesADay)
     {
-        if (is_null($despense_times_a_day)) {
-            throw new \InvalidArgumentException('non-nullable despense_times_a_day cannot be null');
+        if (is_null($despenseTimesADay)) {
+            throw new \InvalidArgumentException('non-nullable despenseTimesADay cannot be null');
         }
-        $this->container['despense_times_a_day'] = $despense_times_a_day;
+        $this->container['despenseTimesADay'] = $despenseTimesADay;
 
         return $this;
     }
 
     /**
-     * Gets dispense_frequency
+     * Gets dispenseFrequency
      *
      * @return string|null
      */
     public function getDispenseFrequency()
     {
-        return $this->container['dispense_frequency'];
+        return $this->container['dispenseFrequency'];
     }
 
     /**
-     * Sets dispense_frequency
+     * Sets dispenseFrequency
      *
-     * @param string|null $dispense_frequency The weekly frequency to dispense the medication. Allowed values: everyday, asneeded, specificdays.
+     * @param string|null $dispenseFrequency The weekly frequency to dispense the medication. Allowed values: everyday, asneeded, specificdays.
      *
      * @return self
      */
-    public function setDispenseFrequency($dispense_frequency)
+    public function setDispenseFrequency($dispenseFrequency)
     {
-        if (is_null($dispense_frequency)) {
-            array_push($this->openAPINullablesSetToNull, 'dispense_frequency');
+        if (is_null($dispenseFrequency)) {
+            array_push($this->openAPINullablesSetToNull, 'dispenseFrequency');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dispense_frequency', $nullablesSetToNull);
+            $index = array_search('dispenseFrequency', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dispense_frequency'] = $dispense_frequency;
+        $this->container['dispenseFrequency'] = $dispenseFrequency;
 
         return $this;
     }
 
     /**
-     * Gets dispense_days
+     * Gets dispenseDays
      *
      * @return \SKY\School\Model\Days|null
      */
     public function getDispenseDays()
     {
-        return $this->container['dispense_days'];
+        return $this->container['dispenseDays'];
     }
 
     /**
-     * Sets dispense_days
+     * Sets dispenseDays
      *
-     * @param \SKY\School\Model\Days|null $dispense_days dispense_days
+     * @param \SKY\School\Model\Days|null $dispenseDays dispenseDays
      *
      * @return self
      */
-    public function setDispenseDays($dispense_days)
+    public function setDispenseDays($dispenseDays)
     {
-        if (is_null($dispense_days)) {
-            throw new \InvalidArgumentException('non-nullable dispense_days cannot be null');
+        if (is_null($dispenseDays)) {
+            throw new \InvalidArgumentException('non-nullable dispenseDays cannot be null');
         }
-        $this->container['dispense_days'] = $dispense_days;
+        $this->container['dispenseDays'] = $dispenseDays;
 
         return $this;
     }

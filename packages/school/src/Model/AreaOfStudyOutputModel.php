@@ -59,9 +59,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'primary_area_of_study_id' => 'int',
+        'primaryAreaOfStudyId' => 'int',
         'description' => 'string',
-        'award_level' => 'int',
+        'awardLevel' => 'int',
         'type' => 'string',
         'degree' => '\SKY\School\Model\Degree',
     ];
@@ -75,9 +75,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'primary_area_of_study_id' => 'int32',
+        'primaryAreaOfStudyId' => 'int32',
         'description' => null,
-        'award_level' => 'int32',
+        'awardLevel' => 'int32',
         'type' => null,
         'degree' => null,
     ];
@@ -89,9 +89,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'primary_area_of_study_id' => true,
+        'primaryAreaOfStudyId' => true,
         'description' => true,
-        'award_level' => true,
+        'awardLevel' => true,
         'type' => true,
         'degree' => false,
     ];
@@ -183,9 +183,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'primary_area_of_study_id' => 'primary_area_of_study_id',
+        'primaryAreaOfStudyId' => 'primary_area_of_study_id',
         'description' => 'description',
-        'award_level' => 'award_level',
+        'awardLevel' => 'award_level',
         'type' => 'type',
         'degree' => 'degree',
     ];
@@ -197,9 +197,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'id' => 'setId',
-        'primary_area_of_study_id' => 'setPrimaryAreaOfStudyId',
+        'primaryAreaOfStudyId' => 'setPrimaryAreaOfStudyId',
         'description' => 'setDescription',
-        'award_level' => 'setAwardLevel',
+        'awardLevel' => 'setAwardLevel',
         'type' => 'setType',
         'degree' => 'setDegree',
     ];
@@ -211,9 +211,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'id' => 'getId',
-        'primary_area_of_study_id' => 'getPrimaryAreaOfStudyId',
+        'primaryAreaOfStudyId' => 'getPrimaryAreaOfStudyId',
         'description' => 'getDescription',
-        'award_level' => 'getAwardLevel',
+        'awardLevel' => 'getAwardLevel',
         'type' => 'getType',
         'degree' => 'getDegree',
     ];
@@ -276,9 +276,9 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('primary_area_of_study_id', $data ?? [], null);
+        $this->setIfExists('primaryAreaOfStudyId', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('award_level', $data ?? [], null);
+        $this->setIfExists('awardLevel', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('degree', $data ?? [], null);
     }
@@ -360,35 +360,35 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets primary_area_of_study_id
+     * Gets primaryAreaOfStudyId
      *
      * @return int|null
      */
     public function getPrimaryAreaOfStudyId()
     {
-        return $this->container['primary_area_of_study_id'];
+        return $this->container['primaryAreaOfStudyId'];
     }
 
     /**
-     * Sets primary_area_of_study_id
+     * Sets primaryAreaOfStudyId
      *
-     * @param int|null $primary_area_of_study_id
+     * @param int|null $primaryAreaOfStudyId
      *
      * @return self
      */
-    public function setPrimaryAreaOfStudyId($primary_area_of_study_id)
+    public function setPrimaryAreaOfStudyId($primaryAreaOfStudyId)
     {
-        if (is_null($primary_area_of_study_id)) {
-            array_push($this->openAPINullablesSetToNull, 'primary_area_of_study_id');
+        if (is_null($primaryAreaOfStudyId)) {
+            array_push($this->openAPINullablesSetToNull, 'primaryAreaOfStudyId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('primary_area_of_study_id', $nullablesSetToNull);
+            $index = array_search('primaryAreaOfStudyId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['primary_area_of_study_id'] = $primary_area_of_study_id;
+        $this->container['primaryAreaOfStudyId'] = $primaryAreaOfStudyId;
 
         return $this;
     }
@@ -428,35 +428,35 @@ class AreaOfStudyOutputModel implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets award_level
+     * Gets awardLevel
      *
      * @return int|null
      */
     public function getAwardLevel()
     {
-        return $this->container['award_level'];
+        return $this->container['awardLevel'];
     }
 
     /**
-     * Sets award_level
+     * Sets awardLevel
      *
-     * @param int|null $award_level The designated award level for this area of study
+     * @param int|null $awardLevel The designated award level for this area of study
      *
      * @return self
      */
-    public function setAwardLevel($award_level)
+    public function setAwardLevel($awardLevel)
     {
-        if (is_null($award_level)) {
-            array_push($this->openAPINullablesSetToNull, 'award_level');
+        if (is_null($awardLevel)) {
+            array_push($this->openAPINullablesSetToNull, 'awardLevel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('award_level', $nullablesSetToNull);
+            $index = array_search('awardLevel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['award_level'] = $award_level;
+        $this->container['awardLevel'] = $awardLevel;
 
         return $this;
     }

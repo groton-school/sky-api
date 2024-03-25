@@ -58,17 +58,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'offering_id' => 'int',
-        'course_length' => 'int',
-        'course_code' => 'string',
-        'course_title' => 'string',
-        'course_description' => 'string',
+        'offeringId' => 'int',
+        'courseLength' => 'int',
+        'courseCode' => 'string',
+        'courseTitle' => 'string',
+        'courseDescription' => 'string',
         'inactive' => 'bool',
-        'level_num' => 'int',
-        'block_type_id' => 'string',
-        'room_type_id' => 'int',
-        'room_id' => 'int',
-        'building_id' => 'int',
+        'levelNum' => 'int',
+        'blockTypeId' => 'string',
+        'roomTypeId' => 'int',
+        'roomId' => 'int',
+        'buildingId' => 'int',
         'credits' => 'float',
     ];
 
@@ -80,17 +80,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'offering_id' => 'int32',
-        'course_length' => 'int32',
-        'course_code' => null,
-        'course_title' => null,
-        'course_description' => null,
+        'offeringId' => 'int32',
+        'courseLength' => 'int32',
+        'courseCode' => null,
+        'courseTitle' => null,
+        'courseDescription' => null,
         'inactive' => null,
-        'level_num' => 'int32',
-        'block_type_id' => null,
-        'room_type_id' => 'int32',
-        'room_id' => 'int32',
-        'building_id' => 'int32',
+        'levelNum' => 'int32',
+        'blockTypeId' => null,
+        'roomTypeId' => 'int32',
+        'roomId' => 'int32',
+        'buildingId' => 'int32',
         'credits' => 'float',
     ];
 
@@ -100,17 +100,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'offering_id' => false,
-        'course_length' => true,
-        'course_code' => true,
-        'course_title' => true,
-        'course_description' => true,
+        'offeringId' => false,
+        'courseLength' => true,
+        'courseCode' => true,
+        'courseTitle' => true,
+        'courseDescription' => true,
         'inactive' => false,
-        'level_num' => true,
-        'block_type_id' => true,
-        'room_type_id' => true,
-        'room_id' => true,
-        'building_id' => true,
+        'levelNum' => true,
+        'blockTypeId' => true,
+        'roomTypeId' => true,
+        'roomId' => true,
+        'buildingId' => true,
         'credits' => true,
     ];
 
@@ -200,17 +200,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'offering_id' => 'offering_id',
-        'course_length' => 'course_length',
-        'course_code' => 'course_code',
-        'course_title' => 'course_title',
-        'course_description' => 'course_description',
+        'offeringId' => 'offering_id',
+        'courseLength' => 'course_length',
+        'courseCode' => 'course_code',
+        'courseTitle' => 'course_title',
+        'courseDescription' => 'course_description',
         'inactive' => 'inactive',
-        'level_num' => 'level_num',
-        'block_type_id' => 'block_type_id',
-        'room_type_id' => 'room_type_id',
-        'room_id' => 'room_id',
-        'building_id' => 'building_id',
+        'levelNum' => 'level_num',
+        'blockTypeId' => 'block_type_id',
+        'roomTypeId' => 'room_type_id',
+        'roomId' => 'room_id',
+        'buildingId' => 'building_id',
         'credits' => 'credits',
     ];
 
@@ -220,17 +220,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'offering_id' => 'setOfferingId',
-        'course_length' => 'setCourseLength',
-        'course_code' => 'setCourseCode',
-        'course_title' => 'setCourseTitle',
-        'course_description' => 'setCourseDescription',
+        'offeringId' => 'setOfferingId',
+        'courseLength' => 'setCourseLength',
+        'courseCode' => 'setCourseCode',
+        'courseTitle' => 'setCourseTitle',
+        'courseDescription' => 'setCourseDescription',
         'inactive' => 'setInactive',
-        'level_num' => 'setLevelNum',
-        'block_type_id' => 'setBlockTypeId',
-        'room_type_id' => 'setRoomTypeId',
-        'room_id' => 'setRoomId',
-        'building_id' => 'setBuildingId',
+        'levelNum' => 'setLevelNum',
+        'blockTypeId' => 'setBlockTypeId',
+        'roomTypeId' => 'setRoomTypeId',
+        'roomId' => 'setRoomId',
+        'buildingId' => 'setBuildingId',
         'credits' => 'setCredits',
     ];
 
@@ -240,17 +240,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'offering_id' => 'getOfferingId',
-        'course_length' => 'getCourseLength',
-        'course_code' => 'getCourseCode',
-        'course_title' => 'getCourseTitle',
-        'course_description' => 'getCourseDescription',
+        'offeringId' => 'getOfferingId',
+        'courseLength' => 'getCourseLength',
+        'courseCode' => 'getCourseCode',
+        'courseTitle' => 'getCourseTitle',
+        'courseDescription' => 'getCourseDescription',
         'inactive' => 'getInactive',
-        'level_num' => 'getLevelNum',
-        'block_type_id' => 'getBlockTypeId',
-        'room_type_id' => 'getRoomTypeId',
-        'room_id' => 'getRoomId',
-        'building_id' => 'getBuildingId',
+        'levelNum' => 'getLevelNum',
+        'blockTypeId' => 'getBlockTypeId',
+        'roomTypeId' => 'getRoomTypeId',
+        'roomId' => 'getRoomId',
+        'buildingId' => 'getBuildingId',
         'credits' => 'getCredits',
     ];
 
@@ -332,17 +332,17 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('offering_id', $data ?? [], null);
-        $this->setIfExists('course_length', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
-        $this->setIfExists('course_title', $data ?? [], null);
-        $this->setIfExists('course_description', $data ?? [], null);
+        $this->setIfExists('offeringId', $data ?? [], null);
+        $this->setIfExists('courseLength', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
+        $this->setIfExists('courseTitle', $data ?? [], null);
+        $this->setIfExists('courseDescription', $data ?? [], null);
         $this->setIfExists('inactive', $data ?? [], null);
-        $this->setIfExists('level_num', $data ?? [], null);
-        $this->setIfExists('block_type_id', $data ?? [], null);
-        $this->setIfExists('room_type_id', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('building_id', $data ?? [], null);
+        $this->setIfExists('levelNum', $data ?? [], null);
+        $this->setIfExists('blockTypeId', $data ?? [], null);
+        $this->setIfExists('roomTypeId', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('buildingId', $data ?? [], null);
         $this->setIfExists('credits', $data ?? [], null);
     }
 
@@ -374,10 +374,10 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
         $invalidProperties = [];
 
         $allowedValues = $this->getBlockTypeIdAllowableValues();
-        if (!is_null($this->container['block_type_id']) && !in_array($this->container['block_type_id'], $allowedValues, true)) {
+        if (!is_null($this->container['blockTypeId']) && !in_array($this->container['blockTypeId'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'block_type_id', must be one of '%s'",
-                $this->container['block_type_id'],
+                "invalid value '%s' for 'blockTypeId', must be one of '%s'",
+                $this->container['blockTypeId'],
                 implode("', '", $allowedValues)
             );
         }
@@ -398,164 +398,164 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets offering_id
+     * Gets offeringId
      *
      * @return int|null
      */
     public function getOfferingId()
     {
-        return $this->container['offering_id'];
+        return $this->container['offeringId'];
     }
 
     /**
-     * Sets offering_id
+     * Sets offeringId
      *
-     * @param int|null $offering_id
+     * @param int|null $offeringId
      *
      * @return self
      */
-    public function setOfferingId($offering_id)
+    public function setOfferingId($offeringId)
     {
-        if (is_null($offering_id)) {
-            throw new \InvalidArgumentException('non-nullable offering_id cannot be null');
+        if (is_null($offeringId)) {
+            throw new \InvalidArgumentException('non-nullable offeringId cannot be null');
         }
-        $this->container['offering_id'] = $offering_id;
+        $this->container['offeringId'] = $offeringId;
 
         return $this;
     }
 
     /**
-     * Gets course_length
+     * Gets courseLength
      *
      * @return int|null
      */
     public function getCourseLength()
     {
-        return $this->container['course_length'];
+        return $this->container['courseLength'];
     }
 
     /**
-     * Sets course_length
+     * Sets courseLength
      *
-     * @param int|null $course_length
+     * @param int|null $courseLength
      *
      * @return self
      */
-    public function setCourseLength($course_length)
+    public function setCourseLength($courseLength)
     {
-        if (is_null($course_length)) {
-            array_push($this->openAPINullablesSetToNull, 'course_length');
+        if (is_null($courseLength)) {
+            array_push($this->openAPINullablesSetToNull, 'courseLength');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_length', $nullablesSetToNull);
+            $index = array_search('courseLength', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_length'] = $course_length;
+        $this->container['courseLength'] = $courseLength;
 
         return $this;
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code
+     * @param string|null $courseCode
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }
 
     /**
-     * Gets course_title
+     * Gets courseTitle
      *
      * @return string|null
      */
     public function getCourseTitle()
     {
-        return $this->container['course_title'];
+        return $this->container['courseTitle'];
     }
 
     /**
-     * Sets course_title
+     * Sets courseTitle
      *
-     * @param string|null $course_title
+     * @param string|null $courseTitle
      *
      * @return self
      */
-    public function setCourseTitle($course_title)
+    public function setCourseTitle($courseTitle)
     {
-        if (is_null($course_title)) {
-            array_push($this->openAPINullablesSetToNull, 'course_title');
+        if (is_null($courseTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'courseTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_title', $nullablesSetToNull);
+            $index = array_search('courseTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_title'] = $course_title;
+        $this->container['courseTitle'] = $courseTitle;
 
         return $this;
     }
 
     /**
-     * Gets course_description
+     * Gets courseDescription
      *
      * @return string|null
      */
     public function getCourseDescription()
     {
-        return $this->container['course_description'];
+        return $this->container['courseDescription'];
     }
 
     /**
-     * Sets course_description
+     * Sets courseDescription
      *
-     * @param string|null $course_description
+     * @param string|null $courseDescription
      *
      * @return self
      */
-    public function setCourseDescription($course_description)
+    public function setCourseDescription($courseDescription)
     {
-        if (is_null($course_description)) {
-            array_push($this->openAPINullablesSetToNull, 'course_description');
+        if (is_null($courseDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'courseDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_description', $nullablesSetToNull);
+            $index = array_search('courseDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_description'] = $course_description;
+        $this->container['courseDescription'] = $courseDescription;
 
         return $this;
     }
@@ -588,181 +588,181 @@ class Course implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets level_num
+     * Gets levelNum
      *
      * @return int|null
      */
     public function getLevelNum()
     {
-        return $this->container['level_num'];
+        return $this->container['levelNum'];
     }
 
     /**
-     * Sets level_num
+     * Sets levelNum
      *
-     * @param int|null $level_num
+     * @param int|null $levelNum
      *
      * @return self
      */
-    public function setLevelNum($level_num)
+    public function setLevelNum($levelNum)
     {
-        if (is_null($level_num)) {
-            array_push($this->openAPINullablesSetToNull, 'level_num');
+        if (is_null($levelNum)) {
+            array_push($this->openAPINullablesSetToNull, 'levelNum');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_num', $nullablesSetToNull);
+            $index = array_search('levelNum', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_num'] = $level_num;
+        $this->container['levelNum'] = $levelNum;
 
         return $this;
     }
 
     /**
-     * Gets block_type_id
+     * Gets blockTypeId
      *
      * @return string|null
      */
     public function getBlockTypeId()
     {
-        return $this->container['block_type_id'];
+        return $this->container['blockTypeId'];
     }
 
     /**
-     * Sets block_type_id
+     * Sets blockTypeId
      *
-     * @param string|null $block_type_id
+     * @param string|null $blockTypeId
      *
      * @return self
      */
-    public function setBlockTypeId($block_type_id)
+    public function setBlockTypeId($blockTypeId)
     {
-        if (is_null($block_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_type_id');
+        if (is_null($blockTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_type_id', $nullablesSetToNull);
+            $index = array_search('blockTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
         $allowedValues = $this->getBlockTypeIdAllowableValues();
-        if (!is_null($block_type_id) && !in_array($block_type_id, $allowedValues, true)) {
+        if (!is_null($blockTypeId) && !in_array($blockTypeId, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'block_type_id', must be one of '%s'",
-                    $block_type_id,
+                    "Invalid value '%s' for 'blockTypeId', must be one of '%s'",
+                    $blockTypeId,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['block_type_id'] = $block_type_id;
+        $this->container['blockTypeId'] = $blockTypeId;
 
         return $this;
     }
 
     /**
-     * Gets room_type_id
+     * Gets roomTypeId
      *
      * @return int|null
      */
     public function getRoomTypeId()
     {
-        return $this->container['room_type_id'];
+        return $this->container['roomTypeId'];
     }
 
     /**
-     * Sets room_type_id
+     * Sets roomTypeId
      *
-     * @param int|null $room_type_id
+     * @param int|null $roomTypeId
      *
      * @return self
      */
-    public function setRoomTypeId($room_type_id)
+    public function setRoomTypeId($roomTypeId)
     {
-        if (is_null($room_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_type_id');
+        if (is_null($roomTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_type_id', $nullablesSetToNull);
+            $index = array_search('roomTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_type_id'] = $room_type_id;
+        $this->container['roomTypeId'] = $roomTypeId;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id
+     * @param int|null $roomId
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets building_id
+     * Gets buildingId
      *
      * @return int|null
      */
     public function getBuildingId()
     {
-        return $this->container['building_id'];
+        return $this->container['buildingId'];
     }
 
     /**
-     * Sets building_id
+     * Sets buildingId
      *
-     * @param int|null $building_id
+     * @param int|null $buildingId
      *
      * @return self
      */
-    public function setBuildingId($building_id)
+    public function setBuildingId($buildingId)
     {
-        if (is_null($building_id)) {
-            array_push($this->openAPINullablesSetToNull, 'building_id');
+        if (is_null($buildingId)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_id', $nullablesSetToNull);
+            $index = array_search('buildingId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_id'] = $building_id;
+        $this->container['buildingId'] = $buildingId;
 
         return $this;
     }

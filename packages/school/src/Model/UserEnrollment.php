@@ -58,19 +58,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
+        'userId' => 'int',
         'firstname' => 'string',
         'lastname' => 'string',
-        'preferred_name' => 'string',
+        'preferredName' => 'string',
         'name' => 'string',
-        'school_year' => 'string',
-        'school_level' => '\SKY\School\Model\Level',
-        'grade_level' => '\SKY\School\Model\GradeLevel',
+        'schoolYear' => 'string',
+        'schoolLevel' => '\SKY\School\Model\Level',
+        'gradeLevel' => '\SKY\School\Model\GradeLevel',
         'repeated' => 'bool',
         'graduated' => 'bool',
-        'enroll_date' => '\DateTime',
-        'depart_date' => '\DateTime',
-        'depart_reason' => 'string',
+        'enrollDate' => '\DateTime',
+        'departDate' => '\DateTime',
+        'departReason' => 'string',
         'session' => 'string',
     ];
 
@@ -82,19 +82,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
+        'userId' => 'int32',
         'firstname' => null,
         'lastname' => null,
-        'preferred_name' => null,
+        'preferredName' => null,
         'name' => null,
-        'school_year' => null,
-        'school_level' => null,
-        'grade_level' => null,
+        'schoolYear' => null,
+        'schoolLevel' => null,
+        'gradeLevel' => null,
         'repeated' => null,
         'graduated' => null,
-        'enroll_date' => 'date-time',
-        'depart_date' => 'date-time',
-        'depart_reason' => null,
+        'enrollDate' => 'date-time',
+        'departDate' => 'date-time',
+        'departReason' => null,
         'session' => null,
     ];
 
@@ -104,19 +104,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => true,
+        'userId' => true,
         'firstname' => true,
         'lastname' => true,
-        'preferred_name' => true,
+        'preferredName' => true,
         'name' => true,
-        'school_year' => true,
-        'school_level' => false,
-        'grade_level' => false,
+        'schoolYear' => true,
+        'schoolLevel' => false,
+        'gradeLevel' => false,
         'repeated' => true,
         'graduated' => true,
-        'enroll_date' => true,
-        'depart_date' => true,
-        'depart_reason' => true,
+        'enrollDate' => true,
+        'departDate' => true,
+        'departReason' => true,
         'session' => true,
     ];
 
@@ -206,19 +206,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
+        'userId' => 'user_id',
         'firstname' => 'firstname',
         'lastname' => 'lastname',
-        'preferred_name' => 'preferred_name',
+        'preferredName' => 'preferred_name',
         'name' => 'name',
-        'school_year' => 'school_year',
-        'school_level' => 'school_level',
-        'grade_level' => 'grade_level',
+        'schoolYear' => 'school_year',
+        'schoolLevel' => 'school_level',
+        'gradeLevel' => 'grade_level',
         'repeated' => 'repeated',
         'graduated' => 'graduated',
-        'enroll_date' => 'enroll_date',
-        'depart_date' => 'depart_date',
-        'depart_reason' => 'depart_reason',
+        'enrollDate' => 'enroll_date',
+        'departDate' => 'depart_date',
+        'departReason' => 'depart_reason',
         'session' => 'session',
     ];
 
@@ -228,19 +228,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
+        'userId' => 'setUserId',
         'firstname' => 'setFirstname',
         'lastname' => 'setLastname',
-        'preferred_name' => 'setPreferredName',
+        'preferredName' => 'setPreferredName',
         'name' => 'setName',
-        'school_year' => 'setSchoolYear',
-        'school_level' => 'setSchoolLevel',
-        'grade_level' => 'setGradeLevel',
+        'schoolYear' => 'setSchoolYear',
+        'schoolLevel' => 'setSchoolLevel',
+        'gradeLevel' => 'setGradeLevel',
         'repeated' => 'setRepeated',
         'graduated' => 'setGraduated',
-        'enroll_date' => 'setEnrollDate',
-        'depart_date' => 'setDepartDate',
-        'depart_reason' => 'setDepartReason',
+        'enrollDate' => 'setEnrollDate',
+        'departDate' => 'setDepartDate',
+        'departReason' => 'setDepartReason',
         'session' => 'setSession',
     ];
 
@@ -250,19 +250,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
+        'userId' => 'getUserId',
         'firstname' => 'getFirstname',
         'lastname' => 'getLastname',
-        'preferred_name' => 'getPreferredName',
+        'preferredName' => 'getPreferredName',
         'name' => 'getName',
-        'school_year' => 'getSchoolYear',
-        'school_level' => 'getSchoolLevel',
-        'grade_level' => 'getGradeLevel',
+        'schoolYear' => 'getSchoolYear',
+        'schoolLevel' => 'getSchoolLevel',
+        'gradeLevel' => 'getGradeLevel',
         'repeated' => 'getRepeated',
         'graduated' => 'getGraduated',
-        'enroll_date' => 'getEnrollDate',
-        'depart_date' => 'getDepartDate',
-        'depart_reason' => 'getDepartReason',
+        'enrollDate' => 'getEnrollDate',
+        'departDate' => 'getDepartDate',
+        'departReason' => 'getDepartReason',
         'session' => 'getSession',
     ];
 
@@ -323,19 +323,19 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
         $this->setIfExists('firstname', $data ?? [], null);
         $this->setIfExists('lastname', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('school_year', $data ?? [], null);
-        $this->setIfExists('school_level', $data ?? [], null);
-        $this->setIfExists('grade_level', $data ?? [], null);
+        $this->setIfExists('schoolYear', $data ?? [], null);
+        $this->setIfExists('schoolLevel', $data ?? [], null);
+        $this->setIfExists('gradeLevel', $data ?? [], null);
         $this->setIfExists('repeated', $data ?? [], null);
         $this->setIfExists('graduated', $data ?? [], null);
-        $this->setIfExists('enroll_date', $data ?? [], null);
-        $this->setIfExists('depart_date', $data ?? [], null);
-        $this->setIfExists('depart_reason', $data ?? [], null);
+        $this->setIfExists('enrollDate', $data ?? [], null);
+        $this->setIfExists('departDate', $data ?? [], null);
+        $this->setIfExists('departReason', $data ?? [], null);
         $this->setIfExists('session', $data ?? [], null);
     }
 
@@ -382,35 +382,35 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The id of the user
+     * @param int|null $userId The id of the user
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
@@ -484,35 +484,35 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The preferred name of the user
+     * @param string|null $preferredName The preferred name of the user
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
@@ -552,89 +552,89 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets school_year
+     * Gets schoolYear
      *
      * @return string|null
      */
     public function getSchoolYear()
     {
-        return $this->container['school_year'];
+        return $this->container['schoolYear'];
     }
 
     /**
-     * Sets school_year
+     * Sets schoolYear
      *
-     * @param string|null $school_year The school year the user is enrolled in
+     * @param string|null $schoolYear The school year the user is enrolled in
      *
      * @return self
      */
-    public function setSchoolYear($school_year)
+    public function setSchoolYear($schoolYear)
     {
-        if (is_null($school_year)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year');
+        if (is_null($schoolYear)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year', $nullablesSetToNull);
+            $index = array_search('schoolYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year'] = $school_year;
+        $this->container['schoolYear'] = $schoolYear;
 
         return $this;
     }
 
     /**
-     * Gets school_level
+     * Gets schoolLevel
      *
      * @return \SKY\School\Model\Level|null
      */
     public function getSchoolLevel()
     {
-        return $this->container['school_level'];
+        return $this->container['schoolLevel'];
     }
 
     /**
-     * Sets school_level
+     * Sets schoolLevel
      *
-     * @param \SKY\School\Model\Level|null $school_level school_level
+     * @param \SKY\School\Model\Level|null $schoolLevel schoolLevel
      *
      * @return self
      */
-    public function setSchoolLevel($school_level)
+    public function setSchoolLevel($schoolLevel)
     {
-        if (is_null($school_level)) {
-            throw new \InvalidArgumentException('non-nullable school_level cannot be null');
+        if (is_null($schoolLevel)) {
+            throw new \InvalidArgumentException('non-nullable schoolLevel cannot be null');
         }
-        $this->container['school_level'] = $school_level;
+        $this->container['schoolLevel'] = $schoolLevel;
 
         return $this;
     }
 
     /**
-     * Gets grade_level
+     * Gets gradeLevel
      *
      * @return \SKY\School\Model\GradeLevel|null
      */
     public function getGradeLevel()
     {
-        return $this->container['grade_level'];
+        return $this->container['gradeLevel'];
     }
 
     /**
-     * Sets grade_level
+     * Sets gradeLevel
      *
-     * @param \SKY\School\Model\GradeLevel|null $grade_level grade_level
+     * @param \SKY\School\Model\GradeLevel|null $gradeLevel gradeLevel
      *
      * @return self
      */
-    public function setGradeLevel($grade_level)
+    public function setGradeLevel($gradeLevel)
     {
-        if (is_null($grade_level)) {
-            throw new \InvalidArgumentException('non-nullable grade_level cannot be null');
+        if (is_null($gradeLevel)) {
+            throw new \InvalidArgumentException('non-nullable gradeLevel cannot be null');
         }
-        $this->container['grade_level'] = $grade_level;
+        $this->container['gradeLevel'] = $gradeLevel;
 
         return $this;
     }
@@ -708,103 +708,103 @@ class UserEnrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets enroll_date
+     * Gets enrollDate
      *
      * @return \DateTime|null
      */
     public function getEnrollDate()
     {
-        return $this->container['enroll_date'];
+        return $this->container['enrollDate'];
     }
 
     /**
-     * Sets enroll_date
+     * Sets enrollDate
      *
-     * @param \DateTime|null $enroll_date The date the enrollment begins
+     * @param \DateTime|null $enrollDate The date the enrollment begins
      *
      * @return self
      */
-    public function setEnrollDate($enroll_date)
+    public function setEnrollDate($enrollDate)
     {
-        if (is_null($enroll_date)) {
-            array_push($this->openAPINullablesSetToNull, 'enroll_date');
+        if (is_null($enrollDate)) {
+            array_push($this->openAPINullablesSetToNull, 'enrollDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('enroll_date', $nullablesSetToNull);
+            $index = array_search('enrollDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['enroll_date'] = $enroll_date;
+        $this->container['enrollDate'] = $enrollDate;
 
         return $this;
     }
 
     /**
-     * Gets depart_date
+     * Gets departDate
      *
      * @return \DateTime|null
      */
     public function getDepartDate()
     {
-        return $this->container['depart_date'];
+        return $this->container['departDate'];
     }
 
     /**
-     * Sets depart_date
+     * Sets departDate
      *
-     * @param \DateTime|null $depart_date The date the user departed the school year, ending the enrollment
+     * @param \DateTime|null $departDate The date the user departed the school year, ending the enrollment
      *
      * @return self
      */
-    public function setDepartDate($depart_date)
+    public function setDepartDate($departDate)
     {
-        if (is_null($depart_date)) {
-            array_push($this->openAPINullablesSetToNull, 'depart_date');
+        if (is_null($departDate)) {
+            array_push($this->openAPINullablesSetToNull, 'departDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('depart_date', $nullablesSetToNull);
+            $index = array_search('departDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['depart_date'] = $depart_date;
+        $this->container['departDate'] = $departDate;
 
         return $this;
     }
 
     /**
-     * Gets depart_reason
+     * Gets departReason
      *
      * @return string|null
      */
     public function getDepartReason()
     {
-        return $this->container['depart_reason'];
+        return $this->container['departReason'];
     }
 
     /**
-     * Sets depart_reason
+     * Sets departReason
      *
-     * @param string|null $depart_reason The reason the user departed the school
+     * @param string|null $departReason The reason the user departed the school
      *
      * @return self
      */
-    public function setDepartReason($depart_reason)
+    public function setDepartReason($departReason)
     {
-        if (is_null($depart_reason)) {
-            array_push($this->openAPINullablesSetToNull, 'depart_reason');
+        if (is_null($departReason)) {
+            array_push($this->openAPINullablesSetToNull, 'departReason');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('depart_reason', $nullablesSetToNull);
+            $index = array_search('departReason', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['depart_reason'] = $depart_reason;
+        $this->container['departReason'] = $departReason;
 
         return $this;
     }

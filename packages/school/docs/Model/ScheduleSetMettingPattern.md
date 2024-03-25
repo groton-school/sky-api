@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pattern_num** | **int** |  | [optional]
+**patternNum** | **int** |  | [optional]
 **sun** | **bool** |  | [optional]
 **mon** | **bool** |  | [optional]
 **tue** | **bool** |  | [optional]
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **thu** | **bool** |  | [optional]
 **fri** | **bool** |  | [optional]
 **sat** | **bool** |  | [optional]
-**meeting_time_list** | [**\SKY\School\Model\ScheduleSetMettingTime[]**](ScheduleSetMettingTime.md) |  | [optional]
-**has_attendance** | **bool** |  | [optional]
+**meetingTimeList** | [**\SKY\School\Model\ScheduleSetMettingTime[]**](ScheduleSetMettingTime.md) |  | [optional]
+**hasAttendance** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

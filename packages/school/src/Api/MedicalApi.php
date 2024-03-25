@@ -181,16 +181,16 @@ class MedicalApi
      *
      * Medical allergies delete (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalAllergiesByAllergyIdDelete($allergy_id, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
+    public function v1MedicalAllergiesByAllergyIdDelete($allergyId, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
     {
-        [$response] = $this->v1MedicalAllergiesByAllergyIdDeleteWithHttpInfo($allergy_id, $contentType);
+        [$response] = $this->v1MedicalAllergiesByAllergyIdDeleteWithHttpInfo($allergyId, $contentType);
         return $response;
     }
 
@@ -199,16 +199,16 @@ class MedicalApi
      *
      * Medical allergies delete (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalAllergiesByAllergyIdDeleteWithHttpInfo($allergy_id, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
+    public function v1MedicalAllergiesByAllergyIdDeleteWithHttpInfo($allergyId, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
     {
-        $request = $this->v1MedicalAllergiesByAllergyIdDeleteRequest($allergy_id, $contentType);
+        $request = $this->v1MedicalAllergiesByAllergyIdDeleteRequest($allergyId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -323,15 +323,15 @@ class MedicalApi
      *
      * Medical allergies delete (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesByAllergyIdDeleteAsync($allergy_id, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
+    public function v1MedicalAllergiesByAllergyIdDeleteAsync($allergyId, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
     {
-        return $this->v1MedicalAllergiesByAllergyIdDeleteAsyncWithHttpInfo($allergy_id, $contentType)
+        return $this->v1MedicalAllergiesByAllergyIdDeleteAsyncWithHttpInfo($allergyId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -344,16 +344,16 @@ class MedicalApi
      *
      * Medical allergies delete (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesByAllergyIdDeleteAsyncWithHttpInfo($allergy_id, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
+    public function v1MedicalAllergiesByAllergyIdDeleteAsyncWithHttpInfo($allergyId, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalAllergiesByAllergyIdDeleteRequest($allergy_id, $contentType);
+        $request = $this->v1MedicalAllergiesByAllergyIdDeleteRequest($allergyId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -394,19 +394,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalAllergiesByAllergyIdDelete'
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalAllergiesByAllergyIdDeleteRequest($allergy_id, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
+    public function v1MedicalAllergiesByAllergyIdDeleteRequest($allergyId, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdDelete'][0])
     {
 
-        // verify the required parameter 'allergy_id' is set
-        if ($allergy_id === null || (is_array($allergy_id) && count($allergy_id) === 0)) {
+        // verify the required parameter 'allergyId' is set
+        if ($allergyId === null || (is_array($allergyId) && count($allergyId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $allergy_id when calling v1MedicalAllergiesByAllergyIdDelete'
+                'Missing the required parameter $allergyId when calling v1MedicalAllergiesByAllergyIdDelete'
             );
         }
 
@@ -421,10 +421,10 @@ class MedicalApi
 
 
         // path params
-        if ($allergy_id !== null) {
+        if ($allergyId !== null) {
             $resourcePath = str_replace(
                 '{' . 'allergy_id' . '}',
-                ObjectSerializer::toPathValue($allergy_id),
+                ObjectSerializer::toPathValue($allergyId),
                 $resourcePath
             );
         }
@@ -498,17 +498,17 @@ class MedicalApi
      *
      * Medical allergies update (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
-     * @param  \SKY\School\Model\StudentAllergyUpdate $student_allergy_update The allergy changes (optional)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  \SKY\School\Model\StudentAllergyUpdate $studentAllergyUpdate The allergy changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalAllergiesByAllergyIdPatch($allergy_id, $student_allergy_update = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
+    public function v1MedicalAllergiesByAllergyIdPatch($allergyId, $studentAllergyUpdate = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
     {
-        [$response] = $this->v1MedicalAllergiesByAllergyIdPatchWithHttpInfo($allergy_id, $student_allergy_update, $contentType);
+        [$response] = $this->v1MedicalAllergiesByAllergyIdPatchWithHttpInfo($allergyId, $studentAllergyUpdate, $contentType);
         return $response;
     }
 
@@ -517,17 +517,17 @@ class MedicalApi
      *
      * Medical allergies update (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
-     * @param  \SKY\School\Model\StudentAllergyUpdate $student_allergy_update The allergy changes (optional)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  \SKY\School\Model\StudentAllergyUpdate $studentAllergyUpdate The allergy changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalAllergiesByAllergyIdPatchWithHttpInfo($allergy_id, $student_allergy_update = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
+    public function v1MedicalAllergiesByAllergyIdPatchWithHttpInfo($allergyId, $studentAllergyUpdate = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
     {
-        $request = $this->v1MedicalAllergiesByAllergyIdPatchRequest($allergy_id, $student_allergy_update, $contentType);
+        $request = $this->v1MedicalAllergiesByAllergyIdPatchRequest($allergyId, $studentAllergyUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -642,16 +642,16 @@ class MedicalApi
      *
      * Medical allergies update (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
-     * @param  \SKY\School\Model\StudentAllergyUpdate $student_allergy_update The allergy changes (optional)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  \SKY\School\Model\StudentAllergyUpdate $studentAllergyUpdate The allergy changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesByAllergyIdPatchAsync($allergy_id, $student_allergy_update = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
+    public function v1MedicalAllergiesByAllergyIdPatchAsync($allergyId, $studentAllergyUpdate = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
     {
-        return $this->v1MedicalAllergiesByAllergyIdPatchAsyncWithHttpInfo($allergy_id, $student_allergy_update, $contentType)
+        return $this->v1MedicalAllergiesByAllergyIdPatchAsyncWithHttpInfo($allergyId, $studentAllergyUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -664,17 +664,17 @@ class MedicalApi
      *
      * Medical allergies update (BETA)
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
-     * @param  \SKY\School\Model\StudentAllergyUpdate $student_allergy_update The allergy changes (optional)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  \SKY\School\Model\StudentAllergyUpdate $studentAllergyUpdate The allergy changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesByAllergyIdPatchAsyncWithHttpInfo($allergy_id, $student_allergy_update = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
+    public function v1MedicalAllergiesByAllergyIdPatchAsyncWithHttpInfo($allergyId, $studentAllergyUpdate = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalAllergiesByAllergyIdPatchRequest($allergy_id, $student_allergy_update, $contentType);
+        $request = $this->v1MedicalAllergiesByAllergyIdPatchRequest($allergyId, $studentAllergyUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -715,20 +715,20 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalAllergiesByAllergyIdPatch'
      *
-     * @param  int $allergy_id Format - int32. The ID of the student&#39;s allergy. (required)
-     * @param  \SKY\School\Model\StudentAllergyUpdate $student_allergy_update The allergy changes (optional)
+     * @param  int $allergyId Format - int32. The ID of the student&#39;s allergy. (required)
+     * @param  \SKY\School\Model\StudentAllergyUpdate $studentAllergyUpdate The allergy changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalAllergiesByAllergyIdPatchRequest($allergy_id, $student_allergy_update = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
+    public function v1MedicalAllergiesByAllergyIdPatchRequest($allergyId, $studentAllergyUpdate = null, string $contentType = self::contentTypes['v1MedicalAllergiesByAllergyIdPatch'][0])
     {
 
-        // verify the required parameter 'allergy_id' is set
-        if ($allergy_id === null || (is_array($allergy_id) && count($allergy_id) === 0)) {
+        // verify the required parameter 'allergyId' is set
+        if ($allergyId === null || (is_array($allergyId) && count($allergyId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $allergy_id when calling v1MedicalAllergiesByAllergyIdPatch'
+                'Missing the required parameter $allergyId when calling v1MedicalAllergiesByAllergyIdPatch'
             );
         }
 
@@ -744,10 +744,10 @@ class MedicalApi
 
 
         // path params
-        if ($allergy_id !== null) {
+        if ($allergyId !== null) {
             $resourcePath = str_replace(
                 '{' . 'allergy_id' . '}',
-                ObjectSerializer::toPathValue($allergy_id),
+                ObjectSerializer::toPathValue($allergyId),
                 $resourcePath
             );
         }
@@ -760,12 +760,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_allergy_update)) {
+        if (isset($studentAllergyUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_allergy_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentAllergyUpdate));
             } else {
-                $httpBody = $student_allergy_update;
+                $httpBody = $studentAllergyUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -828,16 +828,16 @@ class MedicalApi
      *
      * Medical allergies create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergy $student_medical_allergy The medical allergy to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergy $studentMedicalAllergy The medical allergy to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalAllergiesPost($student_medical_allergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
+    public function v1MedicalAllergiesPost($studentMedicalAllergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
     {
-        [$response] = $this->v1MedicalAllergiesPostWithHttpInfo($student_medical_allergy, $contentType);
+        [$response] = $this->v1MedicalAllergiesPostWithHttpInfo($studentMedicalAllergy, $contentType);
         return $response;
     }
 
@@ -846,16 +846,16 @@ class MedicalApi
      *
      * Medical allergies create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergy $student_medical_allergy The medical allergy to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergy $studentMedicalAllergy The medical allergy to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalAllergiesPostWithHttpInfo($student_medical_allergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
+    public function v1MedicalAllergiesPostWithHttpInfo($studentMedicalAllergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
     {
-        $request = $this->v1MedicalAllergiesPostRequest($student_medical_allergy, $contentType);
+        $request = $this->v1MedicalAllergiesPostRequest($studentMedicalAllergy, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -970,15 +970,15 @@ class MedicalApi
      *
      * Medical allergies create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergy $student_medical_allergy The medical allergy to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergy $studentMedicalAllergy The medical allergy to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesPostAsync($student_medical_allergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
+    public function v1MedicalAllergiesPostAsync($studentMedicalAllergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
     {
-        return $this->v1MedicalAllergiesPostAsyncWithHttpInfo($student_medical_allergy, $contentType)
+        return $this->v1MedicalAllergiesPostAsyncWithHttpInfo($studentMedicalAllergy, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -991,16 +991,16 @@ class MedicalApi
      *
      * Medical allergies create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergy $student_medical_allergy The medical allergy to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergy $studentMedicalAllergy The medical allergy to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesPostAsyncWithHttpInfo($student_medical_allergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
+    public function v1MedicalAllergiesPostAsyncWithHttpInfo($studentMedicalAllergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalAllergiesPostRequest($student_medical_allergy, $contentType);
+        $request = $this->v1MedicalAllergiesPostRequest($studentMedicalAllergy, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1041,13 +1041,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalAllergiesPost'
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergy $student_medical_allergy The medical allergy to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergy $studentMedicalAllergy The medical allergy to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalAllergiesPostRequest($student_medical_allergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
+    public function v1MedicalAllergiesPostRequest($studentMedicalAllergy = null, string $contentType = self::contentTypes['v1MedicalAllergiesPost'][0])
     {
 
 
@@ -1070,12 +1070,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_medical_allergy)) {
+        if (isset($studentMedicalAllergy)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_medical_allergy));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentMedicalAllergy));
             } else {
-                $httpBody = $student_medical_allergy;
+                $httpBody = $studentMedicalAllergy;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1138,16 +1138,16 @@ class MedicalApi
      *
      * Medical allergies/conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $student_medical_allergy_condition The medical allergy/condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $studentMedicalAllergyCondition The medical allergy/condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesconditionsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalAllergiesconditionsPost($student_medical_allergy_condition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
+    public function v1MedicalAllergiesconditionsPost($studentMedicalAllergyCondition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
     {
-        [$response] = $this->v1MedicalAllergiesconditionsPostWithHttpInfo($student_medical_allergy_condition, $contentType);
+        [$response] = $this->v1MedicalAllergiesconditionsPostWithHttpInfo($studentMedicalAllergyCondition, $contentType);
         return $response;
     }
 
@@ -1156,16 +1156,16 @@ class MedicalApi
      *
      * Medical allergies/conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $student_medical_allergy_condition The medical allergy/condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $studentMedicalAllergyCondition The medical allergy/condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesconditionsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalAllergiesconditionsPostWithHttpInfo($student_medical_allergy_condition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
+    public function v1MedicalAllergiesconditionsPostWithHttpInfo($studentMedicalAllergyCondition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
     {
-        $request = $this->v1MedicalAllergiesconditionsPostRequest($student_medical_allergy_condition, $contentType);
+        $request = $this->v1MedicalAllergiesconditionsPostRequest($studentMedicalAllergyCondition, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1280,15 +1280,15 @@ class MedicalApi
      *
      * Medical allergies/conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $student_medical_allergy_condition The medical allergy/condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $studentMedicalAllergyCondition The medical allergy/condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesconditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesconditionsPostAsync($student_medical_allergy_condition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
+    public function v1MedicalAllergiesconditionsPostAsync($studentMedicalAllergyCondition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
     {
-        return $this->v1MedicalAllergiesconditionsPostAsyncWithHttpInfo($student_medical_allergy_condition, $contentType)
+        return $this->v1MedicalAllergiesconditionsPostAsyncWithHttpInfo($studentMedicalAllergyCondition, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1301,16 +1301,16 @@ class MedicalApi
      *
      * Medical allergies/conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $student_medical_allergy_condition The medical allergy/condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $studentMedicalAllergyCondition The medical allergy/condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesconditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAllergiesconditionsPostAsyncWithHttpInfo($student_medical_allergy_condition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
+    public function v1MedicalAllergiesconditionsPostAsyncWithHttpInfo($studentMedicalAllergyCondition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalAllergiesconditionsPostRequest($student_medical_allergy_condition, $contentType);
+        $request = $this->v1MedicalAllergiesconditionsPostRequest($studentMedicalAllergyCondition, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1351,13 +1351,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalAllergiesconditionsPost'
      *
-     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $student_medical_allergy_condition The medical allergy/condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalAllergyCondition $studentMedicalAllergyCondition The medical allergy/condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAllergiesconditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalAllergiesconditionsPostRequest($student_medical_allergy_condition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
+    public function v1MedicalAllergiesconditionsPostRequest($studentMedicalAllergyCondition = null, string $contentType = self::contentTypes['v1MedicalAllergiesconditionsPost'][0])
     {
 
 
@@ -1380,12 +1380,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_medical_allergy_condition)) {
+        if (isset($studentMedicalAllergyCondition)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_medical_allergy_condition));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentMedicalAllergyCondition));
             } else {
-                $httpBody = $student_medical_allergy_condition;
+                $httpBody = $studentMedicalAllergyCondition;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1448,16 +1448,16 @@ class MedicalApi
      *
      * Athletic requirements update (BETA)
      *
-     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $student_athletic_requirement_update The athletics requirements to update (optional)
+     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $studentAthleticRequirementUpdate The athletics requirements to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAthleticclearancePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return string[]
      */
-    public function v1MedicalAthleticclearancePost($student_athletic_requirement_update = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
+    public function v1MedicalAthleticclearancePost($studentAthleticRequirementUpdate = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
     {
-        [$response] = $this->v1MedicalAthleticclearancePostWithHttpInfo($student_athletic_requirement_update, $contentType);
+        [$response] = $this->v1MedicalAthleticclearancePostWithHttpInfo($studentAthleticRequirementUpdate, $contentType);
         return $response;
     }
 
@@ -1466,16 +1466,16 @@ class MedicalApi
      *
      * Athletic requirements update (BETA)
      *
-     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $student_athletic_requirement_update The athletics requirements to update (optional)
+     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $studentAthleticRequirementUpdate The athletics requirements to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAthleticclearancePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalAthleticclearancePostWithHttpInfo($student_athletic_requirement_update = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
+    public function v1MedicalAthleticclearancePostWithHttpInfo($studentAthleticRequirementUpdate = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
     {
-        $request = $this->v1MedicalAthleticclearancePostRequest($student_athletic_requirement_update, $contentType);
+        $request = $this->v1MedicalAthleticclearancePostRequest($studentAthleticRequirementUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1590,15 +1590,15 @@ class MedicalApi
      *
      * Athletic requirements update (BETA)
      *
-     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $student_athletic_requirement_update The athletics requirements to update (optional)
+     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $studentAthleticRequirementUpdate The athletics requirements to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAthleticclearancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAthleticclearancePostAsync($student_athletic_requirement_update = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
+    public function v1MedicalAthleticclearancePostAsync($studentAthleticRequirementUpdate = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
     {
-        return $this->v1MedicalAthleticclearancePostAsyncWithHttpInfo($student_athletic_requirement_update, $contentType)
+        return $this->v1MedicalAthleticclearancePostAsyncWithHttpInfo($studentAthleticRequirementUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1611,16 +1611,16 @@ class MedicalApi
      *
      * Athletic requirements update (BETA)
      *
-     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $student_athletic_requirement_update The athletics requirements to update (optional)
+     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $studentAthleticRequirementUpdate The athletics requirements to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAthleticclearancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalAthleticclearancePostAsyncWithHttpInfo($student_athletic_requirement_update = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
+    public function v1MedicalAthleticclearancePostAsyncWithHttpInfo($studentAthleticRequirementUpdate = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
     {
         $returnType = 'string[]';
-        $request = $this->v1MedicalAthleticclearancePostRequest($student_athletic_requirement_update, $contentType);
+        $request = $this->v1MedicalAthleticclearancePostRequest($studentAthleticRequirementUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1661,13 +1661,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalAthleticclearancePost'
      *
-     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $student_athletic_requirement_update The athletics requirements to update (optional)
+     * @param  \SKY\School\Model\StudentAthleticRequirementUpdate $studentAthleticRequirementUpdate The athletics requirements to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalAthleticclearancePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalAthleticclearancePostRequest($student_athletic_requirement_update = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
+    public function v1MedicalAthleticclearancePostRequest($studentAthleticRequirementUpdate = null, string $contentType = self::contentTypes['v1MedicalAthleticclearancePost'][0])
     {
 
 
@@ -1690,12 +1690,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_athletic_requirement_update)) {
+        if (isset($studentAthleticRequirementUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_athletic_requirement_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentAthleticRequirementUpdate));
             } else {
-                $httpBody = $student_athletic_requirement_update;
+                $httpBody = $studentAthleticRequirementUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1758,16 +1758,16 @@ class MedicalApi
      *
      * Medical conditions delete (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalConditionsByConditionIdDelete($condition_id, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
+    public function v1MedicalConditionsByConditionIdDelete($conditionId, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
     {
-        [$response] = $this->v1MedicalConditionsByConditionIdDeleteWithHttpInfo($condition_id, $contentType);
+        [$response] = $this->v1MedicalConditionsByConditionIdDeleteWithHttpInfo($conditionId, $contentType);
         return $response;
     }
 
@@ -1776,16 +1776,16 @@ class MedicalApi
      *
      * Medical conditions delete (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalConditionsByConditionIdDeleteWithHttpInfo($condition_id, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
+    public function v1MedicalConditionsByConditionIdDeleteWithHttpInfo($conditionId, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
     {
-        $request = $this->v1MedicalConditionsByConditionIdDeleteRequest($condition_id, $contentType);
+        $request = $this->v1MedicalConditionsByConditionIdDeleteRequest($conditionId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1900,15 +1900,15 @@ class MedicalApi
      *
      * Medical conditions delete (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsByConditionIdDeleteAsync($condition_id, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
+    public function v1MedicalConditionsByConditionIdDeleteAsync($conditionId, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
     {
-        return $this->v1MedicalConditionsByConditionIdDeleteAsyncWithHttpInfo($condition_id, $contentType)
+        return $this->v1MedicalConditionsByConditionIdDeleteAsyncWithHttpInfo($conditionId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1921,16 +1921,16 @@ class MedicalApi
      *
      * Medical conditions delete (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsByConditionIdDeleteAsyncWithHttpInfo($condition_id, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
+    public function v1MedicalConditionsByConditionIdDeleteAsyncWithHttpInfo($conditionId, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalConditionsByConditionIdDeleteRequest($condition_id, $contentType);
+        $request = $this->v1MedicalConditionsByConditionIdDeleteRequest($conditionId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1971,19 +1971,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalConditionsByConditionIdDelete'
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalConditionsByConditionIdDeleteRequest($condition_id, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
+    public function v1MedicalConditionsByConditionIdDeleteRequest($conditionId, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdDelete'][0])
     {
 
-        // verify the required parameter 'condition_id' is set
-        if ($condition_id === null || (is_array($condition_id) && count($condition_id) === 0)) {
+        // verify the required parameter 'conditionId' is set
+        if ($conditionId === null || (is_array($conditionId) && count($conditionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $condition_id when calling v1MedicalConditionsByConditionIdDelete'
+                'Missing the required parameter $conditionId when calling v1MedicalConditionsByConditionIdDelete'
             );
         }
 
@@ -1998,10 +1998,10 @@ class MedicalApi
 
 
         // path params
-        if ($condition_id !== null) {
+        if ($conditionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'condition_id' . '}',
-                ObjectSerializer::toPathValue($condition_id),
+                ObjectSerializer::toPathValue($conditionId),
                 $resourcePath
             );
         }
@@ -2075,17 +2075,17 @@ class MedicalApi
      *
      * Medical conditions update (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
-     * @param  \SKY\School\Model\StudentConditionUpdate $student_condition_update The condition changes (optional)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  \SKY\School\Model\StudentConditionUpdate $studentConditionUpdate The condition changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalConditionsByConditionIdPatch($condition_id, $student_condition_update = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
+    public function v1MedicalConditionsByConditionIdPatch($conditionId, $studentConditionUpdate = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
     {
-        [$response] = $this->v1MedicalConditionsByConditionIdPatchWithHttpInfo($condition_id, $student_condition_update, $contentType);
+        [$response] = $this->v1MedicalConditionsByConditionIdPatchWithHttpInfo($conditionId, $studentConditionUpdate, $contentType);
         return $response;
     }
 
@@ -2094,17 +2094,17 @@ class MedicalApi
      *
      * Medical conditions update (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
-     * @param  \SKY\School\Model\StudentConditionUpdate $student_condition_update The condition changes (optional)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  \SKY\School\Model\StudentConditionUpdate $studentConditionUpdate The condition changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalConditionsByConditionIdPatchWithHttpInfo($condition_id, $student_condition_update = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
+    public function v1MedicalConditionsByConditionIdPatchWithHttpInfo($conditionId, $studentConditionUpdate = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
     {
-        $request = $this->v1MedicalConditionsByConditionIdPatchRequest($condition_id, $student_condition_update, $contentType);
+        $request = $this->v1MedicalConditionsByConditionIdPatchRequest($conditionId, $studentConditionUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2219,16 +2219,16 @@ class MedicalApi
      *
      * Medical conditions update (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
-     * @param  \SKY\School\Model\StudentConditionUpdate $student_condition_update The condition changes (optional)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  \SKY\School\Model\StudentConditionUpdate $studentConditionUpdate The condition changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsByConditionIdPatchAsync($condition_id, $student_condition_update = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
+    public function v1MedicalConditionsByConditionIdPatchAsync($conditionId, $studentConditionUpdate = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
     {
-        return $this->v1MedicalConditionsByConditionIdPatchAsyncWithHttpInfo($condition_id, $student_condition_update, $contentType)
+        return $this->v1MedicalConditionsByConditionIdPatchAsyncWithHttpInfo($conditionId, $studentConditionUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2241,17 +2241,17 @@ class MedicalApi
      *
      * Medical conditions update (BETA)
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
-     * @param  \SKY\School\Model\StudentConditionUpdate $student_condition_update The condition changes (optional)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  \SKY\School\Model\StudentConditionUpdate $studentConditionUpdate The condition changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsByConditionIdPatchAsyncWithHttpInfo($condition_id, $student_condition_update = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
+    public function v1MedicalConditionsByConditionIdPatchAsyncWithHttpInfo($conditionId, $studentConditionUpdate = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalConditionsByConditionIdPatchRequest($condition_id, $student_condition_update, $contentType);
+        $request = $this->v1MedicalConditionsByConditionIdPatchRequest($conditionId, $studentConditionUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2292,20 +2292,20 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalConditionsByConditionIdPatch'
      *
-     * @param  int $condition_id Format - int32. The ID of the student&#39;s condition. (required)
-     * @param  \SKY\School\Model\StudentConditionUpdate $student_condition_update The condition changes (optional)
+     * @param  int $conditionId Format - int32. The ID of the student&#39;s condition. (required)
+     * @param  \SKY\School\Model\StudentConditionUpdate $studentConditionUpdate The condition changes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsByConditionIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalConditionsByConditionIdPatchRequest($condition_id, $student_condition_update = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
+    public function v1MedicalConditionsByConditionIdPatchRequest($conditionId, $studentConditionUpdate = null, string $contentType = self::contentTypes['v1MedicalConditionsByConditionIdPatch'][0])
     {
 
-        // verify the required parameter 'condition_id' is set
-        if ($condition_id === null || (is_array($condition_id) && count($condition_id) === 0)) {
+        // verify the required parameter 'conditionId' is set
+        if ($conditionId === null || (is_array($conditionId) && count($conditionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $condition_id when calling v1MedicalConditionsByConditionIdPatch'
+                'Missing the required parameter $conditionId when calling v1MedicalConditionsByConditionIdPatch'
             );
         }
 
@@ -2321,10 +2321,10 @@ class MedicalApi
 
 
         // path params
-        if ($condition_id !== null) {
+        if ($conditionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'condition_id' . '}',
-                ObjectSerializer::toPathValue($condition_id),
+                ObjectSerializer::toPathValue($conditionId),
                 $resourcePath
             );
         }
@@ -2337,12 +2337,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_condition_update)) {
+        if (isset($studentConditionUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_condition_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentConditionUpdate));
             } else {
-                $httpBody = $student_condition_update;
+                $httpBody = $studentConditionUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2405,16 +2405,16 @@ class MedicalApi
      *
      * Medical conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalCondition $student_medical_condition The medical condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalCondition $studentMedicalCondition The medical condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalConditionsPost($student_medical_condition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
+    public function v1MedicalConditionsPost($studentMedicalCondition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
     {
-        [$response] = $this->v1MedicalConditionsPostWithHttpInfo($student_medical_condition, $contentType);
+        [$response] = $this->v1MedicalConditionsPostWithHttpInfo($studentMedicalCondition, $contentType);
         return $response;
     }
 
@@ -2423,16 +2423,16 @@ class MedicalApi
      *
      * Medical conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalCondition $student_medical_condition The medical condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalCondition $studentMedicalCondition The medical condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalConditionsPostWithHttpInfo($student_medical_condition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
+    public function v1MedicalConditionsPostWithHttpInfo($studentMedicalCondition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
     {
-        $request = $this->v1MedicalConditionsPostRequest($student_medical_condition, $contentType);
+        $request = $this->v1MedicalConditionsPostRequest($studentMedicalCondition, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2547,15 +2547,15 @@ class MedicalApi
      *
      * Medical conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalCondition $student_medical_condition The medical condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalCondition $studentMedicalCondition The medical condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsPostAsync($student_medical_condition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
+    public function v1MedicalConditionsPostAsync($studentMedicalCondition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
     {
-        return $this->v1MedicalConditionsPostAsyncWithHttpInfo($student_medical_condition, $contentType)
+        return $this->v1MedicalConditionsPostAsyncWithHttpInfo($studentMedicalCondition, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2568,16 +2568,16 @@ class MedicalApi
      *
      * Medical conditions create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicalCondition $student_medical_condition The medical condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalCondition $studentMedicalCondition The medical condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalConditionsPostAsyncWithHttpInfo($student_medical_condition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
+    public function v1MedicalConditionsPostAsyncWithHttpInfo($studentMedicalCondition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalConditionsPostRequest($student_medical_condition, $contentType);
+        $request = $this->v1MedicalConditionsPostRequest($studentMedicalCondition, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2618,13 +2618,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalConditionsPost'
      *
-     * @param  \SKY\School\Model\StudentMedicalCondition $student_medical_condition The medical condition to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicalCondition $studentMedicalCondition The medical condition to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalConditionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalConditionsPostRequest($student_medical_condition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
+    public function v1MedicalConditionsPostRequest($studentMedicalCondition = null, string $contentType = self::contentTypes['v1MedicalConditionsPost'][0])
     {
 
 
@@ -2647,12 +2647,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_medical_condition)) {
+        if (isset($studentMedicalCondition)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_medical_condition));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentMedicalCondition));
             } else {
-                $httpBody = $student_medical_condition;
+                $httpBody = $studentMedicalCondition;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2715,16 +2715,16 @@ class MedicalApi
      *
      * Medical immunizations update (BETA)
      *
-     * @param  \SKY\School\Model\StudentImmunizationUpdate $student_immunization_update The immunizations to update (optional)
+     * @param  \SKY\School\Model\StudentImmunizationUpdate $studentImmunizationUpdate The immunizations to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalImmunizationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1MedicalImmunizationsPost($student_immunization_update = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
+    public function v1MedicalImmunizationsPost($studentImmunizationUpdate = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
     {
-        $this->v1MedicalImmunizationsPostWithHttpInfo($student_immunization_update, $contentType);
+        $this->v1MedicalImmunizationsPostWithHttpInfo($studentImmunizationUpdate, $contentType);
     }
 
     /**
@@ -2732,16 +2732,16 @@ class MedicalApi
      *
      * Medical immunizations update (BETA)
      *
-     * @param  \SKY\School\Model\StudentImmunizationUpdate $student_immunization_update The immunizations to update (optional)
+     * @param  \SKY\School\Model\StudentImmunizationUpdate $studentImmunizationUpdate The immunizations to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalImmunizationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalImmunizationsPostWithHttpInfo($student_immunization_update = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
+    public function v1MedicalImmunizationsPostWithHttpInfo($studentImmunizationUpdate = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
     {
-        $request = $this->v1MedicalImmunizationsPostRequest($student_immunization_update, $contentType);
+        $request = $this->v1MedicalImmunizationsPostRequest($studentImmunizationUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2792,15 +2792,15 @@ class MedicalApi
      *
      * Medical immunizations update (BETA)
      *
-     * @param  \SKY\School\Model\StudentImmunizationUpdate $student_immunization_update The immunizations to update (optional)
+     * @param  \SKY\School\Model\StudentImmunizationUpdate $studentImmunizationUpdate The immunizations to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalImmunizationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalImmunizationsPostAsync($student_immunization_update = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
+    public function v1MedicalImmunizationsPostAsync($studentImmunizationUpdate = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
     {
-        return $this->v1MedicalImmunizationsPostAsyncWithHttpInfo($student_immunization_update, $contentType)
+        return $this->v1MedicalImmunizationsPostAsyncWithHttpInfo($studentImmunizationUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2813,16 +2813,16 @@ class MedicalApi
      *
      * Medical immunizations update (BETA)
      *
-     * @param  \SKY\School\Model\StudentImmunizationUpdate $student_immunization_update The immunizations to update (optional)
+     * @param  \SKY\School\Model\StudentImmunizationUpdate $studentImmunizationUpdate The immunizations to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalImmunizationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalImmunizationsPostAsyncWithHttpInfo($student_immunization_update = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
+    public function v1MedicalImmunizationsPostAsyncWithHttpInfo($studentImmunizationUpdate = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
     {
         $returnType = '';
-        $request = $this->v1MedicalImmunizationsPostRequest($student_immunization_update, $contentType);
+        $request = $this->v1MedicalImmunizationsPostRequest($studentImmunizationUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2850,13 +2850,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalImmunizationsPost'
      *
-     * @param  \SKY\School\Model\StudentImmunizationUpdate $student_immunization_update The immunizations to update (optional)
+     * @param  \SKY\School\Model\StudentImmunizationUpdate $studentImmunizationUpdate The immunizations to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalImmunizationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalImmunizationsPostRequest($student_immunization_update = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
+    public function v1MedicalImmunizationsPostRequest($studentImmunizationUpdate = null, string $contentType = self::contentTypes['v1MedicalImmunizationsPost'][0])
     {
 
 
@@ -2879,12 +2879,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_immunization_update)) {
+        if (isset($studentImmunizationUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_immunization_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentImmunizationUpdate));
             } else {
-                $httpBody = $student_immunization_update;
+                $httpBody = $studentImmunizationUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2947,16 +2947,16 @@ class MedicalApi
      *
      * Medical medications delete (BETA)
      *
-     * @param  int $medication_id Format - int32. The ID of the student&#39;s medication. (required)
+     * @param  int $medicationId Format - int32. The ID of the student&#39;s medication. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalMedicationsByMedicationIdDelete($medication_id, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
+    public function v1MedicalMedicationsByMedicationIdDelete($medicationId, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
     {
-        [$response] = $this->v1MedicalMedicationsByMedicationIdDeleteWithHttpInfo($medication_id, $contentType);
+        [$response] = $this->v1MedicalMedicationsByMedicationIdDeleteWithHttpInfo($medicationId, $contentType);
         return $response;
     }
 
@@ -2965,16 +2965,16 @@ class MedicalApi
      *
      * Medical medications delete (BETA)
      *
-     * @param  int $medication_id Format - int32. The ID of the student&#39;s medication. (required)
+     * @param  int $medicationId Format - int32. The ID of the student&#39;s medication. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalMedicationsByMedicationIdDeleteWithHttpInfo($medication_id, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
+    public function v1MedicalMedicationsByMedicationIdDeleteWithHttpInfo($medicationId, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
     {
-        $request = $this->v1MedicalMedicationsByMedicationIdDeleteRequest($medication_id, $contentType);
+        $request = $this->v1MedicalMedicationsByMedicationIdDeleteRequest($medicationId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3089,15 +3089,15 @@ class MedicalApi
      *
      * Medical medications delete (BETA)
      *
-     * @param  int $medication_id Format - int32. The ID of the student&#39;s medication. (required)
+     * @param  int $medicationId Format - int32. The ID of the student&#39;s medication. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsByMedicationIdDeleteAsync($medication_id, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
+    public function v1MedicalMedicationsByMedicationIdDeleteAsync($medicationId, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
     {
-        return $this->v1MedicalMedicationsByMedicationIdDeleteAsyncWithHttpInfo($medication_id, $contentType)
+        return $this->v1MedicalMedicationsByMedicationIdDeleteAsyncWithHttpInfo($medicationId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3110,16 +3110,16 @@ class MedicalApi
      *
      * Medical medications delete (BETA)
      *
-     * @param  int $medication_id Format - int32. The ID of the student&#39;s medication. (required)
+     * @param  int $medicationId Format - int32. The ID of the student&#39;s medication. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsByMedicationIdDeleteAsyncWithHttpInfo($medication_id, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
+    public function v1MedicalMedicationsByMedicationIdDeleteAsyncWithHttpInfo($medicationId, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalMedicationsByMedicationIdDeleteRequest($medication_id, $contentType);
+        $request = $this->v1MedicalMedicationsByMedicationIdDeleteRequest($medicationId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3160,19 +3160,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalMedicationsByMedicationIdDelete'
      *
-     * @param  int $medication_id Format - int32. The ID of the student&#39;s medication. (required)
+     * @param  int $medicationId Format - int32. The ID of the student&#39;s medication. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalMedicationsByMedicationIdDeleteRequest($medication_id, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
+    public function v1MedicalMedicationsByMedicationIdDeleteRequest($medicationId, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdDelete'][0])
     {
 
-        // verify the required parameter 'medication_id' is set
-        if ($medication_id === null || (is_array($medication_id) && count($medication_id) === 0)) {
+        // verify the required parameter 'medicationId' is set
+        if ($medicationId === null || (is_array($medicationId) && count($medicationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $medication_id when calling v1MedicalMedicationsByMedicationIdDelete'
+                'Missing the required parameter $medicationId when calling v1MedicalMedicationsByMedicationIdDelete'
             );
         }
 
@@ -3187,10 +3187,10 @@ class MedicalApi
 
 
         // path params
-        if ($medication_id !== null) {
+        if ($medicationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'medication_id' . '}',
-                ObjectSerializer::toPathValue($medication_id),
+                ObjectSerializer::toPathValue($medicationId),
                 $resourcePath
             );
         }
@@ -3264,17 +3264,17 @@ class MedicalApi
      *
      * Medical medication update (BETA)
      *
-     * @param  int $medication_id Format - int32. &gt;The student medication ID (required)
-     * @param  \SKY\School\Model\StudentMedicationUpdate $student_medication_update The medication changes to update (optional)
+     * @param  int $medicationId Format - int32. &gt;The student medication ID (required)
+     * @param  \SKY\School\Model\StudentMedicationUpdate $studentMedicationUpdate The medication changes to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalMedicationsByMedicationIdPatch($medication_id, $student_medication_update = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
+    public function v1MedicalMedicationsByMedicationIdPatch($medicationId, $studentMedicationUpdate = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
     {
-        [$response] = $this->v1MedicalMedicationsByMedicationIdPatchWithHttpInfo($medication_id, $student_medication_update, $contentType);
+        [$response] = $this->v1MedicalMedicationsByMedicationIdPatchWithHttpInfo($medicationId, $studentMedicationUpdate, $contentType);
         return $response;
     }
 
@@ -3283,17 +3283,17 @@ class MedicalApi
      *
      * Medical medication update (BETA)
      *
-     * @param  int $medication_id Format - int32. &gt;The student medication ID (required)
-     * @param  \SKY\School\Model\StudentMedicationUpdate $student_medication_update The medication changes to update (optional)
+     * @param  int $medicationId Format - int32. &gt;The student medication ID (required)
+     * @param  \SKY\School\Model\StudentMedicationUpdate $studentMedicationUpdate The medication changes to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalMedicationsByMedicationIdPatchWithHttpInfo($medication_id, $student_medication_update = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
+    public function v1MedicalMedicationsByMedicationIdPatchWithHttpInfo($medicationId, $studentMedicationUpdate = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
     {
-        $request = $this->v1MedicalMedicationsByMedicationIdPatchRequest($medication_id, $student_medication_update, $contentType);
+        $request = $this->v1MedicalMedicationsByMedicationIdPatchRequest($medicationId, $studentMedicationUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3408,16 +3408,16 @@ class MedicalApi
      *
      * Medical medication update (BETA)
      *
-     * @param  int $medication_id Format - int32. &gt;The student medication ID (required)
-     * @param  \SKY\School\Model\StudentMedicationUpdate $student_medication_update The medication changes to update (optional)
+     * @param  int $medicationId Format - int32. &gt;The student medication ID (required)
+     * @param  \SKY\School\Model\StudentMedicationUpdate $studentMedicationUpdate The medication changes to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsByMedicationIdPatchAsync($medication_id, $student_medication_update = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
+    public function v1MedicalMedicationsByMedicationIdPatchAsync($medicationId, $studentMedicationUpdate = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
     {
-        return $this->v1MedicalMedicationsByMedicationIdPatchAsyncWithHttpInfo($medication_id, $student_medication_update, $contentType)
+        return $this->v1MedicalMedicationsByMedicationIdPatchAsyncWithHttpInfo($medicationId, $studentMedicationUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3430,17 +3430,17 @@ class MedicalApi
      *
      * Medical medication update (BETA)
      *
-     * @param  int $medication_id Format - int32. &gt;The student medication ID (required)
-     * @param  \SKY\School\Model\StudentMedicationUpdate $student_medication_update The medication changes to update (optional)
+     * @param  int $medicationId Format - int32. &gt;The student medication ID (required)
+     * @param  \SKY\School\Model\StudentMedicationUpdate $studentMedicationUpdate The medication changes to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsByMedicationIdPatchAsyncWithHttpInfo($medication_id, $student_medication_update = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
+    public function v1MedicalMedicationsByMedicationIdPatchAsyncWithHttpInfo($medicationId, $studentMedicationUpdate = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalMedicationsByMedicationIdPatchRequest($medication_id, $student_medication_update, $contentType);
+        $request = $this->v1MedicalMedicationsByMedicationIdPatchRequest($medicationId, $studentMedicationUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3481,20 +3481,20 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalMedicationsByMedicationIdPatch'
      *
-     * @param  int $medication_id Format - int32. &gt;The student medication ID (required)
-     * @param  \SKY\School\Model\StudentMedicationUpdate $student_medication_update The medication changes to update (optional)
+     * @param  int $medicationId Format - int32. &gt;The student medication ID (required)
+     * @param  \SKY\School\Model\StudentMedicationUpdate $studentMedicationUpdate The medication changes to update (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalMedicationsByMedicationIdPatchRequest($medication_id, $student_medication_update = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
+    public function v1MedicalMedicationsByMedicationIdPatchRequest($medicationId, $studentMedicationUpdate = null, string $contentType = self::contentTypes['v1MedicalMedicationsByMedicationIdPatch'][0])
     {
 
-        // verify the required parameter 'medication_id' is set
-        if ($medication_id === null || (is_array($medication_id) && count($medication_id) === 0)) {
+        // verify the required parameter 'medicationId' is set
+        if ($medicationId === null || (is_array($medicationId) && count($medicationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $medication_id when calling v1MedicalMedicationsByMedicationIdPatch'
+                'Missing the required parameter $medicationId when calling v1MedicalMedicationsByMedicationIdPatch'
             );
         }
 
@@ -3510,10 +3510,10 @@ class MedicalApi
 
 
         // path params
-        if ($medication_id !== null) {
+        if ($medicationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'medication_id' . '}',
-                ObjectSerializer::toPathValue($medication_id),
+                ObjectSerializer::toPathValue($medicationId),
                 $resourcePath
             );
         }
@@ -3526,12 +3526,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_medication_update)) {
+        if (isset($studentMedicationUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_medication_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentMedicationUpdate));
             } else {
-                $httpBody = $student_medication_update;
+                $httpBody = $studentMedicationUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3594,16 +3594,16 @@ class MedicalApi
      *
      * Medical medications create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicationCreate $student_medication_create The medication to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicationCreate $studentMedicationCreate The medication to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1MedicalMedicationsPost($student_medication_create = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
+    public function v1MedicalMedicationsPost($studentMedicationCreate = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
     {
-        [$response] = $this->v1MedicalMedicationsPostWithHttpInfo($student_medication_create, $contentType);
+        [$response] = $this->v1MedicalMedicationsPostWithHttpInfo($studentMedicationCreate, $contentType);
         return $response;
     }
 
@@ -3612,16 +3612,16 @@ class MedicalApi
      *
      * Medical medications create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicationCreate $student_medication_create The medication to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicationCreate $studentMedicationCreate The medication to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalMedicationsPostWithHttpInfo($student_medication_create = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
+    public function v1MedicalMedicationsPostWithHttpInfo($studentMedicationCreate = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
     {
-        $request = $this->v1MedicalMedicationsPostRequest($student_medication_create, $contentType);
+        $request = $this->v1MedicalMedicationsPostRequest($studentMedicationCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3736,15 +3736,15 @@ class MedicalApi
      *
      * Medical medications create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicationCreate $student_medication_create The medication to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicationCreate $studentMedicationCreate The medication to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsPostAsync($student_medication_create = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
+    public function v1MedicalMedicationsPostAsync($studentMedicationCreate = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
     {
-        return $this->v1MedicalMedicationsPostAsyncWithHttpInfo($student_medication_create, $contentType)
+        return $this->v1MedicalMedicationsPostAsyncWithHttpInfo($studentMedicationCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3757,16 +3757,16 @@ class MedicalApi
      *
      * Medical medications create (BETA)
      *
-     * @param  \SKY\School\Model\StudentMedicationCreate $student_medication_create The medication to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicationCreate $studentMedicationCreate The medication to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalMedicationsPostAsyncWithHttpInfo($student_medication_create = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
+    public function v1MedicalMedicationsPostAsyncWithHttpInfo($studentMedicationCreate = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1MedicalMedicationsPostRequest($student_medication_create, $contentType);
+        $request = $this->v1MedicalMedicationsPostRequest($studentMedicationCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3807,13 +3807,13 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalMedicationsPost'
      *
-     * @param  \SKY\School\Model\StudentMedicationCreate $student_medication_create The medication to be created for student (optional)
+     * @param  \SKY\School\Model\StudentMedicationCreate $studentMedicationCreate The medication to be created for student (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalMedicationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalMedicationsPostRequest($student_medication_create = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
+    public function v1MedicalMedicationsPostRequest($studentMedicationCreate = null, string $contentType = self::contentTypes['v1MedicalMedicationsPost'][0])
     {
 
 
@@ -3836,12 +3836,12 @@ class MedicalApi
         );
 
         // for model (json/xml)
-        if (isset($student_medication_create)) {
+        if (isset($studentMedicationCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($student_medication_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($studentMedicationCreate));
             } else {
-                $httpBody = $student_medication_create;
+                $httpBody = $studentMedicationCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4201,16 +4201,16 @@ class MedicalApi
      *
      * Medical allergies for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentAllergiesView[]
      */
-    public function v1MedicalUsersByUserIdAllergiesGet($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesGet($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdAllergiesGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdAllergiesGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -4219,16 +4219,16 @@ class MedicalApi
      *
      * Medical allergies for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentAllergiesView[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdAllergiesGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdAllergiesGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAllergiesGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4343,15 +4343,15 @@ class MedicalApi
      *
      * Medical allergies for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAllergiesGetAsync($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesGetAsync($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdAllergiesGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1MedicalUsersByUserIdAllergiesGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4364,16 +4364,16 @@ class MedicalApi
      *
      * Medical allergies for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAllergiesGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentAllergiesView[]';
-        $request = $this->v1MedicalUsersByUserIdAllergiesGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAllergiesGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4414,19 +4414,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdAllergiesGet'
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdAllergiesGetRequest($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesGetRequest($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdAllergiesGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdAllergiesGet'
             );
         }
 
@@ -4441,10 +4441,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -4518,16 +4518,16 @@ class MedicalApi
      *
      * Medical allergies/conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AllergiesAndConditionsView[]
      */
-    public function v1MedicalUsersByUserIdAllergiesconditionsGet($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesconditionsGet($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdAllergiesconditionsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdAllergiesconditionsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -4536,16 +4536,16 @@ class MedicalApi
      *
      * Medical allergies/conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AllergiesAndConditionsView[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdAllergiesconditionsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesconditionsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdAllergiesconditionsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAllergiesconditionsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4660,15 +4660,15 @@ class MedicalApi
      *
      * Medical allergies/conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAllergiesconditionsGetAsync($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesconditionsGetAsync($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdAllergiesconditionsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1MedicalUsersByUserIdAllergiesconditionsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4681,16 +4681,16 @@ class MedicalApi
      *
      * Medical allergies/conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAllergiesconditionsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesconditionsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
     {
         $returnType = '\SKY\School\Model\AllergiesAndConditionsView[]';
-        $request = $this->v1MedicalUsersByUserIdAllergiesconditionsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAllergiesconditionsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4731,19 +4731,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdAllergiesconditionsGet'
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdAllergiesconditionsGetRequest($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
+    public function v1MedicalUsersByUserIdAllergiesconditionsGetRequest($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAllergiesconditionsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdAllergiesconditionsGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdAllergiesconditionsGet'
             );
         }
 
@@ -4758,10 +4758,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -4835,8 +4835,8 @@ class MedicalApi
      *
      * Medical athletic requirements for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
-     * @param  string $school_year The description of the school year (optional)
+     * @param  int $userId Format - int32. The ID of the student (required)
+     * @param  string $schoolYear The description of the school year (optional)
      * @param  string $season The description of the season (optional)
      * @param  string $include Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'] to see the possible values for this operation
@@ -4845,9 +4845,9 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentAthleticRequirementRead[]
      */
-    public function v1MedicalUsersByUserIdAthleticrequirementsGet($user_id, $school_year = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
+    public function v1MedicalUsersByUserIdAthleticrequirementsGet($userId, $schoolYear = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdAthleticrequirementsGetWithHttpInfo($user_id, $school_year, $season, $include, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdAthleticrequirementsGetWithHttpInfo($userId, $schoolYear, $season, $include, $contentType);
         return $response;
     }
 
@@ -4856,8 +4856,8 @@ class MedicalApi
      *
      * Medical athletic requirements for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
-     * @param  string $school_year The description of the school year (optional)
+     * @param  int $userId Format - int32. The ID of the student (required)
+     * @param  string $schoolYear The description of the school year (optional)
      * @param  string $season The description of the season (optional)
      * @param  string $include Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'] to see the possible values for this operation
@@ -4866,9 +4866,9 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentAthleticRequirementRead[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdAthleticrequirementsGetWithHttpInfo($user_id, $school_year = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
+    public function v1MedicalUsersByUserIdAthleticrequirementsGetWithHttpInfo($userId, $schoolYear = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdAthleticrequirementsGetRequest($user_id, $school_year, $season, $include, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAthleticrequirementsGetRequest($userId, $schoolYear, $season, $include, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4983,8 +4983,8 @@ class MedicalApi
      *
      * Medical athletic requirements for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
-     * @param  string $school_year The description of the school year (optional)
+     * @param  int $userId Format - int32. The ID of the student (required)
+     * @param  string $schoolYear The description of the school year (optional)
      * @param  string $season The description of the season (optional)
      * @param  string $include Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'] to see the possible values for this operation
@@ -4992,9 +4992,9 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAthleticrequirementsGetAsync($user_id, $school_year = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
+    public function v1MedicalUsersByUserIdAthleticrequirementsGetAsync($userId, $schoolYear = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdAthleticrequirementsGetAsyncWithHttpInfo($user_id, $school_year, $season, $include, $contentType)
+        return $this->v1MedicalUsersByUserIdAthleticrequirementsGetAsyncWithHttpInfo($userId, $schoolYear, $season, $include, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5007,8 +5007,8 @@ class MedicalApi
      *
      * Medical athletic requirements for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
-     * @param  string $school_year The description of the school year (optional)
+     * @param  int $userId Format - int32. The ID of the student (required)
+     * @param  string $schoolYear The description of the school year (optional)
      * @param  string $season The description of the season (optional)
      * @param  string $include Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'] to see the possible values for this operation
@@ -5016,10 +5016,10 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdAthleticrequirementsGetAsyncWithHttpInfo($user_id, $school_year = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
+    public function v1MedicalUsersByUserIdAthleticrequirementsGetAsyncWithHttpInfo($userId, $schoolYear = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentAthleticRequirementRead[]';
-        $request = $this->v1MedicalUsersByUserIdAthleticrequirementsGetRequest($user_id, $school_year, $season, $include, $contentType);
+        $request = $this->v1MedicalUsersByUserIdAthleticrequirementsGetRequest($userId, $schoolYear, $season, $include, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5060,8 +5060,8 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdAthleticrequirementsGet'
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
-     * @param  string $school_year The description of the school year (optional)
+     * @param  int $userId Format - int32. The ID of the student (required)
+     * @param  string $schoolYear The description of the school year (optional)
      * @param  string $season The description of the season (optional)
      * @param  string $include Show all athletic requirements or only those completed or missing. School year and season are required if not set to completed. Allowed values: all, completed, missing (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'] to see the possible values for this operation
@@ -5069,13 +5069,13 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdAthleticrequirementsGetRequest($user_id, $school_year = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
+    public function v1MedicalUsersByUserIdAthleticrequirementsGetRequest($userId, $schoolYear = null, $season = null, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdAthleticrequirementsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdAthleticrequirementsGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdAthleticrequirementsGet'
             );
         }
 
@@ -5092,7 +5092,7 @@ class MedicalApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'schoolYear', // param base name
             'string', // openApiType
             'form', // style
@@ -5120,10 +5120,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -5197,16 +5197,16 @@ class MedicalApi
      *
      * Medical conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdConditionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentConditionView[]
      */
-    public function v1MedicalUsersByUserIdConditionsGet($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
+    public function v1MedicalUsersByUserIdConditionsGet($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdConditionsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdConditionsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -5215,16 +5215,16 @@ class MedicalApi
      *
      * Medical conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdConditionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentConditionView[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdConditionsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
+    public function v1MedicalUsersByUserIdConditionsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdConditionsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdConditionsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5339,15 +5339,15 @@ class MedicalApi
      *
      * Medical conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdConditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdConditionsGetAsync($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
+    public function v1MedicalUsersByUserIdConditionsGetAsync($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdConditionsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1MedicalUsersByUserIdConditionsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5360,16 +5360,16 @@ class MedicalApi
      *
      * Medical conditions for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdConditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdConditionsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
+    public function v1MedicalUsersByUserIdConditionsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentConditionView[]';
-        $request = $this->v1MedicalUsersByUserIdConditionsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdConditionsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5410,19 +5410,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdConditionsGet'
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdConditionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdConditionsGetRequest($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
+    public function v1MedicalUsersByUserIdConditionsGetRequest($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdConditionsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdConditionsGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdConditionsGet'
             );
         }
 
@@ -5437,10 +5437,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -5514,7 +5514,7 @@ class MedicalApi
      *
      * Medical immunizations for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
+     * @param  int $userId Format - int32. The ID of the student (required)
      * @param  string $include Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'] to see the possible values for this operation
      *
@@ -5522,9 +5522,9 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentImmunizationRead[]
      */
-    public function v1MedicalUsersByUserIdImmunizationsGet($user_id, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
+    public function v1MedicalUsersByUserIdImmunizationsGet($userId, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdImmunizationsGetWithHttpInfo($user_id, $include, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdImmunizationsGetWithHttpInfo($userId, $include, $contentType);
         return $response;
     }
 
@@ -5533,7 +5533,7 @@ class MedicalApi
      *
      * Medical immunizations for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
+     * @param  int $userId Format - int32. The ID of the student (required)
      * @param  string $include Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'] to see the possible values for this operation
      *
@@ -5541,9 +5541,9 @@ class MedicalApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentImmunizationRead[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdImmunizationsGetWithHttpInfo($user_id, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
+    public function v1MedicalUsersByUserIdImmunizationsGetWithHttpInfo($userId, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdImmunizationsGetRequest($user_id, $include, $contentType);
+        $request = $this->v1MedicalUsersByUserIdImmunizationsGetRequest($userId, $include, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5658,16 +5658,16 @@ class MedicalApi
      *
      * Medical immunizations for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
+     * @param  int $userId Format - int32. The ID of the student (required)
      * @param  string $include Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdImmunizationsGetAsync($user_id, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
+    public function v1MedicalUsersByUserIdImmunizationsGetAsync($userId, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdImmunizationsGetAsyncWithHttpInfo($user_id, $include, $contentType)
+        return $this->v1MedicalUsersByUserIdImmunizationsGetAsyncWithHttpInfo($userId, $include, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5680,17 +5680,17 @@ class MedicalApi
      *
      * Medical immunizations for a student (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
+     * @param  int $userId Format - int32. The ID of the student (required)
      * @param  string $include Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdImmunizationsGetAsyncWithHttpInfo($user_id, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
+    public function v1MedicalUsersByUserIdImmunizationsGetAsyncWithHttpInfo($userId, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentImmunizationRead[]';
-        $request = $this->v1MedicalUsersByUserIdImmunizationsGetRequest($user_id, $include, $contentType);
+        $request = $this->v1MedicalUsersByUserIdImmunizationsGetRequest($userId, $include, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5731,20 +5731,20 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdImmunizationsGet'
      *
-     * @param  int $user_id Format - int32. The ID of the student (required)
+     * @param  int $userId Format - int32. The ID of the student (required)
      * @param  string $include Show all required immunizations or just those completed or missing. Allowed values: all, completed, missing. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdImmunizationsGetRequest($user_id, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
+    public function v1MedicalUsersByUserIdImmunizationsGetRequest($userId, $include = null, string $contentType = self::contentTypes['v1MedicalUsersByUserIdImmunizationsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdImmunizationsGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdImmunizationsGet'
             );
         }
 
@@ -5769,10 +5769,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -5846,16 +5846,16 @@ class MedicalApi
      *
      * Medical medications for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentMedicationRead[]
      */
-    public function v1MedicalUsersByUserIdMedicationsGet($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
+    public function v1MedicalUsersByUserIdMedicationsGet($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
     {
-        [$response] = $this->v1MedicalUsersByUserIdMedicationsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1MedicalUsersByUserIdMedicationsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -5864,16 +5864,16 @@ class MedicalApi
      *
      * Medical medications for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentMedicationRead[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1MedicalUsersByUserIdMedicationsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
+    public function v1MedicalUsersByUserIdMedicationsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
     {
-        $request = $this->v1MedicalUsersByUserIdMedicationsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdMedicationsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5988,15 +5988,15 @@ class MedicalApi
      *
      * Medical medications for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdMedicationsGetAsync($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
+    public function v1MedicalUsersByUserIdMedicationsGetAsync($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
     {
-        return $this->v1MedicalUsersByUserIdMedicationsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1MedicalUsersByUserIdMedicationsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6009,16 +6009,16 @@ class MedicalApi
      *
      * Medical medications for a student (BETA)
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1MedicalUsersByUserIdMedicationsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
+    public function v1MedicalUsersByUserIdMedicationsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentMedicationRead[]';
-        $request = $this->v1MedicalUsersByUserIdMedicationsGetRequest($user_id, $contentType);
+        $request = $this->v1MedicalUsersByUserIdMedicationsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6059,19 +6059,19 @@ class MedicalApi
     /**
      * Create request for operation 'v1MedicalUsersByUserIdMedicationsGet'
      *
-     * @param  int $user_id Format - int32. ID of the student (required)
+     * @param  int $userId Format - int32. ID of the student (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1MedicalUsersByUserIdMedicationsGetRequest($user_id, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
+    public function v1MedicalUsersByUserIdMedicationsGetRequest($userId, string $contentType = self::contentTypes['v1MedicalUsersByUserIdMedicationsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1MedicalUsersByUserIdMedicationsGet'
+                'Missing the required parameter $userId when calling v1MedicalUsersByUserIdMedicationsGet'
             );
         }
 
@@ -6086,10 +6086,10 @@ class MedicalApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }

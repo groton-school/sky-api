@@ -58,8 +58,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cip_prefix' => 'string',
-        'cip_suffix' => 'string',
+        'cipPrefix' => 'string',
+        'cipSuffix' => 'string',
         'id' => 'int',
         'name' => 'string',
         'abbreviation' => 'string',
@@ -73,8 +73,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cip_prefix' => null,
-        'cip_suffix' => null,
+        'cipPrefix' => null,
+        'cipSuffix' => null,
         'id' => 'int32',
         'name' => null,
         'abbreviation' => null,
@@ -86,8 +86,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cip_prefix' => true,
-        'cip_suffix' => true,
+        'cipPrefix' => true,
+        'cipSuffix' => true,
         'id' => false,
         'name' => true,
         'abbreviation' => true,
@@ -179,8 +179,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'cip_prefix' => 'cip_prefix',
-        'cip_suffix' => 'cip_suffix',
+        'cipPrefix' => 'cip_prefix',
+        'cipSuffix' => 'cip_suffix',
         'id' => 'id',
         'name' => 'name',
         'abbreviation' => 'abbreviation',
@@ -192,8 +192,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'cip_prefix' => 'setCipPrefix',
-        'cip_suffix' => 'setCipSuffix',
+        'cipPrefix' => 'setCipPrefix',
+        'cipSuffix' => 'setCipSuffix',
         'id' => 'setId',
         'name' => 'setName',
         'abbreviation' => 'setAbbreviation',
@@ -205,8 +205,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'cip_prefix' => 'getCipPrefix',
-        'cip_suffix' => 'getCipSuffix',
+        'cipPrefix' => 'getCipPrefix',
+        'cipSuffix' => 'getCipSuffix',
         'id' => 'getId',
         'name' => 'getName',
         'abbreviation' => 'getAbbreviation',
@@ -269,8 +269,8 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('cip_prefix', $data ?? [], null);
-        $this->setIfExists('cip_suffix', $data ?? [], null);
+        $this->setIfExists('cipPrefix', $data ?? [], null);
+        $this->setIfExists('cipSuffix', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('abbreviation', $data ?? [], null);
@@ -319,69 +319,69 @@ class Major implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets cip_prefix
+     * Gets cipPrefix
      *
      * @return string|null
      */
     public function getCipPrefix()
     {
-        return $this->container['cip_prefix'];
+        return $this->container['cipPrefix'];
     }
 
     /**
-     * Sets cip_prefix
+     * Sets cipPrefix
      *
-     * @param string|null $cip_prefix
+     * @param string|null $cipPrefix
      *
      * @return self
      */
-    public function setCipPrefix($cip_prefix)
+    public function setCipPrefix($cipPrefix)
     {
-        if (is_null($cip_prefix)) {
-            array_push($this->openAPINullablesSetToNull, 'cip_prefix');
+        if (is_null($cipPrefix)) {
+            array_push($this->openAPINullablesSetToNull, 'cipPrefix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cip_prefix', $nullablesSetToNull);
+            $index = array_search('cipPrefix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cip_prefix'] = $cip_prefix;
+        $this->container['cipPrefix'] = $cipPrefix;
 
         return $this;
     }
 
     /**
-     * Gets cip_suffix
+     * Gets cipSuffix
      *
      * @return string|null
      */
     public function getCipSuffix()
     {
-        return $this->container['cip_suffix'];
+        return $this->container['cipSuffix'];
     }
 
     /**
-     * Sets cip_suffix
+     * Sets cipSuffix
      *
-     * @param string|null $cip_suffix
+     * @param string|null $cipSuffix
      *
      * @return self
      */
-    public function setCipSuffix($cip_suffix)
+    public function setCipSuffix($cipSuffix)
     {
-        if (is_null($cip_suffix)) {
-            array_push($this->openAPINullablesSetToNull, 'cip_suffix');
+        if (is_null($cipSuffix)) {
+            array_push($this->openAPINullablesSetToNull, 'cipSuffix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cip_suffix', $nullablesSetToNull);
+            $index = array_search('cipSuffix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cip_suffix'] = $cip_suffix;
+        $this->container['cipSuffix'] = $cipSuffix;
 
         return $this;
     }

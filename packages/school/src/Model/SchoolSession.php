@@ -60,13 +60,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'school_year_label' => 'string',
-        'school_year_id' => 'int',
-        'level_num' => 'int',
-        'begin_date' => '\DateTime',
-        'end_date' => '\DateTime',
+        'schoolYearLabel' => 'string',
+        'schoolYearId' => 'int',
+        'levelNum' => 'int',
+        'beginDate' => '\DateTime',
+        'endDate' => '\DateTime',
         'current' => 'bool',
-        'in_use' => 'bool',
+        'inUse' => 'bool',
     ];
 
     /**
@@ -79,13 +79,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'school_year_label' => null,
-        'school_year_id' => 'int32',
-        'level_num' => 'int32',
-        'begin_date' => 'date-time',
-        'end_date' => 'date-time',
+        'schoolYearLabel' => null,
+        'schoolYearId' => 'int32',
+        'levelNum' => 'int32',
+        'beginDate' => 'date-time',
+        'endDate' => 'date-time',
         'current' => null,
-        'in_use' => null,
+        'inUse' => null,
     ];
 
     /**
@@ -96,13 +96,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'school_year_label' => true,
-        'school_year_id' => true,
-        'level_num' => true,
-        'begin_date' => true,
-        'end_date' => true,
+        'schoolYearLabel' => true,
+        'schoolYearId' => true,
+        'levelNum' => true,
+        'beginDate' => true,
+        'endDate' => true,
         'current' => true,
-        'in_use' => true,
+        'inUse' => true,
     ];
 
     /**
@@ -193,13 +193,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'school_year_label' => 'school_year_label',
-        'school_year_id' => 'school_year_id',
-        'level_num' => 'level_num',
-        'begin_date' => 'begin_date',
-        'end_date' => 'end_date',
+        'schoolYearLabel' => 'school_year_label',
+        'schoolYearId' => 'school_year_id',
+        'levelNum' => 'level_num',
+        'beginDate' => 'begin_date',
+        'endDate' => 'end_date',
         'current' => 'current',
-        'in_use' => 'in_use',
+        'inUse' => 'in_use',
     ];
 
     /**
@@ -210,13 +210,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'school_year_label' => 'setSchoolYearLabel',
-        'school_year_id' => 'setSchoolYearId',
-        'level_num' => 'setLevelNum',
-        'begin_date' => 'setBeginDate',
-        'end_date' => 'setEndDate',
+        'schoolYearLabel' => 'setSchoolYearLabel',
+        'schoolYearId' => 'setSchoolYearId',
+        'levelNum' => 'setLevelNum',
+        'beginDate' => 'setBeginDate',
+        'endDate' => 'setEndDate',
         'current' => 'setCurrent',
-        'in_use' => 'setInUse',
+        'inUse' => 'setInUse',
     ];
 
     /**
@@ -227,13 +227,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'school_year_label' => 'getSchoolYearLabel',
-        'school_year_id' => 'getSchoolYearId',
-        'level_num' => 'getLevelNum',
-        'begin_date' => 'getBeginDate',
-        'end_date' => 'getEndDate',
+        'schoolYearLabel' => 'getSchoolYearLabel',
+        'schoolYearId' => 'getSchoolYearId',
+        'levelNum' => 'getLevelNum',
+        'beginDate' => 'getBeginDate',
+        'endDate' => 'getEndDate',
         'current' => 'getCurrent',
-        'in_use' => 'getInUse',
+        'inUse' => 'getInUse',
     ];
 
     /**
@@ -295,13 +295,13 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('school_year_label', $data ?? [], null);
-        $this->setIfExists('school_year_id', $data ?? [], null);
-        $this->setIfExists('level_num', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
+        $this->setIfExists('schoolYearLabel', $data ?? [], null);
+        $this->setIfExists('schoolYearId', $data ?? [], null);
+        $this->setIfExists('levelNum', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
         $this->setIfExists('current', $data ?? [], null);
-        $this->setIfExists('in_use', $data ?? [], null);
+        $this->setIfExists('inUse', $data ?? [], null);
     }
 
     /**
@@ -415,171 +415,171 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets school_year_label
+     * Gets schoolYearLabel
      *
      * @return string|null
      */
     public function getSchoolYearLabel()
     {
-        return $this->container['school_year_label'];
+        return $this->container['schoolYearLabel'];
     }
 
     /**
-     * Sets school_year_label
+     * Sets schoolYearLabel
      *
-     * @param string|null $school_year_label The school year the session takes place
+     * @param string|null $schoolYearLabel The school year the session takes place
      *
      * @return self
      */
-    public function setSchoolYearLabel($school_year_label)
+    public function setSchoolYearLabel($schoolYearLabel)
     {
-        if (is_null($school_year_label)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_label');
+        if (is_null($schoolYearLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_label', $nullablesSetToNull);
+            $index = array_search('schoolYearLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_label'] = $school_year_label;
+        $this->container['schoolYearLabel'] = $schoolYearLabel;
 
         return $this;
     }
 
     /**
-     * Gets school_year_id
+     * Gets schoolYearId
      *
      * @return int|null
      */
     public function getSchoolYearId()
     {
-        return $this->container['school_year_id'];
+        return $this->container['schoolYearId'];
     }
 
     /**
-     * Sets school_year_id
+     * Sets schoolYearId
      *
-     * @param int|null $school_year_id The id of the school year
+     * @param int|null $schoolYearId The id of the school year
      *
      * @return self
      */
-    public function setSchoolYearId($school_year_id)
+    public function setSchoolYearId($schoolYearId)
     {
-        if (is_null($school_year_id)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_id');
+        if (is_null($schoolYearId)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_id', $nullablesSetToNull);
+            $index = array_search('schoolYearId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_id'] = $school_year_id;
+        $this->container['schoolYearId'] = $schoolYearId;
 
         return $this;
     }
 
     /**
-     * Gets level_num
+     * Gets levelNum
      *
      * @return int|null
      */
     public function getLevelNum()
     {
-        return $this->container['level_num'];
+        return $this->container['levelNum'];
     }
 
     /**
-     * Sets level_num
+     * Sets levelNum
      *
-     * @param int|null $level_num The school level number where the session takes place
+     * @param int|null $levelNum The school level number where the session takes place
      *
      * @return self
      */
-    public function setLevelNum($level_num)
+    public function setLevelNum($levelNum)
     {
-        if (is_null($level_num)) {
-            array_push($this->openAPINullablesSetToNull, 'level_num');
+        if (is_null($levelNum)) {
+            array_push($this->openAPINullablesSetToNull, 'levelNum');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_num', $nullablesSetToNull);
+            $index = array_search('levelNum', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_num'] = $level_num;
+        $this->container['levelNum'] = $levelNum;
 
         return $this;
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date The start date of the session
+     * @param \DateTime|null $beginDate The start date of the session
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date The end date of the session
+     * @param \DateTime|null $endDate The end date of the session
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
@@ -619,35 +619,35 @@ class SchoolSession implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets in_use
+     * Gets inUse
      *
      * @return bool|null
      */
     public function getInUse()
     {
-        return $this->container['in_use'];
+        return $this->container['inUse'];
     }
 
     /**
-     * Sets in_use
+     * Sets inUse
      *
-     * @param bool|null $in_use Returns true if the session is currently in use
+     * @param bool|null $inUse Returns true if the session is currently in use
      *
      * @return self
      */
-    public function setInUse($in_use)
+    public function setInUse($inUse)
     {
-        if (is_null($in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'in_use');
+        if (is_null($inUse)) {
+            array_push($this->openAPINullablesSetToNull, 'inUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('in_use', $nullablesSetToNull);
+            $index = array_search('inUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['in_use'] = $in_use;
+        $this->container['inUse'] = $inUse;
 
         return $this;
     }

@@ -63,9 +63,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'description' => 'string',
         'category' => 'string',
-        'created_by' => 'string',
+        'createdBy' => 'string',
         'created' => '\DateTime',
-        'last_modified' => '\DateTime',
+        'lastModified' => '\DateTime',
     ];
 
     /**
@@ -81,9 +81,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'description' => null,
         'category' => null,
-        'created_by' => null,
+        'createdBy' => null,
         'created' => 'date-time',
-        'last_modified' => 'date-time',
+        'lastModified' => 'date-time',
     ];
 
     /**
@@ -97,9 +97,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => true,
         'description' => true,
         'category' => true,
-        'created_by' => true,
+        'createdBy' => true,
         'created' => true,
-        'last_modified' => true,
+        'lastModified' => true,
     ];
 
     /**
@@ -193,9 +193,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'description' => 'description',
         'category' => 'category',
-        'created_by' => 'created_by',
+        'createdBy' => 'created_by',
         'created' => 'created',
-        'last_modified' => 'last_modified',
+        'lastModified' => 'last_modified',
     ];
 
     /**
@@ -209,9 +209,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'description' => 'setDescription',
         'category' => 'setCategory',
-        'created_by' => 'setCreatedBy',
+        'createdBy' => 'setCreatedBy',
         'created' => 'setCreated',
-        'last_modified' => 'setLastModified',
+        'lastModified' => 'setLastModified',
     ];
 
     /**
@@ -225,9 +225,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'description' => 'getDescription',
         'category' => 'getCategory',
-        'created_by' => 'getCreatedBy',
+        'createdBy' => 'getCreatedBy',
         'created' => 'getCreated',
-        'last_modified' => 'getLastModified',
+        'lastModified' => 'getLastModified',
     ];
 
     /**
@@ -292,9 +292,9 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
-        $this->setIfExists('created_by', $data ?? [], null);
+        $this->setIfExists('createdBy', $data ?? [], null);
         $this->setIfExists('created', $data ?? [], null);
-        $this->setIfExists('last_modified', $data ?? [], null);
+        $this->setIfExists('lastModified', $data ?? [], null);
     }
 
     /**
@@ -503,35 +503,35 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets created_by
+     * Gets createdBy
      *
      * @return string|null
      */
     public function getCreatedBy()
     {
-        return $this->container['created_by'];
+        return $this->container['createdBy'];
     }
 
     /**
-     * Sets created_by
+     * Sets createdBy
      *
-     * @param string|null $created_by The name of the user who created the list
+     * @param string|null $createdBy The name of the user who created the list
      *
      * @return self
      */
-    public function setCreatedBy($created_by)
+    public function setCreatedBy($createdBy)
     {
-        if (is_null($created_by)) {
-            array_push($this->openAPINullablesSetToNull, 'created_by');
+        if (is_null($createdBy)) {
+            array_push($this->openAPINullablesSetToNull, 'createdBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('created_by', $nullablesSetToNull);
+            $index = array_search('createdBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['created_by'] = $created_by;
+        $this->container['createdBy'] = $createdBy;
 
         return $this;
     }
@@ -571,35 +571,35 @@ class ListRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets last_modified
+     * Gets lastModified
      *
      * @return \DateTime|null
      */
     public function getLastModified()
     {
-        return $this->container['last_modified'];
+        return $this->container['lastModified'];
     }
 
     /**
-     * Sets last_modified
+     * Sets lastModified
      *
-     * @param \DateTime|null $last_modified The date the list was last modified
+     * @param \DateTime|null $lastModified The date the list was last modified
      *
      * @return self
      */
-    public function setLastModified($last_modified)
+    public function setLastModified($lastModified)
     {
-        if (is_null($last_modified)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modified');
+        if (is_null($lastModified)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModified');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modified', $nullablesSetToNull);
+            $index = array_search('lastModified', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modified'] = $last_modified;
+        $this->container['lastModified'] = $lastModified;
 
         return $this;
     }

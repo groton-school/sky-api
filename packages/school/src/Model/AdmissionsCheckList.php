@@ -58,11 +58,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'checklist_id' => 'int',
+        'checklistId' => 'int',
         'name' => 'string',
-        'is_inactive' => 'bool',
-        'is_locked' => 'bool',
-        'is_sample' => 'bool',
+        'isInactive' => 'bool',
+        'isLocked' => 'bool',
+        'isSample' => 'bool',
     ];
 
     /**
@@ -73,11 +73,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'checklist_id' => 'int32',
+        'checklistId' => 'int32',
         'name' => null,
-        'is_inactive' => null,
-        'is_locked' => null,
-        'is_sample' => null,
+        'isInactive' => null,
+        'isLocked' => null,
+        'isSample' => null,
     ];
 
     /**
@@ -86,11 +86,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'checklist_id' => false,
+        'checklistId' => false,
         'name' => true,
-        'is_inactive' => false,
-        'is_locked' => false,
-        'is_sample' => false,
+        'isInactive' => false,
+        'isLocked' => false,
+        'isSample' => false,
     ];
 
     /**
@@ -179,11 +179,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'checklist_id' => 'checklist_id',
+        'checklistId' => 'checklist_id',
         'name' => 'name',
-        'is_inactive' => 'is_inactive',
-        'is_locked' => 'is_locked',
-        'is_sample' => 'is_sample',
+        'isInactive' => 'is_inactive',
+        'isLocked' => 'is_locked',
+        'isSample' => 'is_sample',
     ];
 
     /**
@@ -192,11 +192,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'checklist_id' => 'setChecklistId',
+        'checklistId' => 'setChecklistId',
         'name' => 'setName',
-        'is_inactive' => 'setIsInactive',
-        'is_locked' => 'setIsLocked',
-        'is_sample' => 'setIsSample',
+        'isInactive' => 'setIsInactive',
+        'isLocked' => 'setIsLocked',
+        'isSample' => 'setIsSample',
     ];
 
     /**
@@ -205,11 +205,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'checklist_id' => 'getChecklistId',
+        'checklistId' => 'getChecklistId',
         'name' => 'getName',
-        'is_inactive' => 'getIsInactive',
-        'is_locked' => 'getIsLocked',
-        'is_sample' => 'getIsSample',
+        'isInactive' => 'getIsInactive',
+        'isLocked' => 'getIsLocked',
+        'isSample' => 'getIsSample',
     ];
 
     /**
@@ -269,11 +269,11 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('checklist_id', $data ?? [], null);
+        $this->setIfExists('checklistId', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('is_inactive', $data ?? [], null);
-        $this->setIfExists('is_locked', $data ?? [], null);
-        $this->setIfExists('is_sample', $data ?? [], null);
+        $this->setIfExists('isInactive', $data ?? [], null);
+        $this->setIfExists('isLocked', $data ?? [], null);
+        $this->setIfExists('isSample', $data ?? [], null);
     }
 
     /**
@@ -319,28 +319,28 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets checklist_id
+     * Gets checklistId
      *
      * @return int|null
      */
     public function getChecklistId()
     {
-        return $this->container['checklist_id'];
+        return $this->container['checklistId'];
     }
 
     /**
-     * Sets checklist_id
+     * Sets checklistId
      *
-     * @param int|null $checklist_id Identifier for a given checklist
+     * @param int|null $checklistId Identifier for a given checklist
      *
      * @return self
      */
-    public function setChecklistId($checklist_id)
+    public function setChecklistId($checklistId)
     {
-        if (is_null($checklist_id)) {
-            throw new \InvalidArgumentException('non-nullable checklist_id cannot be null');
+        if (is_null($checklistId)) {
+            throw new \InvalidArgumentException('non-nullable checklistId cannot be null');
         }
-        $this->container['checklist_id'] = $checklist_id;
+        $this->container['checklistId'] = $checklistId;
 
         return $this;
     }
@@ -380,82 +380,82 @@ class AdmissionsCheckList implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets is_inactive
+     * Gets isInactive
      *
      * @return bool|null
      */
     public function getIsInactive()
     {
-        return $this->container['is_inactive'];
+        return $this->container['isInactive'];
     }
 
     /**
-     * Sets is_inactive
+     * Sets isInactive
      *
-     * @param bool|null $is_inactive Indicates if the checklist is active
+     * @param bool|null $isInactive Indicates if the checklist is active
      *
      * @return self
      */
-    public function setIsInactive($is_inactive)
+    public function setIsInactive($isInactive)
     {
-        if (is_null($is_inactive)) {
-            throw new \InvalidArgumentException('non-nullable is_inactive cannot be null');
+        if (is_null($isInactive)) {
+            throw new \InvalidArgumentException('non-nullable isInactive cannot be null');
         }
-        $this->container['is_inactive'] = $is_inactive;
+        $this->container['isInactive'] = $isInactive;
 
         return $this;
     }
 
     /**
-     * Gets is_locked
+     * Gets isLocked
      *
      * @return bool|null
      */
     public function getIsLocked()
     {
-        return $this->container['is_locked'];
+        return $this->container['isLocked'];
     }
 
     /**
-     * Sets is_locked
+     * Sets isLocked
      *
-     * @param bool|null $is_locked Indicates if the checklist is locked
+     * @param bool|null $isLocked Indicates if the checklist is locked
      *
      * @return self
      */
-    public function setIsLocked($is_locked)
+    public function setIsLocked($isLocked)
     {
-        if (is_null($is_locked)) {
-            throw new \InvalidArgumentException('non-nullable is_locked cannot be null');
+        if (is_null($isLocked)) {
+            throw new \InvalidArgumentException('non-nullable isLocked cannot be null');
         }
-        $this->container['is_locked'] = $is_locked;
+        $this->container['isLocked'] = $isLocked;
 
         return $this;
     }
 
     /**
-     * Gets is_sample
+     * Gets isSample
      *
      * @return bool|null
      */
     public function getIsSample()
     {
-        return $this->container['is_sample'];
+        return $this->container['isSample'];
     }
 
     /**
-     * Sets is_sample
+     * Sets isSample
      *
-     * @param bool|null $is_sample Indicates if the checklist is a sample
+     * @param bool|null $isSample Indicates if the checklist is a sample
      *
      * @return self
      */
-    public function setIsSample($is_sample)
+    public function setIsSample($isSample)
     {
-        if (is_null($is_sample)) {
-            throw new \InvalidArgumentException('non-nullable is_sample cannot be null');
+        if (is_null($isSample)) {
+            throw new \InvalidArgumentException('non-nullable isSample cannot be null');
         }
-        $this->container['is_sample'] = $is_sample;
+        $this->container['isSample'] = $isSample;
 
         return $this;
     }

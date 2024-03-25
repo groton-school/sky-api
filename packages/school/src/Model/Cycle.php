@@ -58,12 +58,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_set' => 'string',
-        'schedule_set_id' => 'int',
+        'scheduleSet' => 'string',
+        'scheduleSetId' => 'int',
         'week' => 'int',
         'day' => 'int',
-        'begin_time' => 'string',
-        'end_time' => 'string',
+        'beginTime' => 'string',
+        'endTime' => 'string',
         'sun' => 'bool',
         'mon' => 'bool',
         'tue' => 'bool',
@@ -71,7 +71,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => 'bool',
         'fri' => 'bool',
         'sat' => 'bool',
-        'room_full_name' => 'string',
+        'roomFullName' => 'string',
         'canceled' => 'bool',
     ];
 
@@ -83,12 +83,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_set' => null,
-        'schedule_set_id' => 'int32',
+        'scheduleSet' => null,
+        'scheduleSetId' => 'int32',
         'week' => 'int32',
         'day' => 'int32',
-        'begin_time' => null,
-        'end_time' => null,
+        'beginTime' => null,
+        'endTime' => null,
         'sun' => null,
         'mon' => null,
         'tue' => null,
@@ -96,7 +96,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => null,
         'fri' => null,
         'sat' => null,
-        'room_full_name' => null,
+        'roomFullName' => null,
         'canceled' => null,
     ];
 
@@ -106,12 +106,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_set' => true,
-        'schedule_set_id' => true,
+        'scheduleSet' => true,
+        'scheduleSetId' => true,
         'week' => false,
         'day' => false,
-        'begin_time' => true,
-        'end_time' => true,
+        'beginTime' => true,
+        'endTime' => true,
         'sun' => false,
         'mon' => false,
         'tue' => false,
@@ -119,7 +119,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => false,
         'fri' => false,
         'sat' => false,
-        'room_full_name' => true,
+        'roomFullName' => true,
         'canceled' => false,
     ];
 
@@ -209,12 +209,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_set' => 'schedule_set',
-        'schedule_set_id' => 'schedule_set_id',
+        'scheduleSet' => 'schedule_set',
+        'scheduleSetId' => 'schedule_set_id',
         'week' => 'week',
         'day' => 'day',
-        'begin_time' => 'begin_time',
-        'end_time' => 'end_time',
+        'beginTime' => 'begin_time',
+        'endTime' => 'end_time',
         'sun' => 'sun',
         'mon' => 'mon',
         'tue' => 'tue',
@@ -222,7 +222,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => 'thu',
         'fri' => 'fri',
         'sat' => 'sat',
-        'room_full_name' => 'room_full_name',
+        'roomFullName' => 'room_full_name',
         'canceled' => 'canceled',
     ];
 
@@ -232,12 +232,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'schedule_set' => 'setScheduleSet',
-        'schedule_set_id' => 'setScheduleSetId',
+        'scheduleSet' => 'setScheduleSet',
+        'scheduleSetId' => 'setScheduleSetId',
         'week' => 'setWeek',
         'day' => 'setDay',
-        'begin_time' => 'setBeginTime',
-        'end_time' => 'setEndTime',
+        'beginTime' => 'setBeginTime',
+        'endTime' => 'setEndTime',
         'sun' => 'setSun',
         'mon' => 'setMon',
         'tue' => 'setTue',
@@ -245,7 +245,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => 'setThu',
         'fri' => 'setFri',
         'sat' => 'setSat',
-        'room_full_name' => 'setRoomFullName',
+        'roomFullName' => 'setRoomFullName',
         'canceled' => 'setCanceled',
     ];
 
@@ -255,12 +255,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'schedule_set' => 'getScheduleSet',
-        'schedule_set_id' => 'getScheduleSetId',
+        'scheduleSet' => 'getScheduleSet',
+        'scheduleSetId' => 'getScheduleSetId',
         'week' => 'getWeek',
         'day' => 'getDay',
-        'begin_time' => 'getBeginTime',
-        'end_time' => 'getEndTime',
+        'beginTime' => 'getBeginTime',
+        'endTime' => 'getEndTime',
         'sun' => 'getSun',
         'mon' => 'getMon',
         'tue' => 'getTue',
@@ -268,7 +268,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         'thu' => 'getThu',
         'fri' => 'getFri',
         'sat' => 'getSat',
-        'room_full_name' => 'getRoomFullName',
+        'roomFullName' => 'getRoomFullName',
         'canceled' => 'getCanceled',
     ];
 
@@ -329,12 +329,12 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_set', $data ?? [], null);
-        $this->setIfExists('schedule_set_id', $data ?? [], null);
+        $this->setIfExists('scheduleSet', $data ?? [], null);
+        $this->setIfExists('scheduleSetId', $data ?? [], null);
         $this->setIfExists('week', $data ?? [], null);
         $this->setIfExists('day', $data ?? [], null);
-        $this->setIfExists('begin_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
+        $this->setIfExists('beginTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
         $this->setIfExists('sun', $data ?? [], null);
         $this->setIfExists('mon', $data ?? [], null);
         $this->setIfExists('tue', $data ?? [], null);
@@ -342,7 +342,7 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('thu', $data ?? [], null);
         $this->setIfExists('fri', $data ?? [], null);
         $this->setIfExists('sat', $data ?? [], null);
-        $this->setIfExists('room_full_name', $data ?? [], null);
+        $this->setIfExists('roomFullName', $data ?? [], null);
         $this->setIfExists('canceled', $data ?? [], null);
     }
 
@@ -389,69 +389,69 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets schedule_set
+     * Gets scheduleSet
      *
      * @return string|null
      */
     public function getScheduleSet()
     {
-        return $this->container['schedule_set'];
+        return $this->container['scheduleSet'];
     }
 
     /**
-     * Sets schedule_set
+     * Sets scheduleSet
      *
-     * @param string|null $schedule_set Name of the schedule rotation for the cycle
+     * @param string|null $scheduleSet Name of the schedule rotation for the cycle
      *
      * @return self
      */
-    public function setScheduleSet($schedule_set)
+    public function setScheduleSet($scheduleSet)
     {
-        if (is_null($schedule_set)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set');
+        if (is_null($scheduleSet)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSet');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set', $nullablesSetToNull);
+            $index = array_search('scheduleSet', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set'] = $schedule_set;
+        $this->container['scheduleSet'] = $scheduleSet;
 
         return $this;
     }
 
     /**
-     * Gets schedule_set_id
+     * Gets scheduleSetId
      *
      * @return int|null
      */
     public function getScheduleSetId()
     {
-        return $this->container['schedule_set_id'];
+        return $this->container['scheduleSetId'];
     }
 
     /**
-     * Sets schedule_set_id
+     * Sets scheduleSetId
      *
-     * @param int|null $schedule_set_id Id of the schedule rotation for the cycle
+     * @param int|null $scheduleSetId Id of the schedule rotation for the cycle
      *
      * @return self
      */
-    public function setScheduleSetId($schedule_set_id)
+    public function setScheduleSetId($scheduleSetId)
     {
-        if (is_null($schedule_set_id)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set_id');
+        if (is_null($scheduleSetId)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSetId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set_id', $nullablesSetToNull);
+            $index = array_search('scheduleSetId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set_id'] = $schedule_set_id;
+        $this->container['scheduleSetId'] = $scheduleSetId;
 
         return $this;
     }
@@ -511,69 +511,69 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets begin_time
+     * Gets beginTime
      *
      * @return string|null
      */
     public function getBeginTime()
     {
-        return $this->container['begin_time'];
+        return $this->container['beginTime'];
     }
 
     /**
-     * Sets begin_time
+     * Sets beginTime
      *
-     * @param string|null $begin_time Start time of the cycle
+     * @param string|null $beginTime Start time of the cycle
      *
      * @return self
      */
-    public function setBeginTime($begin_time)
+    public function setBeginTime($beginTime)
     {
-        if (is_null($begin_time)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_time');
+        if (is_null($beginTime)) {
+            array_push($this->openAPINullablesSetToNull, 'beginTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_time', $nullablesSetToNull);
+            $index = array_search('beginTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_time'] = $begin_time;
+        $this->container['beginTime'] = $beginTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return string|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param string|null $end_time End time of the cycle
+     * @param string|null $endTime End time of the cycle
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
@@ -768,35 +768,35 @@ class Cycle implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets room_full_name
+     * Gets roomFullName
      *
      * @return string|null
      */
     public function getRoomFullName()
     {
-        return $this->container['room_full_name'];
+        return $this->container['roomFullName'];
     }
 
     /**
-     * Sets room_full_name
+     * Sets roomFullName
      *
-     * @param string|null $room_full_name Name of the room where this particular cycle meets
+     * @param string|null $roomFullName Name of the room where this particular cycle meets
      *
      * @return self
      */
-    public function setRoomFullName($room_full_name)
+    public function setRoomFullName($roomFullName)
     {
-        if (is_null($room_full_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_full_name');
+        if (is_null($roomFullName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomFullName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_full_name', $nullablesSetToNull);
+            $index = array_search('roomFullName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_full_name'] = $room_full_name;
+        $this->container['roomFullName'] = $roomFullName;
 
         return $this;
     }

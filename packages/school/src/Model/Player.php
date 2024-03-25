@@ -60,16 +60,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'accolades' => 'string',
-        'first_name' => 'string',
+        'firstName' => 'string',
         'height' => 'string',
         'hometown' => 'string',
         'jersey' => 'int',
-        'last_name' => 'string',
+        'lastName' => 'string',
         'position' => 'string',
-        'returning_letter' => 'bool',
-        'team_captain' => 'bool',
+        'returningLetter' => 'bool',
+        'teamCaptain' => 'bool',
         'weight' => 'string',
-        'preferred_name' => 'string',
+        'preferredName' => 'string',
     ];
 
     /**
@@ -82,16 +82,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'accolades' => null,
-        'first_name' => null,
+        'firstName' => null,
         'height' => null,
         'hometown' => null,
         'jersey' => 'int32',
-        'last_name' => null,
+        'lastName' => null,
         'position' => null,
-        'returning_letter' => null,
-        'team_captain' => null,
+        'returningLetter' => null,
+        'teamCaptain' => null,
         'weight' => null,
-        'preferred_name' => null,
+        'preferredName' => null,
     ];
 
     /**
@@ -102,16 +102,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'accolades' => true,
-        'first_name' => true,
+        'firstName' => true,
         'height' => true,
         'hometown' => true,
         'jersey' => true,
-        'last_name' => true,
+        'lastName' => true,
         'position' => true,
-        'returning_letter' => false,
-        'team_captain' => false,
+        'returningLetter' => false,
+        'teamCaptain' => false,
         'weight' => true,
-        'preferred_name' => true,
+        'preferredName' => true,
     ];
 
     /**
@@ -202,16 +202,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'accolades' => 'accolades',
-        'first_name' => 'first_name',
+        'firstName' => 'first_name',
         'height' => 'height',
         'hometown' => 'hometown',
         'jersey' => 'jersey',
-        'last_name' => 'last_name',
+        'lastName' => 'last_name',
         'position' => 'position',
-        'returning_letter' => 'returning_letter',
-        'team_captain' => 'team_captain',
+        'returningLetter' => 'returning_letter',
+        'teamCaptain' => 'team_captain',
         'weight' => 'weight',
-        'preferred_name' => 'preferred_name',
+        'preferredName' => 'preferred_name',
     ];
 
     /**
@@ -222,16 +222,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'accolades' => 'setAccolades',
-        'first_name' => 'setFirstName',
+        'firstName' => 'setFirstName',
         'height' => 'setHeight',
         'hometown' => 'setHometown',
         'jersey' => 'setJersey',
-        'last_name' => 'setLastName',
+        'lastName' => 'setLastName',
         'position' => 'setPosition',
-        'returning_letter' => 'setReturningLetter',
-        'team_captain' => 'setTeamCaptain',
+        'returningLetter' => 'setReturningLetter',
+        'teamCaptain' => 'setTeamCaptain',
         'weight' => 'setWeight',
-        'preferred_name' => 'setPreferredName',
+        'preferredName' => 'setPreferredName',
     ];
 
     /**
@@ -242,16 +242,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'accolades' => 'getAccolades',
-        'first_name' => 'getFirstName',
+        'firstName' => 'getFirstName',
         'height' => 'getHeight',
         'hometown' => 'getHometown',
         'jersey' => 'getJersey',
-        'last_name' => 'getLastName',
+        'lastName' => 'getLastName',
         'position' => 'getPosition',
-        'returning_letter' => 'getReturningLetter',
-        'team_captain' => 'getTeamCaptain',
+        'returningLetter' => 'getReturningLetter',
+        'teamCaptain' => 'getTeamCaptain',
         'weight' => 'getWeight',
-        'preferred_name' => 'getPreferredName',
+        'preferredName' => 'getPreferredName',
     ];
 
     /**
@@ -313,16 +313,16 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('accolades', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('height', $data ?? [], null);
         $this->setIfExists('hometown', $data ?? [], null);
         $this->setIfExists('jersey', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('position', $data ?? [], null);
-        $this->setIfExists('returning_letter', $data ?? [], null);
-        $this->setIfExists('team_captain', $data ?? [], null);
+        $this->setIfExists('returningLetter', $data ?? [], null);
+        $this->setIfExists('teamCaptain', $data ?? [], null);
         $this->setIfExists('weight', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
     }
 
     /**
@@ -429,35 +429,35 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name Players first name
+     * @param string|null $firstName Players first name
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
@@ -565,35 +565,35 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name Players last name
+     * @param string|null $lastName Players last name
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -633,55 +633,55 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets returning_letter
+     * Gets returningLetter
      *
      * @return bool|null
      */
     public function getReturningLetter()
     {
-        return $this->container['returning_letter'];
+        return $this->container['returningLetter'];
     }
 
     /**
-     * Sets returning_letter
+     * Sets returningLetter
      *
-     * @param bool|null $returning_letter Returning letter
+     * @param bool|null $returningLetter Returning letter
      *
      * @return self
      */
-    public function setReturningLetter($returning_letter)
+    public function setReturningLetter($returningLetter)
     {
-        if (is_null($returning_letter)) {
-            throw new \InvalidArgumentException('non-nullable returning_letter cannot be null');
+        if (is_null($returningLetter)) {
+            throw new \InvalidArgumentException('non-nullable returningLetter cannot be null');
         }
-        $this->container['returning_letter'] = $returning_letter;
+        $this->container['returningLetter'] = $returningLetter;
 
         return $this;
     }
 
     /**
-     * Gets team_captain
+     * Gets teamCaptain
      *
      * @return bool|null
      */
     public function getTeamCaptain()
     {
-        return $this->container['team_captain'];
+        return $this->container['teamCaptain'];
     }
 
     /**
-     * Sets team_captain
+     * Sets teamCaptain
      *
-     * @param bool|null $team_captain returns true if the player is a team captian
+     * @param bool|null $teamCaptain returns true if the player is a team captian
      *
      * @return self
      */
-    public function setTeamCaptain($team_captain)
+    public function setTeamCaptain($teamCaptain)
     {
-        if (is_null($team_captain)) {
-            throw new \InvalidArgumentException('non-nullable team_captain cannot be null');
+        if (is_null($teamCaptain)) {
+            throw new \InvalidArgumentException('non-nullable teamCaptain cannot be null');
         }
-        $this->container['team_captain'] = $team_captain;
+        $this->container['teamCaptain'] = $teamCaptain;
 
         return $this;
     }
@@ -721,35 +721,35 @@ class Player implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name Preferred Name
+     * @param string|null $preferredName Preferred Name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }

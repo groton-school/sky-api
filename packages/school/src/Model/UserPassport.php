@@ -59,7 +59,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'number' => 'string',
-        'expire_date' => '\DateTime',
+        'expireDate' => '\DateTime',
     ];
 
     /**
@@ -71,7 +71,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'number' => null,
-        'expire_date' => 'date-time',
+        'expireDate' => 'date-time',
     ];
 
     /**
@@ -81,7 +81,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'number' => true,
-        'expire_date' => true,
+        'expireDate' => true,
     ];
 
     /**
@@ -171,7 +171,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'number' => 'number',
-        'expire_date' => 'expire_date',
+        'expireDate' => 'expire_date',
     ];
 
     /**
@@ -181,7 +181,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'number' => 'setNumber',
-        'expire_date' => 'setExpireDate',
+        'expireDate' => 'setExpireDate',
     ];
 
     /**
@@ -191,7 +191,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'number' => 'getNumber',
-        'expire_date' => 'getExpireDate',
+        'expireDate' => 'getExpireDate',
     ];
 
     /**
@@ -252,7 +252,7 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('number', $data ?? [], null);
-        $this->setIfExists('expire_date', $data ?? [], null);
+        $this->setIfExists('expireDate', $data ?? [], null);
     }
 
     /**
@@ -332,35 +332,35 @@ class UserPassport implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets expire_date
+     * Gets expireDate
      *
      * @return \DateTime|null
      */
     public function getExpireDate()
     {
-        return $this->container['expire_date'];
+        return $this->container['expireDate'];
     }
 
     /**
-     * Sets expire_date
+     * Sets expireDate
      *
-     * @param \DateTime|null $expire_date The passport expiry date. Use ISO-8601 date format: 2022-04-21.
+     * @param \DateTime|null $expireDate The passport expiry date. Use ISO-8601 date format: 2022-04-21.
      *
      * @return self
      */
-    public function setExpireDate($expire_date)
+    public function setExpireDate($expireDate)
     {
-        if (is_null($expire_date)) {
-            array_push($this->openAPINullablesSetToNull, 'expire_date');
+        if (is_null($expireDate)) {
+            array_push($this->openAPINullablesSetToNull, 'expireDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('expire_date', $nullablesSetToNull);
+            $index = array_search('expireDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['expire_date'] = $expire_date;
+        $this->container['expireDate'] = $expireDate;
 
         return $this;
     }

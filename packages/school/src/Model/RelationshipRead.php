@@ -61,19 +61,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'comment' => 'string',
         'contact' => 'bool',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'list_as_parent' => 'bool',
-        'parental_access' => 'bool',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'listAsParent' => 'bool',
+        'parentalAccess' => 'bool',
         'primary' => 'bool',
         'relationship' => 'int',
-        'resides_with' => 'bool',
-        'show_parent' => 'bool',
-        'tuition_responsible_signer' => 'bool',
-        'type_id' => 'int',
-        'user_one_id' => 'int',
-        'user_one_role' => 'string',
-        'user_two_id' => 'int',
+        'residesWith' => 'bool',
+        'showParent' => 'bool',
+        'tuitionResponsibleSigner' => 'bool',
+        'typeId' => 'int',
+        'userOneId' => 'int',
+        'userOneRole' => 'string',
+        'userTwoId' => 'int',
     ];
 
     /**
@@ -87,19 +87,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'comment' => null,
         'contact' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'list_as_parent' => null,
-        'parental_access' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'listAsParent' => null,
+        'parentalAccess' => null,
         'primary' => null,
         'relationship' => 'int32',
-        'resides_with' => null,
-        'show_parent' => null,
-        'tuition_responsible_signer' => null,
-        'type_id' => 'int32',
-        'user_one_id' => 'int32',
-        'user_one_role' => null,
-        'user_two_id' => 'int32',
+        'residesWith' => null,
+        'showParent' => null,
+        'tuitionResponsibleSigner' => null,
+        'typeId' => 'int32',
+        'userOneId' => 'int32',
+        'userOneRole' => null,
+        'userTwoId' => 'int32',
     ];
 
     /**
@@ -111,19 +111,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => true,
         'comment' => true,
         'contact' => false,
-        'first_name' => true,
-        'last_name' => true,
-        'list_as_parent' => false,
-        'parental_access' => false,
+        'firstName' => true,
+        'lastName' => true,
+        'listAsParent' => false,
+        'parentalAccess' => false,
         'primary' => false,
         'relationship' => true,
-        'resides_with' => false,
-        'show_parent' => false,
-        'tuition_responsible_signer' => false,
-        'type_id' => true,
-        'user_one_id' => true,
-        'user_one_role' => true,
-        'user_two_id' => true,
+        'residesWith' => false,
+        'showParent' => false,
+        'tuitionResponsibleSigner' => false,
+        'typeId' => true,
+        'userOneId' => true,
+        'userOneRole' => true,
+        'userTwoId' => true,
     ];
 
     /**
@@ -215,19 +215,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'comment' => 'comment',
         'contact' => 'contact',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'list_as_parent' => 'list_as_parent',
-        'parental_access' => 'parental_access',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'listAsParent' => 'list_as_parent',
+        'parentalAccess' => 'parental_access',
         'primary' => 'primary',
         'relationship' => 'relationship',
-        'resides_with' => 'resides_with',
-        'show_parent' => 'show_parent',
-        'tuition_responsible_signer' => 'tuition_responsible_signer',
-        'type_id' => 'type_id',
-        'user_one_id' => 'user_one_id',
-        'user_one_role' => 'user_one_role',
-        'user_two_id' => 'user_two_id',
+        'residesWith' => 'resides_with',
+        'showParent' => 'show_parent',
+        'tuitionResponsibleSigner' => 'tuition_responsible_signer',
+        'typeId' => 'type_id',
+        'userOneId' => 'user_one_id',
+        'userOneRole' => 'user_one_role',
+        'userTwoId' => 'user_two_id',
     ];
 
     /**
@@ -239,19 +239,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'comment' => 'setComment',
         'contact' => 'setContact',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'list_as_parent' => 'setListAsParent',
-        'parental_access' => 'setParentalAccess',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'listAsParent' => 'setListAsParent',
+        'parentalAccess' => 'setParentalAccess',
         'primary' => 'setPrimary',
         'relationship' => 'setRelationship',
-        'resides_with' => 'setResidesWith',
-        'show_parent' => 'setShowParent',
-        'tuition_responsible_signer' => 'setTuitionResponsibleSigner',
-        'type_id' => 'setTypeId',
-        'user_one_id' => 'setUserOneId',
-        'user_one_role' => 'setUserOneRole',
-        'user_two_id' => 'setUserTwoId',
+        'residesWith' => 'setResidesWith',
+        'showParent' => 'setShowParent',
+        'tuitionResponsibleSigner' => 'setTuitionResponsibleSigner',
+        'typeId' => 'setTypeId',
+        'userOneId' => 'setUserOneId',
+        'userOneRole' => 'setUserOneRole',
+        'userTwoId' => 'setUserTwoId',
     ];
 
     /**
@@ -263,19 +263,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'comment' => 'getComment',
         'contact' => 'getContact',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'list_as_parent' => 'getListAsParent',
-        'parental_access' => 'getParentalAccess',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'listAsParent' => 'getListAsParent',
+        'parentalAccess' => 'getParentalAccess',
         'primary' => 'getPrimary',
         'relationship' => 'getRelationship',
-        'resides_with' => 'getResidesWith',
-        'show_parent' => 'getShowParent',
-        'tuition_responsible_signer' => 'getTuitionResponsibleSigner',
-        'type_id' => 'getTypeId',
-        'user_one_id' => 'getUserOneId',
-        'user_one_role' => 'getUserOneRole',
-        'user_two_id' => 'getUserTwoId',
+        'residesWith' => 'getResidesWith',
+        'showParent' => 'getShowParent',
+        'tuitionResponsibleSigner' => 'getTuitionResponsibleSigner',
+        'typeId' => 'getTypeId',
+        'userOneId' => 'getUserOneId',
+        'userOneRole' => 'getUserOneRole',
+        'userTwoId' => 'getUserTwoId',
     ];
 
     /**
@@ -338,19 +338,19 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
         $this->setIfExists('contact', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('list_as_parent', $data ?? [], null);
-        $this->setIfExists('parental_access', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('listAsParent', $data ?? [], null);
+        $this->setIfExists('parentalAccess', $data ?? [], null);
         $this->setIfExists('primary', $data ?? [], null);
         $this->setIfExists('relationship', $data ?? [], null);
-        $this->setIfExists('resides_with', $data ?? [], null);
-        $this->setIfExists('show_parent', $data ?? [], null);
-        $this->setIfExists('tuition_responsible_signer', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
-        $this->setIfExists('user_one_id', $data ?? [], null);
-        $this->setIfExists('user_one_role', $data ?? [], null);
-        $this->setIfExists('user_two_id', $data ?? [], null);
+        $this->setIfExists('residesWith', $data ?? [], null);
+        $this->setIfExists('showParent', $data ?? [], null);
+        $this->setIfExists('tuitionResponsibleSigner', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
+        $this->setIfExists('userOneId', $data ?? [], null);
+        $this->setIfExists('userOneRole', $data ?? [], null);
+        $this->setIfExists('userTwoId', $data ?? [], null);
     }
 
     /**
@@ -491,123 +491,123 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the user(s) associated with the queried user
+     * @param string|null $firstName The first name of the user(s) associated with the queried user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the user(s) associated with the queried user
+     * @param string|null $lastName The last name of the user(s) associated with the queried user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets list_as_parent
+     * Gets listAsParent
      *
      * @return bool|null
      */
     public function getListAsParent()
     {
-        return $this->container['list_as_parent'];
+        return $this->container['listAsParent'];
     }
 
     /**
-     * Sets list_as_parent
+     * Sets listAsParent
      *
-     * @param bool|null $list_as_parent Returns True if List as Parent is enabled in the UI for a user. If enabled, the user can be listed in directories as the student's parent
+     * @param bool|null $listAsParent Returns True if List as Parent is enabled in the UI for a user. If enabled, the user can be listed in directories as the student's parent
      *
      * @return self
      */
-    public function setListAsParent($list_as_parent)
+    public function setListAsParent($listAsParent)
     {
-        if (is_null($list_as_parent)) {
-            throw new \InvalidArgumentException('non-nullable list_as_parent cannot be null');
+        if (is_null($listAsParent)) {
+            throw new \InvalidArgumentException('non-nullable listAsParent cannot be null');
         }
-        $this->container['list_as_parent'] = $list_as_parent;
+        $this->container['listAsParent'] = $listAsParent;
 
         return $this;
     }
 
     /**
-     * Gets parental_access
+     * Gets parentalAccess
      *
      * @return bool|null
      */
     public function getParentalAccess()
     {
-        return $this->container['parental_access'];
+        return $this->container['parentalAccess'];
     }
 
     /**
-     * Sets parental_access
+     * Sets parentalAccess
      *
-     * @param bool|null $parental_access Returns True if Parental Access is enabled in the UI for a relationship type
+     * @param bool|null $parentalAccess Returns True if Parental Access is enabled in the UI for a relationship type
      *
      * @return self
      */
-    public function setParentalAccess($parental_access)
+    public function setParentalAccess($parentalAccess)
     {
-        if (is_null($parental_access)) {
-            throw new \InvalidArgumentException('non-nullable parental_access cannot be null');
+        if (is_null($parentalAccess)) {
+            throw new \InvalidArgumentException('non-nullable parentalAccess cannot be null');
         }
-        $this->container['parental_access'] = $parental_access;
+        $this->container['parentalAccess'] = $parentalAccess;
 
         return $this;
     }
@@ -674,218 +674,218 @@ class RelationshipRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets resides_with
+     * Gets residesWith
      *
      * @return bool|null
      */
     public function getResidesWith()
     {
-        return $this->container['resides_with'];
+        return $this->container['residesWith'];
     }
 
     /**
-     * Sets resides_with
+     * Sets residesWith
      *
-     * @param bool|null $resides_with Returns True if Resides With is enabled in the UI. If enabled, then the user in a relationship resides with the queried user
+     * @param bool|null $residesWith Returns True if Resides With is enabled in the UI. If enabled, then the user in a relationship resides with the queried user
      *
      * @return self
      */
-    public function setResidesWith($resides_with)
+    public function setResidesWith($residesWith)
     {
-        if (is_null($resides_with)) {
-            throw new \InvalidArgumentException('non-nullable resides_with cannot be null');
+        if (is_null($residesWith)) {
+            throw new \InvalidArgumentException('non-nullable residesWith cannot be null');
         }
-        $this->container['resides_with'] = $resides_with;
+        $this->container['residesWith'] = $residesWith;
 
         return $this;
     }
 
     /**
-     * Gets show_parent
+     * Gets showParent
      *
      * @return bool|null
      */
     public function getShowParent()
     {
-        return $this->container['show_parent'];
+        return $this->container['showParent'];
     }
 
     /**
-     * Sets show_parent
+     * Sets showParent
      *
-     * @param bool|null $show_parent Returns True if a parent's contact information is displayable in the directory
+     * @param bool|null $showParent Returns True if a parent's contact information is displayable in the directory
      *
      * @return self
      */
-    public function setShowParent($show_parent)
+    public function setShowParent($showParent)
     {
-        if (is_null($show_parent)) {
-            throw new \InvalidArgumentException('non-nullable show_parent cannot be null');
+        if (is_null($showParent)) {
+            throw new \InvalidArgumentException('non-nullable showParent cannot be null');
         }
-        $this->container['show_parent'] = $show_parent;
+        $this->container['showParent'] = $showParent;
 
         return $this;
     }
 
     /**
-     * Gets tuition_responsible_signer
+     * Gets tuitionResponsibleSigner
      *
      * @return bool|null
      */
     public function getTuitionResponsibleSigner()
     {
-        return $this->container['tuition_responsible_signer'];
+        return $this->container['tuitionResponsibleSigner'];
     }
 
     /**
-     * Sets tuition_responsible_signer
+     * Sets tuitionResponsibleSigner
      *
-     * @param bool|null $tuition_responsible_signer Returns True if Responsible Signer is enabled in the UI for a user. If enabled, it indicates the user signs enrollment contracts in onBoard
+     * @param bool|null $tuitionResponsibleSigner Returns True if Responsible Signer is enabled in the UI for a user. If enabled, it indicates the user signs enrollment contracts in onBoard
      *
      * @return self
      */
-    public function setTuitionResponsibleSigner($tuition_responsible_signer)
+    public function setTuitionResponsibleSigner($tuitionResponsibleSigner)
     {
-        if (is_null($tuition_responsible_signer)) {
-            throw new \InvalidArgumentException('non-nullable tuition_responsible_signer cannot be null');
+        if (is_null($tuitionResponsibleSigner)) {
+            throw new \InvalidArgumentException('non-nullable tuitionResponsibleSigner cannot be null');
         }
-        $this->container['tuition_responsible_signer'] = $tuition_responsible_signer;
+        $this->container['tuitionResponsibleSigner'] = $tuitionResponsibleSigner;
 
         return $this;
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return int|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param int|null $type_id The ID of the relationship type. The ID corresponds with static options in the UI
+     * @param int|null $typeId The ID of the relationship type. The ID corresponds with static options in the UI
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }
 
     /**
-     * Gets user_one_id
+     * Gets userOneId
      *
      * @return int|null
      */
     public function getUserOneId()
     {
-        return $this->container['user_one_id'];
+        return $this->container['userOneId'];
     }
 
     /**
-     * Sets user_one_id
+     * Sets userOneId
      *
-     * @param int|null $user_one_id The ID of the user associated with user_two_id
+     * @param int|null $userOneId The ID of the user associated with user_two_id
      *
      * @return self
      */
-    public function setUserOneId($user_one_id)
+    public function setUserOneId($userOneId)
     {
-        if (is_null($user_one_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_one_id');
+        if (is_null($userOneId)) {
+            array_push($this->openAPINullablesSetToNull, 'userOneId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_one_id', $nullablesSetToNull);
+            $index = array_search('userOneId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_one_id'] = $user_one_id;
+        $this->container['userOneId'] = $userOneId;
 
         return $this;
     }
 
     /**
-     * Gets user_one_role
+     * Gets userOneRole
      *
      * @return string|null
      */
     public function getUserOneRole()
     {
-        return $this->container['user_one_role'];
+        return $this->container['userOneRole'];
     }
 
     /**
-     * Sets user_one_role
+     * Sets userOneRole
      *
-     * @param string|null $user_one_role The role of the user being queried
+     * @param string|null $userOneRole The role of the user being queried
      *
      * @return self
      */
-    public function setUserOneRole($user_one_role)
+    public function setUserOneRole($userOneRole)
     {
-        if (is_null($user_one_role)) {
-            array_push($this->openAPINullablesSetToNull, 'user_one_role');
+        if (is_null($userOneRole)) {
+            array_push($this->openAPINullablesSetToNull, 'userOneRole');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_one_role', $nullablesSetToNull);
+            $index = array_search('userOneRole', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_one_role'] = $user_one_role;
+        $this->container['userOneRole'] = $userOneRole;
 
         return $this;
     }
 
     /**
-     * Gets user_two_id
+     * Gets userTwoId
      *
      * @return int|null
      */
     public function getUserTwoId()
     {
-        return $this->container['user_two_id'];
+        return $this->container['userTwoId'];
     }
 
     /**
-     * Sets user_two_id
+     * Sets userTwoId
      *
-     * @param int|null $user_two_id The ID of the user associated with user_one_id
+     * @param int|null $userTwoId The ID of the user associated with user_one_id
      *
      * @return self
      */
-    public function setUserTwoId($user_two_id)
+    public function setUserTwoId($userTwoId)
     {
-        if (is_null($user_two_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_two_id');
+        if (is_null($userTwoId)) {
+            array_push($this->openAPINullablesSetToNull, 'userTwoId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_two_id', $nullablesSetToNull);
+            $index = array_search('userTwoId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_two_id'] = $user_two_id;
+        $this->container['userTwoId'] = $userTwoId;
 
         return $this;
     }

@@ -127,17 +127,17 @@ class AdvisoriesApi
      *
      * Advisories sections by school level
      *
-     * @param  int $level_num Format - int32. Level number (required)
-     * @param  string $school_year The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number (required)
+     * @param  string $schoolYear The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdvisoriesSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AdvisoriesSectionCollection
      */
-    public function v1AdvisoriesSectionsGet($level_num, $school_year = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
+    public function v1AdvisoriesSectionsGet($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
     {
-        [$response] = $this->v1AdvisoriesSectionsGetWithHttpInfo($level_num, $school_year, $contentType);
+        [$response] = $this->v1AdvisoriesSectionsGetWithHttpInfo($levelNum, $schoolYear, $contentType);
         return $response;
     }
 
@@ -146,17 +146,17 @@ class AdvisoriesApi
      *
      * Advisories sections by school level
      *
-     * @param  int $level_num Format - int32. Level number (required)
-     * @param  string $school_year The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number (required)
+     * @param  string $schoolYear The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdvisoriesSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AdvisoriesSectionCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AdvisoriesSectionsGetWithHttpInfo($level_num, $school_year = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
+    public function v1AdvisoriesSectionsGetWithHttpInfo($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
     {
-        $request = $this->v1AdvisoriesSectionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1AdvisoriesSectionsGetRequest($levelNum, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -271,16 +271,16 @@ class AdvisoriesApi
      *
      * Advisories sections by school level
      *
-     * @param  int $level_num Format - int32. Level number (required)
-     * @param  string $school_year The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number (required)
+     * @param  string $schoolYear The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdvisoriesSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdvisoriesSectionsGetAsync($level_num, $school_year = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
+    public function v1AdvisoriesSectionsGetAsync($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
     {
-        return $this->v1AdvisoriesSectionsGetAsyncWithHttpInfo($level_num, $school_year, $contentType)
+        return $this->v1AdvisoriesSectionsGetAsyncWithHttpInfo($levelNum, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -293,17 +293,17 @@ class AdvisoriesApi
      *
      * Advisories sections by school level
      *
-     * @param  int $level_num Format - int32. Level number (required)
-     * @param  string $school_year The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number (required)
+     * @param  string $schoolYear The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdvisoriesSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdvisoriesSectionsGetAsyncWithHttpInfo($level_num, $school_year = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
+    public function v1AdvisoriesSectionsGetAsyncWithHttpInfo($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
     {
         $returnType = '\SKY\School\Model\AdvisoriesSectionCollection';
-        $request = $this->v1AdvisoriesSectionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1AdvisoriesSectionsGetRequest($levelNum, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -344,20 +344,20 @@ class AdvisoriesApi
     /**
      * Create request for operation 'v1AdvisoriesSectionsGet'
      *
-     * @param  int $level_num Format - int32. Level number (required)
-     * @param  string $school_year The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number (required)
+     * @param  string $schoolYear The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdvisoriesSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AdvisoriesSectionsGetRequest($level_num, $school_year = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
+    public function v1AdvisoriesSectionsGetRequest($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AdvisoriesSectionsGet'][0])
     {
 
-        // verify the required parameter 'level_num' is set
-        if ($level_num === null || (is_array($level_num) && count($level_num) === 0)) {
+        // verify the required parameter 'levelNum' is set
+        if ($levelNum === null || (is_array($levelNum) && count($levelNum) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $level_num when calling v1AdvisoriesSectionsGet'
+                'Missing the required parameter $levelNum when calling v1AdvisoriesSectionsGet'
             );
         }
 
@@ -372,7 +372,7 @@ class AdvisoriesApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_num,
+            $levelNum,
             'level_num', // param base name
             'integer', // openApiType
             'form', // style
@@ -381,7 +381,7 @@ class AdvisoriesApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style

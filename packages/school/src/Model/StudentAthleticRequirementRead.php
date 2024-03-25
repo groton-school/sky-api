@@ -59,11 +59,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'athletic_requirement_type' => '\SKY\School\Model\AthleticRequirementType',
-        'school_year' => '\SKY\School\Model\IdDescriptorField',
+        'athleticRequirementType' => '\SKY\School\Model\AthleticRequirementType',
+        'schoolYear' => '\SKY\School\Model\IdDescriptorField',
         'season' => '\SKY\School\Model\IdDescriptorField',
-        'is_complete' => 'bool',
-        'athletic_requirement_date' => '\DateTime',
+        'isComplete' => 'bool',
+        'athleticRequirementDate' => '\DateTime',
     ];
 
     /**
@@ -75,11 +75,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'athletic_requirement_type' => null,
-        'school_year' => null,
+        'athleticRequirementType' => null,
+        'schoolYear' => null,
         'season' => null,
-        'is_complete' => null,
-        'athletic_requirement_date' => 'date-time',
+        'isComplete' => null,
+        'athleticRequirementDate' => 'date-time',
     ];
 
     /**
@@ -89,11 +89,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'athletic_requirement_type' => false,
-        'school_year' => false,
+        'athleticRequirementType' => false,
+        'schoolYear' => false,
         'season' => false,
-        'is_complete' => true,
-        'athletic_requirement_date' => true,
+        'isComplete' => true,
+        'athleticRequirementDate' => true,
     ];
 
     /**
@@ -183,11 +183,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'athletic_requirement_type' => 'athletic_requirement_type',
-        'school_year' => 'school_year',
+        'athleticRequirementType' => 'athletic_requirement_type',
+        'schoolYear' => 'school_year',
         'season' => 'season',
-        'is_complete' => 'is_complete',
-        'athletic_requirement_date' => 'athletic_requirement_date',
+        'isComplete' => 'is_complete',
+        'athleticRequirementDate' => 'athletic_requirement_date',
     ];
 
     /**
@@ -197,11 +197,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
      */
     protected static $setters = [
         'id' => 'setId',
-        'athletic_requirement_type' => 'setAthleticRequirementType',
-        'school_year' => 'setSchoolYear',
+        'athleticRequirementType' => 'setAthleticRequirementType',
+        'schoolYear' => 'setSchoolYear',
         'season' => 'setSeason',
-        'is_complete' => 'setIsComplete',
-        'athletic_requirement_date' => 'setAthleticRequirementDate',
+        'isComplete' => 'setIsComplete',
+        'athleticRequirementDate' => 'setAthleticRequirementDate',
     ];
 
     /**
@@ -211,11 +211,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
      */
     protected static $getters = [
         'id' => 'getId',
-        'athletic_requirement_type' => 'getAthleticRequirementType',
-        'school_year' => 'getSchoolYear',
+        'athleticRequirementType' => 'getAthleticRequirementType',
+        'schoolYear' => 'getSchoolYear',
         'season' => 'getSeason',
-        'is_complete' => 'getIsComplete',
-        'athletic_requirement_date' => 'getAthleticRequirementDate',
+        'isComplete' => 'getIsComplete',
+        'athleticRequirementDate' => 'getAthleticRequirementDate',
     ];
 
     /**
@@ -276,11 +276,11 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('athletic_requirement_type', $data ?? [], null);
-        $this->setIfExists('school_year', $data ?? [], null);
+        $this->setIfExists('athleticRequirementType', $data ?? [], null);
+        $this->setIfExists('schoolYear', $data ?? [], null);
         $this->setIfExists('season', $data ?? [], null);
-        $this->setIfExists('is_complete', $data ?? [], null);
-        $this->setIfExists('athletic_requirement_date', $data ?? [], null);
+        $this->setIfExists('isComplete', $data ?? [], null);
+        $this->setIfExists('athleticRequirementDate', $data ?? [], null);
     }
 
     /**
@@ -353,55 +353,55 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets athletic_requirement_type
+     * Gets athleticRequirementType
      *
      * @return \SKY\School\Model\AthleticRequirementType|null
      */
     public function getAthleticRequirementType()
     {
-        return $this->container['athletic_requirement_type'];
+        return $this->container['athleticRequirementType'];
     }
 
     /**
-     * Sets athletic_requirement_type
+     * Sets athleticRequirementType
      *
-     * @param \SKY\School\Model\AthleticRequirementType|null $athletic_requirement_type athletic_requirement_type
+     * @param \SKY\School\Model\AthleticRequirementType|null $athleticRequirementType athleticRequirementType
      *
      * @return self
      */
-    public function setAthleticRequirementType($athletic_requirement_type)
+    public function setAthleticRequirementType($athleticRequirementType)
     {
-        if (is_null($athletic_requirement_type)) {
-            throw new \InvalidArgumentException('non-nullable athletic_requirement_type cannot be null');
+        if (is_null($athleticRequirementType)) {
+            throw new \InvalidArgumentException('non-nullable athleticRequirementType cannot be null');
         }
-        $this->container['athletic_requirement_type'] = $athletic_requirement_type;
+        $this->container['athleticRequirementType'] = $athleticRequirementType;
 
         return $this;
     }
 
     /**
-     * Gets school_year
+     * Gets schoolYear
      *
      * @return \SKY\School\Model\IdDescriptorField|null
      */
     public function getSchoolYear()
     {
-        return $this->container['school_year'];
+        return $this->container['schoolYear'];
     }
 
     /**
-     * Sets school_year
+     * Sets schoolYear
      *
-     * @param \SKY\School\Model\IdDescriptorField|null $school_year school_year
+     * @param \SKY\School\Model\IdDescriptorField|null $schoolYear schoolYear
      *
      * @return self
      */
-    public function setSchoolYear($school_year)
+    public function setSchoolYear($schoolYear)
     {
-        if (is_null($school_year)) {
-            throw new \InvalidArgumentException('non-nullable school_year cannot be null');
+        if (is_null($schoolYear)) {
+            throw new \InvalidArgumentException('non-nullable schoolYear cannot be null');
         }
-        $this->container['school_year'] = $school_year;
+        $this->container['schoolYear'] = $schoolYear;
 
         return $this;
     }
@@ -434,69 +434,69 @@ class StudentAthleticRequirementRead implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets is_complete
+     * Gets isComplete
      *
      * @return bool|null
      */
     public function getIsComplete()
     {
-        return $this->container['is_complete'];
+        return $this->container['isComplete'];
     }
 
     /**
-     * Sets is_complete
+     * Sets isComplete
      *
-     * @param bool|null $is_complete Returns true if athletic requirement exists for the student
+     * @param bool|null $isComplete Returns true if athletic requirement exists for the student
      *
      * @return self
      */
-    public function setIsComplete($is_complete)
+    public function setIsComplete($isComplete)
     {
-        if (is_null($is_complete)) {
-            array_push($this->openAPINullablesSetToNull, 'is_complete');
+        if (is_null($isComplete)) {
+            array_push($this->openAPINullablesSetToNull, 'isComplete');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_complete', $nullablesSetToNull);
+            $index = array_search('isComplete', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_complete'] = $is_complete;
+        $this->container['isComplete'] = $isComplete;
 
         return $this;
     }
 
     /**
-     * Gets athletic_requirement_date
+     * Gets athleticRequirementDate
      *
      * @return \DateTime|null
      */
     public function getAthleticRequirementDate()
     {
-        return $this->container['athletic_requirement_date'];
+        return $this->container['athleticRequirementDate'];
     }
 
     /**
-     * Sets athletic_requirement_date
+     * Sets athleticRequirementDate
      *
-     * @param \DateTime|null $athletic_requirement_date The date of athletic requirement. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $athleticRequirementDate The date of athletic requirement. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setAthleticRequirementDate($athletic_requirement_date)
+    public function setAthleticRequirementDate($athleticRequirementDate)
     {
-        if (is_null($athletic_requirement_date)) {
-            array_push($this->openAPINullablesSetToNull, 'athletic_requirement_date');
+        if (is_null($athleticRequirementDate)) {
+            array_push($this->openAPINullablesSetToNull, 'athleticRequirementDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('athletic_requirement_date', $nullablesSetToNull);
+            $index = array_search('athleticRequirementDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['athletic_requirement_date'] = $athletic_requirement_date;
+        $this->container['athleticRequirementDate'] = $athleticRequirementDate;
 
         return $this;
     }

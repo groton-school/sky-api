@@ -58,36 +58,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'association_id' => 'int',
-        'brief_description' => 'string',
-        'building_name' => 'string',
+        'associationId' => 'int',
+        'briefDescription' => 'string',
+        'buildingName' => 'string',
         'cancelled' => 'bool',
-        'contact_email' => 'string',
-        'contact_name' => 'string',
-        'end_date' => '\DateTime',
-        'event_id' => 'int',
-        'event_type' => 'string',
-        'category_id' => 'int',
-        'category_name' => 'string',
-        'home_away' => 'string',
+        'contactEmail' => 'string',
+        'contactName' => 'string',
+        'endDate' => '\DateTime',
+        'eventId' => 'int',
+        'eventType' => 'string',
+        'categoryId' => 'int',
+        'categoryName' => 'string',
+        'homeAway' => 'string',
         'invitational' => 'bool',
         'league' => 'bool',
         'location' => 'string',
-        'long_description' => 'string',
+        'longDescription' => 'string',
         'opponent' => 'string',
         'playoff' => 'bool',
-        'preset_id' => 'int',
-        'recurrence_id' => 'int',
-        'registration_id' => 'int',
+        'presetId' => 'int',
+        'recurrenceId' => 'int',
+        'registrationId' => 'int',
         'rescheduled' => 'bool',
-        'reschedule_note' => 'string',
-        'room_name' => 'string',
+        'rescheduleNote' => 'string',
+        'roomName' => 'string',
         'scrimmage' => 'bool',
-        'start_date' => '\DateTime',
+        'startDate' => '\DateTime',
         'title' => 'string',
         'tournament' => 'bool',
-        'all_day' => 'bool',
-        'total_days' => 'int',
+        'allDay' => 'bool',
+        'totalDays' => 'int',
     ];
 
     /**
@@ -98,36 +98,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'association_id' => 'int32',
-        'brief_description' => null,
-        'building_name' => null,
+        'associationId' => 'int32',
+        'briefDescription' => null,
+        'buildingName' => null,
         'cancelled' => null,
-        'contact_email' => null,
-        'contact_name' => null,
-        'end_date' => 'date-time',
-        'event_id' => 'int32',
-        'event_type' => null,
-        'category_id' => 'int32',
-        'category_name' => null,
-        'home_away' => null,
+        'contactEmail' => null,
+        'contactName' => null,
+        'endDate' => 'date-time',
+        'eventId' => 'int32',
+        'eventType' => null,
+        'categoryId' => 'int32',
+        'categoryName' => null,
+        'homeAway' => null,
         'invitational' => null,
         'league' => null,
         'location' => null,
-        'long_description' => null,
+        'longDescription' => null,
         'opponent' => null,
         'playoff' => null,
-        'preset_id' => 'int32',
-        'recurrence_id' => 'int32',
-        'registration_id' => 'int32',
+        'presetId' => 'int32',
+        'recurrenceId' => 'int32',
+        'registrationId' => 'int32',
         'rescheduled' => null,
-        'reschedule_note' => null,
-        'room_name' => null,
+        'rescheduleNote' => null,
+        'roomName' => null,
         'scrimmage' => null,
-        'start_date' => 'date-time',
+        'startDate' => 'date-time',
         'title' => null,
         'tournament' => null,
-        'all_day' => null,
-        'total_days' => 'int32',
+        'allDay' => null,
+        'totalDays' => 'int32',
     ];
 
     /**
@@ -136,36 +136,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'association_id' => true,
-        'brief_description' => true,
-        'building_name' => true,
+        'associationId' => true,
+        'briefDescription' => true,
+        'buildingName' => true,
         'cancelled' => true,
-        'contact_email' => true,
-        'contact_name' => true,
-        'end_date' => true,
-        'event_id' => true,
-        'event_type' => true,
-        'category_id' => true,
-        'category_name' => true,
-        'home_away' => true,
+        'contactEmail' => true,
+        'contactName' => true,
+        'endDate' => true,
+        'eventId' => true,
+        'eventType' => true,
+        'categoryId' => true,
+        'categoryName' => true,
+        'homeAway' => true,
         'invitational' => true,
         'league' => true,
         'location' => true,
-        'long_description' => true,
+        'longDescription' => true,
         'opponent' => true,
         'playoff' => true,
-        'preset_id' => true,
-        'recurrence_id' => true,
-        'registration_id' => true,
+        'presetId' => true,
+        'recurrenceId' => true,
+        'registrationId' => true,
         'rescheduled' => true,
-        'reschedule_note' => true,
-        'room_name' => true,
+        'rescheduleNote' => true,
+        'roomName' => true,
         'scrimmage' => true,
-        'start_date' => true,
+        'startDate' => true,
         'title' => true,
         'tournament' => true,
-        'all_day' => true,
-        'total_days' => true,
+        'allDay' => true,
+        'totalDays' => true,
     ];
 
     /**
@@ -254,36 +254,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'association_id' => 'association_id',
-        'brief_description' => 'brief_description',
-        'building_name' => 'building_name',
+        'associationId' => 'association_id',
+        'briefDescription' => 'brief_description',
+        'buildingName' => 'building_name',
         'cancelled' => 'cancelled',
-        'contact_email' => 'contact_email',
-        'contact_name' => 'contact_name',
-        'end_date' => 'end_date',
-        'event_id' => 'event_id',
-        'event_type' => 'event_type',
-        'category_id' => 'category_id',
-        'category_name' => 'category_name',
-        'home_away' => 'home_away',
+        'contactEmail' => 'contact_email',
+        'contactName' => 'contact_name',
+        'endDate' => 'end_date',
+        'eventId' => 'event_id',
+        'eventType' => 'event_type',
+        'categoryId' => 'category_id',
+        'categoryName' => 'category_name',
+        'homeAway' => 'home_away',
         'invitational' => 'invitational',
         'league' => 'league',
         'location' => 'location',
-        'long_description' => 'long_description',
+        'longDescription' => 'long_description',
         'opponent' => 'opponent',
         'playoff' => 'playoff',
-        'preset_id' => 'preset_id',
-        'recurrence_id' => 'recurrence_id',
-        'registration_id' => 'registration_id',
+        'presetId' => 'preset_id',
+        'recurrenceId' => 'recurrence_id',
+        'registrationId' => 'registration_id',
         'rescheduled' => 'rescheduled',
-        'reschedule_note' => 'reschedule_note',
-        'room_name' => 'room_name',
+        'rescheduleNote' => 'reschedule_note',
+        'roomName' => 'room_name',
         'scrimmage' => 'scrimmage',
-        'start_date' => 'start_date',
+        'startDate' => 'start_date',
         'title' => 'title',
         'tournament' => 'tournament',
-        'all_day' => 'all_day',
-        'total_days' => 'total_days',
+        'allDay' => 'all_day',
+        'totalDays' => 'total_days',
     ];
 
     /**
@@ -292,36 +292,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'association_id' => 'setAssociationId',
-        'brief_description' => 'setBriefDescription',
-        'building_name' => 'setBuildingName',
+        'associationId' => 'setAssociationId',
+        'briefDescription' => 'setBriefDescription',
+        'buildingName' => 'setBuildingName',
         'cancelled' => 'setCancelled',
-        'contact_email' => 'setContactEmail',
-        'contact_name' => 'setContactName',
-        'end_date' => 'setEndDate',
-        'event_id' => 'setEventId',
-        'event_type' => 'setEventType',
-        'category_id' => 'setCategoryId',
-        'category_name' => 'setCategoryName',
-        'home_away' => 'setHomeAway',
+        'contactEmail' => 'setContactEmail',
+        'contactName' => 'setContactName',
+        'endDate' => 'setEndDate',
+        'eventId' => 'setEventId',
+        'eventType' => 'setEventType',
+        'categoryId' => 'setCategoryId',
+        'categoryName' => 'setCategoryName',
+        'homeAway' => 'setHomeAway',
         'invitational' => 'setInvitational',
         'league' => 'setLeague',
         'location' => 'setLocation',
-        'long_description' => 'setLongDescription',
+        'longDescription' => 'setLongDescription',
         'opponent' => 'setOpponent',
         'playoff' => 'setPlayoff',
-        'preset_id' => 'setPresetId',
-        'recurrence_id' => 'setRecurrenceId',
-        'registration_id' => 'setRegistrationId',
+        'presetId' => 'setPresetId',
+        'recurrenceId' => 'setRecurrenceId',
+        'registrationId' => 'setRegistrationId',
         'rescheduled' => 'setRescheduled',
-        'reschedule_note' => 'setRescheduleNote',
-        'room_name' => 'setRoomName',
+        'rescheduleNote' => 'setRescheduleNote',
+        'roomName' => 'setRoomName',
         'scrimmage' => 'setScrimmage',
-        'start_date' => 'setStartDate',
+        'startDate' => 'setStartDate',
         'title' => 'setTitle',
         'tournament' => 'setTournament',
-        'all_day' => 'setAllDay',
-        'total_days' => 'setTotalDays',
+        'allDay' => 'setAllDay',
+        'totalDays' => 'setTotalDays',
     ];
 
     /**
@@ -330,36 +330,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'association_id' => 'getAssociationId',
-        'brief_description' => 'getBriefDescription',
-        'building_name' => 'getBuildingName',
+        'associationId' => 'getAssociationId',
+        'briefDescription' => 'getBriefDescription',
+        'buildingName' => 'getBuildingName',
         'cancelled' => 'getCancelled',
-        'contact_email' => 'getContactEmail',
-        'contact_name' => 'getContactName',
-        'end_date' => 'getEndDate',
-        'event_id' => 'getEventId',
-        'event_type' => 'getEventType',
-        'category_id' => 'getCategoryId',
-        'category_name' => 'getCategoryName',
-        'home_away' => 'getHomeAway',
+        'contactEmail' => 'getContactEmail',
+        'contactName' => 'getContactName',
+        'endDate' => 'getEndDate',
+        'eventId' => 'getEventId',
+        'eventType' => 'getEventType',
+        'categoryId' => 'getCategoryId',
+        'categoryName' => 'getCategoryName',
+        'homeAway' => 'getHomeAway',
         'invitational' => 'getInvitational',
         'league' => 'getLeague',
         'location' => 'getLocation',
-        'long_description' => 'getLongDescription',
+        'longDescription' => 'getLongDescription',
         'opponent' => 'getOpponent',
         'playoff' => 'getPlayoff',
-        'preset_id' => 'getPresetId',
-        'recurrence_id' => 'getRecurrenceId',
-        'registration_id' => 'getRegistrationId',
+        'presetId' => 'getPresetId',
+        'recurrenceId' => 'getRecurrenceId',
+        'registrationId' => 'getRegistrationId',
         'rescheduled' => 'getRescheduled',
-        'reschedule_note' => 'getRescheduleNote',
-        'room_name' => 'getRoomName',
+        'rescheduleNote' => 'getRescheduleNote',
+        'roomName' => 'getRoomName',
         'scrimmage' => 'getScrimmage',
-        'start_date' => 'getStartDate',
+        'startDate' => 'getStartDate',
         'title' => 'getTitle',
         'tournament' => 'getTournament',
-        'all_day' => 'getAllDay',
-        'total_days' => 'getTotalDays',
+        'allDay' => 'getAllDay',
+        'totalDays' => 'getTotalDays',
     ];
 
     /**
@@ -419,36 +419,36 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('association_id', $data ?? [], null);
-        $this->setIfExists('brief_description', $data ?? [], null);
-        $this->setIfExists('building_name', $data ?? [], null);
+        $this->setIfExists('associationId', $data ?? [], null);
+        $this->setIfExists('briefDescription', $data ?? [], null);
+        $this->setIfExists('buildingName', $data ?? [], null);
         $this->setIfExists('cancelled', $data ?? [], null);
-        $this->setIfExists('contact_email', $data ?? [], null);
-        $this->setIfExists('contact_name', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('event_id', $data ?? [], null);
-        $this->setIfExists('event_type', $data ?? [], null);
-        $this->setIfExists('category_id', $data ?? [], null);
-        $this->setIfExists('category_name', $data ?? [], null);
-        $this->setIfExists('home_away', $data ?? [], null);
+        $this->setIfExists('contactEmail', $data ?? [], null);
+        $this->setIfExists('contactName', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
+        $this->setIfExists('eventId', $data ?? [], null);
+        $this->setIfExists('eventType', $data ?? [], null);
+        $this->setIfExists('categoryId', $data ?? [], null);
+        $this->setIfExists('categoryName', $data ?? [], null);
+        $this->setIfExists('homeAway', $data ?? [], null);
         $this->setIfExists('invitational', $data ?? [], null);
         $this->setIfExists('league', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
-        $this->setIfExists('long_description', $data ?? [], null);
+        $this->setIfExists('longDescription', $data ?? [], null);
         $this->setIfExists('opponent', $data ?? [], null);
         $this->setIfExists('playoff', $data ?? [], null);
-        $this->setIfExists('preset_id', $data ?? [], null);
-        $this->setIfExists('recurrence_id', $data ?? [], null);
-        $this->setIfExists('registration_id', $data ?? [], null);
+        $this->setIfExists('presetId', $data ?? [], null);
+        $this->setIfExists('recurrenceId', $data ?? [], null);
+        $this->setIfExists('registrationId', $data ?? [], null);
         $this->setIfExists('rescheduled', $data ?? [], null);
-        $this->setIfExists('reschedule_note', $data ?? [], null);
-        $this->setIfExists('room_name', $data ?? [], null);
+        $this->setIfExists('rescheduleNote', $data ?? [], null);
+        $this->setIfExists('roomName', $data ?? [], null);
         $this->setIfExists('scrimmage', $data ?? [], null);
-        $this->setIfExists('start_date', $data ?? [], null);
+        $this->setIfExists('startDate', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('tournament', $data ?? [], null);
-        $this->setIfExists('all_day', $data ?? [], null);
-        $this->setIfExists('total_days', $data ?? [], null);
+        $this->setIfExists('allDay', $data ?? [], null);
+        $this->setIfExists('totalDays', $data ?? [], null);
     }
 
     /**
@@ -494,103 +494,103 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets association_id
+     * Gets associationId
      *
      * @return int|null
      */
     public function getAssociationId()
     {
-        return $this->container['association_id'];
+        return $this->container['associationId'];
     }
 
     /**
-     * Sets association_id
+     * Sets associationId
      *
-     * @param int|null $association_id The association id for the event
+     * @param int|null $associationId The association id for the event
      *
      * @return self
      */
-    public function setAssociationId($association_id)
+    public function setAssociationId($associationId)
     {
-        if (is_null($association_id)) {
-            array_push($this->openAPINullablesSetToNull, 'association_id');
+        if (is_null($associationId)) {
+            array_push($this->openAPINullablesSetToNull, 'associationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('association_id', $nullablesSetToNull);
+            $index = array_search('associationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['association_id'] = $association_id;
+        $this->container['associationId'] = $associationId;
 
         return $this;
     }
 
     /**
-     * Gets brief_description
+     * Gets briefDescription
      *
      * @return string|null
      */
     public function getBriefDescription()
     {
-        return $this->container['brief_description'];
+        return $this->container['briefDescription'];
     }
 
     /**
-     * Sets brief_description
+     * Sets briefDescription
      *
-     * @param string|null $brief_description The brief description of the event
+     * @param string|null $briefDescription The brief description of the event
      *
      * @return self
      */
-    public function setBriefDescription($brief_description)
+    public function setBriefDescription($briefDescription)
     {
-        if (is_null($brief_description)) {
-            array_push($this->openAPINullablesSetToNull, 'brief_description');
+        if (is_null($briefDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'briefDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('brief_description', $nullablesSetToNull);
+            $index = array_search('briefDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['brief_description'] = $brief_description;
+        $this->container['briefDescription'] = $briefDescription;
 
         return $this;
     }
 
     /**
-     * Gets building_name
+     * Gets buildingName
      *
      * @return string|null
      */
     public function getBuildingName()
     {
-        return $this->container['building_name'];
+        return $this->container['buildingName'];
     }
 
     /**
-     * Sets building_name
+     * Sets buildingName
      *
-     * @param string|null $building_name The name of the building where the event is being held
+     * @param string|null $buildingName The name of the building where the event is being held
      *
      * @return self
      */
-    public function setBuildingName($building_name)
+    public function setBuildingName($buildingName)
     {
-        if (is_null($building_name)) {
-            array_push($this->openAPINullablesSetToNull, 'building_name');
+        if (is_null($buildingName)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_name', $nullablesSetToNull);
+            $index = array_search('buildingName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_name'] = $building_name;
+        $this->container['buildingName'] = $buildingName;
 
         return $this;
     }
@@ -630,273 +630,273 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets contact_email
+     * Gets contactEmail
      *
      * @return string|null
      */
     public function getContactEmail()
     {
-        return $this->container['contact_email'];
+        return $this->container['contactEmail'];
     }
 
     /**
-     * Sets contact_email
+     * Sets contactEmail
      *
-     * @param string|null $contact_email The email of the event contact
+     * @param string|null $contactEmail The email of the event contact
      *
      * @return self
      */
-    public function setContactEmail($contact_email)
+    public function setContactEmail($contactEmail)
     {
-        if (is_null($contact_email)) {
-            array_push($this->openAPINullablesSetToNull, 'contact_email');
+        if (is_null($contactEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'contactEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('contact_email', $nullablesSetToNull);
+            $index = array_search('contactEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['contact_email'] = $contact_email;
+        $this->container['contactEmail'] = $contactEmail;
 
         return $this;
     }
 
     /**
-     * Gets contact_name
+     * Gets contactName
      *
      * @return string|null
      */
     public function getContactName()
     {
-        return $this->container['contact_name'];
+        return $this->container['contactName'];
     }
 
     /**
-     * Sets contact_name
+     * Sets contactName
      *
-     * @param string|null $contact_name The name of the event contact
+     * @param string|null $contactName The name of the event contact
      *
      * @return self
      */
-    public function setContactName($contact_name)
+    public function setContactName($contactName)
     {
-        if (is_null($contact_name)) {
-            array_push($this->openAPINullablesSetToNull, 'contact_name');
+        if (is_null($contactName)) {
+            array_push($this->openAPINullablesSetToNull, 'contactName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('contact_name', $nullablesSetToNull);
+            $index = array_search('contactName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['contact_name'] = $contact_name;
+        $this->container['contactName'] = $contactName;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date The date the event ends
+     * @param \DateTime|null $endDate The date the event ends
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * Gets event_id
+     * Gets eventId
      *
      * @return int|null
      */
     public function getEventId()
     {
-        return $this->container['event_id'];
+        return $this->container['eventId'];
     }
 
     /**
-     * Sets event_id
+     * Sets eventId
      *
-     * @param int|null $event_id The id of the event
+     * @param int|null $eventId The id of the event
      *
      * @return self
      */
-    public function setEventId($event_id)
+    public function setEventId($eventId)
     {
-        if (is_null($event_id)) {
-            array_push($this->openAPINullablesSetToNull, 'event_id');
+        if (is_null($eventId)) {
+            array_push($this->openAPINullablesSetToNull, 'eventId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('event_id', $nullablesSetToNull);
+            $index = array_search('eventId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['event_id'] = $event_id;
+        $this->container['eventId'] = $eventId;
 
         return $this;
     }
 
     /**
-     * Gets event_type
+     * Gets eventType
      *
      * @return string|null
      */
     public function getEventType()
     {
-        return $this->container['event_type'];
+        return $this->container['eventType'];
     }
 
     /**
-     * Sets event_type
+     * Sets eventType
      *
-     * @param string|null $event_type The type of the event
+     * @param string|null $eventType The type of the event
      *
      * @return self
      */
-    public function setEventType($event_type)
+    public function setEventType($eventType)
     {
-        if (is_null($event_type)) {
-            array_push($this->openAPINullablesSetToNull, 'event_type');
+        if (is_null($eventType)) {
+            array_push($this->openAPINullablesSetToNull, 'eventType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('event_type', $nullablesSetToNull);
+            $index = array_search('eventType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['event_type'] = $event_type;
+        $this->container['eventType'] = $eventType;
 
         return $this;
     }
 
     /**
-     * Gets category_id
+     * Gets categoryId
      *
      * @return int|null
      */
     public function getCategoryId()
     {
-        return $this->container['category_id'];
+        return $this->container['categoryId'];
     }
 
     /**
-     * Sets category_id
+     * Sets categoryId
      *
-     * @param int|null $category_id The id of the category the event belongs to
+     * @param int|null $categoryId The id of the category the event belongs to
      *
      * @return self
      */
-    public function setCategoryId($category_id)
+    public function setCategoryId($categoryId)
     {
-        if (is_null($category_id)) {
-            array_push($this->openAPINullablesSetToNull, 'category_id');
+        if (is_null($categoryId)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_id', $nullablesSetToNull);
+            $index = array_search('categoryId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_id'] = $category_id;
+        $this->container['categoryId'] = $categoryId;
 
         return $this;
     }
 
     /**
-     * Gets category_name
+     * Gets categoryName
      *
      * @return string|null
      */
     public function getCategoryName()
     {
-        return $this->container['category_name'];
+        return $this->container['categoryName'];
     }
 
     /**
-     * Sets category_name
+     * Sets categoryName
      *
-     * @param string|null $category_name The name of the category the event belongs to
+     * @param string|null $categoryName The name of the category the event belongs to
      *
      * @return self
      */
-    public function setCategoryName($category_name)
+    public function setCategoryName($categoryName)
     {
-        if (is_null($category_name)) {
-            array_push($this->openAPINullablesSetToNull, 'category_name');
+        if (is_null($categoryName)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_name', $nullablesSetToNull);
+            $index = array_search('categoryName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_name'] = $category_name;
+        $this->container['categoryName'] = $categoryName;
 
         return $this;
     }
 
     /**
-     * Gets home_away
+     * Gets homeAway
      *
      * @return string|null
      */
     public function getHomeAway()
     {
-        return $this->container['home_away'];
+        return $this->container['homeAway'];
     }
 
     /**
-     * Sets home_away
+     * Sets homeAway
      *
-     * @param string|null $home_away If the event is an athletic game, returns the home or away status of the game
+     * @param string|null $homeAway If the event is an athletic game, returns the home or away status of the game
      *
      * @return self
      */
-    public function setHomeAway($home_away)
+    public function setHomeAway($homeAway)
     {
-        if (is_null($home_away)) {
-            array_push($this->openAPINullablesSetToNull, 'home_away');
+        if (is_null($homeAway)) {
+            array_push($this->openAPINullablesSetToNull, 'homeAway');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_away', $nullablesSetToNull);
+            $index = array_search('homeAway', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_away'] = $home_away;
+        $this->container['homeAway'] = $homeAway;
 
         return $this;
     }
@@ -1004,35 +1004,35 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets long_description
+     * Gets longDescription
      *
      * @return string|null
      */
     public function getLongDescription()
     {
-        return $this->container['long_description'];
+        return $this->container['longDescription'];
     }
 
     /**
-     * Sets long_description
+     * Sets longDescription
      *
-     * @param string|null $long_description The long description of the event
+     * @param string|null $longDescription The long description of the event
      *
      * @return self
      */
-    public function setLongDescription($long_description)
+    public function setLongDescription($longDescription)
     {
-        if (is_null($long_description)) {
-            array_push($this->openAPINullablesSetToNull, 'long_description');
+        if (is_null($longDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'longDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('long_description', $nullablesSetToNull);
+            $index = array_search('longDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['long_description'] = $long_description;
+        $this->container['longDescription'] = $longDescription;
 
         return $this;
     }
@@ -1106,103 +1106,103 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preset_id
+     * Gets presetId
      *
      * @return int|null
      */
     public function getPresetId()
     {
-        return $this->container['preset_id'];
+        return $this->container['presetId'];
     }
 
     /**
-     * Sets preset_id
+     * Sets presetId
      *
-     * @param int|null $preset_id The event preset id
+     * @param int|null $presetId The event preset id
      *
      * @return self
      */
-    public function setPresetId($preset_id)
+    public function setPresetId($presetId)
     {
-        if (is_null($preset_id)) {
-            array_push($this->openAPINullablesSetToNull, 'preset_id');
+        if (is_null($presetId)) {
+            array_push($this->openAPINullablesSetToNull, 'presetId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preset_id', $nullablesSetToNull);
+            $index = array_search('presetId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preset_id'] = $preset_id;
+        $this->container['presetId'] = $presetId;
 
         return $this;
     }
 
     /**
-     * Gets recurrence_id
+     * Gets recurrenceId
      *
      * @return int|null
      */
     public function getRecurrenceId()
     {
-        return $this->container['recurrence_id'];
+        return $this->container['recurrenceId'];
     }
 
     /**
-     * Sets recurrence_id
+     * Sets recurrenceId
      *
-     * @param int|null $recurrence_id The recurrence id of the event
+     * @param int|null $recurrenceId The recurrence id of the event
      *
      * @return self
      */
-    public function setRecurrenceId($recurrence_id)
+    public function setRecurrenceId($recurrenceId)
     {
-        if (is_null($recurrence_id)) {
-            array_push($this->openAPINullablesSetToNull, 'recurrence_id');
+        if (is_null($recurrenceId)) {
+            array_push($this->openAPINullablesSetToNull, 'recurrenceId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('recurrence_id', $nullablesSetToNull);
+            $index = array_search('recurrenceId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['recurrence_id'] = $recurrence_id;
+        $this->container['recurrenceId'] = $recurrenceId;
 
         return $this;
     }
 
     /**
-     * Gets registration_id
+     * Gets registrationId
      *
      * @return int|null
      */
     public function getRegistrationId()
     {
-        return $this->container['registration_id'];
+        return $this->container['registrationId'];
     }
 
     /**
-     * Sets registration_id
+     * Sets registrationId
      *
-     * @param int|null $registration_id the registration id of the event
+     * @param int|null $registrationId the registration id of the event
      *
      * @return self
      */
-    public function setRegistrationId($registration_id)
+    public function setRegistrationId($registrationId)
     {
-        if (is_null($registration_id)) {
-            array_push($this->openAPINullablesSetToNull, 'registration_id');
+        if (is_null($registrationId)) {
+            array_push($this->openAPINullablesSetToNull, 'registrationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('registration_id', $nullablesSetToNull);
+            $index = array_search('registrationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['registration_id'] = $registration_id;
+        $this->container['registrationId'] = $registrationId;
 
         return $this;
     }
@@ -1242,69 +1242,69 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets reschedule_note
+     * Gets rescheduleNote
      *
      * @return string|null
      */
     public function getRescheduleNote()
     {
-        return $this->container['reschedule_note'];
+        return $this->container['rescheduleNote'];
     }
 
     /**
-     * Sets reschedule_note
+     * Sets rescheduleNote
      *
-     * @param string|null $reschedule_note If the event is an athletic game, the rescheduled note (usually the reason for the reschedule)
+     * @param string|null $rescheduleNote If the event is an athletic game, the rescheduled note (usually the reason for the reschedule)
      *
      * @return self
      */
-    public function setRescheduleNote($reschedule_note)
+    public function setRescheduleNote($rescheduleNote)
     {
-        if (is_null($reschedule_note)) {
-            array_push($this->openAPINullablesSetToNull, 'reschedule_note');
+        if (is_null($rescheduleNote)) {
+            array_push($this->openAPINullablesSetToNull, 'rescheduleNote');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('reschedule_note', $nullablesSetToNull);
+            $index = array_search('rescheduleNote', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['reschedule_note'] = $reschedule_note;
+        $this->container['rescheduleNote'] = $rescheduleNote;
 
         return $this;
     }
 
     /**
-     * Gets room_name
+     * Gets roomName
      *
      * @return string|null
      */
     public function getRoomName()
     {
-        return $this->container['room_name'];
+        return $this->container['roomName'];
     }
 
     /**
-     * Sets room_name
+     * Sets roomName
      *
-     * @param string|null $room_name The name of the room where the event is being held
+     * @param string|null $roomName The name of the room where the event is being held
      *
      * @return self
      */
-    public function setRoomName($room_name)
+    public function setRoomName($roomName)
     {
-        if (is_null($room_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_name');
+        if (is_null($roomName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_name', $nullablesSetToNull);
+            $index = array_search('roomName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_name'] = $room_name;
+        $this->container['roomName'] = $roomName;
 
         return $this;
     }
@@ -1344,35 +1344,35 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets start_date
+     * Gets startDate
      *
      * @return \DateTime|null
      */
     public function getStartDate()
     {
-        return $this->container['start_date'];
+        return $this->container['startDate'];
     }
 
     /**
-     * Sets start_date
+     * Sets startDate
      *
-     * @param \DateTime|null $start_date The date the event starts
+     * @param \DateTime|null $startDate The date the event starts
      *
      * @return self
      */
-    public function setStartDate($start_date)
+    public function setStartDate($startDate)
     {
-        if (is_null($start_date)) {
-            array_push($this->openAPINullablesSetToNull, 'start_date');
+        if (is_null($startDate)) {
+            array_push($this->openAPINullablesSetToNull, 'startDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_date', $nullablesSetToNull);
+            $index = array_search('startDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_date'] = $start_date;
+        $this->container['startDate'] = $startDate;
 
         return $this;
     }
@@ -1446,69 +1446,69 @@ class CalendarItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets all_day
+     * Gets allDay
      *
      * @return bool|null
      */
     public function getAllDay()
     {
-        return $this->container['all_day'];
+        return $this->container['allDay'];
     }
 
     /**
-     * Sets all_day
+     * Sets allDay
      *
-     * @param bool|null $all_day Returns true if the event happens all day
+     * @param bool|null $allDay Returns true if the event happens all day
      *
      * @return self
      */
-    public function setAllDay($all_day)
+    public function setAllDay($allDay)
     {
-        if (is_null($all_day)) {
-            array_push($this->openAPINullablesSetToNull, 'all_day');
+        if (is_null($allDay)) {
+            array_push($this->openAPINullablesSetToNull, 'allDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('all_day', $nullablesSetToNull);
+            $index = array_search('allDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['all_day'] = $all_day;
+        $this->container['allDay'] = $allDay;
 
         return $this;
     }
 
     /**
-     * Gets total_days
+     * Gets totalDays
      *
      * @return int|null
      */
     public function getTotalDays()
     {
-        return $this->container['total_days'];
+        return $this->container['totalDays'];
     }
 
     /**
-     * Sets total_days
+     * Sets totalDays
      *
-     * @param int|null $total_days Shows the total number of days the event spans
+     * @param int|null $totalDays Shows the total number of days the event spans
      *
      * @return self
      */
-    public function setTotalDays($total_days)
+    public function setTotalDays($totalDays)
     {
-        if (is_null($total_days)) {
-            array_push($this->openAPINullablesSetToNull, 'total_days');
+        if (is_null($totalDays)) {
+            array_push($this->openAPINullablesSetToNull, 'totalDays');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('total_days', $nullablesSetToNull);
+            $index = array_search('totalDays', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['total_days'] = $total_days;
+        $this->container['totalDays'] = $totalDays;
 
         return $this;
     }

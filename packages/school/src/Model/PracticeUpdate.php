@@ -59,18 +59,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'send_notification' => 'bool',
+        'sendNotification' => 'bool',
         'title' => 'string',
-        'practice_start_date' => '\DateTime',
-        'practice_end_date' => '\DateTime',
-        'location_id' => 'int',
-        'room_id' => 'int',
-        'transportation_id' => 'int',
-        'dismissal_time' => '\DateTime',
-        'departure_time' => '\DateTime',
-        'pickup_time' => '\DateTime',
-        'practice_note' => 'string',
-        'skip_validation' => 'bool',
+        'practiceStartDate' => '\DateTime',
+        'practiceEndDate' => '\DateTime',
+        'locationId' => 'int',
+        'roomId' => 'int',
+        'transportationId' => 'int',
+        'dismissalTime' => '\DateTime',
+        'departureTime' => '\DateTime',
+        'pickupTime' => '\DateTime',
+        'practiceNote' => 'string',
+        'skipValidation' => 'bool',
     ];
 
     /**
@@ -82,18 +82,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'send_notification' => null,
+        'sendNotification' => null,
         'title' => null,
-        'practice_start_date' => 'date-time',
-        'practice_end_date' => 'date-time',
-        'location_id' => 'int32',
-        'room_id' => 'int32',
-        'transportation_id' => 'int32',
-        'dismissal_time' => 'date-time',
-        'departure_time' => 'date-time',
-        'pickup_time' => 'date-time',
-        'practice_note' => null,
-        'skip_validation' => null,
+        'practiceStartDate' => 'date-time',
+        'practiceEndDate' => 'date-time',
+        'locationId' => 'int32',
+        'roomId' => 'int32',
+        'transportationId' => 'int32',
+        'dismissalTime' => 'date-time',
+        'departureTime' => 'date-time',
+        'pickupTime' => 'date-time',
+        'practiceNote' => null,
+        'skipValidation' => null,
     ];
 
     /**
@@ -103,18 +103,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'send_notification' => true,
+        'sendNotification' => true,
         'title' => true,
-        'practice_start_date' => false,
-        'practice_end_date' => true,
-        'location_id' => true,
-        'room_id' => true,
-        'transportation_id' => true,
-        'dismissal_time' => true,
-        'departure_time' => true,
-        'pickup_time' => true,
-        'practice_note' => true,
-        'skip_validation' => true,
+        'practiceStartDate' => false,
+        'practiceEndDate' => true,
+        'locationId' => true,
+        'roomId' => true,
+        'transportationId' => true,
+        'dismissalTime' => true,
+        'departureTime' => true,
+        'pickupTime' => true,
+        'practiceNote' => true,
+        'skipValidation' => true,
     ];
 
     /**
@@ -204,18 +204,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'send_notification' => 'send_notification',
+        'sendNotification' => 'send_notification',
         'title' => 'title',
-        'practice_start_date' => 'practice_start_date',
-        'practice_end_date' => 'practice_end_date',
-        'location_id' => 'location_id',
-        'room_id' => 'room_id',
-        'transportation_id' => 'transportation_id',
-        'dismissal_time' => 'dismissal_time',
-        'departure_time' => 'departure_time',
-        'pickup_time' => 'pickup_time',
-        'practice_note' => 'practice_note',
-        'skip_validation' => 'skip_validation',
+        'practiceStartDate' => 'practice_start_date',
+        'practiceEndDate' => 'practice_end_date',
+        'locationId' => 'location_id',
+        'roomId' => 'room_id',
+        'transportationId' => 'transportation_id',
+        'dismissalTime' => 'dismissal_time',
+        'departureTime' => 'departure_time',
+        'pickupTime' => 'pickup_time',
+        'practiceNote' => 'practice_note',
+        'skipValidation' => 'skip_validation',
     ];
 
     /**
@@ -225,18 +225,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'send_notification' => 'setSendNotification',
+        'sendNotification' => 'setSendNotification',
         'title' => 'setTitle',
-        'practice_start_date' => 'setPracticeStartDate',
-        'practice_end_date' => 'setPracticeEndDate',
-        'location_id' => 'setLocationId',
-        'room_id' => 'setRoomId',
-        'transportation_id' => 'setTransportationId',
-        'dismissal_time' => 'setDismissalTime',
-        'departure_time' => 'setDepartureTime',
-        'pickup_time' => 'setPickupTime',
-        'practice_note' => 'setPracticeNote',
-        'skip_validation' => 'setSkipValidation',
+        'practiceStartDate' => 'setPracticeStartDate',
+        'practiceEndDate' => 'setPracticeEndDate',
+        'locationId' => 'setLocationId',
+        'roomId' => 'setRoomId',
+        'transportationId' => 'setTransportationId',
+        'dismissalTime' => 'setDismissalTime',
+        'departureTime' => 'setDepartureTime',
+        'pickupTime' => 'setPickupTime',
+        'practiceNote' => 'setPracticeNote',
+        'skipValidation' => 'setSkipValidation',
     ];
 
     /**
@@ -246,18 +246,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'send_notification' => 'getSendNotification',
+        'sendNotification' => 'getSendNotification',
         'title' => 'getTitle',
-        'practice_start_date' => 'getPracticeStartDate',
-        'practice_end_date' => 'getPracticeEndDate',
-        'location_id' => 'getLocationId',
-        'room_id' => 'getRoomId',
-        'transportation_id' => 'getTransportationId',
-        'dismissal_time' => 'getDismissalTime',
-        'departure_time' => 'getDepartureTime',
-        'pickup_time' => 'getPickupTime',
-        'practice_note' => 'getPracticeNote',
-        'skip_validation' => 'getSkipValidation',
+        'practiceStartDate' => 'getPracticeStartDate',
+        'practiceEndDate' => 'getPracticeEndDate',
+        'locationId' => 'getLocationId',
+        'roomId' => 'getRoomId',
+        'transportationId' => 'getTransportationId',
+        'dismissalTime' => 'getDismissalTime',
+        'departureTime' => 'getDepartureTime',
+        'pickupTime' => 'getPickupTime',
+        'practiceNote' => 'getPracticeNote',
+        'skipValidation' => 'getSkipValidation',
     ];
 
     /**
@@ -318,18 +318,18 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('send_notification', $data ?? [], null);
+        $this->setIfExists('sendNotification', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('practice_start_date', $data ?? [], null);
-        $this->setIfExists('practice_end_date', $data ?? [], null);
-        $this->setIfExists('location_id', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('transportation_id', $data ?? [], null);
-        $this->setIfExists('dismissal_time', $data ?? [], null);
-        $this->setIfExists('departure_time', $data ?? [], null);
-        $this->setIfExists('pickup_time', $data ?? [], null);
-        $this->setIfExists('practice_note', $data ?? [], null);
-        $this->setIfExists('skip_validation', $data ?? [], null);
+        $this->setIfExists('practiceStartDate', $data ?? [], null);
+        $this->setIfExists('practiceEndDate', $data ?? [], null);
+        $this->setIfExists('locationId', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('transportationId', $data ?? [], null);
+        $this->setIfExists('dismissalTime', $data ?? [], null);
+        $this->setIfExists('departureTime', $data ?? [], null);
+        $this->setIfExists('pickupTime', $data ?? [], null);
+        $this->setIfExists('practiceNote', $data ?? [], null);
+        $this->setIfExists('skipValidation', $data ?? [], null);
     }
 
     /**
@@ -359,8 +359,8 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['practice_start_date'] === null) {
-            $invalidProperties[] = "'practice_start_date' can't be null";
+        if ($this->container['practiceStartDate'] === null) {
+            $invalidProperties[] = "'practiceStartDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -405,35 +405,35 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets send_notification
+     * Gets sendNotification
      *
      * @return bool|null
      */
     public function getSendNotification()
     {
-        return $this->container['send_notification'];
+        return $this->container['sendNotification'];
     }
 
     /**
-     * Sets send_notification
+     * Sets sendNotification
      *
-     * @param bool|null $send_notification Toggle to true to send a notification of this event
+     * @param bool|null $sendNotification Toggle to true to send a notification of this event
      *
      * @return self
      */
-    public function setSendNotification($send_notification)
+    public function setSendNotification($sendNotification)
     {
-        if (is_null($send_notification)) {
-            array_push($this->openAPINullablesSetToNull, 'send_notification');
+        if (is_null($sendNotification)) {
+            array_push($this->openAPINullablesSetToNull, 'sendNotification');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('send_notification', $nullablesSetToNull);
+            $index = array_search('sendNotification', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['send_notification'] = $send_notification;
+        $this->container['sendNotification'] = $sendNotification;
 
         return $this;
     }
@@ -473,334 +473,334 @@ class PracticeUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets practice_start_date
+     * Gets practiceStartDate
      *
      * @return \DateTime
      */
     public function getPracticeStartDate()
     {
-        return $this->container['practice_start_date'];
+        return $this->container['practiceStartDate'];
     }
 
     /**
-     * Sets practice_start_date
+     * Sets practiceStartDate
      *
-     * @param \DateTime $practice_start_date Date and time for practice to start <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime $practiceStartDate Date and time for practice to start <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setPracticeStartDate($practice_start_date)
+    public function setPracticeStartDate($practiceStartDate)
     {
-        if (is_null($practice_start_date)) {
-            throw new \InvalidArgumentException('non-nullable practice_start_date cannot be null');
+        if (is_null($practiceStartDate)) {
+            throw new \InvalidArgumentException('non-nullable practiceStartDate cannot be null');
         }
-        $this->container['practice_start_date'] = $practice_start_date;
+        $this->container['practiceStartDate'] = $practiceStartDate;
 
         return $this;
     }
 
     /**
-     * Gets practice_end_date
+     * Gets practiceEndDate
      *
      * @return \DateTime|null
      */
     public function getPracticeEndDate()
     {
-        return $this->container['practice_end_date'];
+        return $this->container['practiceEndDate'];
     }
 
     /**
-     * Sets practice_end_date
+     * Sets practiceEndDate
      *
-     * @param \DateTime|null $practice_end_date Date and time for practice to end <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $practiceEndDate Date and time for practice to end <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setPracticeEndDate($practice_end_date)
+    public function setPracticeEndDate($practiceEndDate)
     {
-        if (is_null($practice_end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'practice_end_date');
+        if (is_null($practiceEndDate)) {
+            array_push($this->openAPINullablesSetToNull, 'practiceEndDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('practice_end_date', $nullablesSetToNull);
+            $index = array_search('practiceEndDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['practice_end_date'] = $practice_end_date;
+        $this->container['practiceEndDate'] = $practiceEndDate;
 
         return $this;
     }
 
     /**
-     * Gets location_id
+     * Gets locationId
      *
      * @return int|null
      */
     public function getLocationId()
     {
-        return $this->container['location_id'];
+        return $this->container['locationId'];
     }
 
     /**
-     * Sets location_id
+     * Sets locationId
      *
-     * @param int|null $location_id ID of the location of the practice
+     * @param int|null $locationId ID of the location of the practice
      *
      * @return self
      */
-    public function setLocationId($location_id)
+    public function setLocationId($locationId)
     {
-        if (is_null($location_id)) {
-            array_push($this->openAPINullablesSetToNull, 'location_id');
+        if (is_null($locationId)) {
+            array_push($this->openAPINullablesSetToNull, 'locationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('location_id', $nullablesSetToNull);
+            $index = array_search('locationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['location_id'] = $location_id;
+        $this->container['locationId'] = $locationId;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id ID of the venue of the practice
+     * @param int|null $roomId ID of the venue of the practice
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets transportation_id
+     * Gets transportationId
      *
      * @return int|null
      */
     public function getTransportationId()
     {
-        return $this->container['transportation_id'];
+        return $this->container['transportationId'];
     }
 
     /**
-     * Sets transportation_id
+     * Sets transportationId
      *
-     * @param int|null $transportation_id ID of the transportation method for the practice
+     * @param int|null $transportationId ID of the transportation method for the practice
      *
      * @return self
      */
-    public function setTransportationId($transportation_id)
+    public function setTransportationId($transportationId)
     {
-        if (is_null($transportation_id)) {
-            array_push($this->openAPINullablesSetToNull, 'transportation_id');
+        if (is_null($transportationId)) {
+            array_push($this->openAPINullablesSetToNull, 'transportationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('transportation_id', $nullablesSetToNull);
+            $index = array_search('transportationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['transportation_id'] = $transportation_id;
+        $this->container['transportationId'] = $transportationId;
 
         return $this;
     }
 
     /**
-     * Gets dismissal_time
+     * Gets dismissalTime
      *
      * @return \DateTime|null
      */
     public function getDismissalTime()
     {
-        return $this->container['dismissal_time'];
+        return $this->container['dismissalTime'];
     }
 
     /**
-     * Sets dismissal_time
+     * Sets dismissalTime
      *
-     * @param \DateTime|null $dismissal_time Time that participants should be dismissed <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dismissalTime Time that participants should be dismissed <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDismissalTime($dismissal_time)
+    public function setDismissalTime($dismissalTime)
     {
-        if (is_null($dismissal_time)) {
-            array_push($this->openAPINullablesSetToNull, 'dismissal_time');
+        if (is_null($dismissalTime)) {
+            array_push($this->openAPINullablesSetToNull, 'dismissalTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dismissal_time', $nullablesSetToNull);
+            $index = array_search('dismissalTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dismissal_time'] = $dismissal_time;
+        $this->container['dismissalTime'] = $dismissalTime;
 
         return $this;
     }
 
     /**
-     * Gets departure_time
+     * Gets departureTime
      *
      * @return \DateTime|null
      */
     public function getDepartureTime()
     {
-        return $this->container['departure_time'];
+        return $this->container['departureTime'];
     }
 
     /**
-     * Sets departure_time
+     * Sets departureTime
      *
-     * @param \DateTime|null $departure_time Time that team will depart for practice <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $departureTime Time that team will depart for practice <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDepartureTime($departure_time)
+    public function setDepartureTime($departureTime)
     {
-        if (is_null($departure_time)) {
-            array_push($this->openAPINullablesSetToNull, 'departure_time');
+        if (is_null($departureTime)) {
+            array_push($this->openAPINullablesSetToNull, 'departureTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('departure_time', $nullablesSetToNull);
+            $index = array_search('departureTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['departure_time'] = $departure_time;
+        $this->container['departureTime'] = $departureTime;
 
         return $this;
     }
 
     /**
-     * Gets pickup_time
+     * Gets pickupTime
      *
      * @return \DateTime|null
      */
     public function getPickupTime()
     {
-        return $this->container['pickup_time'];
+        return $this->container['pickupTime'];
     }
 
     /**
-     * Sets pickup_time
+     * Sets pickupTime
      *
-     * @param \DateTime|null $pickup_time Time that participants should be picked up <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $pickupTime Time that participants should be picked up <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setPickupTime($pickup_time)
+    public function setPickupTime($pickupTime)
     {
-        if (is_null($pickup_time)) {
-            array_push($this->openAPINullablesSetToNull, 'pickup_time');
+        if (is_null($pickupTime)) {
+            array_push($this->openAPINullablesSetToNull, 'pickupTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pickup_time', $nullablesSetToNull);
+            $index = array_search('pickupTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pickup_time'] = $pickup_time;
+        $this->container['pickupTime'] = $pickupTime;
 
         return $this;
     }
 
     /**
-     * Gets practice_note
+     * Gets practiceNote
      *
      * @return string|null
      */
     public function getPracticeNote()
     {
-        return $this->container['practice_note'];
+        return $this->container['practiceNote'];
     }
 
     /**
-     * Sets practice_note
+     * Sets practiceNote
      *
-     * @param string|null $practice_note Free form notes about this practice
+     * @param string|null $practiceNote Free form notes about this practice
      *
      * @return self
      */
-    public function setPracticeNote($practice_note)
+    public function setPracticeNote($practiceNote)
     {
-        if (is_null($practice_note)) {
-            array_push($this->openAPINullablesSetToNull, 'practice_note');
+        if (is_null($practiceNote)) {
+            array_push($this->openAPINullablesSetToNull, 'practiceNote');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('practice_note', $nullablesSetToNull);
+            $index = array_search('practiceNote', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['practice_note'] = $practice_note;
+        $this->container['practiceNote'] = $practiceNote;
 
         return $this;
     }
 
     /**
-     * Gets skip_validation
+     * Gets skipValidation
      *
      * @return bool|null
      */
     public function getSkipValidation()
     {
-        return $this->container['skip_validation'];
+        return $this->container['skipValidation'];
     }
 
     /**
-     * Sets skip_validation
+     * Sets skipValidation
      *
-     * @param bool|null $skip_validation Set to true to skip validation of this event
+     * @param bool|null $skipValidation Set to true to skip validation of this event
      *
      * @return self
      */
-    public function setSkipValidation($skip_validation)
+    public function setSkipValidation($skipValidation)
     {
-        if (is_null($skip_validation)) {
-            array_push($this->openAPINullablesSetToNull, 'skip_validation');
+        if (is_null($skipValidation)) {
+            array_push($this->openAPINullablesSetToNull, 'skipValidation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('skip_validation', $nullablesSetToNull);
+            $index = array_search('skipValidation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['skip_validation'] = $skip_validation;
+        $this->container['skipValidation'] = $skipValidation;
 
         return $this;
     }

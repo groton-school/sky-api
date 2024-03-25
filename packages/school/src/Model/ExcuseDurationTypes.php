@@ -59,8 +59,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'na' => 'int',
-        'full_day' => 'int',
-        'half_day' => 'int',
+        'fullDay' => 'int',
+        'halfDay' => 'int',
     ];
 
     /**
@@ -72,8 +72,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'na' => 'int32',
-        'full_day' => 'int32',
-        'half_day' => 'int32',
+        'fullDay' => 'int32',
+        'halfDay' => 'int32',
     ];
 
     /**
@@ -83,8 +83,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'na' => false,
-        'full_day' => false,
-        'half_day' => false,
+        'fullDay' => false,
+        'halfDay' => false,
     ];
 
     /**
@@ -174,8 +174,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'na' => 'na',
-        'full_day' => 'full_day',
-        'half_day' => 'half_day',
+        'fullDay' => 'full_day',
+        'halfDay' => 'half_day',
     ];
 
     /**
@@ -185,8 +185,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'na' => 'setNa',
-        'full_day' => 'setFullDay',
-        'half_day' => 'setHalfDay',
+        'fullDay' => 'setFullDay',
+        'halfDay' => 'setHalfDay',
     ];
 
     /**
@@ -196,8 +196,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'na' => 'getNa',
-        'full_day' => 'getFullDay',
-        'half_day' => 'getHalfDay',
+        'fullDay' => 'getFullDay',
+        'halfDay' => 'getHalfDay',
     ];
 
     /**
@@ -258,8 +258,8 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(array $data = null)
     {
         $this->setIfExists('na', $data ?? [], null);
-        $this->setIfExists('full_day', $data ?? [], null);
-        $this->setIfExists('half_day', $data ?? [], null);
+        $this->setIfExists('fullDay', $data ?? [], null);
+        $this->setIfExists('halfDay', $data ?? [], null);
     }
 
     /**
@@ -332,55 +332,55 @@ class ExcuseDurationTypes implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets full_day
+     * Gets fullDay
      *
      * @return int|null
      */
     public function getFullDay()
     {
-        return $this->container['full_day'];
+        return $this->container['fullDay'];
     }
 
     /**
-     * Sets full_day
+     * Sets fullDay
      *
-     * @param int|null $full_day Individual was excused for the full day
+     * @param int|null $fullDay Individual was excused for the full day
      *
      * @return self
      */
-    public function setFullDay($full_day)
+    public function setFullDay($fullDay)
     {
-        if (is_null($full_day)) {
-            throw new \InvalidArgumentException('non-nullable full_day cannot be null');
+        if (is_null($fullDay)) {
+            throw new \InvalidArgumentException('non-nullable fullDay cannot be null');
         }
-        $this->container['full_day'] = $full_day;
+        $this->container['fullDay'] = $fullDay;
 
         return $this;
     }
 
     /**
-     * Gets half_day
+     * Gets halfDay
      *
      * @return int|null
      */
     public function getHalfDay()
     {
-        return $this->container['half_day'];
+        return $this->container['halfDay'];
     }
 
     /**
-     * Sets half_day
+     * Sets halfDay
      *
-     * @param int|null $half_day Individual was excused for a half day
+     * @param int|null $halfDay Individual was excused for a half day
      *
      * @return self
      */
-    public function setHalfDay($half_day)
+    public function setHalfDay($halfDay)
     {
-        if (is_null($half_day)) {
-            throw new \InvalidArgumentException('non-nullable half_day cannot be null');
+        if (is_null($halfDay)) {
+            throw new \InvalidArgumentException('non-nullable halfDay cannot be null');
         }
-        $this->container['half_day'] = $half_day;
+        $this->container['halfDay'] = $halfDay;
 
         return $this;
     }

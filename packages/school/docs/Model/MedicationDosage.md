@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**times_a_day** | **int** | The frequency per day of the medication | [optional]
+**timesADay** | **int** | The frequency per day of the medication | [optional]
 **frequency** | **string** | The frequency of the medication Daily/Specific days/ Custom | [optional]
 **days** | [**\SKY\School\Model\Days**](Days.md) |  | [optional]
 

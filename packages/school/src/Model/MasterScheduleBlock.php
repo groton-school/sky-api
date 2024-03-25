@@ -58,12 +58,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'block_id' => 'int',
+        'blockId' => 'int',
         'block' => 'string',
-        'start_time' => '\DateTime',
-        'end_time' => '\DateTime',
-        'offering_type' => 'int',
-        'is_canceled' => 'bool',
+        'startTime' => '\DateTime',
+        'endTime' => '\DateTime',
+        'offeringType' => 'int',
+        'isCanceled' => 'bool',
     ];
 
     /**
@@ -74,12 +74,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'block_id' => 'int32',
+        'blockId' => 'int32',
         'block' => null,
-        'start_time' => 'date-time',
-        'end_time' => 'date-time',
-        'offering_type' => 'int32',
-        'is_canceled' => null,
+        'startTime' => 'date-time',
+        'endTime' => 'date-time',
+        'offeringType' => 'int32',
+        'isCanceled' => null,
     ];
 
     /**
@@ -88,12 +88,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'block_id' => false,
+        'blockId' => false,
         'block' => true,
-        'start_time' => true,
-        'end_time' => true,
-        'offering_type' => true,
-        'is_canceled' => false,
+        'startTime' => true,
+        'endTime' => true,
+        'offeringType' => true,
+        'isCanceled' => false,
     ];
 
     /**
@@ -182,12 +182,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'block_id' => 'block_id',
+        'blockId' => 'block_id',
         'block' => 'block',
-        'start_time' => 'start_time',
-        'end_time' => 'end_time',
-        'offering_type' => 'offering_type',
-        'is_canceled' => 'is_canceled',
+        'startTime' => 'start_time',
+        'endTime' => 'end_time',
+        'offeringType' => 'offering_type',
+        'isCanceled' => 'is_canceled',
     ];
 
     /**
@@ -196,12 +196,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'block_id' => 'setBlockId',
+        'blockId' => 'setBlockId',
         'block' => 'setBlock',
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime',
-        'offering_type' => 'setOfferingType',
-        'is_canceled' => 'setIsCanceled',
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime',
+        'offeringType' => 'setOfferingType',
+        'isCanceled' => 'setIsCanceled',
     ];
 
     /**
@@ -210,12 +210,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'block_id' => 'getBlockId',
+        'blockId' => 'getBlockId',
         'block' => 'getBlock',
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime',
-        'offering_type' => 'getOfferingType',
-        'is_canceled' => 'getIsCanceled',
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime',
+        'offeringType' => 'getOfferingType',
+        'isCanceled' => 'getIsCanceled',
     ];
 
     /**
@@ -275,12 +275,12 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('block_id', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
         $this->setIfExists('block', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
-        $this->setIfExists('is_canceled', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
+        $this->setIfExists('isCanceled', $data ?? [], null);
     }
 
     /**
@@ -326,28 +326,28 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id
+     * @param int|null $blockId
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            throw new \InvalidArgumentException('non-nullable block_id cannot be null');
+        if (is_null($blockId)) {
+            throw new \InvalidArgumentException('non-nullable blockId cannot be null');
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
@@ -387,130 +387,130 @@ class MasterScheduleBlock implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime|null $start_time
+     * @param \DateTime|null $startTime
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            array_push($this->openAPINullablesSetToNull, 'start_time');
+        if (is_null($startTime)) {
+            array_push($this->openAPINullablesSetToNull, 'startTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_time', $nullablesSetToNull);
+            $index = array_search('startTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time
+     * @param \DateTime|null $endTime
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return int|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param int|null $offering_type
+     * @param int|null $offeringType
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_type');
+        if (is_null($offeringType)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_type', $nullablesSetToNull);
+            $index = array_search('offeringType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }
 
     /**
-     * Gets is_canceled
+     * Gets isCanceled
      *
      * @return bool|null
      */
     public function getIsCanceled()
     {
-        return $this->container['is_canceled'];
+        return $this->container['isCanceled'];
     }
 
     /**
-     * Sets is_canceled
+     * Sets isCanceled
      *
-     * @param bool|null $is_canceled
+     * @param bool|null $isCanceled
      *
      * @return self
      */
-    public function setIsCanceled($is_canceled)
+    public function setIsCanceled($isCanceled)
     {
-        if (is_null($is_canceled)) {
-            throw new \InvalidArgumentException('non-nullable is_canceled cannot be null');
+        if (is_null($isCanceled)) {
+            throw new \InvalidArgumentException('non-nullable isCanceled cannot be null');
         }
-        $this->container['is_canceled'] = $is_canceled;
+        $this->container['isCanceled'] = $isCanceled;
 
         return $this;
     }

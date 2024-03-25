@@ -58,7 +58,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
+        'userId' => 'int',
         'immunizations' => '\SKY\School\Model\StudentImmunization[]',
     ];
 
@@ -70,7 +70,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
+        'userId' => 'int32',
         'immunizations' => null,
     ];
 
@@ -80,7 +80,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
+        'userId' => false,
         'immunizations' => false,
     ];
 
@@ -170,7 +170,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
+        'userId' => 'user_id',
         'immunizations' => 'immunizations',
     ];
 
@@ -180,7 +180,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
+        'userId' => 'setUserId',
         'immunizations' => 'setImmunizations',
     ];
 
@@ -190,7 +190,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
+        'userId' => 'getUserId',
         'immunizations' => 'getImmunizations',
     ];
 
@@ -251,7 +251,7 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
         $this->setIfExists('immunizations', $data ?? [], null);
     }
 
@@ -282,8 +282,8 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['user_id'] === null) {
-            $invalidProperties[] = "'user_id' can't be null";
+        if ($this->container['userId'] === null) {
+            $invalidProperties[] = "'userId' can't be null";
         }
         if ($this->container['immunizations'] === null) {
             $invalidProperties[] = "'immunizations' can't be null";
@@ -304,28 +304,28 @@ class StudentImmunizationUpdate implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int $user_id The ID of the student.
+     * @param int $userId The ID of the student.
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

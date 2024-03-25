@@ -58,11 +58,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'section_id' => 'int',
-        'course_code' => 'string',
-        'section_name' => 'string',
-        'modified_date_time' => '\DateTime',
-        'modified_by' => 'int',
+        'sectionId' => 'int',
+        'courseCode' => 'string',
+        'sectionName' => 'string',
+        'modifiedDateTime' => '\DateTime',
+        'modifiedBy' => 'int',
         'action' => 'string',
     ];
 
@@ -74,11 +74,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'section_id' => 'int32',
-        'course_code' => null,
-        'section_name' => null,
-        'modified_date_time' => 'date-time',
-        'modified_by' => 'int32',
+        'sectionId' => 'int32',
+        'courseCode' => null,
+        'sectionName' => null,
+        'modifiedDateTime' => 'date-time',
+        'modifiedBy' => 'int32',
         'action' => null,
     ];
 
@@ -88,11 +88,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'section_id' => true,
-        'course_code' => true,
-        'section_name' => true,
-        'modified_date_time' => true,
-        'modified_by' => true,
+        'sectionId' => true,
+        'courseCode' => true,
+        'sectionName' => true,
+        'modifiedDateTime' => true,
+        'modifiedBy' => true,
         'action' => true,
     ];
 
@@ -182,11 +182,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'section_id' => 'section_id',
-        'course_code' => 'course_code',
-        'section_name' => 'section_name',
-        'modified_date_time' => 'modified_date_time',
-        'modified_by' => 'modified_by',
+        'sectionId' => 'section_id',
+        'courseCode' => 'course_code',
+        'sectionName' => 'section_name',
+        'modifiedDateTime' => 'modified_date_time',
+        'modifiedBy' => 'modified_by',
         'action' => 'action',
     ];
 
@@ -196,11 +196,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'section_id' => 'setSectionId',
-        'course_code' => 'setCourseCode',
-        'section_name' => 'setSectionName',
-        'modified_date_time' => 'setModifiedDateTime',
-        'modified_by' => 'setModifiedBy',
+        'sectionId' => 'setSectionId',
+        'courseCode' => 'setCourseCode',
+        'sectionName' => 'setSectionName',
+        'modifiedDateTime' => 'setModifiedDateTime',
+        'modifiedBy' => 'setModifiedBy',
         'action' => 'setAction',
     ];
 
@@ -210,11 +210,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'section_id' => 'getSectionId',
-        'course_code' => 'getCourseCode',
-        'section_name' => 'getSectionName',
-        'modified_date_time' => 'getModifiedDateTime',
-        'modified_by' => 'getModifiedBy',
+        'sectionId' => 'getSectionId',
+        'courseCode' => 'getCourseCode',
+        'sectionName' => 'getSectionName',
+        'modifiedDateTime' => 'getModifiedDateTime',
+        'modifiedBy' => 'getModifiedBy',
         'action' => 'getAction',
     ];
 
@@ -275,11 +275,11 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
-        $this->setIfExists('section_name', $data ?? [], null);
-        $this->setIfExists('modified_date_time', $data ?? [], null);
-        $this->setIfExists('modified_by', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
+        $this->setIfExists('sectionName', $data ?? [], null);
+        $this->setIfExists('modifiedDateTime', $data ?? [], null);
+        $this->setIfExists('modifiedBy', $data ?? [], null);
         $this->setIfExists('action', $data ?? [], null);
     }
 
@@ -326,171 +326,171 @@ class EnrollmentChangeAudit implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id
+     * @param int|null $sectionId
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'section_id');
+        if (is_null($sectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_id', $nullablesSetToNull);
+            $index = array_search('sectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code
+     * @param string|null $courseCode
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }
 
     /**
-     * Gets section_name
+     * Gets sectionName
      *
      * @return string|null
      */
     public function getSectionName()
     {
-        return $this->container['section_name'];
+        return $this->container['sectionName'];
     }
 
     /**
-     * Sets section_name
+     * Sets sectionName
      *
-     * @param string|null $section_name
+     * @param string|null $sectionName
      *
      * @return self
      */
-    public function setSectionName($section_name)
+    public function setSectionName($sectionName)
     {
-        if (is_null($section_name)) {
-            array_push($this->openAPINullablesSetToNull, 'section_name');
+        if (is_null($sectionName)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_name', $nullablesSetToNull);
+            $index = array_search('sectionName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_name'] = $section_name;
+        $this->container['sectionName'] = $sectionName;
 
         return $this;
     }
 
     /**
-     * Gets modified_date_time
+     * Gets modifiedDateTime
      *
      * @return \DateTime|null
      */
     public function getModifiedDateTime()
     {
-        return $this->container['modified_date_time'];
+        return $this->container['modifiedDateTime'];
     }
 
     /**
-     * Sets modified_date_time
+     * Sets modifiedDateTime
      *
-     * @param \DateTime|null $modified_date_time
+     * @param \DateTime|null $modifiedDateTime
      *
      * @return self
      */
-    public function setModifiedDateTime($modified_date_time)
+    public function setModifiedDateTime($modifiedDateTime)
     {
-        if (is_null($modified_date_time)) {
-            array_push($this->openAPINullablesSetToNull, 'modified_date_time');
+        if (is_null($modifiedDateTime)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedDateTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('modified_date_time', $nullablesSetToNull);
+            $index = array_search('modifiedDateTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['modified_date_time'] = $modified_date_time;
+        $this->container['modifiedDateTime'] = $modifiedDateTime;
 
         return $this;
     }
 
     /**
-     * Gets modified_by
+     * Gets modifiedBy
      *
      * @return int|null
      */
     public function getModifiedBy()
     {
-        return $this->container['modified_by'];
+        return $this->container['modifiedBy'];
     }
 
     /**
-     * Sets modified_by
+     * Sets modifiedBy
      *
-     * @param int|null $modified_by
+     * @param int|null $modifiedBy
      *
      * @return self
      */
-    public function setModifiedBy($modified_by)
+    public function setModifiedBy($modifiedBy)
     {
-        if (is_null($modified_by)) {
-            array_push($this->openAPINullablesSetToNull, 'modified_by');
+        if (is_null($modifiedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedBy');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('modified_by', $nullablesSetToNull);
+            $index = array_search('modifiedBy', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['modified_by'] = $modified_by;
+        $this->container['modifiedBy'] = $modifiedBy;
 
         return $this;
     }

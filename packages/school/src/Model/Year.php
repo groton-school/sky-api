@@ -59,11 +59,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'begin_date' => '\DateTime',
-        'current_year' => 'bool',
-        'end_date' => '\DateTime',
+        'beginDate' => '\DateTime',
+        'currentYear' => 'bool',
+        'endDate' => '\DateTime',
         'published' => 'bool',
-        'school_year_label' => 'string',
+        'schoolYearLabel' => 'string',
     ];
 
     /**
@@ -75,11 +75,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'begin_date' => 'date-time',
-        'current_year' => null,
-        'end_date' => 'date-time',
+        'beginDate' => 'date-time',
+        'currentYear' => null,
+        'endDate' => 'date-time',
         'published' => null,
-        'school_year_label' => null,
+        'schoolYearLabel' => null,
     ];
 
     /**
@@ -89,11 +89,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'begin_date' => true,
-        'current_year' => true,
-        'end_date' => true,
+        'beginDate' => true,
+        'currentYear' => true,
+        'endDate' => true,
         'published' => true,
-        'school_year_label' => true,
+        'schoolYearLabel' => true,
     ];
 
     /**
@@ -183,11 +183,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'begin_date' => 'begin_date',
-        'current_year' => 'current_year',
-        'end_date' => 'end_date',
+        'beginDate' => 'begin_date',
+        'currentYear' => 'current_year',
+        'endDate' => 'end_date',
         'published' => 'published',
-        'school_year_label' => 'school_year_label',
+        'schoolYearLabel' => 'school_year_label',
     ];
 
     /**
@@ -197,11 +197,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'begin_date' => 'setBeginDate',
-        'current_year' => 'setCurrentYear',
-        'end_date' => 'setEndDate',
+        'beginDate' => 'setBeginDate',
+        'currentYear' => 'setCurrentYear',
+        'endDate' => 'setEndDate',
         'published' => 'setPublished',
-        'school_year_label' => 'setSchoolYearLabel',
+        'schoolYearLabel' => 'setSchoolYearLabel',
     ];
 
     /**
@@ -211,11 +211,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'begin_date' => 'getBeginDate',
-        'current_year' => 'getCurrentYear',
-        'end_date' => 'getEndDate',
+        'beginDate' => 'getBeginDate',
+        'currentYear' => 'getCurrentYear',
+        'endDate' => 'getEndDate',
         'published' => 'getPublished',
-        'school_year_label' => 'getSchoolYearLabel',
+        'schoolYearLabel' => 'getSchoolYearLabel',
     ];
 
     /**
@@ -276,11 +276,11 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('current_year', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('currentYear', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
         $this->setIfExists('published', $data ?? [], null);
-        $this->setIfExists('school_year_label', $data ?? [], null);
+        $this->setIfExists('schoolYearLabel', $data ?? [], null);
     }
 
     /**
@@ -360,103 +360,103 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date The begin date in a school year date range. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $beginDate The begin date in a school year date range. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets current_year
+     * Gets currentYear
      *
      * @return bool|null
      */
     public function getCurrentYear()
     {
-        return $this->container['current_year'];
+        return $this->container['currentYear'];
     }
 
     /**
-     * Sets current_year
+     * Sets currentYear
      *
-     * @param bool|null $current_year Returns True if Current Year is enabled for the respective school year
+     * @param bool|null $currentYear Returns True if Current Year is enabled for the respective school year
      *
      * @return self
      */
-    public function setCurrentYear($current_year)
+    public function setCurrentYear($currentYear)
     {
-        if (is_null($current_year)) {
-            array_push($this->openAPINullablesSetToNull, 'current_year');
+        if (is_null($currentYear)) {
+            array_push($this->openAPINullablesSetToNull, 'currentYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('current_year', $nullablesSetToNull);
+            $index = array_search('currentYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['current_year'] = $current_year;
+        $this->container['currentYear'] = $currentYear;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date The end date in a school year date range. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $endDate The end date in a school year date range. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
@@ -496,35 +496,35 @@ class Year implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets school_year_label
+     * Gets schoolYearLabel
      *
      * @return string|null
      */
     public function getSchoolYearLabel()
     {
-        return $this->container['school_year_label'];
+        return $this->container['schoolYearLabel'];
     }
 
     /**
-     * Sets school_year_label
+     * Sets schoolYearLabel
      *
-     * @param string|null $school_year_label The label used to identify the range of dates in a school year
+     * @param string|null $schoolYearLabel The label used to identify the range of dates in a school year
      *
      * @return self
      */
-    public function setSchoolYearLabel($school_year_label)
+    public function setSchoolYearLabel($schoolYearLabel)
     {
-        if (is_null($school_year_label)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year_label');
+        if (is_null($schoolYearLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYearLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year_label', $nullablesSetToNull);
+            $index = array_search('schoolYearLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year_label'] = $school_year_label;
+        $this->container['schoolYearLabel'] = $schoolYearLabel;
 
         return $this;
     }

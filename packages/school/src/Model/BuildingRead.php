@@ -58,9 +58,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'building_id' => 'int',
-        'building_name' => 'string',
-        'building_types' => 'string[]',
+        'buildingId' => 'int',
+        'buildingName' => 'string',
+        'buildingTypes' => 'string[]',
         'rooms' => '\SKY\School\Model\BuildingRoomRead[]',
     ];
 
@@ -72,9 +72,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'building_id' => 'int32',
-        'building_name' => null,
-        'building_types' => null,
+        'buildingId' => 'int32',
+        'buildingName' => null,
+        'buildingTypes' => null,
         'rooms' => null,
     ];
 
@@ -84,9 +84,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'building_id' => true,
-        'building_name' => true,
-        'building_types' => true,
+        'buildingId' => true,
+        'buildingName' => true,
+        'buildingTypes' => true,
         'rooms' => true,
     ];
 
@@ -176,9 +176,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'building_id' => 'building_id',
-        'building_name' => 'building_name',
-        'building_types' => 'building_types',
+        'buildingId' => 'building_id',
+        'buildingName' => 'building_name',
+        'buildingTypes' => 'building_types',
         'rooms' => 'rooms',
     ];
 
@@ -188,9 +188,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'building_id' => 'setBuildingId',
-        'building_name' => 'setBuildingName',
-        'building_types' => 'setBuildingTypes',
+        'buildingId' => 'setBuildingId',
+        'buildingName' => 'setBuildingName',
+        'buildingTypes' => 'setBuildingTypes',
         'rooms' => 'setRooms',
     ];
 
@@ -200,9 +200,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'building_id' => 'getBuildingId',
-        'building_name' => 'getBuildingName',
-        'building_types' => 'getBuildingTypes',
+        'buildingId' => 'getBuildingId',
+        'buildingName' => 'getBuildingName',
+        'buildingTypes' => 'getBuildingTypes',
         'rooms' => 'getRooms',
     ];
 
@@ -286,9 +286,9 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('building_id', $data ?? [], null);
-        $this->setIfExists('building_name', $data ?? [], null);
-        $this->setIfExists('building_types', $data ?? [], null);
+        $this->setIfExists('buildingId', $data ?? [], null);
+        $this->setIfExists('buildingName', $data ?? [], null);
+        $this->setIfExists('buildingTypes', $data ?? [], null);
         $this->setIfExists('rooms', $data ?? [], null);
     }
 
@@ -335,112 +335,112 @@ class BuildingRead implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets building_id
+     * Gets buildingId
      *
      * @return int|null
      */
     public function getBuildingId()
     {
-        return $this->container['building_id'];
+        return $this->container['buildingId'];
     }
 
     /**
-     * Sets building_id
+     * Sets buildingId
      *
-     * @param int|null $building_id ID of the building
+     * @param int|null $buildingId ID of the building
      *
      * @return self
      */
-    public function setBuildingId($building_id)
+    public function setBuildingId($buildingId)
     {
-        if (is_null($building_id)) {
-            array_push($this->openAPINullablesSetToNull, 'building_id');
+        if (is_null($buildingId)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_id', $nullablesSetToNull);
+            $index = array_search('buildingId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_id'] = $building_id;
+        $this->container['buildingId'] = $buildingId;
 
         return $this;
     }
 
     /**
-     * Gets building_name
+     * Gets buildingName
      *
      * @return string|null
      */
     public function getBuildingName()
     {
-        return $this->container['building_name'];
+        return $this->container['buildingName'];
     }
 
     /**
-     * Sets building_name
+     * Sets buildingName
      *
-     * @param string|null $building_name Building Name
+     * @param string|null $buildingName Building Name
      *
      * @return self
      */
-    public function setBuildingName($building_name)
+    public function setBuildingName($buildingName)
     {
-        if (is_null($building_name)) {
-            array_push($this->openAPINullablesSetToNull, 'building_name');
+        if (is_null($buildingName)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_name', $nullablesSetToNull);
+            $index = array_search('buildingName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_name'] = $building_name;
+        $this->container['buildingName'] = $buildingName;
 
         return $this;
     }
 
     /**
-     * Gets building_types
+     * Gets buildingTypes
      *
      * @return string[]|null
      */
     public function getBuildingTypes()
     {
-        return $this->container['building_types'];
+        return $this->container['buildingTypes'];
     }
 
     /**
-     * Sets building_types
+     * Sets buildingTypes
      *
-     * @param string[]|null $building_types Building group types
+     * @param string[]|null $buildingTypes Building group types
      *
      * @return self
      */
-    public function setBuildingTypes($building_types)
+    public function setBuildingTypes($buildingTypes)
     {
-        if (is_null($building_types)) {
-            array_push($this->openAPINullablesSetToNull, 'building_types');
+        if (is_null($buildingTypes)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingTypes');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_types', $nullablesSetToNull);
+            $index = array_search('buildingTypes', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
         $allowedValues = $this->getBuildingTypesAllowableValues();
-        if (!is_null($building_types) && array_diff($building_types, $allowedValues)) {
+        if (!is_null($buildingTypes) && array_diff($buildingTypes, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'building_types', must be one of '%s'",
+                    "Invalid value for 'buildingTypes', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['building_types'] = $building_types;
+        $this->container['buildingTypes'] = $buildingTypes;
 
         return $this;
     }

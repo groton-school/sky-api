@@ -58,10 +58,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'test_type_id' => 'int',
-        'sub_test_type' => 'string',
+        'testTypeId' => 'int',
+        'subTestType' => 'string',
         'score' => 'float',
-        'test_subtype_id' => 'int',
+        'testSubtypeId' => 'int',
         'percentile' => 'float',
         'scale' => 'float',
         'stanie' => 'float',
@@ -75,10 +75,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'test_type_id' => 'int32',
-        'sub_test_type' => null,
+        'testTypeId' => 'int32',
+        'subTestType' => null,
         'score' => 'double',
-        'test_subtype_id' => 'int32',
+        'testSubtypeId' => 'int32',
         'percentile' => 'double',
         'scale' => 'double',
         'stanie' => 'double',
@@ -90,10 +90,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'test_type_id' => true,
-        'sub_test_type' => true,
+        'testTypeId' => true,
+        'subTestType' => true,
         'score' => true,
-        'test_subtype_id' => true,
+        'testSubtypeId' => true,
         'percentile' => true,
         'scale' => true,
         'stanie' => true,
@@ -185,10 +185,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'test_type_id' => 'test_type_id',
-        'sub_test_type' => 'sub_test_type',
+        'testTypeId' => 'test_type_id',
+        'subTestType' => 'sub_test_type',
         'score' => 'score',
-        'test_subtype_id' => 'test_subtype_id',
+        'testSubtypeId' => 'test_subtype_id',
         'percentile' => 'percentile',
         'scale' => 'scale',
         'stanie' => 'stanie',
@@ -200,10 +200,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'test_type_id' => 'setTestTypeId',
-        'sub_test_type' => 'setSubTestType',
+        'testTypeId' => 'setTestTypeId',
+        'subTestType' => 'setSubTestType',
         'score' => 'setScore',
-        'test_subtype_id' => 'setTestSubtypeId',
+        'testSubtypeId' => 'setTestSubtypeId',
         'percentile' => 'setPercentile',
         'scale' => 'setScale',
         'stanie' => 'setStanie',
@@ -215,10 +215,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'test_type_id' => 'getTestTypeId',
-        'sub_test_type' => 'getSubTestType',
+        'testTypeId' => 'getTestTypeId',
+        'subTestType' => 'getSubTestType',
         'score' => 'getScore',
-        'test_subtype_id' => 'getTestSubtypeId',
+        'testSubtypeId' => 'getTestSubtypeId',
         'percentile' => 'getPercentile',
         'scale' => 'getScale',
         'stanie' => 'getStanie',
@@ -281,10 +281,10 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('test_type_id', $data ?? [], null);
-        $this->setIfExists('sub_test_type', $data ?? [], null);
+        $this->setIfExists('testTypeId', $data ?? [], null);
+        $this->setIfExists('subTestType', $data ?? [], null);
         $this->setIfExists('score', $data ?? [], null);
-        $this->setIfExists('test_subtype_id', $data ?? [], null);
+        $this->setIfExists('testSubtypeId', $data ?? [], null);
         $this->setIfExists('percentile', $data ?? [], null);
         $this->setIfExists('scale', $data ?? [], null);
         $this->setIfExists('stanie', $data ?? [], null);
@@ -333,69 +333,69 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets test_type_id
+     * Gets testTypeId
      *
      * @return int|null
      */
     public function getTestTypeId()
     {
-        return $this->container['test_type_id'];
+        return $this->container['testTypeId'];
     }
 
     /**
-     * Sets test_type_id
+     * Sets testTypeId
      *
-     * @param int|null $test_type_id The Test Type ID
+     * @param int|null $testTypeId The Test Type ID
      *
      * @return self
      */
-    public function setTestTypeId($test_type_id)
+    public function setTestTypeId($testTypeId)
     {
-        if (is_null($test_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'test_type_id');
+        if (is_null($testTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'testTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_type_id', $nullablesSetToNull);
+            $index = array_search('testTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_type_id'] = $test_type_id;
+        $this->container['testTypeId'] = $testTypeId;
 
         return $this;
     }
 
     /**
-     * Gets sub_test_type
+     * Gets subTestType
      *
      * @return string|null
      */
     public function getSubTestType()
     {
-        return $this->container['sub_test_type'];
+        return $this->container['subTestType'];
     }
 
     /**
-     * Sets sub_test_type
+     * Sets subTestType
      *
-     * @param string|null $sub_test_type The SubTest Type
+     * @param string|null $subTestType The SubTest Type
      *
      * @return self
      */
-    public function setSubTestType($sub_test_type)
+    public function setSubTestType($subTestType)
     {
-        if (is_null($sub_test_type)) {
-            array_push($this->openAPINullablesSetToNull, 'sub_test_type');
+        if (is_null($subTestType)) {
+            array_push($this->openAPINullablesSetToNull, 'subTestType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sub_test_type', $nullablesSetToNull);
+            $index = array_search('subTestType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sub_test_type'] = $sub_test_type;
+        $this->container['subTestType'] = $subTestType;
 
         return $this;
     }
@@ -435,35 +435,35 @@ class SubTest implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets test_subtype_id
+     * Gets testSubtypeId
      *
      * @return int|null
      */
     public function getTestSubtypeId()
     {
-        return $this->container['test_subtype_id'];
+        return $this->container['testSubtypeId'];
     }
 
     /**
-     * Sets test_subtype_id
+     * Sets testSubtypeId
      *
-     * @param int|null $test_subtype_id The SubTest Type Id
+     * @param int|null $testSubtypeId The SubTest Type Id
      *
      * @return self
      */
-    public function setTestSubtypeId($test_subtype_id)
+    public function setTestSubtypeId($testSubtypeId)
     {
-        if (is_null($test_subtype_id)) {
-            array_push($this->openAPINullablesSetToNull, 'test_subtype_id');
+        if (is_null($testSubtypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'testSubtypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_subtype_id', $nullablesSetToNull);
+            $index = array_search('testSubtypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_subtype_id'] = $test_subtype_id;
+        $this->container['testSubtypeId'] = $testSubtypeId;
 
         return $this;
     }

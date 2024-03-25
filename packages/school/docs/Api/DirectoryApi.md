@@ -11,7 +11,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1DirectoriesByDirectoryIdGet()`
 
 ```php
-v1DirectoriesByDirectoryIdGet($directory_id, $search, $search_all): \SKY\School\Model\DirectoryResultCollection
+v1DirectoriesByDirectoryIdGet($directoryId, $search, $searchAll): \SKY\School\Model\DirectoryResultCollection
 ```
 
 Directories results
@@ -42,12 +42,12 @@ $apiInstance = new SKY\School\Api\DirectoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$directory_id = 56; // int | Format - int32.
+$directoryId = 56; // int | Format - int32.
 $search = 'search_example'; // string | 
-$search_all = true; // bool | 
+$searchAll = true; // bool | 
 
 try {
-    $result = $apiInstance->v1DirectoriesByDirectoryIdGet($directory_id, $search, $search_all);
+    $result = $apiInstance->v1DirectoriesByDirectoryIdGet($directoryId, $search, $searchAll);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectoryApi->v1DirectoriesByDirectoryIdGet: ', $e->getMessage(), PHP_EOL;
@@ -58,9 +58,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **directory_id** | **int**| Format - int32. | |
+| **directoryId** | **int**| Format - int32. | |
 | **search** | **string**|  | [optional] |
-| **search_all** | **bool**|  | [optional] [default to true] |
+| **searchAll** | **bool**|  | [optional] [default to true] |
 
 ### Return type
 

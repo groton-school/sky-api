@@ -59,7 +59,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'base_role_id' => 'int',
+        'baseRoleId' => 'int',
         'hidden' => 'bool',
         'name' => 'string',
     ];
@@ -73,7 +73,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'base_role_id' => 'int32',
+        'baseRoleId' => 'int32',
         'hidden' => null,
         'name' => null,
     ];
@@ -85,7 +85,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'base_role_id' => true,
+        'baseRoleId' => true,
         'hidden' => true,
         'name' => true,
     ];
@@ -177,7 +177,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'base_role_id' => 'base_role_id',
+        'baseRoleId' => 'base_role_id',
         'hidden' => 'hidden',
         'name' => 'name',
     ];
@@ -189,7 +189,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'base_role_id' => 'setBaseRoleId',
+        'baseRoleId' => 'setBaseRoleId',
         'hidden' => 'setHidden',
         'name' => 'setName',
     ];
@@ -201,7 +201,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'base_role_id' => 'getBaseRoleId',
+        'baseRoleId' => 'getBaseRoleId',
         'hidden' => 'getHidden',
         'name' => 'getName',
     ];
@@ -264,7 +264,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('base_role_id', $data ?? [], null);
+        $this->setIfExists('baseRoleId', $data ?? [], null);
         $this->setIfExists('hidden', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
     }
@@ -346,35 +346,35 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets base_role_id
+     * Gets baseRoleId
      *
      * @return int|null
      */
     public function getBaseRoleId()
     {
-        return $this->container['base_role_id'];
+        return $this->container['baseRoleId'];
     }
 
     /**
-     * Sets base_role_id
+     * Sets baseRoleId
      *
-     * @param int|null $base_role_id The ID used to associate roles with the original role; all roles are based upon preexisting base role IDs
+     * @param int|null $baseRoleId The ID used to associate roles with the original role; all roles are based upon preexisting base role IDs
      *
      * @return self
      */
-    public function setBaseRoleId($base_role_id)
+    public function setBaseRoleId($baseRoleId)
     {
-        if (is_null($base_role_id)) {
-            array_push($this->openAPINullablesSetToNull, 'base_role_id');
+        if (is_null($baseRoleId)) {
+            array_push($this->openAPINullablesSetToNull, 'baseRoleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('base_role_id', $nullablesSetToNull);
+            $index = array_search('baseRoleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['base_role_id'] = $base_role_id;
+        $this->container['baseRoleId'] = $baseRoleId;
 
         return $this;
     }

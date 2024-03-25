@@ -58,7 +58,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'times_a_day' => 'int',
+        'timesADay' => 'int',
         'frequency' => 'string',
         'days' => '\SKY\School\Model\Days',
     ];
@@ -71,7 +71,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'times_a_day' => 'int32',
+        'timesADay' => 'int32',
         'frequency' => null,
         'days' => null,
     ];
@@ -82,7 +82,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'times_a_day' => false,
+        'timesADay' => false,
         'frequency' => true,
         'days' => false,
     ];
@@ -173,7 +173,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'times_a_day' => 'times_a_day',
+        'timesADay' => 'times_a_day',
         'frequency' => 'frequency',
         'days' => 'days',
     ];
@@ -184,7 +184,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'times_a_day' => 'setTimesADay',
+        'timesADay' => 'setTimesADay',
         'frequency' => 'setFrequency',
         'days' => 'setDays',
     ];
@@ -195,7 +195,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'times_a_day' => 'getTimesADay',
+        'timesADay' => 'getTimesADay',
         'frequency' => 'getFrequency',
         'days' => 'getDays',
     ];
@@ -257,7 +257,7 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('times_a_day', $data ?? [], null);
+        $this->setIfExists('timesADay', $data ?? [], null);
         $this->setIfExists('frequency', $data ?? [], null);
         $this->setIfExists('days', $data ?? [], null);
     }
@@ -305,28 +305,28 @@ class MedicationDosage implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets times_a_day
+     * Gets timesADay
      *
      * @return int|null
      */
     public function getTimesADay()
     {
-        return $this->container['times_a_day'];
+        return $this->container['timesADay'];
     }
 
     /**
-     * Sets times_a_day
+     * Sets timesADay
      *
-     * @param int|null $times_a_day The frequency per day of the medication
+     * @param int|null $timesADay The frequency per day of the medication
      *
      * @return self
      */
-    public function setTimesADay($times_a_day)
+    public function setTimesADay($timesADay)
     {
-        if (is_null($times_a_day)) {
-            throw new \InvalidArgumentException('non-nullable times_a_day cannot be null');
+        if (is_null($timesADay)) {
+            throw new \InvalidArgumentException('non-nullable timesADay cannot be null');
         }
-        $this->container['times_a_day'] = $times_a_day;
+        $this->container['timesADay'] = $timesADay;
 
         return $this;
     }

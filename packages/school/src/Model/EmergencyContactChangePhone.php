@@ -59,13 +59,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'active' => 'bool',
-        'call_dialer' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'phone_number' => 'string',
-        'phone_type' => 'string',
+        'callDialer' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'phoneNumber' => 'string',
+        'phoneType' => 'string',
         'relationship' => 'string',
-        'sort_order' => 'int',
+        'sortOrder' => 'int',
     ];
 
     /**
@@ -77,13 +77,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'active' => null,
-        'call_dialer' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'phone_number' => null,
-        'phone_type' => null,
+        'callDialer' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'phoneNumber' => null,
+        'phoneType' => null,
         'relationship' => null,
-        'sort_order' => 'int32',
+        'sortOrder' => 'int32',
     ];
 
     /**
@@ -93,13 +93,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'active' => false,
-        'call_dialer' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'phone_number' => true,
-        'phone_type' => true,
+        'callDialer' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'phoneNumber' => true,
+        'phoneType' => true,
         'relationship' => true,
-        'sort_order' => true,
+        'sortOrder' => true,
     ];
 
     /**
@@ -189,13 +189,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'active' => 'active',
-        'call_dialer' => 'call_dialer',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'phone_number' => 'phone_number',
-        'phone_type' => 'phone_type',
+        'callDialer' => 'call_dialer',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'phoneNumber' => 'phone_number',
+        'phoneType' => 'phone_type',
         'relationship' => 'relationship',
-        'sort_order' => 'sort_order',
+        'sortOrder' => 'sort_order',
     ];
 
     /**
@@ -205,13 +205,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'active' => 'setActive',
-        'call_dialer' => 'setCallDialer',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'phone_number' => 'setPhoneNumber',
-        'phone_type' => 'setPhoneType',
+        'callDialer' => 'setCallDialer',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'phoneNumber' => 'setPhoneNumber',
+        'phoneType' => 'setPhoneType',
         'relationship' => 'setRelationship',
-        'sort_order' => 'setSortOrder',
+        'sortOrder' => 'setSortOrder',
     ];
 
     /**
@@ -221,13 +221,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'active' => 'getActive',
-        'call_dialer' => 'getCallDialer',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'phone_number' => 'getPhoneNumber',
-        'phone_type' => 'getPhoneType',
+        'callDialer' => 'getCallDialer',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'phoneNumber' => 'getPhoneNumber',
+        'phoneType' => 'getPhoneType',
         'relationship' => 'getRelationship',
-        'sort_order' => 'getSortOrder',
+        'sortOrder' => 'getSortOrder',
     ];
 
     /**
@@ -288,13 +288,13 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(array $data = null)
     {
         $this->setIfExists('active', $data ?? [], null);
-        $this->setIfExists('call_dialer', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('phone_type', $data ?? [], null);
+        $this->setIfExists('callDialer', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('phoneNumber', $data ?? [], null);
+        $this->setIfExists('phoneType', $data ?? [], null);
         $this->setIfExists('relationship', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
     }
 
     /**
@@ -367,171 +367,171 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets call_dialer
+     * Gets callDialer
      *
      * @return string|null
      */
     public function getCallDialer()
     {
-        return $this->container['call_dialer'];
+        return $this->container['callDialer'];
     }
 
     /**
-     * Sets call_dialer
+     * Sets callDialer
      *
-     * @param string|null $call_dialer Call dialer
+     * @param string|null $callDialer Call dialer
      *
      * @return self
      */
-    public function setCallDialer($call_dialer)
+    public function setCallDialer($callDialer)
     {
-        if (is_null($call_dialer)) {
-            array_push($this->openAPINullablesSetToNull, 'call_dialer');
+        if (is_null($callDialer)) {
+            array_push($this->openAPINullablesSetToNull, 'callDialer');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('call_dialer', $nullablesSetToNull);
+            $index = array_search('callDialer', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['call_dialer'] = $call_dialer;
+        $this->container['callDialer'] = $callDialer;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the emergency contact
+     * @param string|null $firstName The first name of the emergency contact
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the emergency contact
+     * @param string|null $lastName The last name of the emergency contact
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
+     * Gets phoneNumber
      *
      * @return string|null
      */
     public function getPhoneNumber()
     {
-        return $this->container['phone_number'];
+        return $this->container['phoneNumber'];
     }
 
     /**
-     * Sets phone_number
+     * Sets phoneNumber
      *
-     * @param string|null $phone_number Phone number
+     * @param string|null $phoneNumber Phone number
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        if (is_null($phone_number)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_number');
+        if (is_null($phoneNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_number', $nullablesSetToNull);
+            $index = array_search('phoneNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Gets phone_type
+     * Gets phoneType
      *
      * @return string|null
      */
     public function getPhoneType()
     {
-        return $this->container['phone_type'];
+        return $this->container['phoneType'];
     }
 
     /**
-     * Sets phone_type
+     * Sets phoneType
      *
-     * @param string|null $phone_type Phone type
+     * @param string|null $phoneType Phone type
      *
      * @return self
      */
-    public function setPhoneType($phone_type)
+    public function setPhoneType($phoneType)
     {
-        if (is_null($phone_type)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_type');
+        if (is_null($phoneType)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_type', $nullablesSetToNull);
+            $index = array_search('phoneType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_type'] = $phone_type;
+        $this->container['phoneType'] = $phoneType;
 
         return $this;
     }
@@ -571,35 +571,35 @@ class EmergencyContactChangePhone implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order Sort order
+     * @param int|null $sortOrder Sort order
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }

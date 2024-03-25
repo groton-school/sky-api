@@ -57,8 +57,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'week_in_cycle' => 'int',
-        'week_day_list' => '\SKY\School\Model\ScheduleSetRotationDay[]',
+        'weekInCycle' => 'int',
+        'weekDayList' => '\SKY\School\Model\ScheduleSetRotationDay[]',
     ];
 
     /**
@@ -69,8 +69,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'week_in_cycle' => 'int32',
-        'week_day_list' => null,
+        'weekInCycle' => 'int32',
+        'weekDayList' => null,
     ];
 
     /**
@@ -79,8 +79,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'week_in_cycle' => true,
-        'week_day_list' => true,
+        'weekInCycle' => true,
+        'weekDayList' => true,
     ];
 
     /**
@@ -169,8 +169,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'week_in_cycle' => 'WeekInCycle',
-        'week_day_list' => 'WeekDayList',
+        'weekInCycle' => 'WeekInCycle',
+        'weekDayList' => 'WeekDayList',
     ];
 
     /**
@@ -179,8 +179,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'week_in_cycle' => 'setWeekInCycle',
-        'week_day_list' => 'setWeekDayList',
+        'weekInCycle' => 'setWeekInCycle',
+        'weekDayList' => 'setWeekDayList',
     ];
 
     /**
@@ -189,8 +189,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'week_in_cycle' => 'getWeekInCycle',
-        'week_day_list' => 'getWeekDayList',
+        'weekInCycle' => 'getWeekInCycle',
+        'weekDayList' => 'getWeekDayList',
     ];
 
     /**
@@ -250,8 +250,8 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('week_in_cycle', $data ?? [], null);
-        $this->setIfExists('week_day_list', $data ?? [], null);
+        $this->setIfExists('weekInCycle', $data ?? [], null);
+        $this->setIfExists('weekDayList', $data ?? [], null);
     }
 
     /**
@@ -297,69 +297,69 @@ class ScheduleSetRotation implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets week_in_cycle
+     * Gets weekInCycle
      *
      * @return int|null
      */
     public function getWeekInCycle()
     {
-        return $this->container['week_in_cycle'];
+        return $this->container['weekInCycle'];
     }
 
     /**
-     * Sets week_in_cycle
+     * Sets weekInCycle
      *
-     * @param int|null $week_in_cycle week_in_cycle
+     * @param int|null $weekInCycle weekInCycle
      *
      * @return self
      */
-    public function setWeekInCycle($week_in_cycle)
+    public function setWeekInCycle($weekInCycle)
     {
-        if (is_null($week_in_cycle)) {
-            array_push($this->openAPINullablesSetToNull, 'week_in_cycle');
+        if (is_null($weekInCycle)) {
+            array_push($this->openAPINullablesSetToNull, 'weekInCycle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('week_in_cycle', $nullablesSetToNull);
+            $index = array_search('weekInCycle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['week_in_cycle'] = $week_in_cycle;
+        $this->container['weekInCycle'] = $weekInCycle;
 
         return $this;
     }
 
     /**
-     * Gets week_day_list
+     * Gets weekDayList
      *
      * @return \SKY\School\Model\ScheduleSetRotationDay[]|null
      */
     public function getWeekDayList()
     {
-        return $this->container['week_day_list'];
+        return $this->container['weekDayList'];
     }
 
     /**
-     * Sets week_day_list
+     * Sets weekDayList
      *
-     * @param \SKY\School\Model\ScheduleSetRotationDay[]|null $week_day_list week_day_list
+     * @param \SKY\School\Model\ScheduleSetRotationDay[]|null $weekDayList weekDayList
      *
      * @return self
      */
-    public function setWeekDayList($week_day_list)
+    public function setWeekDayList($weekDayList)
     {
-        if (is_null($week_day_list)) {
-            array_push($this->openAPINullablesSetToNull, 'week_day_list');
+        if (is_null($weekDayList)) {
+            array_push($this->openAPINullablesSetToNull, 'weekDayList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('week_day_list', $nullablesSetToNull);
+            $index = array_search('weekDayList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['week_day_list'] = $week_day_list;
+        $this->container['weekDayList'] = $weekDayList;
 
         return $this;
     }

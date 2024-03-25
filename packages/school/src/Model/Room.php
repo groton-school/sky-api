@@ -58,12 +58,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'building_id' => 'int',
+        'buildingId' => 'int',
         'capacity' => 'string',
         'name' => 'string',
-        'room_enrollment' => 'int',
-        'room_id' => 'int',
-        'room_number' => 'string',
+        'roomEnrollment' => 'int',
+        'roomId' => 'int',
+        'roomNumber' => 'string',
         'residents' => '\SKY\School\Model\Resident[]',
     ];
 
@@ -75,12 +75,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'building_id' => 'int32',
+        'buildingId' => 'int32',
         'capacity' => null,
         'name' => null,
-        'room_enrollment' => 'int32',
-        'room_id' => 'int32',
-        'room_number' => null,
+        'roomEnrollment' => 'int32',
+        'roomId' => 'int32',
+        'roomNumber' => null,
         'residents' => null,
     ];
 
@@ -90,12 +90,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'building_id' => true,
+        'buildingId' => true,
         'capacity' => true,
         'name' => true,
-        'room_enrollment' => true,
-        'room_id' => true,
-        'room_number' => true,
+        'roomEnrollment' => true,
+        'roomId' => true,
+        'roomNumber' => true,
         'residents' => true,
     ];
 
@@ -185,12 +185,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'building_id' => 'building_id',
+        'buildingId' => 'building_id',
         'capacity' => 'capacity',
         'name' => 'name',
-        'room_enrollment' => 'room_enrollment',
-        'room_id' => 'room_id',
-        'room_number' => 'room_number',
+        'roomEnrollment' => 'room_enrollment',
+        'roomId' => 'room_id',
+        'roomNumber' => 'room_number',
         'residents' => 'residents',
     ];
 
@@ -200,12 +200,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'building_id' => 'setBuildingId',
+        'buildingId' => 'setBuildingId',
         'capacity' => 'setCapacity',
         'name' => 'setName',
-        'room_enrollment' => 'setRoomEnrollment',
-        'room_id' => 'setRoomId',
-        'room_number' => 'setRoomNumber',
+        'roomEnrollment' => 'setRoomEnrollment',
+        'roomId' => 'setRoomId',
+        'roomNumber' => 'setRoomNumber',
         'residents' => 'setResidents',
     ];
 
@@ -215,12 +215,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'building_id' => 'getBuildingId',
+        'buildingId' => 'getBuildingId',
         'capacity' => 'getCapacity',
         'name' => 'getName',
-        'room_enrollment' => 'getRoomEnrollment',
-        'room_id' => 'getRoomId',
-        'room_number' => 'getRoomNumber',
+        'roomEnrollment' => 'getRoomEnrollment',
+        'roomId' => 'getRoomId',
+        'roomNumber' => 'getRoomNumber',
         'residents' => 'getResidents',
     ];
 
@@ -281,12 +281,12 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('building_id', $data ?? [], null);
+        $this->setIfExists('buildingId', $data ?? [], null);
         $this->setIfExists('capacity', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('room_enrollment', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('room_number', $data ?? [], null);
+        $this->setIfExists('roomEnrollment', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('roomNumber', $data ?? [], null);
         $this->setIfExists('residents', $data ?? [], null);
     }
 
@@ -333,35 +333,35 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets building_id
+     * Gets buildingId
      *
      * @return int|null
      */
     public function getBuildingId()
     {
-        return $this->container['building_id'];
+        return $this->container['buildingId'];
     }
 
     /**
-     * Sets building_id
+     * Sets buildingId
      *
-     * @param int|null $building_id ///
+     * @param int|null $buildingId ///
      *
      * @return self
      */
-    public function setBuildingId($building_id)
+    public function setBuildingId($buildingId)
     {
-        if (is_null($building_id)) {
-            array_push($this->openAPINullablesSetToNull, 'building_id');
+        if (is_null($buildingId)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_id', $nullablesSetToNull);
+            $index = array_search('buildingId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_id'] = $building_id;
+        $this->container['buildingId'] = $buildingId;
 
         return $this;
     }
@@ -435,103 +435,103 @@ class Room implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets room_enrollment
+     * Gets roomEnrollment
      *
      * @return int|null
      */
     public function getRoomEnrollment()
     {
-        return $this->container['room_enrollment'];
+        return $this->container['roomEnrollment'];
     }
 
     /**
-     * Sets room_enrollment
+     * Sets roomEnrollment
      *
-     * @param int|null $room_enrollment
+     * @param int|null $roomEnrollment
      *
      * @return self
      */
-    public function setRoomEnrollment($room_enrollment)
+    public function setRoomEnrollment($roomEnrollment)
     {
-        if (is_null($room_enrollment)) {
-            array_push($this->openAPINullablesSetToNull, 'room_enrollment');
+        if (is_null($roomEnrollment)) {
+            array_push($this->openAPINullablesSetToNull, 'roomEnrollment');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_enrollment', $nullablesSetToNull);
+            $index = array_search('roomEnrollment', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_enrollment'] = $room_enrollment;
+        $this->container['roomEnrollment'] = $roomEnrollment;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id
+     * @param int|null $roomId
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets room_number
+     * Gets roomNumber
      *
      * @return string|null
      */
     public function getRoomNumber()
     {
-        return $this->container['room_number'];
+        return $this->container['roomNumber'];
     }
 
     /**
-     * Sets room_number
+     * Sets roomNumber
      *
-     * @param string|null $room_number
+     * @param string|null $roomNumber
      *
      * @return self
      */
-    public function setRoomNumber($room_number)
+    public function setRoomNumber($roomNumber)
     {
-        if (is_null($room_number)) {
-            array_push($this->openAPINullablesSetToNull, 'room_number');
+        if (is_null($roomNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'roomNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_number', $nullablesSetToNull);
+            $index = array_search('roomNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_number'] = $room_number;
+        $this->container['roomNumber'] = $roomNumber;
 
         return $this;
     }

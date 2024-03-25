@@ -11,7 +11,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1SchedulesByStudentIdMeetingsGet()`
 
 ```php
-v1SchedulesByStudentIdMeetingsGet($student_id, $start_date, $end_date): \SKY\School\Model\StudentScheduleCollection
+v1SchedulesByStudentIdMeetingsGet($studentId, $startDate, $endDate): \SKY\School\Model\StudentScheduleCollection
 ```
 
 Schedules - Meetings for a student
@@ -42,12 +42,12 @@ $apiInstance = new SKY\School\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32.
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$studentId = 56; // int | Format - int32.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
 
 try {
-    $result = $apiInstance->v1SchedulesByStudentIdMeetingsGet($student_id, $start_date, $end_date);
+    $result = $apiInstance->v1SchedulesByStudentIdMeetingsGet($studentId, $startDate, $endDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->v1SchedulesByStudentIdMeetingsGet: ', $e->getMessage(), PHP_EOL;
@@ -58,9 +58,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_id** | **int**| Format - int32. | |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
+| **studentId** | **int**| Format - int32. | |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
 
 ### Return type
 
@@ -82,7 +82,7 @@ try {
 ## `v1SchedulesMeetingsGet()`
 
 ```php
-v1SchedulesMeetingsGet($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date): \SKY\School\Model\MeetingCollection
+v1SchedulesMeetingsGet($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate): \SKY\School\Model\MeetingCollection
 ```
 
 Schedules meetings
@@ -113,15 +113,15 @@ $apiInstance = new SKY\School\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-01.
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-08.
-$offering_types = '1'; // string | Comma delimited list of integer values above. Defaults to 1.
-$section_ids = 'section_ids_example'; // string | Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections.
-$last_modified = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. <br /> Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-01.
-$show_time_for_current_date = false; // bool | Set to true to calculate the ```start_time``` and ```end_time``` or meetings based on the current day instead of the meeting day. Defaults to false.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-01.
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-08.
+$offeringTypes = '1'; // string | Comma delimited list of integer values above. Defaults to 1.
+$sectionIds = 'sectionIds_example'; // string | Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections.
+$lastModified = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. <br /> Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2022-04-01.
+$showTimeForCurrentDate = false; // bool | Set to true to calculate the ```start_time``` and ```end_time``` or meetings based on the current day instead of the meeting day. Defaults to false.
 
 try {
-    $result = $apiInstance->v1SchedulesMeetingsGet($start_date, $end_date, $offering_types, $section_ids, $last_modified, $show_time_for_current_date);
+    $result = $apiInstance->v1SchedulesMeetingsGet($startDate, $endDate, $offeringTypes, $sectionIds, $lastModified, $showTimeForCurrentDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->v1SchedulesMeetingsGet: ', $e->getMessage(), PHP_EOL;
@@ -132,12 +132,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. | |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. | [optional] |
-| **offering_types** | **string**| Comma delimited list of integer values above. Defaults to 1. | [optional] [default to &#39;1&#39;] |
-| **section_ids** | **string**| Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. | [optional] |
-| **last_modified** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. | [optional] |
-| **show_time_for_current_date** | **bool**| Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. | [optional] [default to false] |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. | |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-08. | [optional] |
+| **offeringTypes** | **string**| Comma delimited list of integer values above. Defaults to 1. | [optional] [default to &#39;1&#39;] |
+| **sectionIds** | **string**| Comma delimited list of integer values for the section identifiers to return. By default the route returns all sections. | [optional] |
+| **lastModified** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filters meetings to sections that were modified on or after the date provided. &lt;br /&gt; Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-01. | [optional] |
+| **showTimeForCurrentDate** | **bool**| Set to true to calculate the &#x60;&#x60;&#x60;start_time&#x60;&#x60;&#x60; and &#x60;&#x60;&#x60;end_time&#x60;&#x60;&#x60; or meetings based on the current day instead of the meeting day. Defaults to false. | [optional] [default to false] |
 
 ### Return type
 

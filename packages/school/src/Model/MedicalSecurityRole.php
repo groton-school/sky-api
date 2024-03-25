@@ -58,8 +58,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'role_id' => 'int',
-        'has_access' => 'bool',
+        'roleId' => 'int',
+        'hasAccess' => 'bool',
     ];
 
     /**
@@ -70,8 +70,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'role_id' => 'int32',
-        'has_access' => null,
+        'roleId' => 'int32',
+        'hasAccess' => null,
     ];
 
     /**
@@ -80,8 +80,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'role_id' => true,
-        'has_access' => true,
+        'roleId' => true,
+        'hasAccess' => true,
     ];
 
     /**
@@ -170,8 +170,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'role_id' => 'role_id',
-        'has_access' => 'has_access',
+        'roleId' => 'role_id',
+        'hasAccess' => 'has_access',
     ];
 
     /**
@@ -180,8 +180,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'role_id' => 'setRoleId',
-        'has_access' => 'setHasAccess',
+        'roleId' => 'setRoleId',
+        'hasAccess' => 'setHasAccess',
     ];
 
     /**
@@ -190,8 +190,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'role_id' => 'getRoleId',
-        'has_access' => 'getHasAccess',
+        'roleId' => 'getRoleId',
+        'hasAccess' => 'getHasAccess',
     ];
 
     /**
@@ -251,8 +251,8 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('role_id', $data ?? [], null);
-        $this->setIfExists('has_access', $data ?? [], null);
+        $this->setIfExists('roleId', $data ?? [], null);
+        $this->setIfExists('hasAccess', $data ?? [], null);
     }
 
     /**
@@ -298,69 +298,69 @@ class MedicalSecurityRole implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets role_id
+     * Gets roleId
      *
      * @return int|null
      */
     public function getRoleId()
     {
-        return $this->container['role_id'];
+        return $this->container['roleId'];
     }
 
     /**
-     * Sets role_id
+     * Sets roleId
      *
-     * @param int|null $role_id The ID of role
+     * @param int|null $roleId The ID of role
      *
      * @return self
      */
-    public function setRoleId($role_id)
+    public function setRoleId($roleId)
     {
-        if (is_null($role_id)) {
-            array_push($this->openAPINullablesSetToNull, 'role_id');
+        if (is_null($roleId)) {
+            array_push($this->openAPINullablesSetToNull, 'roleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_id', $nullablesSetToNull);
+            $index = array_search('roleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_id'] = $role_id;
+        $this->container['roleId'] = $roleId;
 
         return $this;
     }
 
     /**
-     * Gets has_access
+     * Gets hasAccess
      *
      * @return bool|null
      */
     public function getHasAccess()
     {
-        return $this->container['has_access'];
+        return $this->container['hasAccess'];
     }
 
     /**
-     * Sets has_access
+     * Sets hasAccess
      *
-     * @param bool|null $has_access Set to true to allow access for this type of user
+     * @param bool|null $hasAccess Set to true to allow access for this type of user
      *
      * @return self
      */
-    public function setHasAccess($has_access)
+    public function setHasAccess($hasAccess)
     {
-        if (is_null($has_access)) {
-            array_push($this->openAPINullablesSetToNull, 'has_access');
+        if (is_null($hasAccess)) {
+            array_push($this->openAPINullablesSetToNull, 'hasAccess');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_access', $nullablesSetToNull);
+            $index = array_search('hasAccess', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_access'] = $has_access;
+        $this->container['hasAccess'] = $hasAccess;
 
         return $this;
     }

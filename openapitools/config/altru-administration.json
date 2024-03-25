@@ -1,0 +1,7 @@
+{
+  "!include": "../base.json",
+  "inputSpec": "var/2022-04-01_preview/Altru/alt-adnmg.json",
+  "outputDir": "packages/altru-administration",
+  "gitRepoId": "sky-api.altru-administration",
+  "invokerPackage": "SKY\\Altru\\Administration"
+}

@@ -59,12 +59,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'phone_type' => 'string',
-        'index_id' => 'int',
+        'phoneType' => 'string',
+        'indexId' => 'int',
         'links' => '\SKY\School\Model\PhoneTypeLink[]',
         'number' => 'string',
-        'type_id' => 'int',
-        'user_id' => 'int',
+        'typeId' => 'int',
+        'userId' => 'int',
     ];
 
     /**
@@ -76,12 +76,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'phone_type' => null,
-        'index_id' => 'int32',
+        'phoneType' => null,
+        'indexId' => 'int32',
         'links' => null,
         'number' => null,
-        'type_id' => 'int32',
-        'user_id' => 'int32',
+        'typeId' => 'int32',
+        'userId' => 'int32',
     ];
 
     /**
@@ -91,12 +91,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'phone_type' => true,
-        'index_id' => true,
+        'phoneType' => true,
+        'indexId' => true,
         'links' => true,
         'number' => true,
-        'type_id' => true,
-        'user_id' => true,
+        'typeId' => true,
+        'userId' => true,
     ];
 
     /**
@@ -186,12 +186,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'phone_type' => 'phone_type',
-        'index_id' => 'index_id',
+        'phoneType' => 'phone_type',
+        'indexId' => 'index_id',
         'links' => 'links',
         'number' => 'number',
-        'type_id' => 'type_id',
-        'user_id' => 'user_id',
+        'typeId' => 'type_id',
+        'userId' => 'user_id',
     ];
 
     /**
@@ -201,12 +201,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'phone_type' => 'setPhoneType',
-        'index_id' => 'setIndexId',
+        'phoneType' => 'setPhoneType',
+        'indexId' => 'setIndexId',
         'links' => 'setLinks',
         'number' => 'setNumber',
-        'type_id' => 'setTypeId',
-        'user_id' => 'setUserId',
+        'typeId' => 'setTypeId',
+        'userId' => 'setUserId',
     ];
 
     /**
@@ -216,12 +216,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'phone_type' => 'getPhoneType',
-        'index_id' => 'getIndexId',
+        'phoneType' => 'getPhoneType',
+        'indexId' => 'getIndexId',
         'links' => 'getLinks',
         'number' => 'getNumber',
-        'type_id' => 'getTypeId',
-        'user_id' => 'getUserId',
+        'typeId' => 'getTypeId',
+        'userId' => 'getUserId',
     ];
 
     /**
@@ -282,12 +282,12 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('phone_type', $data ?? [], null);
-        $this->setIfExists('index_id', $data ?? [], null);
+        $this->setIfExists('phoneType', $data ?? [], null);
+        $this->setIfExists('indexId', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
     }
 
     /**
@@ -360,69 +360,69 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets phone_type
+     * Gets phoneType
      *
      * @return string|null
      */
     public function getPhoneType()
     {
-        return $this->container['phone_type'];
+        return $this->container['phoneType'];
     }
 
     /**
-     * Sets phone_type
+     * Sets phoneType
      *
-     * @param string|null $phone_type The 'Type' of the phone number
+     * @param string|null $phoneType The 'Type' of the phone number
      *
      * @return self
      */
-    public function setPhoneType($phone_type)
+    public function setPhoneType($phoneType)
     {
-        if (is_null($phone_type)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_type');
+        if (is_null($phoneType)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_type', $nullablesSetToNull);
+            $index = array_search('phoneType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_type'] = $phone_type;
+        $this->container['phoneType'] = $phoneType;
 
         return $this;
     }
 
     /**
-     * Gets index_id
+     * Gets indexId
      *
      * @return int|null
      */
     public function getIndexId()
     {
-        return $this->container['index_id'];
+        return $this->container['indexId'];
     }
 
     /**
-     * Sets index_id
+     * Sets indexId
      *
-     * @param int|null $index_id The Index ID of the phone number
+     * @param int|null $indexId The Index ID of the phone number
      *
      * @return self
      */
-    public function setIndexId($index_id)
+    public function setIndexId($indexId)
     {
-        if (is_null($index_id)) {
-            array_push($this->openAPINullablesSetToNull, 'index_id');
+        if (is_null($indexId)) {
+            array_push($this->openAPINullablesSetToNull, 'indexId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('index_id', $nullablesSetToNull);
+            $index = array_search('indexId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['index_id'] = $index_id;
+        $this->container['indexId'] = $indexId;
 
         return $this;
     }
@@ -496,69 +496,69 @@ class PhoneRead implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return int|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param int|null $type_id The type ID of a phone number; the type ID corresponds with the type of phone number (ex. Cell, Work, Home)
+     * @param int|null $typeId The type ID of a phone number; the type ID corresponds with the type of phone number (ex. Cell, Work, Home)
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The ID of the user the phone number belongs to
+     * @param int|null $userId The ID of the user the phone number belongs to
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

@@ -133,17 +133,17 @@ class TestScoresApi
      *
      * Test Score create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\TestScoreAdd $test_score_add  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\TestScoreAdd $testScoreAdd  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresByUserIdPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1TestscoresByUserIdPost($user_id, $test_score_add = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
+    public function v1TestscoresByUserIdPost($userId, $testScoreAdd = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
     {
-        [$response] = $this->v1TestscoresByUserIdPostWithHttpInfo($user_id, $test_score_add, $contentType);
+        [$response] = $this->v1TestscoresByUserIdPostWithHttpInfo($userId, $testScoreAdd, $contentType);
         return $response;
     }
 
@@ -152,17 +152,17 @@ class TestScoresApi
      *
      * Test Score create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\TestScoreAdd $test_score_add  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\TestScoreAdd $testScoreAdd  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresByUserIdPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1TestscoresByUserIdPostWithHttpInfo($user_id, $test_score_add = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
+    public function v1TestscoresByUserIdPostWithHttpInfo($userId, $testScoreAdd = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
     {
-        $request = $this->v1TestscoresByUserIdPostRequest($user_id, $test_score_add, $contentType);
+        $request = $this->v1TestscoresByUserIdPostRequest($userId, $testScoreAdd, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -277,16 +277,16 @@ class TestScoresApi
      *
      * Test Score create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\TestScoreAdd $test_score_add  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\TestScoreAdd $testScoreAdd  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresByUserIdPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TestscoresByUserIdPostAsync($user_id, $test_score_add = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
+    public function v1TestscoresByUserIdPostAsync($userId, $testScoreAdd = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
     {
-        return $this->v1TestscoresByUserIdPostAsyncWithHttpInfo($user_id, $test_score_add, $contentType)
+        return $this->v1TestscoresByUserIdPostAsyncWithHttpInfo($userId, $testScoreAdd, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,17 +299,17 @@ class TestScoresApi
      *
      * Test Score create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\TestScoreAdd $test_score_add  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\TestScoreAdd $testScoreAdd  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresByUserIdPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TestscoresByUserIdPostAsyncWithHttpInfo($user_id, $test_score_add = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
+    public function v1TestscoresByUserIdPostAsyncWithHttpInfo($userId, $testScoreAdd = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1TestscoresByUserIdPostRequest($user_id, $test_score_add, $contentType);
+        $request = $this->v1TestscoresByUserIdPostRequest($userId, $testScoreAdd, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -350,20 +350,20 @@ class TestScoresApi
     /**
      * Create request for operation 'v1TestscoresByUserIdPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\TestScoreAdd $test_score_add  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\TestScoreAdd $testScoreAdd  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresByUserIdPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1TestscoresByUserIdPostRequest($user_id, $test_score_add = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
+    public function v1TestscoresByUserIdPostRequest($userId, $testScoreAdd = null, string $contentType = self::contentTypes['v1TestscoresByUserIdPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1TestscoresByUserIdPost'
+                'Missing the required parameter $userId when calling v1TestscoresByUserIdPost'
             );
         }
 
@@ -379,10 +379,10 @@ class TestScoresApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -395,12 +395,12 @@ class TestScoresApi
         );
 
         // for model (json/xml)
-        if (isset($test_score_add)) {
+        if (isset($testScoreAdd)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($test_score_add));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($testScoreAdd));
             } else {
-                $httpBody = $test_score_add;
+                $httpBody = $testScoreAdd;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -463,16 +463,16 @@ class TestScoresApi
      *
      * Test scores by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\TestScoreCollection
      */
-    public function v1TestscoresGet($user_id = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
+    public function v1TestscoresGet($userId = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
     {
-        [$response] = $this->v1TestscoresGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1TestscoresGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -481,16 +481,16 @@ class TestScoresApi
      *
      * Test scores by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\TestScoreCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1TestscoresGetWithHttpInfo($user_id = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
+    public function v1TestscoresGetWithHttpInfo($userId = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
     {
-        $request = $this->v1TestscoresGetRequest($user_id, $contentType);
+        $request = $this->v1TestscoresGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -605,15 +605,15 @@ class TestScoresApi
      *
      * Test scores by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TestscoresGetAsync($user_id = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
+    public function v1TestscoresGetAsync($userId = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
     {
-        return $this->v1TestscoresGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1TestscoresGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -626,16 +626,16 @@ class TestScoresApi
      *
      * Test scores by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1TestscoresGetAsyncWithHttpInfo($user_id = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
+    public function v1TestscoresGetAsyncWithHttpInfo($userId = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
     {
         $returnType = '\SKY\School\Model\TestScoreCollection';
-        $request = $this->v1TestscoresGetRequest($user_id, $contentType);
+        $request = $this->v1TestscoresGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -676,13 +676,13 @@ class TestScoresApi
     /**
      * Create request for operation 'v1TestscoresGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1TestscoresGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1TestscoresGetRequest($user_id = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
+    public function v1TestscoresGetRequest($userId = null, string $contentType = self::contentTypes['v1TestscoresGet'][0])
     {
 
 
@@ -696,7 +696,7 @@ class TestScoresApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $user_id,
+            $userId,
             'user_id', // param base name
             'integer', // openApiType
             'form', // style

@@ -58,33 +58,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'section_id' => 'int',
-        'section_identifier' => 'string',
-        'course_title' => 'string',
-        'group_name' => 'string',
-        'block_id' => 'int',
-        'block_name' => 'string',
-        'room_id' => 'int',
-        'room_name' => 'string',
-        'room_number' => 'int',
-        'room_capacity' => 'int',
-        'room_code' => 'string',
-        'faculty_user_id' => 'int',
-        'faculty_name' => 'string',
-        'faculty_firstname' => 'string',
-        'faculty_lastname' => 'string',
-        'start_time' => '\DateTime',
-        'end_time' => '\DateTime',
-        'meeting_date' => '\DateTime',
-        'attendance_required' => 'bool',
-        'attendance_taken' => 'bool',
-        'num_absent' => 'int',
-        'attendance_id' => 'int',
-        'level_number' => 'int',
-        'offering_type' => '\SKY\School\Model\OfferingType',
-        'created_date' => '\DateTime',
-        'modified_date' => '\DateTime',
-        'last_modified_user_id' => 'int',
+        'sectionId' => 'int',
+        'sectionIdentifier' => 'string',
+        'courseTitle' => 'string',
+        'groupName' => 'string',
+        'blockId' => 'int',
+        'blockName' => 'string',
+        'roomId' => 'int',
+        'roomName' => 'string',
+        'roomNumber' => 'int',
+        'roomCapacity' => 'int',
+        'roomCode' => 'string',
+        'facultyUserId' => 'int',
+        'facultyName' => 'string',
+        'facultyFirstname' => 'string',
+        'facultyLastname' => 'string',
+        'startTime' => '\DateTime',
+        'endTime' => '\DateTime',
+        'meetingDate' => '\DateTime',
+        'attendanceRequired' => 'bool',
+        'attendanceTaken' => 'bool',
+        'numAbsent' => 'int',
+        'attendanceId' => 'int',
+        'levelNumber' => 'int',
+        'offeringType' => '\SKY\School\Model\OfferingType',
+        'createdDate' => '\DateTime',
+        'modifiedDate' => '\DateTime',
+        'lastModifiedUserId' => 'int',
         'teachers' => '\SKY\School\Model\Teacher[]',
     ];
 
@@ -96,33 +96,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'section_id' => 'int32',
-        'section_identifier' => null,
-        'course_title' => null,
-        'group_name' => null,
-        'block_id' => 'int32',
-        'block_name' => null,
-        'room_id' => 'int32',
-        'room_name' => null,
-        'room_number' => 'int32',
-        'room_capacity' => 'int32',
-        'room_code' => null,
-        'faculty_user_id' => 'int32',
-        'faculty_name' => null,
-        'faculty_firstname' => null,
-        'faculty_lastname' => null,
-        'start_time' => 'date-time',
-        'end_time' => 'date-time',
-        'meeting_date' => 'date-time',
-        'attendance_required' => null,
-        'attendance_taken' => null,
-        'num_absent' => 'int32',
-        'attendance_id' => 'int32',
-        'level_number' => 'int32',
-        'offering_type' => null,
-        'created_date' => 'date-time',
-        'modified_date' => 'date-time',
-        'last_modified_user_id' => 'int32',
+        'sectionId' => 'int32',
+        'sectionIdentifier' => null,
+        'courseTitle' => null,
+        'groupName' => null,
+        'blockId' => 'int32',
+        'blockName' => null,
+        'roomId' => 'int32',
+        'roomName' => null,
+        'roomNumber' => 'int32',
+        'roomCapacity' => 'int32',
+        'roomCode' => null,
+        'facultyUserId' => 'int32',
+        'facultyName' => null,
+        'facultyFirstname' => null,
+        'facultyLastname' => null,
+        'startTime' => 'date-time',
+        'endTime' => 'date-time',
+        'meetingDate' => 'date-time',
+        'attendanceRequired' => null,
+        'attendanceTaken' => null,
+        'numAbsent' => 'int32',
+        'attendanceId' => 'int32',
+        'levelNumber' => 'int32',
+        'offeringType' => null,
+        'createdDate' => 'date-time',
+        'modifiedDate' => 'date-time',
+        'lastModifiedUserId' => 'int32',
         'teachers' => null,
     ];
 
@@ -132,33 +132,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'section_id' => false,
-        'section_identifier' => true,
-        'course_title' => true,
-        'group_name' => true,
-        'block_id' => false,
-        'block_name' => true,
-        'room_id' => false,
-        'room_name' => true,
-        'room_number' => false,
-        'room_capacity' => false,
-        'room_code' => true,
-        'faculty_user_id' => false,
-        'faculty_name' => true,
-        'faculty_firstname' => true,
-        'faculty_lastname' => true,
-        'start_time' => false,
-        'end_time' => false,
-        'meeting_date' => false,
-        'attendance_required' => false,
-        'attendance_taken' => false,
-        'num_absent' => false,
-        'attendance_id' => false,
-        'level_number' => false,
-        'offering_type' => false,
-        'created_date' => false,
-        'modified_date' => false,
-        'last_modified_user_id' => false,
+        'sectionId' => false,
+        'sectionIdentifier' => true,
+        'courseTitle' => true,
+        'groupName' => true,
+        'blockId' => false,
+        'blockName' => true,
+        'roomId' => false,
+        'roomName' => true,
+        'roomNumber' => false,
+        'roomCapacity' => false,
+        'roomCode' => true,
+        'facultyUserId' => false,
+        'facultyName' => true,
+        'facultyFirstname' => true,
+        'facultyLastname' => true,
+        'startTime' => false,
+        'endTime' => false,
+        'meetingDate' => false,
+        'attendanceRequired' => false,
+        'attendanceTaken' => false,
+        'numAbsent' => false,
+        'attendanceId' => false,
+        'levelNumber' => false,
+        'offeringType' => false,
+        'createdDate' => false,
+        'modifiedDate' => false,
+        'lastModifiedUserId' => false,
         'teachers' => true,
     ];
 
@@ -248,33 +248,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'section_id' => 'section_id',
-        'section_identifier' => 'section_identifier',
-        'course_title' => 'course_title',
-        'group_name' => 'group_name',
-        'block_id' => 'block_id',
-        'block_name' => 'block_name',
-        'room_id' => 'room_id',
-        'room_name' => 'room_name',
-        'room_number' => 'room_number',
-        'room_capacity' => 'room_capacity',
-        'room_code' => 'room_code',
-        'faculty_user_id' => 'faculty_user_id',
-        'faculty_name' => 'faculty_name',
-        'faculty_firstname' => 'faculty_firstname',
-        'faculty_lastname' => 'faculty_lastname',
-        'start_time' => 'start_time',
-        'end_time' => 'end_time',
-        'meeting_date' => 'meeting_date',
-        'attendance_required' => 'attendance_required',
-        'attendance_taken' => 'attendance_taken',
-        'num_absent' => 'num_absent',
-        'attendance_id' => 'attendance_id',
-        'level_number' => 'level_number',
-        'offering_type' => 'offering_type',
-        'created_date' => 'created_date',
-        'modified_date' => 'modified_date',
-        'last_modified_user_id' => 'last_modified_user_id',
+        'sectionId' => 'section_id',
+        'sectionIdentifier' => 'section_identifier',
+        'courseTitle' => 'course_title',
+        'groupName' => 'group_name',
+        'blockId' => 'block_id',
+        'blockName' => 'block_name',
+        'roomId' => 'room_id',
+        'roomName' => 'room_name',
+        'roomNumber' => 'room_number',
+        'roomCapacity' => 'room_capacity',
+        'roomCode' => 'room_code',
+        'facultyUserId' => 'faculty_user_id',
+        'facultyName' => 'faculty_name',
+        'facultyFirstname' => 'faculty_firstname',
+        'facultyLastname' => 'faculty_lastname',
+        'startTime' => 'start_time',
+        'endTime' => 'end_time',
+        'meetingDate' => 'meeting_date',
+        'attendanceRequired' => 'attendance_required',
+        'attendanceTaken' => 'attendance_taken',
+        'numAbsent' => 'num_absent',
+        'attendanceId' => 'attendance_id',
+        'levelNumber' => 'level_number',
+        'offeringType' => 'offering_type',
+        'createdDate' => 'created_date',
+        'modifiedDate' => 'modified_date',
+        'lastModifiedUserId' => 'last_modified_user_id',
         'teachers' => 'teachers',
     ];
 
@@ -284,33 +284,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'section_id' => 'setSectionId',
-        'section_identifier' => 'setSectionIdentifier',
-        'course_title' => 'setCourseTitle',
-        'group_name' => 'setGroupName',
-        'block_id' => 'setBlockId',
-        'block_name' => 'setBlockName',
-        'room_id' => 'setRoomId',
-        'room_name' => 'setRoomName',
-        'room_number' => 'setRoomNumber',
-        'room_capacity' => 'setRoomCapacity',
-        'room_code' => 'setRoomCode',
-        'faculty_user_id' => 'setFacultyUserId',
-        'faculty_name' => 'setFacultyName',
-        'faculty_firstname' => 'setFacultyFirstname',
-        'faculty_lastname' => 'setFacultyLastname',
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime',
-        'meeting_date' => 'setMeetingDate',
-        'attendance_required' => 'setAttendanceRequired',
-        'attendance_taken' => 'setAttendanceTaken',
-        'num_absent' => 'setNumAbsent',
-        'attendance_id' => 'setAttendanceId',
-        'level_number' => 'setLevelNumber',
-        'offering_type' => 'setOfferingType',
-        'created_date' => 'setCreatedDate',
-        'modified_date' => 'setModifiedDate',
-        'last_modified_user_id' => 'setLastModifiedUserId',
+        'sectionId' => 'setSectionId',
+        'sectionIdentifier' => 'setSectionIdentifier',
+        'courseTitle' => 'setCourseTitle',
+        'groupName' => 'setGroupName',
+        'blockId' => 'setBlockId',
+        'blockName' => 'setBlockName',
+        'roomId' => 'setRoomId',
+        'roomName' => 'setRoomName',
+        'roomNumber' => 'setRoomNumber',
+        'roomCapacity' => 'setRoomCapacity',
+        'roomCode' => 'setRoomCode',
+        'facultyUserId' => 'setFacultyUserId',
+        'facultyName' => 'setFacultyName',
+        'facultyFirstname' => 'setFacultyFirstname',
+        'facultyLastname' => 'setFacultyLastname',
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime',
+        'meetingDate' => 'setMeetingDate',
+        'attendanceRequired' => 'setAttendanceRequired',
+        'attendanceTaken' => 'setAttendanceTaken',
+        'numAbsent' => 'setNumAbsent',
+        'attendanceId' => 'setAttendanceId',
+        'levelNumber' => 'setLevelNumber',
+        'offeringType' => 'setOfferingType',
+        'createdDate' => 'setCreatedDate',
+        'modifiedDate' => 'setModifiedDate',
+        'lastModifiedUserId' => 'setLastModifiedUserId',
         'teachers' => 'setTeachers',
     ];
 
@@ -320,33 +320,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'section_id' => 'getSectionId',
-        'section_identifier' => 'getSectionIdentifier',
-        'course_title' => 'getCourseTitle',
-        'group_name' => 'getGroupName',
-        'block_id' => 'getBlockId',
-        'block_name' => 'getBlockName',
-        'room_id' => 'getRoomId',
-        'room_name' => 'getRoomName',
-        'room_number' => 'getRoomNumber',
-        'room_capacity' => 'getRoomCapacity',
-        'room_code' => 'getRoomCode',
-        'faculty_user_id' => 'getFacultyUserId',
-        'faculty_name' => 'getFacultyName',
-        'faculty_firstname' => 'getFacultyFirstname',
-        'faculty_lastname' => 'getFacultyLastname',
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime',
-        'meeting_date' => 'getMeetingDate',
-        'attendance_required' => 'getAttendanceRequired',
-        'attendance_taken' => 'getAttendanceTaken',
-        'num_absent' => 'getNumAbsent',
-        'attendance_id' => 'getAttendanceId',
-        'level_number' => 'getLevelNumber',
-        'offering_type' => 'getOfferingType',
-        'created_date' => 'getCreatedDate',
-        'modified_date' => 'getModifiedDate',
-        'last_modified_user_id' => 'getLastModifiedUserId',
+        'sectionId' => 'getSectionId',
+        'sectionIdentifier' => 'getSectionIdentifier',
+        'courseTitle' => 'getCourseTitle',
+        'groupName' => 'getGroupName',
+        'blockId' => 'getBlockId',
+        'blockName' => 'getBlockName',
+        'roomId' => 'getRoomId',
+        'roomName' => 'getRoomName',
+        'roomNumber' => 'getRoomNumber',
+        'roomCapacity' => 'getRoomCapacity',
+        'roomCode' => 'getRoomCode',
+        'facultyUserId' => 'getFacultyUserId',
+        'facultyName' => 'getFacultyName',
+        'facultyFirstname' => 'getFacultyFirstname',
+        'facultyLastname' => 'getFacultyLastname',
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime',
+        'meetingDate' => 'getMeetingDate',
+        'attendanceRequired' => 'getAttendanceRequired',
+        'attendanceTaken' => 'getAttendanceTaken',
+        'numAbsent' => 'getNumAbsent',
+        'attendanceId' => 'getAttendanceId',
+        'levelNumber' => 'getLevelNumber',
+        'offeringType' => 'getOfferingType',
+        'createdDate' => 'getCreatedDate',
+        'modifiedDate' => 'getModifiedDate',
+        'lastModifiedUserId' => 'getLastModifiedUserId',
         'teachers' => 'getTeachers',
     ];
 
@@ -407,33 +407,33 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('section_identifier', $data ?? [], null);
-        $this->setIfExists('course_title', $data ?? [], null);
-        $this->setIfExists('group_name', $data ?? [], null);
-        $this->setIfExists('block_id', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('room_name', $data ?? [], null);
-        $this->setIfExists('room_number', $data ?? [], null);
-        $this->setIfExists('room_capacity', $data ?? [], null);
-        $this->setIfExists('room_code', $data ?? [], null);
-        $this->setIfExists('faculty_user_id', $data ?? [], null);
-        $this->setIfExists('faculty_name', $data ?? [], null);
-        $this->setIfExists('faculty_firstname', $data ?? [], null);
-        $this->setIfExists('faculty_lastname', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('meeting_date', $data ?? [], null);
-        $this->setIfExists('attendance_required', $data ?? [], null);
-        $this->setIfExists('attendance_taken', $data ?? [], null);
-        $this->setIfExists('num_absent', $data ?? [], null);
-        $this->setIfExists('attendance_id', $data ?? [], null);
-        $this->setIfExists('level_number', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
-        $this->setIfExists('created_date', $data ?? [], null);
-        $this->setIfExists('modified_date', $data ?? [], null);
-        $this->setIfExists('last_modified_user_id', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('sectionIdentifier', $data ?? [], null);
+        $this->setIfExists('courseTitle', $data ?? [], null);
+        $this->setIfExists('groupName', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('roomName', $data ?? [], null);
+        $this->setIfExists('roomNumber', $data ?? [], null);
+        $this->setIfExists('roomCapacity', $data ?? [], null);
+        $this->setIfExists('roomCode', $data ?? [], null);
+        $this->setIfExists('facultyUserId', $data ?? [], null);
+        $this->setIfExists('facultyName', $data ?? [], null);
+        $this->setIfExists('facultyFirstname', $data ?? [], null);
+        $this->setIfExists('facultyLastname', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('meetingDate', $data ?? [], null);
+        $this->setIfExists('attendanceRequired', $data ?? [], null);
+        $this->setIfExists('attendanceTaken', $data ?? [], null);
+        $this->setIfExists('numAbsent', $data ?? [], null);
+        $this->setIfExists('attendanceId', $data ?? [], null);
+        $this->setIfExists('levelNumber', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
+        $this->setIfExists('createdDate', $data ?? [], null);
+        $this->setIfExists('modifiedDate', $data ?? [], null);
+        $this->setIfExists('lastModifiedUserId', $data ?? [], null);
         $this->setIfExists('teachers', $data ?? [], null);
     }
 
@@ -480,793 +480,793 @@ class Meeting implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The id of the section
+     * @param int|null $sectionId The id of the section
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            throw new \InvalidArgumentException('non-nullable section_id cannot be null');
+        if (is_null($sectionId)) {
+            throw new \InvalidArgumentException('non-nullable sectionId cannot be null');
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets section_identifier
+     * Gets sectionIdentifier
      *
      * @return string|null
      */
     public function getSectionIdentifier()
     {
-        return $this->container['section_identifier'];
+        return $this->container['sectionIdentifier'];
     }
 
     /**
-     * Sets section_identifier
+     * Sets sectionIdentifier
      *
-     * @param string|null $section_identifier The section identifier
+     * @param string|null $sectionIdentifier The section identifier
      *
      * @return self
      */
-    public function setSectionIdentifier($section_identifier)
+    public function setSectionIdentifier($sectionIdentifier)
     {
-        if (is_null($section_identifier)) {
-            array_push($this->openAPINullablesSetToNull, 'section_identifier');
+        if (is_null($sectionIdentifier)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionIdentifier');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_identifier', $nullablesSetToNull);
+            $index = array_search('sectionIdentifier', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_identifier'] = $section_identifier;
+        $this->container['sectionIdentifier'] = $sectionIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets course_title
+     * Gets courseTitle
      *
      * @return string|null
      */
     public function getCourseTitle()
     {
-        return $this->container['course_title'];
+        return $this->container['courseTitle'];
     }
 
     /**
-     * Sets course_title
+     * Sets courseTitle
      *
-     * @param string|null $course_title The title of the course
+     * @param string|null $courseTitle The title of the course
      *
      * @return self
      */
-    public function setCourseTitle($course_title)
+    public function setCourseTitle($courseTitle)
     {
-        if (is_null($course_title)) {
-            array_push($this->openAPINullablesSetToNull, 'course_title');
+        if (is_null($courseTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'courseTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_title', $nullablesSetToNull);
+            $index = array_search('courseTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_title'] = $course_title;
+        $this->container['courseTitle'] = $courseTitle;
 
         return $this;
     }
 
     /**
-     * Gets group_name
+     * Gets groupName
      *
      * @return string|null
      */
     public function getGroupName()
     {
-        return $this->container['group_name'];
+        return $this->container['groupName'];
     }
 
     /**
-     * Sets group_name
+     * Sets groupName
      *
-     * @param string|null $group_name The auto generated name of the group
+     * @param string|null $groupName The auto generated name of the group
      *
      * @return self
      */
-    public function setGroupName($group_name)
+    public function setGroupName($groupName)
     {
-        if (is_null($group_name)) {
-            array_push($this->openAPINullablesSetToNull, 'group_name');
+        if (is_null($groupName)) {
+            array_push($this->openAPINullablesSetToNull, 'groupName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('group_name', $nullablesSetToNull);
+            $index = array_search('groupName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['group_name'] = $group_name;
+        $this->container['groupName'] = $groupName;
 
         return $this;
     }
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id The id of the block
+     * @param int|null $blockId The id of the block
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            throw new \InvalidArgumentException('non-nullable block_id cannot be null');
+        if (is_null($blockId)) {
+            throw new \InvalidArgumentException('non-nullable blockId cannot be null');
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name The name of the block
+     * @param string|null $blockName The name of the block
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id The id of the room where the meeting takes place
+     * @param int|null $roomId The id of the room where the meeting takes place
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            throw new \InvalidArgumentException('non-nullable room_id cannot be null');
+        if (is_null($roomId)) {
+            throw new \InvalidArgumentException('non-nullable roomId cannot be null');
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets room_name
+     * Gets roomName
      *
      * @return string|null
      */
     public function getRoomName()
     {
-        return $this->container['room_name'];
+        return $this->container['roomName'];
     }
 
     /**
-     * Sets room_name
+     * Sets roomName
      *
-     * @param string|null $room_name The name of the room where the meeting takes place
+     * @param string|null $roomName The name of the room where the meeting takes place
      *
      * @return self
      */
-    public function setRoomName($room_name)
+    public function setRoomName($roomName)
     {
-        if (is_null($room_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_name');
+        if (is_null($roomName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_name', $nullablesSetToNull);
+            $index = array_search('roomName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_name'] = $room_name;
+        $this->container['roomName'] = $roomName;
 
         return $this;
     }
 
     /**
-     * Gets room_number
+     * Gets roomNumber
      *
      * @return int|null
      */
     public function getRoomNumber()
     {
-        return $this->container['room_number'];
+        return $this->container['roomNumber'];
     }
 
     /**
-     * Sets room_number
+     * Sets roomNumber
      *
-     * @param int|null $room_number The room number where the meeting takes place
+     * @param int|null $roomNumber The room number where the meeting takes place
      *
      * @return self
      */
-    public function setRoomNumber($room_number)
+    public function setRoomNumber($roomNumber)
     {
-        if (is_null($room_number)) {
-            throw new \InvalidArgumentException('non-nullable room_number cannot be null');
+        if (is_null($roomNumber)) {
+            throw new \InvalidArgumentException('non-nullable roomNumber cannot be null');
         }
-        $this->container['room_number'] = $room_number;
+        $this->container['roomNumber'] = $roomNumber;
 
         return $this;
     }
 
     /**
-     * Gets room_capacity
+     * Gets roomCapacity
      *
      * @return int|null
      */
     public function getRoomCapacity()
     {
-        return $this->container['room_capacity'];
+        return $this->container['roomCapacity'];
     }
 
     /**
-     * Sets room_capacity
+     * Sets roomCapacity
      *
-     * @param int|null $room_capacity The room capacity
+     * @param int|null $roomCapacity The room capacity
      *
      * @return self
      */
-    public function setRoomCapacity($room_capacity)
+    public function setRoomCapacity($roomCapacity)
     {
-        if (is_null($room_capacity)) {
-            throw new \InvalidArgumentException('non-nullable room_capacity cannot be null');
+        if (is_null($roomCapacity)) {
+            throw new \InvalidArgumentException('non-nullable roomCapacity cannot be null');
         }
-        $this->container['room_capacity'] = $room_capacity;
+        $this->container['roomCapacity'] = $roomCapacity;
 
         return $this;
     }
 
     /**
-     * Gets room_code
+     * Gets roomCode
      *
      * @return string|null
      */
     public function getRoomCode()
     {
-        return $this->container['room_code'];
+        return $this->container['roomCode'];
     }
 
     /**
-     * Sets room_code
+     * Sets roomCode
      *
-     * @param string|null $room_code The room code
+     * @param string|null $roomCode The room code
      *
      * @return self
      */
-    public function setRoomCode($room_code)
+    public function setRoomCode($roomCode)
     {
-        if (is_null($room_code)) {
-            array_push($this->openAPINullablesSetToNull, 'room_code');
+        if (is_null($roomCode)) {
+            array_push($this->openAPINullablesSetToNull, 'roomCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_code', $nullablesSetToNull);
+            $index = array_search('roomCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_code'] = $room_code;
+        $this->container['roomCode'] = $roomCode;
 
         return $this;
     }
 
     /**
-     * Gets faculty_user_id
+     * Gets facultyUserId
      *
      * @return int|null
      */
     public function getFacultyUserId()
     {
-        return $this->container['faculty_user_id'];
+        return $this->container['facultyUserId'];
     }
 
     /**
-     * Sets faculty_user_id
+     * Sets facultyUserId
      *
-     * @param int|null $faculty_user_id The user id of the faculty member
+     * @param int|null $facultyUserId The user id of the faculty member
      *
      * @return self
      */
-    public function setFacultyUserId($faculty_user_id)
+    public function setFacultyUserId($facultyUserId)
     {
-        if (is_null($faculty_user_id)) {
-            throw new \InvalidArgumentException('non-nullable faculty_user_id cannot be null');
+        if (is_null($facultyUserId)) {
+            throw new \InvalidArgumentException('non-nullable facultyUserId cannot be null');
         }
-        $this->container['faculty_user_id'] = $faculty_user_id;
+        $this->container['facultyUserId'] = $facultyUserId;
 
         return $this;
     }
 
     /**
-     * Gets faculty_name
+     * Gets facultyName
      *
      * @return string|null
      */
     public function getFacultyName()
     {
-        return $this->container['faculty_name'];
+        return $this->container['facultyName'];
     }
 
     /**
-     * Sets faculty_name
+     * Sets facultyName
      *
-     * @param string|null $faculty_name The combined name of the head faculty member
+     * @param string|null $facultyName The combined name of the head faculty member
      *
      * @return self
      */
-    public function setFacultyName($faculty_name)
+    public function setFacultyName($facultyName)
     {
-        if (is_null($faculty_name)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_name');
+        if (is_null($facultyName)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_name', $nullablesSetToNull);
+            $index = array_search('facultyName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_name'] = $faculty_name;
+        $this->container['facultyName'] = $facultyName;
 
         return $this;
     }
 
     /**
-     * Gets faculty_firstname
+     * Gets facultyFirstname
      *
      * @return string|null
      */
     public function getFacultyFirstname()
     {
-        return $this->container['faculty_firstname'];
+        return $this->container['facultyFirstname'];
     }
 
     /**
-     * Sets faculty_firstname
+     * Sets facultyFirstname
      *
-     * @param string|null $faculty_firstname The faculty member's first name
+     * @param string|null $facultyFirstname The faculty member's first name
      *
      * @return self
      */
-    public function setFacultyFirstname($faculty_firstname)
+    public function setFacultyFirstname($facultyFirstname)
     {
-        if (is_null($faculty_firstname)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_firstname');
+        if (is_null($facultyFirstname)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyFirstname');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_firstname', $nullablesSetToNull);
+            $index = array_search('facultyFirstname', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_firstname'] = $faculty_firstname;
+        $this->container['facultyFirstname'] = $facultyFirstname;
 
         return $this;
     }
 
     /**
-     * Gets faculty_lastname
+     * Gets facultyLastname
      *
      * @return string|null
      */
     public function getFacultyLastname()
     {
-        return $this->container['faculty_lastname'];
+        return $this->container['facultyLastname'];
     }
 
     /**
-     * Sets faculty_lastname
+     * Sets facultyLastname
      *
-     * @param string|null $faculty_lastname The faculty member's last name
+     * @param string|null $facultyLastname The faculty member's last name
      *
      * @return self
      */
-    public function setFacultyLastname($faculty_lastname)
+    public function setFacultyLastname($facultyLastname)
     {
-        if (is_null($faculty_lastname)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_lastname');
+        if (is_null($facultyLastname)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyLastname');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_lastname', $nullablesSetToNull);
+            $index = array_search('facultyLastname', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_lastname'] = $faculty_lastname;
+        $this->container['facultyLastname'] = $facultyLastname;
 
         return $this;
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime|null $start_time The start time of the meeting
+     * @param \DateTime|null $startTime The start time of the meeting
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            throw new \InvalidArgumentException('non-nullable start_time cannot be null');
+        if (is_null($startTime)) {
+            throw new \InvalidArgumentException('non-nullable startTime cannot be null');
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time The end time of the meeting
+     * @param \DateTime|null $endTime The end time of the meeting
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            throw new \InvalidArgumentException('non-nullable end_time cannot be null');
+        if (is_null($endTime)) {
+            throw new \InvalidArgumentException('non-nullable endTime cannot be null');
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets meeting_date
+     * Gets meetingDate
      *
      * @return \DateTime|null
      */
     public function getMeetingDate()
     {
-        return $this->container['meeting_date'];
+        return $this->container['meetingDate'];
     }
 
     /**
-     * Sets meeting_date
+     * Sets meetingDate
      *
-     * @param \DateTime|null $meeting_date The date the meeting takes place
+     * @param \DateTime|null $meetingDate The date the meeting takes place
      *
      * @return self
      */
-    public function setMeetingDate($meeting_date)
+    public function setMeetingDate($meetingDate)
     {
-        if (is_null($meeting_date)) {
-            throw new \InvalidArgumentException('non-nullable meeting_date cannot be null');
+        if (is_null($meetingDate)) {
+            throw new \InvalidArgumentException('non-nullable meetingDate cannot be null');
         }
-        $this->container['meeting_date'] = $meeting_date;
+        $this->container['meetingDate'] = $meetingDate;
 
         return $this;
     }
 
     /**
-     * Gets attendance_required
+     * Gets attendanceRequired
      *
      * @return bool|null
      */
     public function getAttendanceRequired()
     {
-        return $this->container['attendance_required'];
+        return $this->container['attendanceRequired'];
     }
 
     /**
-     * Sets attendance_required
+     * Sets attendanceRequired
      *
-     * @param bool|null $attendance_required Returns true if attendance is required to be taken for this meeting
+     * @param bool|null $attendanceRequired Returns true if attendance is required to be taken for this meeting
      *
      * @return self
      */
-    public function setAttendanceRequired($attendance_required)
+    public function setAttendanceRequired($attendanceRequired)
     {
-        if (is_null($attendance_required)) {
-            throw new \InvalidArgumentException('non-nullable attendance_required cannot be null');
+        if (is_null($attendanceRequired)) {
+            throw new \InvalidArgumentException('non-nullable attendanceRequired cannot be null');
         }
-        $this->container['attendance_required'] = $attendance_required;
+        $this->container['attendanceRequired'] = $attendanceRequired;
 
         return $this;
     }
 
     /**
-     * Gets attendance_taken
+     * Gets attendanceTaken
      *
      * @return bool|null
      */
     public function getAttendanceTaken()
     {
-        return $this->container['attendance_taken'];
+        return $this->container['attendanceTaken'];
     }
 
     /**
-     * Sets attendance_taken
+     * Sets attendanceTaken
      *
-     * @param bool|null $attendance_taken Return true if attendance was taken
+     * @param bool|null $attendanceTaken Return true if attendance was taken
      *
      * @return self
      */
-    public function setAttendanceTaken($attendance_taken)
+    public function setAttendanceTaken($attendanceTaken)
     {
-        if (is_null($attendance_taken)) {
-            throw new \InvalidArgumentException('non-nullable attendance_taken cannot be null');
+        if (is_null($attendanceTaken)) {
+            throw new \InvalidArgumentException('non-nullable attendanceTaken cannot be null');
         }
-        $this->container['attendance_taken'] = $attendance_taken;
+        $this->container['attendanceTaken'] = $attendanceTaken;
 
         return $this;
     }
 
     /**
-     * Gets num_absent
+     * Gets numAbsent
      *
      * @return int|null
      */
     public function getNumAbsent()
     {
-        return $this->container['num_absent'];
+        return $this->container['numAbsent'];
     }
 
     /**
-     * Sets num_absent
+     * Sets numAbsent
      *
-     * @param int|null $num_absent The number of absent students for this meeting
+     * @param int|null $numAbsent The number of absent students for this meeting
      *
      * @return self
      */
-    public function setNumAbsent($num_absent)
+    public function setNumAbsent($numAbsent)
     {
-        if (is_null($num_absent)) {
-            throw new \InvalidArgumentException('non-nullable num_absent cannot be null');
+        if (is_null($numAbsent)) {
+            throw new \InvalidArgumentException('non-nullable numAbsent cannot be null');
         }
-        $this->container['num_absent'] = $num_absent;
+        $this->container['numAbsent'] = $numAbsent;
 
         return $this;
     }
 
     /**
-     * Gets attendance_id
+     * Gets attendanceId
      *
      * @return int|null
      */
     public function getAttendanceId()
     {
-        return $this->container['attendance_id'];
+        return $this->container['attendanceId'];
     }
 
     /**
-     * Sets attendance_id
+     * Sets attendanceId
      *
-     * @param int|null $attendance_id the id of the attendance record
+     * @param int|null $attendanceId the id of the attendance record
      *
      * @return self
      */
-    public function setAttendanceId($attendance_id)
+    public function setAttendanceId($attendanceId)
     {
-        if (is_null($attendance_id)) {
-            throw new \InvalidArgumentException('non-nullable attendance_id cannot be null');
+        if (is_null($attendanceId)) {
+            throw new \InvalidArgumentException('non-nullable attendanceId cannot be null');
         }
-        $this->container['attendance_id'] = $attendance_id;
+        $this->container['attendanceId'] = $attendanceId;
 
         return $this;
     }
 
     /**
-     * Gets level_number
+     * Gets levelNumber
      *
      * @return int|null
      */
     public function getLevelNumber()
     {
-        return $this->container['level_number'];
+        return $this->container['levelNumber'];
     }
 
     /**
-     * Sets level_number
+     * Sets levelNumber
      *
-     * @param int|null $level_number The level number the meeting belongs to
+     * @param int|null $levelNumber The level number the meeting belongs to
      *
      * @return self
      */
-    public function setLevelNumber($level_number)
+    public function setLevelNumber($levelNumber)
     {
-        if (is_null($level_number)) {
-            throw new \InvalidArgumentException('non-nullable level_number cannot be null');
+        if (is_null($levelNumber)) {
+            throw new \InvalidArgumentException('non-nullable levelNumber cannot be null');
         }
-        $this->container['level_number'] = $level_number;
+        $this->container['levelNumber'] = $levelNumber;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return \SKY\School\Model\OfferingType|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param \SKY\School\Model\OfferingType|null $offering_type offering_type
+     * @param \SKY\School\Model\OfferingType|null $offeringType offeringType
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            throw new \InvalidArgumentException('non-nullable offering_type cannot be null');
+        if (is_null($offeringType)) {
+            throw new \InvalidArgumentException('non-nullable offeringType cannot be null');
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }
 
     /**
-     * Gets created_date
+     * Gets createdDate
      *
      * @return \DateTime|null
      */
     public function getCreatedDate()
     {
-        return $this->container['created_date'];
+        return $this->container['createdDate'];
     }
 
     /**
-     * Sets created_date
+     * Sets createdDate
      *
-     * @param \DateTime|null $created_date The date the section was created
+     * @param \DateTime|null $createdDate The date the section was created
      *
      * @return self
      */
-    public function setCreatedDate($created_date)
+    public function setCreatedDate($createdDate)
     {
-        if (is_null($created_date)) {
-            throw new \InvalidArgumentException('non-nullable created_date cannot be null');
+        if (is_null($createdDate)) {
+            throw new \InvalidArgumentException('non-nullable createdDate cannot be null');
         }
-        $this->container['created_date'] = $created_date;
+        $this->container['createdDate'] = $createdDate;
 
         return $this;
     }
 
     /**
-     * Gets modified_date
+     * Gets modifiedDate
      *
      * @return \DateTime|null
      */
     public function getModifiedDate()
     {
-        return $this->container['modified_date'];
+        return $this->container['modifiedDate'];
     }
 
     /**
-     * Sets modified_date
+     * Sets modifiedDate
      *
-     * @param \DateTime|null $modified_date The date the section was last modified
+     * @param \DateTime|null $modifiedDate The date the section was last modified
      *
      * @return self
      */
-    public function setModifiedDate($modified_date)
+    public function setModifiedDate($modifiedDate)
     {
-        if (is_null($modified_date)) {
-            throw new \InvalidArgumentException('non-nullable modified_date cannot be null');
+        if (is_null($modifiedDate)) {
+            throw new \InvalidArgumentException('non-nullable modifiedDate cannot be null');
         }
-        $this->container['modified_date'] = $modified_date;
+        $this->container['modifiedDate'] = $modifiedDate;
 
         return $this;
     }
 
     /**
-     * Gets last_modified_user_id
+     * Gets lastModifiedUserId
      *
      * @return int|null
      */
     public function getLastModifiedUserId()
     {
-        return $this->container['last_modified_user_id'];
+        return $this->container['lastModifiedUserId'];
     }
 
     /**
-     * Sets last_modified_user_id
+     * Sets lastModifiedUserId
      *
-     * @param int|null $last_modified_user_id The identifier of the user that last modified the section
+     * @param int|null $lastModifiedUserId The identifier of the user that last modified the section
      *
      * @return self
      */
-    public function setLastModifiedUserId($last_modified_user_id)
+    public function setLastModifiedUserId($lastModifiedUserId)
     {
-        if (is_null($last_modified_user_id)) {
-            throw new \InvalidArgumentException('non-nullable last_modified_user_id cannot be null');
+        if (is_null($lastModifiedUserId)) {
+            throw new \InvalidArgumentException('non-nullable lastModifiedUserId cannot be null');
         }
-        $this->container['last_modified_user_id'] = $last_modified_user_id;
+        $this->container['lastModifiedUserId'] = $lastModifiedUserId;
 
         return $this;
     }

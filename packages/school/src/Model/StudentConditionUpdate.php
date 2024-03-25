@@ -58,10 +58,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
         'notes' => 'string',
-        'role_access' => '\SKY\School\Model\MedicalSecurityRole[]',
+        'roleAccess' => '\SKY\School\Model\MedicalSecurityRole[]',
         'medications' => 'int[]',
     ];
 
@@ -73,10 +73,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
         'notes' => null,
-        'role_access' => null,
+        'roleAccess' => null,
         'medications' => 'int32',
     ];
 
@@ -86,10 +86,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'date_as_of' => true,
-        'date_until' => true,
+        'dateAsOf' => true,
+        'dateUntil' => true,
         'notes' => true,
-        'role_access' => true,
+        'roleAccess' => true,
         'medications' => true,
     ];
 
@@ -179,10 +179,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
         'notes' => 'notes',
-        'role_access' => 'role_access',
+        'roleAccess' => 'role_access',
         'medications' => 'medications',
     ];
 
@@ -192,10 +192,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
         'notes' => 'setNotes',
-        'role_access' => 'setRoleAccess',
+        'roleAccess' => 'setRoleAccess',
         'medications' => 'setMedications',
     ];
 
@@ -205,10 +205,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
         'notes' => 'getNotes',
-        'role_access' => 'getRoleAccess',
+        'roleAccess' => 'getRoleAccess',
         'medications' => 'getMedications',
     ];
 
@@ -269,10 +269,10 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('role_access', $data ?? [], null);
+        $this->setIfExists('roleAccess', $data ?? [], null);
         $this->setIfExists('medications', $data ?? [], null);
     }
 
@@ -319,69 +319,69 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime|null
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime|null $date_as_of The date the condition began. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateAsOf The date the condition began. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            array_push($this->openAPINullablesSetToNull, 'date_as_of');
+        if (is_null($dateAsOf)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAsOf');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_as_of', $nullablesSetToNull);
+            $index = array_search('dateAsOf', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The date the condition ended. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $dateUntil The date the condition ended. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }
@@ -421,35 +421,35 @@ class StudentConditionUpdate implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets role_access
+     * Gets roleAccess
      *
      * @return \SKY\School\Model\MedicalSecurityRole[]|null
      */
     public function getRoleAccess()
     {
-        return $this->container['role_access'];
+        return $this->container['roleAccess'];
     }
 
     /**
-     * Sets role_access
+     * Sets roleAccess
      *
-     * @param \SKY\School\Model\MedicalSecurityRole[]|null $role_access Array of roles. If a role is not included, default access will be set to true
+     * @param \SKY\School\Model\MedicalSecurityRole[]|null $roleAccess Array of roles. If a role is not included, default access will be set to true
      *
      * @return self
      */
-    public function setRoleAccess($role_access)
+    public function setRoleAccess($roleAccess)
     {
-        if (is_null($role_access)) {
-            array_push($this->openAPINullablesSetToNull, 'role_access');
+        if (is_null($roleAccess)) {
+            array_push($this->openAPINullablesSetToNull, 'roleAccess');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('role_access', $nullablesSetToNull);
+            $index = array_search('roleAccess', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['role_access'] = $role_access;
+        $this->container['roleAccess'] = $roleAccess;
 
         return $this;
     }

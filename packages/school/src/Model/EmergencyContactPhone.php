@@ -59,19 +59,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'call_dialer' => 'string',
-        'contact_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'phone_id' => 'int',
-        'phone_index_id' => 'int',
-        'phone_number' => 'string',
-        'phone_type' => 'string',
+        'callDialer' => 'string',
+        'contactId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'phoneId' => 'int',
+        'phoneIndexId' => 'int',
+        'phoneNumber' => 'string',
+        'phoneType' => 'string',
         'relationship' => 'string',
-        'relationship_id' => 'int',
-        'relationship_user_id' => 'int',
-        'sort_order' => 'int',
-        'user_contact_id' => 'int',
+        'relationshipId' => 'int',
+        'relationshipUserId' => 'int',
+        'sortOrder' => 'int',
+        'userContactId' => 'int',
     ];
 
     /**
@@ -83,19 +83,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'call_dialer' => null,
-        'contact_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'phone_id' => 'int32',
-        'phone_index_id' => 'int32',
-        'phone_number' => null,
-        'phone_type' => null,
+        'callDialer' => null,
+        'contactId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
+        'phoneId' => 'int32',
+        'phoneIndexId' => 'int32',
+        'phoneNumber' => null,
+        'phoneType' => null,
         'relationship' => null,
-        'relationship_id' => 'int32',
-        'relationship_user_id' => 'int32',
-        'sort_order' => 'int32',
-        'user_contact_id' => 'int32',
+        'relationshipId' => 'int32',
+        'relationshipUserId' => 'int32',
+        'sortOrder' => 'int32',
+        'userContactId' => 'int32',
     ];
 
     /**
@@ -105,19 +105,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'call_dialer' => true,
-        'contact_id' => false,
-        'first_name' => true,
-        'last_name' => true,
-        'phone_id' => false,
-        'phone_index_id' => false,
-        'phone_number' => true,
-        'phone_type' => true,
+        'callDialer' => true,
+        'contactId' => false,
+        'firstName' => true,
+        'lastName' => true,
+        'phoneId' => false,
+        'phoneIndexId' => false,
+        'phoneNumber' => true,
+        'phoneType' => true,
         'relationship' => true,
-        'relationship_id' => false,
-        'relationship_user_id' => false,
-        'sort_order' => true,
-        'user_contact_id' => false,
+        'relationshipId' => false,
+        'relationshipUserId' => false,
+        'sortOrder' => true,
+        'userContactId' => false,
     ];
 
     /**
@@ -207,19 +207,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'call_dialer' => 'call_dialer',
-        'contact_id' => 'contact_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'phone_id' => 'phone_id',
-        'phone_index_id' => 'phone_index_id',
-        'phone_number' => 'phone_number',
-        'phone_type' => 'phone_type',
+        'callDialer' => 'call_dialer',
+        'contactId' => 'contact_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'phoneId' => 'phone_id',
+        'phoneIndexId' => 'phone_index_id',
+        'phoneNumber' => 'phone_number',
+        'phoneType' => 'phone_type',
         'relationship' => 'relationship',
-        'relationship_id' => 'relationship_id',
-        'relationship_user_id' => 'relationship_user_id',
-        'sort_order' => 'sort_order',
-        'user_contact_id' => 'user_contact_id',
+        'relationshipId' => 'relationship_id',
+        'relationshipUserId' => 'relationship_user_id',
+        'sortOrder' => 'sort_order',
+        'userContactId' => 'user_contact_id',
     ];
 
     /**
@@ -229,19 +229,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'id' => 'setId',
-        'call_dialer' => 'setCallDialer',
-        'contact_id' => 'setContactId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'phone_id' => 'setPhoneId',
-        'phone_index_id' => 'setPhoneIndexId',
-        'phone_number' => 'setPhoneNumber',
-        'phone_type' => 'setPhoneType',
+        'callDialer' => 'setCallDialer',
+        'contactId' => 'setContactId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'phoneId' => 'setPhoneId',
+        'phoneIndexId' => 'setPhoneIndexId',
+        'phoneNumber' => 'setPhoneNumber',
+        'phoneType' => 'setPhoneType',
         'relationship' => 'setRelationship',
-        'relationship_id' => 'setRelationshipId',
-        'relationship_user_id' => 'setRelationshipUserId',
-        'sort_order' => 'setSortOrder',
-        'user_contact_id' => 'setUserContactId',
+        'relationshipId' => 'setRelationshipId',
+        'relationshipUserId' => 'setRelationshipUserId',
+        'sortOrder' => 'setSortOrder',
+        'userContactId' => 'setUserContactId',
     ];
 
     /**
@@ -251,19 +251,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'id' => 'getId',
-        'call_dialer' => 'getCallDialer',
-        'contact_id' => 'getContactId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'phone_id' => 'getPhoneId',
-        'phone_index_id' => 'getPhoneIndexId',
-        'phone_number' => 'getPhoneNumber',
-        'phone_type' => 'getPhoneType',
+        'callDialer' => 'getCallDialer',
+        'contactId' => 'getContactId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'phoneId' => 'getPhoneId',
+        'phoneIndexId' => 'getPhoneIndexId',
+        'phoneNumber' => 'getPhoneNumber',
+        'phoneType' => 'getPhoneType',
         'relationship' => 'getRelationship',
-        'relationship_id' => 'getRelationshipId',
-        'relationship_user_id' => 'getRelationshipUserId',
-        'sort_order' => 'getSortOrder',
-        'user_contact_id' => 'getUserContactId',
+        'relationshipId' => 'getRelationshipId',
+        'relationshipUserId' => 'getRelationshipUserId',
+        'sortOrder' => 'getSortOrder',
+        'userContactId' => 'getUserContactId',
     ];
 
     /**
@@ -324,19 +324,19 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('call_dialer', $data ?? [], null);
-        $this->setIfExists('contact_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('phone_id', $data ?? [], null);
-        $this->setIfExists('phone_index_id', $data ?? [], null);
-        $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('phone_type', $data ?? [], null);
+        $this->setIfExists('callDialer', $data ?? [], null);
+        $this->setIfExists('contactId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('phoneId', $data ?? [], null);
+        $this->setIfExists('phoneIndexId', $data ?? [], null);
+        $this->setIfExists('phoneNumber', $data ?? [], null);
+        $this->setIfExists('phoneType', $data ?? [], null);
         $this->setIfExists('relationship', $data ?? [], null);
-        $this->setIfExists('relationship_id', $data ?? [], null);
-        $this->setIfExists('relationship_user_id', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
-        $this->setIfExists('user_contact_id', $data ?? [], null);
+        $this->setIfExists('relationshipId', $data ?? [], null);
+        $this->setIfExists('relationshipUserId', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
+        $this->setIfExists('userContactId', $data ?? [], null);
     }
 
     /**
@@ -409,252 +409,252 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets call_dialer
+     * Gets callDialer
      *
      * @return string|null
      */
     public function getCallDialer()
     {
-        return $this->container['call_dialer'];
+        return $this->container['callDialer'];
     }
 
     /**
-     * Sets call_dialer
+     * Sets callDialer
      *
-     * @param string|null $call_dialer Call dialer
+     * @param string|null $callDialer Call dialer
      *
      * @return self
      */
-    public function setCallDialer($call_dialer)
+    public function setCallDialer($callDialer)
     {
-        if (is_null($call_dialer)) {
-            array_push($this->openAPINullablesSetToNull, 'call_dialer');
+        if (is_null($callDialer)) {
+            array_push($this->openAPINullablesSetToNull, 'callDialer');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('call_dialer', $nullablesSetToNull);
+            $index = array_search('callDialer', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['call_dialer'] = $call_dialer;
+        $this->container['callDialer'] = $callDialer;
 
         return $this;
     }
 
     /**
-     * Gets contact_id
+     * Gets contactId
      *
      * @return int|null
      */
     public function getContactId()
     {
-        return $this->container['contact_id'];
+        return $this->container['contactId'];
     }
 
     /**
-     * Sets contact_id
+     * Sets contactId
      *
-     * @param int|null $contact_id Contact ID
+     * @param int|null $contactId Contact ID
      *
      * @return self
      */
-    public function setContactId($contact_id)
+    public function setContactId($contactId)
     {
-        if (is_null($contact_id)) {
-            throw new \InvalidArgumentException('non-nullable contact_id cannot be null');
+        if (is_null($contactId)) {
+            throw new \InvalidArgumentException('non-nullable contactId cannot be null');
         }
-        $this->container['contact_id'] = $contact_id;
+        $this->container['contactId'] = $contactId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the emergency contact
+     * @param string|null $firstName The first name of the emergency contact
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the emergency contact
+     * @param string|null $lastName The last name of the emergency contact
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets phone_id
+     * Gets phoneId
      *
      * @return int|null
      */
     public function getPhoneId()
     {
-        return $this->container['phone_id'];
+        return $this->container['phoneId'];
     }
 
     /**
-     * Sets phone_id
+     * Sets phoneId
      *
-     * @param int|null $phone_id Phone ID
+     * @param int|null $phoneId Phone ID
      *
      * @return self
      */
-    public function setPhoneId($phone_id)
+    public function setPhoneId($phoneId)
     {
-        if (is_null($phone_id)) {
-            throw new \InvalidArgumentException('non-nullable phone_id cannot be null');
+        if (is_null($phoneId)) {
+            throw new \InvalidArgumentException('non-nullable phoneId cannot be null');
         }
-        $this->container['phone_id'] = $phone_id;
+        $this->container['phoneId'] = $phoneId;
 
         return $this;
     }
 
     /**
-     * Gets phone_index_id
+     * Gets phoneIndexId
      *
      * @return int|null
      */
     public function getPhoneIndexId()
     {
-        return $this->container['phone_index_id'];
+        return $this->container['phoneIndexId'];
     }
 
     /**
-     * Sets phone_index_id
+     * Sets phoneIndexId
      *
-     * @param int|null $phone_index_id Phone index ID
+     * @param int|null $phoneIndexId Phone index ID
      *
      * @return self
      */
-    public function setPhoneIndexId($phone_index_id)
+    public function setPhoneIndexId($phoneIndexId)
     {
-        if (is_null($phone_index_id)) {
-            throw new \InvalidArgumentException('non-nullable phone_index_id cannot be null');
+        if (is_null($phoneIndexId)) {
+            throw new \InvalidArgumentException('non-nullable phoneIndexId cannot be null');
         }
-        $this->container['phone_index_id'] = $phone_index_id;
+        $this->container['phoneIndexId'] = $phoneIndexId;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
+     * Gets phoneNumber
      *
      * @return string|null
      */
     public function getPhoneNumber()
     {
-        return $this->container['phone_number'];
+        return $this->container['phoneNumber'];
     }
 
     /**
-     * Sets phone_number
+     * Sets phoneNumber
      *
-     * @param string|null $phone_number Phone number
+     * @param string|null $phoneNumber Phone number
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        if (is_null($phone_number)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_number');
+        if (is_null($phoneNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_number', $nullablesSetToNull);
+            $index = array_search('phoneNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Gets phone_type
+     * Gets phoneType
      *
      * @return string|null
      */
     public function getPhoneType()
     {
-        return $this->container['phone_type'];
+        return $this->container['phoneType'];
     }
 
     /**
-     * Sets phone_type
+     * Sets phoneType
      *
-     * @param string|null $phone_type Phone type
+     * @param string|null $phoneType Phone type
      *
      * @return self
      */
-    public function setPhoneType($phone_type)
+    public function setPhoneType($phoneType)
     {
-        if (is_null($phone_type)) {
-            array_push($this->openAPINullablesSetToNull, 'phone_type');
+        if (is_null($phoneType)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('phone_type', $nullablesSetToNull);
+            $index = array_search('phoneType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['phone_type'] = $phone_type;
+        $this->container['phoneType'] = $phoneType;
 
         return $this;
     }
@@ -694,116 +694,116 @@ class EmergencyContactPhone implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets relationship_id
+     * Gets relationshipId
      *
      * @return int|null
      */
     public function getRelationshipId()
     {
-        return $this->container['relationship_id'];
+        return $this->container['relationshipId'];
     }
 
     /**
-     * Sets relationship_id
+     * Sets relationshipId
      *
-     * @param int|null $relationship_id The relationship ID of the emergency contact to the user
+     * @param int|null $relationshipId The relationship ID of the emergency contact to the user
      *
      * @return self
      */
-    public function setRelationshipId($relationship_id)
+    public function setRelationshipId($relationshipId)
     {
-        if (is_null($relationship_id)) {
-            throw new \InvalidArgumentException('non-nullable relationship_id cannot be null');
+        if (is_null($relationshipId)) {
+            throw new \InvalidArgumentException('non-nullable relationshipId cannot be null');
         }
-        $this->container['relationship_id'] = $relationship_id;
+        $this->container['relationshipId'] = $relationshipId;
 
         return $this;
     }
 
     /**
-     * Gets relationship_user_id
+     * Gets relationshipUserId
      *
      * @return int|null
      */
     public function getRelationshipUserId()
     {
-        return $this->container['relationship_user_id'];
+        return $this->container['relationshipUserId'];
     }
 
     /**
-     * Sets relationship_user_id
+     * Sets relationshipUserId
      *
-     * @param int|null $relationship_user_id The user ID of the emergency contact
+     * @param int|null $relationshipUserId The user ID of the emergency contact
      *
      * @return self
      */
-    public function setRelationshipUserId($relationship_user_id)
+    public function setRelationshipUserId($relationshipUserId)
     {
-        if (is_null($relationship_user_id)) {
-            throw new \InvalidArgumentException('non-nullable relationship_user_id cannot be null');
+        if (is_null($relationshipUserId)) {
+            throw new \InvalidArgumentException('non-nullable relationshipUserId cannot be null');
         }
-        $this->container['relationship_user_id'] = $relationship_user_id;
+        $this->container['relationshipUserId'] = $relationshipUserId;
 
         return $this;
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order Sort order
+     * @param int|null $sortOrder Sort order
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }
 
     /**
-     * Gets user_contact_id
+     * Gets userContactId
      *
      * @return int|null
      */
     public function getUserContactId()
     {
-        return $this->container['user_contact_id'];
+        return $this->container['userContactId'];
     }
 
     /**
-     * Sets user_contact_id
+     * Sets userContactId
      *
-     * @param int|null $user_contact_id User contact ID
+     * @param int|null $userContactId User contact ID
      *
      * @return self
      */
-    public function setUserContactId($user_contact_id)
+    public function setUserContactId($userContactId)
     {
-        if (is_null($user_contact_id)) {
-            throw new \InvalidArgumentException('non-nullable user_contact_id cannot be null');
+        if (is_null($userContactId)) {
+            throw new \InvalidArgumentException('non-nullable userContactId cannot be null');
         }
-        $this->container['user_contact_id'] = $user_contact_id;
+        $this->container['userContactId'] = $userContactId;
 
         return $this;
     }

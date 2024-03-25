@@ -10,7 +10,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1DegreesStudentdegreesByStudentIdGet()`
 
 ```php
-v1DegreesStudentdegreesByStudentIdGet($student_id): \SKY\School\Model\UserDegreeOutputModelCollection
+v1DegreesStudentdegreesByStudentIdGet($studentId): \SKY\School\Model\UserDegreeOutputModelCollection
 ```
 
 Degrees student degrees by ID
@@ -41,10 +41,10 @@ $apiInstance = new SKY\School\Api\DegreeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32. user Id
+$studentId = 56; // int | Format - int32. user Id
 
 try {
-    $result = $apiInstance->v1DegreesStudentdegreesByStudentIdGet($student_id);
+    $result = $apiInstance->v1DegreesStudentdegreesByStudentIdGet($studentId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DegreeApi->v1DegreesStudentdegreesByStudentIdGet: ', $e->getMessage(), PHP_EOL;
@@ -55,7 +55,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_id** | **int**| Format - int32. user Id | |
+| **studentId** | **int**| Format - int32. user Id | |
 
 ### Return type
 

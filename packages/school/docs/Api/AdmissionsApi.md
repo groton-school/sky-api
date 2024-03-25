@@ -14,7 +14,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1AdmissionsCandidatesGet()`
 
 ```php
-v1AdmissionsCandidatesGet($school_year, $status_ids, $modified_date): \SKY\School\Model\CandidateReadCollection
+v1AdmissionsCandidatesGet($schoolYear, $statusIds, $modifiedDate): \SKY\School\Model\CandidateReadCollection
 ```
 
 Admissions candidates
@@ -45,12 +45,12 @@ $apiInstance = new SKY\School\Api\AdmissionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$school_year = 'school_year_example'; // string | The school year for which to return results.  Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>.  Default is current year.
-$status_ids = 'status_ids_example'; // string | One or more comma delimited status Id(s) to filter results on.  Corresponds to ```id``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\">Status list</a>.  Default is no status Id filter.
-$modified_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2003-04-21. Default is no modified date filter
+$schoolYear = 'schoolYear_example'; // string | The school year for which to return results.  Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>.  Default is current year.
+$statusIds = 'statusIds_example'; // string | One or more comma delimited status Id(s) to filter results on.  Corresponds to ```id``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\">Status list</a>.  Default is no status Id filter.
+$modifiedDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use <a href=\"https://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO-8601</a> date format: 2003-04-21. Default is no modified date filter
 
 try {
-    $result = $apiInstance->v1AdmissionsCandidatesGet($school_year, $status_ids, $modified_date);
+    $result = $apiInstance->v1AdmissionsCandidatesGet($schoolYear, $statusIds, $modifiedDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdmissionsApi->v1AdmissionsCandidatesGet: ', $e->getMessage(), PHP_EOL;
@@ -61,9 +61,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **school_year** | **string**| The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. | [optional] |
-| **status_ids** | **string**| One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. | [optional] |
-| **modified_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter | [optional] |
+| **schoolYear** | **string**| The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. | [optional] |
+| **statusIds** | **string**| One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. | [optional] |
+| **modifiedDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter | [optional] |
 
 ### Return type
 
@@ -85,7 +85,7 @@ try {
 ## `v1AdmissionsCandidatesPost()`
 
 ```php
-v1AdmissionsCandidatesPost($candidate_create): int
+v1AdmissionsCandidatesPost($candidateCreate): int
 ```
 
 Admissions candidate create
@@ -116,10 +116,10 @@ $apiInstance = new SKY\School\Api\AdmissionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$candidate_create = {"user_id":0,"entering_year":"string","entering_grade_id":0,"checklist_id":0}; // \SKY\School\Model\CandidateCreate | 
+$candidateCreate = {"user_id":0,"entering_year":"string","entering_grade_id":0,"checklist_id":0}; // \SKY\School\Model\CandidateCreate | 
 
 try {
-    $result = $apiInstance->v1AdmissionsCandidatesPost($candidate_create);
+    $result = $apiInstance->v1AdmissionsCandidatesPost($candidateCreate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdmissionsApi->v1AdmissionsCandidatesPost: ', $e->getMessage(), PHP_EOL;
@@ -130,7 +130,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **candidate_create** | [**\SKY\School\Model\CandidateCreate**](../Model/CandidateCreate.md)|  | [optional] |
+| **candidateCreate** | [**\SKY\School\Model\CandidateCreate**](../Model/CandidateCreate.md)|  | [optional] |
 
 ### Return type
 
@@ -152,7 +152,7 @@ try {
 ## `v1AdmissionsChecklistsGet()`
 
 ```php
-v1AdmissionsChecklistsGet($search_text, $inactive): \SKY\School\Model\AdmissionsCheckListCollection
+v1AdmissionsChecklistsGet($searchText, $inactive): \SKY\School\Model\AdmissionsCheckListCollection
 ```
 
 Admissions checklists
@@ -183,11 +183,11 @@ $apiInstance = new SKY\School\Api\AdmissionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$search_text = 'search_text_example'; // string | Applies a case-insensitive search against check lists \"name\".
+$searchText = 'searchText_example'; // string | Applies a case-insensitive search against check lists \"name\".
 $inactive = True; // bool | flag to return only inactive checklists (default is both).
 
 try {
-    $result = $apiInstance->v1AdmissionsChecklistsGet($search_text, $inactive);
+    $result = $apiInstance->v1AdmissionsChecklistsGet($searchText, $inactive);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdmissionsApi->v1AdmissionsChecklistsGet: ', $e->getMessage(), PHP_EOL;
@@ -198,7 +198,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **search_text** | **string**| Applies a case-insensitive search against check lists \&quot;name\&quot;. | [optional] |
+| **searchText** | **string**| Applies a case-insensitive search against check lists \&quot;name\&quot;. | [optional] |
 | **inactive** | **bool**| flag to return only inactive checklists (default is both). | [optional] |
 
 ### Return type

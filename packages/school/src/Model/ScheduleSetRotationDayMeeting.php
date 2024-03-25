@@ -57,11 +57,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'week_in_cycle' => 'int',
-        'day_in_cycle' => 'int',
-        'daily_ordinal' => 'int',
-        'block_id' => 'int',
-        'block_name' => 'string',
+        'weekInCycle' => 'int',
+        'dayInCycle' => 'int',
+        'dailyOrdinal' => 'int',
+        'blockId' => 'int',
+        'blockName' => 'string',
     ];
 
     /**
@@ -72,11 +72,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'week_in_cycle' => 'int32',
-        'day_in_cycle' => 'int32',
-        'daily_ordinal' => 'int32',
-        'block_id' => 'int32',
-        'block_name' => null,
+        'weekInCycle' => 'int32',
+        'dayInCycle' => 'int32',
+        'dailyOrdinal' => 'int32',
+        'blockId' => 'int32',
+        'blockName' => null,
     ];
 
     /**
@@ -85,11 +85,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'week_in_cycle' => true,
-        'day_in_cycle' => true,
-        'daily_ordinal' => true,
-        'block_id' => true,
-        'block_name' => true,
+        'weekInCycle' => true,
+        'dayInCycle' => true,
+        'dailyOrdinal' => true,
+        'blockId' => true,
+        'blockName' => true,
     ];
 
     /**
@@ -178,11 +178,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'week_in_cycle' => 'WeekInCycle',
-        'day_in_cycle' => 'DayInCycle',
-        'daily_ordinal' => 'DailyOrdinal',
-        'block_id' => 'BlockId',
-        'block_name' => 'BlockName',
+        'weekInCycle' => 'WeekInCycle',
+        'dayInCycle' => 'DayInCycle',
+        'dailyOrdinal' => 'DailyOrdinal',
+        'blockId' => 'BlockId',
+        'blockName' => 'BlockName',
     ];
 
     /**
@@ -191,11 +191,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'week_in_cycle' => 'setWeekInCycle',
-        'day_in_cycle' => 'setDayInCycle',
-        'daily_ordinal' => 'setDailyOrdinal',
-        'block_id' => 'setBlockId',
-        'block_name' => 'setBlockName',
+        'weekInCycle' => 'setWeekInCycle',
+        'dayInCycle' => 'setDayInCycle',
+        'dailyOrdinal' => 'setDailyOrdinal',
+        'blockId' => 'setBlockId',
+        'blockName' => 'setBlockName',
     ];
 
     /**
@@ -204,11 +204,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'week_in_cycle' => 'getWeekInCycle',
-        'day_in_cycle' => 'getDayInCycle',
-        'daily_ordinal' => 'getDailyOrdinal',
-        'block_id' => 'getBlockId',
-        'block_name' => 'getBlockName',
+        'weekInCycle' => 'getWeekInCycle',
+        'dayInCycle' => 'getDayInCycle',
+        'dailyOrdinal' => 'getDailyOrdinal',
+        'blockId' => 'getBlockId',
+        'blockName' => 'getBlockName',
     ];
 
     /**
@@ -268,11 +268,11 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('week_in_cycle', $data ?? [], null);
-        $this->setIfExists('day_in_cycle', $data ?? [], null);
-        $this->setIfExists('daily_ordinal', $data ?? [], null);
-        $this->setIfExists('block_id', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
+        $this->setIfExists('weekInCycle', $data ?? [], null);
+        $this->setIfExists('dayInCycle', $data ?? [], null);
+        $this->setIfExists('dailyOrdinal', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
     }
 
     /**
@@ -318,171 +318,171 @@ class ScheduleSetRotationDayMeeting implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets week_in_cycle
+     * Gets weekInCycle
      *
      * @return int|null
      */
     public function getWeekInCycle()
     {
-        return $this->container['week_in_cycle'];
+        return $this->container['weekInCycle'];
     }
 
     /**
-     * Sets week_in_cycle
+     * Sets weekInCycle
      *
-     * @param int|null $week_in_cycle week_in_cycle
+     * @param int|null $weekInCycle weekInCycle
      *
      * @return self
      */
-    public function setWeekInCycle($week_in_cycle)
+    public function setWeekInCycle($weekInCycle)
     {
-        if (is_null($week_in_cycle)) {
-            array_push($this->openAPINullablesSetToNull, 'week_in_cycle');
+        if (is_null($weekInCycle)) {
+            array_push($this->openAPINullablesSetToNull, 'weekInCycle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('week_in_cycle', $nullablesSetToNull);
+            $index = array_search('weekInCycle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['week_in_cycle'] = $week_in_cycle;
+        $this->container['weekInCycle'] = $weekInCycle;
 
         return $this;
     }
 
     /**
-     * Gets day_in_cycle
+     * Gets dayInCycle
      *
      * @return int|null
      */
     public function getDayInCycle()
     {
-        return $this->container['day_in_cycle'];
+        return $this->container['dayInCycle'];
     }
 
     /**
-     * Sets day_in_cycle
+     * Sets dayInCycle
      *
-     * @param int|null $day_in_cycle day_in_cycle
+     * @param int|null $dayInCycle dayInCycle
      *
      * @return self
      */
-    public function setDayInCycle($day_in_cycle)
+    public function setDayInCycle($dayInCycle)
     {
-        if (is_null($day_in_cycle)) {
-            array_push($this->openAPINullablesSetToNull, 'day_in_cycle');
+        if (is_null($dayInCycle)) {
+            array_push($this->openAPINullablesSetToNull, 'dayInCycle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('day_in_cycle', $nullablesSetToNull);
+            $index = array_search('dayInCycle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['day_in_cycle'] = $day_in_cycle;
+        $this->container['dayInCycle'] = $dayInCycle;
 
         return $this;
     }
 
     /**
-     * Gets daily_ordinal
+     * Gets dailyOrdinal
      *
      * @return int|null
      */
     public function getDailyOrdinal()
     {
-        return $this->container['daily_ordinal'];
+        return $this->container['dailyOrdinal'];
     }
 
     /**
-     * Sets daily_ordinal
+     * Sets dailyOrdinal
      *
-     * @param int|null $daily_ordinal daily_ordinal
+     * @param int|null $dailyOrdinal dailyOrdinal
      *
      * @return self
      */
-    public function setDailyOrdinal($daily_ordinal)
+    public function setDailyOrdinal($dailyOrdinal)
     {
-        if (is_null($daily_ordinal)) {
-            array_push($this->openAPINullablesSetToNull, 'daily_ordinal');
+        if (is_null($dailyOrdinal)) {
+            array_push($this->openAPINullablesSetToNull, 'dailyOrdinal');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('daily_ordinal', $nullablesSetToNull);
+            $index = array_search('dailyOrdinal', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['daily_ordinal'] = $daily_ordinal;
+        $this->container['dailyOrdinal'] = $dailyOrdinal;
 
         return $this;
     }
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id block_id
+     * @param int|null $blockId blockId
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_id');
+        if (is_null($blockId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_id', $nullablesSetToNull);
+            $index = array_search('blockId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name block_name
+     * @param string|null $blockName blockName
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }

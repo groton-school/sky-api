@@ -58,24 +58,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'field_id' => 'int',
-        'field_name' => 'string',
-        'table_id' => 'int',
-        'table_name' => 'string',
-        'data_type_id' => 'int',
-        'data_type' => 'string',
-        'location_index_id' => 'int',
+        'fieldId' => 'int',
+        'fieldName' => 'string',
+        'tableId' => 'int',
+        'tableName' => 'string',
+        'dataTypeId' => 'int',
+        'dataType' => 'string',
+        'locationIndexId' => 'int',
         'location' => 'string',
         'active' => 'bool',
         'unique' => 'bool',
         'required' => 'bool',
-        'in_use' => 'bool',
-        'usage_not_unique' => 'bool',
-        'location_id' => 'int',
-        'sub_location_id' => 'int',
-        'sub_location' => 'string',
-        'use_abbreviation' => 'bool',
-        'vendor_id' => 'int',
+        'inUse' => 'bool',
+        'usageNotUnique' => 'bool',
+        'locationId' => 'int',
+        'subLocationId' => 'int',
+        'subLocation' => 'string',
+        'useAbbreviation' => 'bool',
+        'vendorId' => 'int',
         'table' => '\SKY\School\Model\UserDefinedTable',
     ];
 
@@ -87,24 +87,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'field_id' => 'int32',
-        'field_name' => null,
-        'table_id' => 'int32',
-        'table_name' => null,
-        'data_type_id' => 'int32',
-        'data_type' => null,
-        'location_index_id' => 'int32',
+        'fieldId' => 'int32',
+        'fieldName' => null,
+        'tableId' => 'int32',
+        'tableName' => null,
+        'dataTypeId' => 'int32',
+        'dataType' => null,
+        'locationIndexId' => 'int32',
         'location' => null,
         'active' => null,
         'unique' => null,
         'required' => null,
-        'in_use' => null,
-        'usage_not_unique' => null,
-        'location_id' => 'int32',
-        'sub_location_id' => 'int32',
-        'sub_location' => null,
-        'use_abbreviation' => null,
-        'vendor_id' => 'int32',
+        'inUse' => null,
+        'usageNotUnique' => null,
+        'locationId' => 'int32',
+        'subLocationId' => 'int32',
+        'subLocation' => null,
+        'useAbbreviation' => null,
+        'vendorId' => 'int32',
         'table' => null,
     ];
 
@@ -114,24 +114,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'field_id' => true,
-        'field_name' => true,
-        'table_id' => true,
-        'table_name' => true,
-        'data_type_id' => true,
-        'data_type' => true,
-        'location_index_id' => true,
+        'fieldId' => true,
+        'fieldName' => true,
+        'tableId' => true,
+        'tableName' => true,
+        'dataTypeId' => true,
+        'dataType' => true,
+        'locationIndexId' => true,
         'location' => true,
         'active' => true,
         'unique' => true,
         'required' => true,
-        'in_use' => true,
-        'usage_not_unique' => true,
-        'location_id' => true,
-        'sub_location_id' => true,
-        'sub_location' => true,
-        'use_abbreviation' => true,
-        'vendor_id' => true,
+        'inUse' => true,
+        'usageNotUnique' => true,
+        'locationId' => true,
+        'subLocationId' => true,
+        'subLocation' => true,
+        'useAbbreviation' => true,
+        'vendorId' => true,
         'table' => false,
     ];
 
@@ -221,24 +221,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'field_id' => 'field_id',
-        'field_name' => 'field_name',
-        'table_id' => 'table_id',
-        'table_name' => 'table_name',
-        'data_type_id' => 'data_type_id',
-        'data_type' => 'data_type',
-        'location_index_id' => 'location_index_id',
+        'fieldId' => 'field_id',
+        'fieldName' => 'field_name',
+        'tableId' => 'table_id',
+        'tableName' => 'table_name',
+        'dataTypeId' => 'data_type_id',
+        'dataType' => 'data_type',
+        'locationIndexId' => 'location_index_id',
         'location' => 'location',
         'active' => 'active',
         'unique' => 'unique',
         'required' => 'required',
-        'in_use' => 'in_use',
-        'usage_not_unique' => 'usage_not_unique',
-        'location_id' => 'location_id',
-        'sub_location_id' => 'sub_location_id',
-        'sub_location' => 'sub_location',
-        'use_abbreviation' => 'use_abbreviation',
-        'vendor_id' => 'vendor_id',
+        'inUse' => 'in_use',
+        'usageNotUnique' => 'usage_not_unique',
+        'locationId' => 'location_id',
+        'subLocationId' => 'sub_location_id',
+        'subLocation' => 'sub_location',
+        'useAbbreviation' => 'use_abbreviation',
+        'vendorId' => 'vendor_id',
         'table' => 'table',
     ];
 
@@ -248,24 +248,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'field_id' => 'setFieldId',
-        'field_name' => 'setFieldName',
-        'table_id' => 'setTableId',
-        'table_name' => 'setTableName',
-        'data_type_id' => 'setDataTypeId',
-        'data_type' => 'setDataType',
-        'location_index_id' => 'setLocationIndexId',
+        'fieldId' => 'setFieldId',
+        'fieldName' => 'setFieldName',
+        'tableId' => 'setTableId',
+        'tableName' => 'setTableName',
+        'dataTypeId' => 'setDataTypeId',
+        'dataType' => 'setDataType',
+        'locationIndexId' => 'setLocationIndexId',
         'location' => 'setLocation',
         'active' => 'setActive',
         'unique' => 'setUnique',
         'required' => 'setRequired',
-        'in_use' => 'setInUse',
-        'usage_not_unique' => 'setUsageNotUnique',
-        'location_id' => 'setLocationId',
-        'sub_location_id' => 'setSubLocationId',
-        'sub_location' => 'setSubLocation',
-        'use_abbreviation' => 'setUseAbbreviation',
-        'vendor_id' => 'setVendorId',
+        'inUse' => 'setInUse',
+        'usageNotUnique' => 'setUsageNotUnique',
+        'locationId' => 'setLocationId',
+        'subLocationId' => 'setSubLocationId',
+        'subLocation' => 'setSubLocation',
+        'useAbbreviation' => 'setUseAbbreviation',
+        'vendorId' => 'setVendorId',
         'table' => 'setTable',
     ];
 
@@ -275,24 +275,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'field_id' => 'getFieldId',
-        'field_name' => 'getFieldName',
-        'table_id' => 'getTableId',
-        'table_name' => 'getTableName',
-        'data_type_id' => 'getDataTypeId',
-        'data_type' => 'getDataType',
-        'location_index_id' => 'getLocationIndexId',
+        'fieldId' => 'getFieldId',
+        'fieldName' => 'getFieldName',
+        'tableId' => 'getTableId',
+        'tableName' => 'getTableName',
+        'dataTypeId' => 'getDataTypeId',
+        'dataType' => 'getDataType',
+        'locationIndexId' => 'getLocationIndexId',
         'location' => 'getLocation',
         'active' => 'getActive',
         'unique' => 'getUnique',
         'required' => 'getRequired',
-        'in_use' => 'getInUse',
-        'usage_not_unique' => 'getUsageNotUnique',
-        'location_id' => 'getLocationId',
-        'sub_location_id' => 'getSubLocationId',
-        'sub_location' => 'getSubLocation',
-        'use_abbreviation' => 'getUseAbbreviation',
-        'vendor_id' => 'getVendorId',
+        'inUse' => 'getInUse',
+        'usageNotUnique' => 'getUsageNotUnique',
+        'locationId' => 'getLocationId',
+        'subLocationId' => 'getSubLocationId',
+        'subLocation' => 'getSubLocation',
+        'useAbbreviation' => 'getUseAbbreviation',
+        'vendorId' => 'getVendorId',
         'table' => 'getTable',
     ];
 
@@ -353,24 +353,24 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('field_id', $data ?? [], null);
-        $this->setIfExists('field_name', $data ?? [], null);
-        $this->setIfExists('table_id', $data ?? [], null);
-        $this->setIfExists('table_name', $data ?? [], null);
-        $this->setIfExists('data_type_id', $data ?? [], null);
-        $this->setIfExists('data_type', $data ?? [], null);
-        $this->setIfExists('location_index_id', $data ?? [], null);
+        $this->setIfExists('fieldId', $data ?? [], null);
+        $this->setIfExists('fieldName', $data ?? [], null);
+        $this->setIfExists('tableId', $data ?? [], null);
+        $this->setIfExists('tableName', $data ?? [], null);
+        $this->setIfExists('dataTypeId', $data ?? [], null);
+        $this->setIfExists('dataType', $data ?? [], null);
+        $this->setIfExists('locationIndexId', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
         $this->setIfExists('active', $data ?? [], null);
         $this->setIfExists('unique', $data ?? [], null);
         $this->setIfExists('required', $data ?? [], null);
-        $this->setIfExists('in_use', $data ?? [], null);
-        $this->setIfExists('usage_not_unique', $data ?? [], null);
-        $this->setIfExists('location_id', $data ?? [], null);
-        $this->setIfExists('sub_location_id', $data ?? [], null);
-        $this->setIfExists('sub_location', $data ?? [], null);
-        $this->setIfExists('use_abbreviation', $data ?? [], null);
-        $this->setIfExists('vendor_id', $data ?? [], null);
+        $this->setIfExists('inUse', $data ?? [], null);
+        $this->setIfExists('usageNotUnique', $data ?? [], null);
+        $this->setIfExists('locationId', $data ?? [], null);
+        $this->setIfExists('subLocationId', $data ?? [], null);
+        $this->setIfExists('subLocation', $data ?? [], null);
+        $this->setIfExists('useAbbreviation', $data ?? [], null);
+        $this->setIfExists('vendorId', $data ?? [], null);
         $this->setIfExists('table', $data ?? [], null);
     }
 
@@ -417,239 +417,239 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets field_id
+     * Gets fieldId
      *
      * @return int|null
      */
     public function getFieldId()
     {
-        return $this->container['field_id'];
+        return $this->container['fieldId'];
     }
 
     /**
-     * Sets field_id
+     * Sets fieldId
      *
-     * @param int|null $field_id
+     * @param int|null $fieldId
      *
      * @return self
      */
-    public function setFieldId($field_id)
+    public function setFieldId($fieldId)
     {
-        if (is_null($field_id)) {
-            array_push($this->openAPINullablesSetToNull, 'field_id');
+        if (is_null($fieldId)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('field_id', $nullablesSetToNull);
+            $index = array_search('fieldId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['field_id'] = $field_id;
+        $this->container['fieldId'] = $fieldId;
 
         return $this;
     }
 
     /**
-     * Gets field_name
+     * Gets fieldName
      *
      * @return string|null
      */
     public function getFieldName()
     {
-        return $this->container['field_name'];
+        return $this->container['fieldName'];
     }
 
     /**
-     * Sets field_name
+     * Sets fieldName
      *
-     * @param string|null $field_name
+     * @param string|null $fieldName
      *
      * @return self
      */
-    public function setFieldName($field_name)
+    public function setFieldName($fieldName)
     {
-        if (is_null($field_name)) {
-            array_push($this->openAPINullablesSetToNull, 'field_name');
+        if (is_null($fieldName)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('field_name', $nullablesSetToNull);
+            $index = array_search('fieldName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['field_name'] = $field_name;
+        $this->container['fieldName'] = $fieldName;
 
         return $this;
     }
 
     /**
-     * Gets table_id
+     * Gets tableId
      *
      * @return int|null
      */
     public function getTableId()
     {
-        return $this->container['table_id'];
+        return $this->container['tableId'];
     }
 
     /**
-     * Sets table_id
+     * Sets tableId
      *
-     * @param int|null $table_id
+     * @param int|null $tableId
      *
      * @return self
      */
-    public function setTableId($table_id)
+    public function setTableId($tableId)
     {
-        if (is_null($table_id)) {
-            array_push($this->openAPINullablesSetToNull, 'table_id');
+        if (is_null($tableId)) {
+            array_push($this->openAPINullablesSetToNull, 'tableId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_id', $nullablesSetToNull);
+            $index = array_search('tableId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_id'] = $table_id;
+        $this->container['tableId'] = $tableId;
 
         return $this;
     }
 
     /**
-     * Gets table_name
+     * Gets tableName
      *
      * @return string|null
      */
     public function getTableName()
     {
-        return $this->container['table_name'];
+        return $this->container['tableName'];
     }
 
     /**
-     * Sets table_name
+     * Sets tableName
      *
-     * @param string|null $table_name
+     * @param string|null $tableName
      *
      * @return self
      */
-    public function setTableName($table_name)
+    public function setTableName($tableName)
     {
-        if (is_null($table_name)) {
-            array_push($this->openAPINullablesSetToNull, 'table_name');
+        if (is_null($tableName)) {
+            array_push($this->openAPINullablesSetToNull, 'tableName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_name', $nullablesSetToNull);
+            $index = array_search('tableName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_name'] = $table_name;
+        $this->container['tableName'] = $tableName;
 
         return $this;
     }
 
     /**
-     * Gets data_type_id
+     * Gets dataTypeId
      *
      * @return int|null
      */
     public function getDataTypeId()
     {
-        return $this->container['data_type_id'];
+        return $this->container['dataTypeId'];
     }
 
     /**
-     * Sets data_type_id
+     * Sets dataTypeId
      *
-     * @param int|null $data_type_id
+     * @param int|null $dataTypeId
      *
      * @return self
      */
-    public function setDataTypeId($data_type_id)
+    public function setDataTypeId($dataTypeId)
     {
-        if (is_null($data_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'data_type_id');
+        if (is_null($dataTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'dataTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data_type_id', $nullablesSetToNull);
+            $index = array_search('dataTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['data_type_id'] = $data_type_id;
+        $this->container['dataTypeId'] = $dataTypeId;
 
         return $this;
     }
 
     /**
-     * Gets data_type
+     * Gets dataType
      *
      * @return string|null
      */
     public function getDataType()
     {
-        return $this->container['data_type'];
+        return $this->container['dataType'];
     }
 
     /**
-     * Sets data_type
+     * Sets dataType
      *
-     * @param string|null $data_type
+     * @param string|null $dataType
      *
      * @return self
      */
-    public function setDataType($data_type)
+    public function setDataType($dataType)
     {
-        if (is_null($data_type)) {
-            array_push($this->openAPINullablesSetToNull, 'data_type');
+        if (is_null($dataType)) {
+            array_push($this->openAPINullablesSetToNull, 'dataType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data_type', $nullablesSetToNull);
+            $index = array_search('dataType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['data_type'] = $data_type;
+        $this->container['dataType'] = $dataType;
 
         return $this;
     }
 
     /**
-     * Gets location_index_id
+     * Gets locationIndexId
      *
      * @return int|null
      */
     public function getLocationIndexId()
     {
-        return $this->container['location_index_id'];
+        return $this->container['locationIndexId'];
     }
 
     /**
-     * Sets location_index_id
+     * Sets locationIndexId
      *
-     * @param int|null $location_index_id
+     * @param int|null $locationIndexId
      *
      * @return self
      */
-    public function setLocationIndexId($location_index_id)
+    public function setLocationIndexId($locationIndexId)
     {
-        if (is_null($location_index_id)) {
-            array_push($this->openAPINullablesSetToNull, 'location_index_id');
+        if (is_null($locationIndexId)) {
+            array_push($this->openAPINullablesSetToNull, 'locationIndexId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('location_index_id', $nullablesSetToNull);
+            $index = array_search('locationIndexId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['location_index_id'] = $location_index_id;
+        $this->container['locationIndexId'] = $locationIndexId;
 
         return $this;
     }
@@ -791,239 +791,239 @@ class AdminCustomFields implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets in_use
+     * Gets inUse
      *
      * @return bool|null
      */
     public function getInUse()
     {
-        return $this->container['in_use'];
+        return $this->container['inUse'];
     }
 
     /**
-     * Sets in_use
+     * Sets inUse
      *
-     * @param bool|null $in_use
+     * @param bool|null $inUse
      *
      * @return self
      */
-    public function setInUse($in_use)
+    public function setInUse($inUse)
     {
-        if (is_null($in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'in_use');
+        if (is_null($inUse)) {
+            array_push($this->openAPINullablesSetToNull, 'inUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('in_use', $nullablesSetToNull);
+            $index = array_search('inUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['in_use'] = $in_use;
+        $this->container['inUse'] = $inUse;
 
         return $this;
     }
 
     /**
-     * Gets usage_not_unique
+     * Gets usageNotUnique
      *
      * @return bool|null
      */
     public function getUsageNotUnique()
     {
-        return $this->container['usage_not_unique'];
+        return $this->container['usageNotUnique'];
     }
 
     /**
-     * Sets usage_not_unique
+     * Sets usageNotUnique
      *
-     * @param bool|null $usage_not_unique
+     * @param bool|null $usageNotUnique
      *
      * @return self
      */
-    public function setUsageNotUnique($usage_not_unique)
+    public function setUsageNotUnique($usageNotUnique)
     {
-        if (is_null($usage_not_unique)) {
-            array_push($this->openAPINullablesSetToNull, 'usage_not_unique');
+        if (is_null($usageNotUnique)) {
+            array_push($this->openAPINullablesSetToNull, 'usageNotUnique');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('usage_not_unique', $nullablesSetToNull);
+            $index = array_search('usageNotUnique', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['usage_not_unique'] = $usage_not_unique;
+        $this->container['usageNotUnique'] = $usageNotUnique;
 
         return $this;
     }
 
     /**
-     * Gets location_id
+     * Gets locationId
      *
      * @return int|null
      */
     public function getLocationId()
     {
-        return $this->container['location_id'];
+        return $this->container['locationId'];
     }
 
     /**
-     * Sets location_id
+     * Sets locationId
      *
-     * @param int|null $location_id
+     * @param int|null $locationId
      *
      * @return self
      */
-    public function setLocationId($location_id)
+    public function setLocationId($locationId)
     {
-        if (is_null($location_id)) {
-            array_push($this->openAPINullablesSetToNull, 'location_id');
+        if (is_null($locationId)) {
+            array_push($this->openAPINullablesSetToNull, 'locationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('location_id', $nullablesSetToNull);
+            $index = array_search('locationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['location_id'] = $location_id;
+        $this->container['locationId'] = $locationId;
 
         return $this;
     }
 
     /**
-     * Gets sub_location_id
+     * Gets subLocationId
      *
      * @return int|null
      */
     public function getSubLocationId()
     {
-        return $this->container['sub_location_id'];
+        return $this->container['subLocationId'];
     }
 
     /**
-     * Sets sub_location_id
+     * Sets subLocationId
      *
-     * @param int|null $sub_location_id
+     * @param int|null $subLocationId
      *
      * @return self
      */
-    public function setSubLocationId($sub_location_id)
+    public function setSubLocationId($subLocationId)
     {
-        if (is_null($sub_location_id)) {
-            array_push($this->openAPINullablesSetToNull, 'sub_location_id');
+        if (is_null($subLocationId)) {
+            array_push($this->openAPINullablesSetToNull, 'subLocationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sub_location_id', $nullablesSetToNull);
+            $index = array_search('subLocationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sub_location_id'] = $sub_location_id;
+        $this->container['subLocationId'] = $subLocationId;
 
         return $this;
     }
 
     /**
-     * Gets sub_location
+     * Gets subLocation
      *
      * @return string|null
      */
     public function getSubLocation()
     {
-        return $this->container['sub_location'];
+        return $this->container['subLocation'];
     }
 
     /**
-     * Sets sub_location
+     * Sets subLocation
      *
-     * @param string|null $sub_location
+     * @param string|null $subLocation
      *
      * @return self
      */
-    public function setSubLocation($sub_location)
+    public function setSubLocation($subLocation)
     {
-        if (is_null($sub_location)) {
-            array_push($this->openAPINullablesSetToNull, 'sub_location');
+        if (is_null($subLocation)) {
+            array_push($this->openAPINullablesSetToNull, 'subLocation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sub_location', $nullablesSetToNull);
+            $index = array_search('subLocation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sub_location'] = $sub_location;
+        $this->container['subLocation'] = $subLocation;
 
         return $this;
     }
 
     /**
-     * Gets use_abbreviation
+     * Gets useAbbreviation
      *
      * @return bool|null
      */
     public function getUseAbbreviation()
     {
-        return $this->container['use_abbreviation'];
+        return $this->container['useAbbreviation'];
     }
 
     /**
-     * Sets use_abbreviation
+     * Sets useAbbreviation
      *
-     * @param bool|null $use_abbreviation
+     * @param bool|null $useAbbreviation
      *
      * @return self
      */
-    public function setUseAbbreviation($use_abbreviation)
+    public function setUseAbbreviation($useAbbreviation)
     {
-        if (is_null($use_abbreviation)) {
-            array_push($this->openAPINullablesSetToNull, 'use_abbreviation');
+        if (is_null($useAbbreviation)) {
+            array_push($this->openAPINullablesSetToNull, 'useAbbreviation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('use_abbreviation', $nullablesSetToNull);
+            $index = array_search('useAbbreviation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['use_abbreviation'] = $use_abbreviation;
+        $this->container['useAbbreviation'] = $useAbbreviation;
 
         return $this;
     }
 
     /**
-     * Gets vendor_id
+     * Gets vendorId
      *
      * @return int|null
      */
     public function getVendorId()
     {
-        return $this->container['vendor_id'];
+        return $this->container['vendorId'];
     }
 
     /**
-     * Sets vendor_id
+     * Sets vendorId
      *
-     * @param int|null $vendor_id
+     * @param int|null $vendorId
      *
      * @return self
      */
-    public function setVendorId($vendor_id)
+    public function setVendorId($vendorId)
     {
-        if (is_null($vendor_id)) {
-            array_push($this->openAPINullablesSetToNull, 'vendor_id');
+        if (is_null($vendorId)) {
+            array_push($this->openAPINullablesSetToNull, 'vendorId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('vendor_id', $nullablesSetToNull);
+            $index = array_search('vendorId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['vendor_id'] = $vendor_id;
+        $this->container['vendorId'] = $vendorId;
 
         return $this;
     }

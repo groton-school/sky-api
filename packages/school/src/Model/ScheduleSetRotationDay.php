@@ -57,10 +57,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'week_in_cycle' => 'int',
-        'day_in_cycle' => 'int',
-        'day_label' => 'string',
-        'rotaion_day_meeting_list' => '\SKY\School\Model\ScheduleSetRotationDayMeeting[]',
+        'weekInCycle' => 'int',
+        'dayInCycle' => 'int',
+        'dayLabel' => 'string',
+        'rotaionDayMeetingList' => '\SKY\School\Model\ScheduleSetRotationDayMeeting[]',
     ];
 
     /**
@@ -71,10 +71,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'week_in_cycle' => 'int32',
-        'day_in_cycle' => 'int32',
-        'day_label' => null,
-        'rotaion_day_meeting_list' => null,
+        'weekInCycle' => 'int32',
+        'dayInCycle' => 'int32',
+        'dayLabel' => null,
+        'rotaionDayMeetingList' => null,
     ];
 
     /**
@@ -83,10 +83,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'week_in_cycle' => true,
-        'day_in_cycle' => true,
-        'day_label' => true,
-        'rotaion_day_meeting_list' => true,
+        'weekInCycle' => true,
+        'dayInCycle' => true,
+        'dayLabel' => true,
+        'rotaionDayMeetingList' => true,
     ];
 
     /**
@@ -175,10 +175,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'week_in_cycle' => 'WeekInCycle',
-        'day_in_cycle' => 'DayInCycle',
-        'day_label' => 'DayLabel',
-        'rotaion_day_meeting_list' => 'RotaionDayMeetingList',
+        'weekInCycle' => 'WeekInCycle',
+        'dayInCycle' => 'DayInCycle',
+        'dayLabel' => 'DayLabel',
+        'rotaionDayMeetingList' => 'RotaionDayMeetingList',
     ];
 
     /**
@@ -187,10 +187,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'week_in_cycle' => 'setWeekInCycle',
-        'day_in_cycle' => 'setDayInCycle',
-        'day_label' => 'setDayLabel',
-        'rotaion_day_meeting_list' => 'setRotaionDayMeetingList',
+        'weekInCycle' => 'setWeekInCycle',
+        'dayInCycle' => 'setDayInCycle',
+        'dayLabel' => 'setDayLabel',
+        'rotaionDayMeetingList' => 'setRotaionDayMeetingList',
     ];
 
     /**
@@ -199,10 +199,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'week_in_cycle' => 'getWeekInCycle',
-        'day_in_cycle' => 'getDayInCycle',
-        'day_label' => 'getDayLabel',
-        'rotaion_day_meeting_list' => 'getRotaionDayMeetingList',
+        'weekInCycle' => 'getWeekInCycle',
+        'dayInCycle' => 'getDayInCycle',
+        'dayLabel' => 'getDayLabel',
+        'rotaionDayMeetingList' => 'getRotaionDayMeetingList',
     ];
 
     /**
@@ -262,10 +262,10 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('week_in_cycle', $data ?? [], null);
-        $this->setIfExists('day_in_cycle', $data ?? [], null);
-        $this->setIfExists('day_label', $data ?? [], null);
-        $this->setIfExists('rotaion_day_meeting_list', $data ?? [], null);
+        $this->setIfExists('weekInCycle', $data ?? [], null);
+        $this->setIfExists('dayInCycle', $data ?? [], null);
+        $this->setIfExists('dayLabel', $data ?? [], null);
+        $this->setIfExists('rotaionDayMeetingList', $data ?? [], null);
     }
 
     /**
@@ -311,137 +311,137 @@ class ScheduleSetRotationDay implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets week_in_cycle
+     * Gets weekInCycle
      *
      * @return int|null
      */
     public function getWeekInCycle()
     {
-        return $this->container['week_in_cycle'];
+        return $this->container['weekInCycle'];
     }
 
     /**
-     * Sets week_in_cycle
+     * Sets weekInCycle
      *
-     * @param int|null $week_in_cycle week_in_cycle
+     * @param int|null $weekInCycle weekInCycle
      *
      * @return self
      */
-    public function setWeekInCycle($week_in_cycle)
+    public function setWeekInCycle($weekInCycle)
     {
-        if (is_null($week_in_cycle)) {
-            array_push($this->openAPINullablesSetToNull, 'week_in_cycle');
+        if (is_null($weekInCycle)) {
+            array_push($this->openAPINullablesSetToNull, 'weekInCycle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('week_in_cycle', $nullablesSetToNull);
+            $index = array_search('weekInCycle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['week_in_cycle'] = $week_in_cycle;
+        $this->container['weekInCycle'] = $weekInCycle;
 
         return $this;
     }
 
     /**
-     * Gets day_in_cycle
+     * Gets dayInCycle
      *
      * @return int|null
      */
     public function getDayInCycle()
     {
-        return $this->container['day_in_cycle'];
+        return $this->container['dayInCycle'];
     }
 
     /**
-     * Sets day_in_cycle
+     * Sets dayInCycle
      *
-     * @param int|null $day_in_cycle day_in_cycle
+     * @param int|null $dayInCycle dayInCycle
      *
      * @return self
      */
-    public function setDayInCycle($day_in_cycle)
+    public function setDayInCycle($dayInCycle)
     {
-        if (is_null($day_in_cycle)) {
-            array_push($this->openAPINullablesSetToNull, 'day_in_cycle');
+        if (is_null($dayInCycle)) {
+            array_push($this->openAPINullablesSetToNull, 'dayInCycle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('day_in_cycle', $nullablesSetToNull);
+            $index = array_search('dayInCycle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['day_in_cycle'] = $day_in_cycle;
+        $this->container['dayInCycle'] = $dayInCycle;
 
         return $this;
     }
 
     /**
-     * Gets day_label
+     * Gets dayLabel
      *
      * @return string|null
      */
     public function getDayLabel()
     {
-        return $this->container['day_label'];
+        return $this->container['dayLabel'];
     }
 
     /**
-     * Sets day_label
+     * Sets dayLabel
      *
-     * @param string|null $day_label day_label
+     * @param string|null $dayLabel dayLabel
      *
      * @return self
      */
-    public function setDayLabel($day_label)
+    public function setDayLabel($dayLabel)
     {
-        if (is_null($day_label)) {
-            array_push($this->openAPINullablesSetToNull, 'day_label');
+        if (is_null($dayLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'dayLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('day_label', $nullablesSetToNull);
+            $index = array_search('dayLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['day_label'] = $day_label;
+        $this->container['dayLabel'] = $dayLabel;
 
         return $this;
     }
 
     /**
-     * Gets rotaion_day_meeting_list
+     * Gets rotaionDayMeetingList
      *
      * @return \SKY\School\Model\ScheduleSetRotationDayMeeting[]|null
      */
     public function getRotaionDayMeetingList()
     {
-        return $this->container['rotaion_day_meeting_list'];
+        return $this->container['rotaionDayMeetingList'];
     }
 
     /**
-     * Sets rotaion_day_meeting_list
+     * Sets rotaionDayMeetingList
      *
-     * @param \SKY\School\Model\ScheduleSetRotationDayMeeting[]|null $rotaion_day_meeting_list rotaion_day_meeting_list
+     * @param \SKY\School\Model\ScheduleSetRotationDayMeeting[]|null $rotaionDayMeetingList rotaionDayMeetingList
      *
      * @return self
      */
-    public function setRotaionDayMeetingList($rotaion_day_meeting_list)
+    public function setRotaionDayMeetingList($rotaionDayMeetingList)
     {
-        if (is_null($rotaion_day_meeting_list)) {
-            array_push($this->openAPINullablesSetToNull, 'rotaion_day_meeting_list');
+        if (is_null($rotaionDayMeetingList)) {
+            array_push($this->openAPINullablesSetToNull, 'rotaionDayMeetingList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rotaion_day_meeting_list', $nullablesSetToNull);
+            $index = array_search('rotaionDayMeetingList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rotaion_day_meeting_list'] = $rotaion_day_meeting_list;
+        $this->container['rotaionDayMeetingList'] = $rotaionDayMeetingList;
 
         return $this;
     }

@@ -1,0 +1,7 @@
+{
+  "!include": "../base.json",
+  "inputSpec": "var/2022-04-01_preview/Altru/alt-anamg.json",
+  "outputDir": "packages/altru-analysis",
+  "gitRepoId": "sky-api.altru-analysis",
+  "invokerPackage": "SKY\\Altru\\Analysis"
+}

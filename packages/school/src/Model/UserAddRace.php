@@ -58,7 +58,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'race_type' => 'string',
+        'raceType' => 'string',
     ];
 
     /**
@@ -69,7 +69,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'race_type' => null,
+        'raceType' => null,
     ];
 
     /**
@@ -78,7 +78,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'race_type' => true,
+        'raceType' => true,
     ];
 
     /**
@@ -167,7 +167,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'race_type' => 'race_type',
+        'raceType' => 'race_type',
     ];
 
     /**
@@ -176,7 +176,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'race_type' => 'setRaceType',
+        'raceType' => 'setRaceType',
     ];
 
     /**
@@ -185,7 +185,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'race_type' => 'getRaceType',
+        'raceType' => 'getRaceType',
     ];
 
     /**
@@ -245,7 +245,7 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('race_type', $data ?? [], null);
+        $this->setIfExists('raceType', $data ?? [], null);
     }
 
     /**
@@ -291,35 +291,35 @@ class UserAddRace implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets race_type
+     * Gets raceType
      *
      * @return string|null
      */
     public function getRaceType()
     {
-        return $this->container['race_type'];
+        return $this->container['raceType'];
     }
 
     /**
-     * Sets race_type
+     * Sets raceType
      *
-     * @param string|null $race_type The ID or description of the race to be added to the user
+     * @param string|null $raceType The ID or description of the race to be added to the user
      *
      * @return self
      */
-    public function setRaceType($race_type)
+    public function setRaceType($raceType)
     {
-        if (is_null($race_type)) {
-            array_push($this->openAPINullablesSetToNull, 'race_type');
+        if (is_null($raceType)) {
+            array_push($this->openAPINullablesSetToNull, 'raceType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('race_type', $nullablesSetToNull);
+            $index = array_search('raceType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['race_type'] = $race_type;
+        $this->container['raceType'] = $raceType;
 
         return $this;
     }

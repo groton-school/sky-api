@@ -58,10 +58,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'school_year' => 'string',
+        'userId' => 'int',
+        'schoolYear' => 'string',
         'season' => 'string',
-        'athletics_requirement' => '\SKY\School\Model\StudentAthleticRequirement[]',
+        'athleticsRequirement' => '\SKY\School\Model\StudentAthleticRequirement[]',
     ];
 
     /**
@@ -72,10 +72,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'school_year' => null,
+        'userId' => 'int32',
+        'schoolYear' => null,
         'season' => null,
-        'athletics_requirement' => null,
+        'athleticsRequirement' => null,
     ];
 
     /**
@@ -84,10 +84,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
-        'school_year' => true,
+        'userId' => false,
+        'schoolYear' => true,
         'season' => false,
-        'athletics_requirement' => false,
+        'athleticsRequirement' => false,
     ];
 
     /**
@@ -176,10 +176,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'school_year' => 'school_year',
+        'userId' => 'user_id',
+        'schoolYear' => 'school_year',
         'season' => 'season',
-        'athletics_requirement' => 'athletics_requirement',
+        'athleticsRequirement' => 'athletics_requirement',
     ];
 
     /**
@@ -188,10 +188,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'school_year' => 'setSchoolYear',
+        'userId' => 'setUserId',
+        'schoolYear' => 'setSchoolYear',
         'season' => 'setSeason',
-        'athletics_requirement' => 'setAthleticsRequirement',
+        'athleticsRequirement' => 'setAthleticsRequirement',
     ];
 
     /**
@@ -200,10 +200,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'school_year' => 'getSchoolYear',
+        'userId' => 'getUserId',
+        'schoolYear' => 'getSchoolYear',
         'season' => 'getSeason',
-        'athletics_requirement' => 'getAthleticsRequirement',
+        'athleticsRequirement' => 'getAthleticsRequirement',
     ];
 
     /**
@@ -263,10 +263,10 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('school_year', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('schoolYear', $data ?? [], null);
         $this->setIfExists('season', $data ?? [], null);
-        $this->setIfExists('athletics_requirement', $data ?? [], null);
+        $this->setIfExists('athleticsRequirement', $data ?? [], null);
     }
 
     /**
@@ -296,14 +296,14 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['user_id'] === null) {
-            $invalidProperties[] = "'user_id' can't be null";
+        if ($this->container['userId'] === null) {
+            $invalidProperties[] = "'userId' can't be null";
         }
         if ($this->container['season'] === null) {
             $invalidProperties[] = "'season' can't be null";
         }
-        if ($this->container['athletics_requirement'] === null) {
-            $invalidProperties[] = "'athletics_requirement' can't be null";
+        if ($this->container['athleticsRequirement'] === null) {
+            $invalidProperties[] = "'athleticsRequirement' can't be null";
         }
         return $invalidProperties;
     }
@@ -321,62 +321,62 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int $user_id The user ID of the student.
+     * @param int $userId The user ID of the student.
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets school_year
+     * Gets schoolYear
      *
      * @return string|null
      */
     public function getSchoolYear()
     {
-        return $this->container['school_year'];
+        return $this->container['schoolYear'];
     }
 
     /**
-     * Sets school_year
+     * Sets schoolYear
      *
-     * @param string|null $school_year The ID or label of the school year. Defaults to current school year.
+     * @param string|null $schoolYear The ID or label of the school year. Defaults to current school year.
      *
      * @return self
      */
-    public function setSchoolYear($school_year)
+    public function setSchoolYear($schoolYear)
     {
-        if (is_null($school_year)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year');
+        if (is_null($schoolYear)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year', $nullablesSetToNull);
+            $index = array_search('schoolYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year'] = $school_year;
+        $this->container['schoolYear'] = $schoolYear;
 
         return $this;
     }
@@ -409,28 +409,28 @@ class StudentAthleticRequirementUpdate implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets athletics_requirement
+     * Gets athleticsRequirement
      *
      * @return \SKY\School\Model\StudentAthleticRequirement[]
      */
     public function getAthleticsRequirement()
     {
-        return $this->container['athletics_requirement'];
+        return $this->container['athleticsRequirement'];
     }
 
     /**
-     * Sets athletics_requirement
+     * Sets athleticsRequirement
      *
-     * @param \SKY\School\Model\StudentAthleticRequirement[] $athletics_requirement An array of athletic requirement objects
+     * @param \SKY\School\Model\StudentAthleticRequirement[] $athleticsRequirement An array of athletic requirement objects
      *
      * @return self
      */
-    public function setAthleticsRequirement($athletics_requirement)
+    public function setAthleticsRequirement($athleticsRequirement)
     {
-        if (is_null($athletics_requirement)) {
-            throw new \InvalidArgumentException('non-nullable athletics_requirement cannot be null');
+        if (is_null($athleticsRequirement)) {
+            throw new \InvalidArgumentException('non-nullable athleticsRequirement cannot be null');
         }
-        $this->container['athletics_requirement'] = $athletics_requirement;
+        $this->container['athleticsRequirement'] = $athleticsRequirement;
 
         return $this;
     }

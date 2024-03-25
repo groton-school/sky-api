@@ -26,7 +26,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1AcademicsByStudentIdAssignmentsGet()`
 
 ```php
-v1AcademicsByStudentIdAssignmentsGet($student_id, $start_date, $end_date, $section_ids): \SKY\School\Model\StudentAssignmentCollection
+v1AcademicsByStudentIdAssignmentsGet($studentId, $startDate, $endDate, $sectionIds): \SKY\School\Model\StudentAssignmentCollection
 ```
 
 Academics assignments for student
@@ -57,13 +57,13 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32.
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$section_ids = 'section_ids_example'; // string | 
+$studentId = 56; // int | Format - int32.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$sectionIds = 'sectionIds_example'; // string | 
 
 try {
-    $result = $apiInstance->v1AcademicsByStudentIdAssignmentsGet($student_id, $start_date, $end_date, $section_ids);
+    $result = $apiInstance->v1AcademicsByStudentIdAssignmentsGet($studentId, $startDate, $endDate, $sectionIds);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsByStudentIdAssignmentsGet: ', $e->getMessage(), PHP_EOL;
@@ -74,10 +74,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_id** | **int**| Format - int32. | |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
-| **section_ids** | **string**|  | [optional] |
+| **studentId** | **int**| Format - int32. | |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
+| **sectionIds** | **string**|  | [optional] |
 
 ### Return type
 
@@ -99,7 +99,7 @@ try {
 ## `v1AcademicsByStudentIdBySectionIdGradedassignmentsGet()`
 
 ```php
-v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($student_id, $section_id, $marking_period_id): \SKY\School\Model\StudentGradedAssignmentCollection
+v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($studentId, $sectionId, $markingPeriodId): \SKY\School\Model\StudentGradedAssignmentCollection
 ```
 
 Academics graded assignments for student
@@ -130,12 +130,12 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32. The ID of the student to view graded assignments for.
-$section_id = 56; // int | Format - int32. The ID of the lead section for the student.
-$marking_period_id = 56; // int | Format - int32. The ID of the marking period to return grades for.
+$studentId = 56; // int | Format - int32. The ID of the student to view graded assignments for.
+$sectionId = 56; // int | Format - int32. The ID of the lead section for the student.
+$markingPeriodId = 56; // int | Format - int32. The ID of the marking period to return grades for.
 
 try {
-    $result = $apiInstance->v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($student_id, $section_id, $marking_period_id);
+    $result = $apiInstance->v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($studentId, $sectionId, $markingPeriodId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsByStudentIdBySectionIdGradedassignmentsGet: ', $e->getMessage(), PHP_EOL;
@@ -146,9 +146,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_id** | **int**| Format - int32. The ID of the student to view graded assignments for. | |
-| **section_id** | **int**| Format - int32. The ID of the lead section for the student. | |
-| **marking_period_id** | **int**| Format - int32. The ID of the marking period to return grades for. | |
+| **studentId** | **int**| Format - int32. The ID of the student to view graded assignments for. | |
+| **sectionId** | **int**| Format - int32. The ID of the lead section for the student. | |
+| **markingPeriodId** | **int**| Format - int32. The ID of the marking period to return grades for. | |
 
 ### Return type
 
@@ -170,7 +170,7 @@ try {
 ## `v1AcademicsCoursesGet()`
 
 ```php
-v1AcademicsCoursesGet($department_id, $level_id): \SKY\School\Model\CourseCollection
+v1AcademicsCoursesGet($departmentId, $levelId): \SKY\School\Model\CourseCollection
 ```
 
 Academics courses
@@ -201,11 +201,11 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$department_id = 56; // int | Format - int32. Identifier for a specific department.
-$level_id = 56; // int | Format - int32. Identifier for a specific school level.
+$departmentId = 56; // int | Format - int32. Identifier for a specific department.
+$levelId = 56; // int | Format - int32. Identifier for a specific school level.
 
 try {
-    $result = $apiInstance->v1AcademicsCoursesGet($department_id, $level_id);
+    $result = $apiInstance->v1AcademicsCoursesGet($departmentId, $levelId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsCoursesGet: ', $e->getMessage(), PHP_EOL;
@@ -216,8 +216,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **department_id** | **int**| Format - int32. Identifier for a specific department. | [optional] |
-| **level_id** | **int**| Format - int32. Identifier for a specific school level. | [optional] |
+| **departmentId** | **int**| Format - int32. Identifier for a specific department. | [optional] |
+| **levelId** | **int**| Format - int32. Identifier for a specific school level. | [optional] |
 
 ### Return type
 
@@ -239,7 +239,7 @@ try {
 ## `v1AcademicsDepartmentsGet()`
 
 ```php
-v1AcademicsDepartmentsGet($level_id): \SKY\School\Model\DepartmentCollection
+v1AcademicsDepartmentsGet($levelId): \SKY\School\Model\DepartmentCollection
 ```
 
 Academics departments
@@ -270,10 +270,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_id = 56; // int | Format - int32. Level number.
+$levelId = 56; // int | Format - int32. Level number.
 
 try {
-    $result = $apiInstance->v1AcademicsDepartmentsGet($level_id);
+    $result = $apiInstance->v1AcademicsDepartmentsGet($levelId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsDepartmentsGet: ', $e->getMessage(), PHP_EOL;
@@ -284,7 +284,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_id** | **int**| Format - int32. Level number. | [optional] |
+| **levelId** | **int**| Format - int32. Level number. | [optional] |
 
 ### Return type
 
@@ -306,7 +306,7 @@ try {
 ## `v1AcademicsEnrollmentsByUserIdGet()`
 
 ```php
-v1AcademicsEnrollmentsByUserIdGet($user_id, $school_year): \SKY\School\Model\EnrollmentCollection
+v1AcademicsEnrollmentsByUserIdGet($userId, $schoolYear): \SKY\School\Model\EnrollmentCollection
 ```
 
 Academics student enrollment list
@@ -337,11 +337,11 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 56; // int | Format - int32. User identifier.
-$school_year = 'school_year_example'; // string | The school year to filter the collection of sections by. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
+$userId = 56; // int | Format - int32. User identifier.
+$schoolYear = 'schoolYear_example'; // string | The school year to filter the collection of sections by. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
 
 try {
-    $result = $apiInstance->v1AcademicsEnrollmentsByUserIdGet($user_id, $school_year);
+    $result = $apiInstance->v1AcademicsEnrollmentsByUserIdGet($userId, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsEnrollmentsByUserIdGet: ', $e->getMessage(), PHP_EOL;
@@ -352,8 +352,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **int**| Format - int32. User identifier. | |
-| **school_year** | **string**| The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
+| **userId** | **int**| Format - int32. User identifier. | |
+| **schoolYear** | **string**| The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
 
 ### Return type
 
@@ -375,7 +375,7 @@ try {
 ## `v1AcademicsEnrollmentsChangesGet()`
 
 ```php
-v1AcademicsEnrollmentsChangesGet($start_date, $end_date): \SKY\School\Model\EnrollmentChangesCollection
+v1AcademicsEnrollmentsChangesGet($startDate, $endDate): \SKY\School\Model\EnrollmentChangesCollection
 ```
 
 Academics Student Enrollments Changes
@@ -406,11 +406,11 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with.
 
 try {
-    $result = $apiInstance->v1AcademicsEnrollmentsChangesGet($start_date, $end_date);
+    $result = $apiInstance->v1AcademicsEnrollmentsChangesGet($startDate, $endDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsEnrollmentsChangesGet: ', $e->getMessage(), PHP_EOL;
@@ -421,8 +421,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with | |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. | [optional] |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with | |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. | [optional] |
 
 ### Return type
 
@@ -444,7 +444,7 @@ try {
 ## `v1AcademicsSchedulesMasterGet()`
 
 ```php
-v1AcademicsSchedulesMasterGet($level_num, $start_date, $end_date, $offering_type): \SKY\School\Model\MasterScheduleDayCollection
+v1AcademicsSchedulesMasterGet($levelNum, $startDate, $endDate, $offeringType): \SKY\School\Model\MasterScheduleDayCollection
 ```
 
 Academics master schedule
@@ -475,13 +475,13 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_num = 56; // int | Format - int32. Level Number indicates which school you are working with.
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900.
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days.
-$offering_type = 56; // int | Format - int32. Filters the results by a specific group type. Defaults to \"All\" offering types.
+$levelNum = 56; // int | Format - int32. Level Number indicates which school you are working with.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900.
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days.
+$offeringType = 56; // int | Format - int32. Filters the results by a specific group type. Defaults to \"All\" offering types.
 
 try {
-    $result = $apiInstance->v1AcademicsSchedulesMasterGet($level_num, $start_date, $end_date, $offering_type);
+    $result = $apiInstance->v1AcademicsSchedulesMasterGet($levelNum, $startDate, $endDate, $offeringType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSchedulesMasterGet: ', $e->getMessage(), PHP_EOL;
@@ -492,10 +492,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_num** | **int**| Format - int32. Level Number indicates which school you are working with. | |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. | |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. | |
-| **offering_type** | **int**| Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. | [optional] |
+| **levelNum** | **int**| Format - int32. Level Number indicates which school you are working with. | |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. | |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. | |
+| **offeringType** | **int**| Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. | [optional] |
 
 ### Return type
 
@@ -517,7 +517,7 @@ try {
 ## `v1AcademicsSchedulesSetsByScheduleSetIdGet()`
 
 ```php
-v1AcademicsSchedulesSetsByScheduleSetIdGet($schedule_set_id): \SKY\School\Model\ScheduleSetDetails
+v1AcademicsSchedulesSetsByScheduleSetIdGet($scheduleSetId): \SKY\School\Model\ScheduleSetDetails
 ```
 
 Academics schedule set
@@ -548,10 +548,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_set_id = 56; // int | Format - int32. ID of the Schedule Set you seek.
+$scheduleSetId = 56; // int | Format - int32. ID of the Schedule Set you seek.
 
 try {
-    $result = $apiInstance->v1AcademicsSchedulesSetsByScheduleSetIdGet($schedule_set_id);
+    $result = $apiInstance->v1AcademicsSchedulesSetsByScheduleSetIdGet($scheduleSetId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSchedulesSetsByScheduleSetIdGet: ', $e->getMessage(), PHP_EOL;
@@ -562,7 +562,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **schedule_set_id** | **int**| Format - int32. ID of the Schedule Set you seek. | |
+| **scheduleSetId** | **int**| Format - int32. ID of the Schedule Set you seek. | |
 
 ### Return type
 
@@ -584,7 +584,7 @@ try {
 ## `v1AcademicsSchedulesSetsGet()`
 
 ```php
-v1AcademicsSchedulesSetsGet($level_num, $school_year, $group_type): \SKY\School\Model\ScheduleSetCollection
+v1AcademicsSchedulesSetsGet($levelNum, $schoolYear, $groupType): \SKY\School\Model\ScheduleSetCollection
 ```
 
 Academics schedule sets by level
@@ -615,12 +615,12 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_num = 56; // int | Format - int32. Level Number indicates which school you are working with.
-$school_year = 'school_year_example'; // string | The school year to get Schedule Sets for. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
-$group_type = 1; // int | Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the 'Academics' (1).
+$levelNum = 56; // int | Format - int32. Level Number indicates which school you are working with.
+$schoolYear = 'schoolYear_example'; // string | The school year to get Schedule Sets for. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
+$groupType = 1; // int | Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the 'Academics' (1).
 
 try {
-    $result = $apiInstance->v1AcademicsSchedulesSetsGet($level_num, $school_year, $group_type);
+    $result = $apiInstance->v1AcademicsSchedulesSetsGet($levelNum, $schoolYear, $groupType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSchedulesSetsGet: ', $e->getMessage(), PHP_EOL;
@@ -631,9 +631,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_num** | **int**| Format - int32. Level Number indicates which school you are working with. | |
-| **school_year** | **string**| The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
-| **group_type** | **int**| Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). | [optional] [default to 1] |
+| **levelNum** | **int**| Format - int32. Level Number indicates which school you are working with. | |
+| **schoolYear** | **string**| The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
+| **groupType** | **int**| Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). | [optional] [default to 1] |
 
 ### Return type
 
@@ -655,7 +655,7 @@ try {
 ## `v1AcademicsSectionsBySectionIdAssignmentsGet()`
 
 ```php
-v1AcademicsSectionsBySectionIdAssignmentsGet($section_id, $types, $status, $persona_id, $filter, $search): \SKY\School\Model\AssignmentCollection
+v1AcademicsSectionsBySectionIdAssignmentsGet($sectionId, $types, $status, $personaId, $filter, $search): \SKY\School\Model\AssignmentCollection
 ```
 
 Academics assignments by section
@@ -686,15 +686,15 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$section_id = 56; // int | Format - int32. The ID of the section.
+$sectionId = 56; // int | Format - int32. The ID of the section.
 $types = 'types_example'; // string | Returns results that match a comma separated list of assignment type IDs.
 $status = 'status_example'; // string | The status of the assignment. The status corresponds with static system options. Allowed values: \"0\" for In Progress, \"1\" for Completed, \"2\" for Overdue, and \"-1\" for To Do.
-$persona_id = 56; // int | Format - int32. The ID of the persona to get assignments. 3 = Faculty, 2 = Student. Defaults to 3.
+$personaId = 56; // int | Format - int32. The ID of the persona to get assignments. 3 = Faculty, 2 = Student. Defaults to 3.
 $filter = 'filter_example'; // string | Return assignments based on the entered string: ```expired```, ```future```, or ```all```. All is the default sort value.
 $search = 'search_example'; // string | Returns results with Descriptions or Titles that match search string.
 
 try {
-    $result = $apiInstance->v1AcademicsSectionsBySectionIdAssignmentsGet($section_id, $types, $status, $persona_id, $filter, $search);
+    $result = $apiInstance->v1AcademicsSectionsBySectionIdAssignmentsGet($sectionId, $types, $status, $personaId, $filter, $search);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSectionsBySectionIdAssignmentsGet: ', $e->getMessage(), PHP_EOL;
@@ -705,10 +705,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **section_id** | **int**| Format - int32. The ID of the section. | |
+| **sectionId** | **int**| Format - int32. The ID of the section. | |
 | **types** | **string**| Returns results that match a comma separated list of assignment type IDs. | [optional] |
 | **status** | **string**| The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. | [optional] |
-| **persona_id** | **int**| Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. | [optional] |
+| **personaId** | **int**| Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. | [optional] |
 | **filter** | **string**| Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. | [optional] |
 | **search** | **string**| Returns results with Descriptions or Titles that match search string. | [optional] |
 
@@ -732,7 +732,7 @@ try {
 ## `v1AcademicsSectionsBySectionIdCyclesGet()`
 
 ```php
-v1AcademicsSectionsBySectionIdCyclesGet($section_id, $duration_id, $group_type): \SKY\School\Model\SectionCycles
+v1AcademicsSectionsBySectionIdCyclesGet($sectionId, $durationId, $groupType): \SKY\School\Model\SectionCycles
 ```
 
 Academics cycles by section
@@ -763,12 +763,12 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$section_id = 56; // int | Format - int32. The ID of the section.
-$duration_id = 56; // int | Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided.
-$group_type = 1; // int | Format - int32. The Group Type for the section specified. Defaults to the 'Academics' (1).
+$sectionId = 56; // int | Format - int32. The ID of the section.
+$durationId = 56; // int | Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided.
+$groupType = 1; // int | Format - int32. The Group Type for the section specified. Defaults to the 'Academics' (1).
 
 try {
-    $result = $apiInstance->v1AcademicsSectionsBySectionIdCyclesGet($section_id, $duration_id, $group_type);
+    $result = $apiInstance->v1AcademicsSectionsBySectionIdCyclesGet($sectionId, $durationId, $groupType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSectionsBySectionIdCyclesGet: ', $e->getMessage(), PHP_EOL;
@@ -779,9 +779,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **section_id** | **int**| Format - int32. The ID of the section. | |
-| **duration_id** | **int**| Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. | [optional] |
-| **group_type** | **int**| Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). | [optional] [default to 1] |
+| **sectionId** | **int**| Format - int32. The ID of the section. | |
+| **durationId** | **int**| Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. | [optional] |
+| **groupType** | **int**| Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). | [optional] [default to 1] |
 
 ### Return type
 
@@ -803,7 +803,7 @@ try {
 ## `v1AcademicsSectionsBySectionIdStudentsGet()`
 
 ```php
-v1AcademicsSectionsBySectionIdStudentsGet($section_id): \SKY\School\Model\StudentCollection
+v1AcademicsSectionsBySectionIdStudentsGet($sectionId): \SKY\School\Model\StudentCollection
 ```
 
 Academics students by section
@@ -834,10 +834,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$section_id = 56; // int | Format - int32. The ID of the section, which can be found using <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\">Section list</a>.
+$sectionId = 56; // int | Format - int32. The ID of the section, which can be found using <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\">Section list</a>.
 
 try {
-    $result = $apiInstance->v1AcademicsSectionsBySectionIdStudentsGet($section_id);
+    $result = $apiInstance->v1AcademicsSectionsBySectionIdStudentsGet($sectionId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSectionsBySectionIdStudentsGet: ', $e->getMessage(), PHP_EOL;
@@ -848,7 +848,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **section_id** | **int**| Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. | |
+| **sectionId** | **int**| Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. | |
 
 ### Return type
 
@@ -870,7 +870,7 @@ try {
 ## `v1AcademicsSectionsGet()`
 
 ```php
-v1AcademicsSectionsGet($level_num, $school_year): \SKY\School\Model\AcademicsSectionCollection
+v1AcademicsSectionsGet($levelNum, $schoolYear): \SKY\School\Model\AcademicsSectionCollection
 ```
 
 Academics sections by school level
@@ -901,11 +901,11 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_num = 56; // int | Format - int32. Level number.
-$school_year = 'school_year_example'; // string | The school year to get sections for. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
+$levelNum = 56; // int | Format - int32. Level number.
+$schoolYear = 'schoolYear_example'; // string | The school year to get sections for. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>. Defaults to the current school year.
 
 try {
-    $result = $apiInstance->v1AcademicsSectionsGet($level_num, $school_year);
+    $result = $apiInstance->v1AcademicsSectionsGet($levelNum, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSectionsGet: ', $e->getMessage(), PHP_EOL;
@@ -916,8 +916,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_num** | **int**| Format - int32. Level number. | |
-| **school_year** | **string**| The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
+| **levelNum** | **int**| Format - int32. Level number. | |
+| **schoolYear** | **string**| The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. | [optional] |
 
 ### Return type
 
@@ -939,7 +939,7 @@ try {
 ## `v1AcademicsSectionsStudentsPost()`
 
 ```php
-v1AcademicsSectionsStudentsPost($bulk_enrollment): \SKY\School\Model\PostResponse
+v1AcademicsSectionsStudentsPost($bulkEnrollment): \SKY\School\Model\PostResponse
 ```
 
 Academics enroll students into sections
@@ -970,10 +970,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$bulk_enrollment = {"id":60708,"enrollment_date":"2021-08-08T12:00:00.0000000+00:00","section_ids":"90123567,89012345","user_ids":"12345678,9012345"}; // \SKY\School\Model\BulkEnrollment | Defines which users (students and/or teachers) should be added to which offerings (via ```section_id``` and duration ```id```)
+$bulkEnrollment = {"id":60708,"enrollment_date":"2021-08-08T12:00:00.0000000+00:00","section_ids":"90123567,89012345","user_ids":"12345678,9012345"}; // \SKY\School\Model\BulkEnrollment | Defines which users (students and/or teachers) should be added to which offerings (via ```section_id``` and duration ```id```)
 
 try {
-    $result = $apiInstance->v1AcademicsSectionsStudentsPost($bulk_enrollment);
+    $result = $apiInstance->v1AcademicsSectionsStudentsPost($bulkEnrollment);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSectionsStudentsPost: ', $e->getMessage(), PHP_EOL;
@@ -984,7 +984,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **bulk_enrollment** | [**\SKY\School\Model\BulkEnrollment**](../Model/BulkEnrollment.md)| Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) | [optional] |
+| **bulkEnrollment** | [**\SKY\School\Model\BulkEnrollment**](../Model/BulkEnrollment.md)| Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) | [optional] |
 
 ### Return type
 
@@ -1006,7 +1006,7 @@ try {
 ## `v1AcademicsSpecialdaysGet()`
 
 ```php
-v1AcademicsSpecialdaysGet($level_id): \SKY\School\Model\SpecialDayCollection
+v1AcademicsSpecialdaysGet($levelId): \SKY\School\Model\SpecialDayCollection
 ```
 
 Academics special days
@@ -1037,10 +1037,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_id = 56; // int | Format - int32. Identifier for a specific school level.
+$levelId = 56; // int | Format - int32. Identifier for a specific school level.
 
 try {
-    $result = $apiInstance->v1AcademicsSpecialdaysGet($level_id);
+    $result = $apiInstance->v1AcademicsSpecialdaysGet($levelId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsSpecialdaysGet: ', $e->getMessage(), PHP_EOL;
@@ -1051,7 +1051,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_id** | **int**| Format - int32. Identifier for a specific school level. | [optional] |
+| **levelId** | **int**| Format - int32. Identifier for a specific school level. | [optional] |
 
 ### Return type
 
@@ -1073,7 +1073,7 @@ try {
 ## `v1AcademicsStudentByStudentIdSectionsGet()`
 
 ```php
-v1AcademicsStudentByStudentIdSectionsGet($student_id): \SKY\School\Model\AcademicsSectionStudentCollection
+v1AcademicsStudentByStudentIdSectionsGet($studentId): \SKY\School\Model\AcademicsSectionStudentCollection
 ```
 
 Academics sections for student
@@ -1104,10 +1104,10 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32. The ID of the student to view sections and grades for.
+$studentId = 56; // int | Format - int32. The ID of the student to view sections and grades for.
 
 try {
-    $result = $apiInstance->v1AcademicsStudentByStudentIdSectionsGet($student_id);
+    $result = $apiInstance->v1AcademicsStudentByStudentIdSectionsGet($studentId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsStudentByStudentIdSectionsGet: ', $e->getMessage(), PHP_EOL;
@@ -1118,7 +1118,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **student_id** | **int**| Format - int32. The ID of the student to view sections and grades for. | |
+| **studentId** | **int**| Format - int32. The ID of the student to view sections and grades for. | |
 
 ### Return type
 
@@ -1140,7 +1140,7 @@ try {
 ## `v1AcademicsTeachersByTeacherIdSectionsGet()`
 
 ```php
-v1AcademicsTeachersByTeacherIdSectionsGet($teacher_id, $school_year): \SKY\School\Model\AcademicsSectionCollection
+v1AcademicsTeachersByTeacherIdSectionsGet($teacherId, $schoolYear): \SKY\School\Model\AcademicsSectionCollection
 ```
 
 Academics sections by teacher
@@ -1171,11 +1171,11 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$teacher_id = 56; // int | Format - int32. The ID of the teacher to get sections for.
-$school_year = 'school_year_example'; // string | The school year. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>.
+$teacherId = 56; // int | Format - int32. The ID of the teacher to get sections for.
+$schoolYear = 'schoolYear_example'; // string | The school year. Corresponds to ```school_year_label``` in the <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\">Year list</a>.
 
 try {
-    $result = $apiInstance->v1AcademicsTeachersByTeacherIdSectionsGet($teacher_id, $school_year);
+    $result = $apiInstance->v1AcademicsTeachersByTeacherIdSectionsGet($teacherId, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsTeachersByTeacherIdSectionsGet: ', $e->getMessage(), PHP_EOL;
@@ -1186,8 +1186,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **teacher_id** | **int**| Format - int32. The ID of the teacher to get sections for. | |
-| **school_year** | **string**| The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. | [optional] |
+| **teacherId** | **int**| Format - int32. The ID of the teacher to get sections for. | |
+| **schoolYear** | **string**| The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. | [optional] |
 
 ### Return type
 

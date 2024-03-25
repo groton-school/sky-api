@@ -60,24 +60,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'name' => 'string',
         'phone1' => 'string',
-        'ad_first_name' => 'string',
-        'ad_last_name' => 'string',
-        'ad_email' => 'string',
+        'adFirstName' => 'string',
+        'adLastName' => 'string',
+        'adEmail' => 'string',
         'fax' => 'string',
         'phone2' => 'string',
-        'asst_ad_first_name' => 'string',
-        'asst_ad_last_name' => 'string',
-        'asst_ad_email' => 'string',
-        'address_id' => 'int',
-        'address_line1' => 'string',
-        'address_line2' => 'string',
-        'address_line3' => 'string',
+        'asstAdFirstName' => 'string',
+        'asstAdLastName' => 'string',
+        'asstAdEmail' => 'string',
+        'addressId' => 'int',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressLine3' => 'string',
         'city' => 'string',
-        'state_short' => 'string',
+        'stateShort' => 'string',
         'country' => 'string',
         'province' => 'string',
         'zip' => 'string',
-        'conference_id' => 'int',
+        'conferenceId' => 'int',
     ];
 
     /**
@@ -90,24 +90,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'name' => null,
         'phone1' => null,
-        'ad_first_name' => null,
-        'ad_last_name' => null,
-        'ad_email' => null,
+        'adFirstName' => null,
+        'adLastName' => null,
+        'adEmail' => null,
         'fax' => null,
         'phone2' => null,
-        'asst_ad_first_name' => null,
-        'asst_ad_last_name' => null,
-        'asst_ad_email' => null,
-        'address_id' => 'int32',
-        'address_line1' => null,
-        'address_line2' => null,
-        'address_line3' => null,
+        'asstAdFirstName' => null,
+        'asstAdLastName' => null,
+        'asstAdEmail' => null,
+        'addressId' => 'int32',
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'addressLine3' => null,
         'city' => null,
-        'state_short' => null,
+        'stateShort' => null,
         'country' => null,
         'province' => null,
         'zip' => null,
-        'conference_id' => 'int32',
+        'conferenceId' => 'int32',
     ];
 
     /**
@@ -118,24 +118,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static array $openAPINullables = [
         'name' => false,
         'phone1' => true,
-        'ad_first_name' => true,
-        'ad_last_name' => true,
-        'ad_email' => true,
+        'adFirstName' => true,
+        'adLastName' => true,
+        'adEmail' => true,
         'fax' => true,
         'phone2' => true,
-        'asst_ad_first_name' => true,
-        'asst_ad_last_name' => true,
-        'asst_ad_email' => true,
-        'address_id' => true,
-        'address_line1' => true,
-        'address_line2' => true,
-        'address_line3' => true,
+        'asstAdFirstName' => true,
+        'asstAdLastName' => true,
+        'asstAdEmail' => true,
+        'addressId' => true,
+        'addressLine1' => true,
+        'addressLine2' => true,
+        'addressLine3' => true,
         'city' => true,
-        'state_short' => true,
+        'stateShort' => true,
         'country' => true,
         'province' => true,
         'zip' => true,
-        'conference_id' => true,
+        'conferenceId' => true,
     ];
 
     /**
@@ -226,24 +226,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $attributeMap = [
         'name' => 'name',
         'phone1' => 'phone1',
-        'ad_first_name' => 'ad_first_name',
-        'ad_last_name' => 'ad_last_name',
-        'ad_email' => 'ad_email',
+        'adFirstName' => 'ad_first_name',
+        'adLastName' => 'ad_last_name',
+        'adEmail' => 'ad_email',
         'fax' => 'fax',
         'phone2' => 'phone2',
-        'asst_ad_first_name' => 'asst_ad_first_name',
-        'asst_ad_last_name' => 'asst_ad_last_name',
-        'asst_ad_email' => 'asst_ad_email',
-        'address_id' => 'address_id',
-        'address_line1' => 'address_line1',
-        'address_line2' => 'address_line2',
-        'address_line3' => 'address_line3',
+        'asstAdFirstName' => 'asst_ad_first_name',
+        'asstAdLastName' => 'asst_ad_last_name',
+        'asstAdEmail' => 'asst_ad_email',
+        'addressId' => 'address_id',
+        'addressLine1' => 'address_line1',
+        'addressLine2' => 'address_line2',
+        'addressLine3' => 'address_line3',
         'city' => 'city',
-        'state_short' => 'state_short',
+        'stateShort' => 'state_short',
         'country' => 'country',
         'province' => 'province',
         'zip' => 'zip',
-        'conference_id' => 'conference_id',
+        'conferenceId' => 'conference_id',
     ];
 
     /**
@@ -254,24 +254,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $setters = [
         'name' => 'setName',
         'phone1' => 'setPhone1',
-        'ad_first_name' => 'setAdFirstName',
-        'ad_last_name' => 'setAdLastName',
-        'ad_email' => 'setAdEmail',
+        'adFirstName' => 'setAdFirstName',
+        'adLastName' => 'setAdLastName',
+        'adEmail' => 'setAdEmail',
         'fax' => 'setFax',
         'phone2' => 'setPhone2',
-        'asst_ad_first_name' => 'setAsstAdFirstName',
-        'asst_ad_last_name' => 'setAsstAdLastName',
-        'asst_ad_email' => 'setAsstAdEmail',
-        'address_id' => 'setAddressId',
-        'address_line1' => 'setAddressLine1',
-        'address_line2' => 'setAddressLine2',
-        'address_line3' => 'setAddressLine3',
+        'asstAdFirstName' => 'setAsstAdFirstName',
+        'asstAdLastName' => 'setAsstAdLastName',
+        'asstAdEmail' => 'setAsstAdEmail',
+        'addressId' => 'setAddressId',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressLine3' => 'setAddressLine3',
         'city' => 'setCity',
-        'state_short' => 'setStateShort',
+        'stateShort' => 'setStateShort',
         'country' => 'setCountry',
         'province' => 'setProvince',
         'zip' => 'setZip',
-        'conference_id' => 'setConferenceId',
+        'conferenceId' => 'setConferenceId',
     ];
 
     /**
@@ -282,24 +282,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $getters = [
         'name' => 'getName',
         'phone1' => 'getPhone1',
-        'ad_first_name' => 'getAdFirstName',
-        'ad_last_name' => 'getAdLastName',
-        'ad_email' => 'getAdEmail',
+        'adFirstName' => 'getAdFirstName',
+        'adLastName' => 'getAdLastName',
+        'adEmail' => 'getAdEmail',
         'fax' => 'getFax',
         'phone2' => 'getPhone2',
-        'asst_ad_first_name' => 'getAsstAdFirstName',
-        'asst_ad_last_name' => 'getAsstAdLastName',
-        'asst_ad_email' => 'getAsstAdEmail',
-        'address_id' => 'getAddressId',
-        'address_line1' => 'getAddressLine1',
-        'address_line2' => 'getAddressLine2',
-        'address_line3' => 'getAddressLine3',
+        'asstAdFirstName' => 'getAsstAdFirstName',
+        'asstAdLastName' => 'getAsstAdLastName',
+        'asstAdEmail' => 'getAsstAdEmail',
+        'addressId' => 'getAddressId',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressLine3' => 'getAddressLine3',
         'city' => 'getCity',
-        'state_short' => 'getStateShort',
+        'stateShort' => 'getStateShort',
         'country' => 'getCountry',
         'province' => 'getProvince',
         'zip' => 'getZip',
-        'conference_id' => 'getConferenceId',
+        'conferenceId' => 'getConferenceId',
     ];
 
     /**
@@ -361,24 +361,24 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('phone1', $data ?? [], null);
-        $this->setIfExists('ad_first_name', $data ?? [], null);
-        $this->setIfExists('ad_last_name', $data ?? [], null);
-        $this->setIfExists('ad_email', $data ?? [], null);
+        $this->setIfExists('adFirstName', $data ?? [], null);
+        $this->setIfExists('adLastName', $data ?? [], null);
+        $this->setIfExists('adEmail', $data ?? [], null);
         $this->setIfExists('fax', $data ?? [], null);
         $this->setIfExists('phone2', $data ?? [], null);
-        $this->setIfExists('asst_ad_first_name', $data ?? [], null);
-        $this->setIfExists('asst_ad_last_name', $data ?? [], null);
-        $this->setIfExists('asst_ad_email', $data ?? [], null);
-        $this->setIfExists('address_id', $data ?? [], null);
-        $this->setIfExists('address_line1', $data ?? [], null);
-        $this->setIfExists('address_line2', $data ?? [], null);
-        $this->setIfExists('address_line3', $data ?? [], null);
+        $this->setIfExists('asstAdFirstName', $data ?? [], null);
+        $this->setIfExists('asstAdLastName', $data ?? [], null);
+        $this->setIfExists('asstAdEmail', $data ?? [], null);
+        $this->setIfExists('addressId', $data ?? [], null);
+        $this->setIfExists('addressLine1', $data ?? [], null);
+        $this->setIfExists('addressLine2', $data ?? [], null);
+        $this->setIfExists('addressLine3', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('state_short', $data ?? [], null);
+        $this->setIfExists('stateShort', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('province', $data ?? [], null);
         $this->setIfExists('zip', $data ?? [], null);
-        $this->setIfExists('conference_id', $data ?? [], null);
+        $this->setIfExists('conferenceId', $data ?? [], null);
     }
 
     /**
@@ -488,103 +488,103 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets ad_first_name
+     * Gets adFirstName
      *
      * @return string|null
      */
     public function getAdFirstName()
     {
-        return $this->container['ad_first_name'];
+        return $this->container['adFirstName'];
     }
 
     /**
-     * Sets ad_first_name
+     * Sets adFirstName
      *
-     * @param string|null $ad_first_name Athletic Directors first name
+     * @param string|null $adFirstName Athletic Directors first name
      *
      * @return self
      */
-    public function setAdFirstName($ad_first_name)
+    public function setAdFirstName($adFirstName)
     {
-        if (is_null($ad_first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'ad_first_name');
+        if (is_null($adFirstName)) {
+            array_push($this->openAPINullablesSetToNull, 'adFirstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ad_first_name', $nullablesSetToNull);
+            $index = array_search('adFirstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['ad_first_name'] = $ad_first_name;
+        $this->container['adFirstName'] = $adFirstName;
 
         return $this;
     }
 
     /**
-     * Gets ad_last_name
+     * Gets adLastName
      *
      * @return string|null
      */
     public function getAdLastName()
     {
-        return $this->container['ad_last_name'];
+        return $this->container['adLastName'];
     }
 
     /**
-     * Sets ad_last_name
+     * Sets adLastName
      *
-     * @param string|null $ad_last_name Athletic Directors last name
+     * @param string|null $adLastName Athletic Directors last name
      *
      * @return self
      */
-    public function setAdLastName($ad_last_name)
+    public function setAdLastName($adLastName)
     {
-        if (is_null($ad_last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'ad_last_name');
+        if (is_null($adLastName)) {
+            array_push($this->openAPINullablesSetToNull, 'adLastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ad_last_name', $nullablesSetToNull);
+            $index = array_search('adLastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['ad_last_name'] = $ad_last_name;
+        $this->container['adLastName'] = $adLastName;
 
         return $this;
     }
 
     /**
-     * Gets ad_email
+     * Gets adEmail
      *
      * @return string|null
      */
     public function getAdEmail()
     {
-        return $this->container['ad_email'];
+        return $this->container['adEmail'];
     }
 
     /**
-     * Sets ad_email
+     * Sets adEmail
      *
-     * @param string|null $ad_email Athletic Directors email
+     * @param string|null $adEmail Athletic Directors email
      *
      * @return self
      */
-    public function setAdEmail($ad_email)
+    public function setAdEmail($adEmail)
     {
-        if (is_null($ad_email)) {
-            array_push($this->openAPINullablesSetToNull, 'ad_email');
+        if (is_null($adEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'adEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ad_email', $nullablesSetToNull);
+            $index = array_search('adEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['ad_email'] = $ad_email;
+        $this->container['adEmail'] = $adEmail;
 
         return $this;
     }
@@ -658,239 +658,239 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets asst_ad_first_name
+     * Gets asstAdFirstName
      *
      * @return string|null
      */
     public function getAsstAdFirstName()
     {
-        return $this->container['asst_ad_first_name'];
+        return $this->container['asstAdFirstName'];
     }
 
     /**
-     * Sets asst_ad_first_name
+     * Sets asstAdFirstName
      *
-     * @param string|null $asst_ad_first_name Asst. Athletic Directors first name
+     * @param string|null $asstAdFirstName Asst. Athletic Directors first name
      *
      * @return self
      */
-    public function setAsstAdFirstName($asst_ad_first_name)
+    public function setAsstAdFirstName($asstAdFirstName)
     {
-        if (is_null($asst_ad_first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'asst_ad_first_name');
+        if (is_null($asstAdFirstName)) {
+            array_push($this->openAPINullablesSetToNull, 'asstAdFirstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('asst_ad_first_name', $nullablesSetToNull);
+            $index = array_search('asstAdFirstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['asst_ad_first_name'] = $asst_ad_first_name;
+        $this->container['asstAdFirstName'] = $asstAdFirstName;
 
         return $this;
     }
 
     /**
-     * Gets asst_ad_last_name
+     * Gets asstAdLastName
      *
      * @return string|null
      */
     public function getAsstAdLastName()
     {
-        return $this->container['asst_ad_last_name'];
+        return $this->container['asstAdLastName'];
     }
 
     /**
-     * Sets asst_ad_last_name
+     * Sets asstAdLastName
      *
-     * @param string|null $asst_ad_last_name Asst. Athletic Directors last name
+     * @param string|null $asstAdLastName Asst. Athletic Directors last name
      *
      * @return self
      */
-    public function setAsstAdLastName($asst_ad_last_name)
+    public function setAsstAdLastName($asstAdLastName)
     {
-        if (is_null($asst_ad_last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'asst_ad_last_name');
+        if (is_null($asstAdLastName)) {
+            array_push($this->openAPINullablesSetToNull, 'asstAdLastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('asst_ad_last_name', $nullablesSetToNull);
+            $index = array_search('asstAdLastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['asst_ad_last_name'] = $asst_ad_last_name;
+        $this->container['asstAdLastName'] = $asstAdLastName;
 
         return $this;
     }
 
     /**
-     * Gets asst_ad_email
+     * Gets asstAdEmail
      *
      * @return string|null
      */
     public function getAsstAdEmail()
     {
-        return $this->container['asst_ad_email'];
+        return $this->container['asstAdEmail'];
     }
 
     /**
-     * Sets asst_ad_email
+     * Sets asstAdEmail
      *
-     * @param string|null $asst_ad_email Asst. Athletic Directors email
+     * @param string|null $asstAdEmail Asst. Athletic Directors email
      *
      * @return self
      */
-    public function setAsstAdEmail($asst_ad_email)
+    public function setAsstAdEmail($asstAdEmail)
     {
-        if (is_null($asst_ad_email)) {
-            array_push($this->openAPINullablesSetToNull, 'asst_ad_email');
+        if (is_null($asstAdEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'asstAdEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('asst_ad_email', $nullablesSetToNull);
+            $index = array_search('asstAdEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['asst_ad_email'] = $asst_ad_email;
+        $this->container['asstAdEmail'] = $asstAdEmail;
 
         return $this;
     }
 
     /**
-     * Gets address_id
+     * Gets addressId
      *
      * @return int|null
      */
     public function getAddressId()
     {
-        return $this->container['address_id'];
+        return $this->container['addressId'];
     }
 
     /**
-     * Sets address_id
+     * Sets addressId
      *
-     * @param int|null $address_id Opponents Address Id
+     * @param int|null $addressId Opponents Address Id
      *
      * @return self
      */
-    public function setAddressId($address_id)
+    public function setAddressId($addressId)
     {
-        if (is_null($address_id)) {
-            array_push($this->openAPINullablesSetToNull, 'address_id');
+        if (is_null($addressId)) {
+            array_push($this->openAPINullablesSetToNull, 'addressId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_id', $nullablesSetToNull);
+            $index = array_search('addressId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_id'] = $address_id;
+        $this->container['addressId'] = $addressId;
 
         return $this;
     }
 
     /**
-     * Gets address_line1
+     * Gets addressLine1
      *
      * @return string|null
      */
     public function getAddressLine1()
     {
-        return $this->container['address_line1'];
+        return $this->container['addressLine1'];
     }
 
     /**
-     * Sets address_line1
+     * Sets addressLine1
      *
-     * @param string|null $address_line1 Opponents Address Line 1
+     * @param string|null $addressLine1 Opponents Address Line 1
      *
      * @return self
      */
-    public function setAddressLine1($address_line1)
+    public function setAddressLine1($addressLine1)
     {
-        if (is_null($address_line1)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line1');
+        if (is_null($addressLine1)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine1');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line1', $nullablesSetToNull);
+            $index = array_search('addressLine1', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line1'] = $address_line1;
+        $this->container['addressLine1'] = $addressLine1;
 
         return $this;
     }
 
     /**
-     * Gets address_line2
+     * Gets addressLine2
      *
      * @return string|null
      */
     public function getAddressLine2()
     {
-        return $this->container['address_line2'];
+        return $this->container['addressLine2'];
     }
 
     /**
-     * Sets address_line2
+     * Sets addressLine2
      *
-     * @param string|null $address_line2 Opponents Address Line 2
+     * @param string|null $addressLine2 Opponents Address Line 2
      *
      * @return self
      */
-    public function setAddressLine2($address_line2)
+    public function setAddressLine2($addressLine2)
     {
-        if (is_null($address_line2)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line2');
+        if (is_null($addressLine2)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine2');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line2', $nullablesSetToNull);
+            $index = array_search('addressLine2', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line2'] = $address_line2;
+        $this->container['addressLine2'] = $addressLine2;
 
         return $this;
     }
 
     /**
-     * Gets address_line3
+     * Gets addressLine3
      *
      * @return string|null
      */
     public function getAddressLine3()
     {
-        return $this->container['address_line3'];
+        return $this->container['addressLine3'];
     }
 
     /**
-     * Sets address_line3
+     * Sets addressLine3
      *
-     * @param string|null $address_line3 Opponents Address Line 3
+     * @param string|null $addressLine3 Opponents Address Line 3
      *
      * @return self
      */
-    public function setAddressLine3($address_line3)
+    public function setAddressLine3($addressLine3)
     {
-        if (is_null($address_line3)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line3');
+        if (is_null($addressLine3)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine3');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line3', $nullablesSetToNull);
+            $index = array_search('addressLine3', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line3'] = $address_line3;
+        $this->container['addressLine3'] = $addressLine3;
 
         return $this;
     }
@@ -930,35 +930,35 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets state_short
+     * Gets stateShort
      *
      * @return string|null
      */
     public function getStateShort()
     {
-        return $this->container['state_short'];
+        return $this->container['stateShort'];
     }
 
     /**
-     * Sets state_short
+     * Sets stateShort
      *
-     * @param string|null $state_short Opponents State
+     * @param string|null $stateShort Opponents State
      *
      * @return self
      */
-    public function setStateShort($state_short)
+    public function setStateShort($stateShort)
     {
-        if (is_null($state_short)) {
-            array_push($this->openAPINullablesSetToNull, 'state_short');
+        if (is_null($stateShort)) {
+            array_push($this->openAPINullablesSetToNull, 'stateShort');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('state_short', $nullablesSetToNull);
+            $index = array_search('stateShort', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['state_short'] = $state_short;
+        $this->container['stateShort'] = $stateShort;
 
         return $this;
     }
@@ -1066,35 +1066,35 @@ class OpponentUpdateModel implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets conference_id
+     * Gets conferenceId
      *
      * @return int|null
      */
     public function getConferenceId()
     {
-        return $this->container['conference_id'];
+        return $this->container['conferenceId'];
     }
 
     /**
-     * Sets conference_id
+     * Sets conferenceId
      *
-     * @param int|null $conference_id Opponents Conference Id
+     * @param int|null $conferenceId Opponents Conference Id
      *
      * @return self
      */
-    public function setConferenceId($conference_id)
+    public function setConferenceId($conferenceId)
     {
-        if (is_null($conference_id)) {
-            array_push($this->openAPINullablesSetToNull, 'conference_id');
+        if (is_null($conferenceId)) {
+            array_push($this->openAPINullablesSetToNull, 'conferenceId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('conference_id', $nullablesSetToNull);
+            $index = array_search('conferenceId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['conference_id'] = $conference_id;
+        $this->container['conferenceId'] = $conferenceId;
 
         return $this;
     }

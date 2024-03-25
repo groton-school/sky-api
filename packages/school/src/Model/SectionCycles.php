@@ -58,11 +58,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'section_id' => 'int',
-        'course_title' => 'string',
-        'section_identifier' => 'string',
-        'block_name' => 'string',
-        'course_code' => 'string',
+        'sectionId' => 'int',
+        'courseTitle' => 'string',
+        'sectionIdentifier' => 'string',
+        'blockName' => 'string',
+        'courseCode' => 'string',
         'cycles' => '\SKY\School\Model\Cycle[]',
     ];
 
@@ -74,11 +74,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'section_id' => 'int32',
-        'course_title' => null,
-        'section_identifier' => null,
-        'block_name' => null,
-        'course_code' => null,
+        'sectionId' => 'int32',
+        'courseTitle' => null,
+        'sectionIdentifier' => null,
+        'blockName' => null,
+        'courseCode' => null,
         'cycles' => null,
     ];
 
@@ -88,11 +88,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'section_id' => false,
-        'course_title' => true,
-        'section_identifier' => true,
-        'block_name' => true,
-        'course_code' => true,
+        'sectionId' => false,
+        'courseTitle' => true,
+        'sectionIdentifier' => true,
+        'blockName' => true,
+        'courseCode' => true,
         'cycles' => true,
     ];
 
@@ -182,11 +182,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'section_id' => 'section_id',
-        'course_title' => 'course_title',
-        'section_identifier' => 'section_identifier',
-        'block_name' => 'block_name',
-        'course_code' => 'course_code',
+        'sectionId' => 'section_id',
+        'courseTitle' => 'course_title',
+        'sectionIdentifier' => 'section_identifier',
+        'blockName' => 'block_name',
+        'courseCode' => 'course_code',
         'cycles' => 'cycles',
     ];
 
@@ -196,11 +196,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'section_id' => 'setSectionId',
-        'course_title' => 'setCourseTitle',
-        'section_identifier' => 'setSectionIdentifier',
-        'block_name' => 'setBlockName',
-        'course_code' => 'setCourseCode',
+        'sectionId' => 'setSectionId',
+        'courseTitle' => 'setCourseTitle',
+        'sectionIdentifier' => 'setSectionIdentifier',
+        'blockName' => 'setBlockName',
+        'courseCode' => 'setCourseCode',
         'cycles' => 'setCycles',
     ];
 
@@ -210,11 +210,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'section_id' => 'getSectionId',
-        'course_title' => 'getCourseTitle',
-        'section_identifier' => 'getSectionIdentifier',
-        'block_name' => 'getBlockName',
-        'course_code' => 'getCourseCode',
+        'sectionId' => 'getSectionId',
+        'courseTitle' => 'getCourseTitle',
+        'sectionIdentifier' => 'getSectionIdentifier',
+        'blockName' => 'getBlockName',
+        'courseCode' => 'getCourseCode',
         'cycles' => 'getCycles',
     ];
 
@@ -275,11 +275,11 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('course_title', $data ?? [], null);
-        $this->setIfExists('section_identifier', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('courseTitle', $data ?? [], null);
+        $this->setIfExists('sectionIdentifier', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
         $this->setIfExists('cycles', $data ?? [], null);
     }
 
@@ -326,164 +326,164 @@ class SectionCycles implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The ID of the section
+     * @param int|null $sectionId The ID of the section
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            throw new \InvalidArgumentException('non-nullable section_id cannot be null');
+        if (is_null($sectionId)) {
+            throw new \InvalidArgumentException('non-nullable sectionId cannot be null');
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets course_title
+     * Gets courseTitle
      *
      * @return string|null
      */
     public function getCourseTitle()
     {
-        return $this->container['course_title'];
+        return $this->container['courseTitle'];
     }
 
     /**
-     * Sets course_title
+     * Sets courseTitle
      *
-     * @param string|null $course_title The name of the course
+     * @param string|null $courseTitle The name of the course
      *
      * @return self
      */
-    public function setCourseTitle($course_title)
+    public function setCourseTitle($courseTitle)
     {
-        if (is_null($course_title)) {
-            array_push($this->openAPINullablesSetToNull, 'course_title');
+        if (is_null($courseTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'courseTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_title', $nullablesSetToNull);
+            $index = array_search('courseTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_title'] = $course_title;
+        $this->container['courseTitle'] = $courseTitle;
 
         return $this;
     }
 
     /**
-     * Gets section_identifier
+     * Gets sectionIdentifier
      *
      * @return string|null
      */
     public function getSectionIdentifier()
     {
-        return $this->container['section_identifier'];
+        return $this->container['sectionIdentifier'];
     }
 
     /**
-     * Sets section_identifier
+     * Sets sectionIdentifier
      *
-     * @param string|null $section_identifier The section identifier
+     * @param string|null $sectionIdentifier The section identifier
      *
      * @return self
      */
-    public function setSectionIdentifier($section_identifier)
+    public function setSectionIdentifier($sectionIdentifier)
     {
-        if (is_null($section_identifier)) {
-            array_push($this->openAPINullablesSetToNull, 'section_identifier');
+        if (is_null($sectionIdentifier)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionIdentifier');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_identifier', $nullablesSetToNull);
+            $index = array_search('sectionIdentifier', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_identifier'] = $section_identifier;
+        $this->container['sectionIdentifier'] = $sectionIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name Name of the block to which this section belongs
+     * @param string|null $blockName Name of the block to which this section belongs
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code The course code
+     * @param string|null $courseCode The course code
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }

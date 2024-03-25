@@ -61,10 +61,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'headline' => 'string',
         'author' => 'string',
-        'short_description' => 'string',
-        'long_description' => 'string',
+        'shortDescription' => 'string',
+        'longDescription' => 'string',
         'featured' => 'bool',
-        'media_item' => '\SKY\School\Model\MediaItem[]',
+        'mediaItem' => '\SKY\School\Model\MediaItem[]',
         'categories' => '\SKY\School\Model\Category[]',
     ];
 
@@ -79,10 +79,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int32',
         'headline' => null,
         'author' => null,
-        'short_description' => null,
-        'long_description' => null,
+        'shortDescription' => null,
+        'longDescription' => null,
         'featured' => null,
-        'media_item' => null,
+        'mediaItem' => null,
         'categories' => null,
     ];
 
@@ -95,10 +95,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => true,
         'headline' => true,
         'author' => true,
-        'short_description' => true,
-        'long_description' => true,
+        'shortDescription' => true,
+        'longDescription' => true,
         'featured' => true,
-        'media_item' => true,
+        'mediaItem' => true,
         'categories' => true,
     ];
 
@@ -191,10 +191,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'headline' => 'headline',
         'author' => 'author',
-        'short_description' => 'short_description',
-        'long_description' => 'long_description',
+        'shortDescription' => 'short_description',
+        'longDescription' => 'long_description',
         'featured' => 'featured',
-        'media_item' => 'media_item',
+        'mediaItem' => 'media_item',
         'categories' => 'categories',
     ];
 
@@ -207,10 +207,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'headline' => 'setHeadline',
         'author' => 'setAuthor',
-        'short_description' => 'setShortDescription',
-        'long_description' => 'setLongDescription',
+        'shortDescription' => 'setShortDescription',
+        'longDescription' => 'setLongDescription',
         'featured' => 'setFeatured',
-        'media_item' => 'setMediaItem',
+        'mediaItem' => 'setMediaItem',
         'categories' => 'setCategories',
     ];
 
@@ -223,10 +223,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'headline' => 'getHeadline',
         'author' => 'getAuthor',
-        'short_description' => 'getShortDescription',
-        'long_description' => 'getLongDescription',
+        'shortDescription' => 'getShortDescription',
+        'longDescription' => 'getLongDescription',
         'featured' => 'getFeatured',
-        'media_item' => 'getMediaItem',
+        'mediaItem' => 'getMediaItem',
         'categories' => 'getCategories',
     ];
 
@@ -290,10 +290,10 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('headline', $data ?? [], null);
         $this->setIfExists('author', $data ?? [], null);
-        $this->setIfExists('short_description', $data ?? [], null);
-        $this->setIfExists('long_description', $data ?? [], null);
+        $this->setIfExists('shortDescription', $data ?? [], null);
+        $this->setIfExists('longDescription', $data ?? [], null);
         $this->setIfExists('featured', $data ?? [], null);
-        $this->setIfExists('media_item', $data ?? [], null);
+        $this->setIfExists('mediaItem', $data ?? [], null);
         $this->setIfExists('categories', $data ?? [], null);
     }
 
@@ -442,69 +442,69 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets short_description
+     * Gets shortDescription
      *
      * @return string|null
      */
     public function getShortDescription()
     {
-        return $this->container['short_description'];
+        return $this->container['shortDescription'];
     }
 
     /**
-     * Sets short_description
+     * Sets shortDescription
      *
-     * @param string|null $short_description The short description field for the new item
+     * @param string|null $shortDescription The short description field for the new item
      *
      * @return self
      */
-    public function setShortDescription($short_description)
+    public function setShortDescription($shortDescription)
     {
-        if (is_null($short_description)) {
-            array_push($this->openAPINullablesSetToNull, 'short_description');
+        if (is_null($shortDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'shortDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('short_description', $nullablesSetToNull);
+            $index = array_search('shortDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['short_description'] = $short_description;
+        $this->container['shortDescription'] = $shortDescription;
 
         return $this;
     }
 
     /**
-     * Gets long_description
+     * Gets longDescription
      *
      * @return string|null
      */
     public function getLongDescription()
     {
-        return $this->container['long_description'];
+        return $this->container['longDescription'];
     }
 
     /**
-     * Sets long_description
+     * Sets longDescription
      *
-     * @param string|null $long_description The long description field for the new item
+     * @param string|null $longDescription The long description field for the new item
      *
      * @return self
      */
-    public function setLongDescription($long_description)
+    public function setLongDescription($longDescription)
     {
-        if (is_null($long_description)) {
-            array_push($this->openAPINullablesSetToNull, 'long_description');
+        if (is_null($longDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'longDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('long_description', $nullablesSetToNull);
+            $index = array_search('longDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['long_description'] = $long_description;
+        $this->container['longDescription'] = $longDescription;
 
         return $this;
     }
@@ -544,35 +544,35 @@ class NewsItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets media_item
+     * Gets mediaItem
      *
      * @return \SKY\School\Model\MediaItem[]|null
      */
     public function getMediaItem()
     {
-        return $this->container['media_item'];
+        return $this->container['mediaItem'];
     }
 
     /**
-     * Sets media_item
+     * Sets mediaItem
      *
-     * @param \SKY\School\Model\MediaItem[]|null $media_item
+     * @param \SKY\School\Model\MediaItem[]|null $mediaItem
      *
      * @return self
      */
-    public function setMediaItem($media_item)
+    public function setMediaItem($mediaItem)
     {
-        if (is_null($media_item)) {
-            array_push($this->openAPINullablesSetToNull, 'media_item');
+        if (is_null($mediaItem)) {
+            array_push($this->openAPINullablesSetToNull, 'mediaItem');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('media_item', $nullablesSetToNull);
+            $index = array_search('mediaItem', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['media_item'] = $media_item;
+        $this->container['mediaItem'] = $mediaItem;
 
         return $this;
     }

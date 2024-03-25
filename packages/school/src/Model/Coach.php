@@ -59,10 +59,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'title' => 'string',
-        'preferred_name' => 'string',
+        'preferredName' => 'string',
     ];
 
     /**
@@ -74,10 +74,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
+        'firstName' => null,
+        'lastName' => null,
         'title' => null,
-        'preferred_name' => null,
+        'preferredName' => null,
     ];
 
     /**
@@ -87,10 +87,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'first_name' => true,
-        'last_name' => true,
+        'firstName' => true,
+        'lastName' => true,
         'title' => true,
-        'preferred_name' => true,
+        'preferredName' => true,
     ];
 
     /**
@@ -180,10 +180,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'title' => 'title',
-        'preferred_name' => 'preferred_name',
+        'preferredName' => 'preferred_name',
     ];
 
     /**
@@ -193,10 +193,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'title' => 'setTitle',
-        'preferred_name' => 'setPreferredName',
+        'preferredName' => 'setPreferredName',
     ];
 
     /**
@@ -206,10 +206,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'title' => 'getTitle',
-        'preferred_name' => 'getPreferredName',
+        'preferredName' => 'getPreferredName',
     ];
 
     /**
@@ -270,10 +270,10 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
     }
 
     /**
@@ -346,69 +346,69 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name Coach's first name
+     * @param string|null $firstName Coach's first name
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name Coach's last name
+     * @param string|null $lastName Coach's last name
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -448,35 +448,35 @@ class Coach implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name Preferred Name
+     * @param string|null $preferredName Preferred Name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }

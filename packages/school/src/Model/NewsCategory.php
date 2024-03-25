@@ -58,12 +58,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'category_id' => 'int',
-        'category_name' => 'string',
-        'association_id' => 'int',
-        'association_name' => 'string',
-        'rss_ind' => 'bool',
-        'rss_feed' => 'string',
+        'categoryId' => 'int',
+        'categoryName' => 'string',
+        'associationId' => 'int',
+        'associationName' => 'string',
+        'rssInd' => 'bool',
+        'rssFeed' => 'string',
     ];
 
     /**
@@ -74,12 +74,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'category_id' => 'int32',
-        'category_name' => null,
-        'association_id' => 'int32',
-        'association_name' => null,
-        'rss_ind' => null,
-        'rss_feed' => null,
+        'categoryId' => 'int32',
+        'categoryName' => null,
+        'associationId' => 'int32',
+        'associationName' => null,
+        'rssInd' => null,
+        'rssFeed' => null,
     ];
 
     /**
@@ -88,12 +88,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'category_id' => true,
-        'category_name' => true,
-        'association_id' => true,
-        'association_name' => true,
-        'rss_ind' => true,
-        'rss_feed' => true,
+        'categoryId' => true,
+        'categoryName' => true,
+        'associationId' => true,
+        'associationName' => true,
+        'rssInd' => true,
+        'rssFeed' => true,
     ];
 
     /**
@@ -182,12 +182,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'category_id' => 'category_id',
-        'category_name' => 'category_name',
-        'association_id' => 'association_id',
-        'association_name' => 'association_name',
-        'rss_ind' => 'rss_ind',
-        'rss_feed' => 'rss_feed',
+        'categoryId' => 'category_id',
+        'categoryName' => 'category_name',
+        'associationId' => 'association_id',
+        'associationName' => 'association_name',
+        'rssInd' => 'rss_ind',
+        'rssFeed' => 'rss_feed',
     ];
 
     /**
@@ -196,12 +196,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'category_id' => 'setCategoryId',
-        'category_name' => 'setCategoryName',
-        'association_id' => 'setAssociationId',
-        'association_name' => 'setAssociationName',
-        'rss_ind' => 'setRssInd',
-        'rss_feed' => 'setRssFeed',
+        'categoryId' => 'setCategoryId',
+        'categoryName' => 'setCategoryName',
+        'associationId' => 'setAssociationId',
+        'associationName' => 'setAssociationName',
+        'rssInd' => 'setRssInd',
+        'rssFeed' => 'setRssFeed',
     ];
 
     /**
@@ -210,12 +210,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'category_id' => 'getCategoryId',
-        'category_name' => 'getCategoryName',
-        'association_id' => 'getAssociationId',
-        'association_name' => 'getAssociationName',
-        'rss_ind' => 'getRssInd',
-        'rss_feed' => 'getRssFeed',
+        'categoryId' => 'getCategoryId',
+        'categoryName' => 'getCategoryName',
+        'associationId' => 'getAssociationId',
+        'associationName' => 'getAssociationName',
+        'rssInd' => 'getRssInd',
+        'rssFeed' => 'getRssFeed',
     ];
 
     /**
@@ -275,12 +275,12 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('category_id', $data ?? [], null);
-        $this->setIfExists('category_name', $data ?? [], null);
-        $this->setIfExists('association_id', $data ?? [], null);
-        $this->setIfExists('association_name', $data ?? [], null);
-        $this->setIfExists('rss_ind', $data ?? [], null);
-        $this->setIfExists('rss_feed', $data ?? [], null);
+        $this->setIfExists('categoryId', $data ?? [], null);
+        $this->setIfExists('categoryName', $data ?? [], null);
+        $this->setIfExists('associationId', $data ?? [], null);
+        $this->setIfExists('associationName', $data ?? [], null);
+        $this->setIfExists('rssInd', $data ?? [], null);
+        $this->setIfExists('rssFeed', $data ?? [], null);
     }
 
     /**
@@ -326,205 +326,205 @@ class NewsCategory implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets category_id
+     * Gets categoryId
      *
      * @return int|null
      */
     public function getCategoryId()
     {
-        return $this->container['category_id'];
+        return $this->container['categoryId'];
     }
 
     /**
-     * Sets category_id
+     * Sets categoryId
      *
-     * @param int|null $category_id
+     * @param int|null $categoryId
      *
      * @return self
      */
-    public function setCategoryId($category_id)
+    public function setCategoryId($categoryId)
     {
-        if (is_null($category_id)) {
-            array_push($this->openAPINullablesSetToNull, 'category_id');
+        if (is_null($categoryId)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_id', $nullablesSetToNull);
+            $index = array_search('categoryId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_id'] = $category_id;
+        $this->container['categoryId'] = $categoryId;
 
         return $this;
     }
 
     /**
-     * Gets category_name
+     * Gets categoryName
      *
      * @return string|null
      */
     public function getCategoryName()
     {
-        return $this->container['category_name'];
+        return $this->container['categoryName'];
     }
 
     /**
-     * Sets category_name
+     * Sets categoryName
      *
-     * @param string|null $category_name
+     * @param string|null $categoryName
      *
      * @return self
      */
-    public function setCategoryName($category_name)
+    public function setCategoryName($categoryName)
     {
-        if (is_null($category_name)) {
-            array_push($this->openAPINullablesSetToNull, 'category_name');
+        if (is_null($categoryName)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_name', $nullablesSetToNull);
+            $index = array_search('categoryName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_name'] = $category_name;
+        $this->container['categoryName'] = $categoryName;
 
         return $this;
     }
 
     /**
-     * Gets association_id
+     * Gets associationId
      *
      * @return int|null
      */
     public function getAssociationId()
     {
-        return $this->container['association_id'];
+        return $this->container['associationId'];
     }
 
     /**
-     * Sets association_id
+     * Sets associationId
      *
-     * @param int|null $association_id
+     * @param int|null $associationId
      *
      * @return self
      */
-    public function setAssociationId($association_id)
+    public function setAssociationId($associationId)
     {
-        if (is_null($association_id)) {
-            array_push($this->openAPINullablesSetToNull, 'association_id');
+        if (is_null($associationId)) {
+            array_push($this->openAPINullablesSetToNull, 'associationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('association_id', $nullablesSetToNull);
+            $index = array_search('associationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['association_id'] = $association_id;
+        $this->container['associationId'] = $associationId;
 
         return $this;
     }
 
     /**
-     * Gets association_name
+     * Gets associationName
      *
      * @return string|null
      */
     public function getAssociationName()
     {
-        return $this->container['association_name'];
+        return $this->container['associationName'];
     }
 
     /**
-     * Sets association_name
+     * Sets associationName
      *
-     * @param string|null $association_name
+     * @param string|null $associationName
      *
      * @return self
      */
-    public function setAssociationName($association_name)
+    public function setAssociationName($associationName)
     {
-        if (is_null($association_name)) {
-            array_push($this->openAPINullablesSetToNull, 'association_name');
+        if (is_null($associationName)) {
+            array_push($this->openAPINullablesSetToNull, 'associationName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('association_name', $nullablesSetToNull);
+            $index = array_search('associationName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['association_name'] = $association_name;
+        $this->container['associationName'] = $associationName;
 
         return $this;
     }
 
     /**
-     * Gets rss_ind
+     * Gets rssInd
      *
      * @return bool|null
      */
     public function getRssInd()
     {
-        return $this->container['rss_ind'];
+        return $this->container['rssInd'];
     }
 
     /**
-     * Sets rss_ind
+     * Sets rssInd
      *
-     * @param bool|null $rss_ind
+     * @param bool|null $rssInd
      *
      * @return self
      */
-    public function setRssInd($rss_ind)
+    public function setRssInd($rssInd)
     {
-        if (is_null($rss_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'rss_ind');
+        if (is_null($rssInd)) {
+            array_push($this->openAPINullablesSetToNull, 'rssInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rss_ind', $nullablesSetToNull);
+            $index = array_search('rssInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rss_ind'] = $rss_ind;
+        $this->container['rssInd'] = $rssInd;
 
         return $this;
     }
 
     /**
-     * Gets rss_feed
+     * Gets rssFeed
      *
      * @return string|null
      */
     public function getRssFeed()
     {
-        return $this->container['rss_feed'];
+        return $this->container['rssFeed'];
     }
 
     /**
-     * Sets rss_feed
+     * Sets rssFeed
      *
-     * @param string|null $rss_feed
+     * @param string|null $rssFeed
      *
      * @return self
      */
-    public function setRssFeed($rss_feed)
+    public function setRssFeed($rssFeed)
     {
-        if (is_null($rss_feed)) {
-            array_push($this->openAPINullablesSetToNull, 'rss_feed');
+        if (is_null($rssFeed)) {
+            array_push($this->openAPINullablesSetToNull, 'rssFeed');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rss_feed', $nullablesSetToNull);
+            $index = array_search('rssFeed', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rss_feed'] = $rss_feed;
+        $this->container['rssFeed'] = $rssFeed;
 
         return $this;
     }

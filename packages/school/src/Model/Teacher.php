@@ -63,10 +63,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'firstname' => 'string',
         'lastname' => 'string',
-        'preferred_name' => 'string',
-        'formatted_name' => 'string',
+        'preferredName' => 'string',
+        'formattedName' => 'string',
         'email' => 'string',
-        'cell_phone' => 'string',
+        'cellPhone' => 'string',
     ];
 
     /**
@@ -82,10 +82,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'firstname' => null,
         'lastname' => null,
-        'preferred_name' => null,
-        'formatted_name' => null,
+        'preferredName' => null,
+        'formattedName' => null,
         'email' => null,
-        'cell_phone' => null,
+        'cellPhone' => null,
     ];
 
     /**
@@ -99,10 +99,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => true,
         'firstname' => true,
         'lastname' => true,
-        'preferred_name' => true,
-        'formatted_name' => true,
+        'preferredName' => true,
+        'formattedName' => true,
         'email' => true,
-        'cell_phone' => true,
+        'cellPhone' => true,
     ];
 
     /**
@@ -196,10 +196,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'firstname' => 'firstname',
         'lastname' => 'lastname',
-        'preferred_name' => 'preferred_name',
-        'formatted_name' => 'formatted_name',
+        'preferredName' => 'preferred_name',
+        'formattedName' => 'formatted_name',
         'email' => 'email',
-        'cell_phone' => 'cell_phone',
+        'cellPhone' => 'cell_phone',
     ];
 
     /**
@@ -213,10 +213,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'firstname' => 'setFirstname',
         'lastname' => 'setLastname',
-        'preferred_name' => 'setPreferredName',
-        'formatted_name' => 'setFormattedName',
+        'preferredName' => 'setPreferredName',
+        'formattedName' => 'setFormattedName',
         'email' => 'setEmail',
-        'cell_phone' => 'setCellPhone',
+        'cellPhone' => 'setCellPhone',
     ];
 
     /**
@@ -230,10 +230,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'firstname' => 'getFirstname',
         'lastname' => 'getLastname',
-        'preferred_name' => 'getPreferredName',
-        'formatted_name' => 'getFormattedName',
+        'preferredName' => 'getPreferredName',
+        'formattedName' => 'getFormattedName',
         'email' => 'getEmail',
-        'cell_phone' => 'getCellPhone',
+        'cellPhone' => 'getCellPhone',
     ];
 
     /**
@@ -298,10 +298,10 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('firstname', $data ?? [], null);
         $this->setIfExists('lastname', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
-        $this->setIfExists('formatted_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
+        $this->setIfExists('formattedName', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('cell_phone', $data ?? [], null);
+        $this->setIfExists('cellPhone', $data ?? [], null);
     }
 
     /**
@@ -517,69 +517,69 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The teachers preferred name
+     * @param string|null $preferredName The teachers preferred name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
 
     /**
-     * Gets formatted_name
+     * Gets formattedName
      *
      * @return string|null
      */
     public function getFormattedName()
     {
-        return $this->container['formatted_name'];
+        return $this->container['formattedName'];
     }
 
     /**
-     * Sets formatted_name
+     * Sets formattedName
      *
-     * @param string|null $formatted_name The formatted name of the teacher.  If the teacher has a preferred name, it is used in place of the first name.
+     * @param string|null $formattedName The formatted name of the teacher.  If the teacher has a preferred name, it is used in place of the first name.
      *
      * @return self
      */
-    public function setFormattedName($formatted_name)
+    public function setFormattedName($formattedName)
     {
-        if (is_null($formatted_name)) {
-            array_push($this->openAPINullablesSetToNull, 'formatted_name');
+        if (is_null($formattedName)) {
+            array_push($this->openAPINullablesSetToNull, 'formattedName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('formatted_name', $nullablesSetToNull);
+            $index = array_search('formattedName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['formatted_name'] = $formatted_name;
+        $this->container['formattedName'] = $formattedName;
 
         return $this;
     }
@@ -619,35 +619,35 @@ class Teacher implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets cell_phone
+     * Gets cellPhone
      *
      * @return string|null
      */
     public function getCellPhone()
     {
-        return $this->container['cell_phone'];
+        return $this->container['cellPhone'];
     }
 
     /**
-     * Sets cell_phone
+     * Sets cellPhone
      *
-     * @param string|null $cell_phone The teacher's cellular phone
+     * @param string|null $cellPhone The teacher's cellular phone
      *
      * @return self
      */
-    public function setCellPhone($cell_phone)
+    public function setCellPhone($cellPhone)
     {
-        if (is_null($cell_phone)) {
-            array_push($this->openAPINullablesSetToNull, 'cell_phone');
+        if (is_null($cellPhone)) {
+            array_push($this->openAPINullablesSetToNull, 'cellPhone');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cell_phone', $nullablesSetToNull);
+            $index = array_search('cellPhone', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cell_phone'] = $cell_phone;
+        $this->container['cellPhone'] = $cellPhone;
 
         return $this;
     }

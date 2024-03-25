@@ -58,8 +58,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'photo_url' => 'string',
-        'thumbnail_url' => 'string',
+        'photoUrl' => 'string',
+        'thumbnailUrl' => 'string',
     ];
 
     /**
@@ -70,8 +70,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'photo_url' => null,
-        'thumbnail_url' => null,
+        'photoUrl' => null,
+        'thumbnailUrl' => null,
     ];
 
     /**
@@ -80,8 +80,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'photo_url' => true,
-        'thumbnail_url' => true,
+        'photoUrl' => true,
+        'thumbnailUrl' => true,
     ];
 
     /**
@@ -170,8 +170,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'photo_url' => 'photo_url',
-        'thumbnail_url' => 'thumbnail_url',
+        'photoUrl' => 'photo_url',
+        'thumbnailUrl' => 'thumbnail_url',
     ];
 
     /**
@@ -180,8 +180,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'photo_url' => 'setPhotoUrl',
-        'thumbnail_url' => 'setThumbnailUrl',
+        'photoUrl' => 'setPhotoUrl',
+        'thumbnailUrl' => 'setThumbnailUrl',
     ];
 
     /**
@@ -190,8 +190,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'photo_url' => 'getPhotoUrl',
-        'thumbnail_url' => 'getThumbnailUrl',
+        'photoUrl' => 'getPhotoUrl',
+        'thumbnailUrl' => 'getThumbnailUrl',
     ];
 
     /**
@@ -251,8 +251,8 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('photo_url', $data ?? [], null);
-        $this->setIfExists('thumbnail_url', $data ?? [], null);
+        $this->setIfExists('photoUrl', $data ?? [], null);
+        $this->setIfExists('thumbnailUrl', $data ?? [], null);
     }
 
     /**
@@ -298,69 +298,69 @@ class UserProfilePhoto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets photo_url
+     * Gets photoUrl
      *
      * @return string|null
      */
     public function getPhotoUrl()
     {
-        return $this->container['photo_url'];
+        return $this->container['photoUrl'];
     }
 
     /**
-     * Sets photo_url
+     * Sets photoUrl
      *
-     * @param string|null $photo_url The photo url of the user.
+     * @param string|null $photoUrl The photo url of the user.
      *
      * @return self
      */
-    public function setPhotoUrl($photo_url)
+    public function setPhotoUrl($photoUrl)
     {
-        if (is_null($photo_url)) {
-            array_push($this->openAPINullablesSetToNull, 'photo_url');
+        if (is_null($photoUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'photoUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('photo_url', $nullablesSetToNull);
+            $index = array_search('photoUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['photo_url'] = $photo_url;
+        $this->container['photoUrl'] = $photoUrl;
 
         return $this;
     }
 
     /**
-     * Gets thumbnail_url
+     * Gets thumbnailUrl
      *
      * @return string|null
      */
     public function getThumbnailUrl()
     {
-        return $this->container['thumbnail_url'];
+        return $this->container['thumbnailUrl'];
     }
 
     /**
-     * Sets thumbnail_url
+     * Sets thumbnailUrl
      *
-     * @param string|null $thumbnail_url The thumbnail url of the user.
+     * @param string|null $thumbnailUrl The thumbnail url of the user.
      *
      * @return self
      */
-    public function setThumbnailUrl($thumbnail_url)
+    public function setThumbnailUrl($thumbnailUrl)
     {
-        if (is_null($thumbnail_url)) {
-            array_push($this->openAPINullablesSetToNull, 'thumbnail_url');
+        if (is_null($thumbnailUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'thumbnailUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('thumbnail_url', $nullablesSetToNull);
+            $index = array_search('thumbnailUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['thumbnail_url'] = $thumbnail_url;
+        $this->container['thumbnailUrl'] = $thumbnailUrl;
 
         return $this;
     }

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **degree** | **string** | The degree or diploma earned. | [optional]
 **major** | **string** | The major declared for the degree. | [optional]
 **field** | **string** | The field of study at the school. | [optional]
-**grad_year** | **int** | The graduation year. | [optional]
-**sort_order** | **int** | The order to list the school. | [optional]
+**gradYear** | **int** | The graduation year. | [optional]
+**sortOrder** | **int** | The order to list the school. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

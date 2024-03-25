@@ -60,7 +60,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'in_use' => 'bool',
+        'inUse' => 'bool',
     ];
 
     /**
@@ -73,7 +73,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'in_use' => null,
+        'inUse' => null,
     ];
 
     /**
@@ -84,7 +84,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'in_use' => true,
+        'inUse' => true,
     ];
 
     /**
@@ -175,7 +175,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'in_use' => 'in_use',
+        'inUse' => 'in_use',
     ];
 
     /**
@@ -186,7 +186,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'in_use' => 'setInUse',
+        'inUse' => 'setInUse',
     ];
 
     /**
@@ -197,7 +197,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'in_use' => 'getInUse',
+        'inUse' => 'getInUse',
     ];
 
     /**
@@ -259,7 +259,7 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('in_use', $data ?? [], null);
+        $this->setIfExists('inUse', $data ?? [], null);
     }
 
     /**
@@ -373,35 +373,35 @@ class OpponentFlyweight implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets in_use
+     * Gets inUse
      *
      * @return bool|null
      */
     public function getInUse()
     {
-        return $this->container['in_use'];
+        return $this->container['inUse'];
     }
 
     /**
-     * Sets in_use
+     * Sets inUse
      *
-     * @param bool|null $in_use indicates of the opponent is currently being used
+     * @param bool|null $inUse indicates of the opponent is currently being used
      *
      * @return self
      */
-    public function setInUse($in_use)
+    public function setInUse($inUse)
     {
-        if (is_null($in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'in_use');
+        if (is_null($inUse)) {
+            array_push($this->openAPINullablesSetToNull, 'inUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('in_use', $nullablesSetToNull);
+            $index = array_search('inUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['in_use'] = $in_use;
+        $this->container['inUse'] = $inUse;
 
         return $this;
     }

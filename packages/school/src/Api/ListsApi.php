@@ -130,18 +130,18 @@ class ListsApi
      *
      * List Single
      *
-     * @param  int $list_id Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
+     * @param  int $listId Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
      * @param  int $page Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. (optional, default to 1)
-     * @param  int $page_size Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
+     * @param  int $pageSize Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1ListsAdvancedByListIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\ListResult
      */
-    public function v1ListsAdvancedByListIdGet($list_id, $page = 1, $page_size = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
+    public function v1ListsAdvancedByListIdGet($listId, $page = 1, $pageSize = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
     {
-        [$response] = $this->v1ListsAdvancedByListIdGetWithHttpInfo($list_id, $page, $page_size, $contentType);
+        [$response] = $this->v1ListsAdvancedByListIdGetWithHttpInfo($listId, $page, $pageSize, $contentType);
         return $response;
     }
 
@@ -150,18 +150,18 @@ class ListsApi
      *
      * List Single
      *
-     * @param  int $list_id Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
+     * @param  int $listId Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
      * @param  int $page Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. (optional, default to 1)
-     * @param  int $page_size Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
+     * @param  int $pageSize Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1ListsAdvancedByListIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\ListResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1ListsAdvancedByListIdGetWithHttpInfo($list_id, $page = 1, $page_size = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
+    public function v1ListsAdvancedByListIdGetWithHttpInfo($listId, $page = 1, $pageSize = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
     {
-        $request = $this->v1ListsAdvancedByListIdGetRequest($list_id, $page, $page_size, $contentType);
+        $request = $this->v1ListsAdvancedByListIdGetRequest($listId, $page, $pageSize, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -276,17 +276,17 @@ class ListsApi
      *
      * List Single
      *
-     * @param  int $list_id Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
+     * @param  int $listId Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
      * @param  int $page Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. (optional, default to 1)
-     * @param  int $page_size Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
+     * @param  int $pageSize Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1ListsAdvancedByListIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1ListsAdvancedByListIdGetAsync($list_id, $page = 1, $page_size = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
+    public function v1ListsAdvancedByListIdGetAsync($listId, $page = 1, $pageSize = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
     {
-        return $this->v1ListsAdvancedByListIdGetAsyncWithHttpInfo($list_id, $page, $page_size, $contentType)
+        return $this->v1ListsAdvancedByListIdGetAsyncWithHttpInfo($listId, $page, $pageSize, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,18 +299,18 @@ class ListsApi
      *
      * List Single
      *
-     * @param  int $list_id Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
+     * @param  int $listId Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
      * @param  int $page Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. (optional, default to 1)
-     * @param  int $page_size Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
+     * @param  int $pageSize Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1ListsAdvancedByListIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1ListsAdvancedByListIdGetAsyncWithHttpInfo($list_id, $page = 1, $page_size = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
+    public function v1ListsAdvancedByListIdGetAsyncWithHttpInfo($listId, $page = 1, $pageSize = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
     {
         $returnType = '\SKY\School\Model\ListResult';
-        $request = $this->v1ListsAdvancedByListIdGetRequest($list_id, $page, $page_size, $contentType);
+        $request = $this->v1ListsAdvancedByListIdGetRequest($listId, $page, $pageSize, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -351,21 +351,21 @@ class ListsApi
     /**
      * Create request for operation 'v1ListsAdvancedByListIdGet'
      *
-     * @param  int $list_id Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
+     * @param  int $listId Format - int32. The ID of the list. To learn how to find the list ID, see &lt;a href&#x3D;\&quot;https://kb.blackbaud.com/articles/Article/108336\&quot; target&#x3D;\&quot;_blank\&quot;&gt;KB article 108336&lt;/a&gt;. (required)
      * @param  int $page Format - int32. The number of the page to return. Defaults to &lt;b&gt;1&lt;/b&gt;. (optional, default to 1)
-     * @param  int $page_size Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
+     * @param  int $pageSize Format - int32. Number of rows to return per page. Default is 1000. Maximum allowed is 1000. (optional, default to 1000)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1ListsAdvancedByListIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1ListsAdvancedByListIdGetRequest($list_id, $page = 1, $page_size = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
+    public function v1ListsAdvancedByListIdGetRequest($listId, $page = 1, $pageSize = 1000, string $contentType = self::contentTypes['v1ListsAdvancedByListIdGet'][0])
     {
 
-        // verify the required parameter 'list_id' is set
-        if ($list_id === null || (is_array($list_id) && count($list_id) === 0)) {
+        // verify the required parameter 'listId' is set
+        if ($listId === null || (is_array($listId) && count($listId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $list_id when calling v1ListsAdvancedByListIdGet'
+                'Missing the required parameter $listId when calling v1ListsAdvancedByListIdGet'
             );
         }
 
@@ -390,7 +390,7 @@ class ListsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $page_size,
+            $pageSize,
             'page_size', // param base name
             'integer', // openApiType
             'form', // style
@@ -400,10 +400,10 @@ class ListsApi
 
 
         // path params
-        if ($list_id !== null) {
+        if ($listId !== null) {
             $resourcePath = str_replace(
                 '{' . 'list_id' . '}',
-                ObjectSerializer::toPathValue($list_id),
+                ObjectSerializer::toPathValue($listId),
                 $resourcePath
             );
         }

@@ -270,7 +270,7 @@ This endpoint does not need any parameter.
 ## `v1TypesTablevaluesGet()`
 
 ```php
-v1TypesTablevaluesGet($table_id, $table_name, $include_inactive): \SKY\School\Model\TableValueCollection
+v1TypesTablevaluesGet($tableId, $tableName, $includeInactive): \SKY\School\Model\TableValueCollection
 ```
 
 Types table values (BETA)
@@ -301,12 +301,12 @@ $apiInstance = new SKY\School\Api\TypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$table_id = 0; // int | Format - int32. The ID of the table type. The tableId is returned by <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\">Types table types</a> or from the settings area for the table within Blackbaud Education Management.
-$table_name = 'table_name_example'; // string | The name of the table type. The name is returned by <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\">Types table types</a> or from the settings area for the table within Blackbaud Education Management.
-$include_inactive = false; // bool | If set to true, returns inactive items for the table. Defaults to false.
+$tableId = 0; // int | Format - int32. The ID of the table type. The tableId is returned by <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\">Types table types</a> or from the settings area for the table within Blackbaud Education Management.
+$tableName = 'tableName_example'; // string | The name of the table type. The name is returned by <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\">Types table types</a> or from the settings area for the table within Blackbaud Education Management.
+$includeInactive = false; // bool | If set to true, returns inactive items for the table. Defaults to false.
 
 try {
-    $result = $apiInstance->v1TypesTablevaluesGet($table_id, $table_name, $include_inactive);
+    $result = $apiInstance->v1TypesTablevaluesGet($tableId, $tableName, $includeInactive);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TypesApi->v1TypesTablevaluesGet: ', $e->getMessage(), PHP_EOL;
@@ -317,9 +317,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **table_id** | **int**| Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. | [optional] [default to 0] |
-| **table_name** | **string**| The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. | [optional] |
-| **include_inactive** | **bool**| If set to true, returns inactive items for the table. Defaults to false. | [optional] [default to false] |
+| **tableId** | **int**| Format - int32. The ID of the table type. The tableId is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. | [optional] [default to 0] |
+| **tableName** | **string**| The name of the table type. The name is returned by &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1TypesTablesGet\&quot;&gt;Types table types&lt;/a&gt; or from the settings area for the table within Blackbaud Education Management. | [optional] |
+| **includeInactive** | **bool**| If set to true, returns inactive items for the table. Defaults to false. | [optional] [default to false] |
 
 ### Return type
 

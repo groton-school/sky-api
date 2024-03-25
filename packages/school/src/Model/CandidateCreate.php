@@ -58,10 +58,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'entering_year' => 'string',
-        'entering_grade_id' => 'int',
-        'checklist_id' => 'int',
+        'userId' => 'int',
+        'enteringYear' => 'string',
+        'enteringGradeId' => 'int',
+        'checklistId' => 'int',
     ];
 
     /**
@@ -72,10 +72,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'entering_year' => null,
-        'entering_grade_id' => 'int32',
-        'checklist_id' => 'int32',
+        'userId' => 'int32',
+        'enteringYear' => null,
+        'enteringGradeId' => 'int32',
+        'checklistId' => 'int32',
     ];
 
     /**
@@ -84,10 +84,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
-        'entering_year' => false,
-        'entering_grade_id' => false,
-        'checklist_id' => false,
+        'userId' => false,
+        'enteringYear' => false,
+        'enteringGradeId' => false,
+        'checklistId' => false,
     ];
 
     /**
@@ -176,10 +176,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'entering_year' => 'entering_year',
-        'entering_grade_id' => 'entering_grade_id',
-        'checklist_id' => 'checklist_id',
+        'userId' => 'user_id',
+        'enteringYear' => 'entering_year',
+        'enteringGradeId' => 'entering_grade_id',
+        'checklistId' => 'checklist_id',
     ];
 
     /**
@@ -188,10 +188,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'entering_year' => 'setEnteringYear',
-        'entering_grade_id' => 'setEnteringGradeId',
-        'checklist_id' => 'setChecklistId',
+        'userId' => 'setUserId',
+        'enteringYear' => 'setEnteringYear',
+        'enteringGradeId' => 'setEnteringGradeId',
+        'checklistId' => 'setChecklistId',
     ];
 
     /**
@@ -200,10 +200,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'entering_year' => 'getEnteringYear',
-        'entering_grade_id' => 'getEnteringGradeId',
-        'checklist_id' => 'getChecklistId',
+        'userId' => 'getUserId',
+        'enteringYear' => 'getEnteringYear',
+        'enteringGradeId' => 'getEnteringGradeId',
+        'checklistId' => 'getChecklistId',
     ];
 
     /**
@@ -263,10 +263,10 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('entering_year', $data ?? [], null);
-        $this->setIfExists('entering_grade_id', $data ?? [], null);
-        $this->setIfExists('checklist_id', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('enteringYear', $data ?? [], null);
+        $this->setIfExists('enteringGradeId', $data ?? [], null);
+        $this->setIfExists('checklistId', $data ?? [], null);
     }
 
     /**
@@ -296,17 +296,17 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['user_id'] === null) {
-            $invalidProperties[] = "'user_id' can't be null";
+        if ($this->container['userId'] === null) {
+            $invalidProperties[] = "'userId' can't be null";
         }
-        if ($this->container['entering_year'] === null) {
-            $invalidProperties[] = "'entering_year' can't be null";
+        if ($this->container['enteringYear'] === null) {
+            $invalidProperties[] = "'enteringYear' can't be null";
         }
-        if ($this->container['entering_grade_id'] === null) {
-            $invalidProperties[] = "'entering_grade_id' can't be null";
+        if ($this->container['enteringGradeId'] === null) {
+            $invalidProperties[] = "'enteringGradeId' can't be null";
         }
-        if ($this->container['checklist_id'] === null) {
-            $invalidProperties[] = "'checklist_id' can't be null";
+        if ($this->container['checklistId'] === null) {
+            $invalidProperties[] = "'checklistId' can't be null";
         }
         return $invalidProperties;
     }
@@ -324,109 +324,109 @@ class CandidateCreate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int $user_id ID for the user to be added as a candidate.
+     * @param int $userId ID for the user to be added as a candidate.
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets entering_year
+     * Gets enteringYear
      *
      * @return string
      */
     public function getEnteringYear()
     {
-        return $this->container['entering_year'];
+        return $this->container['enteringYear'];
     }
 
     /**
-     * Sets entering_year
+     * Sets enteringYear
      *
-     * @param string $entering_year The year for which the user is a candidate
+     * @param string $enteringYear The year for which the user is a candidate
      *
      * @return self
      */
-    public function setEnteringYear($entering_year)
+    public function setEnteringYear($enteringYear)
     {
-        if (is_null($entering_year)) {
-            throw new \InvalidArgumentException('non-nullable entering_year cannot be null');
+        if (is_null($enteringYear)) {
+            throw new \InvalidArgumentException('non-nullable enteringYear cannot be null');
         }
-        $this->container['entering_year'] = $entering_year;
+        $this->container['enteringYear'] = $enteringYear;
 
         return $this;
     }
 
     /**
-     * Gets entering_grade_id
+     * Gets enteringGradeId
      *
      * @return int
      */
     public function getEnteringGradeId()
     {
-        return $this->container['entering_grade_id'];
+        return $this->container['enteringGradeId'];
     }
 
     /**
-     * Sets entering_grade_id
+     * Sets enteringGradeId
      *
-     * @param int $entering_grade_id The ID for the grade in which the candidate is entering
+     * @param int $enteringGradeId The ID for the grade in which the candidate is entering
      *
      * @return self
      */
-    public function setEnteringGradeId($entering_grade_id)
+    public function setEnteringGradeId($enteringGradeId)
     {
-        if (is_null($entering_grade_id)) {
-            throw new \InvalidArgumentException('non-nullable entering_grade_id cannot be null');
+        if (is_null($enteringGradeId)) {
+            throw new \InvalidArgumentException('non-nullable enteringGradeId cannot be null');
         }
-        $this->container['entering_grade_id'] = $entering_grade_id;
+        $this->container['enteringGradeId'] = $enteringGradeId;
 
         return $this;
     }
 
     /**
-     * Gets checklist_id
+     * Gets checklistId
      *
      * @return int
      */
     public function getChecklistId()
     {
-        return $this->container['checklist_id'];
+        return $this->container['checklistId'];
     }
 
     /**
-     * Sets checklist_id
+     * Sets checklistId
      *
-     * @param int $checklist_id ID of the checklist to be updated as part of candidates creation
+     * @param int $checklistId ID of the checklist to be updated as part of candidates creation
      *
      * @return self
      */
-    public function setChecklistId($checklist_id)
+    public function setChecklistId($checklistId)
     {
-        if (is_null($checklist_id)) {
-            throw new \InvalidArgumentException('non-nullable checklist_id cannot be null');
+        if (is_null($checklistId)) {
+            throw new \InvalidArgumentException('non-nullable checklistId cannot be null');
         }
-        $this->container['checklist_id'] = $checklist_id;
+        $this->container['checklistId'] = $checklistId;
 
         return $this;
     }

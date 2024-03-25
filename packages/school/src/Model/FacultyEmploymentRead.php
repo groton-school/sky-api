@@ -58,16 +58,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'date_appointed' => '\DateTime',
-        'date_departed' => '\DateTime',
-        'school_levels' => 'string',
-        'employee_roles' => 'string',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'dateAppointed' => '\DateTime',
+        'dateDeparted' => '\DateTime',
+        'schoolLevels' => 'string',
+        'employeeRoles' => 'string',
         'departments' => 'string',
-        'grade_levels' => 'string',
-        'main_sports' => 'string',
+        'gradeLevels' => 'string',
+        'mainSports' => 'string',
     ];
 
     /**
@@ -78,16 +78,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'date_appointed' => 'date-time',
-        'date_departed' => 'date-time',
-        'school_levels' => null,
-        'employee_roles' => null,
+        'userId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
+        'dateAppointed' => 'date-time',
+        'dateDeparted' => 'date-time',
+        'schoolLevels' => null,
+        'employeeRoles' => null,
         'departments' => null,
-        'grade_levels' => null,
-        'main_sports' => null,
+        'gradeLevels' => null,
+        'mainSports' => null,
     ];
 
     /**
@@ -96,16 +96,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'date_appointed' => true,
-        'date_departed' => true,
-        'school_levels' => true,
-        'employee_roles' => true,
+        'userId' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'dateAppointed' => true,
+        'dateDeparted' => true,
+        'schoolLevels' => true,
+        'employeeRoles' => true,
         'departments' => true,
-        'grade_levels' => true,
-        'main_sports' => true,
+        'gradeLevels' => true,
+        'mainSports' => true,
     ];
 
     /**
@@ -194,16 +194,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'date_appointed' => 'date_appointed',
-        'date_departed' => 'date_departed',
-        'school_levels' => 'school_levels',
-        'employee_roles' => 'employee_roles',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'dateAppointed' => 'date_appointed',
+        'dateDeparted' => 'date_departed',
+        'schoolLevels' => 'school_levels',
+        'employeeRoles' => 'employee_roles',
         'departments' => 'departments',
-        'grade_levels' => 'grade_levels',
-        'main_sports' => 'main_sports',
+        'gradeLevels' => 'grade_levels',
+        'mainSports' => 'main_sports',
     ];
 
     /**
@@ -212,16 +212,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'date_appointed' => 'setDateAppointed',
-        'date_departed' => 'setDateDeparted',
-        'school_levels' => 'setSchoolLevels',
-        'employee_roles' => 'setEmployeeRoles',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'dateAppointed' => 'setDateAppointed',
+        'dateDeparted' => 'setDateDeparted',
+        'schoolLevels' => 'setSchoolLevels',
+        'employeeRoles' => 'setEmployeeRoles',
         'departments' => 'setDepartments',
-        'grade_levels' => 'setGradeLevels',
-        'main_sports' => 'setMainSports',
+        'gradeLevels' => 'setGradeLevels',
+        'mainSports' => 'setMainSports',
     ];
 
     /**
@@ -230,16 +230,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'date_appointed' => 'getDateAppointed',
-        'date_departed' => 'getDateDeparted',
-        'school_levels' => 'getSchoolLevels',
-        'employee_roles' => 'getEmployeeRoles',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'dateAppointed' => 'getDateAppointed',
+        'dateDeparted' => 'getDateDeparted',
+        'schoolLevels' => 'getSchoolLevels',
+        'employeeRoles' => 'getEmployeeRoles',
         'departments' => 'getDepartments',
-        'grade_levels' => 'getGradeLevels',
-        'main_sports' => 'getMainSports',
+        'gradeLevels' => 'getGradeLevels',
+        'mainSports' => 'getMainSports',
     ];
 
     /**
@@ -299,16 +299,16 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('date_appointed', $data ?? [], null);
-        $this->setIfExists('date_departed', $data ?? [], null);
-        $this->setIfExists('school_levels', $data ?? [], null);
-        $this->setIfExists('employee_roles', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('dateAppointed', $data ?? [], null);
+        $this->setIfExists('dateDeparted', $data ?? [], null);
+        $this->setIfExists('schoolLevels', $data ?? [], null);
+        $this->setIfExists('employeeRoles', $data ?? [], null);
         $this->setIfExists('departments', $data ?? [], null);
-        $this->setIfExists('grade_levels', $data ?? [], null);
-        $this->setIfExists('main_sports', $data ?? [], null);
+        $this->setIfExists('gradeLevels', $data ?? [], null);
+        $this->setIfExists('mainSports', $data ?? [], null);
     }
 
     /**
@@ -354,239 +354,239 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The users Id
+     * @param int|null $userId The users Id
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The users first name
+     * @param string|null $firstName The users first name
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The users last name
+     * @param string|null $lastName The users last name
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets date_appointed
+     * Gets dateAppointed
      *
      * @return \DateTime|null
      */
     public function getDateAppointed()
     {
-        return $this->container['date_appointed'];
+        return $this->container['dateAppointed'];
     }
 
     /**
-     * Sets date_appointed
+     * Sets dateAppointed
      *
-     * @param \DateTime|null $date_appointed The date user was appointed
+     * @param \DateTime|null $dateAppointed The date user was appointed
      *
      * @return self
      */
-    public function setDateAppointed($date_appointed)
+    public function setDateAppointed($dateAppointed)
     {
-        if (is_null($date_appointed)) {
-            array_push($this->openAPINullablesSetToNull, 'date_appointed');
+        if (is_null($dateAppointed)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAppointed');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_appointed', $nullablesSetToNull);
+            $index = array_search('dateAppointed', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_appointed'] = $date_appointed;
+        $this->container['dateAppointed'] = $dateAppointed;
 
         return $this;
     }
 
     /**
-     * Gets date_departed
+     * Gets dateDeparted
      *
      * @return \DateTime|null
      */
     public function getDateDeparted()
     {
-        return $this->container['date_departed'];
+        return $this->container['dateDeparted'];
     }
 
     /**
-     * Sets date_departed
+     * Sets dateDeparted
      *
-     * @param \DateTime|null $date_departed Date the user departed (if they have departed)
+     * @param \DateTime|null $dateDeparted Date the user departed (if they have departed)
      *
      * @return self
      */
-    public function setDateDeparted($date_departed)
+    public function setDateDeparted($dateDeparted)
     {
-        if (is_null($date_departed)) {
-            array_push($this->openAPINullablesSetToNull, 'date_departed');
+        if (is_null($dateDeparted)) {
+            array_push($this->openAPINullablesSetToNull, 'dateDeparted');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_departed', $nullablesSetToNull);
+            $index = array_search('dateDeparted', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_departed'] = $date_departed;
+        $this->container['dateDeparted'] = $dateDeparted;
 
         return $this;
     }
 
     /**
-     * Gets school_levels
+     * Gets schoolLevels
      *
      * @return string|null
      */
     public function getSchoolLevels()
     {
-        return $this->container['school_levels'];
+        return $this->container['schoolLevels'];
     }
 
     /**
-     * Sets school_levels
+     * Sets schoolLevels
      *
-     * @param string|null $school_levels A comma delimited list of schools this user is associated with.
+     * @param string|null $schoolLevels A comma delimited list of schools this user is associated with.
      *
      * @return self
      */
-    public function setSchoolLevels($school_levels)
+    public function setSchoolLevels($schoolLevels)
     {
-        if (is_null($school_levels)) {
-            array_push($this->openAPINullablesSetToNull, 'school_levels');
+        if (is_null($schoolLevels)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolLevels');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_levels', $nullablesSetToNull);
+            $index = array_search('schoolLevels', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_levels'] = $school_levels;
+        $this->container['schoolLevels'] = $schoolLevels;
 
         return $this;
     }
 
     /**
-     * Gets employee_roles
+     * Gets employeeRoles
      *
      * @return string|null
      */
     public function getEmployeeRoles()
     {
-        return $this->container['employee_roles'];
+        return $this->container['employeeRoles'];
     }
 
     /**
-     * Sets employee_roles
+     * Sets employeeRoles
      *
-     * @param string|null $employee_roles A comma delimited list of employee roles this user is associated with.
+     * @param string|null $employeeRoles A comma delimited list of employee roles this user is associated with.
      *
      * @return self
      */
-    public function setEmployeeRoles($employee_roles)
+    public function setEmployeeRoles($employeeRoles)
     {
-        if (is_null($employee_roles)) {
-            array_push($this->openAPINullablesSetToNull, 'employee_roles');
+        if (is_null($employeeRoles)) {
+            array_push($this->openAPINullablesSetToNull, 'employeeRoles');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('employee_roles', $nullablesSetToNull);
+            $index = array_search('employeeRoles', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['employee_roles'] = $employee_roles;
+        $this->container['employeeRoles'] = $employeeRoles;
 
         return $this;
     }
@@ -626,69 +626,69 @@ class FacultyEmploymentRead implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets grade_levels
+     * Gets gradeLevels
      *
      * @return string|null
      */
     public function getGradeLevels()
     {
-        return $this->container['grade_levels'];
+        return $this->container['gradeLevels'];
     }
 
     /**
-     * Sets grade_levels
+     * Sets gradeLevels
      *
-     * @param string|null $grade_levels A comma delimited list of grade levels this user is associated with.
+     * @param string|null $gradeLevels A comma delimited list of grade levels this user is associated with.
      *
      * @return self
      */
-    public function setGradeLevels($grade_levels)
+    public function setGradeLevels($gradeLevels)
     {
-        if (is_null($grade_levels)) {
-            array_push($this->openAPINullablesSetToNull, 'grade_levels');
+        if (is_null($gradeLevels)) {
+            array_push($this->openAPINullablesSetToNull, 'gradeLevels');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grade_levels', $nullablesSetToNull);
+            $index = array_search('gradeLevels', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grade_levels'] = $grade_levels;
+        $this->container['gradeLevels'] = $gradeLevels;
 
         return $this;
     }
 
     /**
-     * Gets main_sports
+     * Gets mainSports
      *
      * @return string|null
      */
     public function getMainSports()
     {
-        return $this->container['main_sports'];
+        return $this->container['mainSports'];
     }
 
     /**
-     * Sets main_sports
+     * Sets mainSports
      *
-     * @param string|null $main_sports A comma delimited list of sports this user is associated with.
+     * @param string|null $mainSports A comma delimited list of sports this user is associated with.
      *
      * @return self
      */
-    public function setMainSports($main_sports)
+    public function setMainSports($mainSports)
     {
-        if (is_null($main_sports)) {
-            array_push($this->openAPINullablesSetToNull, 'main_sports');
+        if (is_null($mainSports)) {
+            array_push($this->openAPINullablesSetToNull, 'mainSports');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('main_sports', $nullablesSetToNull);
+            $index = array_search('mainSports', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['main_sports'] = $main_sports;
+        $this->container['mainSports'] = $mainSports;
 
         return $this;
     }

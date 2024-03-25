@@ -60,9 +60,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'description' => 'string',
-        'calendar_url' => 'string',
-        'include_brief_description' => 'bool',
-        'include_long_description' => 'bool',
+        'calendarUrl' => 'string',
+        'includeBriefDescription' => 'bool',
+        'includeLongDescription' => 'bool',
         'public' => 'bool',
         'roles' => 'int[]',
     ];
@@ -77,9 +77,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'description' => null,
-        'calendar_url' => null,
-        'include_brief_description' => null,
-        'include_long_description' => null,
+        'calendarUrl' => null,
+        'includeBriefDescription' => null,
+        'includeLongDescription' => null,
         'public' => null,
         'roles' => 'int32',
     ];
@@ -92,9 +92,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'description' => true,
-        'calendar_url' => true,
-        'include_brief_description' => true,
-        'include_long_description' => true,
+        'calendarUrl' => true,
+        'includeBriefDescription' => true,
+        'includeLongDescription' => true,
         'public' => true,
         'roles' => true,
     ];
@@ -187,9 +187,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'description' => 'description',
-        'calendar_url' => 'calendar_url',
-        'include_brief_description' => 'include_brief_description',
-        'include_long_description' => 'include_long_description',
+        'calendarUrl' => 'calendar_url',
+        'includeBriefDescription' => 'include_brief_description',
+        'includeLongDescription' => 'include_long_description',
         'public' => 'public',
         'roles' => 'roles',
     ];
@@ -202,9 +202,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'description' => 'setDescription',
-        'calendar_url' => 'setCalendarUrl',
-        'include_brief_description' => 'setIncludeBriefDescription',
-        'include_long_description' => 'setIncludeLongDescription',
+        'calendarUrl' => 'setCalendarUrl',
+        'includeBriefDescription' => 'setIncludeBriefDescription',
+        'includeLongDescription' => 'setIncludeLongDescription',
         'public' => 'setPublic',
         'roles' => 'setRoles',
     ];
@@ -217,9 +217,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'description' => 'getDescription',
-        'calendar_url' => 'getCalendarUrl',
-        'include_brief_description' => 'getIncludeBriefDescription',
-        'include_long_description' => 'getIncludeLongDescription',
+        'calendarUrl' => 'getCalendarUrl',
+        'includeBriefDescription' => 'getIncludeBriefDescription',
+        'includeLongDescription' => 'getIncludeLongDescription',
         'public' => 'getPublic',
         'roles' => 'getRoles',
     ];
@@ -283,9 +283,9 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('calendar_url', $data ?? [], null);
-        $this->setIfExists('include_brief_description', $data ?? [], null);
-        $this->setIfExists('include_long_description', $data ?? [], null);
+        $this->setIfExists('calendarUrl', $data ?? [], null);
+        $this->setIfExists('includeBriefDescription', $data ?? [], null);
+        $this->setIfExists('includeLongDescription', $data ?? [], null);
         $this->setIfExists('public', $data ?? [], null);
         $this->setIfExists('roles', $data ?? [], null);
     }
@@ -394,103 +394,103 @@ class EventCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets calendar_url
+     * Gets calendarUrl
      *
      * @return string|null
      */
     public function getCalendarUrl()
     {
-        return $this->container['calendar_url'];
+        return $this->container['calendarUrl'];
     }
 
     /**
-     * Sets calendar_url
+     * Sets calendarUrl
      *
-     * @param string|null $calendar_url The URL of the ICS feed used to populate the event category
+     * @param string|null $calendarUrl The URL of the ICS feed used to populate the event category
      *
      * @return self
      */
-    public function setCalendarUrl($calendar_url)
+    public function setCalendarUrl($calendarUrl)
     {
-        if (is_null($calendar_url)) {
-            array_push($this->openAPINullablesSetToNull, 'calendar_url');
+        if (is_null($calendarUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'calendarUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('calendar_url', $nullablesSetToNull);
+            $index = array_search('calendarUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['calendar_url'] = $calendar_url;
+        $this->container['calendarUrl'] = $calendarUrl;
 
         return $this;
     }
 
     /**
-     * Gets include_brief_description
+     * Gets includeBriefDescription
      *
      * @return bool|null
      */
     public function getIncludeBriefDescription()
     {
-        return $this->container['include_brief_description'];
+        return $this->container['includeBriefDescription'];
     }
 
     /**
-     * Sets include_brief_description
+     * Sets includeBriefDescription
      *
-     * @param bool|null $include_brief_description If set to True, brief description is included in events in the category
+     * @param bool|null $includeBriefDescription If set to True, brief description is included in events in the category
      *
      * @return self
      */
-    public function setIncludeBriefDescription($include_brief_description)
+    public function setIncludeBriefDescription($includeBriefDescription)
     {
-        if (is_null($include_brief_description)) {
-            array_push($this->openAPINullablesSetToNull, 'include_brief_description');
+        if (is_null($includeBriefDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'includeBriefDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('include_brief_description', $nullablesSetToNull);
+            $index = array_search('includeBriefDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['include_brief_description'] = $include_brief_description;
+        $this->container['includeBriefDescription'] = $includeBriefDescription;
 
         return $this;
     }
 
     /**
-     * Gets include_long_description
+     * Gets includeLongDescription
      *
      * @return bool|null
      */
     public function getIncludeLongDescription()
     {
-        return $this->container['include_long_description'];
+        return $this->container['includeLongDescription'];
     }
 
     /**
-     * Sets include_long_description
+     * Sets includeLongDescription
      *
-     * @param bool|null $include_long_description If set to True, long description is included in events in the category
+     * @param bool|null $includeLongDescription If set to True, long description is included in events in the category
      *
      * @return self
      */
-    public function setIncludeLongDescription($include_long_description)
+    public function setIncludeLongDescription($includeLongDescription)
     {
-        if (is_null($include_long_description)) {
-            array_push($this->openAPINullablesSetToNull, 'include_long_description');
+        if (is_null($includeLongDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'includeLongDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('include_long_description', $nullablesSetToNull);
+            $index = array_search('includeLongDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['include_long_description'] = $include_long_description;
+        $this->container['includeLongDescription'] = $includeLongDescription;
 
         return $this;
     }

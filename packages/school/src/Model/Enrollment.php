@@ -59,35 +59,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'begin_date' => '\DateTime',
-        'block_id' => 'int',
-        'block_name' => 'string',
+        'beginDate' => '\DateTime',
+        'blockId' => 'int',
+        'blockName' => 'string',
         'blocks' => 'bool',
-        'building_name' => 'string',
-        'changed_sections' => 'int',
-        'course_code' => 'string',
-        'course_length' => 'int',
-        'course_title' => 'string',
+        'buildingName' => 'string',
+        'changedSections' => 'int',
+        'courseCode' => 'string',
+        'courseLength' => 'int',
+        'courseTitle' => 'string',
         'departments' => '\SKY\School\Model\Department[]',
         'distinction' => 'string',
         'dropped' => 'int',
-        'duration_begin_date' => '\DateTime',
-        'duration_description' => 'string',
-        'duration_end_date' => '\DateTime',
-        'duration_id' => 'int',
-        'duration_name' => 'string',
-        'end_date' => '\DateTime',
-        'faculty_first_name' => 'string',
-        'faculty_last_name' => 'string',
-        'level_number' => 'int',
-        'offering_description' => 'string',
-        'offering_id' => 'int',
-        'offering_type_id' => 'int',
-        'room_id' => 'int',
-        'room_name' => 'string',
-        'room_number' => 'string',
-        'school_year' => 'string',
-        'section_identifier' => 'string',
+        'durationBeginDate' => '\DateTime',
+        'durationDescription' => 'string',
+        'durationEndDate' => '\DateTime',
+        'durationId' => 'int',
+        'durationName' => 'string',
+        'endDate' => '\DateTime',
+        'facultyFirstName' => 'string',
+        'facultyLastName' => 'string',
+        'levelNumber' => 'int',
+        'offeringDescription' => 'string',
+        'offeringId' => 'int',
+        'offeringTypeId' => 'int',
+        'roomId' => 'int',
+        'roomName' => 'string',
+        'roomNumber' => 'string',
+        'schoolYear' => 'string',
+        'sectionIdentifier' => 'string',
     ];
 
     /**
@@ -99,35 +99,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'begin_date' => 'date-time',
-        'block_id' => 'int32',
-        'block_name' => null,
+        'beginDate' => 'date-time',
+        'blockId' => 'int32',
+        'blockName' => null,
         'blocks' => null,
-        'building_name' => null,
-        'changed_sections' => 'int32',
-        'course_code' => null,
-        'course_length' => 'int32',
-        'course_title' => null,
+        'buildingName' => null,
+        'changedSections' => 'int32',
+        'courseCode' => null,
+        'courseLength' => 'int32',
+        'courseTitle' => null,
         'departments' => null,
         'distinction' => null,
         'dropped' => 'int32',
-        'duration_begin_date' => 'date-time',
-        'duration_description' => null,
-        'duration_end_date' => 'date-time',
-        'duration_id' => 'int32',
-        'duration_name' => null,
-        'end_date' => 'date-time',
-        'faculty_first_name' => null,
-        'faculty_last_name' => null,
-        'level_number' => 'int32',
-        'offering_description' => null,
-        'offering_id' => 'int32',
-        'offering_type_id' => 'int32',
-        'room_id' => 'int32',
-        'room_name' => null,
-        'room_number' => null,
-        'school_year' => null,
-        'section_identifier' => null,
+        'durationBeginDate' => 'date-time',
+        'durationDescription' => null,
+        'durationEndDate' => 'date-time',
+        'durationId' => 'int32',
+        'durationName' => null,
+        'endDate' => 'date-time',
+        'facultyFirstName' => null,
+        'facultyLastName' => null,
+        'levelNumber' => 'int32',
+        'offeringDescription' => null,
+        'offeringId' => 'int32',
+        'offeringTypeId' => 'int32',
+        'roomId' => 'int32',
+        'roomName' => null,
+        'roomNumber' => null,
+        'schoolYear' => null,
+        'sectionIdentifier' => null,
     ];
 
     /**
@@ -137,35 +137,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'begin_date' => false,
-        'block_id' => true,
-        'block_name' => true,
+        'beginDate' => false,
+        'blockId' => true,
+        'blockName' => true,
         'blocks' => false,
-        'building_name' => true,
-        'changed_sections' => true,
-        'course_code' => true,
-        'course_length' => true,
-        'course_title' => true,
+        'buildingName' => true,
+        'changedSections' => true,
+        'courseCode' => true,
+        'courseLength' => true,
+        'courseTitle' => true,
         'departments' => true,
         'distinction' => true,
         'dropped' => true,
-        'duration_begin_date' => false,
-        'duration_description' => true,
-        'duration_end_date' => false,
-        'duration_id' => false,
-        'duration_name' => true,
-        'end_date' => false,
-        'faculty_first_name' => true,
-        'faculty_last_name' => true,
-        'level_number' => false,
-        'offering_description' => true,
-        'offering_id' => true,
-        'offering_type_id' => true,
-        'room_id' => true,
-        'room_name' => true,
-        'room_number' => true,
-        'school_year' => true,
-        'section_identifier' => true,
+        'durationBeginDate' => false,
+        'durationDescription' => true,
+        'durationEndDate' => false,
+        'durationId' => false,
+        'durationName' => true,
+        'endDate' => false,
+        'facultyFirstName' => true,
+        'facultyLastName' => true,
+        'levelNumber' => false,
+        'offeringDescription' => true,
+        'offeringId' => true,
+        'offeringTypeId' => true,
+        'roomId' => true,
+        'roomName' => true,
+        'roomNumber' => true,
+        'schoolYear' => true,
+        'sectionIdentifier' => true,
     ];
 
     /**
@@ -255,35 +255,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'begin_date' => 'begin_date',
-        'block_id' => 'block_id',
-        'block_name' => 'block_name',
+        'beginDate' => 'begin_date',
+        'blockId' => 'block_id',
+        'blockName' => 'block_name',
         'blocks' => 'blocks',
-        'building_name' => 'building_name',
-        'changed_sections' => 'changed_sections',
-        'course_code' => 'course_code',
-        'course_length' => 'course_length',
-        'course_title' => 'course_title',
+        'buildingName' => 'building_name',
+        'changedSections' => 'changed_sections',
+        'courseCode' => 'course_code',
+        'courseLength' => 'course_length',
+        'courseTitle' => 'course_title',
         'departments' => 'departments',
         'distinction' => 'distinction',
         'dropped' => 'dropped',
-        'duration_begin_date' => 'duration_begin_date',
-        'duration_description' => 'duration_description',
-        'duration_end_date' => 'duration_end_date',
-        'duration_id' => 'duration_id',
-        'duration_name' => 'duration_name',
-        'end_date' => 'end_date',
-        'faculty_first_name' => 'faculty_first_name',
-        'faculty_last_name' => 'faculty_last_name',
-        'level_number' => 'level_number',
-        'offering_description' => 'offering_description',
-        'offering_id' => 'offering_id',
-        'offering_type_id' => 'offering_type_id',
-        'room_id' => 'room_id',
-        'room_name' => 'room_name',
-        'room_number' => 'room_number',
-        'school_year' => 'school_year',
-        'section_identifier' => 'section_identifier',
+        'durationBeginDate' => 'duration_begin_date',
+        'durationDescription' => 'duration_description',
+        'durationEndDate' => 'duration_end_date',
+        'durationId' => 'duration_id',
+        'durationName' => 'duration_name',
+        'endDate' => 'end_date',
+        'facultyFirstName' => 'faculty_first_name',
+        'facultyLastName' => 'faculty_last_name',
+        'levelNumber' => 'level_number',
+        'offeringDescription' => 'offering_description',
+        'offeringId' => 'offering_id',
+        'offeringTypeId' => 'offering_type_id',
+        'roomId' => 'room_id',
+        'roomName' => 'room_name',
+        'roomNumber' => 'room_number',
+        'schoolYear' => 'school_year',
+        'sectionIdentifier' => 'section_identifier',
     ];
 
     /**
@@ -293,35 +293,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'begin_date' => 'setBeginDate',
-        'block_id' => 'setBlockId',
-        'block_name' => 'setBlockName',
+        'beginDate' => 'setBeginDate',
+        'blockId' => 'setBlockId',
+        'blockName' => 'setBlockName',
         'blocks' => 'setBlocks',
-        'building_name' => 'setBuildingName',
-        'changed_sections' => 'setChangedSections',
-        'course_code' => 'setCourseCode',
-        'course_length' => 'setCourseLength',
-        'course_title' => 'setCourseTitle',
+        'buildingName' => 'setBuildingName',
+        'changedSections' => 'setChangedSections',
+        'courseCode' => 'setCourseCode',
+        'courseLength' => 'setCourseLength',
+        'courseTitle' => 'setCourseTitle',
         'departments' => 'setDepartments',
         'distinction' => 'setDistinction',
         'dropped' => 'setDropped',
-        'duration_begin_date' => 'setDurationBeginDate',
-        'duration_description' => 'setDurationDescription',
-        'duration_end_date' => 'setDurationEndDate',
-        'duration_id' => 'setDurationId',
-        'duration_name' => 'setDurationName',
-        'end_date' => 'setEndDate',
-        'faculty_first_name' => 'setFacultyFirstName',
-        'faculty_last_name' => 'setFacultyLastName',
-        'level_number' => 'setLevelNumber',
-        'offering_description' => 'setOfferingDescription',
-        'offering_id' => 'setOfferingId',
-        'offering_type_id' => 'setOfferingTypeId',
-        'room_id' => 'setRoomId',
-        'room_name' => 'setRoomName',
-        'room_number' => 'setRoomNumber',
-        'school_year' => 'setSchoolYear',
-        'section_identifier' => 'setSectionIdentifier',
+        'durationBeginDate' => 'setDurationBeginDate',
+        'durationDescription' => 'setDurationDescription',
+        'durationEndDate' => 'setDurationEndDate',
+        'durationId' => 'setDurationId',
+        'durationName' => 'setDurationName',
+        'endDate' => 'setEndDate',
+        'facultyFirstName' => 'setFacultyFirstName',
+        'facultyLastName' => 'setFacultyLastName',
+        'levelNumber' => 'setLevelNumber',
+        'offeringDescription' => 'setOfferingDescription',
+        'offeringId' => 'setOfferingId',
+        'offeringTypeId' => 'setOfferingTypeId',
+        'roomId' => 'setRoomId',
+        'roomName' => 'setRoomName',
+        'roomNumber' => 'setRoomNumber',
+        'schoolYear' => 'setSchoolYear',
+        'sectionIdentifier' => 'setSectionIdentifier',
     ];
 
     /**
@@ -331,35 +331,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'begin_date' => 'getBeginDate',
-        'block_id' => 'getBlockId',
-        'block_name' => 'getBlockName',
+        'beginDate' => 'getBeginDate',
+        'blockId' => 'getBlockId',
+        'blockName' => 'getBlockName',
         'blocks' => 'getBlocks',
-        'building_name' => 'getBuildingName',
-        'changed_sections' => 'getChangedSections',
-        'course_code' => 'getCourseCode',
-        'course_length' => 'getCourseLength',
-        'course_title' => 'getCourseTitle',
+        'buildingName' => 'getBuildingName',
+        'changedSections' => 'getChangedSections',
+        'courseCode' => 'getCourseCode',
+        'courseLength' => 'getCourseLength',
+        'courseTitle' => 'getCourseTitle',
         'departments' => 'getDepartments',
         'distinction' => 'getDistinction',
         'dropped' => 'getDropped',
-        'duration_begin_date' => 'getDurationBeginDate',
-        'duration_description' => 'getDurationDescription',
-        'duration_end_date' => 'getDurationEndDate',
-        'duration_id' => 'getDurationId',
-        'duration_name' => 'getDurationName',
-        'end_date' => 'getEndDate',
-        'faculty_first_name' => 'getFacultyFirstName',
-        'faculty_last_name' => 'getFacultyLastName',
-        'level_number' => 'getLevelNumber',
-        'offering_description' => 'getOfferingDescription',
-        'offering_id' => 'getOfferingId',
-        'offering_type_id' => 'getOfferingTypeId',
-        'room_id' => 'getRoomId',
-        'room_name' => 'getRoomName',
-        'room_number' => 'getRoomNumber',
-        'school_year' => 'getSchoolYear',
-        'section_identifier' => 'getSectionIdentifier',
+        'durationBeginDate' => 'getDurationBeginDate',
+        'durationDescription' => 'getDurationDescription',
+        'durationEndDate' => 'getDurationEndDate',
+        'durationId' => 'getDurationId',
+        'durationName' => 'getDurationName',
+        'endDate' => 'getEndDate',
+        'facultyFirstName' => 'getFacultyFirstName',
+        'facultyLastName' => 'getFacultyLastName',
+        'levelNumber' => 'getLevelNumber',
+        'offeringDescription' => 'getOfferingDescription',
+        'offeringId' => 'getOfferingId',
+        'offeringTypeId' => 'getOfferingTypeId',
+        'roomId' => 'getRoomId',
+        'roomName' => 'getRoomName',
+        'roomNumber' => 'getRoomNumber',
+        'schoolYear' => 'getSchoolYear',
+        'sectionIdentifier' => 'getSectionIdentifier',
     ];
 
     /**
@@ -420,35 +420,35 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('block_id', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
         $this->setIfExists('blocks', $data ?? [], null);
-        $this->setIfExists('building_name', $data ?? [], null);
-        $this->setIfExists('changed_sections', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
-        $this->setIfExists('course_length', $data ?? [], null);
-        $this->setIfExists('course_title', $data ?? [], null);
+        $this->setIfExists('buildingName', $data ?? [], null);
+        $this->setIfExists('changedSections', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
+        $this->setIfExists('courseLength', $data ?? [], null);
+        $this->setIfExists('courseTitle', $data ?? [], null);
         $this->setIfExists('departments', $data ?? [], null);
         $this->setIfExists('distinction', $data ?? [], null);
         $this->setIfExists('dropped', $data ?? [], null);
-        $this->setIfExists('duration_begin_date', $data ?? [], null);
-        $this->setIfExists('duration_description', $data ?? [], null);
-        $this->setIfExists('duration_end_date', $data ?? [], null);
-        $this->setIfExists('duration_id', $data ?? [], null);
-        $this->setIfExists('duration_name', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('faculty_first_name', $data ?? [], null);
-        $this->setIfExists('faculty_last_name', $data ?? [], null);
-        $this->setIfExists('level_number', $data ?? [], null);
-        $this->setIfExists('offering_description', $data ?? [], null);
-        $this->setIfExists('offering_id', $data ?? [], null);
-        $this->setIfExists('offering_type_id', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('room_name', $data ?? [], null);
-        $this->setIfExists('room_number', $data ?? [], null);
-        $this->setIfExists('school_year', $data ?? [], null);
-        $this->setIfExists('section_identifier', $data ?? [], null);
+        $this->setIfExists('durationBeginDate', $data ?? [], null);
+        $this->setIfExists('durationDescription', $data ?? [], null);
+        $this->setIfExists('durationEndDate', $data ?? [], null);
+        $this->setIfExists('durationId', $data ?? [], null);
+        $this->setIfExists('durationName', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
+        $this->setIfExists('facultyFirstName', $data ?? [], null);
+        $this->setIfExists('facultyLastName', $data ?? [], null);
+        $this->setIfExists('levelNumber', $data ?? [], null);
+        $this->setIfExists('offeringDescription', $data ?? [], null);
+        $this->setIfExists('offeringId', $data ?? [], null);
+        $this->setIfExists('offeringTypeId', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('roomName', $data ?? [], null);
+        $this->setIfExists('roomNumber', $data ?? [], null);
+        $this->setIfExists('schoolYear', $data ?? [], null);
+        $this->setIfExists('sectionIdentifier', $data ?? [], null);
     }
 
     /**
@@ -528,96 +528,96 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date The begin date of the course. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $beginDate The begin date of the course. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            throw new \InvalidArgumentException('non-nullable begin_date cannot be null');
+        if (is_null($beginDate)) {
+            throw new \InvalidArgumentException('non-nullable beginDate cannot be null');
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id The block ID for a section
+     * @param int|null $blockId The block ID for a section
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_id');
+        if (is_null($blockId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_id', $nullablesSetToNull);
+            $index = array_search('blockId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name The block name for a section
+     * @param string|null $blockName The block name for a section
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
@@ -650,171 +650,171 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets building_name
+     * Gets buildingName
      *
      * @return string|null
      */
     public function getBuildingName()
     {
-        return $this->container['building_name'];
+        return $this->container['buildingName'];
     }
 
     /**
-     * Sets building_name
+     * Sets buildingName
      *
-     * @param string|null $building_name The building name
+     * @param string|null $buildingName The building name
      *
      * @return self
      */
-    public function setBuildingName($building_name)
+    public function setBuildingName($buildingName)
     {
-        if (is_null($building_name)) {
-            array_push($this->openAPINullablesSetToNull, 'building_name');
+        if (is_null($buildingName)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_name', $nullablesSetToNull);
+            $index = array_search('buildingName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_name'] = $building_name;
+        $this->container['buildingName'] = $buildingName;
 
         return $this;
     }
 
     /**
-     * Gets changed_sections
+     * Gets changedSections
      *
      * @return int|null
      */
     public function getChangedSections()
     {
-        return $this->container['changed_sections'];
+        return $this->container['changedSections'];
     }
 
     /**
-     * Sets changed_sections
+     * Sets changedSections
      *
-     * @param int|null $changed_sections changed sections
+     * @param int|null $changedSections changed sections
      *
      * @return self
      */
-    public function setChangedSections($changed_sections)
+    public function setChangedSections($changedSections)
     {
-        if (is_null($changed_sections)) {
-            array_push($this->openAPINullablesSetToNull, 'changed_sections');
+        if (is_null($changedSections)) {
+            array_push($this->openAPINullablesSetToNull, 'changedSections');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('changed_sections', $nullablesSetToNull);
+            $index = array_search('changedSections', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['changed_sections'] = $changed_sections;
+        $this->container['changedSections'] = $changedSections;
 
         return $this;
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code The identifier used to reference a course; the Course Code is a user-entered value
+     * @param string|null $courseCode The identifier used to reference a course; the Course Code is a user-entered value
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }
 
     /**
-     * Gets course_length
+     * Gets courseLength
      *
      * @return int|null
      */
     public function getCourseLength()
     {
-        return $this->container['course_length'];
+        return $this->container['courseLength'];
     }
 
     /**
-     * Sets course_length
+     * Sets courseLength
      *
-     * @param int|null $course_length The length of a course
+     * @param int|null $courseLength The length of a course
      *
      * @return self
      */
-    public function setCourseLength($course_length)
+    public function setCourseLength($courseLength)
     {
-        if (is_null($course_length)) {
-            array_push($this->openAPINullablesSetToNull, 'course_length');
+        if (is_null($courseLength)) {
+            array_push($this->openAPINullablesSetToNull, 'courseLength');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_length', $nullablesSetToNull);
+            $index = array_search('courseLength', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_length'] = $course_length;
+        $this->container['courseLength'] = $courseLength;
 
         return $this;
     }
 
     /**
-     * Gets course_title
+     * Gets courseTitle
      *
      * @return string|null
      */
     public function getCourseTitle()
     {
-        return $this->container['course_title'];
+        return $this->container['courseTitle'];
     }
 
     /**
-     * Sets course_title
+     * Sets courseTitle
      *
-     * @param string|null $course_title The title of the course
+     * @param string|null $courseTitle The title of the course
      *
      * @return self
      */
-    public function setCourseTitle($course_title)
+    public function setCourseTitle($courseTitle)
     {
-        if (is_null($course_title)) {
-            array_push($this->openAPINullablesSetToNull, 'course_title');
+        if (is_null($courseTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'courseTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_title', $nullablesSetToNull);
+            $index = array_search('courseTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_title'] = $course_title;
+        $this->container['courseTitle'] = $courseTitle;
 
         return $this;
     }
@@ -922,544 +922,544 @@ class Enrollment implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets duration_begin_date
+     * Gets durationBeginDate
      *
      * @return \DateTime|null
      */
     public function getDurationBeginDate()
     {
-        return $this->container['duration_begin_date'];
+        return $this->container['durationBeginDate'];
     }
 
     /**
-     * Sets duration_begin_date
+     * Sets durationBeginDate
      *
-     * @param \DateTime|null $duration_begin_date The begin date of the duration. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $durationBeginDate The begin date of the duration. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setDurationBeginDate($duration_begin_date)
+    public function setDurationBeginDate($durationBeginDate)
     {
-        if (is_null($duration_begin_date)) {
-            throw new \InvalidArgumentException('non-nullable duration_begin_date cannot be null');
+        if (is_null($durationBeginDate)) {
+            throw new \InvalidArgumentException('non-nullable durationBeginDate cannot be null');
         }
-        $this->container['duration_begin_date'] = $duration_begin_date;
+        $this->container['durationBeginDate'] = $durationBeginDate;
 
         return $this;
     }
 
     /**
-     * Gets duration_description
+     * Gets durationDescription
      *
      * @return string|null
      */
     public function getDurationDescription()
     {
-        return $this->container['duration_description'];
+        return $this->container['durationDescription'];
     }
 
     /**
-     * Sets duration_description
+     * Sets durationDescription
      *
-     * @param string|null $duration_description The description of the starting term of the section
+     * @param string|null $durationDescription The description of the starting term of the section
      *
      * @return self
      */
-    public function setDurationDescription($duration_description)
+    public function setDurationDescription($durationDescription)
     {
-        if (is_null($duration_description)) {
-            array_push($this->openAPINullablesSetToNull, 'duration_description');
+        if (is_null($durationDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'durationDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('duration_description', $nullablesSetToNull);
+            $index = array_search('durationDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['duration_description'] = $duration_description;
+        $this->container['durationDescription'] = $durationDescription;
 
         return $this;
     }
 
     /**
-     * Gets duration_end_date
+     * Gets durationEndDate
      *
      * @return \DateTime|null
      */
     public function getDurationEndDate()
     {
-        return $this->container['duration_end_date'];
+        return $this->container['durationEndDate'];
     }
 
     /**
-     * Sets duration_end_date
+     * Sets durationEndDate
      *
-     * @param \DateTime|null $duration_end_date The end date of the duration. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $durationEndDate The end date of the duration. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setDurationEndDate($duration_end_date)
+    public function setDurationEndDate($durationEndDate)
     {
-        if (is_null($duration_end_date)) {
-            throw new \InvalidArgumentException('non-nullable duration_end_date cannot be null');
+        if (is_null($durationEndDate)) {
+            throw new \InvalidArgumentException('non-nullable durationEndDate cannot be null');
         }
-        $this->container['duration_end_date'] = $duration_end_date;
+        $this->container['durationEndDate'] = $durationEndDate;
 
         return $this;
     }
 
     /**
-     * Gets duration_id
+     * Gets durationId
      *
      * @return int|null
      */
     public function getDurationId()
     {
-        return $this->container['duration_id'];
+        return $this->container['durationId'];
     }
 
     /**
-     * Sets duration_id
+     * Sets durationId
      *
-     * @param int|null $duration_id The duration ID for a section
+     * @param int|null $durationId The duration ID for a section
      *
      * @return self
      */
-    public function setDurationId($duration_id)
+    public function setDurationId($durationId)
     {
-        if (is_null($duration_id)) {
-            throw new \InvalidArgumentException('non-nullable duration_id cannot be null');
+        if (is_null($durationId)) {
+            throw new \InvalidArgumentException('non-nullable durationId cannot be null');
         }
-        $this->container['duration_id'] = $duration_id;
+        $this->container['durationId'] = $durationId;
 
         return $this;
     }
 
     /**
-     * Gets duration_name
+     * Gets durationName
      *
      * @return string|null
      */
     public function getDurationName()
     {
-        return $this->container['duration_name'];
+        return $this->container['durationName'];
     }
 
     /**
-     * Sets duration_name
+     * Sets durationName
      *
-     * @param string|null $duration_name The starting term of the section
+     * @param string|null $durationName The starting term of the section
      *
      * @return self
      */
-    public function setDurationName($duration_name)
+    public function setDurationName($durationName)
     {
-        if (is_null($duration_name)) {
-            array_push($this->openAPINullablesSetToNull, 'duration_name');
+        if (is_null($durationName)) {
+            array_push($this->openAPINullablesSetToNull, 'durationName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('duration_name', $nullablesSetToNull);
+            $index = array_search('durationName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['duration_name'] = $duration_name;
+        $this->container['durationName'] = $durationName;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date The end date of the course. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $endDate The end date of the course. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            throw new \InvalidArgumentException('non-nullable end_date cannot be null');
+        if (is_null($endDate)) {
+            throw new \InvalidArgumentException('non-nullable endDate cannot be null');
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * Gets faculty_first_name
+     * Gets facultyFirstName
      *
      * @return string|null
      */
     public function getFacultyFirstName()
     {
-        return $this->container['faculty_first_name'];
+        return $this->container['facultyFirstName'];
     }
 
     /**
-     * Sets faculty_first_name
+     * Sets facultyFirstName
      *
-     * @param string|null $faculty_first_name The first name of the head teacher
+     * @param string|null $facultyFirstName The first name of the head teacher
      *
      * @return self
      */
-    public function setFacultyFirstName($faculty_first_name)
+    public function setFacultyFirstName($facultyFirstName)
     {
-        if (is_null($faculty_first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_first_name');
+        if (is_null($facultyFirstName)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyFirstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_first_name', $nullablesSetToNull);
+            $index = array_search('facultyFirstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_first_name'] = $faculty_first_name;
+        $this->container['facultyFirstName'] = $facultyFirstName;
 
         return $this;
     }
 
     /**
-     * Gets faculty_last_name
+     * Gets facultyLastName
      *
      * @return string|null
      */
     public function getFacultyLastName()
     {
-        return $this->container['faculty_last_name'];
+        return $this->container['facultyLastName'];
     }
 
     /**
-     * Sets faculty_last_name
+     * Sets facultyLastName
      *
-     * @param string|null $faculty_last_name The last name of the head teacher
+     * @param string|null $facultyLastName The last name of the head teacher
      *
      * @return self
      */
-    public function setFacultyLastName($faculty_last_name)
+    public function setFacultyLastName($facultyLastName)
     {
-        if (is_null($faculty_last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_last_name');
+        if (is_null($facultyLastName)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyLastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_last_name', $nullablesSetToNull);
+            $index = array_search('facultyLastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_last_name'] = $faculty_last_name;
+        $this->container['facultyLastName'] = $facultyLastName;
 
         return $this;
     }
 
     /**
-     * Gets level_number
+     * Gets levelNumber
      *
      * @return int|null
      */
     public function getLevelNumber()
     {
-        return $this->container['level_number'];
+        return $this->container['levelNumber'];
     }
 
     /**
-     * Sets level_number
+     * Sets levelNumber
      *
-     * @param int|null $level_number level number
+     * @param int|null $levelNumber level number
      *
      * @return self
      */
-    public function setLevelNumber($level_number)
+    public function setLevelNumber($levelNumber)
     {
-        if (is_null($level_number)) {
-            throw new \InvalidArgumentException('non-nullable level_number cannot be null');
+        if (is_null($levelNumber)) {
+            throw new \InvalidArgumentException('non-nullable levelNumber cannot be null');
         }
-        $this->container['level_number'] = $level_number;
+        $this->container['levelNumber'] = $levelNumber;
 
         return $this;
     }
 
     /**
-     * Gets offering_description
+     * Gets offeringDescription
      *
      * @return string|null
      */
     public function getOfferingDescription()
     {
-        return $this->container['offering_description'];
+        return $this->container['offeringDescription'];
     }
 
     /**
-     * Sets offering_description
+     * Sets offeringDescription
      *
-     * @param string|null $offering_description The description of an offering type
+     * @param string|null $offeringDescription The description of an offering type
      *
      * @return self
      */
-    public function setOfferingDescription($offering_description)
+    public function setOfferingDescription($offeringDescription)
     {
-        if (is_null($offering_description)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_description');
+        if (is_null($offeringDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_description', $nullablesSetToNull);
+            $index = array_search('offeringDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_description'] = $offering_description;
+        $this->container['offeringDescription'] = $offeringDescription;
 
         return $this;
     }
 
     /**
-     * Gets offering_id
+     * Gets offeringId
      *
      * @return int|null
      */
     public function getOfferingId()
     {
-        return $this->container['offering_id'];
+        return $this->container['offeringId'];
     }
 
     /**
-     * Sets offering_id
+     * Sets offeringId
      *
-     * @param int|null $offering_id The ID of an offered course
+     * @param int|null $offeringId The ID of an offered course
      *
      * @return self
      */
-    public function setOfferingId($offering_id)
+    public function setOfferingId($offeringId)
     {
-        if (is_null($offering_id)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_id');
+        if (is_null($offeringId)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_id', $nullablesSetToNull);
+            $index = array_search('offeringId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_id'] = $offering_id;
+        $this->container['offeringId'] = $offeringId;
 
         return $this;
     }
 
     /**
-     * Gets offering_type_id
+     * Gets offeringTypeId
      *
      * @return int|null
      */
     public function getOfferingTypeId()
     {
-        return $this->container['offering_type_id'];
+        return $this->container['offeringTypeId'];
     }
 
     /**
-     * Sets offering_type_id
+     * Sets offeringTypeId
      *
-     * @param int|null $offering_type_id The ID of an offering type
+     * @param int|null $offeringTypeId The ID of an offering type
      *
      * @return self
      */
-    public function setOfferingTypeId($offering_type_id)
+    public function setOfferingTypeId($offeringTypeId)
     {
-        if (is_null($offering_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_type_id');
+        if (is_null($offeringTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_type_id', $nullablesSetToNull);
+            $index = array_search('offeringTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_type_id'] = $offering_type_id;
+        $this->container['offeringTypeId'] = $offeringTypeId;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id The room ID for a section
+     * @param int|null $roomId The room ID for a section
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets room_name
+     * Gets roomName
      *
      * @return string|null
      */
     public function getRoomName()
     {
-        return $this->container['room_name'];
+        return $this->container['roomName'];
     }
 
     /**
-     * Sets room_name
+     * Sets roomName
      *
-     * @param string|null $room_name The room name for the section
+     * @param string|null $roomName The room name for the section
      *
      * @return self
      */
-    public function setRoomName($room_name)
+    public function setRoomName($roomName)
     {
-        if (is_null($room_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_name');
+        if (is_null($roomName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_name', $nullablesSetToNull);
+            $index = array_search('roomName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_name'] = $room_name;
+        $this->container['roomName'] = $roomName;
 
         return $this;
     }
 
     /**
-     * Gets room_number
+     * Gets roomNumber
      *
      * @return string|null
      */
     public function getRoomNumber()
     {
-        return $this->container['room_number'];
+        return $this->container['roomNumber'];
     }
 
     /**
-     * Sets room_number
+     * Sets roomNumber
      *
-     * @param string|null $room_number The room number for the section
+     * @param string|null $roomNumber The room number for the section
      *
      * @return self
      */
-    public function setRoomNumber($room_number)
+    public function setRoomNumber($roomNumber)
     {
-        if (is_null($room_number)) {
-            array_push($this->openAPINullablesSetToNull, 'room_number');
+        if (is_null($roomNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'roomNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_number', $nullablesSetToNull);
+            $index = array_search('roomNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_number'] = $room_number;
+        $this->container['roomNumber'] = $roomNumber;
 
         return $this;
     }
 
     /**
-     * Gets school_year
+     * Gets schoolYear
      *
      * @return string|null
      */
     public function getSchoolYear()
     {
-        return $this->container['school_year'];
+        return $this->container['schoolYear'];
     }
 
     /**
-     * Sets school_year
+     * Sets schoolYear
      *
-     * @param string|null $school_year The school year date range in which the section occurs
+     * @param string|null $schoolYear The school year date range in which the section occurs
      *
      * @return self
      */
-    public function setSchoolYear($school_year)
+    public function setSchoolYear($schoolYear)
     {
-        if (is_null($school_year)) {
-            array_push($this->openAPINullablesSetToNull, 'school_year');
+        if (is_null($schoolYear)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_year', $nullablesSetToNull);
+            $index = array_search('schoolYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_year'] = $school_year;
+        $this->container['schoolYear'] = $schoolYear;
 
         return $this;
     }
 
     /**
-     * Gets section_identifier
+     * Gets sectionIdentifier
      *
      * @return string|null
      */
     public function getSectionIdentifier()
     {
-        return $this->container['section_identifier'];
+        return $this->container['sectionIdentifier'];
     }
 
     /**
-     * Sets section_identifier
+     * Sets sectionIdentifier
      *
-     * @param string|null $section_identifier The identifier used to differentiate between multiple sections that contain a course; the Section Identifier is a user-entered value
+     * @param string|null $sectionIdentifier The identifier used to differentiate between multiple sections that contain a course; the Section Identifier is a user-entered value
      *
      * @return self
      */
-    public function setSectionIdentifier($section_identifier)
+    public function setSectionIdentifier($sectionIdentifier)
     {
-        if (is_null($section_identifier)) {
-            array_push($this->openAPINullablesSetToNull, 'section_identifier');
+        if (is_null($sectionIdentifier)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionIdentifier');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_identifier', $nullablesSetToNull);
+            $index = array_search('sectionIdentifier', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_identifier'] = $section_identifier;
+        $this->container['sectionIdentifier'] = $sectionIdentifier;
 
         return $this;
     }

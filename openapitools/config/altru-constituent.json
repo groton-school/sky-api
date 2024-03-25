@@ -1,0 +1,7 @@
+{
+  "!include": "../base.json",
+  "inputSpec": "var/2022-04-01_preview/Altru/alt-conmg.json",
+  "outputDir": "packages/altru-constituent",
+  "gitRepoId": "sky-api.altru-constituent",
+  "invokerPackage": "SKY\\Altru\\Constituent"
+}

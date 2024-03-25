@@ -62,48 +62,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => 'bool',
         'cancelled' => 'bool',
         'created' => '\DateTime',
-        'departure_location' => 'string',
-        'departure_time' => 'string',
+        'departureLocation' => 'string',
+        'departureTime' => 'string',
         'description' => 'string',
         'directions' => 'string',
-        'dismissal_time' => 'string',
-        'end_time' => 'string',
-        'end_time_span' => 'string',
+        'dismissalTime' => 'string',
+        'endTime' => 'string',
+        'endTimeSpan' => 'string',
         'title' => 'string',
         'faculty' => 'bool',
-        'game_date' => '\DateTime',
-        'game_time' => '\SKY\School\Model\GameTime',
-        'highlight_id' => 'int',
-        'home_or_away' => 'string',
+        'gameDate' => '\DateTime',
+        'gameTime' => '\SKY\School\Model\GameTime',
+        'highlightId' => 'int',
+        'homeOrAway' => 'string',
         'invitational' => 'bool',
-        'last_modified' => '\DateTime',
+        'lastModified' => '\DateTime',
         'league' => 'bool',
         'location' => 'string',
-        'map_url' => 'string',
+        'mapUrl' => 'string',
         'meet' => 'int',
         'opponents' => '\SKY\School\Model\Opponent[]',
-        'pickup_time' => 'string',
+        'pickupTime' => 'string',
         'playoff' => 'bool',
         'practice' => 'bool',
-        'previous_schedule_id' => 'int',
+        'previousScheduleId' => 'int',
         'published' => 'bool',
-        'require_dinner' => 'bool',
-        'require_lunch' => 'bool',
+        'requireDinner' => 'bool',
+        'requireLunch' => 'bool',
         'rescheduled' => 'bool',
-        'rescheduled_date' => '\DateTime',
-        'rescheduled_note' => 'string',
-        'room_id' => 'int',
-        'schedule_type' => 'int',
+        'rescheduledDate' => '\DateTime',
+        'rescheduledNote' => 'string',
+        'roomId' => 'int',
+        'scheduleType' => 'int',
         'scrimmage' => 'bool',
-        'section_id' => 'int',
-        'show_details' => 'bool',
-        'show_directions' => 'bool',
-        'show_versus' => 'bool',
-        'start_time' => 'string',
-        'team_id' => 'int',
+        'sectionId' => 'int',
+        'showDetails' => 'bool',
+        'showDirections' => 'bool',
+        'showVersus' => 'bool',
+        'startTime' => 'string',
+        'teamId' => 'int',
         'time' => 'string',
         'tournament' => 'bool',
-        'uniform_color' => 'string',
+        'uniformColor' => 'string',
     ];
 
     /**
@@ -118,48 +118,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => null,
         'cancelled' => null,
         'created' => 'date-time',
-        'departure_location' => null,
-        'departure_time' => null,
+        'departureLocation' => null,
+        'departureTime' => null,
         'description' => null,
         'directions' => null,
-        'dismissal_time' => null,
-        'end_time' => null,
-        'end_time_span' => null,
+        'dismissalTime' => null,
+        'endTime' => null,
+        'endTimeSpan' => null,
         'title' => null,
         'faculty' => null,
-        'game_date' => 'date-time',
-        'game_time' => null,
-        'highlight_id' => 'int32',
-        'home_or_away' => null,
+        'gameDate' => 'date-time',
+        'gameTime' => null,
+        'highlightId' => 'int32',
+        'homeOrAway' => null,
         'invitational' => null,
-        'last_modified' => 'date-time',
+        'lastModified' => 'date-time',
         'league' => null,
         'location' => null,
-        'map_url' => null,
+        'mapUrl' => null,
         'meet' => 'int32',
         'opponents' => null,
-        'pickup_time' => null,
+        'pickupTime' => null,
         'playoff' => null,
         'practice' => null,
-        'previous_schedule_id' => 'int32',
+        'previousScheduleId' => 'int32',
         'published' => null,
-        'require_dinner' => null,
-        'require_lunch' => null,
+        'requireDinner' => null,
+        'requireLunch' => null,
         'rescheduled' => null,
-        'rescheduled_date' => 'date-time',
-        'rescheduled_note' => null,
-        'room_id' => 'int32',
-        'schedule_type' => 'int32',
+        'rescheduledDate' => 'date-time',
+        'rescheduledNote' => null,
+        'roomId' => 'int32',
+        'scheduleType' => 'int32',
         'scrimmage' => null,
-        'section_id' => 'int32',
-        'show_details' => null,
-        'show_directions' => null,
-        'show_versus' => null,
-        'start_time' => null,
-        'team_id' => 'int32',
+        'sectionId' => 'int32',
+        'showDetails' => null,
+        'showDirections' => null,
+        'showVersus' => null,
+        'startTime' => null,
+        'teamId' => 'int32',
         'time' => null,
         'tournament' => null,
-        'uniform_color' => null,
+        'uniformColor' => null,
     ];
 
     /**
@@ -172,48 +172,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => true,
         'cancelled' => true,
         'created' => true,
-        'departure_location' => true,
-        'departure_time' => true,
+        'departureLocation' => true,
+        'departureTime' => true,
         'description' => true,
         'directions' => true,
-        'dismissal_time' => true,
-        'end_time' => true,
-        'end_time_span' => true,
+        'dismissalTime' => true,
+        'endTime' => true,
+        'endTimeSpan' => true,
         'title' => true,
         'faculty' => true,
-        'game_date' => true,
-        'game_time' => false,
-        'highlight_id' => true,
-        'home_or_away' => true,
+        'gameDate' => true,
+        'gameTime' => false,
+        'highlightId' => true,
+        'homeOrAway' => true,
         'invitational' => true,
-        'last_modified' => true,
+        'lastModified' => true,
         'league' => true,
         'location' => true,
-        'map_url' => true,
+        'mapUrl' => true,
         'meet' => true,
         'opponents' => true,
-        'pickup_time' => true,
+        'pickupTime' => true,
         'playoff' => true,
         'practice' => true,
-        'previous_schedule_id' => true,
+        'previousScheduleId' => true,
         'published' => true,
-        'require_dinner' => true,
-        'require_lunch' => true,
+        'requireDinner' => true,
+        'requireLunch' => true,
         'rescheduled' => true,
-        'rescheduled_date' => true,
-        'rescheduled_note' => true,
-        'room_id' => true,
-        'schedule_type' => true,
+        'rescheduledDate' => true,
+        'rescheduledNote' => true,
+        'roomId' => true,
+        'scheduleType' => true,
         'scrimmage' => true,
-        'section_id' => true,
-        'show_details' => true,
-        'show_directions' => true,
-        'show_versus' => true,
-        'start_time' => true,
-        'team_id' => false,
+        'sectionId' => true,
+        'showDetails' => true,
+        'showDirections' => true,
+        'showVersus' => true,
+        'startTime' => true,
+        'teamId' => false,
         'time' => true,
         'tournament' => true,
-        'uniform_color' => true,
+        'uniformColor' => true,
     ];
 
     /**
@@ -306,48 +306,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => 'alumni',
         'cancelled' => 'cancelled',
         'created' => 'created',
-        'departure_location' => 'departure_location',
-        'departure_time' => 'departure_time',
+        'departureLocation' => 'departure_location',
+        'departureTime' => 'departure_time',
         'description' => 'description',
         'directions' => 'directions',
-        'dismissal_time' => 'dismissal_time',
-        'end_time' => 'end_time',
-        'end_time_span' => 'end_time_span',
+        'dismissalTime' => 'dismissal_time',
+        'endTime' => 'end_time',
+        'endTimeSpan' => 'end_time_span',
         'title' => 'title',
         'faculty' => 'faculty',
-        'game_date' => 'game_date',
-        'game_time' => 'game_time',
-        'highlight_id' => 'highlight_id',
-        'home_or_away' => 'home_or_away',
+        'gameDate' => 'game_date',
+        'gameTime' => 'game_time',
+        'highlightId' => 'highlight_id',
+        'homeOrAway' => 'home_or_away',
         'invitational' => 'invitational',
-        'last_modified' => 'last_modified',
+        'lastModified' => 'last_modified',
         'league' => 'league',
         'location' => 'location',
-        'map_url' => 'map_url',
+        'mapUrl' => 'map_url',
         'meet' => 'meet',
         'opponents' => 'opponents',
-        'pickup_time' => 'pickup_time',
+        'pickupTime' => 'pickup_time',
         'playoff' => 'playoff',
         'practice' => 'practice',
-        'previous_schedule_id' => 'previous_schedule_id',
+        'previousScheduleId' => 'previous_schedule_id',
         'published' => 'published',
-        'require_dinner' => 'require_dinner',
-        'require_lunch' => 'require_lunch',
+        'requireDinner' => 'require_dinner',
+        'requireLunch' => 'require_lunch',
         'rescheduled' => 'rescheduled',
-        'rescheduled_date' => 'rescheduled_date',
-        'rescheduled_note' => 'rescheduled_note',
-        'room_id' => 'room_id',
-        'schedule_type' => 'schedule_type',
+        'rescheduledDate' => 'rescheduled_date',
+        'rescheduledNote' => 'rescheduled_note',
+        'roomId' => 'room_id',
+        'scheduleType' => 'schedule_type',
         'scrimmage' => 'scrimmage',
-        'section_id' => 'section_id',
-        'show_details' => 'show_details',
-        'show_directions' => 'show_directions',
-        'show_versus' => 'show_versus',
-        'start_time' => 'start_time',
-        'team_id' => 'team_id',
+        'sectionId' => 'section_id',
+        'showDetails' => 'show_details',
+        'showDirections' => 'show_directions',
+        'showVersus' => 'show_versus',
+        'startTime' => 'start_time',
+        'teamId' => 'team_id',
         'time' => 'time',
         'tournament' => 'tournament',
-        'uniform_color' => 'uniform_color',
+        'uniformColor' => 'uniform_color',
     ];
 
     /**
@@ -360,48 +360,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => 'setAlumni',
         'cancelled' => 'setCancelled',
         'created' => 'setCreated',
-        'departure_location' => 'setDepartureLocation',
-        'departure_time' => 'setDepartureTime',
+        'departureLocation' => 'setDepartureLocation',
+        'departureTime' => 'setDepartureTime',
         'description' => 'setDescription',
         'directions' => 'setDirections',
-        'dismissal_time' => 'setDismissalTime',
-        'end_time' => 'setEndTime',
-        'end_time_span' => 'setEndTimeSpan',
+        'dismissalTime' => 'setDismissalTime',
+        'endTime' => 'setEndTime',
+        'endTimeSpan' => 'setEndTimeSpan',
         'title' => 'setTitle',
         'faculty' => 'setFaculty',
-        'game_date' => 'setGameDate',
-        'game_time' => 'setGameTime',
-        'highlight_id' => 'setHighlightId',
-        'home_or_away' => 'setHomeOrAway',
+        'gameDate' => 'setGameDate',
+        'gameTime' => 'setGameTime',
+        'highlightId' => 'setHighlightId',
+        'homeOrAway' => 'setHomeOrAway',
         'invitational' => 'setInvitational',
-        'last_modified' => 'setLastModified',
+        'lastModified' => 'setLastModified',
         'league' => 'setLeague',
         'location' => 'setLocation',
-        'map_url' => 'setMapUrl',
+        'mapUrl' => 'setMapUrl',
         'meet' => 'setMeet',
         'opponents' => 'setOpponents',
-        'pickup_time' => 'setPickupTime',
+        'pickupTime' => 'setPickupTime',
         'playoff' => 'setPlayoff',
         'practice' => 'setPractice',
-        'previous_schedule_id' => 'setPreviousScheduleId',
+        'previousScheduleId' => 'setPreviousScheduleId',
         'published' => 'setPublished',
-        'require_dinner' => 'setRequireDinner',
-        'require_lunch' => 'setRequireLunch',
+        'requireDinner' => 'setRequireDinner',
+        'requireLunch' => 'setRequireLunch',
         'rescheduled' => 'setRescheduled',
-        'rescheduled_date' => 'setRescheduledDate',
-        'rescheduled_note' => 'setRescheduledNote',
-        'room_id' => 'setRoomId',
-        'schedule_type' => 'setScheduleType',
+        'rescheduledDate' => 'setRescheduledDate',
+        'rescheduledNote' => 'setRescheduledNote',
+        'roomId' => 'setRoomId',
+        'scheduleType' => 'setScheduleType',
         'scrimmage' => 'setScrimmage',
-        'section_id' => 'setSectionId',
-        'show_details' => 'setShowDetails',
-        'show_directions' => 'setShowDirections',
-        'show_versus' => 'setShowVersus',
-        'start_time' => 'setStartTime',
-        'team_id' => 'setTeamId',
+        'sectionId' => 'setSectionId',
+        'showDetails' => 'setShowDetails',
+        'showDirections' => 'setShowDirections',
+        'showVersus' => 'setShowVersus',
+        'startTime' => 'setStartTime',
+        'teamId' => 'setTeamId',
         'time' => 'setTime',
         'tournament' => 'setTournament',
-        'uniform_color' => 'setUniformColor',
+        'uniformColor' => 'setUniformColor',
     ];
 
     /**
@@ -414,48 +414,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'alumni' => 'getAlumni',
         'cancelled' => 'getCancelled',
         'created' => 'getCreated',
-        'departure_location' => 'getDepartureLocation',
-        'departure_time' => 'getDepartureTime',
+        'departureLocation' => 'getDepartureLocation',
+        'departureTime' => 'getDepartureTime',
         'description' => 'getDescription',
         'directions' => 'getDirections',
-        'dismissal_time' => 'getDismissalTime',
-        'end_time' => 'getEndTime',
-        'end_time_span' => 'getEndTimeSpan',
+        'dismissalTime' => 'getDismissalTime',
+        'endTime' => 'getEndTime',
+        'endTimeSpan' => 'getEndTimeSpan',
         'title' => 'getTitle',
         'faculty' => 'getFaculty',
-        'game_date' => 'getGameDate',
-        'game_time' => 'getGameTime',
-        'highlight_id' => 'getHighlightId',
-        'home_or_away' => 'getHomeOrAway',
+        'gameDate' => 'getGameDate',
+        'gameTime' => 'getGameTime',
+        'highlightId' => 'getHighlightId',
+        'homeOrAway' => 'getHomeOrAway',
         'invitational' => 'getInvitational',
-        'last_modified' => 'getLastModified',
+        'lastModified' => 'getLastModified',
         'league' => 'getLeague',
         'location' => 'getLocation',
-        'map_url' => 'getMapUrl',
+        'mapUrl' => 'getMapUrl',
         'meet' => 'getMeet',
         'opponents' => 'getOpponents',
-        'pickup_time' => 'getPickupTime',
+        'pickupTime' => 'getPickupTime',
         'playoff' => 'getPlayoff',
         'practice' => 'getPractice',
-        'previous_schedule_id' => 'getPreviousScheduleId',
+        'previousScheduleId' => 'getPreviousScheduleId',
         'published' => 'getPublished',
-        'require_dinner' => 'getRequireDinner',
-        'require_lunch' => 'getRequireLunch',
+        'requireDinner' => 'getRequireDinner',
+        'requireLunch' => 'getRequireLunch',
         'rescheduled' => 'getRescheduled',
-        'rescheduled_date' => 'getRescheduledDate',
-        'rescheduled_note' => 'getRescheduledNote',
-        'room_id' => 'getRoomId',
-        'schedule_type' => 'getScheduleType',
+        'rescheduledDate' => 'getRescheduledDate',
+        'rescheduledNote' => 'getRescheduledNote',
+        'roomId' => 'getRoomId',
+        'scheduleType' => 'getScheduleType',
         'scrimmage' => 'getScrimmage',
-        'section_id' => 'getSectionId',
-        'show_details' => 'getShowDetails',
-        'show_directions' => 'getShowDirections',
-        'show_versus' => 'getShowVersus',
-        'start_time' => 'getStartTime',
-        'team_id' => 'getTeamId',
+        'sectionId' => 'getSectionId',
+        'showDetails' => 'getShowDetails',
+        'showDirections' => 'getShowDirections',
+        'showVersus' => 'getShowVersus',
+        'startTime' => 'getStartTime',
+        'teamId' => 'getTeamId',
         'time' => 'getTime',
         'tournament' => 'getTournament',
-        'uniform_color' => 'getUniformColor',
+        'uniformColor' => 'getUniformColor',
     ];
 
     /**
@@ -519,48 +519,48 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('alumni', $data ?? [], null);
         $this->setIfExists('cancelled', $data ?? [], null);
         $this->setIfExists('created', $data ?? [], null);
-        $this->setIfExists('departure_location', $data ?? [], null);
-        $this->setIfExists('departure_time', $data ?? [], null);
+        $this->setIfExists('departureLocation', $data ?? [], null);
+        $this->setIfExists('departureTime', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('directions', $data ?? [], null);
-        $this->setIfExists('dismissal_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('end_time_span', $data ?? [], null);
+        $this->setIfExists('dismissalTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('endTimeSpan', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('faculty', $data ?? [], null);
-        $this->setIfExists('game_date', $data ?? [], null);
-        $this->setIfExists('game_time', $data ?? [], null);
-        $this->setIfExists('highlight_id', $data ?? [], null);
-        $this->setIfExists('home_or_away', $data ?? [], null);
+        $this->setIfExists('gameDate', $data ?? [], null);
+        $this->setIfExists('gameTime', $data ?? [], null);
+        $this->setIfExists('highlightId', $data ?? [], null);
+        $this->setIfExists('homeOrAway', $data ?? [], null);
         $this->setIfExists('invitational', $data ?? [], null);
-        $this->setIfExists('last_modified', $data ?? [], null);
+        $this->setIfExists('lastModified', $data ?? [], null);
         $this->setIfExists('league', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
-        $this->setIfExists('map_url', $data ?? [], null);
+        $this->setIfExists('mapUrl', $data ?? [], null);
         $this->setIfExists('meet', $data ?? [], null);
         $this->setIfExists('opponents', $data ?? [], null);
-        $this->setIfExists('pickup_time', $data ?? [], null);
+        $this->setIfExists('pickupTime', $data ?? [], null);
         $this->setIfExists('playoff', $data ?? [], null);
         $this->setIfExists('practice', $data ?? [], null);
-        $this->setIfExists('previous_schedule_id', $data ?? [], null);
+        $this->setIfExists('previousScheduleId', $data ?? [], null);
         $this->setIfExists('published', $data ?? [], null);
-        $this->setIfExists('require_dinner', $data ?? [], null);
-        $this->setIfExists('require_lunch', $data ?? [], null);
+        $this->setIfExists('requireDinner', $data ?? [], null);
+        $this->setIfExists('requireLunch', $data ?? [], null);
         $this->setIfExists('rescheduled', $data ?? [], null);
-        $this->setIfExists('rescheduled_date', $data ?? [], null);
-        $this->setIfExists('rescheduled_note', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('schedule_type', $data ?? [], null);
+        $this->setIfExists('rescheduledDate', $data ?? [], null);
+        $this->setIfExists('rescheduledNote', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('scheduleType', $data ?? [], null);
         $this->setIfExists('scrimmage', $data ?? [], null);
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('show_details', $data ?? [], null);
-        $this->setIfExists('show_directions', $data ?? [], null);
-        $this->setIfExists('show_versus', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('team_id', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('showDetails', $data ?? [], null);
+        $this->setIfExists('showDirections', $data ?? [], null);
+        $this->setIfExists('showVersus', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('teamId', $data ?? [], null);
         $this->setIfExists('time', $data ?? [], null);
         $this->setIfExists('tournament', $data ?? [], null);
-        $this->setIfExists('uniform_color', $data ?? [], null);
+        $this->setIfExists('uniformColor', $data ?? [], null);
     }
 
     /**
@@ -742,69 +742,69 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets departure_location
+     * Gets departureLocation
      *
      * @return string|null
      */
     public function getDepartureLocation()
     {
-        return $this->container['departure_location'];
+        return $this->container['departureLocation'];
     }
 
     /**
-     * Sets departure_location
+     * Sets departureLocation
      *
-     * @param string|null $departure_location Departure location of the game or practice
+     * @param string|null $departureLocation Departure location of the game or practice
      *
      * @return self
      */
-    public function setDepartureLocation($departure_location)
+    public function setDepartureLocation($departureLocation)
     {
-        if (is_null($departure_location)) {
-            array_push($this->openAPINullablesSetToNull, 'departure_location');
+        if (is_null($departureLocation)) {
+            array_push($this->openAPINullablesSetToNull, 'departureLocation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('departure_location', $nullablesSetToNull);
+            $index = array_search('departureLocation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['departure_location'] = $departure_location;
+        $this->container['departureLocation'] = $departureLocation;
 
         return $this;
     }
 
     /**
-     * Gets departure_time
+     * Gets departureTime
      *
      * @return string|null
      */
     public function getDepartureTime()
     {
-        return $this->container['departure_time'];
+        return $this->container['departureTime'];
     }
 
     /**
-     * Sets departure_time
+     * Sets departureTime
      *
-     * @param string|null $departure_time The time of departure before the game or practice
+     * @param string|null $departureTime The time of departure before the game or practice
      *
      * @return self
      */
-    public function setDepartureTime($departure_time)
+    public function setDepartureTime($departureTime)
     {
-        if (is_null($departure_time)) {
-            array_push($this->openAPINullablesSetToNull, 'departure_time');
+        if (is_null($departureTime)) {
+            array_push($this->openAPINullablesSetToNull, 'departureTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('departure_time', $nullablesSetToNull);
+            $index = array_search('departureTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['departure_time'] = $departure_time;
+        $this->container['departureTime'] = $departureTime;
 
         return $this;
     }
@@ -878,103 +878,103 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets dismissal_time
+     * Gets dismissalTime
      *
      * @return string|null
      */
     public function getDismissalTime()
     {
-        return $this->container['dismissal_time'];
+        return $this->container['dismissalTime'];
     }
 
     /**
-     * Sets dismissal_time
+     * Sets dismissalTime
      *
-     * @param string|null $dismissal_time The time of dismissal before the game or practice
+     * @param string|null $dismissalTime The time of dismissal before the game or practice
      *
      * @return self
      */
-    public function setDismissalTime($dismissal_time)
+    public function setDismissalTime($dismissalTime)
     {
-        if (is_null($dismissal_time)) {
-            array_push($this->openAPINullablesSetToNull, 'dismissal_time');
+        if (is_null($dismissalTime)) {
+            array_push($this->openAPINullablesSetToNull, 'dismissalTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dismissal_time', $nullablesSetToNull);
+            $index = array_search('dismissalTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dismissal_time'] = $dismissal_time;
+        $this->container['dismissalTime'] = $dismissalTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return string|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param string|null $end_time The time a game or practice ends
+     * @param string|null $endTime The time a game or practice ends
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time_span
+     * Gets endTimeSpan
      *
      * @return string|null
      */
     public function getEndTimeSpan()
     {
-        return $this->container['end_time_span'];
+        return $this->container['endTimeSpan'];
     }
 
     /**
-     * Sets end_time_span
+     * Sets endTimeSpan
      *
-     * @param string|null $end_time_span The end time of the game or practice
+     * @param string|null $endTimeSpan The end time of the game or practice
      *
      * @return self
      */
-    public function setEndTimeSpan($end_time_span)
+    public function setEndTimeSpan($endTimeSpan)
     {
-        if (is_null($end_time_span)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time_span');
+        if (is_null($endTimeSpan)) {
+            array_push($this->openAPINullablesSetToNull, 'endTimeSpan');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time_span', $nullablesSetToNull);
+            $index = array_search('endTimeSpan', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time_span'] = $end_time_span;
+        $this->container['endTimeSpan'] = $endTimeSpan;
 
         return $this;
     }
@@ -1048,130 +1048,130 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets game_date
+     * Gets gameDate
      *
      * @return \DateTime|null
      */
     public function getGameDate()
     {
-        return $this->container['game_date'];
+        return $this->container['gameDate'];
     }
 
     /**
-     * Sets game_date
+     * Sets gameDate
      *
-     * @param \DateTime|null $game_date Date of the game or practice. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $gameDate Date of the game or practice. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setGameDate($game_date)
+    public function setGameDate($gameDate)
     {
-        if (is_null($game_date)) {
-            array_push($this->openAPINullablesSetToNull, 'game_date');
+        if (is_null($gameDate)) {
+            array_push($this->openAPINullablesSetToNull, 'gameDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('game_date', $nullablesSetToNull);
+            $index = array_search('gameDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['game_date'] = $game_date;
+        $this->container['gameDate'] = $gameDate;
 
         return $this;
     }
 
     /**
-     * Gets game_time
+     * Gets gameTime
      *
      * @return \SKY\School\Model\GameTime|null
      */
     public function getGameTime()
     {
-        return $this->container['game_time'];
+        return $this->container['gameTime'];
     }
 
     /**
-     * Sets game_time
+     * Sets gameTime
      *
-     * @param \SKY\School\Model\GameTime|null $game_time game_time
+     * @param \SKY\School\Model\GameTime|null $gameTime gameTime
      *
      * @return self
      */
-    public function setGameTime($game_time)
+    public function setGameTime($gameTime)
     {
-        if (is_null($game_time)) {
-            throw new \InvalidArgumentException('non-nullable game_time cannot be null');
+        if (is_null($gameTime)) {
+            throw new \InvalidArgumentException('non-nullable gameTime cannot be null');
         }
-        $this->container['game_time'] = $game_time;
+        $this->container['gameTime'] = $gameTime;
 
         return $this;
     }
 
     /**
-     * Gets highlight_id
+     * Gets highlightId
      *
      * @return int|null
      */
     public function getHighlightId()
     {
-        return $this->container['highlight_id'];
+        return $this->container['highlightId'];
     }
 
     /**
-     * Sets highlight_id
+     * Sets highlightId
      *
-     * @param int|null $highlight_id The ID of the game highlight
+     * @param int|null $highlightId The ID of the game highlight
      *
      * @return self
      */
-    public function setHighlightId($highlight_id)
+    public function setHighlightId($highlightId)
     {
-        if (is_null($highlight_id)) {
-            array_push($this->openAPINullablesSetToNull, 'highlight_id');
+        if (is_null($highlightId)) {
+            array_push($this->openAPINullablesSetToNull, 'highlightId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('highlight_id', $nullablesSetToNull);
+            $index = array_search('highlightId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['highlight_id'] = $highlight_id;
+        $this->container['highlightId'] = $highlightId;
 
         return $this;
     }
 
     /**
-     * Gets home_or_away
+     * Gets homeOrAway
      *
      * @return string|null
      */
     public function getHomeOrAway()
     {
-        return $this->container['home_or_away'];
+        return $this->container['homeOrAway'];
     }
 
     /**
-     * Sets home_or_away
+     * Sets homeOrAway
      *
-     * @param string|null $home_or_away Indicates whether the game is a home game or an away game
+     * @param string|null $homeOrAway Indicates whether the game is a home game or an away game
      *
      * @return self
      */
-    public function setHomeOrAway($home_or_away)
+    public function setHomeOrAway($homeOrAway)
     {
-        if (is_null($home_or_away)) {
-            array_push($this->openAPINullablesSetToNull, 'home_or_away');
+        if (is_null($homeOrAway)) {
+            array_push($this->openAPINullablesSetToNull, 'homeOrAway');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_or_away', $nullablesSetToNull);
+            $index = array_search('homeOrAway', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_or_away'] = $home_or_away;
+        $this->container['homeOrAway'] = $homeOrAway;
 
         return $this;
     }
@@ -1211,35 +1211,35 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets last_modified
+     * Gets lastModified
      *
      * @return \DateTime|null
      */
     public function getLastModified()
     {
-        return $this->container['last_modified'];
+        return $this->container['lastModified'];
     }
 
     /**
-     * Sets last_modified
+     * Sets lastModified
      *
-     * @param \DateTime|null $last_modified Modified date of the game or practice. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $lastModified Modified date of the game or practice. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setLastModified($last_modified)
+    public function setLastModified($lastModified)
     {
-        if (is_null($last_modified)) {
-            array_push($this->openAPINullablesSetToNull, 'last_modified');
+        if (is_null($lastModified)) {
+            array_push($this->openAPINullablesSetToNull, 'lastModified');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_modified', $nullablesSetToNull);
+            $index = array_search('lastModified', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_modified'] = $last_modified;
+        $this->container['lastModified'] = $lastModified;
 
         return $this;
     }
@@ -1313,35 +1313,35 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets map_url
+     * Gets mapUrl
      *
      * @return string|null
      */
     public function getMapUrl()
     {
-        return $this->container['map_url'];
+        return $this->container['mapUrl'];
     }
 
     /**
-     * Sets map_url
+     * Sets mapUrl
      *
-     * @param string|null $map_url Directions url to the game or practice
+     * @param string|null $mapUrl Directions url to the game or practice
      *
      * @return self
      */
-    public function setMapUrl($map_url)
+    public function setMapUrl($mapUrl)
     {
-        if (is_null($map_url)) {
-            array_push($this->openAPINullablesSetToNull, 'map_url');
+        if (is_null($mapUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'mapUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('map_url', $nullablesSetToNull);
+            $index = array_search('mapUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['map_url'] = $map_url;
+        $this->container['mapUrl'] = $mapUrl;
 
         return $this;
     }
@@ -1415,35 +1415,35 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets pickup_time
+     * Gets pickupTime
      *
      * @return string|null
      */
     public function getPickupTime()
     {
-        return $this->container['pickup_time'];
+        return $this->container['pickupTime'];
     }
 
     /**
-     * Sets pickup_time
+     * Sets pickupTime
      *
-     * @param string|null $pickup_time The pickup time after the game or practice
+     * @param string|null $pickupTime The pickup time after the game or practice
      *
      * @return self
      */
-    public function setPickupTime($pickup_time)
+    public function setPickupTime($pickupTime)
     {
-        if (is_null($pickup_time)) {
-            array_push($this->openAPINullablesSetToNull, 'pickup_time');
+        if (is_null($pickupTime)) {
+            array_push($this->openAPINullablesSetToNull, 'pickupTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pickup_time', $nullablesSetToNull);
+            $index = array_search('pickupTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pickup_time'] = $pickup_time;
+        $this->container['pickupTime'] = $pickupTime;
 
         return $this;
     }
@@ -1517,35 +1517,35 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets previous_schedule_id
+     * Gets previousScheduleId
      *
      * @return int|null
      */
     public function getPreviousScheduleId()
     {
-        return $this->container['previous_schedule_id'];
+        return $this->container['previousScheduleId'];
     }
 
     /**
-     * Sets previous_schedule_id
+     * Sets previousScheduleId
      *
-     * @param int|null $previous_schedule_id The id of the game or practice where this event was previously scheduled
+     * @param int|null $previousScheduleId The id of the game or practice where this event was previously scheduled
      *
      * @return self
      */
-    public function setPreviousScheduleId($previous_schedule_id)
+    public function setPreviousScheduleId($previousScheduleId)
     {
-        if (is_null($previous_schedule_id)) {
-            array_push($this->openAPINullablesSetToNull, 'previous_schedule_id');
+        if (is_null($previousScheduleId)) {
+            array_push($this->openAPINullablesSetToNull, 'previousScheduleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('previous_schedule_id', $nullablesSetToNull);
+            $index = array_search('previousScheduleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['previous_schedule_id'] = $previous_schedule_id;
+        $this->container['previousScheduleId'] = $previousScheduleId;
 
         return $this;
     }
@@ -1585,69 +1585,69 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets require_dinner
+     * Gets requireDinner
      *
      * @return bool|null
      */
     public function getRequireDinner()
     {
-        return $this->container['require_dinner'];
+        return $this->container['requireDinner'];
     }
 
     /**
-     * Sets require_dinner
+     * Sets requireDinner
      *
-     * @param bool|null $require_dinner Returns True if the game or practice requires dinner
+     * @param bool|null $requireDinner Returns True if the game or practice requires dinner
      *
      * @return self
      */
-    public function setRequireDinner($require_dinner)
+    public function setRequireDinner($requireDinner)
     {
-        if (is_null($require_dinner)) {
-            array_push($this->openAPINullablesSetToNull, 'require_dinner');
+        if (is_null($requireDinner)) {
+            array_push($this->openAPINullablesSetToNull, 'requireDinner');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('require_dinner', $nullablesSetToNull);
+            $index = array_search('requireDinner', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['require_dinner'] = $require_dinner;
+        $this->container['requireDinner'] = $requireDinner;
 
         return $this;
     }
 
     /**
-     * Gets require_lunch
+     * Gets requireLunch
      *
      * @return bool|null
      */
     public function getRequireLunch()
     {
-        return $this->container['require_lunch'];
+        return $this->container['requireLunch'];
     }
 
     /**
-     * Sets require_lunch
+     * Sets requireLunch
      *
-     * @param bool|null $require_lunch Returns True if the game or practice requires a lunch
+     * @param bool|null $requireLunch Returns True if the game or practice requires a lunch
      *
      * @return self
      */
-    public function setRequireLunch($require_lunch)
+    public function setRequireLunch($requireLunch)
     {
-        if (is_null($require_lunch)) {
-            array_push($this->openAPINullablesSetToNull, 'require_lunch');
+        if (is_null($requireLunch)) {
+            array_push($this->openAPINullablesSetToNull, 'requireLunch');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('require_lunch', $nullablesSetToNull);
+            $index = array_search('requireLunch', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['require_lunch'] = $require_lunch;
+        $this->container['requireLunch'] = $requireLunch;
 
         return $this;
     }
@@ -1687,137 +1687,137 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets rescheduled_date
+     * Gets rescheduledDate
      *
      * @return \DateTime|null
      */
     public function getRescheduledDate()
     {
-        return $this->container['rescheduled_date'];
+        return $this->container['rescheduledDate'];
     }
 
     /**
-     * Sets rescheduled_date
+     * Sets rescheduledDate
      *
-     * @param \DateTime|null $rescheduled_date The date and time a game or practice has been rescheduled. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
+     * @param \DateTime|null $rescheduledDate The date and time a game or practice has been rescheduled. Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> (24H) format: 2003-04-21T10:29:43
      *
      * @return self
      */
-    public function setRescheduledDate($rescheduled_date)
+    public function setRescheduledDate($rescheduledDate)
     {
-        if (is_null($rescheduled_date)) {
-            array_push($this->openAPINullablesSetToNull, 'rescheduled_date');
+        if (is_null($rescheduledDate)) {
+            array_push($this->openAPINullablesSetToNull, 'rescheduledDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rescheduled_date', $nullablesSetToNull);
+            $index = array_search('rescheduledDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rescheduled_date'] = $rescheduled_date;
+        $this->container['rescheduledDate'] = $rescheduledDate;
 
         return $this;
     }
 
     /**
-     * Gets rescheduled_note
+     * Gets rescheduledNote
      *
      * @return string|null
      */
     public function getRescheduledNote()
     {
-        return $this->container['rescheduled_note'];
+        return $this->container['rescheduledNote'];
     }
 
     /**
-     * Sets rescheduled_note
+     * Sets rescheduledNote
      *
-     * @param string|null $rescheduled_note The resaon a game or practice was rescheduled
+     * @param string|null $rescheduledNote The resaon a game or practice was rescheduled
      *
      * @return self
      */
-    public function setRescheduledNote($rescheduled_note)
+    public function setRescheduledNote($rescheduledNote)
     {
-        if (is_null($rescheduled_note)) {
-            array_push($this->openAPINullablesSetToNull, 'rescheduled_note');
+        if (is_null($rescheduledNote)) {
+            array_push($this->openAPINullablesSetToNull, 'rescheduledNote');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rescheduled_note', $nullablesSetToNull);
+            $index = array_search('rescheduledNote', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['rescheduled_note'] = $rescheduled_note;
+        $this->container['rescheduledNote'] = $rescheduledNote;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id The ID of the room a game or practice is being held
+     * @param int|null $roomId The ID of the room a game or practice is being held
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets schedule_type
+     * Gets scheduleType
      *
      * @return int|null
      */
     public function getScheduleType()
     {
-        return $this->container['schedule_type'];
+        return $this->container['scheduleType'];
     }
 
     /**
-     * Sets schedule_type
+     * Sets scheduleType
      *
-     * @param int|null $schedule_type The schedule type
+     * @param int|null $scheduleType The schedule type
      *
      * @return self
      */
-    public function setScheduleType($schedule_type)
+    public function setScheduleType($scheduleType)
     {
-        if (is_null($schedule_type)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_type');
+        if (is_null($scheduleType)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_type', $nullablesSetToNull);
+            $index = array_search('scheduleType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_type'] = $schedule_type;
+        $this->container['scheduleType'] = $scheduleType;
 
         return $this;
     }
@@ -1857,198 +1857,198 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The section ID
+     * @param int|null $sectionId The section ID
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'section_id');
+        if (is_null($sectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_id', $nullablesSetToNull);
+            $index = array_search('sectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets show_details
+     * Gets showDetails
      *
      * @return bool|null
      */
     public function getShowDetails()
     {
-        return $this->container['show_details'];
+        return $this->container['showDetails'];
     }
 
     /**
-     * Sets show_details
+     * Sets showDetails
      *
-     * @param bool|null $show_details Returns True if details for a game or practice are avalible
+     * @param bool|null $showDetails Returns True if details for a game or practice are avalible
      *
      * @return self
      */
-    public function setShowDetails($show_details)
+    public function setShowDetails($showDetails)
     {
-        if (is_null($show_details)) {
-            array_push($this->openAPINullablesSetToNull, 'show_details');
+        if (is_null($showDetails)) {
+            array_push($this->openAPINullablesSetToNull, 'showDetails');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('show_details', $nullablesSetToNull);
+            $index = array_search('showDetails', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['show_details'] = $show_details;
+        $this->container['showDetails'] = $showDetails;
 
         return $this;
     }
 
     /**
-     * Gets show_directions
+     * Gets showDirections
      *
      * @return bool|null
      */
     public function getShowDirections()
     {
-        return $this->container['show_directions'];
+        return $this->container['showDirections'];
     }
 
     /**
-     * Sets show_directions
+     * Sets showDirections
      *
-     * @param bool|null $show_directions Returns true if the game or practice should display \"the directions on the school website
+     * @param bool|null $showDirections Returns true if the game or practice should display \"the directions on the school website
      *
      * @return self
      */
-    public function setShowDirections($show_directions)
+    public function setShowDirections($showDirections)
     {
-        if (is_null($show_directions)) {
-            array_push($this->openAPINullablesSetToNull, 'show_directions');
+        if (is_null($showDirections)) {
+            array_push($this->openAPINullablesSetToNull, 'showDirections');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('show_directions', $nullablesSetToNull);
+            $index = array_search('showDirections', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['show_directions'] = $show_directions;
+        $this->container['showDirections'] = $showDirections;
 
         return $this;
     }
 
     /**
-     * Gets show_versus
+     * Gets showVersus
      *
      * @return bool|null
      */
     public function getShowVersus()
     {
-        return $this->container['show_versus'];
+        return $this->container['showVersus'];
     }
 
     /**
-     * Sets show_versus
+     * Sets showVersus
      *
-     * @param bool|null $show_versus Returns true if the game or practice should display \"vs\" on the school website
+     * @param bool|null $showVersus Returns true if the game or practice should display \"vs\" on the school website
      *
      * @return self
      */
-    public function setShowVersus($show_versus)
+    public function setShowVersus($showVersus)
     {
-        if (is_null($show_versus)) {
-            array_push($this->openAPINullablesSetToNull, 'show_versus');
+        if (is_null($showVersus)) {
+            array_push($this->openAPINullablesSetToNull, 'showVersus');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('show_versus', $nullablesSetToNull);
+            $index = array_search('showVersus', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['show_versus'] = $show_versus;
+        $this->container['showVersus'] = $showVersus;
 
         return $this;
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return string|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param string|null $start_time The start time of the game or practice
+     * @param string|null $startTime The start time of the game or practice
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            array_push($this->openAPINullablesSetToNull, 'start_time');
+        if (is_null($startTime)) {
+            array_push($this->openAPINullablesSetToNull, 'startTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_time', $nullablesSetToNull);
+            $index = array_search('startTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets team_id
+     * Gets teamId
      *
      * @return int|null
      */
     public function getTeamId()
     {
-        return $this->container['team_id'];
+        return $this->container['teamId'];
     }
 
     /**
-     * Sets team_id
+     * Sets teamId
      *
-     * @param int|null $team_id ID of the team
+     * @param int|null $teamId ID of the team
      *
      * @return self
      */
-    public function setTeamId($team_id)
+    public function setTeamId($teamId)
     {
-        if (is_null($team_id)) {
-            throw new \InvalidArgumentException('non-nullable team_id cannot be null');
+        if (is_null($teamId)) {
+            throw new \InvalidArgumentException('non-nullable teamId cannot be null');
         }
-        $this->container['team_id'] = $team_id;
+        $this->container['teamId'] = $teamId;
 
         return $this;
     }
@@ -2122,35 +2122,35 @@ class ScheduleItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets uniform_color
+     * Gets uniformColor
      *
      * @return string|null
      */
     public function getUniformColor()
     {
-        return $this->container['uniform_color'];
+        return $this->container['uniformColor'];
     }
 
     /**
-     * Sets uniform_color
+     * Sets uniformColor
      *
-     * @param string|null $uniform_color The color of the uniforms for the game or practice
+     * @param string|null $uniformColor The color of the uniforms for the game or practice
      *
      * @return self
      */
-    public function setUniformColor($uniform_color)
+    public function setUniformColor($uniformColor)
     {
-        if (is_null($uniform_color)) {
-            array_push($this->openAPINullablesSetToNull, 'uniform_color');
+        if (is_null($uniformColor)) {
+            array_push($this->openAPINullablesSetToNull, 'uniformColor');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('uniform_color', $nullablesSetToNull);
+            $index = array_search('uniformColor', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['uniform_color'] = $uniform_color;
+        $this->container['uniformColor'] = $uniformColor;
 
         return $this;
     }

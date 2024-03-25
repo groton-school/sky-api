@@ -59,9 +59,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'declared_on' => '\DateTime',
-        'area_of_study_id' => 'int',
-        'requirement_set' => '\SKY\School\Model\UserMajorMinorConcentrationOutputModel',
+        'declaredOn' => '\DateTime',
+        'areaOfStudyId' => 'int',
+        'requirementSet' => '\SKY\School\Model\UserMajorMinorConcentrationOutputModel',
         'concentrations' => '\SKY\School\Model\UserAreaOfStudyReferenceOutputModel',
     ];
 
@@ -74,9 +74,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'declared_on' => 'date-time',
-        'area_of_study_id' => 'int32',
-        'requirement_set' => null,
+        'declaredOn' => 'date-time',
+        'areaOfStudyId' => 'int32',
+        'requirementSet' => null,
         'concentrations' => null,
     ];
 
@@ -87,9 +87,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'declared_on' => true,
-        'area_of_study_id' => true,
-        'requirement_set' => false,
+        'declaredOn' => true,
+        'areaOfStudyId' => true,
+        'requirementSet' => false,
         'concentrations' => false,
     ];
 
@@ -180,9 +180,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'declared_on' => 'declared_on',
-        'area_of_study_id' => 'area_of_study_id',
-        'requirement_set' => 'requirement_set',
+        'declaredOn' => 'declared_on',
+        'areaOfStudyId' => 'area_of_study_id',
+        'requirementSet' => 'requirement_set',
         'concentrations' => 'concentrations',
     ];
 
@@ -193,9 +193,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'declared_on' => 'setDeclaredOn',
-        'area_of_study_id' => 'setAreaOfStudyId',
-        'requirement_set' => 'setRequirementSet',
+        'declaredOn' => 'setDeclaredOn',
+        'areaOfStudyId' => 'setAreaOfStudyId',
+        'requirementSet' => 'setRequirementSet',
         'concentrations' => 'setConcentrations',
     ];
 
@@ -206,9 +206,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'declared_on' => 'getDeclaredOn',
-        'area_of_study_id' => 'getAreaOfStudyId',
-        'requirement_set' => 'getRequirementSet',
+        'declaredOn' => 'getDeclaredOn',
+        'areaOfStudyId' => 'getAreaOfStudyId',
+        'requirementSet' => 'getRequirementSet',
         'concentrations' => 'getConcentrations',
     ];
 
@@ -270,9 +270,9 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('declared_on', $data ?? [], null);
-        $this->setIfExists('area_of_study_id', $data ?? [], null);
-        $this->setIfExists('requirement_set', $data ?? [], null);
+        $this->setIfExists('declaredOn', $data ?? [], null);
+        $this->setIfExists('areaOfStudyId', $data ?? [], null);
+        $this->setIfExists('requirementSet', $data ?? [], null);
         $this->setIfExists('concentrations', $data ?? [], null);
     }
 
@@ -353,96 +353,96 @@ class UserAreaOfStudyReferenceOutputModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets declared_on
+     * Gets declaredOn
      *
      * @return \DateTime|null
      */
     public function getDeclaredOn()
     {
-        return $this->container['declared_on'];
+        return $this->container['declaredOn'];
     }
 
     /**
-     * Sets declared_on
+     * Sets declaredOn
      *
-     * @param \DateTime|null $declared_on
+     * @param \DateTime|null $declaredOn
      *
      * @return self
      */
-    public function setDeclaredOn($declared_on)
+    public function setDeclaredOn($declaredOn)
     {
-        if (is_null($declared_on)) {
-            array_push($this->openAPINullablesSetToNull, 'declared_on');
+        if (is_null($declaredOn)) {
+            array_push($this->openAPINullablesSetToNull, 'declaredOn');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('declared_on', $nullablesSetToNull);
+            $index = array_search('declaredOn', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['declared_on'] = $declared_on;
+        $this->container['declaredOn'] = $declaredOn;
 
         return $this;
     }
 
     /**
-     * Gets area_of_study_id
+     * Gets areaOfStudyId
      *
      * @return int|null
      */
     public function getAreaOfStudyId()
     {
-        return $this->container['area_of_study_id'];
+        return $this->container['areaOfStudyId'];
     }
 
     /**
-     * Sets area_of_study_id
+     * Sets areaOfStudyId
      *
-     * @param int|null $area_of_study_id
+     * @param int|null $areaOfStudyId
      *
      * @return self
      */
-    public function setAreaOfStudyId($area_of_study_id)
+    public function setAreaOfStudyId($areaOfStudyId)
     {
-        if (is_null($area_of_study_id)) {
-            array_push($this->openAPINullablesSetToNull, 'area_of_study_id');
+        if (is_null($areaOfStudyId)) {
+            array_push($this->openAPINullablesSetToNull, 'areaOfStudyId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('area_of_study_id', $nullablesSetToNull);
+            $index = array_search('areaOfStudyId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['area_of_study_id'] = $area_of_study_id;
+        $this->container['areaOfStudyId'] = $areaOfStudyId;
 
         return $this;
     }
 
     /**
-     * Gets requirement_set
+     * Gets requirementSet
      *
      * @return \SKY\School\Model\UserMajorMinorConcentrationOutputModel|null
      */
     public function getRequirementSet()
     {
-        return $this->container['requirement_set'];
+        return $this->container['requirementSet'];
     }
 
     /**
-     * Sets requirement_set
+     * Sets requirementSet
      *
-     * @param \SKY\School\Model\UserMajorMinorConcentrationOutputModel|null $requirement_set requirement_set
+     * @param \SKY\School\Model\UserMajorMinorConcentrationOutputModel|null $requirementSet requirementSet
      *
      * @return self
      */
-    public function setRequirementSet($requirement_set)
+    public function setRequirementSet($requirementSet)
     {
-        if (is_null($requirement_set)) {
-            throw new \InvalidArgumentException('non-nullable requirement_set cannot be null');
+        if (is_null($requirementSet)) {
+            throw new \InvalidArgumentException('non-nullable requirementSet cannot be null');
         }
-        $this->container['requirement_set'] = $requirement_set;
+        $this->container['requirementSet'] = $requirementSet;
 
         return $this;
     }

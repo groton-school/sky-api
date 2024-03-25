@@ -66,13 +66,13 @@ $apiInstance = new SKY\School\Api\AcademicsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$student_id = 56; // int | Format - int32.
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$section_ids = 'section_ids_example'; // string | 
+$studentId = 56; // int | Format - int32.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$sectionIds = 'sectionIds_example'; // string | 
 
 try {
-    $result = $apiInstance->v1AcademicsByStudentIdAssignmentsGet($student_id, $start_date, $end_date, $section_ids);
+    $result = $apiInstance->v1AcademicsByStudentIdAssignmentsGet($studentId, $startDate, $endDate, $sectionIds);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcademicsApi->v1AcademicsByStudentIdAssignmentsGet: ', $e->getMessage(), PHP_EOL;

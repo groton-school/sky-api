@@ -58,11 +58,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'relationship_type' => 'string',
-        'give_parental_access' => 'bool',
-        'list_as_parent' => 'bool',
-        'tuition_responsible_signer' => 'bool',
-        'left_user' => 'int',
+        'relationshipType' => 'string',
+        'giveParentalAccess' => 'bool',
+        'listAsParent' => 'bool',
+        'tuitionResponsibleSigner' => 'bool',
+        'leftUser' => 'int',
     ];
 
     /**
@@ -73,11 +73,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'relationship_type' => null,
-        'give_parental_access' => null,
-        'list_as_parent' => null,
-        'tuition_responsible_signer' => null,
-        'left_user' => 'int32',
+        'relationshipType' => null,
+        'giveParentalAccess' => null,
+        'listAsParent' => null,
+        'tuitionResponsibleSigner' => null,
+        'leftUser' => 'int32',
     ];
 
     /**
@@ -86,11 +86,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'relationship_type' => false,
-        'give_parental_access' => true,
-        'list_as_parent' => true,
-        'tuition_responsible_signer' => true,
-        'left_user' => false,
+        'relationshipType' => false,
+        'giveParentalAccess' => true,
+        'listAsParent' => true,
+        'tuitionResponsibleSigner' => true,
+        'leftUser' => false,
     ];
 
     /**
@@ -179,11 +179,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'relationship_type' => 'relationship_type',
-        'give_parental_access' => 'give_parental_access',
-        'list_as_parent' => 'list_as_parent',
-        'tuition_responsible_signer' => 'tuition_responsible_signer',
-        'left_user' => 'left_user',
+        'relationshipType' => 'relationship_type',
+        'giveParentalAccess' => 'give_parental_access',
+        'listAsParent' => 'list_as_parent',
+        'tuitionResponsibleSigner' => 'tuition_responsible_signer',
+        'leftUser' => 'left_user',
     ];
 
     /**
@@ -192,11 +192,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'relationship_type' => 'setRelationshipType',
-        'give_parental_access' => 'setGiveParentalAccess',
-        'list_as_parent' => 'setListAsParent',
-        'tuition_responsible_signer' => 'setTuitionResponsibleSigner',
-        'left_user' => 'setLeftUser',
+        'relationshipType' => 'setRelationshipType',
+        'giveParentalAccess' => 'setGiveParentalAccess',
+        'listAsParent' => 'setListAsParent',
+        'tuitionResponsibleSigner' => 'setTuitionResponsibleSigner',
+        'leftUser' => 'setLeftUser',
     ];
 
     /**
@@ -205,11 +205,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'relationship_type' => 'getRelationshipType',
-        'give_parental_access' => 'getGiveParentalAccess',
-        'list_as_parent' => 'getListAsParent',
-        'tuition_responsible_signer' => 'getTuitionResponsibleSigner',
-        'left_user' => 'getLeftUser',
+        'relationshipType' => 'getRelationshipType',
+        'giveParentalAccess' => 'getGiveParentalAccess',
+        'listAsParent' => 'getListAsParent',
+        'tuitionResponsibleSigner' => 'getTuitionResponsibleSigner',
+        'leftUser' => 'getLeftUser',
     ];
 
     /**
@@ -320,11 +320,11 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('relationship_type', $data ?? [], null);
-        $this->setIfExists('give_parental_access', $data ?? [], null);
-        $this->setIfExists('list_as_parent', $data ?? [], null);
-        $this->setIfExists('tuition_responsible_signer', $data ?? [], null);
-        $this->setIfExists('left_user', $data ?? [], null);
+        $this->setIfExists('relationshipType', $data ?? [], null);
+        $this->setIfExists('giveParentalAccess', $data ?? [], null);
+        $this->setIfExists('listAsParent', $data ?? [], null);
+        $this->setIfExists('tuitionResponsibleSigner', $data ?? [], null);
+        $this->setIfExists('leftUser', $data ?? [], null);
     }
 
     /**
@@ -354,20 +354,20 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['relationship_type'] === null) {
-            $invalidProperties[] = "'relationship_type' can't be null";
+        if ($this->container['relationshipType'] === null) {
+            $invalidProperties[] = "'relationshipType' can't be null";
         }
         $allowedValues = $this->getRelationshipTypeAllowableValues();
-        if (!is_null($this->container['relationship_type']) && !in_array($this->container['relationship_type'], $allowedValues, true)) {
+        if (!is_null($this->container['relationshipType']) && !in_array($this->container['relationshipType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'relationship_type', must be one of '%s'",
-                $this->container['relationship_type'],
+                "invalid value '%s' for 'relationshipType', must be one of '%s'",
+                $this->container['relationshipType'],
                 implode("', '", $allowedValues)
             );
         }
 
-        if ($this->container['left_user'] === null) {
-            $invalidProperties[] = "'left_user' can't be null";
+        if ($this->container['leftUser'] === null) {
+            $invalidProperties[] = "'leftUser' can't be null";
         }
         return $invalidProperties;
     }
@@ -385,167 +385,167 @@ class RelationshipCreate implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets relationship_type
+     * Gets relationshipType
      *
      * @return string
      */
     public function getRelationshipType()
     {
-        return $this->container['relationship_type'];
+        return $this->container['relationshipType'];
     }
 
     /**
-     * Sets relationship_type
+     * Sets relationshipType
      *
-     * @param string $relationship_type The nature of the relationship; modeled where left_user 'is a' relationship to this individual. Required.
+     * @param string $relationshipType The nature of the relationship; modeled where left_user 'is a' relationship to this individual. Required.
      *
      * @return self
      */
-    public function setRelationshipType($relationship_type)
+    public function setRelationshipType($relationshipType)
     {
-        if (is_null($relationship_type)) {
-            throw new \InvalidArgumentException('non-nullable relationship_type cannot be null');
+        if (is_null($relationshipType)) {
+            throw new \InvalidArgumentException('non-nullable relationshipType cannot be null');
         }
         $allowedValues = $this->getRelationshipTypeAllowableValues();
-        if (!in_array($relationship_type, $allowedValues, true)) {
+        if (!in_array($relationshipType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'relationship_type', must be one of '%s'",
-                    $relationship_type,
+                    "Invalid value '%s' for 'relationshipType', must be one of '%s'",
+                    $relationshipType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['relationship_type'] = $relationship_type;
+        $this->container['relationshipType'] = $relationshipType;
 
         return $this;
     }
 
     /**
-     * Gets give_parental_access
+     * Gets giveParentalAccess
      *
      * @return bool|null
      */
     public function getGiveParentalAccess()
     {
-        return $this->container['give_parental_access'];
+        return $this->container['giveParentalAccess'];
     }
 
     /**
-     * Sets give_parental_access
+     * Sets giveParentalAccess
      *
-     * @param bool|null $give_parental_access Toggles 'Give Parental Access' option.
+     * @param bool|null $giveParentalAccess Toggles 'Give Parental Access' option.
      *
      * @return self
      */
-    public function setGiveParentalAccess($give_parental_access)
+    public function setGiveParentalAccess($giveParentalAccess)
     {
-        if (is_null($give_parental_access)) {
-            array_push($this->openAPINullablesSetToNull, 'give_parental_access');
+        if (is_null($giveParentalAccess)) {
+            array_push($this->openAPINullablesSetToNull, 'giveParentalAccess');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('give_parental_access', $nullablesSetToNull);
+            $index = array_search('giveParentalAccess', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['give_parental_access'] = $give_parental_access;
+        $this->container['giveParentalAccess'] = $giveParentalAccess;
 
         return $this;
     }
 
     /**
-     * Gets list_as_parent
+     * Gets listAsParent
      *
      * @return bool|null
      */
     public function getListAsParent()
     {
-        return $this->container['list_as_parent'];
+        return $this->container['listAsParent'];
     }
 
     /**
-     * Sets list_as_parent
+     * Sets listAsParent
      *
-     * @param bool|null $list_as_parent Toggles 'List as a Parent' option.
+     * @param bool|null $listAsParent Toggles 'List as a Parent' option.
      *
      * @return self
      */
-    public function setListAsParent($list_as_parent)
+    public function setListAsParent($listAsParent)
     {
-        if (is_null($list_as_parent)) {
-            array_push($this->openAPINullablesSetToNull, 'list_as_parent');
+        if (is_null($listAsParent)) {
+            array_push($this->openAPINullablesSetToNull, 'listAsParent');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('list_as_parent', $nullablesSetToNull);
+            $index = array_search('listAsParent', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['list_as_parent'] = $list_as_parent;
+        $this->container['listAsParent'] = $listAsParent;
 
         return $this;
     }
 
     /**
-     * Gets tuition_responsible_signer
+     * Gets tuitionResponsibleSigner
      *
      * @return bool|null
      */
     public function getTuitionResponsibleSigner()
     {
-        return $this->container['tuition_responsible_signer'];
+        return $this->container['tuitionResponsibleSigner'];
     }
 
     /**
-     * Sets tuition_responsible_signer
+     * Sets tuitionResponsibleSigner
      *
-     * @param bool|null $tuition_responsible_signer Toggles 'Responsible for Signing Contract' option.
+     * @param bool|null $tuitionResponsibleSigner Toggles 'Responsible for Signing Contract' option.
      *
      * @return self
      */
-    public function setTuitionResponsibleSigner($tuition_responsible_signer)
+    public function setTuitionResponsibleSigner($tuitionResponsibleSigner)
     {
-        if (is_null($tuition_responsible_signer)) {
-            array_push($this->openAPINullablesSetToNull, 'tuition_responsible_signer');
+        if (is_null($tuitionResponsibleSigner)) {
+            array_push($this->openAPINullablesSetToNull, 'tuitionResponsibleSigner');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('tuition_responsible_signer', $nullablesSetToNull);
+            $index = array_search('tuitionResponsibleSigner', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['tuition_responsible_signer'] = $tuition_responsible_signer;
+        $this->container['tuitionResponsibleSigner'] = $tuitionResponsibleSigner;
 
         return $this;
     }
 
     /**
-     * Gets left_user
+     * Gets leftUser
      *
      * @return int
      */
     public function getLeftUser()
     {
-        return $this->container['left_user'];
+        return $this->container['leftUser'];
     }
 
     /**
-     * Sets left_user
+     * Sets leftUser
      *
-     * @param int $left_user ID of the other individual in the relationship with this person
+     * @param int $leftUser ID of the other individual in the relationship with this person
      *
      * @return self
      */
-    public function setLeftUser($left_user)
+    public function setLeftUser($leftUser)
     {
-        if (is_null($left_user)) {
-            throw new \InvalidArgumentException('non-nullable left_user cannot be null');
+        if (is_null($leftUser)) {
+            throw new \InvalidArgumentException('non-nullable leftUser cannot be null');
         }
-        $this->container['left_user'] = $left_user;
+        $this->container['leftUser'] = $leftUser;
 
         return $this;
     }

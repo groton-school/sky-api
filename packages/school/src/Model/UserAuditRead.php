@@ -58,11 +58,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'field_name' => 'string',
-        'change_date' => '\DateTime',
-        'value_before' => 'string',
-        'value_after' => 'string',
-        'user_id' => 'int',
+        'fieldName' => 'string',
+        'changeDate' => '\DateTime',
+        'valueBefore' => 'string',
+        'valueAfter' => 'string',
+        'userId' => 'int',
     ];
 
     /**
@@ -73,11 +73,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'field_name' => null,
-        'change_date' => 'date-time',
-        'value_before' => null,
-        'value_after' => null,
-        'user_id' => 'int32',
+        'fieldName' => null,
+        'changeDate' => 'date-time',
+        'valueBefore' => null,
+        'valueAfter' => null,
+        'userId' => 'int32',
     ];
 
     /**
@@ -86,11 +86,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'field_name' => true,
-        'change_date' => true,
-        'value_before' => true,
-        'value_after' => true,
-        'user_id' => true,
+        'fieldName' => true,
+        'changeDate' => true,
+        'valueBefore' => true,
+        'valueAfter' => true,
+        'userId' => true,
     ];
 
     /**
@@ -179,11 +179,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'field_name' => 'field_name',
-        'change_date' => 'change_date',
-        'value_before' => 'value_before',
-        'value_after' => 'value_after',
-        'user_id' => 'user_id',
+        'fieldName' => 'field_name',
+        'changeDate' => 'change_date',
+        'valueBefore' => 'value_before',
+        'valueAfter' => 'value_after',
+        'userId' => 'user_id',
     ];
 
     /**
@@ -192,11 +192,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'field_name' => 'setFieldName',
-        'change_date' => 'setChangeDate',
-        'value_before' => 'setValueBefore',
-        'value_after' => 'setValueAfter',
-        'user_id' => 'setUserId',
+        'fieldName' => 'setFieldName',
+        'changeDate' => 'setChangeDate',
+        'valueBefore' => 'setValueBefore',
+        'valueAfter' => 'setValueAfter',
+        'userId' => 'setUserId',
     ];
 
     /**
@@ -205,11 +205,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'field_name' => 'getFieldName',
-        'change_date' => 'getChangeDate',
-        'value_before' => 'getValueBefore',
-        'value_after' => 'getValueAfter',
-        'user_id' => 'getUserId',
+        'fieldName' => 'getFieldName',
+        'changeDate' => 'getChangeDate',
+        'valueBefore' => 'getValueBefore',
+        'valueAfter' => 'getValueAfter',
+        'userId' => 'getUserId',
     ];
 
     /**
@@ -269,11 +269,11 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('field_name', $data ?? [], null);
-        $this->setIfExists('change_date', $data ?? [], null);
-        $this->setIfExists('value_before', $data ?? [], null);
-        $this->setIfExists('value_after', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('fieldName', $data ?? [], null);
+        $this->setIfExists('changeDate', $data ?? [], null);
+        $this->setIfExists('valueBefore', $data ?? [], null);
+        $this->setIfExists('valueAfter', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
     }
 
     /**
@@ -319,171 +319,171 @@ class UserAuditRead implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets field_name
+     * Gets fieldName
      *
      * @return string|null
      */
     public function getFieldName()
     {
-        return $this->container['field_name'];
+        return $this->container['fieldName'];
     }
 
     /**
-     * Sets field_name
+     * Sets fieldName
      *
-     * @param string|null $field_name Field changed
+     * @param string|null $fieldName Field changed
      *
      * @return self
      */
-    public function setFieldName($field_name)
+    public function setFieldName($fieldName)
     {
-        if (is_null($field_name)) {
-            array_push($this->openAPINullablesSetToNull, 'field_name');
+        if (is_null($fieldName)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('field_name', $nullablesSetToNull);
+            $index = array_search('fieldName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['field_name'] = $field_name;
+        $this->container['fieldName'] = $fieldName;
 
         return $this;
     }
 
     /**
-     * Gets change_date
+     * Gets changeDate
      *
      * @return \DateTime|null
      */
     public function getChangeDate()
     {
-        return $this->container['change_date'];
+        return $this->container['changeDate'];
     }
 
     /**
-     * Sets change_date
+     * Sets changeDate
      *
-     * @param \DateTime|null $change_date Date of the change event
+     * @param \DateTime|null $changeDate Date of the change event
      *
      * @return self
      */
-    public function setChangeDate($change_date)
+    public function setChangeDate($changeDate)
     {
-        if (is_null($change_date)) {
-            array_push($this->openAPINullablesSetToNull, 'change_date');
+        if (is_null($changeDate)) {
+            array_push($this->openAPINullablesSetToNull, 'changeDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('change_date', $nullablesSetToNull);
+            $index = array_search('changeDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['change_date'] = $change_date;
+        $this->container['changeDate'] = $changeDate;
 
         return $this;
     }
 
     /**
-     * Gets value_before
+     * Gets valueBefore
      *
      * @return string|null
      */
     public function getValueBefore()
     {
-        return $this->container['value_before'];
+        return $this->container['valueBefore'];
     }
 
     /**
-     * Sets value_before
+     * Sets valueBefore
      *
-     * @param string|null $value_before Value before the change
+     * @param string|null $valueBefore Value before the change
      *
      * @return self
      */
-    public function setValueBefore($value_before)
+    public function setValueBefore($valueBefore)
     {
-        if (is_null($value_before)) {
-            array_push($this->openAPINullablesSetToNull, 'value_before');
+        if (is_null($valueBefore)) {
+            array_push($this->openAPINullablesSetToNull, 'valueBefore');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('value_before', $nullablesSetToNull);
+            $index = array_search('valueBefore', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['value_before'] = $value_before;
+        $this->container['valueBefore'] = $valueBefore;
 
         return $this;
     }
 
     /**
-     * Gets value_after
+     * Gets valueAfter
      *
      * @return string|null
      */
     public function getValueAfter()
     {
-        return $this->container['value_after'];
+        return $this->container['valueAfter'];
     }
 
     /**
-     * Sets value_after
+     * Sets valueAfter
      *
-     * @param string|null $value_after Value after the change
+     * @param string|null $valueAfter Value after the change
      *
      * @return self
      */
-    public function setValueAfter($value_after)
+    public function setValueAfter($valueAfter)
     {
-        if (is_null($value_after)) {
-            array_push($this->openAPINullablesSetToNull, 'value_after');
+        if (is_null($valueAfter)) {
+            array_push($this->openAPINullablesSetToNull, 'valueAfter');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('value_after', $nullablesSetToNull);
+            $index = array_search('valueAfter', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['value_after'] = $value_after;
+        $this->container['valueAfter'] = $valueAfter;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id Identifier of the user impacted by this change
+     * @param int|null $userId Identifier of the user impacted by this change
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

@@ -57,11 +57,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pattern_num' => 'int',
-        'daily_ordinal' => 'int',
-        'begin_time' => '\DateTime',
-        'end_time' => '\DateTime',
-        'has_attendance' => 'bool',
+        'patternNum' => 'int',
+        'dailyOrdinal' => 'int',
+        'beginTime' => '\DateTime',
+        'endTime' => '\DateTime',
+        'hasAttendance' => 'bool',
     ];
 
     /**
@@ -72,11 +72,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'pattern_num' => 'int32',
-        'daily_ordinal' => 'int32',
-        'begin_time' => 'date-time',
-        'end_time' => 'date-time',
-        'has_attendance' => null,
+        'patternNum' => 'int32',
+        'dailyOrdinal' => 'int32',
+        'beginTime' => 'date-time',
+        'endTime' => 'date-time',
+        'hasAttendance' => null,
     ];
 
     /**
@@ -85,11 +85,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'pattern_num' => true,
-        'daily_ordinal' => true,
-        'begin_time' => true,
-        'end_time' => true,
-        'has_attendance' => true,
+        'patternNum' => true,
+        'dailyOrdinal' => true,
+        'beginTime' => true,
+        'endTime' => true,
+        'hasAttendance' => true,
     ];
 
     /**
@@ -178,11 +178,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'pattern_num' => 'PatternNum',
-        'daily_ordinal' => 'DailyOrdinal',
-        'begin_time' => 'BeginTime',
-        'end_time' => 'EndTime',
-        'has_attendance' => 'HasAttendance',
+        'patternNum' => 'PatternNum',
+        'dailyOrdinal' => 'DailyOrdinal',
+        'beginTime' => 'BeginTime',
+        'endTime' => 'EndTime',
+        'hasAttendance' => 'HasAttendance',
     ];
 
     /**
@@ -191,11 +191,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'pattern_num' => 'setPatternNum',
-        'daily_ordinal' => 'setDailyOrdinal',
-        'begin_time' => 'setBeginTime',
-        'end_time' => 'setEndTime',
-        'has_attendance' => 'setHasAttendance',
+        'patternNum' => 'setPatternNum',
+        'dailyOrdinal' => 'setDailyOrdinal',
+        'beginTime' => 'setBeginTime',
+        'endTime' => 'setEndTime',
+        'hasAttendance' => 'setHasAttendance',
     ];
 
     /**
@@ -204,11 +204,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'pattern_num' => 'getPatternNum',
-        'daily_ordinal' => 'getDailyOrdinal',
-        'begin_time' => 'getBeginTime',
-        'end_time' => 'getEndTime',
-        'has_attendance' => 'getHasAttendance',
+        'patternNum' => 'getPatternNum',
+        'dailyOrdinal' => 'getDailyOrdinal',
+        'beginTime' => 'getBeginTime',
+        'endTime' => 'getEndTime',
+        'hasAttendance' => 'getHasAttendance',
     ];
 
     /**
@@ -268,11 +268,11 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('pattern_num', $data ?? [], null);
-        $this->setIfExists('daily_ordinal', $data ?? [], null);
-        $this->setIfExists('begin_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('has_attendance', $data ?? [], null);
+        $this->setIfExists('patternNum', $data ?? [], null);
+        $this->setIfExists('dailyOrdinal', $data ?? [], null);
+        $this->setIfExists('beginTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('hasAttendance', $data ?? [], null);
     }
 
     /**
@@ -318,171 +318,171 @@ class ScheduleSetMettingTime implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets pattern_num
+     * Gets patternNum
      *
      * @return int|null
      */
     public function getPatternNum()
     {
-        return $this->container['pattern_num'];
+        return $this->container['patternNum'];
     }
 
     /**
-     * Sets pattern_num
+     * Sets patternNum
      *
-     * @param int|null $pattern_num pattern_num
+     * @param int|null $patternNum patternNum
      *
      * @return self
      */
-    public function setPatternNum($pattern_num)
+    public function setPatternNum($patternNum)
     {
-        if (is_null($pattern_num)) {
-            array_push($this->openAPINullablesSetToNull, 'pattern_num');
+        if (is_null($patternNum)) {
+            array_push($this->openAPINullablesSetToNull, 'patternNum');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pattern_num', $nullablesSetToNull);
+            $index = array_search('patternNum', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pattern_num'] = $pattern_num;
+        $this->container['patternNum'] = $patternNum;
 
         return $this;
     }
 
     /**
-     * Gets daily_ordinal
+     * Gets dailyOrdinal
      *
      * @return int|null
      */
     public function getDailyOrdinal()
     {
-        return $this->container['daily_ordinal'];
+        return $this->container['dailyOrdinal'];
     }
 
     /**
-     * Sets daily_ordinal
+     * Sets dailyOrdinal
      *
-     * @param int|null $daily_ordinal daily_ordinal
+     * @param int|null $dailyOrdinal dailyOrdinal
      *
      * @return self
      */
-    public function setDailyOrdinal($daily_ordinal)
+    public function setDailyOrdinal($dailyOrdinal)
     {
-        if (is_null($daily_ordinal)) {
-            array_push($this->openAPINullablesSetToNull, 'daily_ordinal');
+        if (is_null($dailyOrdinal)) {
+            array_push($this->openAPINullablesSetToNull, 'dailyOrdinal');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('daily_ordinal', $nullablesSetToNull);
+            $index = array_search('dailyOrdinal', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['daily_ordinal'] = $daily_ordinal;
+        $this->container['dailyOrdinal'] = $dailyOrdinal;
 
         return $this;
     }
 
     /**
-     * Gets begin_time
+     * Gets beginTime
      *
      * @return \DateTime|null
      */
     public function getBeginTime()
     {
-        return $this->container['begin_time'];
+        return $this->container['beginTime'];
     }
 
     /**
-     * Sets begin_time
+     * Sets beginTime
      *
-     * @param \DateTime|null $begin_time begin_time
+     * @param \DateTime|null $beginTime beginTime
      *
      * @return self
      */
-    public function setBeginTime($begin_time)
+    public function setBeginTime($beginTime)
     {
-        if (is_null($begin_time)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_time');
+        if (is_null($beginTime)) {
+            array_push($this->openAPINullablesSetToNull, 'beginTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_time', $nullablesSetToNull);
+            $index = array_search('beginTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_time'] = $begin_time;
+        $this->container['beginTime'] = $beginTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time end_time
+     * @param \DateTime|null $endTime endTime
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets has_attendance
+     * Gets hasAttendance
      *
      * @return bool|null
      */
     public function getHasAttendance()
     {
-        return $this->container['has_attendance'];
+        return $this->container['hasAttendance'];
     }
 
     /**
-     * Sets has_attendance
+     * Sets hasAttendance
      *
-     * @param bool|null $has_attendance has_attendance
+     * @param bool|null $hasAttendance hasAttendance
      *
      * @return self
      */
-    public function setHasAttendance($has_attendance)
+    public function setHasAttendance($hasAttendance)
     {
-        if (is_null($has_attendance)) {
-            array_push($this->openAPINullablesSetToNull, 'has_attendance');
+        if (is_null($hasAttendance)) {
+            array_push($this->openAPINullablesSetToNull, 'hasAttendance');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_attendance', $nullablesSetToNull);
+            $index = array_search('hasAttendance', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_attendance'] = $has_attendance;
+        $this->container['hasAttendance'] = $hasAttendance;
 
         return $this;
     }

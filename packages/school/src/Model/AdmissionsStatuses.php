@@ -60,7 +60,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'id' => 'int',
         'description' => 'string',
-        'next_status_id' => 'int',
+        'nextStatusId' => 'int',
     ];
 
     /**
@@ -73,7 +73,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPIFormats = [
         'id' => 'int32',
         'description' => null,
-        'next_status_id' => 'int32',
+        'nextStatusId' => 'int32',
     ];
 
     /**
@@ -84,7 +84,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static array $openAPINullables = [
         'id' => true,
         'description' => true,
-        'next_status_id' => true,
+        'nextStatusId' => true,
     ];
 
     /**
@@ -175,7 +175,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $attributeMap = [
         'id' => 'id',
         'description' => 'description',
-        'next_status_id' => 'next_status_id',
+        'nextStatusId' => 'next_status_id',
     ];
 
     /**
@@ -186,7 +186,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $setters = [
         'id' => 'setId',
         'description' => 'setDescription',
-        'next_status_id' => 'setNextStatusId',
+        'nextStatusId' => 'setNextStatusId',
     ];
 
     /**
@@ -197,7 +197,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $getters = [
         'id' => 'getId',
         'description' => 'getDescription',
-        'next_status_id' => 'getNextStatusId',
+        'nextStatusId' => 'getNextStatusId',
     ];
 
     /**
@@ -259,7 +259,7 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('next_status_id', $data ?? [], null);
+        $this->setIfExists('nextStatusId', $data ?? [], null);
     }
 
     /**
@@ -373,35 +373,35 @@ class AdmissionsStatuses implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets next_status_id
+     * Gets nextStatusId
      *
      * @return int|null
      */
     public function getNextStatusId()
     {
-        return $this->container['next_status_id'];
+        return $this->container['nextStatusId'];
     }
 
     /**
-     * Sets next_status_id
+     * Sets nextStatusId
      *
-     * @param int|null $next_status_id Next Status Id
+     * @param int|null $nextStatusId Next Status Id
      *
      * @return self
      */
-    public function setNextStatusId($next_status_id)
+    public function setNextStatusId($nextStatusId)
     {
-        if (is_null($next_status_id)) {
-            array_push($this->openAPINullablesSetToNull, 'next_status_id');
+        if (is_null($nextStatusId)) {
+            array_push($this->openAPINullablesSetToNull, 'nextStatusId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('next_status_id', $nullablesSetToNull);
+            $index = array_search('nextStatusId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['next_status_id'] = $next_status_id;
+        $this->container['nextStatusId'] = $nextStatusId;
 
         return $this;
     }

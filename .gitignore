@@ -1,9 +1,14 @@
 .DS_Store
-*.cache
-.cache
+/.cache
 /coverage/
 /docs/
 node_modules
+openapitools.json
 /tools/
 /var/
 /vendor/
+/packages/**/.openapi-generator
+/packages/altru-*/test
+/packages/nxt-*/test
+/packages/oneroster/test
+/packages/school/test

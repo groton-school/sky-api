@@ -127,17 +127,17 @@ class DormsApi
      *
      * Dorms
      *
-     * @param  int $level_number Format - int32. Identifier for the school level (optional)
-     * @param  string $school_year Identifier for the school year (optional)
+     * @param  int $levelNumber Format - int32. Identifier for the school level (optional)
+     * @param  string $schoolYear Identifier for the school year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DormsAllGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\DormCollection
      */
-    public function v1DormsAllGet($level_number = null, $school_year = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
+    public function v1DormsAllGet($levelNumber = null, $schoolYear = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
     {
-        [$response] = $this->v1DormsAllGetWithHttpInfo($level_number, $school_year, $contentType);
+        [$response] = $this->v1DormsAllGetWithHttpInfo($levelNumber, $schoolYear, $contentType);
         return $response;
     }
 
@@ -146,17 +146,17 @@ class DormsApi
      *
      * Dorms
      *
-     * @param  int $level_number Format - int32. Identifier for the school level (optional)
-     * @param  string $school_year Identifier for the school year (optional)
+     * @param  int $levelNumber Format - int32. Identifier for the school level (optional)
+     * @param  string $schoolYear Identifier for the school year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DormsAllGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\DormCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1DormsAllGetWithHttpInfo($level_number = null, $school_year = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
+    public function v1DormsAllGetWithHttpInfo($levelNumber = null, $schoolYear = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
     {
-        $request = $this->v1DormsAllGetRequest($level_number, $school_year, $contentType);
+        $request = $this->v1DormsAllGetRequest($levelNumber, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -271,16 +271,16 @@ class DormsApi
      *
      * Dorms
      *
-     * @param  int $level_number Format - int32. Identifier for the school level (optional)
-     * @param  string $school_year Identifier for the school year (optional)
+     * @param  int $levelNumber Format - int32. Identifier for the school level (optional)
+     * @param  string $schoolYear Identifier for the school year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DormsAllGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DormsAllGetAsync($level_number = null, $school_year = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
+    public function v1DormsAllGetAsync($levelNumber = null, $schoolYear = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
     {
-        return $this->v1DormsAllGetAsyncWithHttpInfo($level_number, $school_year, $contentType)
+        return $this->v1DormsAllGetAsyncWithHttpInfo($levelNumber, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -293,17 +293,17 @@ class DormsApi
      *
      * Dorms
      *
-     * @param  int $level_number Format - int32. Identifier for the school level (optional)
-     * @param  string $school_year Identifier for the school year (optional)
+     * @param  int $levelNumber Format - int32. Identifier for the school level (optional)
+     * @param  string $schoolYear Identifier for the school year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DormsAllGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1DormsAllGetAsyncWithHttpInfo($level_number = null, $school_year = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
+    public function v1DormsAllGetAsyncWithHttpInfo($levelNumber = null, $schoolYear = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
     {
         $returnType = '\SKY\School\Model\DormCollection';
-        $request = $this->v1DormsAllGetRequest($level_number, $school_year, $contentType);
+        $request = $this->v1DormsAllGetRequest($levelNumber, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -344,14 +344,14 @@ class DormsApi
     /**
      * Create request for operation 'v1DormsAllGet'
      *
-     * @param  int $level_number Format - int32. Identifier for the school level (optional)
-     * @param  string $school_year Identifier for the school year (optional)
+     * @param  int $levelNumber Format - int32. Identifier for the school level (optional)
+     * @param  string $schoolYear Identifier for the school year (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1DormsAllGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1DormsAllGetRequest($level_number = null, $school_year = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
+    public function v1DormsAllGetRequest($levelNumber = null, $schoolYear = null, string $contentType = self::contentTypes['v1DormsAllGet'][0])
     {
 
 
@@ -366,7 +366,7 @@ class DormsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_number,
+            $levelNumber,
             'level_number', // param base name
             'integer', // openApiType
             'form', // style
@@ -375,7 +375,7 @@ class DormsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style

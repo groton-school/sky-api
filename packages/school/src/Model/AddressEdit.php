@@ -61,17 +61,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'city' => 'string',
         'country' => 'string',
-        'line_one' => 'string',
-        'line_two' => 'string',
-        'line_three' => 'string',
-        'mailing_address' => 'bool',
-        'postal_code' => 'string',
+        'lineOne' => 'string',
+        'lineTwo' => 'string',
+        'lineThree' => 'string',
+        'mailingAddress' => 'bool',
+        'postalCode' => 'string',
         'primary' => 'bool',
         'province' => 'string',
         'region' => 'string',
         'state' => 'string',
-        'type_id' => 'int',
-        'user_id' => 'int',
+        'typeId' => 'int',
+        'userId' => 'int',
         'links' => '\SKY\School\Model\AddressTypeLink[]',
     ];
 
@@ -86,17 +86,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int32',
         'city' => null,
         'country' => null,
-        'line_one' => null,
-        'line_two' => null,
-        'line_three' => null,
-        'mailing_address' => null,
-        'postal_code' => null,
+        'lineOne' => null,
+        'lineTwo' => null,
+        'lineThree' => null,
+        'mailingAddress' => null,
+        'postalCode' => null,
         'primary' => null,
         'province' => null,
         'region' => null,
         'state' => null,
-        'type_id' => 'int32',
-        'user_id' => 'int32',
+        'typeId' => 'int32',
+        'userId' => 'int32',
         'links' => null,
     ];
 
@@ -109,17 +109,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
         'city' => true,
         'country' => true,
-        'line_one' => true,
-        'line_two' => true,
-        'line_three' => true,
-        'mailing_address' => false,
-        'postal_code' => true,
+        'lineOne' => true,
+        'lineTwo' => true,
+        'lineThree' => true,
+        'mailingAddress' => false,
+        'postalCode' => true,
         'primary' => false,
         'province' => true,
         'region' => true,
         'state' => true,
-        'type_id' => true,
-        'user_id' => true,
+        'typeId' => true,
+        'userId' => true,
         'links' => true,
     ];
 
@@ -212,17 +212,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'city' => 'city',
         'country' => 'country',
-        'line_one' => 'line_one',
-        'line_two' => 'line_two',
-        'line_three' => 'line_three',
-        'mailing_address' => 'mailing_address',
-        'postal_code' => 'postal_code',
+        'lineOne' => 'line_one',
+        'lineTwo' => 'line_two',
+        'lineThree' => 'line_three',
+        'mailingAddress' => 'mailing_address',
+        'postalCode' => 'postal_code',
         'primary' => 'primary',
         'province' => 'province',
         'region' => 'region',
         'state' => 'state',
-        'type_id' => 'type_id',
-        'user_id' => 'user_id',
+        'typeId' => 'type_id',
+        'userId' => 'user_id',
         'links' => 'links',
     ];
 
@@ -235,17 +235,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'city' => 'setCity',
         'country' => 'setCountry',
-        'line_one' => 'setLineOne',
-        'line_two' => 'setLineTwo',
-        'line_three' => 'setLineThree',
-        'mailing_address' => 'setMailingAddress',
-        'postal_code' => 'setPostalCode',
+        'lineOne' => 'setLineOne',
+        'lineTwo' => 'setLineTwo',
+        'lineThree' => 'setLineThree',
+        'mailingAddress' => 'setMailingAddress',
+        'postalCode' => 'setPostalCode',
         'primary' => 'setPrimary',
         'province' => 'setProvince',
         'region' => 'setRegion',
         'state' => 'setState',
-        'type_id' => 'setTypeId',
-        'user_id' => 'setUserId',
+        'typeId' => 'setTypeId',
+        'userId' => 'setUserId',
         'links' => 'setLinks',
     ];
 
@@ -258,17 +258,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'city' => 'getCity',
         'country' => 'getCountry',
-        'line_one' => 'getLineOne',
-        'line_two' => 'getLineTwo',
-        'line_three' => 'getLineThree',
-        'mailing_address' => 'getMailingAddress',
-        'postal_code' => 'getPostalCode',
+        'lineOne' => 'getLineOne',
+        'lineTwo' => 'getLineTwo',
+        'lineThree' => 'getLineThree',
+        'mailingAddress' => 'getMailingAddress',
+        'postalCode' => 'getPostalCode',
         'primary' => 'getPrimary',
         'province' => 'getProvince',
         'region' => 'getRegion',
         'state' => 'getState',
-        'type_id' => 'getTypeId',
-        'user_id' => 'getUserId',
+        'typeId' => 'getTypeId',
+        'userId' => 'getUserId',
         'links' => 'getLinks',
     ];
 
@@ -332,17 +332,17 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('line_one', $data ?? [], null);
-        $this->setIfExists('line_two', $data ?? [], null);
-        $this->setIfExists('line_three', $data ?? [], null);
-        $this->setIfExists('mailing_address', $data ?? [], null);
-        $this->setIfExists('postal_code', $data ?? [], null);
+        $this->setIfExists('lineOne', $data ?? [], null);
+        $this->setIfExists('lineTwo', $data ?? [], null);
+        $this->setIfExists('lineThree', $data ?? [], null);
+        $this->setIfExists('mailingAddress', $data ?? [], null);
+        $this->setIfExists('postalCode', $data ?? [], null);
         $this->setIfExists('primary', $data ?? [], null);
         $this->setIfExists('province', $data ?? [], null);
         $this->setIfExists('region', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('type_id', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('typeId', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
     }
 
@@ -484,164 +484,164 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets line_one
+     * Gets lineOne
      *
      * @return string|null
      */
     public function getLineOne()
     {
-        return $this->container['line_one'];
+        return $this->container['lineOne'];
     }
 
     /**
-     * Sets line_one
+     * Sets lineOne
      *
-     * @param string|null $line_one The first line of the address
+     * @param string|null $lineOne The first line of the address
      *
      * @return self
      */
-    public function setLineOne($line_one)
+    public function setLineOne($lineOne)
     {
-        if (is_null($line_one)) {
-            array_push($this->openAPINullablesSetToNull, 'line_one');
+        if (is_null($lineOne)) {
+            array_push($this->openAPINullablesSetToNull, 'lineOne');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('line_one', $nullablesSetToNull);
+            $index = array_search('lineOne', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['line_one'] = $line_one;
+        $this->container['lineOne'] = $lineOne;
 
         return $this;
     }
 
     /**
-     * Gets line_two
+     * Gets lineTwo
      *
      * @return string|null
      */
     public function getLineTwo()
     {
-        return $this->container['line_two'];
+        return $this->container['lineTwo'];
     }
 
     /**
-     * Sets line_two
+     * Sets lineTwo
      *
-     * @param string|null $line_two The second line of the address
+     * @param string|null $lineTwo The second line of the address
      *
      * @return self
      */
-    public function setLineTwo($line_two)
+    public function setLineTwo($lineTwo)
     {
-        if (is_null($line_two)) {
-            array_push($this->openAPINullablesSetToNull, 'line_two');
+        if (is_null($lineTwo)) {
+            array_push($this->openAPINullablesSetToNull, 'lineTwo');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('line_two', $nullablesSetToNull);
+            $index = array_search('lineTwo', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['line_two'] = $line_two;
+        $this->container['lineTwo'] = $lineTwo;
 
         return $this;
     }
 
     /**
-     * Gets line_three
+     * Gets lineThree
      *
      * @return string|null
      */
     public function getLineThree()
     {
-        return $this->container['line_three'];
+        return $this->container['lineThree'];
     }
 
     /**
-     * Sets line_three
+     * Sets lineThree
      *
-     * @param string|null $line_three The third line of the address
+     * @param string|null $lineThree The third line of the address
      *
      * @return self
      */
-    public function setLineThree($line_three)
+    public function setLineThree($lineThree)
     {
-        if (is_null($line_three)) {
-            array_push($this->openAPINullablesSetToNull, 'line_three');
+        if (is_null($lineThree)) {
+            array_push($this->openAPINullablesSetToNull, 'lineThree');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('line_three', $nullablesSetToNull);
+            $index = array_search('lineThree', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['line_three'] = $line_three;
+        $this->container['lineThree'] = $lineThree;
 
         return $this;
     }
 
     /**
-     * Gets mailing_address
+     * Gets mailingAddress
      *
      * @return bool|null
      */
     public function getMailingAddress()
     {
-        return $this->container['mailing_address'];
+        return $this->container['mailingAddress'];
     }
 
     /**
-     * Sets mailing_address
+     * Sets mailingAddress
      *
-     * @param bool|null $mailing_address Returns True if user accepts mail from the address
+     * @param bool|null $mailingAddress Returns True if user accepts mail from the address
      *
      * @return self
      */
-    public function setMailingAddress($mailing_address)
+    public function setMailingAddress($mailingAddress)
     {
-        if (is_null($mailing_address)) {
-            throw new \InvalidArgumentException('non-nullable mailing_address cannot be null');
+        if (is_null($mailingAddress)) {
+            throw new \InvalidArgumentException('non-nullable mailingAddress cannot be null');
         }
-        $this->container['mailing_address'] = $mailing_address;
+        $this->container['mailingAddress'] = $mailingAddress;
 
         return $this;
     }
 
     /**
-     * Gets postal_code
+     * Gets postalCode
      *
      * @return string|null
      */
     public function getPostalCode()
     {
-        return $this->container['postal_code'];
+        return $this->container['postalCode'];
     }
 
     /**
-     * Sets postal_code
+     * Sets postalCode
      *
-     * @param string|null $postal_code The postal code for the address
+     * @param string|null $postalCode The postal code for the address
      *
      * @return self
      */
-    public function setPostalCode($postal_code)
+    public function setPostalCode($postalCode)
     {
-        if (is_null($postal_code)) {
-            array_push($this->openAPINullablesSetToNull, 'postal_code');
+        if (is_null($postalCode)) {
+            array_push($this->openAPINullablesSetToNull, 'postalCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('postal_code', $nullablesSetToNull);
+            $index = array_search('postalCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['postal_code'] = $postal_code;
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }
@@ -776,69 +776,69 @@ class AddressEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type_id
+     * Gets typeId
      *
      * @return int|null
      */
     public function getTypeId()
     {
-        return $this->container['type_id'];
+        return $this->container['typeId'];
     }
 
     /**
-     * Sets type_id
+     * Sets typeId
      *
-     * @param int|null $type_id The type ID associated with an address that is based upon a user's primary relationship to the address
+     * @param int|null $typeId The type ID associated with an address that is based upon a user's primary relationship to the address
      *
      * @return self
      */
-    public function setTypeId($type_id)
+    public function setTypeId($typeId)
     {
-        if (is_null($type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'type_id');
+        if (is_null($typeId)) {
+            array_push($this->openAPINullablesSetToNull, 'typeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('type_id', $nullablesSetToNull);
+            $index = array_search('typeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['type_id'] = $type_id;
+        $this->container['typeId'] = $typeId;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The ID of the user of the address
+     * @param int|null $userId The ID of the user of the address
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }

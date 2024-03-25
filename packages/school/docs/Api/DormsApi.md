@@ -10,7 +10,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1DormsAllGet()`
 
 ```php
-v1DormsAllGet($level_number, $school_year): \SKY\School\Model\DormCollection
+v1DormsAllGet($levelNumber, $schoolYear): \SKY\School\Model\DormCollection
 ```
 
 Dorms
@@ -41,11 +41,11 @@ $apiInstance = new SKY\School\Api\DormsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_number = 56; // int | Format - int32. Identifier for the school level
-$school_year = 'school_year_example'; // string | Identifier for the school year
+$levelNumber = 56; // int | Format - int32. Identifier for the school level
+$schoolYear = 'schoolYear_example'; // string | Identifier for the school year
 
 try {
-    $result = $apiInstance->v1DormsAllGet($level_number, $school_year);
+    $result = $apiInstance->v1DormsAllGet($levelNumber, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DormsApi->v1DormsAllGet: ', $e->getMessage(), PHP_EOL;
@@ -56,8 +56,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_number** | **int**| Format - int32. Identifier for the school level | [optional] |
-| **school_year** | **string**| Identifier for the school year | [optional] |
+| **levelNumber** | **int**| Format - int32. Identifier for the school level | [optional] |
+| **schoolYear** | **string**| Identifier for the school year | [optional] |
 
 ### Return type
 

@@ -59,12 +59,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'parent_id' => 'int',
+        'parentId' => 'int',
         'major' => '\SKY\School\Model\Major',
         'minor' => '\SKY\School\Model\Minor',
         'concentration' => '\SKY\School\Model\Concentration',
-        'cip_prefix' => 'string',
-        'cip_suffix' => 'string',
+        'cipPrefix' => 'string',
+        'cipSuffix' => 'string',
     ];
 
     /**
@@ -76,12 +76,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'parent_id' => 'int32',
+        'parentId' => 'int32',
         'major' => null,
         'minor' => null,
         'concentration' => null,
-        'cip_prefix' => null,
-        'cip_suffix' => null,
+        'cipPrefix' => null,
+        'cipSuffix' => null,
     ];
 
     /**
@@ -91,12 +91,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'parent_id' => true,
+        'parentId' => true,
         'major' => false,
         'minor' => false,
         'concentration' => false,
-        'cip_prefix' => true,
-        'cip_suffix' => true,
+        'cipPrefix' => true,
+        'cipSuffix' => true,
     ];
 
     /**
@@ -186,12 +186,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'parent_id' => 'parent_id',
+        'parentId' => 'parent_id',
         'major' => 'major',
         'minor' => 'minor',
         'concentration' => 'concentration',
-        'cip_prefix' => 'cip_prefix',
-        'cip_suffix' => 'cip_suffix',
+        'cipPrefix' => 'cip_prefix',
+        'cipSuffix' => 'cip_suffix',
     ];
 
     /**
@@ -201,12 +201,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
      */
     protected static $setters = [
         'id' => 'setId',
-        'parent_id' => 'setParentId',
+        'parentId' => 'setParentId',
         'major' => 'setMajor',
         'minor' => 'setMinor',
         'concentration' => 'setConcentration',
-        'cip_prefix' => 'setCipPrefix',
-        'cip_suffix' => 'setCipSuffix',
+        'cipPrefix' => 'setCipPrefix',
+        'cipSuffix' => 'setCipSuffix',
     ];
 
     /**
@@ -216,12 +216,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
      */
     protected static $getters = [
         'id' => 'getId',
-        'parent_id' => 'getParentId',
+        'parentId' => 'getParentId',
         'major' => 'getMajor',
         'minor' => 'getMinor',
         'concentration' => 'getConcentration',
-        'cip_prefix' => 'getCipPrefix',
-        'cip_suffix' => 'getCipSuffix',
+        'cipPrefix' => 'getCipPrefix',
+        'cipSuffix' => 'getCipSuffix',
     ];
 
     /**
@@ -282,12 +282,12 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('parent_id', $data ?? [], null);
+        $this->setIfExists('parentId', $data ?? [], null);
         $this->setIfExists('major', $data ?? [], null);
         $this->setIfExists('minor', $data ?? [], null);
         $this->setIfExists('concentration', $data ?? [], null);
-        $this->setIfExists('cip_prefix', $data ?? [], null);
-        $this->setIfExists('cip_suffix', $data ?? [], null);
+        $this->setIfExists('cipPrefix', $data ?? [], null);
+        $this->setIfExists('cipSuffix', $data ?? [], null);
     }
 
     /**
@@ -367,35 +367,35 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
     }
 
     /**
-     * Gets parent_id
+     * Gets parentId
      *
      * @return int|null
      */
     public function getParentId()
     {
-        return $this->container['parent_id'];
+        return $this->container['parentId'];
     }
 
     /**
-     * Sets parent_id
+     * Sets parentId
      *
-     * @param int|null $parent_id
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId($parent_id)
+    public function setParentId($parentId)
     {
-        if (is_null($parent_id)) {
-            array_push($this->openAPINullablesSetToNull, 'parent_id');
+        if (is_null($parentId)) {
+            array_push($this->openAPINullablesSetToNull, 'parentId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('parent_id', $nullablesSetToNull);
+            $index = array_search('parentId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['parent_id'] = $parent_id;
+        $this->container['parentId'] = $parentId;
 
         return $this;
     }
@@ -482,69 +482,69 @@ class UserMajorMinorConcentrationOutputModel implements ModelInterface, ArrayAcc
     }
 
     /**
-     * Gets cip_prefix
+     * Gets cipPrefix
      *
      * @return string|null
      */
     public function getCipPrefix()
     {
-        return $this->container['cip_prefix'];
+        return $this->container['cipPrefix'];
     }
 
     /**
-     * Sets cip_prefix
+     * Sets cipPrefix
      *
-     * @param string|null $cip_prefix
+     * @param string|null $cipPrefix
      *
      * @return self
      */
-    public function setCipPrefix($cip_prefix)
+    public function setCipPrefix($cipPrefix)
     {
-        if (is_null($cip_prefix)) {
-            array_push($this->openAPINullablesSetToNull, 'cip_prefix');
+        if (is_null($cipPrefix)) {
+            array_push($this->openAPINullablesSetToNull, 'cipPrefix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cip_prefix', $nullablesSetToNull);
+            $index = array_search('cipPrefix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cip_prefix'] = $cip_prefix;
+        $this->container['cipPrefix'] = $cipPrefix;
 
         return $this;
     }
 
     /**
-     * Gets cip_suffix
+     * Gets cipSuffix
      *
      * @return string|null
      */
     public function getCipSuffix()
     {
-        return $this->container['cip_suffix'];
+        return $this->container['cipSuffix'];
     }
 
     /**
-     * Sets cip_suffix
+     * Sets cipSuffix
      *
-     * @param string|null $cip_suffix
+     * @param string|null $cipSuffix
      *
      * @return self
      */
-    public function setCipSuffix($cip_suffix)
+    public function setCipSuffix($cipSuffix)
     {
-        if (is_null($cip_suffix)) {
-            array_push($this->openAPINullablesSetToNull, 'cip_suffix');
+        if (is_null($cipSuffix)) {
+            array_push($this->openAPINullablesSetToNull, 'cipSuffix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cip_suffix', $nullablesSetToNull);
+            $index = array_search('cipSuffix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cip_suffix'] = $cip_suffix;
+        $this->container['cipSuffix'] = $cipSuffix;
 
         return $this;
     }

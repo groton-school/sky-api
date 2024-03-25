@@ -59,7 +59,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'count' => 'int',
-        'next_link' => 'string',
+        'nextLink' => 'string',
         'value' => '\SKY\School\Model\Enrollment[]',
     ];
 
@@ -72,7 +72,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'count' => 'int32',
-        'next_link' => null,
+        'nextLink' => null,
         'value' => null,
     ];
 
@@ -83,7 +83,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'count' => false,
-        'next_link' => true,
+        'nextLink' => true,
         'value' => true,
     ];
 
@@ -174,7 +174,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'count' => 'count',
-        'next_link' => 'next_link',
+        'nextLink' => 'next_link',
         'value' => 'value',
     ];
 
@@ -185,7 +185,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'count' => 'setCount',
-        'next_link' => 'setNextLink',
+        'nextLink' => 'setNextLink',
         'value' => 'setValue',
     ];
 
@@ -196,7 +196,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'count' => 'getCount',
-        'next_link' => 'getNextLink',
+        'nextLink' => 'getNextLink',
         'value' => 'getValue',
     ];
 
@@ -258,7 +258,7 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->setIfExists('count', $data ?? [], null);
-        $this->setIfExists('next_link', $data ?? [], null);
+        $this->setIfExists('nextLink', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
     }
 
@@ -332,35 +332,35 @@ class EnrollmentCollection implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets next_link
+     * Gets nextLink
      *
      * @return string|null
      */
     public function getNextLink()
     {
-        return $this->container['next_link'];
+        return $this->container['nextLink'];
     }
 
     /**
-     * Sets next_link
+     * Sets nextLink
      *
-     * @param string|null $next_link For paginated responses, the URI for the next page of results
+     * @param string|null $nextLink For paginated responses, the URI for the next page of results
      *
      * @return self
      */
-    public function setNextLink($next_link)
+    public function setNextLink($nextLink)
     {
-        if (is_null($next_link)) {
-            array_push($this->openAPINullablesSetToNull, 'next_link');
+        if (is_null($nextLink)) {
+            array_push($this->openAPINullablesSetToNull, 'nextLink');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('next_link', $nullablesSetToNull);
+            $index = array_search('nextLink', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['next_link'] = $next_link;
+        $this->container['nextLink'] = $nextLink;
 
         return $this;
     }

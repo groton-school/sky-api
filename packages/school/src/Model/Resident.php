@@ -58,23 +58,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'building_id' => 'int',
-        'is_admin' => 'bool',
-        'is_head' => 'bool',
-        'owner_type' => 'int',
-        'resident_from_date' => '\DateTime',
-        'room_id' => 'int',
-        'section_id' => 'int',
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'nick_name' => 'string',
+        'buildingId' => 'int',
+        'isAdmin' => 'bool',
+        'isHead' => 'bool',
+        'ownerType' => 'int',
+        'residentFromDate' => '\DateTime',
+        'roomId' => 'int',
+        'sectionId' => 'int',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'nickName' => 'string',
         'prefix' => 'string',
         'suffix' => 'string',
-        'middle_name' => 'string',
+        'middleName' => 'string',
         'display' => 'string',
-        'date_of_birth' => '\DateTime',
-        'student_info' => '\SKY\School\Model\DormStudentInfo[]',
+        'dateOfBirth' => '\DateTime',
+        'studentInfo' => '\SKY\School\Model\DormStudentInfo[]',
     ];
 
     /**
@@ -85,23 +85,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'building_id' => 'int32',
-        'is_admin' => null,
-        'is_head' => null,
-        'owner_type' => 'int32',
-        'resident_from_date' => 'date-time',
-        'room_id' => 'int32',
-        'section_id' => 'int32',
-        'user_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'nick_name' => null,
+        'buildingId' => 'int32',
+        'isAdmin' => null,
+        'isHead' => null,
+        'ownerType' => 'int32',
+        'residentFromDate' => 'date-time',
+        'roomId' => 'int32',
+        'sectionId' => 'int32',
+        'userId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
+        'nickName' => null,
         'prefix' => null,
         'suffix' => null,
-        'middle_name' => null,
+        'middleName' => null,
         'display' => null,
-        'date_of_birth' => 'date-time',
-        'student_info' => null,
+        'dateOfBirth' => 'date-time',
+        'studentInfo' => null,
     ];
 
     /**
@@ -110,23 +110,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'building_id' => true,
-        'is_admin' => true,
-        'is_head' => true,
-        'owner_type' => true,
-        'resident_from_date' => true,
-        'room_id' => true,
-        'section_id' => true,
-        'user_id' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'nick_name' => true,
+        'buildingId' => true,
+        'isAdmin' => true,
+        'isHead' => true,
+        'ownerType' => true,
+        'residentFromDate' => true,
+        'roomId' => true,
+        'sectionId' => true,
+        'userId' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'nickName' => true,
         'prefix' => true,
         'suffix' => true,
-        'middle_name' => true,
+        'middleName' => true,
         'display' => true,
-        'date_of_birth' => true,
-        'student_info' => true,
+        'dateOfBirth' => true,
+        'studentInfo' => true,
     ];
 
     /**
@@ -215,23 +215,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'building_id' => 'building_id',
-        'is_admin' => 'is_admin',
-        'is_head' => 'is_head',
-        'owner_type' => 'owner_type',
-        'resident_from_date' => 'resident_from_date',
-        'room_id' => 'room_id',
-        'section_id' => 'section_id',
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'nick_name' => 'nick_name',
+        'buildingId' => 'building_id',
+        'isAdmin' => 'is_admin',
+        'isHead' => 'is_head',
+        'ownerType' => 'owner_type',
+        'residentFromDate' => 'resident_from_date',
+        'roomId' => 'room_id',
+        'sectionId' => 'section_id',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'nickName' => 'nick_name',
         'prefix' => 'prefix',
         'suffix' => 'suffix',
-        'middle_name' => 'middle_name',
+        'middleName' => 'middle_name',
         'display' => 'display',
-        'date_of_birth' => 'date_of_birth',
-        'student_info' => 'student_info',
+        'dateOfBirth' => 'date_of_birth',
+        'studentInfo' => 'student_info',
     ];
 
     /**
@@ -240,23 +240,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'building_id' => 'setBuildingId',
-        'is_admin' => 'setIsAdmin',
-        'is_head' => 'setIsHead',
-        'owner_type' => 'setOwnerType',
-        'resident_from_date' => 'setResidentFromDate',
-        'room_id' => 'setRoomId',
-        'section_id' => 'setSectionId',
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'nick_name' => 'setNickName',
+        'buildingId' => 'setBuildingId',
+        'isAdmin' => 'setIsAdmin',
+        'isHead' => 'setIsHead',
+        'ownerType' => 'setOwnerType',
+        'residentFromDate' => 'setResidentFromDate',
+        'roomId' => 'setRoomId',
+        'sectionId' => 'setSectionId',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'nickName' => 'setNickName',
         'prefix' => 'setPrefix',
         'suffix' => 'setSuffix',
-        'middle_name' => 'setMiddleName',
+        'middleName' => 'setMiddleName',
         'display' => 'setDisplay',
-        'date_of_birth' => 'setDateOfBirth',
-        'student_info' => 'setStudentInfo',
+        'dateOfBirth' => 'setDateOfBirth',
+        'studentInfo' => 'setStudentInfo',
     ];
 
     /**
@@ -265,23 +265,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'building_id' => 'getBuildingId',
-        'is_admin' => 'getIsAdmin',
-        'is_head' => 'getIsHead',
-        'owner_type' => 'getOwnerType',
-        'resident_from_date' => 'getResidentFromDate',
-        'room_id' => 'getRoomId',
-        'section_id' => 'getSectionId',
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'nick_name' => 'getNickName',
+        'buildingId' => 'getBuildingId',
+        'isAdmin' => 'getIsAdmin',
+        'isHead' => 'getIsHead',
+        'ownerType' => 'getOwnerType',
+        'residentFromDate' => 'getResidentFromDate',
+        'roomId' => 'getRoomId',
+        'sectionId' => 'getSectionId',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'nickName' => 'getNickName',
         'prefix' => 'getPrefix',
         'suffix' => 'getSuffix',
-        'middle_name' => 'getMiddleName',
+        'middleName' => 'getMiddleName',
         'display' => 'getDisplay',
-        'date_of_birth' => 'getDateOfBirth',
-        'student_info' => 'getStudentInfo',
+        'dateOfBirth' => 'getDateOfBirth',
+        'studentInfo' => 'getStudentInfo',
     ];
 
     /**
@@ -341,23 +341,23 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('building_id', $data ?? [], null);
-        $this->setIfExists('is_admin', $data ?? [], null);
-        $this->setIfExists('is_head', $data ?? [], null);
-        $this->setIfExists('owner_type', $data ?? [], null);
-        $this->setIfExists('resident_from_date', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('nick_name', $data ?? [], null);
+        $this->setIfExists('buildingId', $data ?? [], null);
+        $this->setIfExists('isAdmin', $data ?? [], null);
+        $this->setIfExists('isHead', $data ?? [], null);
+        $this->setIfExists('ownerType', $data ?? [], null);
+        $this->setIfExists('residentFromDate', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('nickName', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
-        $this->setIfExists('middle_name', $data ?? [], null);
+        $this->setIfExists('middleName', $data ?? [], null);
         $this->setIfExists('display', $data ?? [], null);
-        $this->setIfExists('date_of_birth', $data ?? [], null);
-        $this->setIfExists('student_info', $data ?? [], null);
+        $this->setIfExists('dateOfBirth', $data ?? [], null);
+        $this->setIfExists('studentInfo', $data ?? [], null);
     }
 
     /**
@@ -403,375 +403,375 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets building_id
+     * Gets buildingId
      *
      * @return int|null
      */
     public function getBuildingId()
     {
-        return $this->container['building_id'];
+        return $this->container['buildingId'];
     }
 
     /**
-     * Sets building_id
+     * Sets buildingId
      *
-     * @param int|null $building_id
+     * @param int|null $buildingId
      *
      * @return self
      */
-    public function setBuildingId($building_id)
+    public function setBuildingId($buildingId)
     {
-        if (is_null($building_id)) {
-            array_push($this->openAPINullablesSetToNull, 'building_id');
+        if (is_null($buildingId)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_id', $nullablesSetToNull);
+            $index = array_search('buildingId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_id'] = $building_id;
+        $this->container['buildingId'] = $buildingId;
 
         return $this;
     }
 
     /**
-     * Gets is_admin
+     * Gets isAdmin
      *
      * @return bool|null
      */
     public function getIsAdmin()
     {
-        return $this->container['is_admin'];
+        return $this->container['isAdmin'];
     }
 
     /**
-     * Sets is_admin
+     * Sets isAdmin
      *
-     * @param bool|null $is_admin
+     * @param bool|null $isAdmin
      *
      * @return self
      */
-    public function setIsAdmin($is_admin)
+    public function setIsAdmin($isAdmin)
     {
-        if (is_null($is_admin)) {
-            array_push($this->openAPINullablesSetToNull, 'is_admin');
+        if (is_null($isAdmin)) {
+            array_push($this->openAPINullablesSetToNull, 'isAdmin');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_admin', $nullablesSetToNull);
+            $index = array_search('isAdmin', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_admin'] = $is_admin;
+        $this->container['isAdmin'] = $isAdmin;
 
         return $this;
     }
 
     /**
-     * Gets is_head
+     * Gets isHead
      *
      * @return bool|null
      */
     public function getIsHead()
     {
-        return $this->container['is_head'];
+        return $this->container['isHead'];
     }
 
     /**
-     * Sets is_head
+     * Sets isHead
      *
-     * @param bool|null $is_head
+     * @param bool|null $isHead
      *
      * @return self
      */
-    public function setIsHead($is_head)
+    public function setIsHead($isHead)
     {
-        if (is_null($is_head)) {
-            array_push($this->openAPINullablesSetToNull, 'is_head');
+        if (is_null($isHead)) {
+            array_push($this->openAPINullablesSetToNull, 'isHead');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_head', $nullablesSetToNull);
+            $index = array_search('isHead', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_head'] = $is_head;
+        $this->container['isHead'] = $isHead;
 
         return $this;
     }
 
     /**
-     * Gets owner_type
+     * Gets ownerType
      *
      * @return int|null
      */
     public function getOwnerType()
     {
-        return $this->container['owner_type'];
+        return $this->container['ownerType'];
     }
 
     /**
-     * Sets owner_type
+     * Sets ownerType
      *
-     * @param int|null $owner_type
+     * @param int|null $ownerType
      *
      * @return self
      */
-    public function setOwnerType($owner_type)
+    public function setOwnerType($ownerType)
     {
-        if (is_null($owner_type)) {
-            array_push($this->openAPINullablesSetToNull, 'owner_type');
+        if (is_null($ownerType)) {
+            array_push($this->openAPINullablesSetToNull, 'ownerType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('owner_type', $nullablesSetToNull);
+            $index = array_search('ownerType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['owner_type'] = $owner_type;
+        $this->container['ownerType'] = $ownerType;
 
         return $this;
     }
 
     /**
-     * Gets resident_from_date
+     * Gets residentFromDate
      *
      * @return \DateTime|null
      */
     public function getResidentFromDate()
     {
-        return $this->container['resident_from_date'];
+        return $this->container['residentFromDate'];
     }
 
     /**
-     * Sets resident_from_date
+     * Sets residentFromDate
      *
-     * @param \DateTime|null $resident_from_date
+     * @param \DateTime|null $residentFromDate
      *
      * @return self
      */
-    public function setResidentFromDate($resident_from_date)
+    public function setResidentFromDate($residentFromDate)
     {
-        if (is_null($resident_from_date)) {
-            array_push($this->openAPINullablesSetToNull, 'resident_from_date');
+        if (is_null($residentFromDate)) {
+            array_push($this->openAPINullablesSetToNull, 'residentFromDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('resident_from_date', $nullablesSetToNull);
+            $index = array_search('residentFromDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['resident_from_date'] = $resident_from_date;
+        $this->container['residentFromDate'] = $residentFromDate;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id
+     * @param int|null $roomId
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id
+     * @param int|null $sectionId
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'section_id');
+        if (is_null($sectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_id', $nullablesSetToNull);
+            $index = array_search('sectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id
+     * @param int|null $userId
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'user_id');
+        if (is_null($userId)) {
+            array_push($this->openAPINullablesSetToNull, 'userId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('user_id', $nullablesSetToNull);
+            $index = array_search('userId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets nick_name
+     * Gets nickName
      *
      * @return string|null
      */
     public function getNickName()
     {
-        return $this->container['nick_name'];
+        return $this->container['nickName'];
     }
 
     /**
-     * Sets nick_name
+     * Sets nickName
      *
-     * @param string|null $nick_name
+     * @param string|null $nickName
      *
      * @return self
      */
-    public function setNickName($nick_name)
+    public function setNickName($nickName)
     {
-        if (is_null($nick_name)) {
-            array_push($this->openAPINullablesSetToNull, 'nick_name');
+        if (is_null($nickName)) {
+            array_push($this->openAPINullablesSetToNull, 'nickName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nick_name', $nullablesSetToNull);
+            $index = array_search('nickName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['nick_name'] = $nick_name;
+        $this->container['nickName'] = $nickName;
 
         return $this;
     }
@@ -845,35 +845,35 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets middle_name
+     * Gets middleName
      *
      * @return string|null
      */
     public function getMiddleName()
     {
-        return $this->container['middle_name'];
+        return $this->container['middleName'];
     }
 
     /**
-     * Sets middle_name
+     * Sets middleName
      *
-     * @param string|null $middle_name
+     * @param string|null $middleName
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function setMiddleName($middleName)
     {
-        if (is_null($middle_name)) {
-            array_push($this->openAPINullablesSetToNull, 'middle_name');
+        if (is_null($middleName)) {
+            array_push($this->openAPINullablesSetToNull, 'middleName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middle_name', $nullablesSetToNull);
+            $index = array_search('middleName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['middle_name'] = $middle_name;
+        $this->container['middleName'] = $middleName;
 
         return $this;
     }
@@ -913,69 +913,69 @@ class Resident implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets date_of_birth
+     * Gets dateOfBirth
      *
      * @return \DateTime|null
      */
     public function getDateOfBirth()
     {
-        return $this->container['date_of_birth'];
+        return $this->container['dateOfBirth'];
     }
 
     /**
-     * Sets date_of_birth
+     * Sets dateOfBirth
      *
-     * @param \DateTime|null $date_of_birth
+     * @param \DateTime|null $dateOfBirth
      *
      * @return self
      */
-    public function setDateOfBirth($date_of_birth)
+    public function setDateOfBirth($dateOfBirth)
     {
-        if (is_null($date_of_birth)) {
-            array_push($this->openAPINullablesSetToNull, 'date_of_birth');
+        if (is_null($dateOfBirth)) {
+            array_push($this->openAPINullablesSetToNull, 'dateOfBirth');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_of_birth', $nullablesSetToNull);
+            $index = array_search('dateOfBirth', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_of_birth'] = $date_of_birth;
+        $this->container['dateOfBirth'] = $dateOfBirth;
 
         return $this;
     }
 
     /**
-     * Gets student_info
+     * Gets studentInfo
      *
      * @return \SKY\School\Model\DormStudentInfo[]|null
      */
     public function getStudentInfo()
     {
-        return $this->container['student_info'];
+        return $this->container['studentInfo'];
     }
 
     /**
-     * Sets student_info
+     * Sets studentInfo
      *
-     * @param \SKY\School\Model\DormStudentInfo[]|null $student_info
+     * @param \SKY\School\Model\DormStudentInfo[]|null $studentInfo
      *
      * @return self
      */
-    public function setStudentInfo($student_info)
+    public function setStudentInfo($studentInfo)
     {
-        if (is_null($student_info)) {
-            array_push($this->openAPINullablesSetToNull, 'student_info');
+        if (is_null($studentInfo)) {
+            array_push($this->openAPINullablesSetToNull, 'studentInfo');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_info', $nullablesSetToNull);
+            $index = array_search('studentInfo', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_info'] = $student_info;
+        $this->container['studentInfo'] = $studentInfo;
 
         return $this;
     }

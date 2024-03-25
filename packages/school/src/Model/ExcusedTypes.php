@@ -58,14 +58,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'category_description' => 'string',
-        'category_id' => 'int',
-        'excuse_type_id' => 'int',
-        'excuse_description' => 'string',
-        'use_in_calculations' => 'bool',
+        'categoryDescription' => 'string',
+        'categoryId' => 'int',
+        'excuseTypeId' => 'int',
+        'excuseDescription' => 'string',
+        'useInCalculations' => 'bool',
         'excused' => 'string',
         'duration' => 'string',
-        'attendance_type' => 'string',
+        'attendanceType' => 'string',
     ];
 
     /**
@@ -76,14 +76,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'category_description' => null,
-        'category_id' => 'int32',
-        'excuse_type_id' => 'int32',
-        'excuse_description' => null,
-        'use_in_calculations' => null,
+        'categoryDescription' => null,
+        'categoryId' => 'int32',
+        'excuseTypeId' => 'int32',
+        'excuseDescription' => null,
+        'useInCalculations' => null,
         'excused' => null,
         'duration' => null,
-        'attendance_type' => null,
+        'attendanceType' => null,
     ];
 
     /**
@@ -92,14 +92,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'category_description' => true,
-        'category_id' => true,
-        'excuse_type_id' => true,
-        'excuse_description' => true,
-        'use_in_calculations' => true,
+        'categoryDescription' => true,
+        'categoryId' => true,
+        'excuseTypeId' => true,
+        'excuseDescription' => true,
+        'useInCalculations' => true,
         'excused' => true,
         'duration' => true,
-        'attendance_type' => true,
+        'attendanceType' => true,
     ];
 
     /**
@@ -188,14 +188,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'category_description' => 'category_description',
-        'category_id' => 'category_id',
-        'excuse_type_id' => 'excuse_type_id',
-        'excuse_description' => 'excuse_description',
-        'use_in_calculations' => 'use_in_calculations',
+        'categoryDescription' => 'category_description',
+        'categoryId' => 'category_id',
+        'excuseTypeId' => 'excuse_type_id',
+        'excuseDescription' => 'excuse_description',
+        'useInCalculations' => 'use_in_calculations',
         'excused' => 'excused',
         'duration' => 'duration',
-        'attendance_type' => 'attendance_type',
+        'attendanceType' => 'attendance_type',
     ];
 
     /**
@@ -204,14 +204,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'category_description' => 'setCategoryDescription',
-        'category_id' => 'setCategoryId',
-        'excuse_type_id' => 'setExcuseTypeId',
-        'excuse_description' => 'setExcuseDescription',
-        'use_in_calculations' => 'setUseInCalculations',
+        'categoryDescription' => 'setCategoryDescription',
+        'categoryId' => 'setCategoryId',
+        'excuseTypeId' => 'setExcuseTypeId',
+        'excuseDescription' => 'setExcuseDescription',
+        'useInCalculations' => 'setUseInCalculations',
         'excused' => 'setExcused',
         'duration' => 'setDuration',
-        'attendance_type' => 'setAttendanceType',
+        'attendanceType' => 'setAttendanceType',
     ];
 
     /**
@@ -220,14 +220,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'category_description' => 'getCategoryDescription',
-        'category_id' => 'getCategoryId',
-        'excuse_type_id' => 'getExcuseTypeId',
-        'excuse_description' => 'getExcuseDescription',
-        'use_in_calculations' => 'getUseInCalculations',
+        'categoryDescription' => 'getCategoryDescription',
+        'categoryId' => 'getCategoryId',
+        'excuseTypeId' => 'getExcuseTypeId',
+        'excuseDescription' => 'getExcuseDescription',
+        'useInCalculations' => 'getUseInCalculations',
         'excused' => 'getExcused',
         'duration' => 'getDuration',
-        'attendance_type' => 'getAttendanceType',
+        'attendanceType' => 'getAttendanceType',
     ];
 
     /**
@@ -340,14 +340,14 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('category_description', $data ?? [], null);
-        $this->setIfExists('category_id', $data ?? [], null);
-        $this->setIfExists('excuse_type_id', $data ?? [], null);
-        $this->setIfExists('excuse_description', $data ?? [], null);
-        $this->setIfExists('use_in_calculations', $data ?? [], null);
+        $this->setIfExists('categoryDescription', $data ?? [], null);
+        $this->setIfExists('categoryId', $data ?? [], null);
+        $this->setIfExists('excuseTypeId', $data ?? [], null);
+        $this->setIfExists('excuseDescription', $data ?? [], null);
+        $this->setIfExists('useInCalculations', $data ?? [], null);
         $this->setIfExists('excused', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
-        $this->setIfExists('attendance_type', $data ?? [], null);
+        $this->setIfExists('attendanceType', $data ?? [], null);
     }
 
     /**
@@ -396,10 +396,10 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $allowedValues = $this->getAttendanceTypeAllowableValues();
-        if (!is_null($this->container['attendance_type']) && !in_array($this->container['attendance_type'], $allowedValues, true)) {
+        if (!is_null($this->container['attendanceType']) && !in_array($this->container['attendanceType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'attendance_type', must be one of '%s'",
-                $this->container['attendance_type'],
+                "invalid value '%s' for 'attendanceType', must be one of '%s'",
+                $this->container['attendanceType'],
                 implode("', '", $allowedValues)
             );
         }
@@ -420,171 +420,171 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets category_description
+     * Gets categoryDescription
      *
      * @return string|null
      */
     public function getCategoryDescription()
     {
-        return $this->container['category_description'];
+        return $this->container['categoryDescription'];
     }
 
     /**
-     * Sets category_description
+     * Sets categoryDescription
      *
-     * @param string|null $category_description The category that the excuse associated with
+     * @param string|null $categoryDescription The category that the excuse associated with
      *
      * @return self
      */
-    public function setCategoryDescription($category_description)
+    public function setCategoryDescription($categoryDescription)
     {
-        if (is_null($category_description)) {
-            array_push($this->openAPINullablesSetToNull, 'category_description');
+        if (is_null($categoryDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_description', $nullablesSetToNull);
+            $index = array_search('categoryDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_description'] = $category_description;
+        $this->container['categoryDescription'] = $categoryDescription;
 
         return $this;
     }
 
     /**
-     * Gets category_id
+     * Gets categoryId
      *
      * @return int|null
      */
     public function getCategoryId()
     {
-        return $this->container['category_id'];
+        return $this->container['categoryId'];
     }
 
     /**
-     * Sets category_id
+     * Sets categoryId
      *
-     * @param int|null $category_id The ID of category that the excuse associated with
+     * @param int|null $categoryId The ID of category that the excuse associated with
      *
      * @return self
      */
-    public function setCategoryId($category_id)
+    public function setCategoryId($categoryId)
     {
-        if (is_null($category_id)) {
-            array_push($this->openAPINullablesSetToNull, 'category_id');
+        if (is_null($categoryId)) {
+            array_push($this->openAPINullablesSetToNull, 'categoryId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('category_id', $nullablesSetToNull);
+            $index = array_search('categoryId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['category_id'] = $category_id;
+        $this->container['categoryId'] = $categoryId;
 
         return $this;
     }
 
     /**
-     * Gets excuse_type_id
+     * Gets excuseTypeId
      *
      * @return int|null
      */
     public function getExcuseTypeId()
     {
-        return $this->container['excuse_type_id'];
+        return $this->container['excuseTypeId'];
     }
 
     /**
-     * Sets excuse_type_id
+     * Sets excuseTypeId
      *
-     * @param int|null $excuse_type_id The ID of the excuse type
+     * @param int|null $excuseTypeId The ID of the excuse type
      *
      * @return self
      */
-    public function setExcuseTypeId($excuse_type_id)
+    public function setExcuseTypeId($excuseTypeId)
     {
-        if (is_null($excuse_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_type_id');
+        if (is_null($excuseTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_type_id', $nullablesSetToNull);
+            $index = array_search('excuseTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_type_id'] = $excuse_type_id;
+        $this->container['excuseTypeId'] = $excuseTypeId;
 
         return $this;
     }
 
     /**
-     * Gets excuse_description
+     * Gets excuseDescription
      *
      * @return string|null
      */
     public function getExcuseDescription()
     {
-        return $this->container['excuse_description'];
+        return $this->container['excuseDescription'];
     }
 
     /**
-     * Sets excuse_description
+     * Sets excuseDescription
      *
-     * @param string|null $excuse_description The description of the excuse type
+     * @param string|null $excuseDescription The description of the excuse type
      *
      * @return self
      */
-    public function setExcuseDescription($excuse_description)
+    public function setExcuseDescription($excuseDescription)
     {
-        if (is_null($excuse_description)) {
-            array_push($this->openAPINullablesSetToNull, 'excuse_description');
+        if (is_null($excuseDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'excuseDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('excuse_description', $nullablesSetToNull);
+            $index = array_search('excuseDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['excuse_description'] = $excuse_description;
+        $this->container['excuseDescription'] = $excuseDescription;
 
         return $this;
     }
 
     /**
-     * Gets use_in_calculations
+     * Gets useInCalculations
      *
      * @return bool|null
      */
     public function getUseInCalculations()
     {
-        return $this->container['use_in_calculations'];
+        return $this->container['useInCalculations'];
     }
 
     /**
-     * Sets use_in_calculations
+     * Sets useInCalculations
      *
-     * @param bool|null $use_in_calculations The Use In Calculations flag
+     * @param bool|null $useInCalculations The Use In Calculations flag
      *
      * @return self
      */
-    public function setUseInCalculations($use_in_calculations)
+    public function setUseInCalculations($useInCalculations)
     {
-        if (is_null($use_in_calculations)) {
-            array_push($this->openAPINullablesSetToNull, 'use_in_calculations');
+        if (is_null($useInCalculations)) {
+            array_push($this->openAPINullablesSetToNull, 'useInCalculations');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('use_in_calculations', $nullablesSetToNull);
+            $index = array_search('useInCalculations', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['use_in_calculations'] = $use_in_calculations;
+        $this->container['useInCalculations'] = $useInCalculations;
 
         return $this;
     }
@@ -678,45 +678,45 @@ class ExcusedTypes implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets attendance_type
+     * Gets attendanceType
      *
      * @return string|null
      */
     public function getAttendanceType()
     {
-        return $this->container['attendance_type'];
+        return $this->container['attendanceType'];
     }
 
     /**
-     * Sets attendance_type
+     * Sets attendanceType
      *
-     * @param string|null $attendance_type The attendance type
+     * @param string|null $attendanceType The attendance type
      *
      * @return self
      */
-    public function setAttendanceType($attendance_type)
+    public function setAttendanceType($attendanceType)
     {
-        if (is_null($attendance_type)) {
-            array_push($this->openAPINullablesSetToNull, 'attendance_type');
+        if (is_null($attendanceType)) {
+            array_push($this->openAPINullablesSetToNull, 'attendanceType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('attendance_type', $nullablesSetToNull);
+            $index = array_search('attendanceType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
         $allowedValues = $this->getAttendanceTypeAllowableValues();
-        if (!is_null($attendance_type) && !in_array($attendance_type, $allowedValues, true)) {
+        if (!is_null($attendanceType) && !in_array($attendanceType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value '%s' for 'attendance_type', must be one of '%s'",
-                    $attendance_type,
+                    "Invalid value '%s' for 'attendanceType', must be one of '%s'",
+                    $attendanceType,
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['attendance_type'] = $attendance_type;
+        $this->container['attendanceType'] = $attendanceType;
 
         return $this;
     }

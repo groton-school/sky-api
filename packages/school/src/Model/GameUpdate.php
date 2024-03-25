@@ -58,30 +58,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'game_id' => 'int',
-        'schedule_type' => 'int',
+        'gameId' => 'int',
+        'scheduleType' => 'int',
         'title' => 'string',
-        'game_date' => '\DateTime',
-        'game_date_end' => '\DateTime',
-        'cancel_type' => 'int',
-        'home_away_type' => 'int',
-        'location_id' => 'int',
-        'location_ind' => 'int',
-        'dismissal_time' => 'string',
-        'departure_time' => 'string',
-        'departure_note' => 'string',
-        'pickup_time' => 'string',
-        'pickup_note' => 'string',
-        'league_ind' => 'bool',
-        'scrimmage_ind' => 'bool',
-        'tournament_ind' => 'bool',
-        'invitational_ind' => 'bool',
-        'playoff_ind' => 'bool',
-        'additional_notes' => 'string',
-        'news_id' => 'int',
-        'send_notifications' => 'bool',
-        'clear_reschedule' => 'bool',
-        'skip_validation' => 'bool',
+        'gameDate' => '\DateTime',
+        'gameDateEnd' => '\DateTime',
+        'cancelType' => 'int',
+        'homeAwayType' => 'int',
+        'locationId' => 'int',
+        'locationInd' => 'int',
+        'dismissalTime' => 'string',
+        'departureTime' => 'string',
+        'departureNote' => 'string',
+        'pickupTime' => 'string',
+        'pickupNote' => 'string',
+        'leagueInd' => 'bool',
+        'scrimmageInd' => 'bool',
+        'tournamentInd' => 'bool',
+        'invitationalInd' => 'bool',
+        'playoffInd' => 'bool',
+        'additionalNotes' => 'string',
+        'newsId' => 'int',
+        'sendNotifications' => 'bool',
+        'clearReschedule' => 'bool',
+        'skipValidation' => 'bool',
         'transportation' => '\SKY\School\Model\GameTransportation[]',
         'opponents' => '\SKY\School\Model\GameOpponent[]',
     ];
@@ -94,30 +94,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'game_id' => 'int32',
-        'schedule_type' => 'int32',
+        'gameId' => 'int32',
+        'scheduleType' => 'int32',
         'title' => null,
-        'game_date' => 'date-time',
-        'game_date_end' => 'date-time',
-        'cancel_type' => 'int32',
-        'home_away_type' => 'int32',
-        'location_id' => 'int32',
-        'location_ind' => 'int32',
-        'dismissal_time' => null,
-        'departure_time' => null,
-        'departure_note' => null,
-        'pickup_time' => null,
-        'pickup_note' => null,
-        'league_ind' => null,
-        'scrimmage_ind' => null,
-        'tournament_ind' => null,
-        'invitational_ind' => null,
-        'playoff_ind' => null,
-        'additional_notes' => null,
-        'news_id' => 'int32',
-        'send_notifications' => null,
-        'clear_reschedule' => null,
-        'skip_validation' => null,
+        'gameDate' => 'date-time',
+        'gameDateEnd' => 'date-time',
+        'cancelType' => 'int32',
+        'homeAwayType' => 'int32',
+        'locationId' => 'int32',
+        'locationInd' => 'int32',
+        'dismissalTime' => null,
+        'departureTime' => null,
+        'departureNote' => null,
+        'pickupTime' => null,
+        'pickupNote' => null,
+        'leagueInd' => null,
+        'scrimmageInd' => null,
+        'tournamentInd' => null,
+        'invitationalInd' => null,
+        'playoffInd' => null,
+        'additionalNotes' => null,
+        'newsId' => 'int32',
+        'sendNotifications' => null,
+        'clearReschedule' => null,
+        'skipValidation' => null,
         'transportation' => null,
         'opponents' => null,
     ];
@@ -128,30 +128,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'game_id' => false,
-        'schedule_type' => true,
+        'gameId' => false,
+        'scheduleType' => true,
         'title' => true,
-        'game_date' => true,
-        'game_date_end' => true,
-        'cancel_type' => true,
-        'home_away_type' => true,
-        'location_id' => true,
-        'location_ind' => true,
-        'dismissal_time' => true,
-        'departure_time' => true,
-        'departure_note' => true,
-        'pickup_time' => true,
-        'pickup_note' => true,
-        'league_ind' => true,
-        'scrimmage_ind' => true,
-        'tournament_ind' => true,
-        'invitational_ind' => true,
-        'playoff_ind' => true,
-        'additional_notes' => true,
-        'news_id' => true,
-        'send_notifications' => true,
-        'clear_reschedule' => true,
-        'skip_validation' => true,
+        'gameDate' => true,
+        'gameDateEnd' => true,
+        'cancelType' => true,
+        'homeAwayType' => true,
+        'locationId' => true,
+        'locationInd' => true,
+        'dismissalTime' => true,
+        'departureTime' => true,
+        'departureNote' => true,
+        'pickupTime' => true,
+        'pickupNote' => true,
+        'leagueInd' => true,
+        'scrimmageInd' => true,
+        'tournamentInd' => true,
+        'invitationalInd' => true,
+        'playoffInd' => true,
+        'additionalNotes' => true,
+        'newsId' => true,
+        'sendNotifications' => true,
+        'clearReschedule' => true,
+        'skipValidation' => true,
         'transportation' => true,
         'opponents' => true,
     ];
@@ -242,30 +242,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'game_id' => 'game_id',
-        'schedule_type' => 'schedule_type',
+        'gameId' => 'game_id',
+        'scheduleType' => 'schedule_type',
         'title' => 'title',
-        'game_date' => 'game_date',
-        'game_date_end' => 'game_date_end',
-        'cancel_type' => 'cancel_type',
-        'home_away_type' => 'home_away_type',
-        'location_id' => 'location_id',
-        'location_ind' => 'location_ind',
-        'dismissal_time' => 'dismissal_time',
-        'departure_time' => 'departure_time',
-        'departure_note' => 'departure_note',
-        'pickup_time' => 'pickup_time',
-        'pickup_note' => 'pickup_note',
-        'league_ind' => 'league_ind',
-        'scrimmage_ind' => 'scrimmage_ind',
-        'tournament_ind' => 'tournament_ind',
-        'invitational_ind' => 'invitational_ind',
-        'playoff_ind' => 'playoff_ind',
-        'additional_notes' => 'additional_notes',
-        'news_id' => 'news_id',
-        'send_notifications' => 'send_notifications',
-        'clear_reschedule' => 'clear_reschedule',
-        'skip_validation' => 'skip_validation',
+        'gameDate' => 'game_date',
+        'gameDateEnd' => 'game_date_end',
+        'cancelType' => 'cancel_type',
+        'homeAwayType' => 'home_away_type',
+        'locationId' => 'location_id',
+        'locationInd' => 'location_ind',
+        'dismissalTime' => 'dismissal_time',
+        'departureTime' => 'departure_time',
+        'departureNote' => 'departure_note',
+        'pickupTime' => 'pickup_time',
+        'pickupNote' => 'pickup_note',
+        'leagueInd' => 'league_ind',
+        'scrimmageInd' => 'scrimmage_ind',
+        'tournamentInd' => 'tournament_ind',
+        'invitationalInd' => 'invitational_ind',
+        'playoffInd' => 'playoff_ind',
+        'additionalNotes' => 'additional_notes',
+        'newsId' => 'news_id',
+        'sendNotifications' => 'send_notifications',
+        'clearReschedule' => 'clear_reschedule',
+        'skipValidation' => 'skip_validation',
         'transportation' => 'transportation',
         'opponents' => 'opponents',
     ];
@@ -276,30 +276,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'game_id' => 'setGameId',
-        'schedule_type' => 'setScheduleType',
+        'gameId' => 'setGameId',
+        'scheduleType' => 'setScheduleType',
         'title' => 'setTitle',
-        'game_date' => 'setGameDate',
-        'game_date_end' => 'setGameDateEnd',
-        'cancel_type' => 'setCancelType',
-        'home_away_type' => 'setHomeAwayType',
-        'location_id' => 'setLocationId',
-        'location_ind' => 'setLocationInd',
-        'dismissal_time' => 'setDismissalTime',
-        'departure_time' => 'setDepartureTime',
-        'departure_note' => 'setDepartureNote',
-        'pickup_time' => 'setPickupTime',
-        'pickup_note' => 'setPickupNote',
-        'league_ind' => 'setLeagueInd',
-        'scrimmage_ind' => 'setScrimmageInd',
-        'tournament_ind' => 'setTournamentInd',
-        'invitational_ind' => 'setInvitationalInd',
-        'playoff_ind' => 'setPlayoffInd',
-        'additional_notes' => 'setAdditionalNotes',
-        'news_id' => 'setNewsId',
-        'send_notifications' => 'setSendNotifications',
-        'clear_reschedule' => 'setClearReschedule',
-        'skip_validation' => 'setSkipValidation',
+        'gameDate' => 'setGameDate',
+        'gameDateEnd' => 'setGameDateEnd',
+        'cancelType' => 'setCancelType',
+        'homeAwayType' => 'setHomeAwayType',
+        'locationId' => 'setLocationId',
+        'locationInd' => 'setLocationInd',
+        'dismissalTime' => 'setDismissalTime',
+        'departureTime' => 'setDepartureTime',
+        'departureNote' => 'setDepartureNote',
+        'pickupTime' => 'setPickupTime',
+        'pickupNote' => 'setPickupNote',
+        'leagueInd' => 'setLeagueInd',
+        'scrimmageInd' => 'setScrimmageInd',
+        'tournamentInd' => 'setTournamentInd',
+        'invitationalInd' => 'setInvitationalInd',
+        'playoffInd' => 'setPlayoffInd',
+        'additionalNotes' => 'setAdditionalNotes',
+        'newsId' => 'setNewsId',
+        'sendNotifications' => 'setSendNotifications',
+        'clearReschedule' => 'setClearReschedule',
+        'skipValidation' => 'setSkipValidation',
         'transportation' => 'setTransportation',
         'opponents' => 'setOpponents',
     ];
@@ -310,30 +310,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'game_id' => 'getGameId',
-        'schedule_type' => 'getScheduleType',
+        'gameId' => 'getGameId',
+        'scheduleType' => 'getScheduleType',
         'title' => 'getTitle',
-        'game_date' => 'getGameDate',
-        'game_date_end' => 'getGameDateEnd',
-        'cancel_type' => 'getCancelType',
-        'home_away_type' => 'getHomeAwayType',
-        'location_id' => 'getLocationId',
-        'location_ind' => 'getLocationInd',
-        'dismissal_time' => 'getDismissalTime',
-        'departure_time' => 'getDepartureTime',
-        'departure_note' => 'getDepartureNote',
-        'pickup_time' => 'getPickupTime',
-        'pickup_note' => 'getPickupNote',
-        'league_ind' => 'getLeagueInd',
-        'scrimmage_ind' => 'getScrimmageInd',
-        'tournament_ind' => 'getTournamentInd',
-        'invitational_ind' => 'getInvitationalInd',
-        'playoff_ind' => 'getPlayoffInd',
-        'additional_notes' => 'getAdditionalNotes',
-        'news_id' => 'getNewsId',
-        'send_notifications' => 'getSendNotifications',
-        'clear_reschedule' => 'getClearReschedule',
-        'skip_validation' => 'getSkipValidation',
+        'gameDate' => 'getGameDate',
+        'gameDateEnd' => 'getGameDateEnd',
+        'cancelType' => 'getCancelType',
+        'homeAwayType' => 'getHomeAwayType',
+        'locationId' => 'getLocationId',
+        'locationInd' => 'getLocationInd',
+        'dismissalTime' => 'getDismissalTime',
+        'departureTime' => 'getDepartureTime',
+        'departureNote' => 'getDepartureNote',
+        'pickupTime' => 'getPickupTime',
+        'pickupNote' => 'getPickupNote',
+        'leagueInd' => 'getLeagueInd',
+        'scrimmageInd' => 'getScrimmageInd',
+        'tournamentInd' => 'getTournamentInd',
+        'invitationalInd' => 'getInvitationalInd',
+        'playoffInd' => 'getPlayoffInd',
+        'additionalNotes' => 'getAdditionalNotes',
+        'newsId' => 'getNewsId',
+        'sendNotifications' => 'getSendNotifications',
+        'clearReschedule' => 'getClearReschedule',
+        'skipValidation' => 'getSkipValidation',
         'transportation' => 'getTransportation',
         'opponents' => 'getOpponents',
     ];
@@ -395,30 +395,30 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('game_id', $data ?? [], null);
-        $this->setIfExists('schedule_type', $data ?? [], null);
+        $this->setIfExists('gameId', $data ?? [], null);
+        $this->setIfExists('scheduleType', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('game_date', $data ?? [], null);
-        $this->setIfExists('game_date_end', $data ?? [], null);
-        $this->setIfExists('cancel_type', $data ?? [], null);
-        $this->setIfExists('home_away_type', $data ?? [], null);
-        $this->setIfExists('location_id', $data ?? [], null);
-        $this->setIfExists('location_ind', $data ?? [], null);
-        $this->setIfExists('dismissal_time', $data ?? [], null);
-        $this->setIfExists('departure_time', $data ?? [], null);
-        $this->setIfExists('departure_note', $data ?? [], null);
-        $this->setIfExists('pickup_time', $data ?? [], null);
-        $this->setIfExists('pickup_note', $data ?? [], null);
-        $this->setIfExists('league_ind', $data ?? [], null);
-        $this->setIfExists('scrimmage_ind', $data ?? [], null);
-        $this->setIfExists('tournament_ind', $data ?? [], null);
-        $this->setIfExists('invitational_ind', $data ?? [], null);
-        $this->setIfExists('playoff_ind', $data ?? [], null);
-        $this->setIfExists('additional_notes', $data ?? [], null);
-        $this->setIfExists('news_id', $data ?? [], null);
-        $this->setIfExists('send_notifications', $data ?? [], null);
-        $this->setIfExists('clear_reschedule', $data ?? [], null);
-        $this->setIfExists('skip_validation', $data ?? [], null);
+        $this->setIfExists('gameDate', $data ?? [], null);
+        $this->setIfExists('gameDateEnd', $data ?? [], null);
+        $this->setIfExists('cancelType', $data ?? [], null);
+        $this->setIfExists('homeAwayType', $data ?? [], null);
+        $this->setIfExists('locationId', $data ?? [], null);
+        $this->setIfExists('locationInd', $data ?? [], null);
+        $this->setIfExists('dismissalTime', $data ?? [], null);
+        $this->setIfExists('departureTime', $data ?? [], null);
+        $this->setIfExists('departureNote', $data ?? [], null);
+        $this->setIfExists('pickupTime', $data ?? [], null);
+        $this->setIfExists('pickupNote', $data ?? [], null);
+        $this->setIfExists('leagueInd', $data ?? [], null);
+        $this->setIfExists('scrimmageInd', $data ?? [], null);
+        $this->setIfExists('tournamentInd', $data ?? [], null);
+        $this->setIfExists('invitationalInd', $data ?? [], null);
+        $this->setIfExists('playoffInd', $data ?? [], null);
+        $this->setIfExists('additionalNotes', $data ?? [], null);
+        $this->setIfExists('newsId', $data ?? [], null);
+        $this->setIfExists('sendNotifications', $data ?? [], null);
+        $this->setIfExists('clearReschedule', $data ?? [], null);
+        $this->setIfExists('skipValidation', $data ?? [], null);
         $this->setIfExists('transportation', $data ?? [], null);
         $this->setIfExists('opponents', $data ?? [], null);
     }
@@ -450,8 +450,8 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['game_id'] === null) {
-            $invalidProperties[] = "'game_id' can't be null";
+        if ($this->container['gameId'] === null) {
+            $invalidProperties[] = "'gameId' can't be null";
         }
         return $invalidProperties;
     }
@@ -469,62 +469,62 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets game_id
+     * Gets gameId
      *
      * @return int
      */
     public function getGameId()
     {
-        return $this->container['game_id'];
+        return $this->container['gameId'];
     }
 
     /**
-     * Sets game_id
+     * Sets gameId
      *
-     * @param int $game_id ID of the game to be updated
+     * @param int $gameId ID of the game to be updated
      *
      * @return self
      */
-    public function setGameId($game_id)
+    public function setGameId($gameId)
     {
-        if (is_null($game_id)) {
-            throw new \InvalidArgumentException('non-nullable game_id cannot be null');
+        if (is_null($gameId)) {
+            throw new \InvalidArgumentException('non-nullable gameId cannot be null');
         }
-        $this->container['game_id'] = $game_id;
+        $this->container['gameId'] = $gameId;
 
         return $this;
     }
 
     /**
-     * Gets schedule_type
+     * Gets scheduleType
      *
      * @return int|null
      */
     public function getScheduleType()
     {
-        return $this->container['schedule_type'];
+        return $this->container['scheduleType'];
     }
 
     /**
-     * Sets schedule_type
+     * Sets scheduleType
      *
-     * @param int|null $schedule_type The Type of the event
+     * @param int|null $scheduleType The Type of the event
      *
      * @return self
      */
-    public function setScheduleType($schedule_type)
+    public function setScheduleType($scheduleType)
     {
-        if (is_null($schedule_type)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_type');
+        if (is_null($scheduleType)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_type', $nullablesSetToNull);
+            $index = array_search('scheduleType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_type'] = $schedule_type;
+        $this->container['scheduleType'] = $scheduleType;
 
         return $this;
     }
@@ -564,715 +564,715 @@ class GameUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets game_date
+     * Gets gameDate
      *
      * @return \DateTime|null
      */
     public function getGameDate()
     {
-        return $this->container['game_date'];
+        return $this->container['gameDate'];
     }
 
     /**
-     * Sets game_date
+     * Sets gameDate
      *
-     * @param \DateTime|null $game_date Date and time of the game <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $gameDate Date and time of the game <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setGameDate($game_date)
+    public function setGameDate($gameDate)
     {
-        if (is_null($game_date)) {
-            array_push($this->openAPINullablesSetToNull, 'game_date');
+        if (is_null($gameDate)) {
+            array_push($this->openAPINullablesSetToNull, 'gameDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('game_date', $nullablesSetToNull);
+            $index = array_search('gameDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['game_date'] = $game_date;
+        $this->container['gameDate'] = $gameDate;
 
         return $this;
     }
 
     /**
-     * Gets game_date_end
+     * Gets gameDateEnd
      *
      * @return \DateTime|null
      */
     public function getGameDateEnd()
     {
-        return $this->container['game_date_end'];
+        return $this->container['gameDateEnd'];
     }
 
     /**
-     * Sets game_date_end
+     * Sets gameDateEnd
      *
-     * @param \DateTime|null $game_date_end Date and time the game is set to end <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $gameDateEnd Date and time the game is set to end <br />  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setGameDateEnd($game_date_end)
+    public function setGameDateEnd($gameDateEnd)
     {
-        if (is_null($game_date_end)) {
-            array_push($this->openAPINullablesSetToNull, 'game_date_end');
+        if (is_null($gameDateEnd)) {
+            array_push($this->openAPINullablesSetToNull, 'gameDateEnd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('game_date_end', $nullablesSetToNull);
+            $index = array_search('gameDateEnd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['game_date_end'] = $game_date_end;
+        $this->container['gameDateEnd'] = $gameDateEnd;
 
         return $this;
     }
 
     /**
-     * Gets cancel_type
+     * Gets cancelType
      *
      * @return int|null
      */
     public function getCancelType()
     {
-        return $this->container['cancel_type'];
+        return $this->container['cancelType'];
     }
 
     /**
-     * Sets cancel_type
+     * Sets cancelType
      *
-     * @param int|null $cancel_type Set to 0 to Uncancel a game <br />  Set to 1 to Cancel a game <br />  Set to 2 to Reschedule a game <br />
+     * @param int|null $cancelType Set to 0 to Uncancel a game <br />  Set to 1 to Cancel a game <br />  Set to 2 to Reschedule a game <br />
      *
      * @return self
      */
-    public function setCancelType($cancel_type)
+    public function setCancelType($cancelType)
     {
-        if (is_null($cancel_type)) {
-            array_push($this->openAPINullablesSetToNull, 'cancel_type');
+        if (is_null($cancelType)) {
+            array_push($this->openAPINullablesSetToNull, 'cancelType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cancel_type', $nullablesSetToNull);
+            $index = array_search('cancelType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cancel_type'] = $cancel_type;
+        $this->container['cancelType'] = $cancelType;
 
         return $this;
     }
 
     /**
-     * Gets home_away_type
+     * Gets homeAwayType
      *
      * @return int|null
      */
     public function getHomeAwayType()
     {
-        return $this->container['home_away_type'];
+        return $this->container['homeAwayType'];
     }
 
     /**
-     * Sets home_away_type
+     * Sets homeAwayType
      *
-     * @param int|null $home_away_type Set to 0 for Home <br />  Set to 1 for Away <br />  Set to 2 for Neutral <br />  Set to 3 for TBD
+     * @param int|null $homeAwayType Set to 0 for Home <br />  Set to 1 for Away <br />  Set to 2 for Neutral <br />  Set to 3 for TBD
      *
      * @return self
      */
-    public function setHomeAwayType($home_away_type)
+    public function setHomeAwayType($homeAwayType)
     {
-        if (is_null($home_away_type)) {
-            array_push($this->openAPINullablesSetToNull, 'home_away_type');
+        if (is_null($homeAwayType)) {
+            array_push($this->openAPINullablesSetToNull, 'homeAwayType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_away_type', $nullablesSetToNull);
+            $index = array_search('homeAwayType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_away_type'] = $home_away_type;
+        $this->container['homeAwayType'] = $homeAwayType;
 
         return $this;
     }
 
     /**
-     * Gets location_id
+     * Gets locationId
      *
      * @return int|null
      */
     public function getLocationId()
     {
-        return $this->container['location_id'];
+        return $this->container['locationId'];
     }
 
     /**
-     * Sets location_id
+     * Sets locationId
      *
-     * @param int|null $location_id ID of the location/venue of the game
+     * @param int|null $locationId ID of the location/venue of the game
      *
      * @return self
      */
-    public function setLocationId($location_id)
+    public function setLocationId($locationId)
     {
-        if (is_null($location_id)) {
-            array_push($this->openAPINullablesSetToNull, 'location_id');
+        if (is_null($locationId)) {
+            array_push($this->openAPINullablesSetToNull, 'locationId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('location_id', $nullablesSetToNull);
+            $index = array_search('locationId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['location_id'] = $location_id;
+        $this->container['locationId'] = $locationId;
 
         return $this;
     }
 
     /**
-     * Gets location_ind
+     * Gets locationInd
      *
      * @return int|null
      */
     public function getLocationInd()
     {
-        return $this->container['location_ind'];
+        return $this->container['locationInd'];
     }
 
     /**
-     * Sets location_ind
+     * Sets locationInd
      *
-     * @param int|null $location_ind Set to 0 when using a venue for ```location_id```<br />  Set to 1 when using a location for ```location_id```
+     * @param int|null $locationInd Set to 0 when using a venue for ```location_id```<br />  Set to 1 when using a location for ```location_id```
      *
      * @return self
      */
-    public function setLocationInd($location_ind)
+    public function setLocationInd($locationInd)
     {
-        if (is_null($location_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'location_ind');
+        if (is_null($locationInd)) {
+            array_push($this->openAPINullablesSetToNull, 'locationInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('location_ind', $nullablesSetToNull);
+            $index = array_search('locationInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['location_ind'] = $location_ind;
+        $this->container['locationInd'] = $locationInd;
 
         return $this;
     }
 
     /**
-     * Gets dismissal_time
+     * Gets dismissalTime
      *
      * @return string|null
      */
     public function getDismissalTime()
     {
-        return $this->container['dismissal_time'];
+        return $this->container['dismissalTime'];
     }
 
     /**
-     * Sets dismissal_time
+     * Sets dismissalTime
      *
-     * @param string|null $dismissal_time Time for dismissal using 24-hour format: ```HH:mm```
+     * @param string|null $dismissalTime Time for dismissal using 24-hour format: ```HH:mm```
      *
      * @return self
      */
-    public function setDismissalTime($dismissal_time)
+    public function setDismissalTime($dismissalTime)
     {
-        if (is_null($dismissal_time)) {
-            array_push($this->openAPINullablesSetToNull, 'dismissal_time');
+        if (is_null($dismissalTime)) {
+            array_push($this->openAPINullablesSetToNull, 'dismissalTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dismissal_time', $nullablesSetToNull);
+            $index = array_search('dismissalTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dismissal_time'] = $dismissal_time;
+        $this->container['dismissalTime'] = $dismissalTime;
 
         return $this;
     }
 
     /**
-     * Gets departure_time
+     * Gets departureTime
      *
      * @return string|null
      */
     public function getDepartureTime()
     {
-        return $this->container['departure_time'];
+        return $this->container['departureTime'];
     }
 
     /**
-     * Sets departure_time
+     * Sets departureTime
      *
-     * @param string|null $departure_time Time for departure using 24-hour format: ```HH:mm```
+     * @param string|null $departureTime Time for departure using 24-hour format: ```HH:mm```
      *
      * @return self
      */
-    public function setDepartureTime($departure_time)
+    public function setDepartureTime($departureTime)
     {
-        if (is_null($departure_time)) {
-            array_push($this->openAPINullablesSetToNull, 'departure_time');
+        if (is_null($departureTime)) {
+            array_push($this->openAPINullablesSetToNull, 'departureTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('departure_time', $nullablesSetToNull);
+            $index = array_search('departureTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['departure_time'] = $departure_time;
+        $this->container['departureTime'] = $departureTime;
 
         return $this;
     }
 
     /**
-     * Gets departure_note
+     * Gets departureNote
      *
      * @return string|null
      */
     public function getDepartureNote()
     {
-        return $this->container['departure_note'];
+        return $this->container['departureNote'];
     }
 
     /**
-     * Sets departure_note
+     * Sets departureNote
      *
-     * @param string|null $departure_note Notes related to departure
+     * @param string|null $departureNote Notes related to departure
      *
      * @return self
      */
-    public function setDepartureNote($departure_note)
+    public function setDepartureNote($departureNote)
     {
-        if (is_null($departure_note)) {
-            array_push($this->openAPINullablesSetToNull, 'departure_note');
+        if (is_null($departureNote)) {
+            array_push($this->openAPINullablesSetToNull, 'departureNote');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('departure_note', $nullablesSetToNull);
+            $index = array_search('departureNote', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['departure_note'] = $departure_note;
+        $this->container['departureNote'] = $departureNote;
 
         return $this;
     }
 
     /**
-     * Gets pickup_time
+     * Gets pickupTime
      *
      * @return string|null
      */
     public function getPickupTime()
     {
-        return $this->container['pickup_time'];
+        return $this->container['pickupTime'];
     }
 
     /**
-     * Sets pickup_time
+     * Sets pickupTime
      *
-     * @param string|null $pickup_time Time for pickup using 24-hour format: ```HH:mm```
+     * @param string|null $pickupTime Time for pickup using 24-hour format: ```HH:mm```
      *
      * @return self
      */
-    public function setPickupTime($pickup_time)
+    public function setPickupTime($pickupTime)
     {
-        if (is_null($pickup_time)) {
-            array_push($this->openAPINullablesSetToNull, 'pickup_time');
+        if (is_null($pickupTime)) {
+            array_push($this->openAPINullablesSetToNull, 'pickupTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pickup_time', $nullablesSetToNull);
+            $index = array_search('pickupTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pickup_time'] = $pickup_time;
+        $this->container['pickupTime'] = $pickupTime;
 
         return $this;
     }
 
     /**
-     * Gets pickup_note
+     * Gets pickupNote
      *
      * @return string|null
      */
     public function getPickupNote()
     {
-        return $this->container['pickup_note'];
+        return $this->container['pickupNote'];
     }
 
     /**
-     * Sets pickup_note
+     * Sets pickupNote
      *
-     * @param string|null $pickup_note Notes related to pickup
+     * @param string|null $pickupNote Notes related to pickup
      *
      * @return self
      */
-    public function setPickupNote($pickup_note)
+    public function setPickupNote($pickupNote)
     {
-        if (is_null($pickup_note)) {
-            array_push($this->openAPINullablesSetToNull, 'pickup_note');
+        if (is_null($pickupNote)) {
+            array_push($this->openAPINullablesSetToNull, 'pickupNote');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pickup_note', $nullablesSetToNull);
+            $index = array_search('pickupNote', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pickup_note'] = $pickup_note;
+        $this->container['pickupNote'] = $pickupNote;
 
         return $this;
     }
 
     /**
-     * Gets league_ind
+     * Gets leagueInd
      *
      * @return bool|null
      */
     public function getLeagueInd()
     {
-        return $this->container['league_ind'];
+        return $this->container['leagueInd'];
     }
 
     /**
-     * Sets league_ind
+     * Sets leagueInd
      *
-     * @param bool|null $league_ind Set to true to indicate a league event
+     * @param bool|null $leagueInd Set to true to indicate a league event
      *
      * @return self
      */
-    public function setLeagueInd($league_ind)
+    public function setLeagueInd($leagueInd)
     {
-        if (is_null($league_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'league_ind');
+        if (is_null($leagueInd)) {
+            array_push($this->openAPINullablesSetToNull, 'leagueInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('league_ind', $nullablesSetToNull);
+            $index = array_search('leagueInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['league_ind'] = $league_ind;
+        $this->container['leagueInd'] = $leagueInd;
 
         return $this;
     }
 
     /**
-     * Gets scrimmage_ind
+     * Gets scrimmageInd
      *
      * @return bool|null
      */
     public function getScrimmageInd()
     {
-        return $this->container['scrimmage_ind'];
+        return $this->container['scrimmageInd'];
     }
 
     /**
-     * Sets scrimmage_ind
+     * Sets scrimmageInd
      *
-     * @param bool|null $scrimmage_ind Set to true to indicate a scrimmage event
+     * @param bool|null $scrimmageInd Set to true to indicate a scrimmage event
      *
      * @return self
      */
-    public function setScrimmageInd($scrimmage_ind)
+    public function setScrimmageInd($scrimmageInd)
     {
-        if (is_null($scrimmage_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'scrimmage_ind');
+        if (is_null($scrimmageInd)) {
+            array_push($this->openAPINullablesSetToNull, 'scrimmageInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('scrimmage_ind', $nullablesSetToNull);
+            $index = array_search('scrimmageInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['scrimmage_ind'] = $scrimmage_ind;
+        $this->container['scrimmageInd'] = $scrimmageInd;
 
         return $this;
     }
 
     /**
-     * Gets tournament_ind
+     * Gets tournamentInd
      *
      * @return bool|null
      */
     public function getTournamentInd()
     {
-        return $this->container['tournament_ind'];
+        return $this->container['tournamentInd'];
     }
 
     /**
-     * Sets tournament_ind
+     * Sets tournamentInd
      *
-     * @param bool|null $tournament_ind Set to true to indicate a tournament event
+     * @param bool|null $tournamentInd Set to true to indicate a tournament event
      *
      * @return self
      */
-    public function setTournamentInd($tournament_ind)
+    public function setTournamentInd($tournamentInd)
     {
-        if (is_null($tournament_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'tournament_ind');
+        if (is_null($tournamentInd)) {
+            array_push($this->openAPINullablesSetToNull, 'tournamentInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('tournament_ind', $nullablesSetToNull);
+            $index = array_search('tournamentInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['tournament_ind'] = $tournament_ind;
+        $this->container['tournamentInd'] = $tournamentInd;
 
         return $this;
     }
 
     /**
-     * Gets invitational_ind
+     * Gets invitationalInd
      *
      * @return bool|null
      */
     public function getInvitationalInd()
     {
-        return $this->container['invitational_ind'];
+        return $this->container['invitationalInd'];
     }
 
     /**
-     * Sets invitational_ind
+     * Sets invitationalInd
      *
-     * @param bool|null $invitational_ind Set to true to indicate an invitational event
+     * @param bool|null $invitationalInd Set to true to indicate an invitational event
      *
      * @return self
      */
-    public function setInvitationalInd($invitational_ind)
+    public function setInvitationalInd($invitationalInd)
     {
-        if (is_null($invitational_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'invitational_ind');
+        if (is_null($invitationalInd)) {
+            array_push($this->openAPINullablesSetToNull, 'invitationalInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('invitational_ind', $nullablesSetToNull);
+            $index = array_search('invitationalInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['invitational_ind'] = $invitational_ind;
+        $this->container['invitationalInd'] = $invitationalInd;
 
         return $this;
     }
 
     /**
-     * Gets playoff_ind
+     * Gets playoffInd
      *
      * @return bool|null
      */
     public function getPlayoffInd()
     {
-        return $this->container['playoff_ind'];
+        return $this->container['playoffInd'];
     }
 
     /**
-     * Sets playoff_ind
+     * Sets playoffInd
      *
-     * @param bool|null $playoff_ind Set to true to indicate a playoff event
+     * @param bool|null $playoffInd Set to true to indicate a playoff event
      *
      * @return self
      */
-    public function setPlayoffInd($playoff_ind)
+    public function setPlayoffInd($playoffInd)
     {
-        if (is_null($playoff_ind)) {
-            array_push($this->openAPINullablesSetToNull, 'playoff_ind');
+        if (is_null($playoffInd)) {
+            array_push($this->openAPINullablesSetToNull, 'playoffInd');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('playoff_ind', $nullablesSetToNull);
+            $index = array_search('playoffInd', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['playoff_ind'] = $playoff_ind;
+        $this->container['playoffInd'] = $playoffInd;
 
         return $this;
     }
 
     /**
-     * Gets additional_notes
+     * Gets additionalNotes
      *
      * @return string|null
      */
     public function getAdditionalNotes()
     {
-        return $this->container['additional_notes'];
+        return $this->container['additionalNotes'];
     }
 
     /**
-     * Sets additional_notes
+     * Sets additionalNotes
      *
-     * @param string|null $additional_notes Additional notes for the event
+     * @param string|null $additionalNotes Additional notes for the event
      *
      * @return self
      */
-    public function setAdditionalNotes($additional_notes)
+    public function setAdditionalNotes($additionalNotes)
     {
-        if (is_null($additional_notes)) {
-            array_push($this->openAPINullablesSetToNull, 'additional_notes');
+        if (is_null($additionalNotes)) {
+            array_push($this->openAPINullablesSetToNull, 'additionalNotes');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('additional_notes', $nullablesSetToNull);
+            $index = array_search('additionalNotes', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['additional_notes'] = $additional_notes;
+        $this->container['additionalNotes'] = $additionalNotes;
 
         return $this;
     }
 
     /**
-     * Gets news_id
+     * Gets newsId
      *
      * @return int|null
      */
     public function getNewsId()
     {
-        return $this->container['news_id'];
+        return $this->container['newsId'];
     }
 
     /**
-     * Sets news_id
+     * Sets newsId
      *
-     * @param int|null $news_id News ID
+     * @param int|null $newsId News ID
      *
      * @return self
      */
-    public function setNewsId($news_id)
+    public function setNewsId($newsId)
     {
-        if (is_null($news_id)) {
-            array_push($this->openAPINullablesSetToNull, 'news_id');
+        if (is_null($newsId)) {
+            array_push($this->openAPINullablesSetToNull, 'newsId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('news_id', $nullablesSetToNull);
+            $index = array_search('newsId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['news_id'] = $news_id;
+        $this->container['newsId'] = $newsId;
 
         return $this;
     }
 
     /**
-     * Gets send_notifications
+     * Gets sendNotifications
      *
      * @return bool|null
      */
     public function getSendNotifications()
     {
-        return $this->container['send_notifications'];
+        return $this->container['sendNotifications'];
     }
 
     /**
-     * Sets send_notifications
+     * Sets sendNotifications
      *
-     * @param bool|null $send_notifications Toggles 'Send Notification' option
+     * @param bool|null $sendNotifications Toggles 'Send Notification' option
      *
      * @return self
      */
-    public function setSendNotifications($send_notifications)
+    public function setSendNotifications($sendNotifications)
     {
-        if (is_null($send_notifications)) {
-            array_push($this->openAPINullablesSetToNull, 'send_notifications');
+        if (is_null($sendNotifications)) {
+            array_push($this->openAPINullablesSetToNull, 'sendNotifications');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('send_notifications', $nullablesSetToNull);
+            $index = array_search('sendNotifications', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['send_notifications'] = $send_notifications;
+        $this->container['sendNotifications'] = $sendNotifications;
 
         return $this;
     }
 
     /**
-     * Gets clear_reschedule
+     * Gets clearReschedule
      *
      * @return bool|null
      */
     public function getClearReschedule()
     {
-        return $this->container['clear_reschedule'];
+        return $this->container['clearReschedule'];
     }
 
     /**
-     * Sets clear_reschedule
+     * Sets clearReschedule
      *
-     * @param bool|null $clear_reschedule Set to true to remove the original scheduled game
+     * @param bool|null $clearReschedule Set to true to remove the original scheduled game
      *
      * @return self
      */
-    public function setClearReschedule($clear_reschedule)
+    public function setClearReschedule($clearReschedule)
     {
-        if (is_null($clear_reschedule)) {
-            array_push($this->openAPINullablesSetToNull, 'clear_reschedule');
+        if (is_null($clearReschedule)) {
+            array_push($this->openAPINullablesSetToNull, 'clearReschedule');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('clear_reschedule', $nullablesSetToNull);
+            $index = array_search('clearReschedule', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['clear_reschedule'] = $clear_reschedule;
+        $this->container['clearReschedule'] = $clearReschedule;
 
         return $this;
     }
 
     /**
-     * Gets skip_validation
+     * Gets skipValidation
      *
      * @return bool|null
      */
     public function getSkipValidation()
     {
-        return $this->container['skip_validation'];
+        return $this->container['skipValidation'];
     }
 
     /**
-     * Sets skip_validation
+     * Sets skipValidation
      *
-     * @param bool|null $skip_validation Set to true to skip validation of this event
+     * @param bool|null $skipValidation Set to true to skip validation of this event
      *
      * @return self
      */
-    public function setSkipValidation($skip_validation)
+    public function setSkipValidation($skipValidation)
     {
-        if (is_null($skip_validation)) {
-            array_push($this->openAPINullablesSetToNull, 'skip_validation');
+        if (is_null($skipValidation)) {
+            array_push($this->openAPINullablesSetToNull, 'skipValidation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('skip_validation', $nullablesSetToNull);
+            $index = array_search('skipValidation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['skip_validation'] = $skip_validation;
+        $this->container['skipValidation'] = $skipValidation;
 
         return $this;
     }

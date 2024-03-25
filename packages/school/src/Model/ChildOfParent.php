@@ -59,15 +59,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'student_is_active' => 'bool',
-        'current_grade' => 'string',
-        'grad_year' => 'string',
+        'studentIsActive' => 'bool',
+        'currentGrade' => 'string',
+        'gradYear' => 'string',
         'email' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'middle_name' => 'string',
-        'nick_name' => 'string',
-        'preferred_name' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'middleName' => 'string',
+        'nickName' => 'string',
+        'preferredName' => 'string',
         'prefix' => 'string',
         'suffix' => 'string',
     ];
@@ -81,15 +81,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'student_is_active' => null,
-        'current_grade' => null,
-        'grad_year' => null,
+        'studentIsActive' => null,
+        'currentGrade' => null,
+        'gradYear' => null,
         'email' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'middle_name' => null,
-        'nick_name' => null,
-        'preferred_name' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'middleName' => null,
+        'nickName' => null,
+        'preferredName' => null,
         'prefix' => null,
         'suffix' => null,
     ];
@@ -101,15 +101,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'student_is_active' => true,
-        'current_grade' => true,
-        'grad_year' => true,
+        'studentIsActive' => true,
+        'currentGrade' => true,
+        'gradYear' => true,
         'email' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'middle_name' => true,
-        'nick_name' => true,
-        'preferred_name' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'middleName' => true,
+        'nickName' => true,
+        'preferredName' => true,
         'prefix' => true,
         'suffix' => true,
     ];
@@ -201,15 +201,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'student_is_active' => 'student_is_active',
-        'current_grade' => 'current_grade',
-        'grad_year' => 'grad_year',
+        'studentIsActive' => 'student_is_active',
+        'currentGrade' => 'current_grade',
+        'gradYear' => 'grad_year',
         'email' => 'email',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'middle_name' => 'middle_name',
-        'nick_name' => 'nick_name',
-        'preferred_name' => 'preferred_name',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'middleName' => 'middle_name',
+        'nickName' => 'nick_name',
+        'preferredName' => 'preferred_name',
         'prefix' => 'prefix',
         'suffix' => 'suffix',
     ];
@@ -221,15 +221,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'student_is_active' => 'setStudentIsActive',
-        'current_grade' => 'setCurrentGrade',
-        'grad_year' => 'setGradYear',
+        'studentIsActive' => 'setStudentIsActive',
+        'currentGrade' => 'setCurrentGrade',
+        'gradYear' => 'setGradYear',
         'email' => 'setEmail',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'middle_name' => 'setMiddleName',
-        'nick_name' => 'setNickName',
-        'preferred_name' => 'setPreferredName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'middleName' => 'setMiddleName',
+        'nickName' => 'setNickName',
+        'preferredName' => 'setPreferredName',
         'prefix' => 'setPrefix',
         'suffix' => 'setSuffix',
     ];
@@ -241,15 +241,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'student_is_active' => 'getStudentIsActive',
-        'current_grade' => 'getCurrentGrade',
-        'grad_year' => 'getGradYear',
+        'studentIsActive' => 'getStudentIsActive',
+        'currentGrade' => 'getCurrentGrade',
+        'gradYear' => 'getGradYear',
         'email' => 'getEmail',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'middle_name' => 'getMiddleName',
-        'nick_name' => 'getNickName',
-        'preferred_name' => 'getPreferredName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'middleName' => 'getMiddleName',
+        'nickName' => 'getNickName',
+        'preferredName' => 'getPreferredName',
         'prefix' => 'getPrefix',
         'suffix' => 'getSuffix',
     ];
@@ -312,15 +312,15 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('student_is_active', $data ?? [], null);
-        $this->setIfExists('current_grade', $data ?? [], null);
-        $this->setIfExists('grad_year', $data ?? [], null);
+        $this->setIfExists('studentIsActive', $data ?? [], null);
+        $this->setIfExists('currentGrade', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('middle_name', $data ?? [], null);
-        $this->setIfExists('nick_name', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('middleName', $data ?? [], null);
+        $this->setIfExists('nickName', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
     }
@@ -402,103 +402,103 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets student_is_active
+     * Gets studentIsActive
      *
      * @return bool|null
      */
     public function getStudentIsActive()
     {
-        return $this->container['student_is_active'];
+        return $this->container['studentIsActive'];
     }
 
     /**
-     * Sets student_is_active
+     * Sets studentIsActive
      *
-     * @param bool|null $student_is_active Indicates if the user is an active student
+     * @param bool|null $studentIsActive Indicates if the user is an active student
      *
      * @return self
      */
-    public function setStudentIsActive($student_is_active)
+    public function setStudentIsActive($studentIsActive)
     {
-        if (is_null($student_is_active)) {
-            array_push($this->openAPINullablesSetToNull, 'student_is_active');
+        if (is_null($studentIsActive)) {
+            array_push($this->openAPINullablesSetToNull, 'studentIsActive');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_is_active', $nullablesSetToNull);
+            $index = array_search('studentIsActive', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_is_active'] = $student_is_active;
+        $this->container['studentIsActive'] = $studentIsActive;
 
         return $this;
     }
 
     /**
-     * Gets current_grade
+     * Gets currentGrade
      *
      * @return string|null
      */
     public function getCurrentGrade()
     {
-        return $this->container['current_grade'];
+        return $this->container['currentGrade'];
     }
 
     /**
-     * Sets current_grade
+     * Sets currentGrade
      *
-     * @param string|null $current_grade The current grade of a user
+     * @param string|null $currentGrade The current grade of a user
      *
      * @return self
      */
-    public function setCurrentGrade($current_grade)
+    public function setCurrentGrade($currentGrade)
     {
-        if (is_null($current_grade)) {
-            array_push($this->openAPINullablesSetToNull, 'current_grade');
+        if (is_null($currentGrade)) {
+            array_push($this->openAPINullablesSetToNull, 'currentGrade');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('current_grade', $nullablesSetToNull);
+            $index = array_search('currentGrade', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['current_grade'] = $current_grade;
+        $this->container['currentGrade'] = $currentGrade;
 
         return $this;
     }
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year The grad year of a user
+     * @param string|null $gradYear The grad year of a user
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }
@@ -538,171 +538,171 @@ class ChildOfParent implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of a user
+     * @param string|null $firstName The first name of a user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of a user
+     * @param string|null $lastName The last name of a user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets middle_name
+     * Gets middleName
      *
      * @return string|null
      */
     public function getMiddleName()
     {
-        return $this->container['middle_name'];
+        return $this->container['middleName'];
     }
 
     /**
-     * Sets middle_name
+     * Sets middleName
      *
-     * @param string|null $middle_name The middle name of a user
+     * @param string|null $middleName The middle name of a user
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function setMiddleName($middleName)
     {
-        if (is_null($middle_name)) {
-            array_push($this->openAPINullablesSetToNull, 'middle_name');
+        if (is_null($middleName)) {
+            array_push($this->openAPINullablesSetToNull, 'middleName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middle_name', $nullablesSetToNull);
+            $index = array_search('middleName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['middle_name'] = $middle_name;
+        $this->container['middleName'] = $middleName;
 
         return $this;
     }
 
     /**
-     * Gets nick_name
+     * Gets nickName
      *
      * @return string|null
      */
     public function getNickName()
     {
-        return $this->container['nick_name'];
+        return $this->container['nickName'];
     }
 
     /**
-     * Sets nick_name
+     * Sets nickName
      *
-     * @param string|null $nick_name The nickname of a user  <b>This field will be deprecated after 90 days.</b>
+     * @param string|null $nickName The nickname of a user  <b>This field will be deprecated after 90 days.</b>
      *
      * @return self
      */
-    public function setNickName($nick_name)
+    public function setNickName($nickName)
     {
-        if (is_null($nick_name)) {
-            array_push($this->openAPINullablesSetToNull, 'nick_name');
+        if (is_null($nickName)) {
+            array_push($this->openAPINullablesSetToNull, 'nickName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nick_name', $nullablesSetToNull);
+            $index = array_search('nickName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['nick_name'] = $nick_name;
+        $this->container['nickName'] = $nickName;
 
         return $this;
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The preferred name of the user
+     * @param string|null $preferredName The preferred name of the user
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }

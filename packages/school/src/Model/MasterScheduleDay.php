@@ -58,8 +58,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'calendar_day' => '\DateTime',
-        'schedule_sets' => '\SKY\School\Model\MasterScheduleSet[]',
+        'calendarDay' => '\DateTime',
+        'scheduleSets' => '\SKY\School\Model\MasterScheduleSet[]',
     ];
 
     /**
@@ -70,8 +70,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'calendar_day' => 'date-time',
-        'schedule_sets' => null,
+        'calendarDay' => 'date-time',
+        'scheduleSets' => null,
     ];
 
     /**
@@ -80,8 +80,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'calendar_day' => true,
-        'schedule_sets' => true,
+        'calendarDay' => true,
+        'scheduleSets' => true,
     ];
 
     /**
@@ -170,8 +170,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'calendar_day' => 'calendar_day',
-        'schedule_sets' => 'schedule_sets',
+        'calendarDay' => 'calendar_day',
+        'scheduleSets' => 'schedule_sets',
     ];
 
     /**
@@ -180,8 +180,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'calendar_day' => 'setCalendarDay',
-        'schedule_sets' => 'setScheduleSets',
+        'calendarDay' => 'setCalendarDay',
+        'scheduleSets' => 'setScheduleSets',
     ];
 
     /**
@@ -190,8 +190,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'calendar_day' => 'getCalendarDay',
-        'schedule_sets' => 'getScheduleSets',
+        'calendarDay' => 'getCalendarDay',
+        'scheduleSets' => 'getScheduleSets',
     ];
 
     /**
@@ -251,8 +251,8 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('calendar_day', $data ?? [], null);
-        $this->setIfExists('schedule_sets', $data ?? [], null);
+        $this->setIfExists('calendarDay', $data ?? [], null);
+        $this->setIfExists('scheduleSets', $data ?? [], null);
     }
 
     /**
@@ -298,69 +298,69 @@ class MasterScheduleDay implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets calendar_day
+     * Gets calendarDay
      *
      * @return \DateTime|null
      */
     public function getCalendarDay()
     {
-        return $this->container['calendar_day'];
+        return $this->container['calendarDay'];
     }
 
     /**
-     * Sets calendar_day
+     * Sets calendarDay
      *
-     * @param \DateTime|null $calendar_day
+     * @param \DateTime|null $calendarDay
      *
      * @return self
      */
-    public function setCalendarDay($calendar_day)
+    public function setCalendarDay($calendarDay)
     {
-        if (is_null($calendar_day)) {
-            array_push($this->openAPINullablesSetToNull, 'calendar_day');
+        if (is_null($calendarDay)) {
+            array_push($this->openAPINullablesSetToNull, 'calendarDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('calendar_day', $nullablesSetToNull);
+            $index = array_search('calendarDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['calendar_day'] = $calendar_day;
+        $this->container['calendarDay'] = $calendarDay;
 
         return $this;
     }
 
     /**
-     * Gets schedule_sets
+     * Gets scheduleSets
      *
      * @return \SKY\School\Model\MasterScheduleSet[]|null
      */
     public function getScheduleSets()
     {
-        return $this->container['schedule_sets'];
+        return $this->container['scheduleSets'];
     }
 
     /**
-     * Sets schedule_sets
+     * Sets scheduleSets
      *
-     * @param \SKY\School\Model\MasterScheduleSet[]|null $schedule_sets
+     * @param \SKY\School\Model\MasterScheduleSet[]|null $scheduleSets
      *
      * @return self
      */
-    public function setScheduleSets($schedule_sets)
+    public function setScheduleSets($scheduleSets)
     {
-        if (is_null($schedule_sets)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_sets');
+        if (is_null($scheduleSets)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSets');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_sets', $nullablesSetToNull);
+            $index = array_search('scheduleSets', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_sets'] = $schedule_sets;
+        $this->container['scheduleSets'] = $scheduleSets;
 
         return $this;
     }

@@ -58,15 +58,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'available_spots' => 'int',
-        'building_capacity' => 'int',
-        'building_id' => 'int',
-        'building_name' => 'string',
-        'building_enrollment' => 'int',
-        'offering_type' => 'int',
+        'availableSpots' => 'int',
+        'buildingCapacity' => 'int',
+        'buildingId' => 'int',
+        'buildingName' => 'string',
+        'buildingEnrollment' => 'int',
+        'offeringType' => 'int',
         'leaders' => '\SKY\School\Model\DormLeader[]',
         'rooms' => '\SKY\School\Model\Room[]',
-        'section_id' => 'int',
+        'sectionId' => 'int',
     ];
 
     /**
@@ -77,15 +77,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'available_spots' => 'int32',
-        'building_capacity' => 'int32',
-        'building_id' => 'int32',
-        'building_name' => null,
-        'building_enrollment' => 'int32',
-        'offering_type' => 'int32',
+        'availableSpots' => 'int32',
+        'buildingCapacity' => 'int32',
+        'buildingId' => 'int32',
+        'buildingName' => null,
+        'buildingEnrollment' => 'int32',
+        'offeringType' => 'int32',
         'leaders' => null,
         'rooms' => null,
-        'section_id' => 'int32',
+        'sectionId' => 'int32',
     ];
 
     /**
@@ -94,15 +94,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'available_spots' => true,
-        'building_capacity' => true,
-        'building_id' => true,
-        'building_name' => true,
-        'building_enrollment' => true,
-        'offering_type' => true,
+        'availableSpots' => true,
+        'buildingCapacity' => true,
+        'buildingId' => true,
+        'buildingName' => true,
+        'buildingEnrollment' => true,
+        'offeringType' => true,
         'leaders' => true,
         'rooms' => true,
-        'section_id' => true,
+        'sectionId' => true,
     ];
 
     /**
@@ -191,15 +191,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'available_spots' => 'available_spots',
-        'building_capacity' => 'building_capacity',
-        'building_id' => 'building_id',
-        'building_name' => 'building_name',
-        'building_enrollment' => 'building_enrollment',
-        'offering_type' => 'offering_type',
+        'availableSpots' => 'available_spots',
+        'buildingCapacity' => 'building_capacity',
+        'buildingId' => 'building_id',
+        'buildingName' => 'building_name',
+        'buildingEnrollment' => 'building_enrollment',
+        'offeringType' => 'offering_type',
         'leaders' => 'leaders',
         'rooms' => 'Rooms',
-        'section_id' => 'section_id',
+        'sectionId' => 'section_id',
     ];
 
     /**
@@ -208,15 +208,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'available_spots' => 'setAvailableSpots',
-        'building_capacity' => 'setBuildingCapacity',
-        'building_id' => 'setBuildingId',
-        'building_name' => 'setBuildingName',
-        'building_enrollment' => 'setBuildingEnrollment',
-        'offering_type' => 'setOfferingType',
+        'availableSpots' => 'setAvailableSpots',
+        'buildingCapacity' => 'setBuildingCapacity',
+        'buildingId' => 'setBuildingId',
+        'buildingName' => 'setBuildingName',
+        'buildingEnrollment' => 'setBuildingEnrollment',
+        'offeringType' => 'setOfferingType',
         'leaders' => 'setLeaders',
         'rooms' => 'setRooms',
-        'section_id' => 'setSectionId',
+        'sectionId' => 'setSectionId',
     ];
 
     /**
@@ -225,15 +225,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'available_spots' => 'getAvailableSpots',
-        'building_capacity' => 'getBuildingCapacity',
-        'building_id' => 'getBuildingId',
-        'building_name' => 'getBuildingName',
-        'building_enrollment' => 'getBuildingEnrollment',
-        'offering_type' => 'getOfferingType',
+        'availableSpots' => 'getAvailableSpots',
+        'buildingCapacity' => 'getBuildingCapacity',
+        'buildingId' => 'getBuildingId',
+        'buildingName' => 'getBuildingName',
+        'buildingEnrollment' => 'getBuildingEnrollment',
+        'offeringType' => 'getOfferingType',
         'leaders' => 'getLeaders',
         'rooms' => 'getRooms',
-        'section_id' => 'getSectionId',
+        'sectionId' => 'getSectionId',
     ];
 
     /**
@@ -293,15 +293,15 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('available_spots', $data ?? [], null);
-        $this->setIfExists('building_capacity', $data ?? [], null);
-        $this->setIfExists('building_id', $data ?? [], null);
-        $this->setIfExists('building_name', $data ?? [], null);
-        $this->setIfExists('building_enrollment', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
+        $this->setIfExists('availableSpots', $data ?? [], null);
+        $this->setIfExists('buildingCapacity', $data ?? [], null);
+        $this->setIfExists('buildingId', $data ?? [], null);
+        $this->setIfExists('buildingName', $data ?? [], null);
+        $this->setIfExists('buildingEnrollment', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
         $this->setIfExists('leaders', $data ?? [], null);
         $this->setIfExists('rooms', $data ?? [], null);
-        $this->setIfExists('section_id', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
     }
 
     /**
@@ -347,205 +347,205 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets available_spots
+     * Gets availableSpots
      *
      * @return int|null
      */
     public function getAvailableSpots()
     {
-        return $this->container['available_spots'];
+        return $this->container['availableSpots'];
     }
 
     /**
-     * Sets available_spots
+     * Sets availableSpots
      *
-     * @param int|null $available_spots
+     * @param int|null $availableSpots
      *
      * @return self
      */
-    public function setAvailableSpots($available_spots)
+    public function setAvailableSpots($availableSpots)
     {
-        if (is_null($available_spots)) {
-            array_push($this->openAPINullablesSetToNull, 'available_spots');
+        if (is_null($availableSpots)) {
+            array_push($this->openAPINullablesSetToNull, 'availableSpots');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('available_spots', $nullablesSetToNull);
+            $index = array_search('availableSpots', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['available_spots'] = $available_spots;
+        $this->container['availableSpots'] = $availableSpots;
 
         return $this;
     }
 
     /**
-     * Gets building_capacity
+     * Gets buildingCapacity
      *
      * @return int|null
      */
     public function getBuildingCapacity()
     {
-        return $this->container['building_capacity'];
+        return $this->container['buildingCapacity'];
     }
 
     /**
-     * Sets building_capacity
+     * Sets buildingCapacity
      *
-     * @param int|null $building_capacity
+     * @param int|null $buildingCapacity
      *
      * @return self
      */
-    public function setBuildingCapacity($building_capacity)
+    public function setBuildingCapacity($buildingCapacity)
     {
-        if (is_null($building_capacity)) {
-            array_push($this->openAPINullablesSetToNull, 'building_capacity');
+        if (is_null($buildingCapacity)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingCapacity');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_capacity', $nullablesSetToNull);
+            $index = array_search('buildingCapacity', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_capacity'] = $building_capacity;
+        $this->container['buildingCapacity'] = $buildingCapacity;
 
         return $this;
     }
 
     /**
-     * Gets building_id
+     * Gets buildingId
      *
      * @return int|null
      */
     public function getBuildingId()
     {
-        return $this->container['building_id'];
+        return $this->container['buildingId'];
     }
 
     /**
-     * Sets building_id
+     * Sets buildingId
      *
-     * @param int|null $building_id
+     * @param int|null $buildingId
      *
      * @return self
      */
-    public function setBuildingId($building_id)
+    public function setBuildingId($buildingId)
     {
-        if (is_null($building_id)) {
-            array_push($this->openAPINullablesSetToNull, 'building_id');
+        if (is_null($buildingId)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_id', $nullablesSetToNull);
+            $index = array_search('buildingId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_id'] = $building_id;
+        $this->container['buildingId'] = $buildingId;
 
         return $this;
     }
 
     /**
-     * Gets building_name
+     * Gets buildingName
      *
      * @return string|null
      */
     public function getBuildingName()
     {
-        return $this->container['building_name'];
+        return $this->container['buildingName'];
     }
 
     /**
-     * Sets building_name
+     * Sets buildingName
      *
-     * @param string|null $building_name
+     * @param string|null $buildingName
      *
      * @return self
      */
-    public function setBuildingName($building_name)
+    public function setBuildingName($buildingName)
     {
-        if (is_null($building_name)) {
-            array_push($this->openAPINullablesSetToNull, 'building_name');
+        if (is_null($buildingName)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_name', $nullablesSetToNull);
+            $index = array_search('buildingName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_name'] = $building_name;
+        $this->container['buildingName'] = $buildingName;
 
         return $this;
     }
 
     /**
-     * Gets building_enrollment
+     * Gets buildingEnrollment
      *
      * @return int|null
      */
     public function getBuildingEnrollment()
     {
-        return $this->container['building_enrollment'];
+        return $this->container['buildingEnrollment'];
     }
 
     /**
-     * Sets building_enrollment
+     * Sets buildingEnrollment
      *
-     * @param int|null $building_enrollment
+     * @param int|null $buildingEnrollment
      *
      * @return self
      */
-    public function setBuildingEnrollment($building_enrollment)
+    public function setBuildingEnrollment($buildingEnrollment)
     {
-        if (is_null($building_enrollment)) {
-            array_push($this->openAPINullablesSetToNull, 'building_enrollment');
+        if (is_null($buildingEnrollment)) {
+            array_push($this->openAPINullablesSetToNull, 'buildingEnrollment');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('building_enrollment', $nullablesSetToNull);
+            $index = array_search('buildingEnrollment', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['building_enrollment'] = $building_enrollment;
+        $this->container['buildingEnrollment'] = $buildingEnrollment;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return int|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param int|null $offering_type
+     * @param int|null $offeringType
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            array_push($this->openAPINullablesSetToNull, 'offering_type');
+        if (is_null($offeringType)) {
+            array_push($this->openAPINullablesSetToNull, 'offeringType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offering_type', $nullablesSetToNull);
+            $index = array_search('offeringType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }
@@ -619,35 +619,35 @@ class Dorm implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id
+     * @param int|null $sectionId
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'section_id');
+        if (is_null($sectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_id', $nullablesSetToNull);
+            $index = array_search('sectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }

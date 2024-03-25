@@ -58,9 +58,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_id' => 'int',
-        'schedule_type' => 'int',
-        'send_notification' => 'bool',
+        'scheduleId' => 'int',
+        'scheduleType' => 'int',
+        'sendNotification' => 'bool',
         'opponents' => '\SKY\School\Model\ResultCreateOpponent[]',
     ];
 
@@ -72,9 +72,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_id' => 'int32',
-        'schedule_type' => 'int32',
-        'send_notification' => null,
+        'scheduleId' => 'int32',
+        'scheduleType' => 'int32',
+        'sendNotification' => null,
         'opponents' => null,
     ];
 
@@ -84,9 +84,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_id' => false,
-        'schedule_type' => false,
-        'send_notification' => false,
+        'scheduleId' => false,
+        'scheduleType' => false,
+        'sendNotification' => false,
         'opponents' => true,
     ];
 
@@ -176,9 +176,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_id' => 'schedule_id',
-        'schedule_type' => 'schedule_type',
-        'send_notification' => 'send_notification',
+        'scheduleId' => 'schedule_id',
+        'scheduleType' => 'schedule_type',
+        'sendNotification' => 'send_notification',
         'opponents' => 'opponents',
     ];
 
@@ -188,9 +188,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'schedule_id' => 'setScheduleId',
-        'schedule_type' => 'setScheduleType',
-        'send_notification' => 'setSendNotification',
+        'scheduleId' => 'setScheduleId',
+        'scheduleType' => 'setScheduleType',
+        'sendNotification' => 'setSendNotification',
         'opponents' => 'setOpponents',
     ];
 
@@ -200,9 +200,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'schedule_id' => 'getScheduleId',
-        'schedule_type' => 'getScheduleType',
-        'send_notification' => 'getSendNotification',
+        'scheduleId' => 'getScheduleId',
+        'scheduleType' => 'getScheduleType',
+        'sendNotification' => 'getSendNotification',
         'opponents' => 'getOpponents',
     ];
 
@@ -263,9 +263,9 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_id', $data ?? [], null);
-        $this->setIfExists('schedule_type', $data ?? [], null);
-        $this->setIfExists('send_notification', $data ?? [], null);
+        $this->setIfExists('scheduleId', $data ?? [], null);
+        $this->setIfExists('scheduleType', $data ?? [], null);
+        $this->setIfExists('sendNotification', $data ?? [], null);
         $this->setIfExists('opponents', $data ?? [], null);
     }
 
@@ -296,8 +296,8 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['schedule_id'] === null) {
-            $invalidProperties[] = "'schedule_id' can't be null";
+        if ($this->container['scheduleId'] === null) {
+            $invalidProperties[] = "'scheduleId' can't be null";
         }
         return $invalidProperties;
     }
@@ -315,82 +315,82 @@ class ResultCreate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets schedule_id
+     * Gets scheduleId
      *
      * @return int
      */
     public function getScheduleId()
     {
-        return $this->container['schedule_id'];
+        return $this->container['scheduleId'];
     }
 
     /**
-     * Sets schedule_id
+     * Sets scheduleId
      *
-     * @param int $schedule_id ID for the scheduled event (game)
+     * @param int $scheduleId ID for the scheduled event (game)
      *
      * @return self
      */
-    public function setScheduleId($schedule_id)
+    public function setScheduleId($scheduleId)
     {
-        if (is_null($schedule_id)) {
-            throw new \InvalidArgumentException('non-nullable schedule_id cannot be null');
+        if (is_null($scheduleId)) {
+            throw new \InvalidArgumentException('non-nullable scheduleId cannot be null');
         }
-        $this->container['schedule_id'] = $schedule_id;
+        $this->container['scheduleId'] = $scheduleId;
 
         return $this;
     }
 
     /**
-     * Gets schedule_type
+     * Gets scheduleType
      *
      * @return int|null
      */
     public function getScheduleType()
     {
-        return $this->container['schedule_type'];
+        return $this->container['scheduleType'];
     }
 
     /**
-     * Sets schedule_type
+     * Sets scheduleType
      *
-     * @param int|null $schedule_type Set to 0 for Versus scoring results <br />  Set to 1 for Place/Points scoring results
+     * @param int|null $scheduleType Set to 0 for Versus scoring results <br />  Set to 1 for Place/Points scoring results
      *
      * @return self
      */
-    public function setScheduleType($schedule_type)
+    public function setScheduleType($scheduleType)
     {
-        if (is_null($schedule_type)) {
-            throw new \InvalidArgumentException('non-nullable schedule_type cannot be null');
+        if (is_null($scheduleType)) {
+            throw new \InvalidArgumentException('non-nullable scheduleType cannot be null');
         }
-        $this->container['schedule_type'] = $schedule_type;
+        $this->container['scheduleType'] = $scheduleType;
 
         return $this;
     }
 
     /**
-     * Gets send_notification
+     * Gets sendNotification
      *
      * @return bool|null
      */
     public function getSendNotification()
     {
-        return $this->container['send_notification'];
+        return $this->container['sendNotification'];
     }
 
     /**
-     * Sets send_notification
+     * Sets sendNotification
      *
-     * @param bool|null $send_notification Toggle to true to send a notification of this event change
+     * @param bool|null $sendNotification Toggle to true to send a notification of this event change
      *
      * @return self
      */
-    public function setSendNotification($send_notification)
+    public function setSendNotification($sendNotification)
     {
-        if (is_null($send_notification)) {
-            throw new \InvalidArgumentException('non-nullable send_notification cannot be null');
+        if (is_null($sendNotification)) {
+            throw new \InvalidArgumentException('non-nullable sendNotification cannot be null');
         }
-        $this->container['send_notification'] = $send_notification;
+        $this->container['sendNotification'] = $sendNotification;
 
         return $this;
     }

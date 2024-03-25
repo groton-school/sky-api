@@ -58,7 +58,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'grad_year' => 'string',
+        'gradYear' => 'string',
     ];
 
     /**
@@ -69,7 +69,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'grad_year' => null,
+        'gradYear' => null,
     ];
 
     /**
@@ -78,7 +78,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'grad_year' => true,
+        'gradYear' => true,
     ];
 
     /**
@@ -167,7 +167,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'grad_year' => 'grad_year',
+        'gradYear' => 'grad_year',
     ];
 
     /**
@@ -176,7 +176,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'grad_year' => 'setGradYear',
+        'gradYear' => 'setGradYear',
     ];
 
     /**
@@ -185,7 +185,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'grad_year' => 'getGradYear',
+        'gradYear' => 'getGradYear',
     ];
 
     /**
@@ -245,7 +245,7 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('grad_year', $data ?? [], null);
+        $this->setIfExists('gradYear', $data ?? [], null);
     }
 
     /**
@@ -291,35 +291,35 @@ class DormStudentInfo implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets grad_year
+     * Gets gradYear
      *
      * @return string|null
      */
     public function getGradYear()
     {
-        return $this->container['grad_year'];
+        return $this->container['gradYear'];
     }
 
     /**
-     * Sets grad_year
+     * Sets gradYear
      *
-     * @param string|null $grad_year
+     * @param string|null $gradYear
      *
      * @return self
      */
-    public function setGradYear($grad_year)
+    public function setGradYear($gradYear)
     {
-        if (is_null($grad_year)) {
-            array_push($this->openAPINullablesSetToNull, 'grad_year');
+        if (is_null($gradYear)) {
+            array_push($this->openAPINullablesSetToNull, 'gradYear');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('grad_year', $nullablesSetToNull);
+            $index = array_search('gradYear', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['grad_year'] = $grad_year;
+        $this->container['gradYear'] = $gradYear;
 
         return $this;
     }

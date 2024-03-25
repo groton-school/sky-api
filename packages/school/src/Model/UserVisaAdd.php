@@ -61,8 +61,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => 'string',
         'status' => 'string',
         'type' => 'string',
-        'issue_date' => '\DateTime',
-        'expire_date' => '\DateTime',
+        'issueDate' => '\DateTime',
+        'expireDate' => '\DateTime',
     ];
 
     /**
@@ -76,8 +76,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => null,
         'status' => null,
         'type' => null,
-        'issue_date' => 'date-time',
-        'expire_date' => 'date-time',
+        'issueDate' => 'date-time',
+        'expireDate' => 'date-time',
     ];
 
     /**
@@ -89,8 +89,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => true,
         'status' => true,
         'type' => true,
-        'issue_date' => true,
-        'expire_date' => true,
+        'issueDate' => true,
+        'expireDate' => true,
     ];
 
     /**
@@ -182,8 +182,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => 'number',
         'status' => 'status',
         'type' => 'type',
-        'issue_date' => 'issue_date',
-        'expire_date' => 'expire_date',
+        'issueDate' => 'issue_date',
+        'expireDate' => 'expire_date',
     ];
 
     /**
@@ -195,8 +195,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => 'setNumber',
         'status' => 'setStatus',
         'type' => 'setType',
-        'issue_date' => 'setIssueDate',
-        'expire_date' => 'setExpireDate',
+        'issueDate' => 'setIssueDate',
+        'expireDate' => 'setExpireDate',
     ];
 
     /**
@@ -208,8 +208,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => 'getNumber',
         'status' => 'getStatus',
         'type' => 'getType',
-        'issue_date' => 'getIssueDate',
-        'expire_date' => 'getExpireDate',
+        'issueDate' => 'getIssueDate',
+        'expireDate' => 'getExpireDate',
     ];
 
     /**
@@ -272,8 +272,8 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('issue_date', $data ?? [], null);
-        $this->setIfExists('expire_date', $data ?? [], null);
+        $this->setIfExists('issueDate', $data ?? [], null);
+        $this->setIfExists('expireDate', $data ?? [], null);
     }
 
     /**
@@ -421,69 +421,69 @@ class UserVisaAdd implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets issue_date
+     * Gets issueDate
      *
      * @return \DateTime|null
      */
     public function getIssueDate()
     {
-        return $this->container['issue_date'];
+        return $this->container['issueDate'];
     }
 
     /**
-     * Sets issue_date
+     * Sets issueDate
      *
-     * @param \DateTime|null $issue_date The visa issue date. Use ISO-8601 date format: 2022-04-21.
+     * @param \DateTime|null $issueDate The visa issue date. Use ISO-8601 date format: 2022-04-21.
      *
      * @return self
      */
-    public function setIssueDate($issue_date)
+    public function setIssueDate($issueDate)
     {
-        if (is_null($issue_date)) {
-            array_push($this->openAPINullablesSetToNull, 'issue_date');
+        if (is_null($issueDate)) {
+            array_push($this->openAPINullablesSetToNull, 'issueDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('issue_date', $nullablesSetToNull);
+            $index = array_search('issueDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['issue_date'] = $issue_date;
+        $this->container['issueDate'] = $issueDate;
 
         return $this;
     }
 
     /**
-     * Gets expire_date
+     * Gets expireDate
      *
      * @return \DateTime|null
      */
     public function getExpireDate()
     {
-        return $this->container['expire_date'];
+        return $this->container['expireDate'];
     }
 
     /**
-     * Sets expire_date
+     * Sets expireDate
      *
-     * @param \DateTime|null $expire_date The visa expiry date. Use ISO-8601 date format: 2022-04-21.
+     * @param \DateTime|null $expireDate The visa expiry date. Use ISO-8601 date format: 2022-04-21.
      *
      * @return self
      */
-    public function setExpireDate($expire_date)
+    public function setExpireDate($expireDate)
     {
-        if (is_null($expire_date)) {
-            array_push($this->openAPINullablesSetToNull, 'expire_date');
+        if (is_null($expireDate)) {
+            array_push($this->openAPINullablesSetToNull, 'expireDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('expire_date', $nullablesSetToNull);
+            $index = array_search('expireDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['expire_date'] = $expire_date;
+        $this->container['expireDate'] = $expireDate;
 
         return $this;
     }

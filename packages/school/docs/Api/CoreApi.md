@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 ## `v1SessionsGet()`
 
 ```php
-v1SessionsGet($level_num, $school_year): \SKY\School\Model\SchoolSessionCollection
+v1SessionsGet($levelNum, $schoolYear): \SKY\School\Model\SchoolSessionCollection
 ```
 
 Core sessions
@@ -113,11 +113,11 @@ $apiInstance = new SKY\School\Api\CoreApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_num = 56; // int | Format - int32. Filter for a specific ```level_num``` (level number)
-$school_year = 'school_year_example'; // string | Filter for a specific ```school_year``` (required format YYYY - YYYY (11 chars))
+$levelNum = 56; // int | Format - int32. Filter for a specific ```level_num``` (level number)
+$schoolYear = 'schoolYear_example'; // string | Filter for a specific ```school_year``` (required format YYYY - YYYY (11 chars))
 
 try {
-    $result = $apiInstance->v1SessionsGet($level_num, $school_year);
+    $result = $apiInstance->v1SessionsGet($levelNum, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoreApi->v1SessionsGet: ', $e->getMessage(), PHP_EOL;
@@ -128,8 +128,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_num** | **int**| Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) | [optional] |
-| **school_year** | **string**| Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) | [optional] |
+| **levelNum** | **int**| Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) | [optional] |
+| **schoolYear** | **string**| Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) | [optional] |
 
 ### Return type
 
@@ -471,7 +471,7 @@ This endpoint does not need any parameter.
 ## `v1termsget()`
 
 ```php
-v1termsget($school_year, $offering_type): \SKY\School\Model\TermCollection
+v1termsget($schoolYear, $offeringType): \SKY\School\Model\TermCollection
 ```
 
 Core terms
@@ -502,11 +502,11 @@ $apiInstance = new SKY\School\Api\CoreApi(
     new GuzzleHttp\Client(),
     $config
 );
-$school_year = 'school_year_example'; // string | The school year to get terms for. Defaults to the current school year.
-$offering_type = 56; // int | Format - int32. The offering type to filter terms by.
+$schoolYear = 'schoolYear_example'; // string | The school year to get terms for. Defaults to the current school year.
+$offeringType = 56; // int | Format - int32. The offering type to filter terms by.
 
 try {
-    $result = $apiInstance->v1termsget($school_year, $offering_type);
+    $result = $apiInstance->v1termsget($schoolYear, $offeringType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoreApi->v1termsget: ', $e->getMessage(), PHP_EOL;
@@ -517,8 +517,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **school_year** | **string**| The school year to get terms for. Defaults to the current school year. | [optional] |
-| **offering_type** | **int**| Format - int32. The offering type to filter terms by. | [optional] |
+| **schoolYear** | **string**| The school year to get terms for. Defaults to the current school year. | [optional] |
+| **offeringType** | **int**| Format - int32. The offering type to filter terms by. | [optional] |
 
 ### Return type
 

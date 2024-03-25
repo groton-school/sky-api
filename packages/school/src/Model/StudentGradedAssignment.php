@@ -58,23 +58,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assignment_id' => 'int',
-        'assignment_index_id' => 'int',
-        'short_description' => 'string',
-        'date_assigned' => '\DateTime',
-        'date_due' => '\DateTime',
-        'max_points' => 'float',
+        'assignmentId' => 'int',
+        'assignmentIndexId' => 'int',
+        'shortDescription' => 'string',
+        'dateAssigned' => '\DateTime',
+        'dateDue' => '\DateTime',
+        'maxPoints' => 'float',
         'points' => 'float',
-        'assignment_percentage' => 'float',
+        'assignmentPercentage' => 'float',
         'letter' => 'string',
-        'section_grade' => 'float',
+        'sectionGrade' => 'float',
         'formative' => 'bool',
         'missing' => 'bool',
         'late' => 'bool',
         'incomplete' => 'bool',
         'exempt' => 'bool',
         'comment' => 'string',
-        'assignment_type' => '\SKY\School\Model\AssignmentType',
+        'assignmentType' => '\SKY\School\Model\AssignmentType',
     ];
 
     /**
@@ -85,23 +85,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'assignment_id' => 'int32',
-        'assignment_index_id' => 'int32',
-        'short_description' => null,
-        'date_assigned' => 'date-time',
-        'date_due' => 'date-time',
-        'max_points' => 'float',
+        'assignmentId' => 'int32',
+        'assignmentIndexId' => 'int32',
+        'shortDescription' => null,
+        'dateAssigned' => 'date-time',
+        'dateDue' => 'date-time',
+        'maxPoints' => 'float',
         'points' => 'float',
-        'assignment_percentage' => 'float',
+        'assignmentPercentage' => 'float',
         'letter' => null,
-        'section_grade' => 'float',
+        'sectionGrade' => 'float',
         'formative' => null,
         'missing' => null,
         'late' => null,
         'incomplete' => null,
         'exempt' => null,
         'comment' => null,
-        'assignment_type' => null,
+        'assignmentType' => null,
     ];
 
     /**
@@ -110,23 +110,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'assignment_id' => true,
-        'assignment_index_id' => true,
-        'short_description' => true,
-        'date_assigned' => true,
-        'date_due' => true,
-        'max_points' => true,
+        'assignmentId' => true,
+        'assignmentIndexId' => true,
+        'shortDescription' => true,
+        'dateAssigned' => true,
+        'dateDue' => true,
+        'maxPoints' => true,
         'points' => true,
-        'assignment_percentage' => true,
+        'assignmentPercentage' => true,
         'letter' => true,
-        'section_grade' => true,
+        'sectionGrade' => true,
         'formative' => true,
         'missing' => true,
         'late' => true,
         'incomplete' => true,
         'exempt' => true,
         'comment' => true,
-        'assignment_type' => false,
+        'assignmentType' => false,
     ];
 
     /**
@@ -215,23 +215,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'assignment_id' => 'assignment_id',
-        'assignment_index_id' => 'assignment_index_id',
-        'short_description' => 'short_description',
-        'date_assigned' => 'date_assigned',
-        'date_due' => 'date_due',
-        'max_points' => 'max_points',
+        'assignmentId' => 'assignment_id',
+        'assignmentIndexId' => 'assignment_index_id',
+        'shortDescription' => 'short_description',
+        'dateAssigned' => 'date_assigned',
+        'dateDue' => 'date_due',
+        'maxPoints' => 'max_points',
         'points' => 'points',
-        'assignment_percentage' => 'assignment_percentage',
+        'assignmentPercentage' => 'assignment_percentage',
         'letter' => 'letter',
-        'section_grade' => 'section_grade',
+        'sectionGrade' => 'section_grade',
         'formative' => 'formative',
         'missing' => 'missing',
         'late' => 'late',
         'incomplete' => 'incomplete',
         'exempt' => 'exempt',
         'comment' => 'comment',
-        'assignment_type' => 'assignment_type',
+        'assignmentType' => 'assignment_type',
     ];
 
     /**
@@ -240,23 +240,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'assignment_id' => 'setAssignmentId',
-        'assignment_index_id' => 'setAssignmentIndexId',
-        'short_description' => 'setShortDescription',
-        'date_assigned' => 'setDateAssigned',
-        'date_due' => 'setDateDue',
-        'max_points' => 'setMaxPoints',
+        'assignmentId' => 'setAssignmentId',
+        'assignmentIndexId' => 'setAssignmentIndexId',
+        'shortDescription' => 'setShortDescription',
+        'dateAssigned' => 'setDateAssigned',
+        'dateDue' => 'setDateDue',
+        'maxPoints' => 'setMaxPoints',
         'points' => 'setPoints',
-        'assignment_percentage' => 'setAssignmentPercentage',
+        'assignmentPercentage' => 'setAssignmentPercentage',
         'letter' => 'setLetter',
-        'section_grade' => 'setSectionGrade',
+        'sectionGrade' => 'setSectionGrade',
         'formative' => 'setFormative',
         'missing' => 'setMissing',
         'late' => 'setLate',
         'incomplete' => 'setIncomplete',
         'exempt' => 'setExempt',
         'comment' => 'setComment',
-        'assignment_type' => 'setAssignmentType',
+        'assignmentType' => 'setAssignmentType',
     ];
 
     /**
@@ -265,23 +265,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'assignment_id' => 'getAssignmentId',
-        'assignment_index_id' => 'getAssignmentIndexId',
-        'short_description' => 'getShortDescription',
-        'date_assigned' => 'getDateAssigned',
-        'date_due' => 'getDateDue',
-        'max_points' => 'getMaxPoints',
+        'assignmentId' => 'getAssignmentId',
+        'assignmentIndexId' => 'getAssignmentIndexId',
+        'shortDescription' => 'getShortDescription',
+        'dateAssigned' => 'getDateAssigned',
+        'dateDue' => 'getDateDue',
+        'maxPoints' => 'getMaxPoints',
         'points' => 'getPoints',
-        'assignment_percentage' => 'getAssignmentPercentage',
+        'assignmentPercentage' => 'getAssignmentPercentage',
         'letter' => 'getLetter',
-        'section_grade' => 'getSectionGrade',
+        'sectionGrade' => 'getSectionGrade',
         'formative' => 'getFormative',
         'missing' => 'getMissing',
         'late' => 'getLate',
         'incomplete' => 'getIncomplete',
         'exempt' => 'getExempt',
         'comment' => 'getComment',
-        'assignment_type' => 'getAssignmentType',
+        'assignmentType' => 'getAssignmentType',
     ];
 
     /**
@@ -341,23 +341,23 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('assignment_id', $data ?? [], null);
-        $this->setIfExists('assignment_index_id', $data ?? [], null);
-        $this->setIfExists('short_description', $data ?? [], null);
-        $this->setIfExists('date_assigned', $data ?? [], null);
-        $this->setIfExists('date_due', $data ?? [], null);
-        $this->setIfExists('max_points', $data ?? [], null);
+        $this->setIfExists('assignmentId', $data ?? [], null);
+        $this->setIfExists('assignmentIndexId', $data ?? [], null);
+        $this->setIfExists('shortDescription', $data ?? [], null);
+        $this->setIfExists('dateAssigned', $data ?? [], null);
+        $this->setIfExists('dateDue', $data ?? [], null);
+        $this->setIfExists('maxPoints', $data ?? [], null);
         $this->setIfExists('points', $data ?? [], null);
-        $this->setIfExists('assignment_percentage', $data ?? [], null);
+        $this->setIfExists('assignmentPercentage', $data ?? [], null);
         $this->setIfExists('letter', $data ?? [], null);
-        $this->setIfExists('section_grade', $data ?? [], null);
+        $this->setIfExists('sectionGrade', $data ?? [], null);
         $this->setIfExists('formative', $data ?? [], null);
         $this->setIfExists('missing', $data ?? [], null);
         $this->setIfExists('late', $data ?? [], null);
         $this->setIfExists('incomplete', $data ?? [], null);
         $this->setIfExists('exempt', $data ?? [], null);
         $this->setIfExists('comment', $data ?? [], null);
-        $this->setIfExists('assignment_type', $data ?? [], null);
+        $this->setIfExists('assignmentType', $data ?? [], null);
     }
 
     /**
@@ -403,205 +403,205 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets assignment_id
+     * Gets assignmentId
      *
      * @return int|null
      */
     public function getAssignmentId()
     {
-        return $this->container['assignment_id'];
+        return $this->container['assignmentId'];
     }
 
     /**
-     * Sets assignment_id
+     * Sets assignmentId
      *
-     * @param int|null $assignment_id The ID of the assignment
+     * @param int|null $assignmentId The ID of the assignment
      *
      * @return self
      */
-    public function setAssignmentId($assignment_id)
+    public function setAssignmentId($assignmentId)
     {
-        if (is_null($assignment_id)) {
-            array_push($this->openAPINullablesSetToNull, 'assignment_id');
+        if (is_null($assignmentId)) {
+            array_push($this->openAPINullablesSetToNull, 'assignmentId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('assignment_id', $nullablesSetToNull);
+            $index = array_search('assignmentId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['assignment_id'] = $assignment_id;
+        $this->container['assignmentId'] = $assignmentId;
 
         return $this;
     }
 
     /**
-     * Gets assignment_index_id
+     * Gets assignmentIndexId
      *
      * @return int|null
      */
     public function getAssignmentIndexId()
     {
-        return $this->container['assignment_index_id'];
+        return $this->container['assignmentIndexId'];
     }
 
     /**
-     * Sets assignment_index_id
+     * Sets assignmentIndexId
      *
-     * @param int|null $assignment_index_id The index ID of the assignment
+     * @param int|null $assignmentIndexId The index ID of the assignment
      *
      * @return self
      */
-    public function setAssignmentIndexId($assignment_index_id)
+    public function setAssignmentIndexId($assignmentIndexId)
     {
-        if (is_null($assignment_index_id)) {
-            array_push($this->openAPINullablesSetToNull, 'assignment_index_id');
+        if (is_null($assignmentIndexId)) {
+            array_push($this->openAPINullablesSetToNull, 'assignmentIndexId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('assignment_index_id', $nullablesSetToNull);
+            $index = array_search('assignmentIndexId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['assignment_index_id'] = $assignment_index_id;
+        $this->container['assignmentIndexId'] = $assignmentIndexId;
 
         return $this;
     }
 
     /**
-     * Gets short_description
+     * Gets shortDescription
      *
      * @return string|null
      */
     public function getShortDescription()
     {
-        return $this->container['short_description'];
+        return $this->container['shortDescription'];
     }
 
     /**
-     * Sets short_description
+     * Sets shortDescription
      *
-     * @param string|null $short_description The short description for the assignment
+     * @param string|null $shortDescription The short description for the assignment
      *
      * @return self
      */
-    public function setShortDescription($short_description)
+    public function setShortDescription($shortDescription)
     {
-        if (is_null($short_description)) {
-            array_push($this->openAPINullablesSetToNull, 'short_description');
+        if (is_null($shortDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'shortDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('short_description', $nullablesSetToNull);
+            $index = array_search('shortDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['short_description'] = $short_description;
+        $this->container['shortDescription'] = $shortDescription;
 
         return $this;
     }
 
     /**
-     * Gets date_assigned
+     * Gets dateAssigned
      *
      * @return \DateTime|null
      */
     public function getDateAssigned()
     {
-        return $this->container['date_assigned'];
+        return $this->container['dateAssigned'];
     }
 
     /**
-     * Sets date_assigned
+     * Sets dateAssigned
      *
-     * @param \DateTime|null $date_assigned The date the assignment was assigned
+     * @param \DateTime|null $dateAssigned The date the assignment was assigned
      *
      * @return self
      */
-    public function setDateAssigned($date_assigned)
+    public function setDateAssigned($dateAssigned)
     {
-        if (is_null($date_assigned)) {
-            array_push($this->openAPINullablesSetToNull, 'date_assigned');
+        if (is_null($dateAssigned)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAssigned');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_assigned', $nullablesSetToNull);
+            $index = array_search('dateAssigned', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_assigned'] = $date_assigned;
+        $this->container['dateAssigned'] = $dateAssigned;
 
         return $this;
     }
 
     /**
-     * Gets date_due
+     * Gets dateDue
      *
      * @return \DateTime|null
      */
     public function getDateDue()
     {
-        return $this->container['date_due'];
+        return $this->container['dateDue'];
     }
 
     /**
-     * Sets date_due
+     * Sets dateDue
      *
-     * @param \DateTime|null $date_due The date the assignment is due
+     * @param \DateTime|null $dateDue The date the assignment is due
      *
      * @return self
      */
-    public function setDateDue($date_due)
+    public function setDateDue($dateDue)
     {
-        if (is_null($date_due)) {
-            array_push($this->openAPINullablesSetToNull, 'date_due');
+        if (is_null($dateDue)) {
+            array_push($this->openAPINullablesSetToNull, 'dateDue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_due', $nullablesSetToNull);
+            $index = array_search('dateDue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_due'] = $date_due;
+        $this->container['dateDue'] = $dateDue;
 
         return $this;
     }
 
     /**
-     * Gets max_points
+     * Gets maxPoints
      *
      * @return float|null
      */
     public function getMaxPoints()
     {
-        return $this->container['max_points'];
+        return $this->container['maxPoints'];
     }
 
     /**
-     * Sets max_points
+     * Sets maxPoints
      *
-     * @param float|null $max_points The maximum points for the assignment
+     * @param float|null $maxPoints The maximum points for the assignment
      *
      * @return self
      */
-    public function setMaxPoints($max_points)
+    public function setMaxPoints($maxPoints)
     {
-        if (is_null($max_points)) {
-            array_push($this->openAPINullablesSetToNull, 'max_points');
+        if (is_null($maxPoints)) {
+            array_push($this->openAPINullablesSetToNull, 'maxPoints');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('max_points', $nullablesSetToNull);
+            $index = array_search('maxPoints', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['max_points'] = $max_points;
+        $this->container['maxPoints'] = $maxPoints;
 
         return $this;
     }
@@ -641,35 +641,35 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets assignment_percentage
+     * Gets assignmentPercentage
      *
      * @return float|null
      */
     public function getAssignmentPercentage()
     {
-        return $this->container['assignment_percentage'];
+        return $this->container['assignmentPercentage'];
     }
 
     /**
-     * Sets assignment_percentage
+     * Sets assignmentPercentage
      *
-     * @param float|null $assignment_percentage The percentage grade for the assignment
+     * @param float|null $assignmentPercentage The percentage grade for the assignment
      *
      * @return self
      */
-    public function setAssignmentPercentage($assignment_percentage)
+    public function setAssignmentPercentage($assignmentPercentage)
     {
-        if (is_null($assignment_percentage)) {
-            array_push($this->openAPINullablesSetToNull, 'assignment_percentage');
+        if (is_null($assignmentPercentage)) {
+            array_push($this->openAPINullablesSetToNull, 'assignmentPercentage');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('assignment_percentage', $nullablesSetToNull);
+            $index = array_search('assignmentPercentage', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['assignment_percentage'] = $assignment_percentage;
+        $this->container['assignmentPercentage'] = $assignmentPercentage;
 
         return $this;
     }
@@ -709,35 +709,35 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets section_grade
+     * Gets sectionGrade
      *
      * @return float|null
      */
     public function getSectionGrade()
     {
-        return $this->container['section_grade'];
+        return $this->container['sectionGrade'];
     }
 
     /**
-     * Sets section_grade
+     * Sets sectionGrade
      *
-     * @param float|null $section_grade The cumulative grade for the section
+     * @param float|null $sectionGrade The cumulative grade for the section
      *
      * @return self
      */
-    public function setSectionGrade($section_grade)
+    public function setSectionGrade($sectionGrade)
     {
-        if (is_null($section_grade)) {
-            array_push($this->openAPINullablesSetToNull, 'section_grade');
+        if (is_null($sectionGrade)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionGrade');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_grade', $nullablesSetToNull);
+            $index = array_search('sectionGrade', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_grade'] = $section_grade;
+        $this->container['sectionGrade'] = $sectionGrade;
 
         return $this;
     }
@@ -947,28 +947,28 @@ class StudentGradedAssignment implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets assignment_type
+     * Gets assignmentType
      *
      * @return \SKY\School\Model\AssignmentType|null
      */
     public function getAssignmentType()
     {
-        return $this->container['assignment_type'];
+        return $this->container['assignmentType'];
     }
 
     /**
-     * Sets assignment_type
+     * Sets assignmentType
      *
-     * @param \SKY\School\Model\AssignmentType|null $assignment_type assignment_type
+     * @param \SKY\School\Model\AssignmentType|null $assignmentType assignmentType
      *
      * @return self
      */
-    public function setAssignmentType($assignment_type)
+    public function setAssignmentType($assignmentType)
     {
-        if (is_null($assignment_type)) {
-            throw new \InvalidArgumentException('non-nullable assignment_type cannot be null');
+        if (is_null($assignmentType)) {
+            throw new \InvalidArgumentException('non-nullable assignmentType cannot be null');
         }
-        $this->container['assignment_type'] = $assignment_type;
+        $this->container['assignmentType'] = $assignmentType;
 
         return $this;
     }

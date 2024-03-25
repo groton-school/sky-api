@@ -58,8 +58,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'large_filename_url' => 'string',
-        'thumb_filename_url' => 'string',
+        'largeFilenameUrl' => 'string',
+        'thumbFilenameUrl' => 'string',
     ];
 
     /**
@@ -70,8 +70,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'large_filename_url' => null,
-        'thumb_filename_url' => null,
+        'largeFilenameUrl' => null,
+        'thumbFilenameUrl' => null,
     ];
 
     /**
@@ -80,8 +80,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'large_filename_url' => true,
-        'thumb_filename_url' => true,
+        'largeFilenameUrl' => true,
+        'thumbFilenameUrl' => true,
     ];
 
     /**
@@ -170,8 +170,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'large_filename_url' => 'large_filename_url',
-        'thumb_filename_url' => 'thumb_filename_url',
+        'largeFilenameUrl' => 'large_filename_url',
+        'thumbFilenameUrl' => 'thumb_filename_url',
     ];
 
     /**
@@ -180,8 +180,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'large_filename_url' => 'setLargeFilenameUrl',
-        'thumb_filename_url' => 'setThumbFilenameUrl',
+        'largeFilenameUrl' => 'setLargeFilenameUrl',
+        'thumbFilenameUrl' => 'setThumbFilenameUrl',
     ];
 
     /**
@@ -190,8 +190,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'large_filename_url' => 'getLargeFilenameUrl',
-        'thumb_filename_url' => 'getThumbFilenameUrl',
+        'largeFilenameUrl' => 'getLargeFilenameUrl',
+        'thumbFilenameUrl' => 'getThumbFilenameUrl',
     ];
 
     /**
@@ -251,8 +251,8 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('large_filename_url', $data ?? [], null);
-        $this->setIfExists('thumb_filename_url', $data ?? [], null);
+        $this->setIfExists('largeFilenameUrl', $data ?? [], null);
+        $this->setIfExists('thumbFilenameUrl', $data ?? [], null);
     }
 
     /**
@@ -298,69 +298,69 @@ class ProfilePictureUrls implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets large_filename_url
+     * Gets largeFilenameUrl
      *
      * @return string|null
      */
     public function getLargeFilenameUrl()
     {
-        return $this->container['large_filename_url'];
+        return $this->container['largeFilenameUrl'];
     }
 
     /**
-     * Sets large_filename_url
+     * Sets largeFilenameUrl
      *
-     * @param string|null $large_filename_url URL to users Large profile picture
+     * @param string|null $largeFilenameUrl URL to users Large profile picture
      *
      * @return self
      */
-    public function setLargeFilenameUrl($large_filename_url)
+    public function setLargeFilenameUrl($largeFilenameUrl)
     {
-        if (is_null($large_filename_url)) {
-            array_push($this->openAPINullablesSetToNull, 'large_filename_url');
+        if (is_null($largeFilenameUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'largeFilenameUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('large_filename_url', $nullablesSetToNull);
+            $index = array_search('largeFilenameUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['large_filename_url'] = $large_filename_url;
+        $this->container['largeFilenameUrl'] = $largeFilenameUrl;
 
         return $this;
     }
 
     /**
-     * Gets thumb_filename_url
+     * Gets thumbFilenameUrl
      *
      * @return string|null
      */
     public function getThumbFilenameUrl()
     {
-        return $this->container['thumb_filename_url'];
+        return $this->container['thumbFilenameUrl'];
     }
 
     /**
-     * Sets thumb_filename_url
+     * Sets thumbFilenameUrl
      *
-     * @param string|null $thumb_filename_url URL to users Thumbnail profile picture
+     * @param string|null $thumbFilenameUrl URL to users Thumbnail profile picture
      *
      * @return self
      */
-    public function setThumbFilenameUrl($thumb_filename_url)
+    public function setThumbFilenameUrl($thumbFilenameUrl)
     {
-        if (is_null($thumb_filename_url)) {
-            array_push($this->openAPINullablesSetToNull, 'thumb_filename_url');
+        if (is_null($thumbFilenameUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'thumbFilenameUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('thumb_filename_url', $nullablesSetToNull);
+            $index = array_search('thumbFilenameUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['thumb_filename_url'] = $thumb_filename_url;
+        $this->container['thumbFilenameUrl'] = $thumbFilenameUrl;
 
         return $this;
     }

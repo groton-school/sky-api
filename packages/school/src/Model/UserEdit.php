@@ -59,60 +59,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'affiliation' => 'string',
-        'birth_place' => 'string',
-        'boarding_or_day' => 'string',
-        'cc_email' => 'string',
+        'birthPlace' => 'string',
+        'boardingOrDay' => 'string',
+        'ccEmail' => 'string',
         'citizenship' => 'string',
-        'custom_field_one' => 'string',
-        'custom_field_two' => 'string',
-        'custom_field_three' => 'string',
-        'custom_field_four' => 'string',
-        'custom_field_five' => 'string',
-        'custom_field_six' => 'string',
-        'custom_field_seven' => 'string',
-        'custom_field_eight' => 'string',
-        'custom_field_nine' => 'string',
-        'custom_field_ten' => 'string',
+        'customFieldOne' => 'string',
+        'customFieldTwo' => 'string',
+        'customFieldThree' => 'string',
+        'customFieldFour' => 'string',
+        'customFieldFive' => 'string',
+        'customFieldSix' => 'string',
+        'customFieldSeven' => 'string',
+        'customFieldEight' => 'string',
+        'customFieldNine' => 'string',
+        'customFieldTen' => 'string',
         'deceased' => 'bool',
-        'deceased_date' => '\DateTime',
+        'deceasedDate' => '\DateTime',
         'dob' => '\DateTime',
         'email' => 'string',
-        'email_active' => 'bool',
+        'emailActive' => 'bool',
         'ethnicity' => 'string',
-        'first_name' => 'string',
+        'firstName' => 'string',
         'gender' => 'string',
         'greeting' => 'string',
-        'home_languages' => '\SKY\School\Model\HomeLanguageAdd[]',
-        'host_id' => 'string',
+        'homeLanguages' => '\SKY\School\Model\HomeLanguageAdd[]',
+        'hostId' => 'string',
         'id' => 'int',
         'international' => 'string',
-        'is_abroad' => 'bool',
-        'is_international' => 'bool',
-        'is_latino_hispanic' => 'bool',
-        'latino_hispanic' => 'string',
-        'is_responsible_signer' => 'bool',
-        'in_state' => '\SKY\School\Model\UserInState',
-        'last_name' => 'string',
-        'living_status' => 'string',
+        'isAbroad' => 'bool',
+        'isInternational' => 'bool',
+        'isLatinoHispanic' => 'bool',
+        'latinoHispanic' => 'string',
+        'isResponsibleSigner' => 'bool',
+        'inState' => '\SKY\School\Model\UserInState',
+        'lastName' => 'string',
+        'livingStatus' => 'string',
         'locker' => '\SKY\School\Model\UserLocker',
         'lost' => 'bool',
-        'maiden_name' => 'string',
+        'maidenName' => 'string',
         'mailbox' => '\SKY\School\Model\UserMailbox',
-        'middle_name' => 'string',
-        'nick_name' => 'string',
+        'middleName' => 'string',
+        'nickName' => 'string',
         'passport' => '\SKY\School\Model\UserPassport',
-        'primary_language' => 'string',
-        'preferred_name' => 'string',
+        'primaryLanguage' => 'string',
+        'preferredName' => 'string',
         'prefix' => 'string',
         'pronouns' => 'string',
         'races' => '\SKY\School\Model\UserAddRace[]',
         'religion' => 'string',
-        'school_program' => 'string',
-        'state_id' => 'string',
-        'student_id' => 'string',
+        'schoolProgram' => 'string',
+        'stateId' => 'string',
+        'studentId' => 'string',
         'suffix' => 'string',
         'visa' => '\SKY\School\Model\UserVisaAdd',
-        'fields_to_delete' => 'string[]',
+        'fieldsToDelete' => 'string[]',
     ];
 
     /**
@@ -124,60 +124,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'affiliation' => null,
-        'birth_place' => null,
-        'boarding_or_day' => null,
-        'cc_email' => null,
+        'birthPlace' => null,
+        'boardingOrDay' => null,
+        'ccEmail' => null,
         'citizenship' => null,
-        'custom_field_one' => null,
-        'custom_field_two' => null,
-        'custom_field_three' => null,
-        'custom_field_four' => null,
-        'custom_field_five' => null,
-        'custom_field_six' => null,
-        'custom_field_seven' => null,
-        'custom_field_eight' => null,
-        'custom_field_nine' => null,
-        'custom_field_ten' => null,
+        'customFieldOne' => null,
+        'customFieldTwo' => null,
+        'customFieldThree' => null,
+        'customFieldFour' => null,
+        'customFieldFive' => null,
+        'customFieldSix' => null,
+        'customFieldSeven' => null,
+        'customFieldEight' => null,
+        'customFieldNine' => null,
+        'customFieldTen' => null,
         'deceased' => null,
-        'deceased_date' => 'date-time',
+        'deceasedDate' => 'date-time',
         'dob' => 'date-time',
         'email' => null,
-        'email_active' => null,
+        'emailActive' => null,
         'ethnicity' => null,
-        'first_name' => null,
+        'firstName' => null,
         'gender' => null,
         'greeting' => null,
-        'home_languages' => null,
-        'host_id' => null,
+        'homeLanguages' => null,
+        'hostId' => null,
         'id' => 'int32',
         'international' => null,
-        'is_abroad' => null,
-        'is_international' => null,
-        'is_latino_hispanic' => null,
-        'latino_hispanic' => null,
-        'is_responsible_signer' => null,
-        'in_state' => null,
-        'last_name' => null,
-        'living_status' => null,
+        'isAbroad' => null,
+        'isInternational' => null,
+        'isLatinoHispanic' => null,
+        'latinoHispanic' => null,
+        'isResponsibleSigner' => null,
+        'inState' => null,
+        'lastName' => null,
+        'livingStatus' => null,
         'locker' => null,
         'lost' => null,
-        'maiden_name' => null,
+        'maidenName' => null,
         'mailbox' => null,
-        'middle_name' => null,
-        'nick_name' => null,
+        'middleName' => null,
+        'nickName' => null,
         'passport' => null,
-        'primary_language' => null,
-        'preferred_name' => null,
+        'primaryLanguage' => null,
+        'preferredName' => null,
         'prefix' => null,
         'pronouns' => null,
         'races' => null,
         'religion' => null,
-        'school_program' => null,
-        'state_id' => null,
-        'student_id' => null,
+        'schoolProgram' => null,
+        'stateId' => null,
+        'studentId' => null,
         'suffix' => null,
         'visa' => null,
-        'fields_to_delete' => null,
+        'fieldsToDelete' => null,
     ];
 
     /**
@@ -187,60 +187,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'affiliation' => true,
-        'birth_place' => true,
-        'boarding_or_day' => true,
-        'cc_email' => true,
+        'birthPlace' => true,
+        'boardingOrDay' => true,
+        'ccEmail' => true,
         'citizenship' => true,
-        'custom_field_one' => true,
-        'custom_field_two' => true,
-        'custom_field_three' => true,
-        'custom_field_four' => true,
-        'custom_field_five' => true,
-        'custom_field_six' => true,
-        'custom_field_seven' => true,
-        'custom_field_eight' => true,
-        'custom_field_nine' => true,
-        'custom_field_ten' => true,
+        'customFieldOne' => true,
+        'customFieldTwo' => true,
+        'customFieldThree' => true,
+        'customFieldFour' => true,
+        'customFieldFive' => true,
+        'customFieldSix' => true,
+        'customFieldSeven' => true,
+        'customFieldEight' => true,
+        'customFieldNine' => true,
+        'customFieldTen' => true,
         'deceased' => false,
-        'deceased_date' => true,
+        'deceasedDate' => true,
         'dob' => false,
         'email' => true,
-        'email_active' => false,
+        'emailActive' => false,
         'ethnicity' => true,
-        'first_name' => true,
+        'firstName' => true,
         'gender' => true,
         'greeting' => true,
-        'home_languages' => true,
-        'host_id' => true,
+        'homeLanguages' => true,
+        'hostId' => true,
         'id' => false,
         'international' => true,
-        'is_abroad' => true,
-        'is_international' => false,
-        'is_latino_hispanic' => true,
-        'latino_hispanic' => true,
-        'is_responsible_signer' => false,
-        'in_state' => false,
-        'last_name' => true,
-        'living_status' => true,
+        'isAbroad' => true,
+        'isInternational' => false,
+        'isLatinoHispanic' => true,
+        'latinoHispanic' => true,
+        'isResponsibleSigner' => false,
+        'inState' => false,
+        'lastName' => true,
+        'livingStatus' => true,
         'locker' => false,
         'lost' => false,
-        'maiden_name' => true,
+        'maidenName' => true,
         'mailbox' => false,
-        'middle_name' => true,
-        'nick_name' => true,
+        'middleName' => true,
+        'nickName' => true,
         'passport' => false,
-        'primary_language' => true,
-        'preferred_name' => true,
+        'primaryLanguage' => true,
+        'preferredName' => true,
         'prefix' => true,
         'pronouns' => true,
         'races' => true,
         'religion' => true,
-        'school_program' => true,
-        'state_id' => true,
-        'student_id' => true,
+        'schoolProgram' => true,
+        'stateId' => true,
+        'studentId' => true,
         'suffix' => true,
         'visa' => false,
-        'fields_to_delete' => true,
+        'fieldsToDelete' => true,
     ];
 
     /**
@@ -330,60 +330,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'affiliation' => 'affiliation',
-        'birth_place' => 'birth_place',
-        'boarding_or_day' => 'boarding_or_day',
-        'cc_email' => 'cc_email',
+        'birthPlace' => 'birth_place',
+        'boardingOrDay' => 'boarding_or_day',
+        'ccEmail' => 'cc_email',
         'citizenship' => 'citizenship',
-        'custom_field_one' => 'custom_field_one',
-        'custom_field_two' => 'custom_field_two',
-        'custom_field_three' => 'custom_field_three',
-        'custom_field_four' => 'custom_field_four',
-        'custom_field_five' => 'custom_field_five',
-        'custom_field_six' => 'custom_field_six',
-        'custom_field_seven' => 'custom_field_seven',
-        'custom_field_eight' => 'custom_field_eight',
-        'custom_field_nine' => 'custom_field_nine',
-        'custom_field_ten' => 'custom_field_ten',
+        'customFieldOne' => 'custom_field_one',
+        'customFieldTwo' => 'custom_field_two',
+        'customFieldThree' => 'custom_field_three',
+        'customFieldFour' => 'custom_field_four',
+        'customFieldFive' => 'custom_field_five',
+        'customFieldSix' => 'custom_field_six',
+        'customFieldSeven' => 'custom_field_seven',
+        'customFieldEight' => 'custom_field_eight',
+        'customFieldNine' => 'custom_field_nine',
+        'customFieldTen' => 'custom_field_ten',
         'deceased' => 'deceased',
-        'deceased_date' => 'deceased_date',
+        'deceasedDate' => 'deceased_date',
         'dob' => 'dob',
         'email' => 'email',
-        'email_active' => 'email_active',
+        'emailActive' => 'email_active',
         'ethnicity' => 'ethnicity',
-        'first_name' => 'first_name',
+        'firstName' => 'first_name',
         'gender' => 'gender',
         'greeting' => 'greeting',
-        'home_languages' => 'home_languages',
-        'host_id' => 'host_id',
+        'homeLanguages' => 'home_languages',
+        'hostId' => 'host_id',
         'id' => 'id',
         'international' => 'international',
-        'is_abroad' => 'is_abroad',
-        'is_international' => 'is_international',
-        'is_latino_hispanic' => 'is_latino_hispanic',
-        'latino_hispanic' => 'latino_hispanic',
-        'is_responsible_signer' => 'is_responsible_signer',
-        'in_state' => 'in_state',
-        'last_name' => 'last_name',
-        'living_status' => 'living_status',
+        'isAbroad' => 'is_abroad',
+        'isInternational' => 'is_international',
+        'isLatinoHispanic' => 'is_latino_hispanic',
+        'latinoHispanic' => 'latino_hispanic',
+        'isResponsibleSigner' => 'is_responsible_signer',
+        'inState' => 'in_state',
+        'lastName' => 'last_name',
+        'livingStatus' => 'living_status',
         'locker' => 'locker',
         'lost' => 'lost',
-        'maiden_name' => 'maiden_name',
+        'maidenName' => 'maiden_name',
         'mailbox' => 'mailbox',
-        'middle_name' => 'middle_name',
-        'nick_name' => 'nick_name',
+        'middleName' => 'middle_name',
+        'nickName' => 'nick_name',
         'passport' => 'passport',
-        'primary_language' => 'primary_language',
-        'preferred_name' => 'preferred_name',
+        'primaryLanguage' => 'primary_language',
+        'preferredName' => 'preferred_name',
         'prefix' => 'prefix',
         'pronouns' => 'pronouns',
         'races' => 'races',
         'religion' => 'religion',
-        'school_program' => 'school_program',
-        'state_id' => 'state_id',
-        'student_id' => 'student_id',
+        'schoolProgram' => 'school_program',
+        'stateId' => 'state_id',
+        'studentId' => 'student_id',
         'suffix' => 'suffix',
         'visa' => 'visa',
-        'fields_to_delete' => 'fields_to_delete',
+        'fieldsToDelete' => 'fields_to_delete',
     ];
 
     /**
@@ -393,60 +393,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'affiliation' => 'setAffiliation',
-        'birth_place' => 'setBirthPlace',
-        'boarding_or_day' => 'setBoardingOrDay',
-        'cc_email' => 'setCcEmail',
+        'birthPlace' => 'setBirthPlace',
+        'boardingOrDay' => 'setBoardingOrDay',
+        'ccEmail' => 'setCcEmail',
         'citizenship' => 'setCitizenship',
-        'custom_field_one' => 'setCustomFieldOne',
-        'custom_field_two' => 'setCustomFieldTwo',
-        'custom_field_three' => 'setCustomFieldThree',
-        'custom_field_four' => 'setCustomFieldFour',
-        'custom_field_five' => 'setCustomFieldFive',
-        'custom_field_six' => 'setCustomFieldSix',
-        'custom_field_seven' => 'setCustomFieldSeven',
-        'custom_field_eight' => 'setCustomFieldEight',
-        'custom_field_nine' => 'setCustomFieldNine',
-        'custom_field_ten' => 'setCustomFieldTen',
+        'customFieldOne' => 'setCustomFieldOne',
+        'customFieldTwo' => 'setCustomFieldTwo',
+        'customFieldThree' => 'setCustomFieldThree',
+        'customFieldFour' => 'setCustomFieldFour',
+        'customFieldFive' => 'setCustomFieldFive',
+        'customFieldSix' => 'setCustomFieldSix',
+        'customFieldSeven' => 'setCustomFieldSeven',
+        'customFieldEight' => 'setCustomFieldEight',
+        'customFieldNine' => 'setCustomFieldNine',
+        'customFieldTen' => 'setCustomFieldTen',
         'deceased' => 'setDeceased',
-        'deceased_date' => 'setDeceasedDate',
+        'deceasedDate' => 'setDeceasedDate',
         'dob' => 'setDob',
         'email' => 'setEmail',
-        'email_active' => 'setEmailActive',
+        'emailActive' => 'setEmailActive',
         'ethnicity' => 'setEthnicity',
-        'first_name' => 'setFirstName',
+        'firstName' => 'setFirstName',
         'gender' => 'setGender',
         'greeting' => 'setGreeting',
-        'home_languages' => 'setHomeLanguages',
-        'host_id' => 'setHostId',
+        'homeLanguages' => 'setHomeLanguages',
+        'hostId' => 'setHostId',
         'id' => 'setId',
         'international' => 'setInternational',
-        'is_abroad' => 'setIsAbroad',
-        'is_international' => 'setIsInternational',
-        'is_latino_hispanic' => 'setIsLatinoHispanic',
-        'latino_hispanic' => 'setLatinoHispanic',
-        'is_responsible_signer' => 'setIsResponsibleSigner',
-        'in_state' => 'setInState',
-        'last_name' => 'setLastName',
-        'living_status' => 'setLivingStatus',
+        'isAbroad' => 'setIsAbroad',
+        'isInternational' => 'setIsInternational',
+        'isLatinoHispanic' => 'setIsLatinoHispanic',
+        'latinoHispanic' => 'setLatinoHispanic',
+        'isResponsibleSigner' => 'setIsResponsibleSigner',
+        'inState' => 'setInState',
+        'lastName' => 'setLastName',
+        'livingStatus' => 'setLivingStatus',
         'locker' => 'setLocker',
         'lost' => 'setLost',
-        'maiden_name' => 'setMaidenName',
+        'maidenName' => 'setMaidenName',
         'mailbox' => 'setMailbox',
-        'middle_name' => 'setMiddleName',
-        'nick_name' => 'setNickName',
+        'middleName' => 'setMiddleName',
+        'nickName' => 'setNickName',
         'passport' => 'setPassport',
-        'primary_language' => 'setPrimaryLanguage',
-        'preferred_name' => 'setPreferredName',
+        'primaryLanguage' => 'setPrimaryLanguage',
+        'preferredName' => 'setPreferredName',
         'prefix' => 'setPrefix',
         'pronouns' => 'setPronouns',
         'races' => 'setRaces',
         'religion' => 'setReligion',
-        'school_program' => 'setSchoolProgram',
-        'state_id' => 'setStateId',
-        'student_id' => 'setStudentId',
+        'schoolProgram' => 'setSchoolProgram',
+        'stateId' => 'setStateId',
+        'studentId' => 'setStudentId',
         'suffix' => 'setSuffix',
         'visa' => 'setVisa',
-        'fields_to_delete' => 'setFieldsToDelete',
+        'fieldsToDelete' => 'setFieldsToDelete',
     ];
 
     /**
@@ -456,60 +456,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'affiliation' => 'getAffiliation',
-        'birth_place' => 'getBirthPlace',
-        'boarding_or_day' => 'getBoardingOrDay',
-        'cc_email' => 'getCcEmail',
+        'birthPlace' => 'getBirthPlace',
+        'boardingOrDay' => 'getBoardingOrDay',
+        'ccEmail' => 'getCcEmail',
         'citizenship' => 'getCitizenship',
-        'custom_field_one' => 'getCustomFieldOne',
-        'custom_field_two' => 'getCustomFieldTwo',
-        'custom_field_three' => 'getCustomFieldThree',
-        'custom_field_four' => 'getCustomFieldFour',
-        'custom_field_five' => 'getCustomFieldFive',
-        'custom_field_six' => 'getCustomFieldSix',
-        'custom_field_seven' => 'getCustomFieldSeven',
-        'custom_field_eight' => 'getCustomFieldEight',
-        'custom_field_nine' => 'getCustomFieldNine',
-        'custom_field_ten' => 'getCustomFieldTen',
+        'customFieldOne' => 'getCustomFieldOne',
+        'customFieldTwo' => 'getCustomFieldTwo',
+        'customFieldThree' => 'getCustomFieldThree',
+        'customFieldFour' => 'getCustomFieldFour',
+        'customFieldFive' => 'getCustomFieldFive',
+        'customFieldSix' => 'getCustomFieldSix',
+        'customFieldSeven' => 'getCustomFieldSeven',
+        'customFieldEight' => 'getCustomFieldEight',
+        'customFieldNine' => 'getCustomFieldNine',
+        'customFieldTen' => 'getCustomFieldTen',
         'deceased' => 'getDeceased',
-        'deceased_date' => 'getDeceasedDate',
+        'deceasedDate' => 'getDeceasedDate',
         'dob' => 'getDob',
         'email' => 'getEmail',
-        'email_active' => 'getEmailActive',
+        'emailActive' => 'getEmailActive',
         'ethnicity' => 'getEthnicity',
-        'first_name' => 'getFirstName',
+        'firstName' => 'getFirstName',
         'gender' => 'getGender',
         'greeting' => 'getGreeting',
-        'home_languages' => 'getHomeLanguages',
-        'host_id' => 'getHostId',
+        'homeLanguages' => 'getHomeLanguages',
+        'hostId' => 'getHostId',
         'id' => 'getId',
         'international' => 'getInternational',
-        'is_abroad' => 'getIsAbroad',
-        'is_international' => 'getIsInternational',
-        'is_latino_hispanic' => 'getIsLatinoHispanic',
-        'latino_hispanic' => 'getLatinoHispanic',
-        'is_responsible_signer' => 'getIsResponsibleSigner',
-        'in_state' => 'getInState',
-        'last_name' => 'getLastName',
-        'living_status' => 'getLivingStatus',
+        'isAbroad' => 'getIsAbroad',
+        'isInternational' => 'getIsInternational',
+        'isLatinoHispanic' => 'getIsLatinoHispanic',
+        'latinoHispanic' => 'getLatinoHispanic',
+        'isResponsibleSigner' => 'getIsResponsibleSigner',
+        'inState' => 'getInState',
+        'lastName' => 'getLastName',
+        'livingStatus' => 'getLivingStatus',
         'locker' => 'getLocker',
         'lost' => 'getLost',
-        'maiden_name' => 'getMaidenName',
+        'maidenName' => 'getMaidenName',
         'mailbox' => 'getMailbox',
-        'middle_name' => 'getMiddleName',
-        'nick_name' => 'getNickName',
+        'middleName' => 'getMiddleName',
+        'nickName' => 'getNickName',
         'passport' => 'getPassport',
-        'primary_language' => 'getPrimaryLanguage',
-        'preferred_name' => 'getPreferredName',
+        'primaryLanguage' => 'getPrimaryLanguage',
+        'preferredName' => 'getPreferredName',
         'prefix' => 'getPrefix',
         'pronouns' => 'getPronouns',
         'races' => 'getRaces',
         'religion' => 'getReligion',
-        'school_program' => 'getSchoolProgram',
-        'state_id' => 'getStateId',
-        'student_id' => 'getStudentId',
+        'schoolProgram' => 'getSchoolProgram',
+        'stateId' => 'getStateId',
+        'studentId' => 'getStudentId',
         'suffix' => 'getSuffix',
         'visa' => 'getVisa',
-        'fields_to_delete' => 'getFieldsToDelete',
+        'fieldsToDelete' => 'getFieldsToDelete',
     ];
 
     /**
@@ -570,60 +570,60 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('affiliation', $data ?? [], null);
-        $this->setIfExists('birth_place', $data ?? [], null);
-        $this->setIfExists('boarding_or_day', $data ?? [], null);
-        $this->setIfExists('cc_email', $data ?? [], null);
+        $this->setIfExists('birthPlace', $data ?? [], null);
+        $this->setIfExists('boardingOrDay', $data ?? [], null);
+        $this->setIfExists('ccEmail', $data ?? [], null);
         $this->setIfExists('citizenship', $data ?? [], null);
-        $this->setIfExists('custom_field_one', $data ?? [], null);
-        $this->setIfExists('custom_field_two', $data ?? [], null);
-        $this->setIfExists('custom_field_three', $data ?? [], null);
-        $this->setIfExists('custom_field_four', $data ?? [], null);
-        $this->setIfExists('custom_field_five', $data ?? [], null);
-        $this->setIfExists('custom_field_six', $data ?? [], null);
-        $this->setIfExists('custom_field_seven', $data ?? [], null);
-        $this->setIfExists('custom_field_eight', $data ?? [], null);
-        $this->setIfExists('custom_field_nine', $data ?? [], null);
-        $this->setIfExists('custom_field_ten', $data ?? [], null);
+        $this->setIfExists('customFieldOne', $data ?? [], null);
+        $this->setIfExists('customFieldTwo', $data ?? [], null);
+        $this->setIfExists('customFieldThree', $data ?? [], null);
+        $this->setIfExists('customFieldFour', $data ?? [], null);
+        $this->setIfExists('customFieldFive', $data ?? [], null);
+        $this->setIfExists('customFieldSix', $data ?? [], null);
+        $this->setIfExists('customFieldSeven', $data ?? [], null);
+        $this->setIfExists('customFieldEight', $data ?? [], null);
+        $this->setIfExists('customFieldNine', $data ?? [], null);
+        $this->setIfExists('customFieldTen', $data ?? [], null);
         $this->setIfExists('deceased', $data ?? [], null);
-        $this->setIfExists('deceased_date', $data ?? [], null);
+        $this->setIfExists('deceasedDate', $data ?? [], null);
         $this->setIfExists('dob', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('email_active', $data ?? [], null);
+        $this->setIfExists('emailActive', $data ?? [], null);
         $this->setIfExists('ethnicity', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
         $this->setIfExists('greeting', $data ?? [], null);
-        $this->setIfExists('home_languages', $data ?? [], null);
-        $this->setIfExists('host_id', $data ?? [], null);
+        $this->setIfExists('homeLanguages', $data ?? [], null);
+        $this->setIfExists('hostId', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('international', $data ?? [], null);
-        $this->setIfExists('is_abroad', $data ?? [], null);
-        $this->setIfExists('is_international', $data ?? [], null);
-        $this->setIfExists('is_latino_hispanic', $data ?? [], null);
-        $this->setIfExists('latino_hispanic', $data ?? [], null);
-        $this->setIfExists('is_responsible_signer', $data ?? [], null);
-        $this->setIfExists('in_state', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('living_status', $data ?? [], null);
+        $this->setIfExists('isAbroad', $data ?? [], null);
+        $this->setIfExists('isInternational', $data ?? [], null);
+        $this->setIfExists('isLatinoHispanic', $data ?? [], null);
+        $this->setIfExists('latinoHispanic', $data ?? [], null);
+        $this->setIfExists('isResponsibleSigner', $data ?? [], null);
+        $this->setIfExists('inState', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('livingStatus', $data ?? [], null);
         $this->setIfExists('locker', $data ?? [], null);
         $this->setIfExists('lost', $data ?? [], null);
-        $this->setIfExists('maiden_name', $data ?? [], null);
+        $this->setIfExists('maidenName', $data ?? [], null);
         $this->setIfExists('mailbox', $data ?? [], null);
-        $this->setIfExists('middle_name', $data ?? [], null);
-        $this->setIfExists('nick_name', $data ?? [], null);
+        $this->setIfExists('middleName', $data ?? [], null);
+        $this->setIfExists('nickName', $data ?? [], null);
         $this->setIfExists('passport', $data ?? [], null);
-        $this->setIfExists('primary_language', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
+        $this->setIfExists('primaryLanguage', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
         $this->setIfExists('prefix', $data ?? [], null);
         $this->setIfExists('pronouns', $data ?? [], null);
         $this->setIfExists('races', $data ?? [], null);
         $this->setIfExists('religion', $data ?? [], null);
-        $this->setIfExists('school_program', $data ?? [], null);
-        $this->setIfExists('state_id', $data ?? [], null);
-        $this->setIfExists('student_id', $data ?? [], null);
+        $this->setIfExists('schoolProgram', $data ?? [], null);
+        $this->setIfExists('stateId', $data ?? [], null);
+        $this->setIfExists('studentId', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
         $this->setIfExists('visa', $data ?? [], null);
-        $this->setIfExists('fields_to_delete', $data ?? [], null);
+        $this->setIfExists('fieldsToDelete', $data ?? [], null);
     }
 
     /**
@@ -703,103 +703,103 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets birth_place
+     * Gets birthPlace
      *
      * @return string|null
      */
     public function getBirthPlace()
     {
-        return $this->container['birth_place'];
+        return $this->container['birthPlace'];
     }
 
     /**
-     * Sets birth_place
+     * Sets birthPlace
      *
-     * @param string|null $birth_place The birthplace of the user
+     * @param string|null $birthPlace The birthplace of the user
      *
      * @return self
      */
-    public function setBirthPlace($birth_place)
+    public function setBirthPlace($birthPlace)
     {
-        if (is_null($birth_place)) {
-            array_push($this->openAPINullablesSetToNull, 'birth_place');
+        if (is_null($birthPlace)) {
+            array_push($this->openAPINullablesSetToNull, 'birthPlace');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('birth_place', $nullablesSetToNull);
+            $index = array_search('birthPlace', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['birth_place'] = $birth_place;
+        $this->container['birthPlace'] = $birthPlace;
 
         return $this;
     }
 
     /**
-     * Gets boarding_or_day
+     * Gets boardingOrDay
      *
      * @return string|null
      */
     public function getBoardingOrDay()
     {
-        return $this->container['boarding_or_day'];
+        return $this->container['boardingOrDay'];
     }
 
     /**
-     * Sets boarding_or_day
+     * Sets boardingOrDay
      *
-     * @param string|null $boarding_or_day The boarding or day status. Accepted values: boarding, day, \"B\" and \"D\"
+     * @param string|null $boardingOrDay The boarding or day status. Accepted values: boarding, day, \"B\" and \"D\"
      *
      * @return self
      */
-    public function setBoardingOrDay($boarding_or_day)
+    public function setBoardingOrDay($boardingOrDay)
     {
-        if (is_null($boarding_or_day)) {
-            array_push($this->openAPINullablesSetToNull, 'boarding_or_day');
+        if (is_null($boardingOrDay)) {
+            array_push($this->openAPINullablesSetToNull, 'boardingOrDay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('boarding_or_day', $nullablesSetToNull);
+            $index = array_search('boardingOrDay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['boarding_or_day'] = $boarding_or_day;
+        $this->container['boardingOrDay'] = $boardingOrDay;
 
         return $this;
     }
 
     /**
-     * Gets cc_email
+     * Gets ccEmail
      *
      * @return string|null
      */
     public function getCcEmail()
     {
-        return $this->container['cc_email'];
+        return $this->container['ccEmail'];
     }
 
     /**
-     * Sets cc_email
+     * Sets ccEmail
      *
-     * @param string|null $cc_email The cc email address of a user
+     * @param string|null $ccEmail The cc email address of a user
      *
      * @return self
      */
-    public function setCcEmail($cc_email)
+    public function setCcEmail($ccEmail)
     {
-        if (is_null($cc_email)) {
-            array_push($this->openAPINullablesSetToNull, 'cc_email');
+        if (is_null($ccEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'ccEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('cc_email', $nullablesSetToNull);
+            $index = array_search('ccEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['cc_email'] = $cc_email;
+        $this->container['ccEmail'] = $ccEmail;
 
         return $this;
     }
@@ -839,341 +839,341 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets custom_field_one
+     * Gets customFieldOne
      *
      * @return string|null
      */
     public function getCustomFieldOne()
     {
-        return $this->container['custom_field_one'];
+        return $this->container['customFieldOne'];
     }
 
     /**
-     * Sets custom_field_one
+     * Sets customFieldOne
      *
-     * @param string|null $custom_field_one A custom field on the user profile (one of ten)
+     * @param string|null $customFieldOne A custom field on the user profile (one of ten)
      *
      * @return self
      */
-    public function setCustomFieldOne($custom_field_one)
+    public function setCustomFieldOne($customFieldOne)
     {
-        if (is_null($custom_field_one)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_one');
+        if (is_null($customFieldOne)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldOne');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_one', $nullablesSetToNull);
+            $index = array_search('customFieldOne', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_one'] = $custom_field_one;
+        $this->container['customFieldOne'] = $customFieldOne;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_two
+     * Gets customFieldTwo
      *
      * @return string|null
      */
     public function getCustomFieldTwo()
     {
-        return $this->container['custom_field_two'];
+        return $this->container['customFieldTwo'];
     }
 
     /**
-     * Sets custom_field_two
+     * Sets customFieldTwo
      *
-     * @param string|null $custom_field_two A custom field on the user profile (two of ten)
+     * @param string|null $customFieldTwo A custom field on the user profile (two of ten)
      *
      * @return self
      */
-    public function setCustomFieldTwo($custom_field_two)
+    public function setCustomFieldTwo($customFieldTwo)
     {
-        if (is_null($custom_field_two)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_two');
+        if (is_null($customFieldTwo)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldTwo');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_two', $nullablesSetToNull);
+            $index = array_search('customFieldTwo', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_two'] = $custom_field_two;
+        $this->container['customFieldTwo'] = $customFieldTwo;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_three
+     * Gets customFieldThree
      *
      * @return string|null
      */
     public function getCustomFieldThree()
     {
-        return $this->container['custom_field_three'];
+        return $this->container['customFieldThree'];
     }
 
     /**
-     * Sets custom_field_three
+     * Sets customFieldThree
      *
-     * @param string|null $custom_field_three A custom field on the user profile (three of ten)
+     * @param string|null $customFieldThree A custom field on the user profile (three of ten)
      *
      * @return self
      */
-    public function setCustomFieldThree($custom_field_three)
+    public function setCustomFieldThree($customFieldThree)
     {
-        if (is_null($custom_field_three)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_three');
+        if (is_null($customFieldThree)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldThree');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_three', $nullablesSetToNull);
+            $index = array_search('customFieldThree', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_three'] = $custom_field_three;
+        $this->container['customFieldThree'] = $customFieldThree;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_four
+     * Gets customFieldFour
      *
      * @return string|null
      */
     public function getCustomFieldFour()
     {
-        return $this->container['custom_field_four'];
+        return $this->container['customFieldFour'];
     }
 
     /**
-     * Sets custom_field_four
+     * Sets customFieldFour
      *
-     * @param string|null $custom_field_four A custom field on the user profile (four of ten)
+     * @param string|null $customFieldFour A custom field on the user profile (four of ten)
      *
      * @return self
      */
-    public function setCustomFieldFour($custom_field_four)
+    public function setCustomFieldFour($customFieldFour)
     {
-        if (is_null($custom_field_four)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_four');
+        if (is_null($customFieldFour)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldFour');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_four', $nullablesSetToNull);
+            $index = array_search('customFieldFour', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_four'] = $custom_field_four;
+        $this->container['customFieldFour'] = $customFieldFour;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_five
+     * Gets customFieldFive
      *
      * @return string|null
      */
     public function getCustomFieldFive()
     {
-        return $this->container['custom_field_five'];
+        return $this->container['customFieldFive'];
     }
 
     /**
-     * Sets custom_field_five
+     * Sets customFieldFive
      *
-     * @param string|null $custom_field_five A custom field on the user profile (five of ten)
+     * @param string|null $customFieldFive A custom field on the user profile (five of ten)
      *
      * @return self
      */
-    public function setCustomFieldFive($custom_field_five)
+    public function setCustomFieldFive($customFieldFive)
     {
-        if (is_null($custom_field_five)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_five');
+        if (is_null($customFieldFive)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldFive');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_five', $nullablesSetToNull);
+            $index = array_search('customFieldFive', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_five'] = $custom_field_five;
+        $this->container['customFieldFive'] = $customFieldFive;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_six
+     * Gets customFieldSix
      *
      * @return string|null
      */
     public function getCustomFieldSix()
     {
-        return $this->container['custom_field_six'];
+        return $this->container['customFieldSix'];
     }
 
     /**
-     * Sets custom_field_six
+     * Sets customFieldSix
      *
-     * @param string|null $custom_field_six A custom field on the user profile (six of ten)
+     * @param string|null $customFieldSix A custom field on the user profile (six of ten)
      *
      * @return self
      */
-    public function setCustomFieldSix($custom_field_six)
+    public function setCustomFieldSix($customFieldSix)
     {
-        if (is_null($custom_field_six)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_six');
+        if (is_null($customFieldSix)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldSix');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_six', $nullablesSetToNull);
+            $index = array_search('customFieldSix', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_six'] = $custom_field_six;
+        $this->container['customFieldSix'] = $customFieldSix;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_seven
+     * Gets customFieldSeven
      *
      * @return string|null
      */
     public function getCustomFieldSeven()
     {
-        return $this->container['custom_field_seven'];
+        return $this->container['customFieldSeven'];
     }
 
     /**
-     * Sets custom_field_seven
+     * Sets customFieldSeven
      *
-     * @param string|null $custom_field_seven A custom field on the user profile (seven of ten)
+     * @param string|null $customFieldSeven A custom field on the user profile (seven of ten)
      *
      * @return self
      */
-    public function setCustomFieldSeven($custom_field_seven)
+    public function setCustomFieldSeven($customFieldSeven)
     {
-        if (is_null($custom_field_seven)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_seven');
+        if (is_null($customFieldSeven)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldSeven');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_seven', $nullablesSetToNull);
+            $index = array_search('customFieldSeven', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_seven'] = $custom_field_seven;
+        $this->container['customFieldSeven'] = $customFieldSeven;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_eight
+     * Gets customFieldEight
      *
      * @return string|null
      */
     public function getCustomFieldEight()
     {
-        return $this->container['custom_field_eight'];
+        return $this->container['customFieldEight'];
     }
 
     /**
-     * Sets custom_field_eight
+     * Sets customFieldEight
      *
-     * @param string|null $custom_field_eight A custom field on the user profile (eight of ten)
+     * @param string|null $customFieldEight A custom field on the user profile (eight of ten)
      *
      * @return self
      */
-    public function setCustomFieldEight($custom_field_eight)
+    public function setCustomFieldEight($customFieldEight)
     {
-        if (is_null($custom_field_eight)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_eight');
+        if (is_null($customFieldEight)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldEight');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_eight', $nullablesSetToNull);
+            $index = array_search('customFieldEight', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_eight'] = $custom_field_eight;
+        $this->container['customFieldEight'] = $customFieldEight;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_nine
+     * Gets customFieldNine
      *
      * @return string|null
      */
     public function getCustomFieldNine()
     {
-        return $this->container['custom_field_nine'];
+        return $this->container['customFieldNine'];
     }
 
     /**
-     * Sets custom_field_nine
+     * Sets customFieldNine
      *
-     * @param string|null $custom_field_nine A custom field on the user profile (nine of ten)
+     * @param string|null $customFieldNine A custom field on the user profile (nine of ten)
      *
      * @return self
      */
-    public function setCustomFieldNine($custom_field_nine)
+    public function setCustomFieldNine($customFieldNine)
     {
-        if (is_null($custom_field_nine)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_nine');
+        if (is_null($customFieldNine)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldNine');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_nine', $nullablesSetToNull);
+            $index = array_search('customFieldNine', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_nine'] = $custom_field_nine;
+        $this->container['customFieldNine'] = $customFieldNine;
 
         return $this;
     }
 
     /**
-     * Gets custom_field_ten
+     * Gets customFieldTen
      *
      * @return string|null
      */
     public function getCustomFieldTen()
     {
-        return $this->container['custom_field_ten'];
+        return $this->container['customFieldTen'];
     }
 
     /**
-     * Sets custom_field_ten
+     * Sets customFieldTen
      *
-     * @param string|null $custom_field_ten A custom field on the user profile (ten of ten)
+     * @param string|null $customFieldTen A custom field on the user profile (ten of ten)
      *
      * @return self
      */
-    public function setCustomFieldTen($custom_field_ten)
+    public function setCustomFieldTen($customFieldTen)
     {
-        if (is_null($custom_field_ten)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_field_ten');
+        if (is_null($customFieldTen)) {
+            array_push($this->openAPINullablesSetToNull, 'customFieldTen');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_field_ten', $nullablesSetToNull);
+            $index = array_search('customFieldTen', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_field_ten'] = $custom_field_ten;
+        $this->container['customFieldTen'] = $customFieldTen;
 
         return $this;
     }
@@ -1206,35 +1206,35 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets deceased_date
+     * Gets deceasedDate
      *
      * @return \DateTime|null
      */
     public function getDeceasedDate()
     {
-        return $this->container['deceased_date'];
+        return $this->container['deceasedDate'];
     }
 
     /**
-     * Sets deceased_date
+     * Sets deceasedDate
      *
-     * @param \DateTime|null $deceased_date The deceased date of the user. Use ISO-8601 date format: 2022-04-08.
+     * @param \DateTime|null $deceasedDate The deceased date of the user. Use ISO-8601 date format: 2022-04-08.
      *
      * @return self
      */
-    public function setDeceasedDate($deceased_date)
+    public function setDeceasedDate($deceasedDate)
     {
-        if (is_null($deceased_date)) {
-            array_push($this->openAPINullablesSetToNull, 'deceased_date');
+        if (is_null($deceasedDate)) {
+            array_push($this->openAPINullablesSetToNull, 'deceasedDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('deceased_date', $nullablesSetToNull);
+            $index = array_search('deceasedDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['deceased_date'] = $deceased_date;
+        $this->container['deceasedDate'] = $deceasedDate;
 
         return $this;
     }
@@ -1301,28 +1301,28 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets email_active
+     * Gets emailActive
      *
      * @return bool|null
      */
     public function getEmailActive()
     {
-        return $this->container['email_active'];
+        return $this->container['emailActive'];
     }
 
     /**
-     * Sets email_active
+     * Sets emailActive
      *
-     * @param bool|null $email_active Set to true if email is usable. Allowed value: true, false. Defaults to true.
+     * @param bool|null $emailActive Set to true if email is usable. Allowed value: true, false. Defaults to true.
      *
      * @return self
      */
-    public function setEmailActive($email_active)
+    public function setEmailActive($emailActive)
     {
-        if (is_null($email_active)) {
-            throw new \InvalidArgumentException('non-nullable email_active cannot be null');
+        if (is_null($emailActive)) {
+            throw new \InvalidArgumentException('non-nullable emailActive cannot be null');
         }
-        $this->container['email_active'] = $email_active;
+        $this->container['emailActive'] = $emailActive;
 
         return $this;
     }
@@ -1362,35 +1362,35 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of a user
+     * @param string|null $firstName The first name of a user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
@@ -1464,69 +1464,69 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets home_languages
+     * Gets homeLanguages
      *
      * @return \SKY\School\Model\HomeLanguageAdd[]|null
      */
     public function getHomeLanguages()
     {
-        return $this->container['home_languages'];
+        return $this->container['homeLanguages'];
     }
 
     /**
-     * Sets home_languages
+     * Sets homeLanguages
      *
-     * @param \SKY\School\Model\HomeLanguageAdd[]|null $home_languages A list of languages. Each entry is the descriptor or ID of the language. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
+     * @param \SKY\School\Model\HomeLanguageAdd[]|null $homeLanguages A list of languages. Each entry is the descriptor or ID of the language. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
      *
      * @return self
      */
-    public function setHomeLanguages($home_languages)
+    public function setHomeLanguages($homeLanguages)
     {
-        if (is_null($home_languages)) {
-            array_push($this->openAPINullablesSetToNull, 'home_languages');
+        if (is_null($homeLanguages)) {
+            array_push($this->openAPINullablesSetToNull, 'homeLanguages');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('home_languages', $nullablesSetToNull);
+            $index = array_search('homeLanguages', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['home_languages'] = $home_languages;
+        $this->container['homeLanguages'] = $homeLanguages;
 
         return $this;
     }
 
     /**
-     * Gets host_id
+     * Gets hostId
      *
      * @return string|null
      */
     public function getHostId()
     {
-        return $this->container['host_id'];
+        return $this->container['hostId'];
     }
 
     /**
-     * Sets host_id
+     * Sets hostId
      *
-     * @param string|null $host_id The HostId of a user
+     * @param string|null $hostId The HostId of a user
      *
      * @return self
      */
-    public function setHostId($host_id)
+    public function setHostId($hostId)
     {
-        if (is_null($host_id)) {
-            array_push($this->openAPINullablesSetToNull, 'host_id');
+        if (is_null($hostId)) {
+            array_push($this->openAPINullablesSetToNull, 'hostId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('host_id', $nullablesSetToNull);
+            $index = array_search('hostId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['host_id'] = $host_id;
+        $this->container['hostId'] = $hostId;
 
         return $this;
     }
@@ -1593,252 +1593,252 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_abroad
+     * Gets isAbroad
      *
      * @return bool|null
      */
     public function getIsAbroad()
     {
-        return $this->container['is_abroad'];
+        return $this->container['isAbroad'];
     }
 
     /**
-     * Sets is_abroad
+     * Sets isAbroad
      *
-     * @param bool|null $is_abroad Set to true if user is currently abroad. Allowed value: true, false. Defaults to false.
+     * @param bool|null $isAbroad Set to true if user is currently abroad. Allowed value: true, false. Defaults to false.
      *
      * @return self
      */
-    public function setIsAbroad($is_abroad)
+    public function setIsAbroad($isAbroad)
     {
-        if (is_null($is_abroad)) {
-            array_push($this->openAPINullablesSetToNull, 'is_abroad');
+        if (is_null($isAbroad)) {
+            array_push($this->openAPINullablesSetToNull, 'isAbroad');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_abroad', $nullablesSetToNull);
+            $index = array_search('isAbroad', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_abroad'] = $is_abroad;
+        $this->container['isAbroad'] = $isAbroad;
 
         return $this;
     }
 
     /**
-     * Gets is_international
+     * Gets isInternational
      *
      * @return bool|null
      */
     public function getIsInternational()
     {
-        return $this->container['is_international'];
+        return $this->container['isInternational'];
     }
 
     /**
-     * Sets is_international
+     * Sets isInternational
      *
-     * @param bool|null $is_international Set to true if user is international (will be deprecated 02/15/2024)
+     * @param bool|null $isInternational Set to true if user is international (will be deprecated 02/15/2024)
      *
      * @return self
      */
-    public function setIsInternational($is_international)
+    public function setIsInternational($isInternational)
     {
-        if (is_null($is_international)) {
-            throw new \InvalidArgumentException('non-nullable is_international cannot be null');
+        if (is_null($isInternational)) {
+            throw new \InvalidArgumentException('non-nullable isInternational cannot be null');
         }
-        $this->container['is_international'] = $is_international;
+        $this->container['isInternational'] = $isInternational;
 
         return $this;
     }
 
     /**
-     * Gets is_latino_hispanic
+     * Gets isLatinoHispanic
      *
      * @return bool|null
      */
     public function getIsLatinoHispanic()
     {
-        return $this->container['is_latino_hispanic'];
+        return $this->container['isLatinoHispanic'];
     }
 
     /**
-     * Sets is_latino_hispanic
+     * Sets isLatinoHispanic
      *
-     * @param bool|null $is_latino_hispanic Set to true if  user is latino or hispanic (will be deprecated 02/15/2024).
+     * @param bool|null $isLatinoHispanic Set to true if  user is latino or hispanic (will be deprecated 02/15/2024).
      *
      * @return self
      */
-    public function setIsLatinoHispanic($is_latino_hispanic)
+    public function setIsLatinoHispanic($isLatinoHispanic)
     {
-        if (is_null($is_latino_hispanic)) {
-            array_push($this->openAPINullablesSetToNull, 'is_latino_hispanic');
+        if (is_null($isLatinoHispanic)) {
+            array_push($this->openAPINullablesSetToNull, 'isLatinoHispanic');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_latino_hispanic', $nullablesSetToNull);
+            $index = array_search('isLatinoHispanic', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_latino_hispanic'] = $is_latino_hispanic;
+        $this->container['isLatinoHispanic'] = $isLatinoHispanic;
 
         return $this;
     }
 
     /**
-     * Gets latino_hispanic
+     * Gets latinoHispanic
      *
      * @return string|null
      */
     public function getLatinoHispanic()
     {
-        return $this->container['latino_hispanic'];
+        return $this->container['latinoHispanic'];
     }
 
     /**
-     * Sets latino_hispanic
+     * Sets latinoHispanic
      *
-     * @param string|null $latino_hispanic Whether the user is Latino/Hispanic. Allowed values: Yes, No, or No answer.
+     * @param string|null $latinoHispanic Whether the user is Latino/Hispanic. Allowed values: Yes, No, or No answer.
      *
      * @return self
      */
-    public function setLatinoHispanic($latino_hispanic)
+    public function setLatinoHispanic($latinoHispanic)
     {
-        if (is_null($latino_hispanic)) {
-            array_push($this->openAPINullablesSetToNull, 'latino_hispanic');
+        if (is_null($latinoHispanic)) {
+            array_push($this->openAPINullablesSetToNull, 'latinoHispanic');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('latino_hispanic', $nullablesSetToNull);
+            $index = array_search('latinoHispanic', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['latino_hispanic'] = $latino_hispanic;
+        $this->container['latinoHispanic'] = $latinoHispanic;
 
         return $this;
     }
 
     /**
-     * Gets is_responsible_signer
+     * Gets isResponsibleSigner
      *
      * @return bool|null
      */
     public function getIsResponsibleSigner()
     {
-        return $this->container['is_responsible_signer'];
+        return $this->container['isResponsibleSigner'];
     }
 
     /**
-     * Sets is_responsible_signer
+     * Sets isResponsibleSigner
      *
-     * @param bool|null $is_responsible_signer Set to true if user is a responsible signer. Allowed value: true, false. Defaults to false.
+     * @param bool|null $isResponsibleSigner Set to true if user is a responsible signer. Allowed value: true, false. Defaults to false.
      *
      * @return self
      */
-    public function setIsResponsibleSigner($is_responsible_signer)
+    public function setIsResponsibleSigner($isResponsibleSigner)
     {
-        if (is_null($is_responsible_signer)) {
-            throw new \InvalidArgumentException('non-nullable is_responsible_signer cannot be null');
+        if (is_null($isResponsibleSigner)) {
+            throw new \InvalidArgumentException('non-nullable isResponsibleSigner cannot be null');
         }
-        $this->container['is_responsible_signer'] = $is_responsible_signer;
+        $this->container['isResponsibleSigner'] = $isResponsibleSigner;
 
         return $this;
     }
 
     /**
-     * Gets in_state
+     * Gets inState
      *
      * @return \SKY\School\Model\UserInState|null
      */
     public function getInState()
     {
-        return $this->container['in_state'];
+        return $this->container['inState'];
     }
 
     /**
-     * Sets in_state
+     * Sets inState
      *
-     * @param \SKY\School\Model\UserInState|null $in_state in_state
+     * @param \SKY\School\Model\UserInState|null $inState inState
      *
      * @return self
      */
-    public function setInState($in_state)
+    public function setInState($inState)
     {
-        if (is_null($in_state)) {
-            throw new \InvalidArgumentException('non-nullable in_state cannot be null');
+        if (is_null($inState)) {
+            throw new \InvalidArgumentException('non-nullable inState cannot be null');
         }
-        $this->container['in_state'] = $in_state;
+        $this->container['inState'] = $inState;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of a user
+     * @param string|null $lastName The last name of a user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets living_status
+     * Gets livingStatus
      *
      * @return string|null
      */
     public function getLivingStatus()
     {
-        return $this->container['living_status'];
+        return $this->container['livingStatus'];
     }
 
     /**
-     * Sets living_status
+     * Sets livingStatus
      *
-     * @param string|null $living_status The living status of a user. Valid values are Single, Married, Separated, Divorced, Widowed, Partner.
+     * @param string|null $livingStatus The living status of a user. Valid values are Single, Married, Separated, Divorced, Widowed, Partner.
      *
      * @return self
      */
-    public function setLivingStatus($living_status)
+    public function setLivingStatus($livingStatus)
     {
-        if (is_null($living_status)) {
-            array_push($this->openAPINullablesSetToNull, 'living_status');
+        if (is_null($livingStatus)) {
+            array_push($this->openAPINullablesSetToNull, 'livingStatus');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('living_status', $nullablesSetToNull);
+            $index = array_search('livingStatus', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['living_status'] = $living_status;
+        $this->container['livingStatus'] = $livingStatus;
 
         return $this;
     }
@@ -1898,35 +1898,35 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets maiden_name
+     * Gets maidenName
      *
      * @return string|null
      */
     public function getMaidenName()
     {
-        return $this->container['maiden_name'];
+        return $this->container['maidenName'];
     }
 
     /**
-     * Sets maiden_name
+     * Sets maidenName
      *
-     * @param string|null $maiden_name The maiden name of a user
+     * @param string|null $maidenName The maiden name of a user
      *
      * @return self
      */
-    public function setMaidenName($maiden_name)
+    public function setMaidenName($maidenName)
     {
-        if (is_null($maiden_name)) {
-            array_push($this->openAPINullablesSetToNull, 'maiden_name');
+        if (is_null($maidenName)) {
+            array_push($this->openAPINullablesSetToNull, 'maidenName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('maiden_name', $nullablesSetToNull);
+            $index = array_search('maidenName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['maiden_name'] = $maiden_name;
+        $this->container['maidenName'] = $maidenName;
 
         return $this;
     }
@@ -1959,69 +1959,69 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets middle_name
+     * Gets middleName
      *
      * @return string|null
      */
     public function getMiddleName()
     {
-        return $this->container['middle_name'];
+        return $this->container['middleName'];
     }
 
     /**
-     * Sets middle_name
+     * Sets middleName
      *
-     * @param string|null $middle_name The middle name of a user
+     * @param string|null $middleName The middle name of a user
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function setMiddleName($middleName)
     {
-        if (is_null($middle_name)) {
-            array_push($this->openAPINullablesSetToNull, 'middle_name');
+        if (is_null($middleName)) {
+            array_push($this->openAPINullablesSetToNull, 'middleName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middle_name', $nullablesSetToNull);
+            $index = array_search('middleName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['middle_name'] = $middle_name;
+        $this->container['middleName'] = $middleName;
 
         return $this;
     }
 
     /**
-     * Gets nick_name
+     * Gets nickName
      *
      * @return string|null
      */
     public function getNickName()
     {
-        return $this->container['nick_name'];
+        return $this->container['nickName'];
     }
 
     /**
-     * Sets nick_name
+     * Sets nickName
      *
-     * @param string|null $nick_name The nickname of a user  <b>This field will be deprecated after 90 days.</b>
+     * @param string|null $nickName The nickname of a user  <b>This field will be deprecated after 90 days.</b>
      *
      * @return self
      */
-    public function setNickName($nick_name)
+    public function setNickName($nickName)
     {
-        if (is_null($nick_name)) {
-            array_push($this->openAPINullablesSetToNull, 'nick_name');
+        if (is_null($nickName)) {
+            array_push($this->openAPINullablesSetToNull, 'nickName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nick_name', $nullablesSetToNull);
+            $index = array_search('nickName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['nick_name'] = $nick_name;
+        $this->container['nickName'] = $nickName;
 
         return $this;
     }
@@ -2054,69 +2054,69 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets primary_language
+     * Gets primaryLanguage
      *
      * @return string|null
      */
     public function getPrimaryLanguage()
     {
-        return $this->container['primary_language'];
+        return $this->container['primaryLanguage'];
     }
 
     /**
-     * Sets primary_language
+     * Sets primaryLanguage
      *
-     * @param string|null $primary_language The descriptor or ID of the language. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
+     * @param string|null $primaryLanguage The descriptor or ID of the language. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
      *
      * @return self
      */
-    public function setPrimaryLanguage($primary_language)
+    public function setPrimaryLanguage($primaryLanguage)
     {
-        if (is_null($primary_language)) {
-            array_push($this->openAPINullablesSetToNull, 'primary_language');
+        if (is_null($primaryLanguage)) {
+            array_push($this->openAPINullablesSetToNull, 'primaryLanguage');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('primary_language', $nullablesSetToNull);
+            $index = array_search('primaryLanguage', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['primary_language'] = $primary_language;
+        $this->container['primaryLanguage'] = $primaryLanguage;
 
         return $this;
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name The preferred name of the user
+     * @param string|null $preferredName The preferred name of the user
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
@@ -2258,103 +2258,103 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets school_program
+     * Gets schoolProgram
      *
      * @return string|null
      */
     public function getSchoolProgram()
     {
-        return $this->container['school_program'];
+        return $this->container['schoolProgram'];
     }
 
     /**
-     * Sets school_program
+     * Sets schoolProgram
      *
-     * @param string|null $school_program The descriptor or ID of the school program. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
+     * @param string|null $schoolProgram The descriptor or ID of the school program. Descriptors are not case sensitive, but otherwise must match the table value exactly. These values are returned by GET Types table values.
      *
      * @return self
      */
-    public function setSchoolProgram($school_program)
+    public function setSchoolProgram($schoolProgram)
     {
-        if (is_null($school_program)) {
-            array_push($this->openAPINullablesSetToNull, 'school_program');
+        if (is_null($schoolProgram)) {
+            array_push($this->openAPINullablesSetToNull, 'schoolProgram');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('school_program', $nullablesSetToNull);
+            $index = array_search('schoolProgram', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['school_program'] = $school_program;
+        $this->container['schoolProgram'] = $schoolProgram;
 
         return $this;
     }
 
     /**
-     * Gets state_id
+     * Gets stateId
      *
      * @return string|null
      */
     public function getStateId()
     {
-        return $this->container['state_id'];
+        return $this->container['stateId'];
     }
 
     /**
-     * Sets state_id
+     * Sets stateId
      *
-     * @param string|null $state_id The state assigned ID of the user
+     * @param string|null $stateId The state assigned ID of the user
      *
      * @return self
      */
-    public function setStateId($state_id)
+    public function setStateId($stateId)
     {
-        if (is_null($state_id)) {
-            array_push($this->openAPINullablesSetToNull, 'state_id');
+        if (is_null($stateId)) {
+            array_push($this->openAPINullablesSetToNull, 'stateId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('state_id', $nullablesSetToNull);
+            $index = array_search('stateId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['state_id'] = $state_id;
+        $this->container['stateId'] = $stateId;
 
         return $this;
     }
 
     /**
-     * Gets student_id
+     * Gets studentId
      *
      * @return string|null
      */
     public function getStudentId()
     {
-        return $this->container['student_id'];
+        return $this->container['studentId'];
     }
 
     /**
-     * Sets student_id
+     * Sets studentId
      *
-     * @param string|null $student_id The school assigned ID of the user
+     * @param string|null $studentId The school assigned ID of the user
      *
      * @return self
      */
-    public function setStudentId($student_id)
+    public function setStudentId($studentId)
     {
-        if (is_null($student_id)) {
-            array_push($this->openAPINullablesSetToNull, 'student_id');
+        if (is_null($studentId)) {
+            array_push($this->openAPINullablesSetToNull, 'studentId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_id', $nullablesSetToNull);
+            $index = array_search('studentId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_id'] = $student_id;
+        $this->container['studentId'] = $studentId;
 
         return $this;
     }
@@ -2421,35 +2421,35 @@ class UserEdit implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets fields_to_delete
+     * Gets fieldsToDelete
      *
      * @return string[]|null
      */
     public function getFieldsToDelete()
     {
-        return $this->container['fields_to_delete'];
+        return $this->container['fieldsToDelete'];
     }
 
     /**
-     * Sets fields_to_delete
+     * Sets fieldsToDelete
      *
-     * @param string[]|null $fields_to_delete An array of strings representing field names.  Due to an inherent check against deleting data only accessible through the UI, this unusual step is necessary. To delete or clear data from a user field (such as middle_name or living_status), you must include the field in this array. If a field is included in this array, the data for that field will be deleted and this will override any other value set for the field in the request body. Only fields that can be cleared will be processed. Any required fields, Booleans or fields with no blank option will be ignored.  Allowed values: The field name as listed for the request body (e.g. \"middle_name\" or \"living_status\"). Fields within an object will include the object name and the field name separated by a period (e.g. \"passport.number\" or \"locker.number\").
+     * @param string[]|null $fieldsToDelete An array of strings representing field names.  Due to an inherent check against deleting data only accessible through the UI, this unusual step is necessary. To delete or clear data from a user field (such as middle_name or living_status), you must include the field in this array. If a field is included in this array, the data for that field will be deleted and this will override any other value set for the field in the request body. Only fields that can be cleared will be processed. Any required fields, Booleans or fields with no blank option will be ignored.  Allowed values: The field name as listed for the request body (e.g. \"middle_name\" or \"living_status\"). Fields within an object will include the object name and the field name separated by a period (e.g. \"passport.number\" or \"locker.number\").
      *
      * @return self
      */
-    public function setFieldsToDelete($fields_to_delete)
+    public function setFieldsToDelete($fieldsToDelete)
     {
-        if (is_null($fields_to_delete)) {
-            array_push($this->openAPINullablesSetToNull, 'fields_to_delete');
+        if (is_null($fieldsToDelete)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldsToDelete');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('fields_to_delete', $nullablesSetToNull);
+            $index = array_search('fieldsToDelete', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['fields_to_delete'] = $fields_to_delete;
+        $this->container['fieldsToDelete'] = $fieldsToDelete;
 
         return $this;
     }

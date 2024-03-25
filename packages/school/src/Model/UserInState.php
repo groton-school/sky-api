@@ -60,7 +60,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'resident' => 'string',
         'county' => 'string',
-        'from_date' => '\DateTime',
+        'fromDate' => '\DateTime',
     ];
 
     /**
@@ -73,7 +73,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'resident' => null,
         'county' => null,
-        'from_date' => 'date-time',
+        'fromDate' => 'date-time',
     ];
 
     /**
@@ -84,7 +84,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'resident' => true,
         'county' => true,
-        'from_date' => true,
+        'fromDate' => true,
     ];
 
     /**
@@ -175,7 +175,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'resident' => 'resident',
         'county' => 'county',
-        'from_date' => 'from_date',
+        'fromDate' => 'from_date',
     ];
 
     /**
@@ -186,7 +186,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'resident' => 'setResident',
         'county' => 'setCounty',
-        'from_date' => 'setFromDate',
+        'fromDate' => 'setFromDate',
     ];
 
     /**
@@ -197,7 +197,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'resident' => 'getResident',
         'county' => 'getCounty',
-        'from_date' => 'getFromDate',
+        'fromDate' => 'getFromDate',
     ];
 
     /**
@@ -259,7 +259,7 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('resident', $data ?? [], null);
         $this->setIfExists('county', $data ?? [], null);
-        $this->setIfExists('from_date', $data ?? [], null);
+        $this->setIfExists('fromDate', $data ?? [], null);
     }
 
     /**
@@ -373,35 +373,35 @@ class UserInState implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets from_date
+     * Gets fromDate
      *
      * @return \DateTime|null
      */
     public function getFromDate()
     {
-        return $this->container['from_date'];
+        return $this->container['fromDate'];
     }
 
     /**
-     * Sets from_date
+     * Sets fromDate
      *
-     * @param \DateTime|null $from_date The date the user has resided in the county of residence. Use ISO-8601 date format: 2022-04-21.
+     * @param \DateTime|null $fromDate The date the user has resided in the county of residence. Use ISO-8601 date format: 2022-04-21.
      *
      * @return self
      */
-    public function setFromDate($from_date)
+    public function setFromDate($fromDate)
     {
-        if (is_null($from_date)) {
-            array_push($this->openAPINullablesSetToNull, 'from_date');
+        if (is_null($fromDate)) {
+            array_push($this->openAPINullablesSetToNull, 'fromDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('from_date', $nullablesSetToNull);
+            $index = array_search('fromDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['from_date'] = $from_date;
+        $this->container['fromDate'] = $fromDate;
 
         return $this;
     }

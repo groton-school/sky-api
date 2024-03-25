@@ -59,16 +59,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'automated_email' => 'string',
-        'contact_id' => 'int',
+        'automatedEmail' => 'string',
+        'contactId' => 'int',
         'email' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'relationship' => 'string',
-        'relationship_id' => 'int',
-        'relationship_user_id' => 'int',
-        'sort_order' => 'int',
-        'user_contact_id' => 'int',
+        'relationshipId' => 'int',
+        'relationshipUserId' => 'int',
+        'sortOrder' => 'int',
+        'userContactId' => 'int',
     ];
 
     /**
@@ -80,16 +80,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'automated_email' => null,
-        'contact_id' => 'int32',
+        'automatedEmail' => null,
+        'contactId' => 'int32',
         'email' => null,
-        'first_name' => null,
-        'last_name' => null,
+        'firstName' => null,
+        'lastName' => null,
         'relationship' => null,
-        'relationship_id' => 'int32',
-        'relationship_user_id' => 'int32',
-        'sort_order' => 'int32',
-        'user_contact_id' => 'int32',
+        'relationshipId' => 'int32',
+        'relationshipUserId' => 'int32',
+        'sortOrder' => 'int32',
+        'userContactId' => 'int32',
     ];
 
     /**
@@ -99,16 +99,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'automated_email' => true,
-        'contact_id' => false,
+        'automatedEmail' => true,
+        'contactId' => false,
         'email' => true,
-        'first_name' => true,
-        'last_name' => true,
+        'firstName' => true,
+        'lastName' => true,
         'relationship' => true,
-        'relationship_id' => false,
-        'relationship_user_id' => false,
-        'sort_order' => true,
-        'user_contact_id' => false,
+        'relationshipId' => false,
+        'relationshipUserId' => false,
+        'sortOrder' => true,
+        'userContactId' => false,
     ];
 
     /**
@@ -198,16 +198,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'automated_email' => 'automated_email',
-        'contact_id' => 'contact_id',
+        'automatedEmail' => 'automated_email',
+        'contactId' => 'contact_id',
         'email' => 'email',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'relationship' => 'relationship',
-        'relationship_id' => 'relationship_id',
-        'relationship_user_id' => 'relationship_user_id',
-        'sort_order' => 'sort_order',
-        'user_contact_id' => 'user_contact_id',
+        'relationshipId' => 'relationship_id',
+        'relationshipUserId' => 'relationship_user_id',
+        'sortOrder' => 'sort_order',
+        'userContactId' => 'user_contact_id',
     ];
 
     /**
@@ -217,16 +217,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'id' => 'setId',
-        'automated_email' => 'setAutomatedEmail',
-        'contact_id' => 'setContactId',
+        'automatedEmail' => 'setAutomatedEmail',
+        'contactId' => 'setContactId',
         'email' => 'setEmail',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'relationship' => 'setRelationship',
-        'relationship_id' => 'setRelationshipId',
-        'relationship_user_id' => 'setRelationshipUserId',
-        'sort_order' => 'setSortOrder',
-        'user_contact_id' => 'setUserContactId',
+        'relationshipId' => 'setRelationshipId',
+        'relationshipUserId' => 'setRelationshipUserId',
+        'sortOrder' => 'setSortOrder',
+        'userContactId' => 'setUserContactId',
     ];
 
     /**
@@ -236,16 +236,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'id' => 'getId',
-        'automated_email' => 'getAutomatedEmail',
-        'contact_id' => 'getContactId',
+        'automatedEmail' => 'getAutomatedEmail',
+        'contactId' => 'getContactId',
         'email' => 'getEmail',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'relationship' => 'getRelationship',
-        'relationship_id' => 'getRelationshipId',
-        'relationship_user_id' => 'getRelationshipUserId',
-        'sort_order' => 'getSortOrder',
-        'user_contact_id' => 'getUserContactId',
+        'relationshipId' => 'getRelationshipId',
+        'relationshipUserId' => 'getRelationshipUserId',
+        'sortOrder' => 'getSortOrder',
+        'userContactId' => 'getUserContactId',
     ];
 
     /**
@@ -306,16 +306,16 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('automated_email', $data ?? [], null);
-        $this->setIfExists('contact_id', $data ?? [], null);
+        $this->setIfExists('automatedEmail', $data ?? [], null);
+        $this->setIfExists('contactId', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('relationship', $data ?? [], null);
-        $this->setIfExists('relationship_id', $data ?? [], null);
-        $this->setIfExists('relationship_user_id', $data ?? [], null);
-        $this->setIfExists('sort_order', $data ?? [], null);
-        $this->setIfExists('user_contact_id', $data ?? [], null);
+        $this->setIfExists('relationshipId', $data ?? [], null);
+        $this->setIfExists('relationshipUserId', $data ?? [], null);
+        $this->setIfExists('sortOrder', $data ?? [], null);
+        $this->setIfExists('userContactId', $data ?? [], null);
     }
 
     /**
@@ -388,62 +388,62 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets automated_email
+     * Gets automatedEmail
      *
      * @return string|null
      */
     public function getAutomatedEmail()
     {
-        return $this->container['automated_email'];
+        return $this->container['automatedEmail'];
     }
 
     /**
-     * Sets automated_email
+     * Sets automatedEmail
      *
-     * @param string|null $automated_email Automated email type
+     * @param string|null $automatedEmail Automated email type
      *
      * @return self
      */
-    public function setAutomatedEmail($automated_email)
+    public function setAutomatedEmail($automatedEmail)
     {
-        if (is_null($automated_email)) {
-            array_push($this->openAPINullablesSetToNull, 'automated_email');
+        if (is_null($automatedEmail)) {
+            array_push($this->openAPINullablesSetToNull, 'automatedEmail');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('automated_email', $nullablesSetToNull);
+            $index = array_search('automatedEmail', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['automated_email'] = $automated_email;
+        $this->container['automatedEmail'] = $automatedEmail;
 
         return $this;
     }
 
     /**
-     * Gets contact_id
+     * Gets contactId
      *
      * @return int|null
      */
     public function getContactId()
     {
-        return $this->container['contact_id'];
+        return $this->container['contactId'];
     }
 
     /**
-     * Sets contact_id
+     * Sets contactId
      *
-     * @param int|null $contact_id Contact ID
+     * @param int|null $contactId Contact ID
      *
      * @return self
      */
-    public function setContactId($contact_id)
+    public function setContactId($contactId)
     {
-        if (is_null($contact_id)) {
-            throw new \InvalidArgumentException('non-nullable contact_id cannot be null');
+        if (is_null($contactId)) {
+            throw new \InvalidArgumentException('non-nullable contactId cannot be null');
         }
-        $this->container['contact_id'] = $contact_id;
+        $this->container['contactId'] = $contactId;
 
         return $this;
     }
@@ -483,69 +483,69 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of the emergency contact
+     * @param string|null $firstName The first name of the emergency contact
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of the emergency contact
+     * @param string|null $lastName The last name of the emergency contact
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -585,116 +585,116 @@ class EmergencyContactEmail implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets relationship_id
+     * Gets relationshipId
      *
      * @return int|null
      */
     public function getRelationshipId()
     {
-        return $this->container['relationship_id'];
+        return $this->container['relationshipId'];
     }
 
     /**
-     * Sets relationship_id
+     * Sets relationshipId
      *
-     * @param int|null $relationship_id The relationship ID for the user's emergency contact
+     * @param int|null $relationshipId The relationship ID for the user's emergency contact
      *
      * @return self
      */
-    public function setRelationshipId($relationship_id)
+    public function setRelationshipId($relationshipId)
     {
-        if (is_null($relationship_id)) {
-            throw new \InvalidArgumentException('non-nullable relationship_id cannot be null');
+        if (is_null($relationshipId)) {
+            throw new \InvalidArgumentException('non-nullable relationshipId cannot be null');
         }
-        $this->container['relationship_id'] = $relationship_id;
+        $this->container['relationshipId'] = $relationshipId;
 
         return $this;
     }
 
     /**
-     * Gets relationship_user_id
+     * Gets relationshipUserId
      *
      * @return int|null
      */
     public function getRelationshipUserId()
     {
-        return $this->container['relationship_user_id'];
+        return $this->container['relationshipUserId'];
     }
 
     /**
-     * Sets relationship_user_id
+     * Sets relationshipUserId
      *
-     * @param int|null $relationship_user_id The user ID of the emergency contact
+     * @param int|null $relationshipUserId The user ID of the emergency contact
      *
      * @return self
      */
-    public function setRelationshipUserId($relationship_user_id)
+    public function setRelationshipUserId($relationshipUserId)
     {
-        if (is_null($relationship_user_id)) {
-            throw new \InvalidArgumentException('non-nullable relationship_user_id cannot be null');
+        if (is_null($relationshipUserId)) {
+            throw new \InvalidArgumentException('non-nullable relationshipUserId cannot be null');
         }
-        $this->container['relationship_user_id'] = $relationship_user_id;
+        $this->container['relationshipUserId'] = $relationshipUserId;
 
         return $this;
     }
 
     /**
-     * Gets sort_order
+     * Gets sortOrder
      *
      * @return int|null
      */
     public function getSortOrder()
     {
-        return $this->container['sort_order'];
+        return $this->container['sortOrder'];
     }
 
     /**
-     * Sets sort_order
+     * Sets sortOrder
      *
-     * @param int|null $sort_order Sort order
+     * @param int|null $sortOrder Sort order
      *
      * @return self
      */
-    public function setSortOrder($sort_order)
+    public function setSortOrder($sortOrder)
     {
-        if (is_null($sort_order)) {
-            array_push($this->openAPINullablesSetToNull, 'sort_order');
+        if (is_null($sortOrder)) {
+            array_push($this->openAPINullablesSetToNull, 'sortOrder');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sort_order', $nullablesSetToNull);
+            $index = array_search('sortOrder', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sort_order'] = $sort_order;
+        $this->container['sortOrder'] = $sortOrder;
 
         return $this;
     }
 
     /**
-     * Gets user_contact_id
+     * Gets userContactId
      *
      * @return int|null
      */
     public function getUserContactId()
     {
-        return $this->container['user_contact_id'];
+        return $this->container['userContactId'];
     }
 
     /**
-     * Sets user_contact_id
+     * Sets userContactId
      *
-     * @param int|null $user_contact_id User contact ID
+     * @param int|null $userContactId User contact ID
      *
      * @return self
      */
-    public function setUserContactId($user_contact_id)
+    public function setUserContactId($userContactId)
     {
-        if (is_null($user_contact_id)) {
-            throw new \InvalidArgumentException('non-nullable user_contact_id cannot be null');
+        if (is_null($userContactId)) {
+            throw new \InvalidArgumentException('non-nullable userContactId cannot be null');
         }
-        $this->container['user_contact_id'] = $user_contact_id;
+        $this->container['userContactId'] = $userContactId;
 
         return $this;
     }

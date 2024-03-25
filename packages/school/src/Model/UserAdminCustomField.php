@@ -59,10 +59,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'preferred_name' => 'string',
-        'custom_fields' => '\SKY\School\Model\CustomAdminField[]',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'preferredName' => 'string',
+        'customFields' => '\SKY\School\Model\CustomAdminField[]',
     ];
 
     /**
@@ -74,10 +74,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'preferred_name' => null,
-        'custom_fields' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'preferredName' => null,
+        'customFields' => null,
     ];
 
     /**
@@ -87,10 +87,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'first_name' => true,
-        'last_name' => true,
-        'preferred_name' => true,
-        'custom_fields' => true,
+        'firstName' => true,
+        'lastName' => true,
+        'preferredName' => true,
+        'customFields' => true,
     ];
 
     /**
@@ -180,10 +180,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'preferred_name' => 'preferred_name',
-        'custom_fields' => 'custom_fields',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'preferredName' => 'preferred_name',
+        'customFields' => 'custom_fields',
     ];
 
     /**
@@ -193,10 +193,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'id' => 'setId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'preferred_name' => 'setPreferredName',
-        'custom_fields' => 'setCustomFields',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'preferredName' => 'setPreferredName',
+        'customFields' => 'setCustomFields',
     ];
 
     /**
@@ -206,10 +206,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'id' => 'getId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'preferred_name' => 'getPreferredName',
-        'custom_fields' => 'getCustomFields',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'preferredName' => 'getPreferredName',
+        'customFields' => 'getCustomFields',
     ];
 
     /**
@@ -270,10 +270,10 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
-        $this->setIfExists('custom_fields', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
+        $this->setIfExists('customFields', $data ?? [], null);
     }
 
     /**
@@ -353,137 +353,137 @@ class UserAdminCustomField implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of a user
+     * @param string|null $firstName The first name of a user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of a user
+     * @param string|null $lastName The last name of a user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name Preferred Name
+     * @param string|null $preferredName Preferred Name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
 
     /**
-     * Gets custom_fields
+     * Gets customFields
      *
      * @return \SKY\School\Model\CustomAdminField[]|null
      */
     public function getCustomFields()
     {
-        return $this->container['custom_fields'];
+        return $this->container['customFields'];
     }
 
     /**
-     * Sets custom_fields
+     * Sets customFields
      *
-     * @param \SKY\School\Model\CustomAdminField[]|null $custom_fields Custom Fields
+     * @param \SKY\School\Model\CustomAdminField[]|null $customFields Custom Fields
      *
      * @return self
      */
-    public function setCustomFields($custom_fields)
+    public function setCustomFields($customFields)
     {
-        if (is_null($custom_fields)) {
-            array_push($this->openAPINullablesSetToNull, 'custom_fields');
+        if (is_null($customFields)) {
+            array_push($this->openAPINullablesSetToNull, 'customFields');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('custom_fields', $nullablesSetToNull);
+            $index = array_search('customFields', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['custom_fields'] = $custom_fields;
+        $this->container['customFields'] = $customFields;
 
         return $this;
     }

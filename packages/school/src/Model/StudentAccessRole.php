@@ -59,7 +59,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'has_access' => 'bool',
+        'hasAccess' => 'bool',
     ];
 
     /**
@@ -71,7 +71,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'has_access' => null,
+        'hasAccess' => null,
     ];
 
     /**
@@ -81,7 +81,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'has_access' => true,
+        'hasAccess' => true,
     ];
 
     /**
@@ -171,7 +171,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'has_access' => 'has_access',
+        'hasAccess' => 'has_access',
     ];
 
     /**
@@ -181,7 +181,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'id' => 'setId',
-        'has_access' => 'setHasAccess',
+        'hasAccess' => 'setHasAccess',
     ];
 
     /**
@@ -191,7 +191,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'id' => 'getId',
-        'has_access' => 'getHasAccess',
+        'hasAccess' => 'getHasAccess',
     ];
 
     /**
@@ -252,7 +252,7 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('has_access', $data ?? [], null);
+        $this->setIfExists('hasAccess', $data ?? [], null);
     }
 
     /**
@@ -328,35 +328,35 @@ class StudentAccessRole implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets has_access
+     * Gets hasAccess
      *
      * @return bool|null
      */
     public function getHasAccess()
     {
-        return $this->container['has_access'];
+        return $this->container['hasAccess'];
     }
 
     /**
-     * Sets has_access
+     * Sets hasAccess
      *
-     * @param bool|null $has_access Set to true to allow access for users with this role.
+     * @param bool|null $hasAccess Set to true to allow access for users with this role.
      *
      * @return self
      */
-    public function setHasAccess($has_access)
+    public function setHasAccess($hasAccess)
     {
-        if (is_null($has_access)) {
-            array_push($this->openAPINullablesSetToNull, 'has_access');
+        if (is_null($hasAccess)) {
+            array_push($this->openAPINullablesSetToNull, 'hasAccess');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_access', $nullablesSetToNull);
+            $index = array_search('hasAccess', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_access'] = $has_access;
+        $this->container['hasAccess'] = $hasAccess;
 
         return $this;
     }

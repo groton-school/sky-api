@@ -60,19 +60,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'address_line1' => 'string',
-        'address_line2' => 'string',
-        'address_line3' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'addressLine3' => 'string',
         'city' => 'string',
         'state' => 'string',
-        'state_short' => 'string',
+        'stateShort' => 'string',
         'country' => 'string',
         'zip' => 'string',
         'province' => 'string',
-        'map_url' => 'string',
+        'mapUrl' => 'string',
         'directions' => 'string',
-        'travel_time' => 'int',
-        'opponent_id' => 'int',
+        'travelTime' => 'int',
+        'opponentId' => 'int',
     ];
 
     /**
@@ -85,19 +85,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'address_line1' => null,
-        'address_line2' => null,
-        'address_line3' => null,
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'addressLine3' => null,
         'city' => null,
         'state' => null,
-        'state_short' => null,
+        'stateShort' => null,
         'country' => null,
         'zip' => null,
         'province' => null,
-        'map_url' => null,
+        'mapUrl' => null,
         'directions' => null,
-        'travel_time' => 'int32',
-        'opponent_id' => 'int32',
+        'travelTime' => 'int32',
+        'opponentId' => 'int32',
     ];
 
     /**
@@ -108,19 +108,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'address_line1' => true,
-        'address_line2' => true,
-        'address_line3' => true,
+        'addressLine1' => true,
+        'addressLine2' => true,
+        'addressLine3' => true,
         'city' => true,
         'state' => true,
-        'state_short' => true,
+        'stateShort' => true,
         'country' => true,
         'zip' => true,
         'province' => true,
-        'map_url' => true,
+        'mapUrl' => true,
         'directions' => true,
-        'travel_time' => true,
-        'opponent_id' => true,
+        'travelTime' => true,
+        'opponentId' => true,
     ];
 
     /**
@@ -211,19 +211,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'address_line1' => 'address_line1',
-        'address_line2' => 'address_line2',
-        'address_line3' => 'address_line3',
+        'addressLine1' => 'address_line1',
+        'addressLine2' => 'address_line2',
+        'addressLine3' => 'address_line3',
         'city' => 'city',
         'state' => 'state',
-        'state_short' => 'state_short',
+        'stateShort' => 'state_short',
         'country' => 'country',
         'zip' => 'zip',
         'province' => 'province',
-        'map_url' => 'map_url',
+        'mapUrl' => 'map_url',
         'directions' => 'directions',
-        'travel_time' => 'travel_time',
-        'opponent_id' => 'opponent_id',
+        'travelTime' => 'travel_time',
+        'opponentId' => 'opponent_id',
     ];
 
     /**
@@ -234,19 +234,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'address_line1' => 'setAddressLine1',
-        'address_line2' => 'setAddressLine2',
-        'address_line3' => 'setAddressLine3',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'addressLine3' => 'setAddressLine3',
         'city' => 'setCity',
         'state' => 'setState',
-        'state_short' => 'setStateShort',
+        'stateShort' => 'setStateShort',
         'country' => 'setCountry',
         'zip' => 'setZip',
         'province' => 'setProvince',
-        'map_url' => 'setMapUrl',
+        'mapUrl' => 'setMapUrl',
         'directions' => 'setDirections',
-        'travel_time' => 'setTravelTime',
-        'opponent_id' => 'setOpponentId',
+        'travelTime' => 'setTravelTime',
+        'opponentId' => 'setOpponentId',
     ];
 
     /**
@@ -257,19 +257,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'address_line1' => 'getAddressLine1',
-        'address_line2' => 'getAddressLine2',
-        'address_line3' => 'getAddressLine3',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'addressLine3' => 'getAddressLine3',
         'city' => 'getCity',
         'state' => 'getState',
-        'state_short' => 'getStateShort',
+        'stateShort' => 'getStateShort',
         'country' => 'getCountry',
         'zip' => 'getZip',
         'province' => 'getProvince',
-        'map_url' => 'getMapUrl',
+        'mapUrl' => 'getMapUrl',
         'directions' => 'getDirections',
-        'travel_time' => 'getTravelTime',
-        'opponent_id' => 'getOpponentId',
+        'travelTime' => 'getTravelTime',
+        'opponentId' => 'getOpponentId',
     ];
 
     /**
@@ -331,19 +331,19 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('address_line1', $data ?? [], null);
-        $this->setIfExists('address_line2', $data ?? [], null);
-        $this->setIfExists('address_line3', $data ?? [], null);
+        $this->setIfExists('addressLine1', $data ?? [], null);
+        $this->setIfExists('addressLine2', $data ?? [], null);
+        $this->setIfExists('addressLine3', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('state_short', $data ?? [], null);
+        $this->setIfExists('stateShort', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('zip', $data ?? [], null);
         $this->setIfExists('province', $data ?? [], null);
-        $this->setIfExists('map_url', $data ?? [], null);
+        $this->setIfExists('mapUrl', $data ?? [], null);
         $this->setIfExists('directions', $data ?? [], null);
-        $this->setIfExists('travel_time', $data ?? [], null);
-        $this->setIfExists('opponent_id', $data ?? [], null);
+        $this->setIfExists('travelTime', $data ?? [], null);
+        $this->setIfExists('opponentId', $data ?? [], null);
     }
 
     /**
@@ -457,103 +457,103 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address_line1
+     * Gets addressLine1
      *
      * @return string|null
      */
     public function getAddressLine1()
     {
-        return $this->container['address_line1'];
+        return $this->container['addressLine1'];
     }
 
     /**
-     * Sets address_line1
+     * Sets addressLine1
      *
-     * @param string|null $address_line1 Address Line 1
+     * @param string|null $addressLine1 Address Line 1
      *
      * @return self
      */
-    public function setAddressLine1($address_line1)
+    public function setAddressLine1($addressLine1)
     {
-        if (is_null($address_line1)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line1');
+        if (is_null($addressLine1)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine1');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line1', $nullablesSetToNull);
+            $index = array_search('addressLine1', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line1'] = $address_line1;
+        $this->container['addressLine1'] = $addressLine1;
 
         return $this;
     }
 
     /**
-     * Gets address_line2
+     * Gets addressLine2
      *
      * @return string|null
      */
     public function getAddressLine2()
     {
-        return $this->container['address_line2'];
+        return $this->container['addressLine2'];
     }
 
     /**
-     * Sets address_line2
+     * Sets addressLine2
      *
-     * @param string|null $address_line2 Address Line 2
+     * @param string|null $addressLine2 Address Line 2
      *
      * @return self
      */
-    public function setAddressLine2($address_line2)
+    public function setAddressLine2($addressLine2)
     {
-        if (is_null($address_line2)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line2');
+        if (is_null($addressLine2)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine2');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line2', $nullablesSetToNull);
+            $index = array_search('addressLine2', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line2'] = $address_line2;
+        $this->container['addressLine2'] = $addressLine2;
 
         return $this;
     }
 
     /**
-     * Gets address_line3
+     * Gets addressLine3
      *
      * @return string|null
      */
     public function getAddressLine3()
     {
-        return $this->container['address_line3'];
+        return $this->container['addressLine3'];
     }
 
     /**
-     * Sets address_line3
+     * Sets addressLine3
      *
-     * @param string|null $address_line3 Address Line 3
+     * @param string|null $addressLine3 Address Line 3
      *
      * @return self
      */
-    public function setAddressLine3($address_line3)
+    public function setAddressLine3($addressLine3)
     {
-        if (is_null($address_line3)) {
-            array_push($this->openAPINullablesSetToNull, 'address_line3');
+        if (is_null($addressLine3)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine3');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_line3', $nullablesSetToNull);
+            $index = array_search('addressLine3', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_line3'] = $address_line3;
+        $this->container['addressLine3'] = $addressLine3;
 
         return $this;
     }
@@ -627,35 +627,35 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets state_short
+     * Gets stateShort
      *
      * @return string|null
      */
     public function getStateShort()
     {
-        return $this->container['state_short'];
+        return $this->container['stateShort'];
     }
 
     /**
-     * Sets state_short
+     * Sets stateShort
      *
-     * @param string|null $state_short State abbreviation
+     * @param string|null $stateShort State abbreviation
      *
      * @return self
      */
-    public function setStateShort($state_short)
+    public function setStateShort($stateShort)
     {
-        if (is_null($state_short)) {
-            array_push($this->openAPINullablesSetToNull, 'state_short');
+        if (is_null($stateShort)) {
+            array_push($this->openAPINullablesSetToNull, 'stateShort');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('state_short', $nullablesSetToNull);
+            $index = array_search('stateShort', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['state_short'] = $state_short;
+        $this->container['stateShort'] = $stateShort;
 
         return $this;
     }
@@ -763,35 +763,35 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets map_url
+     * Gets mapUrl
      *
      * @return string|null
      */
     public function getMapUrl()
     {
-        return $this->container['map_url'];
+        return $this->container['mapUrl'];
     }
 
     /**
-     * Sets map_url
+     * Sets mapUrl
      *
-     * @param string|null $map_url URL to the directions/map
+     * @param string|null $mapUrl URL to the directions/map
      *
      * @return self
      */
-    public function setMapUrl($map_url)
+    public function setMapUrl($mapUrl)
     {
-        if (is_null($map_url)) {
-            array_push($this->openAPINullablesSetToNull, 'map_url');
+        if (is_null($mapUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'mapUrl');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('map_url', $nullablesSetToNull);
+            $index = array_search('mapUrl', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['map_url'] = $map_url;
+        $this->container['mapUrl'] = $mapUrl;
 
         return $this;
     }
@@ -831,69 +831,69 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets travel_time
+     * Gets travelTime
      *
      * @return int|null
      */
     public function getTravelTime()
     {
-        return $this->container['travel_time'];
+        return $this->container['travelTime'];
     }
 
     /**
-     * Sets travel_time
+     * Sets travelTime
      *
-     * @param int|null $travel_time Travel time (minutes) to the location
+     * @param int|null $travelTime Travel time (minutes) to the location
      *
      * @return self
      */
-    public function setTravelTime($travel_time)
+    public function setTravelTime($travelTime)
     {
-        if (is_null($travel_time)) {
-            array_push($this->openAPINullablesSetToNull, 'travel_time');
+        if (is_null($travelTime)) {
+            array_push($this->openAPINullablesSetToNull, 'travelTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('travel_time', $nullablesSetToNull);
+            $index = array_search('travelTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['travel_time'] = $travel_time;
+        $this->container['travelTime'] = $travelTime;
 
         return $this;
     }
 
     /**
-     * Gets opponent_id
+     * Gets opponentId
      *
      * @return int|null
      */
     public function getOpponentId()
     {
-        return $this->container['opponent_id'];
+        return $this->container['opponentId'];
     }
 
     /**
-     * Sets opponent_id
+     * Sets opponentId
      *
-     * @param int|null $opponent_id Opponent ID associated with this location
+     * @param int|null $opponentId Opponent ID associated with this location
      *
      * @return self
      */
-    public function setOpponentId($opponent_id)
+    public function setOpponentId($opponentId)
     {
-        if (is_null($opponent_id)) {
-            array_push($this->openAPINullablesSetToNull, 'opponent_id');
+        if (is_null($opponentId)) {
+            array_push($this->openAPINullablesSetToNull, 'opponentId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('opponent_id', $nullablesSetToNull);
+            $index = array_search('opponentId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['opponent_id'] = $opponent_id;
+        $this->container['opponentId'] = $opponentId;
 
         return $this;
     }

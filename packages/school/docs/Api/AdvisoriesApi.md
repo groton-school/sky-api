@@ -10,7 +10,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1AdvisoriesSectionsGet()`
 
 ```php
-v1AdvisoriesSectionsGet($level_num, $school_year): \SKY\School\Model\AdvisoriesSectionCollection
+v1AdvisoriesSectionsGet($levelNum, $schoolYear): \SKY\School\Model\AdvisoriesSectionCollection
 ```
 
 Advisories sections by school level
@@ -41,11 +41,11 @@ $apiInstance = new SKY\School\Api\AdvisoriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_num = 56; // int | Format - int32. Level number
-$school_year = 'school_year_example'; // string | The school year to get advisory sections for. <br></br>Defaults to the current school year.
+$levelNum = 56; // int | Format - int32. Level number
+$schoolYear = 'schoolYear_example'; // string | The school year to get advisory sections for. <br></br>Defaults to the current school year.
 
 try {
-    $result = $apiInstance->v1AdvisoriesSectionsGet($level_num, $school_year);
+    $result = $apiInstance->v1AdvisoriesSectionsGet($levelNum, $schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdvisoriesApi->v1AdvisoriesSectionsGet: ', $e->getMessage(), PHP_EOL;
@@ -56,8 +56,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_num** | **int**| Format - int32. Level number | |
-| **school_year** | **string**| The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. | [optional] |
+| **levelNum** | **int**| Format - int32. Level number | |
+| **schoolYear** | **string**| The school year to get advisory sections for. &lt;br&gt;&lt;/br&gt;Defaults to the current school year. | [optional] |
 
 ### Return type
 

@@ -175,19 +175,19 @@ class AcademicsApi
      *
      * Academics assignments for student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  string $section_ids  (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  string $sectionIds  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentAssignmentCollection
      */
-    public function v1AcademicsByStudentIdAssignmentsGet($student_id, $start_date, $end_date = null, $section_ids = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
+    public function v1AcademicsByStudentIdAssignmentsGet($studentId, $startDate, $endDate = null, $sectionIds = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
     {
-        [$response] = $this->v1AcademicsByStudentIdAssignmentsGetWithHttpInfo($student_id, $start_date, $end_date, $section_ids, $contentType);
+        [$response] = $this->v1AcademicsByStudentIdAssignmentsGetWithHttpInfo($studentId, $startDate, $endDate, $sectionIds, $contentType);
         return $response;
     }
 
@@ -196,19 +196,19 @@ class AcademicsApi
      *
      * Academics assignments for student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  string $section_ids  (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  string $sectionIds  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentAssignmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsByStudentIdAssignmentsGetWithHttpInfo($student_id, $start_date, $end_date = null, $section_ids = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
+    public function v1AcademicsByStudentIdAssignmentsGetWithHttpInfo($studentId, $startDate, $endDate = null, $sectionIds = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
     {
-        $request = $this->v1AcademicsByStudentIdAssignmentsGetRequest($student_id, $start_date, $end_date, $section_ids, $contentType);
+        $request = $this->v1AcademicsByStudentIdAssignmentsGetRequest($studentId, $startDate, $endDate, $sectionIds, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -323,18 +323,18 @@ class AcademicsApi
      *
      * Academics assignments for student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  string $section_ids  (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  string $sectionIds  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsByStudentIdAssignmentsGetAsync($student_id, $start_date, $end_date = null, $section_ids = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
+    public function v1AcademicsByStudentIdAssignmentsGetAsync($studentId, $startDate, $endDate = null, $sectionIds = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
     {
-        return $this->v1AcademicsByStudentIdAssignmentsGetAsyncWithHttpInfo($student_id, $start_date, $end_date, $section_ids, $contentType)
+        return $this->v1AcademicsByStudentIdAssignmentsGetAsyncWithHttpInfo($studentId, $startDate, $endDate, $sectionIds, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -347,19 +347,19 @@ class AcademicsApi
      *
      * Academics assignments for student
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  string $section_ids  (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  string $sectionIds  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsByStudentIdAssignmentsGetAsyncWithHttpInfo($student_id, $start_date, $end_date = null, $section_ids = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
+    public function v1AcademicsByStudentIdAssignmentsGetAsyncWithHttpInfo($studentId, $startDate, $endDate = null, $sectionIds = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentAssignmentCollection';
-        $request = $this->v1AcademicsByStudentIdAssignmentsGetRequest($student_id, $start_date, $end_date, $section_ids, $contentType);
+        $request = $this->v1AcademicsByStudentIdAssignmentsGetRequest($studentId, $startDate, $endDate, $sectionIds, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -400,29 +400,29 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsByStudentIdAssignmentsGet'
      *
-     * @param  int $student_id Format - int32. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). (optional)
-     * @param  string $section_ids  (optional)
+     * @param  int $studentId Format - int32. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). (optional)
+     * @param  string $sectionIds  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsByStudentIdAssignmentsGetRequest($student_id, $start_date, $end_date = null, $section_ids = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
+    public function v1AcademicsByStudentIdAssignmentsGetRequest($studentId, $startDate, $endDate = null, $sectionIds = null, string $contentType = self::contentTypes['v1AcademicsByStudentIdAssignmentsGet'][0])
     {
 
-        // verify the required parameter 'student_id' is set
-        if ($student_id === null || (is_array($student_id) && count($student_id) === 0)) {
+        // verify the required parameter 'studentId' is set
+        if ($studentId === null || (is_array($studentId) && count($studentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $student_id when calling v1AcademicsByStudentIdAssignmentsGet'
+                'Missing the required parameter $studentId when calling v1AcademicsByStudentIdAssignmentsGet'
             );
         }
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1AcademicsByStudentIdAssignmentsGet'
+                'Missing the required parameter $startDate when calling v1AcademicsByStudentIdAssignmentsGet'
             );
         }
 
@@ -438,7 +438,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -447,7 +447,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -456,7 +456,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $section_ids,
+            $sectionIds,
             'section_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -466,10 +466,10 @@ class AcademicsApi
 
 
         // path params
-        if ($student_id !== null) {
+        if ($studentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'student_id' . '}',
-                ObjectSerializer::toPathValue($student_id),
+                ObjectSerializer::toPathValue($studentId),
                 $resourcePath
             );
         }
@@ -543,18 +543,18 @@ class AcademicsApi
      *
      * Academics graded assignments for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view graded assignments for. (required)
-     * @param  int $section_id Format - int32. The ID of the lead section for the student. (required)
-     * @param  int $marking_period_id Format - int32. The ID of the marking period to return grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view graded assignments for. (required)
+     * @param  int $sectionId Format - int32. The ID of the lead section for the student. (required)
+     * @param  int $markingPeriodId Format - int32. The ID of the marking period to return grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentGradedAssignmentCollection
      */
-    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($student_id, $section_id, $marking_period_id, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
+    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGet($studentId, $sectionId, $markingPeriodId, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
     {
-        [$response] = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetWithHttpInfo($student_id, $section_id, $marking_period_id, $contentType);
+        [$response] = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetWithHttpInfo($studentId, $sectionId, $markingPeriodId, $contentType);
         return $response;
     }
 
@@ -563,18 +563,18 @@ class AcademicsApi
      *
      * Academics graded assignments for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view graded assignments for. (required)
-     * @param  int $section_id Format - int32. The ID of the lead section for the student. (required)
-     * @param  int $marking_period_id Format - int32. The ID of the marking period to return grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view graded assignments for. (required)
+     * @param  int $sectionId Format - int32. The ID of the lead section for the student. (required)
+     * @param  int $markingPeriodId Format - int32. The ID of the marking period to return grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentGradedAssignmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetWithHttpInfo($student_id, $section_id, $marking_period_id, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
+    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetWithHttpInfo($studentId, $sectionId, $markingPeriodId, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
     {
-        $request = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($student_id, $section_id, $marking_period_id, $contentType);
+        $request = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($studentId, $sectionId, $markingPeriodId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -689,17 +689,17 @@ class AcademicsApi
      *
      * Academics graded assignments for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view graded assignments for. (required)
-     * @param  int $section_id Format - int32. The ID of the lead section for the student. (required)
-     * @param  int $marking_period_id Format - int32. The ID of the marking period to return grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view graded assignments for. (required)
+     * @param  int $sectionId Format - int32. The ID of the lead section for the student. (required)
+     * @param  int $markingPeriodId Format - int32. The ID of the marking period to return grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsync($student_id, $section_id, $marking_period_id, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
+    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsync($studentId, $sectionId, $markingPeriodId, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
     {
-        return $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsyncWithHttpInfo($student_id, $section_id, $marking_period_id, $contentType)
+        return $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsyncWithHttpInfo($studentId, $sectionId, $markingPeriodId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -712,18 +712,18 @@ class AcademicsApi
      *
      * Academics graded assignments for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view graded assignments for. (required)
-     * @param  int $section_id Format - int32. The ID of the lead section for the student. (required)
-     * @param  int $marking_period_id Format - int32. The ID of the marking period to return grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view graded assignments for. (required)
+     * @param  int $sectionId Format - int32. The ID of the lead section for the student. (required)
+     * @param  int $markingPeriodId Format - int32. The ID of the marking period to return grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsyncWithHttpInfo($student_id, $section_id, $marking_period_id, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
+    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetAsyncWithHttpInfo($studentId, $sectionId, $markingPeriodId, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentGradedAssignmentCollection';
-        $request = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($student_id, $section_id, $marking_period_id, $contentType);
+        $request = $this->v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($studentId, $sectionId, $markingPeriodId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -764,35 +764,35 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
      *
-     * @param  int $student_id Format - int32. The ID of the student to view graded assignments for. (required)
-     * @param  int $section_id Format - int32. The ID of the lead section for the student. (required)
-     * @param  int $marking_period_id Format - int32. The ID of the marking period to return grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view graded assignments for. (required)
+     * @param  int $sectionId Format - int32. The ID of the lead section for the student. (required)
+     * @param  int $markingPeriodId Format - int32. The ID of the marking period to return grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($student_id, $section_id, $marking_period_id, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
+    public function v1AcademicsByStudentIdBySectionIdGradedassignmentsGetRequest($studentId, $sectionId, $markingPeriodId, string $contentType = self::contentTypes['v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'][0])
     {
 
-        // verify the required parameter 'student_id' is set
-        if ($student_id === null || (is_array($student_id) && count($student_id) === 0)) {
+        // verify the required parameter 'studentId' is set
+        if ($studentId === null || (is_array($studentId) && count($studentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $student_id when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
+                'Missing the required parameter $studentId when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
             );
         }
 
-        // verify the required parameter 'section_id' is set
-        if ($section_id === null || (is_array($section_id) && count($section_id) === 0)) {
+        // verify the required parameter 'sectionId' is set
+        if ($sectionId === null || (is_array($sectionId) && count($sectionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $section_id when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
+                'Missing the required parameter $sectionId when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
             );
         }
 
-        // verify the required parameter 'marking_period_id' is set
-        if ($marking_period_id === null || (is_array($marking_period_id) && count($marking_period_id) === 0)) {
+        // verify the required parameter 'markingPeriodId' is set
+        if ($markingPeriodId === null || (is_array($markingPeriodId) && count($markingPeriodId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $marking_period_id when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
+                'Missing the required parameter $markingPeriodId when calling v1AcademicsByStudentIdBySectionIdGradedassignmentsGet'
             );
         }
 
@@ -806,7 +806,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $marking_period_id,
+            $markingPeriodId,
             'marking_period_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -816,18 +816,18 @@ class AcademicsApi
 
 
         // path params
-        if ($student_id !== null) {
+        if ($studentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'student_id' . '}',
-                ObjectSerializer::toPathValue($student_id),
+                ObjectSerializer::toPathValue($studentId),
                 $resourcePath
             );
         }
         // path params
-        if ($section_id !== null) {
+        if ($sectionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'section_id' . '}',
-                ObjectSerializer::toPathValue($section_id),
+                ObjectSerializer::toPathValue($sectionId),
                 $resourcePath
             );
         }
@@ -901,17 +901,17 @@ class AcademicsApi
      *
      * Academics courses
      *
-     * @param  int $department_id Format - int32. Identifier for a specific department. (optional)
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $departmentId Format - int32. Identifier for a specific department. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsCoursesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\CourseCollection
      */
-    public function v1AcademicsCoursesGet($department_id = null, $level_id = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
+    public function v1AcademicsCoursesGet($departmentId = null, $levelId = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
     {
-        [$response] = $this->v1AcademicsCoursesGetWithHttpInfo($department_id, $level_id, $contentType);
+        [$response] = $this->v1AcademicsCoursesGetWithHttpInfo($departmentId, $levelId, $contentType);
         return $response;
     }
 
@@ -920,17 +920,17 @@ class AcademicsApi
      *
      * Academics courses
      *
-     * @param  int $department_id Format - int32. Identifier for a specific department. (optional)
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $departmentId Format - int32. Identifier for a specific department. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsCoursesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\CourseCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsCoursesGetWithHttpInfo($department_id = null, $level_id = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
+    public function v1AcademicsCoursesGetWithHttpInfo($departmentId = null, $levelId = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
     {
-        $request = $this->v1AcademicsCoursesGetRequest($department_id, $level_id, $contentType);
+        $request = $this->v1AcademicsCoursesGetRequest($departmentId, $levelId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1045,16 +1045,16 @@ class AcademicsApi
      *
      * Academics courses
      *
-     * @param  int $department_id Format - int32. Identifier for a specific department. (optional)
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $departmentId Format - int32. Identifier for a specific department. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsCoursesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsCoursesGetAsync($department_id = null, $level_id = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
+    public function v1AcademicsCoursesGetAsync($departmentId = null, $levelId = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
     {
-        return $this->v1AcademicsCoursesGetAsyncWithHttpInfo($department_id, $level_id, $contentType)
+        return $this->v1AcademicsCoursesGetAsyncWithHttpInfo($departmentId, $levelId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1067,17 +1067,17 @@ class AcademicsApi
      *
      * Academics courses
      *
-     * @param  int $department_id Format - int32. Identifier for a specific department. (optional)
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $departmentId Format - int32. Identifier for a specific department. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsCoursesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsCoursesGetAsyncWithHttpInfo($department_id = null, $level_id = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
+    public function v1AcademicsCoursesGetAsyncWithHttpInfo($departmentId = null, $levelId = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
     {
         $returnType = '\SKY\School\Model\CourseCollection';
-        $request = $this->v1AcademicsCoursesGetRequest($department_id, $level_id, $contentType);
+        $request = $this->v1AcademicsCoursesGetRequest($departmentId, $levelId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1118,14 +1118,14 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsCoursesGet'
      *
-     * @param  int $department_id Format - int32. Identifier for a specific department. (optional)
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $departmentId Format - int32. Identifier for a specific department. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsCoursesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsCoursesGetRequest($department_id = null, $level_id = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
+    public function v1AcademicsCoursesGetRequest($departmentId = null, $levelId = null, string $contentType = self::contentTypes['v1AcademicsCoursesGet'][0])
     {
 
 
@@ -1140,7 +1140,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $department_id,
+            $departmentId,
             'department_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -1149,7 +1149,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_id,
+            $levelId,
             'level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -1228,16 +1228,16 @@ class AcademicsApi
      *
      * Academics departments
      *
-     * @param  int $level_id Format - int32. Level number. (optional)
+     * @param  int $levelId Format - int32. Level number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsDepartmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\DepartmentCollection
      */
-    public function v1AcademicsDepartmentsGet($level_id = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
+    public function v1AcademicsDepartmentsGet($levelId = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
     {
-        [$response] = $this->v1AcademicsDepartmentsGetWithHttpInfo($level_id, $contentType);
+        [$response] = $this->v1AcademicsDepartmentsGetWithHttpInfo($levelId, $contentType);
         return $response;
     }
 
@@ -1246,16 +1246,16 @@ class AcademicsApi
      *
      * Academics departments
      *
-     * @param  int $level_id Format - int32. Level number. (optional)
+     * @param  int $levelId Format - int32. Level number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsDepartmentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\DepartmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsDepartmentsGetWithHttpInfo($level_id = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
+    public function v1AcademicsDepartmentsGetWithHttpInfo($levelId = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
     {
-        $request = $this->v1AcademicsDepartmentsGetRequest($level_id, $contentType);
+        $request = $this->v1AcademicsDepartmentsGetRequest($levelId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1370,15 +1370,15 @@ class AcademicsApi
      *
      * Academics departments
      *
-     * @param  int $level_id Format - int32. Level number. (optional)
+     * @param  int $levelId Format - int32. Level number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsDepartmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsDepartmentsGetAsync($level_id = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
+    public function v1AcademicsDepartmentsGetAsync($levelId = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
     {
-        return $this->v1AcademicsDepartmentsGetAsyncWithHttpInfo($level_id, $contentType)
+        return $this->v1AcademicsDepartmentsGetAsyncWithHttpInfo($levelId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1391,16 +1391,16 @@ class AcademicsApi
      *
      * Academics departments
      *
-     * @param  int $level_id Format - int32. Level number. (optional)
+     * @param  int $levelId Format - int32. Level number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsDepartmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsDepartmentsGetAsyncWithHttpInfo($level_id = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
+    public function v1AcademicsDepartmentsGetAsyncWithHttpInfo($levelId = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
     {
         $returnType = '\SKY\School\Model\DepartmentCollection';
-        $request = $this->v1AcademicsDepartmentsGetRequest($level_id, $contentType);
+        $request = $this->v1AcademicsDepartmentsGetRequest($levelId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1441,13 +1441,13 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsDepartmentsGet'
      *
-     * @param  int $level_id Format - int32. Level number. (optional)
+     * @param  int $levelId Format - int32. Level number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsDepartmentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsDepartmentsGetRequest($level_id = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
+    public function v1AcademicsDepartmentsGetRequest($levelId = null, string $contentType = self::contentTypes['v1AcademicsDepartmentsGet'][0])
     {
 
 
@@ -1461,7 +1461,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_id,
+            $levelId,
             'level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -1540,17 +1540,17 @@ class AcademicsApi
      *
      * Academics student enrollment list
      *
-     * @param  int $user_id Format - int32. User identifier. (required)
-     * @param  string $school_year The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $userId Format - int32. User identifier. (required)
+     * @param  string $schoolYear The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EnrollmentCollection
      */
-    public function v1AcademicsEnrollmentsByUserIdGet($user_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
+    public function v1AcademicsEnrollmentsByUserIdGet($userId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
     {
-        [$response] = $this->v1AcademicsEnrollmentsByUserIdGetWithHttpInfo($user_id, $school_year, $contentType);
+        [$response] = $this->v1AcademicsEnrollmentsByUserIdGetWithHttpInfo($userId, $schoolYear, $contentType);
         return $response;
     }
 
@@ -1559,17 +1559,17 @@ class AcademicsApi
      *
      * Academics student enrollment list
      *
-     * @param  int $user_id Format - int32. User identifier. (required)
-     * @param  string $school_year The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $userId Format - int32. User identifier. (required)
+     * @param  string $schoolYear The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EnrollmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsEnrollmentsByUserIdGetWithHttpInfo($user_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
+    public function v1AcademicsEnrollmentsByUserIdGetWithHttpInfo($userId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
     {
-        $request = $this->v1AcademicsEnrollmentsByUserIdGetRequest($user_id, $school_year, $contentType);
+        $request = $this->v1AcademicsEnrollmentsByUserIdGetRequest($userId, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1684,16 +1684,16 @@ class AcademicsApi
      *
      * Academics student enrollment list
      *
-     * @param  int $user_id Format - int32. User identifier. (required)
-     * @param  string $school_year The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $userId Format - int32. User identifier. (required)
+     * @param  string $schoolYear The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsEnrollmentsByUserIdGetAsync($user_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
+    public function v1AcademicsEnrollmentsByUserIdGetAsync($userId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
     {
-        return $this->v1AcademicsEnrollmentsByUserIdGetAsyncWithHttpInfo($user_id, $school_year, $contentType)
+        return $this->v1AcademicsEnrollmentsByUserIdGetAsyncWithHttpInfo($userId, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1706,17 +1706,17 @@ class AcademicsApi
      *
      * Academics student enrollment list
      *
-     * @param  int $user_id Format - int32. User identifier. (required)
-     * @param  string $school_year The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $userId Format - int32. User identifier. (required)
+     * @param  string $schoolYear The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsEnrollmentsByUserIdGetAsyncWithHttpInfo($user_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
+    public function v1AcademicsEnrollmentsByUserIdGetAsyncWithHttpInfo($userId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
     {
         $returnType = '\SKY\School\Model\EnrollmentCollection';
-        $request = $this->v1AcademicsEnrollmentsByUserIdGetRequest($user_id, $school_year, $contentType);
+        $request = $this->v1AcademicsEnrollmentsByUserIdGetRequest($userId, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1757,20 +1757,20 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsEnrollmentsByUserIdGet'
      *
-     * @param  int $user_id Format - int32. User identifier. (required)
-     * @param  string $school_year The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $userId Format - int32. User identifier. (required)
+     * @param  string $schoolYear The school year to filter the collection of sections by. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsEnrollmentsByUserIdGetRequest($user_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
+    public function v1AcademicsEnrollmentsByUserIdGetRequest($userId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsByUserIdGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1AcademicsEnrollmentsByUserIdGet'
+                'Missing the required parameter $userId when calling v1AcademicsEnrollmentsByUserIdGet'
             );
         }
 
@@ -1785,7 +1785,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -1795,10 +1795,10 @@ class AcademicsApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -1872,17 +1872,17 @@ class AcademicsApi
      *
      * Academics Student Enrollments Changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsChangesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EnrollmentChangesCollection
      */
-    public function v1AcademicsEnrollmentsChangesGet($start_date, $end_date = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
+    public function v1AcademicsEnrollmentsChangesGet($startDate, $endDate = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
     {
-        [$response] = $this->v1AcademicsEnrollmentsChangesGetWithHttpInfo($start_date, $end_date, $contentType);
+        [$response] = $this->v1AcademicsEnrollmentsChangesGetWithHttpInfo($startDate, $endDate, $contentType);
         return $response;
     }
 
@@ -1891,17 +1891,17 @@ class AcademicsApi
      *
      * Academics Student Enrollments Changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsChangesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EnrollmentChangesCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsEnrollmentsChangesGetWithHttpInfo($start_date, $end_date = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
+    public function v1AcademicsEnrollmentsChangesGetWithHttpInfo($startDate, $endDate = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
     {
-        $request = $this->v1AcademicsEnrollmentsChangesGetRequest($start_date, $end_date, $contentType);
+        $request = $this->v1AcademicsEnrollmentsChangesGetRequest($startDate, $endDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2016,16 +2016,16 @@ class AcademicsApi
      *
      * Academics Student Enrollments Changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsChangesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsEnrollmentsChangesGetAsync($start_date, $end_date = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
+    public function v1AcademicsEnrollmentsChangesGetAsync($startDate, $endDate = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
     {
-        return $this->v1AcademicsEnrollmentsChangesGetAsyncWithHttpInfo($start_date, $end_date, $contentType)
+        return $this->v1AcademicsEnrollmentsChangesGetAsyncWithHttpInfo($startDate, $endDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2038,17 +2038,17 @@ class AcademicsApi
      *
      * Academics Student Enrollments Changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsChangesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsEnrollmentsChangesGetAsyncWithHttpInfo($start_date, $end_date = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
+    public function v1AcademicsEnrollmentsChangesGetAsyncWithHttpInfo($startDate, $endDate = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
     {
         $returnType = '\SKY\School\Model\EnrollmentChangesCollection';
-        $request = $this->v1AcademicsEnrollmentsChangesGetRequest($start_date, $end_date, $contentType);
+        $request = $this->v1AcademicsEnrollmentsChangesGetRequest($startDate, $endDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2089,20 +2089,20 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsEnrollmentsChangesGet'
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to begin with (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The DateTime of changes to academics enrollments to end with. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsEnrollmentsChangesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsEnrollmentsChangesGetRequest($start_date, $end_date = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
+    public function v1AcademicsEnrollmentsChangesGetRequest($startDate, $endDate = null, string $contentType = self::contentTypes['v1AcademicsEnrollmentsChangesGet'][0])
     {
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1AcademicsEnrollmentsChangesGet'
+                'Missing the required parameter $startDate when calling v1AcademicsEnrollmentsChangesGet'
             );
         }
 
@@ -2117,7 +2117,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2126,7 +2126,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2205,19 +2205,19 @@ class AcademicsApi
      *
      * Academics master schedule
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
-     * @param  int $offering_type Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
+     * @param  int $offeringType Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesMasterGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\MasterScheduleDayCollection
      */
-    public function v1AcademicsSchedulesMasterGet($level_num, $start_date, $end_date, $offering_type = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
+    public function v1AcademicsSchedulesMasterGet($levelNum, $startDate, $endDate, $offeringType = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
     {
-        [$response] = $this->v1AcademicsSchedulesMasterGetWithHttpInfo($level_num, $start_date, $end_date, $offering_type, $contentType);
+        [$response] = $this->v1AcademicsSchedulesMasterGetWithHttpInfo($levelNum, $startDate, $endDate, $offeringType, $contentType);
         return $response;
     }
 
@@ -2226,19 +2226,19 @@ class AcademicsApi
      *
      * Academics master schedule
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
-     * @param  int $offering_type Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
+     * @param  int $offeringType Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesMasterGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\MasterScheduleDayCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSchedulesMasterGetWithHttpInfo($level_num, $start_date, $end_date, $offering_type = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
+    public function v1AcademicsSchedulesMasterGetWithHttpInfo($levelNum, $startDate, $endDate, $offeringType = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
     {
-        $request = $this->v1AcademicsSchedulesMasterGetRequest($level_num, $start_date, $end_date, $offering_type, $contentType);
+        $request = $this->v1AcademicsSchedulesMasterGetRequest($levelNum, $startDate, $endDate, $offeringType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2353,18 +2353,18 @@ class AcademicsApi
      *
      * Academics master schedule
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
-     * @param  int $offering_type Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
+     * @param  int $offeringType Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesMasterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesMasterGetAsync($level_num, $start_date, $end_date, $offering_type = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
+    public function v1AcademicsSchedulesMasterGetAsync($levelNum, $startDate, $endDate, $offeringType = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
     {
-        return $this->v1AcademicsSchedulesMasterGetAsyncWithHttpInfo($level_num, $start_date, $end_date, $offering_type, $contentType)
+        return $this->v1AcademicsSchedulesMasterGetAsyncWithHttpInfo($levelNum, $startDate, $endDate, $offeringType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2377,19 +2377,19 @@ class AcademicsApi
      *
      * Academics master schedule
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
-     * @param  int $offering_type Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
+     * @param  int $offeringType Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesMasterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesMasterGetAsyncWithHttpInfo($level_num, $start_date, $end_date, $offering_type = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
+    public function v1AcademicsSchedulesMasterGetAsyncWithHttpInfo($levelNum, $startDate, $endDate, $offeringType = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
     {
         $returnType = '\SKY\School\Model\MasterScheduleDayCollection';
-        $request = $this->v1AcademicsSchedulesMasterGetRequest($level_num, $start_date, $end_date, $offering_type, $contentType);
+        $request = $this->v1AcademicsSchedulesMasterGetRequest($levelNum, $startDate, $endDate, $offeringType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2430,36 +2430,36 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSchedulesMasterGet'
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
-     * @param  int $offering_type Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). Start of the date range (inclusive).  The earliest possible start_date is 1/1/1900, any date entered before that date will be overwritten with 1/1/1900. (required)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). End of the date range (inclusive). If the end_date is earlier than the start_date the end_date wil be overwritten with the start_date plus 7 days. (required)
+     * @param  int $offeringType Format - int32. Filters the results by a specific group type. Defaults to \&quot;All\&quot; offering types. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesMasterGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSchedulesMasterGetRequest($level_num, $start_date, $end_date, $offering_type = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
+    public function v1AcademicsSchedulesMasterGetRequest($levelNum, $startDate, $endDate, $offeringType = null, string $contentType = self::contentTypes['v1AcademicsSchedulesMasterGet'][0])
     {
 
-        // verify the required parameter 'level_num' is set
-        if ($level_num === null || (is_array($level_num) && count($level_num) === 0)) {
+        // verify the required parameter 'levelNum' is set
+        if ($levelNum === null || (is_array($levelNum) && count($levelNum) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $level_num when calling v1AcademicsSchedulesMasterGet'
+                'Missing the required parameter $levelNum when calling v1AcademicsSchedulesMasterGet'
             );
         }
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1AcademicsSchedulesMasterGet'
+                'Missing the required parameter $startDate when calling v1AcademicsSchedulesMasterGet'
             );
         }
 
-        // verify the required parameter 'end_date' is set
-        if ($end_date === null || (is_array($end_date) && count($end_date) === 0)) {
+        // verify the required parameter 'endDate' is set
+        if ($endDate === null || (is_array($endDate) && count($endDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $end_date when calling v1AcademicsSchedulesMasterGet'
+                'Missing the required parameter $endDate when calling v1AcademicsSchedulesMasterGet'
             );
         }
 
@@ -2474,7 +2474,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_num,
+            $levelNum,
             'level_num', // param base name
             'integer', // openApiType
             'form', // style
@@ -2483,7 +2483,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2492,7 +2492,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -2501,7 +2501,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $offering_type,
+            $offeringType,
             'offering_type', // param base name
             'integer', // openApiType
             'form', // style
@@ -2580,16 +2580,16 @@ class AcademicsApi
      *
      * Academics schedule set
      *
-     * @param  int $schedule_set_id Format - int32. ID of the Schedule Set you seek. (required)
+     * @param  int $scheduleSetId Format - int32. ID of the Schedule Set you seek. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\ScheduleSetDetails
      */
-    public function v1AcademicsSchedulesSetsByScheduleSetIdGet($schedule_set_id, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
+    public function v1AcademicsSchedulesSetsByScheduleSetIdGet($scheduleSetId, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
     {
-        [$response] = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetWithHttpInfo($schedule_set_id, $contentType);
+        [$response] = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetWithHttpInfo($scheduleSetId, $contentType);
         return $response;
     }
 
@@ -2598,16 +2598,16 @@ class AcademicsApi
      *
      * Academics schedule set
      *
-     * @param  int $schedule_set_id Format - int32. ID of the Schedule Set you seek. (required)
+     * @param  int $scheduleSetId Format - int32. ID of the Schedule Set you seek. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\ScheduleSetDetails, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSchedulesSetsByScheduleSetIdGetWithHttpInfo($schedule_set_id, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
+    public function v1AcademicsSchedulesSetsByScheduleSetIdGetWithHttpInfo($scheduleSetId, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
     {
-        $request = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($schedule_set_id, $contentType);
+        $request = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($scheduleSetId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2722,15 +2722,15 @@ class AcademicsApi
      *
      * Academics schedule set
      *
-     * @param  int $schedule_set_id Format - int32. ID of the Schedule Set you seek. (required)
+     * @param  int $scheduleSetId Format - int32. ID of the Schedule Set you seek. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesSetsByScheduleSetIdGetAsync($schedule_set_id, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
+    public function v1AcademicsSchedulesSetsByScheduleSetIdGetAsync($scheduleSetId, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
     {
-        return $this->v1AcademicsSchedulesSetsByScheduleSetIdGetAsyncWithHttpInfo($schedule_set_id, $contentType)
+        return $this->v1AcademicsSchedulesSetsByScheduleSetIdGetAsyncWithHttpInfo($scheduleSetId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2743,16 +2743,16 @@ class AcademicsApi
      *
      * Academics schedule set
      *
-     * @param  int $schedule_set_id Format - int32. ID of the Schedule Set you seek. (required)
+     * @param  int $scheduleSetId Format - int32. ID of the Schedule Set you seek. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesSetsByScheduleSetIdGetAsyncWithHttpInfo($schedule_set_id, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
+    public function v1AcademicsSchedulesSetsByScheduleSetIdGetAsyncWithHttpInfo($scheduleSetId, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
     {
         $returnType = '\SKY\School\Model\ScheduleSetDetails';
-        $request = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($schedule_set_id, $contentType);
+        $request = $this->v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($scheduleSetId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2793,19 +2793,19 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSchedulesSetsByScheduleSetIdGet'
      *
-     * @param  int $schedule_set_id Format - int32. ID of the Schedule Set you seek. (required)
+     * @param  int $scheduleSetId Format - int32. ID of the Schedule Set you seek. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($schedule_set_id, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
+    public function v1AcademicsSchedulesSetsByScheduleSetIdGetRequest($scheduleSetId, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsByScheduleSetIdGet'][0])
     {
 
-        // verify the required parameter 'schedule_set_id' is set
-        if ($schedule_set_id === null || (is_array($schedule_set_id) && count($schedule_set_id) === 0)) {
+        // verify the required parameter 'scheduleSetId' is set
+        if ($scheduleSetId === null || (is_array($scheduleSetId) && count($scheduleSetId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_set_id when calling v1AcademicsSchedulesSetsByScheduleSetIdGet'
+                'Missing the required parameter $scheduleSetId when calling v1AcademicsSchedulesSetsByScheduleSetIdGet'
             );
         }
 
@@ -2820,10 +2820,10 @@ class AcademicsApi
 
 
         // path params
-        if ($schedule_set_id !== null) {
+        if ($scheduleSetId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_set_id' . '}',
-                ObjectSerializer::toPathValue($schedule_set_id),
+                ObjectSerializer::toPathValue($scheduleSetId),
                 $resourcePath
             );
         }
@@ -2897,18 +2897,18 @@ class AcademicsApi
      *
      * Academics schedule sets by level
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  string $school_year The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
-     * @param  int $group_type Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  string $schoolYear The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $groupType Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\ScheduleSetCollection
      */
-    public function v1AcademicsSchedulesSetsGet($level_num, $school_year = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
+    public function v1AcademicsSchedulesSetsGet($levelNum, $schoolYear = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
     {
-        [$response] = $this->v1AcademicsSchedulesSetsGetWithHttpInfo($level_num, $school_year, $group_type, $contentType);
+        [$response] = $this->v1AcademicsSchedulesSetsGetWithHttpInfo($levelNum, $schoolYear, $groupType, $contentType);
         return $response;
     }
 
@@ -2917,18 +2917,18 @@ class AcademicsApi
      *
      * Academics schedule sets by level
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  string $school_year The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
-     * @param  int $group_type Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  string $schoolYear The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $groupType Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\ScheduleSetCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSchedulesSetsGetWithHttpInfo($level_num, $school_year = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
+    public function v1AcademicsSchedulesSetsGetWithHttpInfo($levelNum, $schoolYear = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
     {
-        $request = $this->v1AcademicsSchedulesSetsGetRequest($level_num, $school_year, $group_type, $contentType);
+        $request = $this->v1AcademicsSchedulesSetsGetRequest($levelNum, $schoolYear, $groupType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3043,17 +3043,17 @@ class AcademicsApi
      *
      * Academics schedule sets by level
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  string $school_year The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
-     * @param  int $group_type Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  string $schoolYear The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $groupType Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesSetsGetAsync($level_num, $school_year = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
+    public function v1AcademicsSchedulesSetsGetAsync($levelNum, $schoolYear = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
     {
-        return $this->v1AcademicsSchedulesSetsGetAsyncWithHttpInfo($level_num, $school_year, $group_type, $contentType)
+        return $this->v1AcademicsSchedulesSetsGetAsyncWithHttpInfo($levelNum, $schoolYear, $groupType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3066,18 +3066,18 @@ class AcademicsApi
      *
      * Academics schedule sets by level
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  string $school_year The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
-     * @param  int $group_type Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  string $schoolYear The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $groupType Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSchedulesSetsGetAsyncWithHttpInfo($level_num, $school_year = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
+    public function v1AcademicsSchedulesSetsGetAsyncWithHttpInfo($levelNum, $schoolYear = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
     {
         $returnType = '\SKY\School\Model\ScheduleSetCollection';
-        $request = $this->v1AcademicsSchedulesSetsGetRequest($level_num, $school_year, $group_type, $contentType);
+        $request = $this->v1AcademicsSchedulesSetsGetRequest($levelNum, $schoolYear, $groupType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3118,21 +3118,21 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSchedulesSetsGet'
      *
-     * @param  int $level_num Format - int32. Level Number indicates which school you are working with. (required)
-     * @param  string $school_year The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
-     * @param  int $group_type Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $levelNum Format - int32. Level Number indicates which school you are working with. (required)
+     * @param  string $schoolYear The school year to get Schedule Sets for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $groupType Format - int32. The Group Type to filter the collection of Schedule Sets. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSchedulesSetsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSchedulesSetsGetRequest($level_num, $school_year = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
+    public function v1AcademicsSchedulesSetsGetRequest($levelNum, $schoolYear = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSchedulesSetsGet'][0])
     {
 
-        // verify the required parameter 'level_num' is set
-        if ($level_num === null || (is_array($level_num) && count($level_num) === 0)) {
+        // verify the required parameter 'levelNum' is set
+        if ($levelNum === null || (is_array($levelNum) && count($levelNum) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $level_num when calling v1AcademicsSchedulesSetsGet'
+                'Missing the required parameter $levelNum when calling v1AcademicsSchedulesSetsGet'
             );
         }
 
@@ -3148,7 +3148,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_num,
+            $levelNum,
             'level_num', // param base name
             'integer', // openApiType
             'form', // style
@@ -3157,7 +3157,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -3166,7 +3166,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $group_type,
+            $groupType,
             'group_type', // param base name
             'integer', // openApiType
             'form', // style
@@ -3245,10 +3245,10 @@ class AcademicsApi
      *
      * Academics assignments by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
      * @param  string $types Returns results that match a comma separated list of assignment type IDs. (optional)
      * @param  string $status The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. (optional)
-     * @param  int $persona_id Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
+     * @param  int $personaId Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
      * @param  string $filter Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. (optional)
      * @param  string $search Returns results with Descriptions or Titles that match search string. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'] to see the possible values for this operation
@@ -3257,9 +3257,9 @@ class AcademicsApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AssignmentCollection
      */
-    public function v1AcademicsSectionsBySectionIdAssignmentsGet($section_id, $types = null, $status = null, $persona_id = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdAssignmentsGet($sectionId, $types = null, $status = null, $personaId = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
     {
-        [$response] = $this->v1AcademicsSectionsBySectionIdAssignmentsGetWithHttpInfo($section_id, $types, $status, $persona_id, $filter, $search, $contentType);
+        [$response] = $this->v1AcademicsSectionsBySectionIdAssignmentsGetWithHttpInfo($sectionId, $types, $status, $personaId, $filter, $search, $contentType);
         return $response;
     }
 
@@ -3268,10 +3268,10 @@ class AcademicsApi
      *
      * Academics assignments by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
      * @param  string $types Returns results that match a comma separated list of assignment type IDs. (optional)
      * @param  string $status The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. (optional)
-     * @param  int $persona_id Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
+     * @param  int $personaId Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
      * @param  string $filter Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. (optional)
      * @param  string $search Returns results with Descriptions or Titles that match search string. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'] to see the possible values for this operation
@@ -3280,9 +3280,9 @@ class AcademicsApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AssignmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSectionsBySectionIdAssignmentsGetWithHttpInfo($section_id, $types = null, $status = null, $persona_id = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdAssignmentsGetWithHttpInfo($sectionId, $types = null, $status = null, $personaId = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
     {
-        $request = $this->v1AcademicsSectionsBySectionIdAssignmentsGetRequest($section_id, $types, $status, $persona_id, $filter, $search, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdAssignmentsGetRequest($sectionId, $types, $status, $personaId, $filter, $search, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3397,10 +3397,10 @@ class AcademicsApi
      *
      * Academics assignments by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
      * @param  string $types Returns results that match a comma separated list of assignment type IDs. (optional)
      * @param  string $status The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. (optional)
-     * @param  int $persona_id Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
+     * @param  int $personaId Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
      * @param  string $filter Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. (optional)
      * @param  string $search Returns results with Descriptions or Titles that match search string. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'] to see the possible values for this operation
@@ -3408,9 +3408,9 @@ class AcademicsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdAssignmentsGetAsync($section_id, $types = null, $status = null, $persona_id = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdAssignmentsGetAsync($sectionId, $types = null, $status = null, $personaId = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
     {
-        return $this->v1AcademicsSectionsBySectionIdAssignmentsGetAsyncWithHttpInfo($section_id, $types, $status, $persona_id, $filter, $search, $contentType)
+        return $this->v1AcademicsSectionsBySectionIdAssignmentsGetAsyncWithHttpInfo($sectionId, $types, $status, $personaId, $filter, $search, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3423,10 +3423,10 @@ class AcademicsApi
      *
      * Academics assignments by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
      * @param  string $types Returns results that match a comma separated list of assignment type IDs. (optional)
      * @param  string $status The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. (optional)
-     * @param  int $persona_id Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
+     * @param  int $personaId Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
      * @param  string $filter Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. (optional)
      * @param  string $search Returns results with Descriptions or Titles that match search string. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'] to see the possible values for this operation
@@ -3434,10 +3434,10 @@ class AcademicsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdAssignmentsGetAsyncWithHttpInfo($section_id, $types = null, $status = null, $persona_id = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdAssignmentsGetAsyncWithHttpInfo($sectionId, $types = null, $status = null, $personaId = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
     {
         $returnType = '\SKY\School\Model\AssignmentCollection';
-        $request = $this->v1AcademicsSectionsBySectionIdAssignmentsGetRequest($section_id, $types, $status, $persona_id, $filter, $search, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdAssignmentsGetRequest($sectionId, $types, $status, $personaId, $filter, $search, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3478,10 +3478,10 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSectionsBySectionIdAssignmentsGet'
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
      * @param  string $types Returns results that match a comma separated list of assignment type IDs. (optional)
      * @param  string $status The status of the assignment. The status corresponds with static system options. Allowed values: \&quot;0\&quot; for In Progress, \&quot;1\&quot; for Completed, \&quot;2\&quot; for Overdue, and \&quot;-1\&quot; for To Do. (optional)
-     * @param  int $persona_id Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
+     * @param  int $personaId Format - int32. The ID of the persona to get assignments. 3 &#x3D; Faculty, 2 &#x3D; Student. Defaults to 3. (optional)
      * @param  string $filter Return assignments based on the entered string: &#x60;&#x60;&#x60;expired&#x60;&#x60;&#x60;, &#x60;&#x60;&#x60;future&#x60;&#x60;&#x60;, or &#x60;&#x60;&#x60;all&#x60;&#x60;&#x60;. All is the default sort value. (optional)
      * @param  string $search Returns results with Descriptions or Titles that match search string. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'] to see the possible values for this operation
@@ -3489,13 +3489,13 @@ class AcademicsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSectionsBySectionIdAssignmentsGetRequest($section_id, $types = null, $status = null, $persona_id = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdAssignmentsGetRequest($sectionId, $types = null, $status = null, $personaId = null, $filter = null, $search = null, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdAssignmentsGet'][0])
     {
 
-        // verify the required parameter 'section_id' is set
-        if ($section_id === null || (is_array($section_id) && count($section_id) === 0)) {
+        // verify the required parameter 'sectionId' is set
+        if ($sectionId === null || (is_array($sectionId) && count($sectionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $section_id when calling v1AcademicsSectionsBySectionIdAssignmentsGet'
+                'Missing the required parameter $sectionId when calling v1AcademicsSectionsBySectionIdAssignmentsGet'
             );
         }
 
@@ -3532,7 +3532,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $persona_id,
+            $personaId,
             'persona_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -3560,10 +3560,10 @@ class AcademicsApi
 
 
         // path params
-        if ($section_id !== null) {
+        if ($sectionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'section_id' . '}',
-                ObjectSerializer::toPathValue($section_id),
+                ObjectSerializer::toPathValue($sectionId),
                 $resourcePath
             );
         }
@@ -3637,18 +3637,18 @@ class AcademicsApi
      *
      * Academics cycles by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
-     * @param  int $duration_id Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
-     * @param  int $group_type Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
+     * @param  int $durationId Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
+     * @param  int $groupType Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\SectionCycles
      */
-    public function v1AcademicsSectionsBySectionIdCyclesGet($section_id, $duration_id = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
+    public function v1AcademicsSectionsBySectionIdCyclesGet($sectionId, $durationId = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
     {
-        [$response] = $this->v1AcademicsSectionsBySectionIdCyclesGetWithHttpInfo($section_id, $duration_id, $group_type, $contentType);
+        [$response] = $this->v1AcademicsSectionsBySectionIdCyclesGetWithHttpInfo($sectionId, $durationId, $groupType, $contentType);
         return $response;
     }
 
@@ -3657,18 +3657,18 @@ class AcademicsApi
      *
      * Academics cycles by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
-     * @param  int $duration_id Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
-     * @param  int $group_type Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
+     * @param  int $durationId Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
+     * @param  int $groupType Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\SectionCycles, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSectionsBySectionIdCyclesGetWithHttpInfo($section_id, $duration_id = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
+    public function v1AcademicsSectionsBySectionIdCyclesGetWithHttpInfo($sectionId, $durationId = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
     {
-        $request = $this->v1AcademicsSectionsBySectionIdCyclesGetRequest($section_id, $duration_id, $group_type, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdCyclesGetRequest($sectionId, $durationId, $groupType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3783,17 +3783,17 @@ class AcademicsApi
      *
      * Academics cycles by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
-     * @param  int $duration_id Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
-     * @param  int $group_type Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
+     * @param  int $durationId Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
+     * @param  int $groupType Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdCyclesGetAsync($section_id, $duration_id = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
+    public function v1AcademicsSectionsBySectionIdCyclesGetAsync($sectionId, $durationId = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
     {
-        return $this->v1AcademicsSectionsBySectionIdCyclesGetAsyncWithHttpInfo($section_id, $duration_id, $group_type, $contentType)
+        return $this->v1AcademicsSectionsBySectionIdCyclesGetAsyncWithHttpInfo($sectionId, $durationId, $groupType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3806,18 +3806,18 @@ class AcademicsApi
      *
      * Academics cycles by section
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
-     * @param  int $duration_id Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
-     * @param  int $group_type Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
+     * @param  int $durationId Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
+     * @param  int $groupType Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdCyclesGetAsyncWithHttpInfo($section_id, $duration_id = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
+    public function v1AcademicsSectionsBySectionIdCyclesGetAsyncWithHttpInfo($sectionId, $durationId = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
     {
         $returnType = '\SKY\School\Model\SectionCycles';
-        $request = $this->v1AcademicsSectionsBySectionIdCyclesGetRequest($section_id, $duration_id, $group_type, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdCyclesGetRequest($sectionId, $durationId, $groupType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3858,21 +3858,21 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSectionsBySectionIdCyclesGet'
      *
-     * @param  int $section_id Format - int32. The ID of the section. (required)
-     * @param  int $duration_id Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
-     * @param  int $group_type Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
+     * @param  int $sectionId Format - int32. The ID of the section. (required)
+     * @param  int $durationId Format - int32. The ID of the term for which you want to return cycles. Defaults to the current term for the section provided. (optional)
+     * @param  int $groupType Format - int32. The Group Type for the section specified. Defaults to the &#39;Academics&#39; (1). (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSectionsBySectionIdCyclesGetRequest($section_id, $duration_id = null, $group_type = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
+    public function v1AcademicsSectionsBySectionIdCyclesGetRequest($sectionId, $durationId = null, $groupType = 1, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdCyclesGet'][0])
     {
 
-        // verify the required parameter 'section_id' is set
-        if ($section_id === null || (is_array($section_id) && count($section_id) === 0)) {
+        // verify the required parameter 'sectionId' is set
+        if ($sectionId === null || (is_array($sectionId) && count($sectionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $section_id when calling v1AcademicsSectionsBySectionIdCyclesGet'
+                'Missing the required parameter $sectionId when calling v1AcademicsSectionsBySectionIdCyclesGet'
             );
         }
 
@@ -3888,7 +3888,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $duration_id,
+            $durationId,
             'duration_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -3897,7 +3897,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $group_type,
+            $groupType,
             'group_type', // param base name
             'integer', // openApiType
             'form', // style
@@ -3907,10 +3907,10 @@ class AcademicsApi
 
 
         // path params
-        if ($section_id !== null) {
+        if ($sectionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'section_id' . '}',
-                ObjectSerializer::toPathValue($section_id),
+                ObjectSerializer::toPathValue($sectionId),
                 $resourcePath
             );
         }
@@ -3984,16 +3984,16 @@ class AcademicsApi
      *
      * Academics students by section
      *
-     * @param  int $section_id Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
+     * @param  int $sectionId Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\StudentCollection
      */
-    public function v1AcademicsSectionsBySectionIdStudentsGet($section_id, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdStudentsGet($sectionId, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
     {
-        [$response] = $this->v1AcademicsSectionsBySectionIdStudentsGetWithHttpInfo($section_id, $contentType);
+        [$response] = $this->v1AcademicsSectionsBySectionIdStudentsGetWithHttpInfo($sectionId, $contentType);
         return $response;
     }
 
@@ -4002,16 +4002,16 @@ class AcademicsApi
      *
      * Academics students by section
      *
-     * @param  int $section_id Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
+     * @param  int $sectionId Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\StudentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSectionsBySectionIdStudentsGetWithHttpInfo($section_id, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdStudentsGetWithHttpInfo($sectionId, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
     {
-        $request = $this->v1AcademicsSectionsBySectionIdStudentsGetRequest($section_id, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdStudentsGetRequest($sectionId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4126,15 +4126,15 @@ class AcademicsApi
      *
      * Academics students by section
      *
-     * @param  int $section_id Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
+     * @param  int $sectionId Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdStudentsGetAsync($section_id, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdStudentsGetAsync($sectionId, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
     {
-        return $this->v1AcademicsSectionsBySectionIdStudentsGetAsyncWithHttpInfo($section_id, $contentType)
+        return $this->v1AcademicsSectionsBySectionIdStudentsGetAsyncWithHttpInfo($sectionId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4147,16 +4147,16 @@ class AcademicsApi
      *
      * Academics students by section
      *
-     * @param  int $section_id Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
+     * @param  int $sectionId Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsBySectionIdStudentsGetAsyncWithHttpInfo($section_id, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdStudentsGetAsyncWithHttpInfo($sectionId, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
     {
         $returnType = '\SKY\School\Model\StudentCollection';
-        $request = $this->v1AcademicsSectionsBySectionIdStudentsGetRequest($section_id, $contentType);
+        $request = $this->v1AcademicsSectionsBySectionIdStudentsGetRequest($sectionId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4197,19 +4197,19 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSectionsBySectionIdStudentsGet'
      *
-     * @param  int $section_id Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
+     * @param  int $sectionId Format - int32. The ID of the section, which can be found using &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AcademicsSectionsGet\&quot;&gt;Section list&lt;/a&gt;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSectionsBySectionIdStudentsGetRequest($section_id, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
+    public function v1AcademicsSectionsBySectionIdStudentsGetRequest($sectionId, string $contentType = self::contentTypes['v1AcademicsSectionsBySectionIdStudentsGet'][0])
     {
 
-        // verify the required parameter 'section_id' is set
-        if ($section_id === null || (is_array($section_id) && count($section_id) === 0)) {
+        // verify the required parameter 'sectionId' is set
+        if ($sectionId === null || (is_array($sectionId) && count($sectionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $section_id when calling v1AcademicsSectionsBySectionIdStudentsGet'
+                'Missing the required parameter $sectionId when calling v1AcademicsSectionsBySectionIdStudentsGet'
             );
         }
 
@@ -4224,10 +4224,10 @@ class AcademicsApi
 
 
         // path params
-        if ($section_id !== null) {
+        if ($sectionId !== null) {
             $resourcePath = str_replace(
                 '{' . 'section_id' . '}',
-                ObjectSerializer::toPathValue($section_id),
+                ObjectSerializer::toPathValue($sectionId),
                 $resourcePath
             );
         }
@@ -4301,17 +4301,17 @@ class AcademicsApi
      *
      * Academics sections by school level
      *
-     * @param  int $level_num Format - int32. Level number. (required)
-     * @param  string $school_year The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number. (required)
+     * @param  string $schoolYear The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AcademicsSectionCollection
      */
-    public function v1AcademicsSectionsGet($level_num, $school_year = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
+    public function v1AcademicsSectionsGet($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
     {
-        [$response] = $this->v1AcademicsSectionsGetWithHttpInfo($level_num, $school_year, $contentType);
+        [$response] = $this->v1AcademicsSectionsGetWithHttpInfo($levelNum, $schoolYear, $contentType);
         return $response;
     }
 
@@ -4320,17 +4320,17 @@ class AcademicsApi
      *
      * Academics sections by school level
      *
-     * @param  int $level_num Format - int32. Level number. (required)
-     * @param  string $school_year The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number. (required)
+     * @param  string $schoolYear The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AcademicsSectionCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSectionsGetWithHttpInfo($level_num, $school_year = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
+    public function v1AcademicsSectionsGetWithHttpInfo($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
     {
-        $request = $this->v1AcademicsSectionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1AcademicsSectionsGetRequest($levelNum, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4445,16 +4445,16 @@ class AcademicsApi
      *
      * Academics sections by school level
      *
-     * @param  int $level_num Format - int32. Level number. (required)
-     * @param  string $school_year The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number. (required)
+     * @param  string $schoolYear The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsGetAsync($level_num, $school_year = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
+    public function v1AcademicsSectionsGetAsync($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
     {
-        return $this->v1AcademicsSectionsGetAsyncWithHttpInfo($level_num, $school_year, $contentType)
+        return $this->v1AcademicsSectionsGetAsyncWithHttpInfo($levelNum, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4467,17 +4467,17 @@ class AcademicsApi
      *
      * Academics sections by school level
      *
-     * @param  int $level_num Format - int32. Level number. (required)
-     * @param  string $school_year The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number. (required)
+     * @param  string $schoolYear The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsGetAsyncWithHttpInfo($level_num, $school_year = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
+    public function v1AcademicsSectionsGetAsyncWithHttpInfo($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
     {
         $returnType = '\SKY\School\Model\AcademicsSectionCollection';
-        $request = $this->v1AcademicsSectionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1AcademicsSectionsGetRequest($levelNum, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4518,20 +4518,20 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSectionsGet'
      *
-     * @param  int $level_num Format - int32. Level number. (required)
-     * @param  string $school_year The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
+     * @param  int $levelNum Format - int32. Level number. (required)
+     * @param  string $schoolYear The school year to get sections for. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. Defaults to the current school year. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSectionsGetRequest($level_num, $school_year = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
+    public function v1AcademicsSectionsGetRequest($levelNum, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsSectionsGet'][0])
     {
 
-        // verify the required parameter 'level_num' is set
-        if ($level_num === null || (is_array($level_num) && count($level_num) === 0)) {
+        // verify the required parameter 'levelNum' is set
+        if ($levelNum === null || (is_array($levelNum) && count($levelNum) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $level_num when calling v1AcademicsSectionsGet'
+                'Missing the required parameter $levelNum when calling v1AcademicsSectionsGet'
             );
         }
 
@@ -4546,7 +4546,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_num,
+            $levelNum,
             'level_num', // param base name
             'integer', // openApiType
             'form', // style
@@ -4555,7 +4555,7 @@ class AcademicsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -4634,16 +4634,16 @@ class AcademicsApi
      *
      * Academics enroll students into sections
      *
-     * @param  \SKY\School\Model\BulkEnrollment $bulk_enrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
+     * @param  \SKY\School\Model\BulkEnrollment $bulkEnrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsStudentsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\PostResponse
      */
-    public function v1AcademicsSectionsStudentsPost($bulk_enrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
+    public function v1AcademicsSectionsStudentsPost($bulkEnrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
     {
-        [$response] = $this->v1AcademicsSectionsStudentsPostWithHttpInfo($bulk_enrollment, $contentType);
+        [$response] = $this->v1AcademicsSectionsStudentsPostWithHttpInfo($bulkEnrollment, $contentType);
         return $response;
     }
 
@@ -4652,16 +4652,16 @@ class AcademicsApi
      *
      * Academics enroll students into sections
      *
-     * @param  \SKY\School\Model\BulkEnrollment $bulk_enrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
+     * @param  \SKY\School\Model\BulkEnrollment $bulkEnrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsStudentsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\PostResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSectionsStudentsPostWithHttpInfo($bulk_enrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
+    public function v1AcademicsSectionsStudentsPostWithHttpInfo($bulkEnrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
     {
-        $request = $this->v1AcademicsSectionsStudentsPostRequest($bulk_enrollment, $contentType);
+        $request = $this->v1AcademicsSectionsStudentsPostRequest($bulkEnrollment, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4776,15 +4776,15 @@ class AcademicsApi
      *
      * Academics enroll students into sections
      *
-     * @param  \SKY\School\Model\BulkEnrollment $bulk_enrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
+     * @param  \SKY\School\Model\BulkEnrollment $bulkEnrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsStudentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsStudentsPostAsync($bulk_enrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
+    public function v1AcademicsSectionsStudentsPostAsync($bulkEnrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
     {
-        return $this->v1AcademicsSectionsStudentsPostAsyncWithHttpInfo($bulk_enrollment, $contentType)
+        return $this->v1AcademicsSectionsStudentsPostAsyncWithHttpInfo($bulkEnrollment, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4797,16 +4797,16 @@ class AcademicsApi
      *
      * Academics enroll students into sections
      *
-     * @param  \SKY\School\Model\BulkEnrollment $bulk_enrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
+     * @param  \SKY\School\Model\BulkEnrollment $bulkEnrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsStudentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSectionsStudentsPostAsyncWithHttpInfo($bulk_enrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
+    public function v1AcademicsSectionsStudentsPostAsyncWithHttpInfo($bulkEnrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
     {
         $returnType = '\SKY\School\Model\PostResponse';
-        $request = $this->v1AcademicsSectionsStudentsPostRequest($bulk_enrollment, $contentType);
+        $request = $this->v1AcademicsSectionsStudentsPostRequest($bulkEnrollment, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4847,13 +4847,13 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSectionsStudentsPost'
      *
-     * @param  \SKY\School\Model\BulkEnrollment $bulk_enrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
+     * @param  \SKY\School\Model\BulkEnrollment $bulkEnrollment Defines which users (students and/or teachers) should be added to which offerings (via &#x60;&#x60;&#x60;section_id&#x60;&#x60;&#x60; and duration &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60;) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSectionsStudentsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSectionsStudentsPostRequest($bulk_enrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
+    public function v1AcademicsSectionsStudentsPostRequest($bulkEnrollment = null, string $contentType = self::contentTypes['v1AcademicsSectionsStudentsPost'][0])
     {
 
 
@@ -4876,12 +4876,12 @@ class AcademicsApi
         );
 
         // for model (json/xml)
-        if (isset($bulk_enrollment)) {
+        if (isset($bulkEnrollment)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($bulk_enrollment));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($bulkEnrollment));
             } else {
-                $httpBody = $bulk_enrollment;
+                $httpBody = $bulkEnrollment;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4944,16 +4944,16 @@ class AcademicsApi
      *
      * Academics special days
      *
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSpecialdaysGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\SpecialDayCollection
      */
-    public function v1AcademicsSpecialdaysGet($level_id = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
+    public function v1AcademicsSpecialdaysGet($levelId = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
     {
-        [$response] = $this->v1AcademicsSpecialdaysGetWithHttpInfo($level_id, $contentType);
+        [$response] = $this->v1AcademicsSpecialdaysGetWithHttpInfo($levelId, $contentType);
         return $response;
     }
 
@@ -4962,16 +4962,16 @@ class AcademicsApi
      *
      * Academics special days
      *
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSpecialdaysGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\SpecialDayCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsSpecialdaysGetWithHttpInfo($level_id = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
+    public function v1AcademicsSpecialdaysGetWithHttpInfo($levelId = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
     {
-        $request = $this->v1AcademicsSpecialdaysGetRequest($level_id, $contentType);
+        $request = $this->v1AcademicsSpecialdaysGetRequest($levelId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5086,15 +5086,15 @@ class AcademicsApi
      *
      * Academics special days
      *
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSpecialdaysGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSpecialdaysGetAsync($level_id = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
+    public function v1AcademicsSpecialdaysGetAsync($levelId = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
     {
-        return $this->v1AcademicsSpecialdaysGetAsyncWithHttpInfo($level_id, $contentType)
+        return $this->v1AcademicsSpecialdaysGetAsyncWithHttpInfo($levelId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5107,16 +5107,16 @@ class AcademicsApi
      *
      * Academics special days
      *
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSpecialdaysGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsSpecialdaysGetAsyncWithHttpInfo($level_id = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
+    public function v1AcademicsSpecialdaysGetAsyncWithHttpInfo($levelId = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
     {
         $returnType = '\SKY\School\Model\SpecialDayCollection';
-        $request = $this->v1AcademicsSpecialdaysGetRequest($level_id, $contentType);
+        $request = $this->v1AcademicsSpecialdaysGetRequest($levelId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5157,13 +5157,13 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsSpecialdaysGet'
      *
-     * @param  int $level_id Format - int32. Identifier for a specific school level. (optional)
+     * @param  int $levelId Format - int32. Identifier for a specific school level. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsSpecialdaysGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsSpecialdaysGetRequest($level_id = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
+    public function v1AcademicsSpecialdaysGetRequest($levelId = null, string $contentType = self::contentTypes['v1AcademicsSpecialdaysGet'][0])
     {
 
 
@@ -5177,7 +5177,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_id,
+            $levelId,
             'level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -5256,16 +5256,16 @@ class AcademicsApi
      *
      * Academics sections for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view sections and grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view sections and grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AcademicsSectionStudentCollection
      */
-    public function v1AcademicsStudentByStudentIdSectionsGet($student_id, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
+    public function v1AcademicsStudentByStudentIdSectionsGet($studentId, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
     {
-        [$response] = $this->v1AcademicsStudentByStudentIdSectionsGetWithHttpInfo($student_id, $contentType);
+        [$response] = $this->v1AcademicsStudentByStudentIdSectionsGetWithHttpInfo($studentId, $contentType);
         return $response;
     }
 
@@ -5274,16 +5274,16 @@ class AcademicsApi
      *
      * Academics sections for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view sections and grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view sections and grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AcademicsSectionStudentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsStudentByStudentIdSectionsGetWithHttpInfo($student_id, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
+    public function v1AcademicsStudentByStudentIdSectionsGetWithHttpInfo($studentId, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
     {
-        $request = $this->v1AcademicsStudentByStudentIdSectionsGetRequest($student_id, $contentType);
+        $request = $this->v1AcademicsStudentByStudentIdSectionsGetRequest($studentId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5398,15 +5398,15 @@ class AcademicsApi
      *
      * Academics sections for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view sections and grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view sections and grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsStudentByStudentIdSectionsGetAsync($student_id, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
+    public function v1AcademicsStudentByStudentIdSectionsGetAsync($studentId, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
     {
-        return $this->v1AcademicsStudentByStudentIdSectionsGetAsyncWithHttpInfo($student_id, $contentType)
+        return $this->v1AcademicsStudentByStudentIdSectionsGetAsyncWithHttpInfo($studentId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5419,16 +5419,16 @@ class AcademicsApi
      *
      * Academics sections for student
      *
-     * @param  int $student_id Format - int32. The ID of the student to view sections and grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view sections and grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsStudentByStudentIdSectionsGetAsyncWithHttpInfo($student_id, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
+    public function v1AcademicsStudentByStudentIdSectionsGetAsyncWithHttpInfo($studentId, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
     {
         $returnType = '\SKY\School\Model\AcademicsSectionStudentCollection';
-        $request = $this->v1AcademicsStudentByStudentIdSectionsGetRequest($student_id, $contentType);
+        $request = $this->v1AcademicsStudentByStudentIdSectionsGetRequest($studentId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5469,19 +5469,19 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsStudentByStudentIdSectionsGet'
      *
-     * @param  int $student_id Format - int32. The ID of the student to view sections and grades for. (required)
+     * @param  int $studentId Format - int32. The ID of the student to view sections and grades for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsStudentByStudentIdSectionsGetRequest($student_id, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
+    public function v1AcademicsStudentByStudentIdSectionsGetRequest($studentId, string $contentType = self::contentTypes['v1AcademicsStudentByStudentIdSectionsGet'][0])
     {
 
-        // verify the required parameter 'student_id' is set
-        if ($student_id === null || (is_array($student_id) && count($student_id) === 0)) {
+        // verify the required parameter 'studentId' is set
+        if ($studentId === null || (is_array($studentId) && count($studentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $student_id when calling v1AcademicsStudentByStudentIdSectionsGet'
+                'Missing the required parameter $studentId when calling v1AcademicsStudentByStudentIdSectionsGet'
             );
         }
 
@@ -5496,10 +5496,10 @@ class AcademicsApi
 
 
         // path params
-        if ($student_id !== null) {
+        if ($studentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'student_id' . '}',
-                ObjectSerializer::toPathValue($student_id),
+                ObjectSerializer::toPathValue($studentId),
                 $resourcePath
             );
         }
@@ -5573,17 +5573,17 @@ class AcademicsApi
      *
      * Academics sections by teacher
      *
-     * @param  int $teacher_id Format - int32. The ID of the teacher to get sections for. (required)
-     * @param  string $school_year The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
+     * @param  int $teacherId Format - int32. The ID of the teacher to get sections for. (required)
+     * @param  string $schoolYear The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AcademicsSectionCollection
      */
-    public function v1AcademicsTeachersByTeacherIdSectionsGet($teacher_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
+    public function v1AcademicsTeachersByTeacherIdSectionsGet($teacherId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
     {
-        [$response] = $this->v1AcademicsTeachersByTeacherIdSectionsGetWithHttpInfo($teacher_id, $school_year, $contentType);
+        [$response] = $this->v1AcademicsTeachersByTeacherIdSectionsGetWithHttpInfo($teacherId, $schoolYear, $contentType);
         return $response;
     }
 
@@ -5592,17 +5592,17 @@ class AcademicsApi
      *
      * Academics sections by teacher
      *
-     * @param  int $teacher_id Format - int32. The ID of the teacher to get sections for. (required)
-     * @param  string $school_year The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
+     * @param  int $teacherId Format - int32. The ID of the teacher to get sections for. (required)
+     * @param  string $schoolYear The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AcademicsSectionCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AcademicsTeachersByTeacherIdSectionsGetWithHttpInfo($teacher_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
+    public function v1AcademicsTeachersByTeacherIdSectionsGetWithHttpInfo($teacherId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
     {
-        $request = $this->v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacher_id, $school_year, $contentType);
+        $request = $this->v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacherId, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5717,16 +5717,16 @@ class AcademicsApi
      *
      * Academics sections by teacher
      *
-     * @param  int $teacher_id Format - int32. The ID of the teacher to get sections for. (required)
-     * @param  string $school_year The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
+     * @param  int $teacherId Format - int32. The ID of the teacher to get sections for. (required)
+     * @param  string $schoolYear The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsTeachersByTeacherIdSectionsGetAsync($teacher_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
+    public function v1AcademicsTeachersByTeacherIdSectionsGetAsync($teacherId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
     {
-        return $this->v1AcademicsTeachersByTeacherIdSectionsGetAsyncWithHttpInfo($teacher_id, $school_year, $contentType)
+        return $this->v1AcademicsTeachersByTeacherIdSectionsGetAsyncWithHttpInfo($teacherId, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5739,17 +5739,17 @@ class AcademicsApi
      *
      * Academics sections by teacher
      *
-     * @param  int $teacher_id Format - int32. The ID of the teacher to get sections for. (required)
-     * @param  string $school_year The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
+     * @param  int $teacherId Format - int32. The ID of the teacher to get sections for. (required)
+     * @param  string $schoolYear The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AcademicsTeachersByTeacherIdSectionsGetAsyncWithHttpInfo($teacher_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
+    public function v1AcademicsTeachersByTeacherIdSectionsGetAsyncWithHttpInfo($teacherId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
     {
         $returnType = '\SKY\School\Model\AcademicsSectionCollection';
-        $request = $this->v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacher_id, $school_year, $contentType);
+        $request = $this->v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacherId, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5790,20 +5790,20 @@ class AcademicsApi
     /**
      * Create request for operation 'v1AcademicsTeachersByTeacherIdSectionsGet'
      *
-     * @param  int $teacher_id Format - int32. The ID of the teacher to get sections for. (required)
-     * @param  string $school_year The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
+     * @param  int $teacherId Format - int32. The ID of the teacher to get sections for. (required)
+     * @param  string $schoolYear The school year. Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacher_id, $school_year = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
+    public function v1AcademicsTeachersByTeacherIdSectionsGetRequest($teacherId, $schoolYear = null, string $contentType = self::contentTypes['v1AcademicsTeachersByTeacherIdSectionsGet'][0])
     {
 
-        // verify the required parameter 'teacher_id' is set
-        if ($teacher_id === null || (is_array($teacher_id) && count($teacher_id) === 0)) {
+        // verify the required parameter 'teacherId' is set
+        if ($teacherId === null || (is_array($teacherId) && count($teacherId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $teacher_id when calling v1AcademicsTeachersByTeacherIdSectionsGet'
+                'Missing the required parameter $teacherId when calling v1AcademicsTeachersByTeacherIdSectionsGet'
             );
         }
 
@@ -5818,7 +5818,7 @@ class AcademicsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -5828,10 +5828,10 @@ class AcademicsApi
 
 
         // path params
-        if ($teacher_id !== null) {
+        if ($teacherId !== null) {
             $resourcePath = str_replace(
                 '{' . 'teacher_id' . '}',
-                ObjectSerializer::toPathValue($teacher_id),
+                ObjectSerializer::toPathValue($teacherId),
                 $resourcePath
             );
         }

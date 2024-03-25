@@ -11,7 +11,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1AttendanceGet()`
 
 ```php
-v1AttendanceGet($level_id, $day, $offering_type, $excuse_type): \SKY\School\Model\AttendanceGetCollection
+v1AttendanceGet($levelId, $day, $offeringType, $excuseType): \SKY\School\Model\AttendanceGetCollection
 ```
 
 Attendance record
@@ -42,13 +42,13 @@ $apiInstance = new SKY\School\Api\AttendanceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$level_id = 56; // int | Format - int32. The ID of the school level to retrieve attendance records.
+$levelId = 56; // int | Format - int32. The ID of the school level to retrieve attendance records.
 $day = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). The date to return attendance for.
-$offering_type = 56; // int | Format - int32. The offering type to retrieve records for.
-$excuse_type = 56; // int | Format - int32. Filters results to a specific excuse type.
+$offeringType = 56; // int | Format - int32. The offering type to retrieve records for.
+$excuseType = 56; // int | Format - int32. Filters results to a specific excuse type.
 
 try {
-    $result = $apiInstance->v1AttendanceGet($level_id, $day, $offering_type, $excuse_type);
+    $result = $apiInstance->v1AttendanceGet($levelId, $day, $offeringType, $excuseType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AttendanceApi->v1AttendanceGet: ', $e->getMessage(), PHP_EOL;
@@ -59,10 +59,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **level_id** | **int**| Format - int32. The ID of the school level to retrieve attendance records. | |
+| **levelId** | **int**| Format - int32. The ID of the school level to retrieve attendance records. | |
 | **day** | **\DateTime**| Format - date-time (as date-time in RFC3339). The date to return attendance for. | |
-| **offering_type** | **int**| Format - int32. The offering type to retrieve records for. | |
-| **excuse_type** | **int**| Format - int32. Filters results to a specific excuse type. | [optional] |
+| **offeringType** | **int**| Format - int32. The offering type to retrieve records for. | |
+| **excuseType** | **int**| Format - int32. Filters results to a specific excuse type. | [optional] |
 
 ### Return type
 
@@ -84,7 +84,7 @@ try {
 ## `v1AttendancePost()`
 
 ```php
-v1AttendancePost($attendance_create)
+v1AttendancePost($attendanceCreate)
 ```
 
 Attendance record create
@@ -115,10 +115,10 @@ $apiInstance = new SKY\School\Api\AttendanceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$attendance_create = {"student_user_id":10,"begin_date":"2021-09-30T12:00:00.0000000+00:00","end_date":"2021-09-30T12:00:00.0000000+00:00","start_time":"2024-02-13","end_time":"2024-02-13","excuse_type_id":153,"excuse_comment":"College Trip"}; // \SKY\School\Model\AttendanceCreate | Information about the attendance report
+$attendanceCreate = {"student_user_id":10,"begin_date":"2021-09-30T12:00:00.0000000+00:00","end_date":"2021-09-30T12:00:00.0000000+00:00","start_time":"2024-02-13","end_time":"2024-02-13","excuse_type_id":153,"excuse_comment":"College Trip"}; // \SKY\School\Model\AttendanceCreate | Information about the attendance report
 
 try {
-    $apiInstance->v1AttendancePost($attendance_create);
+    $apiInstance->v1AttendancePost($attendanceCreate);
 } catch (Exception $e) {
     echo 'Exception when calling AttendanceApi->v1AttendancePost: ', $e->getMessage(), PHP_EOL;
 }
@@ -128,7 +128,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **attendance_create** | [**\SKY\School\Model\AttendanceCreate**](../Model/AttendanceCreate.md)| Information about the attendance report | [optional] |
+| **attendanceCreate** | [**\SKY\School\Model\AttendanceCreate**](../Model/AttendanceCreate.md)| Information about the attendance report | [optional] |
 
 ### Return type
 

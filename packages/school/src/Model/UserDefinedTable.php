@@ -58,15 +58,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'table_id' => 'int',
-        'table_name' => 'string',
-        'use_abbreviations' => 'bool',
-        'in_use' => 'bool',
-        'base_table' => 'bool',
-        'system_table' => 'bool',
-        'require_abbreviation' => 'bool',
-        'modify_user' => 'string',
-        'vendor_id' => 'int',
+        'tableId' => 'int',
+        'tableName' => 'string',
+        'useAbbreviations' => 'bool',
+        'inUse' => 'bool',
+        'baseTable' => 'bool',
+        'systemTable' => 'bool',
+        'requireAbbreviation' => 'bool',
+        'modifyUser' => 'string',
+        'vendorId' => 'int',
         'values' => '\SKY\School\Model\UserDefinedTableValue[]',
     ];
 
@@ -78,15 +78,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'table_id' => 'int32',
-        'table_name' => null,
-        'use_abbreviations' => null,
-        'in_use' => null,
-        'base_table' => null,
-        'system_table' => null,
-        'require_abbreviation' => null,
-        'modify_user' => null,
-        'vendor_id' => 'int32',
+        'tableId' => 'int32',
+        'tableName' => null,
+        'useAbbreviations' => null,
+        'inUse' => null,
+        'baseTable' => null,
+        'systemTable' => null,
+        'requireAbbreviation' => null,
+        'modifyUser' => null,
+        'vendorId' => 'int32',
         'values' => null,
     ];
 
@@ -96,15 +96,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'table_id' => true,
-        'table_name' => true,
-        'use_abbreviations' => true,
-        'in_use' => true,
-        'base_table' => true,
-        'system_table' => true,
-        'require_abbreviation' => true,
-        'modify_user' => true,
-        'vendor_id' => true,
+        'tableId' => true,
+        'tableName' => true,
+        'useAbbreviations' => true,
+        'inUse' => true,
+        'baseTable' => true,
+        'systemTable' => true,
+        'requireAbbreviation' => true,
+        'modifyUser' => true,
+        'vendorId' => true,
         'values' => true,
     ];
 
@@ -194,15 +194,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'table_id' => 'table_id',
-        'table_name' => 'table_name',
-        'use_abbreviations' => 'use_abbreviations',
-        'in_use' => 'in_use',
-        'base_table' => 'base_table',
-        'system_table' => 'system_table',
-        'require_abbreviation' => 'require_abbreviation',
-        'modify_user' => 'modify_user',
-        'vendor_id' => 'vendor_id',
+        'tableId' => 'table_id',
+        'tableName' => 'table_name',
+        'useAbbreviations' => 'use_abbreviations',
+        'inUse' => 'in_use',
+        'baseTable' => 'base_table',
+        'systemTable' => 'system_table',
+        'requireAbbreviation' => 'require_abbreviation',
+        'modifyUser' => 'modify_user',
+        'vendorId' => 'vendor_id',
         'values' => 'values',
     ];
 
@@ -212,15 +212,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'table_id' => 'setTableId',
-        'table_name' => 'setTableName',
-        'use_abbreviations' => 'setUseAbbreviations',
-        'in_use' => 'setInUse',
-        'base_table' => 'setBaseTable',
-        'system_table' => 'setSystemTable',
-        'require_abbreviation' => 'setRequireAbbreviation',
-        'modify_user' => 'setModifyUser',
-        'vendor_id' => 'setVendorId',
+        'tableId' => 'setTableId',
+        'tableName' => 'setTableName',
+        'useAbbreviations' => 'setUseAbbreviations',
+        'inUse' => 'setInUse',
+        'baseTable' => 'setBaseTable',
+        'systemTable' => 'setSystemTable',
+        'requireAbbreviation' => 'setRequireAbbreviation',
+        'modifyUser' => 'setModifyUser',
+        'vendorId' => 'setVendorId',
         'values' => 'setValues',
     ];
 
@@ -230,15 +230,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'table_id' => 'getTableId',
-        'table_name' => 'getTableName',
-        'use_abbreviations' => 'getUseAbbreviations',
-        'in_use' => 'getInUse',
-        'base_table' => 'getBaseTable',
-        'system_table' => 'getSystemTable',
-        'require_abbreviation' => 'getRequireAbbreviation',
-        'modify_user' => 'getModifyUser',
-        'vendor_id' => 'getVendorId',
+        'tableId' => 'getTableId',
+        'tableName' => 'getTableName',
+        'useAbbreviations' => 'getUseAbbreviations',
+        'inUse' => 'getInUse',
+        'baseTable' => 'getBaseTable',
+        'systemTable' => 'getSystemTable',
+        'requireAbbreviation' => 'getRequireAbbreviation',
+        'modifyUser' => 'getModifyUser',
+        'vendorId' => 'getVendorId',
         'values' => 'getValues',
     ];
 
@@ -299,15 +299,15 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('table_id', $data ?? [], null);
-        $this->setIfExists('table_name', $data ?? [], null);
-        $this->setIfExists('use_abbreviations', $data ?? [], null);
-        $this->setIfExists('in_use', $data ?? [], null);
-        $this->setIfExists('base_table', $data ?? [], null);
-        $this->setIfExists('system_table', $data ?? [], null);
-        $this->setIfExists('require_abbreviation', $data ?? [], null);
-        $this->setIfExists('modify_user', $data ?? [], null);
-        $this->setIfExists('vendor_id', $data ?? [], null);
+        $this->setIfExists('tableId', $data ?? [], null);
+        $this->setIfExists('tableName', $data ?? [], null);
+        $this->setIfExists('useAbbreviations', $data ?? [], null);
+        $this->setIfExists('inUse', $data ?? [], null);
+        $this->setIfExists('baseTable', $data ?? [], null);
+        $this->setIfExists('systemTable', $data ?? [], null);
+        $this->setIfExists('requireAbbreviation', $data ?? [], null);
+        $this->setIfExists('modifyUser', $data ?? [], null);
+        $this->setIfExists('vendorId', $data ?? [], null);
         $this->setIfExists('values', $data ?? [], null);
     }
 
@@ -354,307 +354,307 @@ class UserDefinedTable implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets table_id
+     * Gets tableId
      *
      * @return int|null
      */
     public function getTableId()
     {
-        return $this->container['table_id'];
+        return $this->container['tableId'];
     }
 
     /**
-     * Sets table_id
+     * Sets tableId
      *
-     * @param int|null $table_id
+     * @param int|null $tableId
      *
      * @return self
      */
-    public function setTableId($table_id)
+    public function setTableId($tableId)
     {
-        if (is_null($table_id)) {
-            array_push($this->openAPINullablesSetToNull, 'table_id');
+        if (is_null($tableId)) {
+            array_push($this->openAPINullablesSetToNull, 'tableId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_id', $nullablesSetToNull);
+            $index = array_search('tableId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_id'] = $table_id;
+        $this->container['tableId'] = $tableId;
 
         return $this;
     }
 
     /**
-     * Gets table_name
+     * Gets tableName
      *
      * @return string|null
      */
     public function getTableName()
     {
-        return $this->container['table_name'];
+        return $this->container['tableName'];
     }
 
     /**
-     * Sets table_name
+     * Sets tableName
      *
-     * @param string|null $table_name
+     * @param string|null $tableName
      *
      * @return self
      */
-    public function setTableName($table_name)
+    public function setTableName($tableName)
     {
-        if (is_null($table_name)) {
-            array_push($this->openAPINullablesSetToNull, 'table_name');
+        if (is_null($tableName)) {
+            array_push($this->openAPINullablesSetToNull, 'tableName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_name', $nullablesSetToNull);
+            $index = array_search('tableName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_name'] = $table_name;
+        $this->container['tableName'] = $tableName;
 
         return $this;
     }
 
     /**
-     * Gets use_abbreviations
+     * Gets useAbbreviations
      *
      * @return bool|null
      */
     public function getUseAbbreviations()
     {
-        return $this->container['use_abbreviations'];
+        return $this->container['useAbbreviations'];
     }
 
     /**
-     * Sets use_abbreviations
+     * Sets useAbbreviations
      *
-     * @param bool|null $use_abbreviations
+     * @param bool|null $useAbbreviations
      *
      * @return self
      */
-    public function setUseAbbreviations($use_abbreviations)
+    public function setUseAbbreviations($useAbbreviations)
     {
-        if (is_null($use_abbreviations)) {
-            array_push($this->openAPINullablesSetToNull, 'use_abbreviations');
+        if (is_null($useAbbreviations)) {
+            array_push($this->openAPINullablesSetToNull, 'useAbbreviations');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('use_abbreviations', $nullablesSetToNull);
+            $index = array_search('useAbbreviations', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['use_abbreviations'] = $use_abbreviations;
+        $this->container['useAbbreviations'] = $useAbbreviations;
 
         return $this;
     }
 
     /**
-     * Gets in_use
+     * Gets inUse
      *
      * @return bool|null
      */
     public function getInUse()
     {
-        return $this->container['in_use'];
+        return $this->container['inUse'];
     }
 
     /**
-     * Sets in_use
+     * Sets inUse
      *
-     * @param bool|null $in_use
+     * @param bool|null $inUse
      *
      * @return self
      */
-    public function setInUse($in_use)
+    public function setInUse($inUse)
     {
-        if (is_null($in_use)) {
-            array_push($this->openAPINullablesSetToNull, 'in_use');
+        if (is_null($inUse)) {
+            array_push($this->openAPINullablesSetToNull, 'inUse');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('in_use', $nullablesSetToNull);
+            $index = array_search('inUse', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['in_use'] = $in_use;
+        $this->container['inUse'] = $inUse;
 
         return $this;
     }
 
     /**
-     * Gets base_table
+     * Gets baseTable
      *
      * @return bool|null
      */
     public function getBaseTable()
     {
-        return $this->container['base_table'];
+        return $this->container['baseTable'];
     }
 
     /**
-     * Sets base_table
+     * Sets baseTable
      *
-     * @param bool|null $base_table
+     * @param bool|null $baseTable
      *
      * @return self
      */
-    public function setBaseTable($base_table)
+    public function setBaseTable($baseTable)
     {
-        if (is_null($base_table)) {
-            array_push($this->openAPINullablesSetToNull, 'base_table');
+        if (is_null($baseTable)) {
+            array_push($this->openAPINullablesSetToNull, 'baseTable');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('base_table', $nullablesSetToNull);
+            $index = array_search('baseTable', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['base_table'] = $base_table;
+        $this->container['baseTable'] = $baseTable;
 
         return $this;
     }
 
     /**
-     * Gets system_table
+     * Gets systemTable
      *
      * @return bool|null
      */
     public function getSystemTable()
     {
-        return $this->container['system_table'];
+        return $this->container['systemTable'];
     }
 
     /**
-     * Sets system_table
+     * Sets systemTable
      *
-     * @param bool|null $system_table
+     * @param bool|null $systemTable
      *
      * @return self
      */
-    public function setSystemTable($system_table)
+    public function setSystemTable($systemTable)
     {
-        if (is_null($system_table)) {
-            array_push($this->openAPINullablesSetToNull, 'system_table');
+        if (is_null($systemTable)) {
+            array_push($this->openAPINullablesSetToNull, 'systemTable');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('system_table', $nullablesSetToNull);
+            $index = array_search('systemTable', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['system_table'] = $system_table;
+        $this->container['systemTable'] = $systemTable;
 
         return $this;
     }
 
     /**
-     * Gets require_abbreviation
+     * Gets requireAbbreviation
      *
      * @return bool|null
      */
     public function getRequireAbbreviation()
     {
-        return $this->container['require_abbreviation'];
+        return $this->container['requireAbbreviation'];
     }
 
     /**
-     * Sets require_abbreviation
+     * Sets requireAbbreviation
      *
-     * @param bool|null $require_abbreviation
+     * @param bool|null $requireAbbreviation
      *
      * @return self
      */
-    public function setRequireAbbreviation($require_abbreviation)
+    public function setRequireAbbreviation($requireAbbreviation)
     {
-        if (is_null($require_abbreviation)) {
-            array_push($this->openAPINullablesSetToNull, 'require_abbreviation');
+        if (is_null($requireAbbreviation)) {
+            array_push($this->openAPINullablesSetToNull, 'requireAbbreviation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('require_abbreviation', $nullablesSetToNull);
+            $index = array_search('requireAbbreviation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['require_abbreviation'] = $require_abbreviation;
+        $this->container['requireAbbreviation'] = $requireAbbreviation;
 
         return $this;
     }
 
     /**
-     * Gets modify_user
+     * Gets modifyUser
      *
      * @return string|null
      */
     public function getModifyUser()
     {
-        return $this->container['modify_user'];
+        return $this->container['modifyUser'];
     }
 
     /**
-     * Sets modify_user
+     * Sets modifyUser
      *
-     * @param string|null $modify_user
+     * @param string|null $modifyUser
      *
      * @return self
      */
-    public function setModifyUser($modify_user)
+    public function setModifyUser($modifyUser)
     {
-        if (is_null($modify_user)) {
-            array_push($this->openAPINullablesSetToNull, 'modify_user');
+        if (is_null($modifyUser)) {
+            array_push($this->openAPINullablesSetToNull, 'modifyUser');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('modify_user', $nullablesSetToNull);
+            $index = array_search('modifyUser', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['modify_user'] = $modify_user;
+        $this->container['modifyUser'] = $modifyUser;
 
         return $this;
     }
 
     /**
-     * Gets vendor_id
+     * Gets vendorId
      *
      * @return int|null
      */
     public function getVendorId()
     {
-        return $this->container['vendor_id'];
+        return $this->container['vendorId'];
     }
 
     /**
-     * Sets vendor_id
+     * Sets vendorId
      *
-     * @param int|null $vendor_id
+     * @param int|null $vendorId
      *
      * @return self
      */
-    public function setVendorId($vendor_id)
+    public function setVendorId($vendorId)
     {
-        if (is_null($vendor_id)) {
-            array_push($this->openAPINullablesSetToNull, 'vendor_id');
+        if (is_null($vendorId)) {
+            array_push($this->openAPINullablesSetToNull, 'vendorId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('vendor_id', $nullablesSetToNull);
+            $index = array_search('vendorId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['vendor_id'] = $vendor_id;
+        $this->container['vendorId'] = $vendorId;
 
         return $this;
     }

@@ -59,13 +59,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'athletic_schedule_id' => 'int',
+        'athleticScheduleId' => 'int',
         'author' => 'string',
         'headline' => 'string',
-        'brief_description' => 'string',
-        'long_description' => 'string',
-        'publish_date' => '\DateTime',
-        'expire_date' => '\DateTime',
+        'briefDescription' => 'string',
+        'longDescription' => 'string',
+        'publishDate' => '\DateTime',
+        'expireDate' => '\DateTime',
         'photos' => '\SKY\School\Model\HighlightPhoto[]',
     ];
 
@@ -78,13 +78,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'athletic_schedule_id' => 'int32',
+        'athleticScheduleId' => 'int32',
         'author' => null,
         'headline' => null,
-        'brief_description' => null,
-        'long_description' => null,
-        'publish_date' => 'date-time',
-        'expire_date' => 'date-time',
+        'briefDescription' => null,
+        'longDescription' => null,
+        'publishDate' => 'date-time',
+        'expireDate' => 'date-time',
         'photos' => null,
     ];
 
@@ -95,13 +95,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'athletic_schedule_id' => true,
+        'athleticScheduleId' => true,
         'author' => true,
         'headline' => true,
-        'brief_description' => true,
-        'long_description' => true,
-        'publish_date' => true,
-        'expire_date' => true,
+        'briefDescription' => true,
+        'longDescription' => true,
+        'publishDate' => true,
+        'expireDate' => true,
         'photos' => true,
     ];
 
@@ -192,13 +192,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'athletic_schedule_id' => 'athletic_schedule_id',
+        'athleticScheduleId' => 'athletic_schedule_id',
         'author' => 'author',
         'headline' => 'headline',
-        'brief_description' => 'brief_description',
-        'long_description' => 'long_description',
-        'publish_date' => 'publish_date',
-        'expire_date' => 'expire_date',
+        'briefDescription' => 'brief_description',
+        'longDescription' => 'long_description',
+        'publishDate' => 'publish_date',
+        'expireDate' => 'expire_date',
         'photos' => 'photos',
     ];
 
@@ -209,13 +209,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'athletic_schedule_id' => 'setAthleticScheduleId',
+        'athleticScheduleId' => 'setAthleticScheduleId',
         'author' => 'setAuthor',
         'headline' => 'setHeadline',
-        'brief_description' => 'setBriefDescription',
-        'long_description' => 'setLongDescription',
-        'publish_date' => 'setPublishDate',
-        'expire_date' => 'setExpireDate',
+        'briefDescription' => 'setBriefDescription',
+        'longDescription' => 'setLongDescription',
+        'publishDate' => 'setPublishDate',
+        'expireDate' => 'setExpireDate',
         'photos' => 'setPhotos',
     ];
 
@@ -226,13 +226,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'athletic_schedule_id' => 'getAthleticScheduleId',
+        'athleticScheduleId' => 'getAthleticScheduleId',
         'author' => 'getAuthor',
         'headline' => 'getHeadline',
-        'brief_description' => 'getBriefDescription',
-        'long_description' => 'getLongDescription',
-        'publish_date' => 'getPublishDate',
-        'expire_date' => 'getExpireDate',
+        'briefDescription' => 'getBriefDescription',
+        'longDescription' => 'getLongDescription',
+        'publishDate' => 'getPublishDate',
+        'expireDate' => 'getExpireDate',
         'photos' => 'getPhotos',
     ];
 
@@ -294,13 +294,13 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('athletic_schedule_id', $data ?? [], null);
+        $this->setIfExists('athleticScheduleId', $data ?? [], null);
         $this->setIfExists('author', $data ?? [], null);
         $this->setIfExists('headline', $data ?? [], null);
-        $this->setIfExists('brief_description', $data ?? [], null);
-        $this->setIfExists('long_description', $data ?? [], null);
-        $this->setIfExists('publish_date', $data ?? [], null);
-        $this->setIfExists('expire_date', $data ?? [], null);
+        $this->setIfExists('briefDescription', $data ?? [], null);
+        $this->setIfExists('longDescription', $data ?? [], null);
+        $this->setIfExists('publishDate', $data ?? [], null);
+        $this->setIfExists('expireDate', $data ?? [], null);
         $this->setIfExists('photos', $data ?? [], null);
     }
 
@@ -374,35 +374,35 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets athletic_schedule_id
+     * Gets athleticScheduleId
      *
      * @return int|null
      */
     public function getAthleticScheduleId()
     {
-        return $this->container['athletic_schedule_id'];
+        return $this->container['athleticScheduleId'];
     }
 
     /**
-     * Sets athletic_schedule_id
+     * Sets athleticScheduleId
      *
-     * @param int|null $athletic_schedule_id Athletic Schedule ID
+     * @param int|null $athleticScheduleId Athletic Schedule ID
      *
      * @return self
      */
-    public function setAthleticScheduleId($athletic_schedule_id)
+    public function setAthleticScheduleId($athleticScheduleId)
     {
-        if (is_null($athletic_schedule_id)) {
-            array_push($this->openAPINullablesSetToNull, 'athletic_schedule_id');
+        if (is_null($athleticScheduleId)) {
+            array_push($this->openAPINullablesSetToNull, 'athleticScheduleId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('athletic_schedule_id', $nullablesSetToNull);
+            $index = array_search('athleticScheduleId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['athletic_schedule_id'] = $athletic_schedule_id;
+        $this->container['athleticScheduleId'] = $athleticScheduleId;
 
         return $this;
     }
@@ -476,137 +476,137 @@ class Highlight implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets brief_description
+     * Gets briefDescription
      *
      * @return string|null
      */
     public function getBriefDescription()
     {
-        return $this->container['brief_description'];
+        return $this->container['briefDescription'];
     }
 
     /**
-     * Sets brief_description
+     * Sets briefDescription
      *
-     * @param string|null $brief_description Brief Description
+     * @param string|null $briefDescription Brief Description
      *
      * @return self
      */
-    public function setBriefDescription($brief_description)
+    public function setBriefDescription($briefDescription)
     {
-        if (is_null($brief_description)) {
-            array_push($this->openAPINullablesSetToNull, 'brief_description');
+        if (is_null($briefDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'briefDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('brief_description', $nullablesSetToNull);
+            $index = array_search('briefDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['brief_description'] = $brief_description;
+        $this->container['briefDescription'] = $briefDescription;
 
         return $this;
     }
 
     /**
-     * Gets long_description
+     * Gets longDescription
      *
      * @return string|null
      */
     public function getLongDescription()
     {
-        return $this->container['long_description'];
+        return $this->container['longDescription'];
     }
 
     /**
-     * Sets long_description
+     * Sets longDescription
      *
-     * @param string|null $long_description Long Description
+     * @param string|null $longDescription Long Description
      *
      * @return self
      */
-    public function setLongDescription($long_description)
+    public function setLongDescription($longDescription)
     {
-        if (is_null($long_description)) {
-            array_push($this->openAPINullablesSetToNull, 'long_description');
+        if (is_null($longDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'longDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('long_description', $nullablesSetToNull);
+            $index = array_search('longDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['long_description'] = $long_description;
+        $this->container['longDescription'] = $longDescription;
 
         return $this;
     }
 
     /**
-     * Gets publish_date
+     * Gets publishDate
      *
      * @return \DateTime|null
      */
     public function getPublishDate()
     {
-        return $this->container['publish_date'];
+        return $this->container['publishDate'];
     }
 
     /**
-     * Sets publish_date
+     * Sets publishDate
      *
-     * @param \DateTime|null $publish_date Publish Date
+     * @param \DateTime|null $publishDate Publish Date
      *
      * @return self
      */
-    public function setPublishDate($publish_date)
+    public function setPublishDate($publishDate)
     {
-        if (is_null($publish_date)) {
-            array_push($this->openAPINullablesSetToNull, 'publish_date');
+        if (is_null($publishDate)) {
+            array_push($this->openAPINullablesSetToNull, 'publishDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publish_date', $nullablesSetToNull);
+            $index = array_search('publishDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['publish_date'] = $publish_date;
+        $this->container['publishDate'] = $publishDate;
 
         return $this;
     }
 
     /**
-     * Gets expire_date
+     * Gets expireDate
      *
      * @return \DateTime|null
      */
     public function getExpireDate()
     {
-        return $this->container['expire_date'];
+        return $this->container['expireDate'];
     }
 
     /**
-     * Sets expire_date
+     * Sets expireDate
      *
-     * @param \DateTime|null $expire_date Expire Date
+     * @param \DateTime|null $expireDate Expire Date
      *
      * @return self
      */
-    public function setExpireDate($expire_date)
+    public function setExpireDate($expireDate)
     {
-        if (is_null($expire_date)) {
-            array_push($this->openAPINullablesSetToNull, 'expire_date');
+        if (is_null($expireDate)) {
+            array_push($this->openAPINullablesSetToNull, 'expireDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('expire_date', $nullablesSetToNull);
+            $index = array_search('expireDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['expire_date'] = $expire_date;
+        $this->container['expireDate'] = $expireDate;
 
         return $this;
     }

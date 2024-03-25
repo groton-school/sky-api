@@ -59,9 +59,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'immunization_type' => '\SKY\School\Model\StudentImmunizationType',
-        'is_complete' => 'bool',
-        'immunization_date' => '\DateTime',
+        'immunizationType' => '\SKY\School\Model\StudentImmunizationType',
+        'isComplete' => 'bool',
+        'immunizationDate' => '\DateTime',
     ];
 
     /**
@@ -73,9 +73,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'immunization_type' => null,
-        'is_complete' => null,
-        'immunization_date' => 'date-time',
+        'immunizationType' => null,
+        'isComplete' => null,
+        'immunizationDate' => 'date-time',
     ];
 
     /**
@@ -85,9 +85,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'immunization_type' => false,
-        'is_complete' => true,
-        'immunization_date' => true,
+        'immunizationType' => false,
+        'isComplete' => true,
+        'immunizationDate' => true,
     ];
 
     /**
@@ -177,9 +177,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'immunization_type' => 'immunization_type',
-        'is_complete' => 'is_complete',
-        'immunization_date' => 'immunization_date',
+        'immunizationType' => 'immunization_type',
+        'isComplete' => 'is_complete',
+        'immunizationDate' => 'immunization_date',
     ];
 
     /**
@@ -189,9 +189,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $setters = [
         'id' => 'setId',
-        'immunization_type' => 'setImmunizationType',
-        'is_complete' => 'setIsComplete',
-        'immunization_date' => 'setImmunizationDate',
+        'immunizationType' => 'setImmunizationType',
+        'isComplete' => 'setIsComplete',
+        'immunizationDate' => 'setImmunizationDate',
     ];
 
     /**
@@ -201,9 +201,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $getters = [
         'id' => 'getId',
-        'immunization_type' => 'getImmunizationType',
-        'is_complete' => 'getIsComplete',
-        'immunization_date' => 'getImmunizationDate',
+        'immunizationType' => 'getImmunizationType',
+        'isComplete' => 'getIsComplete',
+        'immunizationDate' => 'getImmunizationDate',
     ];
 
     /**
@@ -264,9 +264,9 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('immunization_type', $data ?? [], null);
-        $this->setIfExists('is_complete', $data ?? [], null);
-        $this->setIfExists('immunization_date', $data ?? [], null);
+        $this->setIfExists('immunizationType', $data ?? [], null);
+        $this->setIfExists('isComplete', $data ?? [], null);
+        $this->setIfExists('immunizationDate', $data ?? [], null);
     }
 
     /**
@@ -339,96 +339,96 @@ class StudentImmunizationRead implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets immunization_type
+     * Gets immunizationType
      *
      * @return \SKY\School\Model\StudentImmunizationType|null
      */
     public function getImmunizationType()
     {
-        return $this->container['immunization_type'];
+        return $this->container['immunizationType'];
     }
 
     /**
-     * Sets immunization_type
+     * Sets immunizationType
      *
-     * @param \SKY\School\Model\StudentImmunizationType|null $immunization_type immunization_type
+     * @param \SKY\School\Model\StudentImmunizationType|null $immunizationType immunizationType
      *
      * @return self
      */
-    public function setImmunizationType($immunization_type)
+    public function setImmunizationType($immunizationType)
     {
-        if (is_null($immunization_type)) {
-            throw new \InvalidArgumentException('non-nullable immunization_type cannot be null');
+        if (is_null($immunizationType)) {
+            throw new \InvalidArgumentException('non-nullable immunizationType cannot be null');
         }
-        $this->container['immunization_type'] = $immunization_type;
+        $this->container['immunizationType'] = $immunizationType;
 
         return $this;
     }
 
     /**
-     * Gets is_complete
+     * Gets isComplete
      *
      * @return bool|null
      */
     public function getIsComplete()
     {
-        return $this->container['is_complete'];
+        return $this->container['isComplete'];
     }
 
     /**
-     * Sets is_complete
+     * Sets isComplete
      *
-     * @param bool|null $is_complete Returns true if immunization exists for the student
+     * @param bool|null $isComplete Returns true if immunization exists for the student
      *
      * @return self
      */
-    public function setIsComplete($is_complete)
+    public function setIsComplete($isComplete)
     {
-        if (is_null($is_complete)) {
-            array_push($this->openAPINullablesSetToNull, 'is_complete');
+        if (is_null($isComplete)) {
+            array_push($this->openAPINullablesSetToNull, 'isComplete');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_complete', $nullablesSetToNull);
+            $index = array_search('isComplete', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_complete'] = $is_complete;
+        $this->container['isComplete'] = $isComplete;
 
         return $this;
     }
 
     /**
-     * Gets immunization_date
+     * Gets immunizationDate
      *
      * @return \DateTime|null
      */
     public function getImmunizationDate()
     {
-        return $this->container['immunization_date'];
+        return $this->container['immunizationDate'];
     }
 
     /**
-     * Sets immunization_date
+     * Sets immunizationDate
      *
-     * @param \DateTime|null $immunization_date The date of immunization. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
+     * @param \DateTime|null $immunizationDate The date of immunization. Use format ...  Uses <a href=\"https://tools.ietf.org/html/rfc3339\" target=\"_blank\">ISO-8601</a> format: ```2022-01-20T16:30:00-05:00```
      *
      * @return self
      */
-    public function setImmunizationDate($immunization_date)
+    public function setImmunizationDate($immunizationDate)
     {
-        if (is_null($immunization_date)) {
-            array_push($this->openAPINullablesSetToNull, 'immunization_date');
+        if (is_null($immunizationDate)) {
+            array_push($this->openAPINullablesSetToNull, 'immunizationDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('immunization_date', $nullablesSetToNull);
+            $index = array_search('immunizationDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['immunization_date'] = $immunization_date;
+        $this->container['immunizationDate'] = $immunizationDate;
 
         return $this;
     }

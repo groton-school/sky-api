@@ -59,7 +59,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'address_type_id' => 'int',
+        'addressTypeId' => 'int',
     ];
 
     /**
@@ -71,7 +71,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'address_type_id' => 'int32',
+        'addressTypeId' => 'int32',
     ];
 
     /**
@@ -81,7 +81,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'address_type_id' => false,
+        'addressTypeId' => false,
     ];
 
     /**
@@ -171,7 +171,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'address_type_id' => 'address_type_id',
+        'addressTypeId' => 'address_type_id',
     ];
 
     /**
@@ -181,7 +181,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'address_type_id' => 'setAddressTypeId',
+        'addressTypeId' => 'setAddressTypeId',
     ];
 
     /**
@@ -191,7 +191,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'address_type_id' => 'getAddressTypeId',
+        'addressTypeId' => 'getAddressTypeId',
     ];
 
     /**
@@ -252,7 +252,7 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('address_type_id', $data ?? [], null);
+        $this->setIfExists('addressTypeId', $data ?? [], null);
     }
 
     /**
@@ -325,28 +325,28 @@ class AddressShare implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets address_type_id
+     * Gets addressTypeId
      *
      * @return int|null
      */
     public function getAddressTypeId()
     {
-        return $this->container['address_type_id'];
+        return $this->container['addressTypeId'];
     }
 
     /**
-     * Sets address_type_id
+     * Sets addressTypeId
      *
-     * @param int|null $address_type_id The address type ID that the address should be for the user
+     * @param int|null $addressTypeId The address type ID that the address should be for the user
      *
      * @return self
      */
-    public function setAddressTypeId($address_type_id)
+    public function setAddressTypeId($addressTypeId)
     {
-        if (is_null($address_type_id)) {
-            throw new \InvalidArgumentException('non-nullable address_type_id cannot be null');
+        if (is_null($addressTypeId)) {
+            throw new \InvalidArgumentException('non-nullable addressTypeId cannot be null');
         }
-        $this->container['address_type_id'] = $address_type_id;
+        $this->container['addressTypeId'] = $addressTypeId;
 
         return $this;
     }

@@ -9,4 +9,5 @@ return (new PhpCsFixer\Config())
         'octal_notation' => false,
         'no_unused_imports' => true,
     ])
-    ->setFinder($finder);
+    ->setFinder($finder)
+    ->setCacheFile(__DIR__ . '/.cache/php-cs-fixer.cache');

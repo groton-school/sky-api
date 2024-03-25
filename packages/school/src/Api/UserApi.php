@@ -565,18 +565,18 @@ class UserApi
      *
      * Users audit by role ID
      *
-     * @param  string $role_id Role to return audit information for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
+     * @param  string $roleId Role to return audit information for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersAuditGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserAuditReadCollection
      */
-    public function v1UsersAuditGet($role_id, $start_date = null, $end_date = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
+    public function v1UsersAuditGet($roleId, $startDate = null, $endDate = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
     {
-        [$response] = $this->v1UsersAuditGetWithHttpInfo($role_id, $start_date, $end_date, $contentType);
+        [$response] = $this->v1UsersAuditGetWithHttpInfo($roleId, $startDate, $endDate, $contentType);
         return $response;
     }
 
@@ -585,18 +585,18 @@ class UserApi
      *
      * Users audit by role ID
      *
-     * @param  string $role_id Role to return audit information for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
+     * @param  string $roleId Role to return audit information for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersAuditGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserAuditReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersAuditGetWithHttpInfo($role_id, $start_date = null, $end_date = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
+    public function v1UsersAuditGetWithHttpInfo($roleId, $startDate = null, $endDate = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
     {
-        $request = $this->v1UsersAuditGetRequest($role_id, $start_date, $end_date, $contentType);
+        $request = $this->v1UsersAuditGetRequest($roleId, $startDate, $endDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -711,17 +711,17 @@ class UserApi
      *
      * Users audit by role ID
      *
-     * @param  string $role_id Role to return audit information for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
+     * @param  string $roleId Role to return audit information for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersAuditGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersAuditGetAsync($role_id, $start_date = null, $end_date = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
+    public function v1UsersAuditGetAsync($roleId, $startDate = null, $endDate = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
     {
-        return $this->v1UsersAuditGetAsyncWithHttpInfo($role_id, $start_date, $end_date, $contentType)
+        return $this->v1UsersAuditGetAsyncWithHttpInfo($roleId, $startDate, $endDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -734,18 +734,18 @@ class UserApi
      *
      * Users audit by role ID
      *
-     * @param  string $role_id Role to return audit information for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
+     * @param  string $roleId Role to return audit information for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersAuditGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersAuditGetAsyncWithHttpInfo($role_id, $start_date = null, $end_date = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
+    public function v1UsersAuditGetAsyncWithHttpInfo($roleId, $startDate = null, $endDate = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
     {
         $returnType = '\SKY\School\Model\UserAuditReadCollection';
-        $request = $this->v1UsersAuditGetRequest($role_id, $start_date, $end_date, $contentType);
+        $request = $this->v1UsersAuditGetRequest($roleId, $startDate, $endDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -786,21 +786,21 @@ class UserApi
     /**
      * Create request for operation 'v1UsersAuditGet'
      *
-     * @param  string $role_id Role to return audit information for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
-     * @param  \DateTime $end_date Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
+     * @param  string $roleId Role to return audit information for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Must be greater than 01/01/1990. (optional)
+     * @param  \DateTime $endDate Format - date-time (as date-time in RFC3339). The date to end looking for changes.  Must be within 1 year of start_date. Null returns start_date + 7 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersAuditGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersAuditGetRequest($role_id, $start_date = null, $end_date = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
+    public function v1UsersAuditGetRequest($roleId, $startDate = null, $endDate = null, string $contentType = self::contentTypes['v1UsersAuditGet'][0])
     {
 
-        // verify the required parameter 'role_id' is set
-        if ($role_id === null || (is_array($role_id) && count($role_id) === 0)) {
+        // verify the required parameter 'roleId' is set
+        if ($roleId === null || (is_array($roleId) && count($roleId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $role_id when calling v1UsersAuditGet'
+                'Missing the required parameter $roleId when calling v1UsersAuditGet'
             );
         }
 
@@ -816,7 +816,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $role_id,
+            $roleId,
             'role_id', // param base name
             'string', // openApiType
             'form', // style
@@ -825,7 +825,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -834,7 +834,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_date,
+            $endDate,
             'end_date', // param base name
             'string', // openApiType
             'form', // style
@@ -913,7 +913,7 @@ class UserApi
      *
      * Users BBID status by role(s).
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersBbidstatusGet'] to see the possible values for this operation
      *
@@ -921,9 +921,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\SchoolBbidStatusCollection
      */
-    public function v1UsersBbidstatusGet($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
+    public function v1UsersBbidstatusGet($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
     {
-        [$response] = $this->v1UsersBbidstatusGetWithHttpInfo($base_role_ids, $marker, $contentType);
+        [$response] = $this->v1UsersBbidstatusGetWithHttpInfo($baseRoleIds, $marker, $contentType);
         return $response;
     }
 
@@ -932,7 +932,7 @@ class UserApi
      *
      * Users BBID status by role(s).
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersBbidstatusGet'] to see the possible values for this operation
      *
@@ -940,9 +940,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\SchoolBbidStatusCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersBbidstatusGetWithHttpInfo($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
+    public function v1UsersBbidstatusGetWithHttpInfo($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
     {
-        $request = $this->v1UsersBbidstatusGetRequest($base_role_ids, $marker, $contentType);
+        $request = $this->v1UsersBbidstatusGetRequest($baseRoleIds, $marker, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1057,16 +1057,16 @@ class UserApi
      *
      * Users BBID status by role(s).
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersBbidstatusGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersBbidstatusGetAsync($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
+    public function v1UsersBbidstatusGetAsync($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
     {
-        return $this->v1UsersBbidstatusGetAsyncWithHttpInfo($base_role_ids, $marker, $contentType)
+        return $this->v1UsersBbidstatusGetAsyncWithHttpInfo($baseRoleIds, $marker, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1079,17 +1079,17 @@ class UserApi
      *
      * Users BBID status by role(s).
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersBbidstatusGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersBbidstatusGetAsyncWithHttpInfo($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
+    public function v1UsersBbidstatusGetAsyncWithHttpInfo($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
     {
         $returnType = '\SKY\School\Model\SchoolBbidStatusCollection';
-        $request = $this->v1UsersBbidstatusGetRequest($base_role_ids, $marker, $contentType);
+        $request = $this->v1UsersBbidstatusGetRequest($baseRoleIds, $marker, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1130,20 +1130,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersBbidstatusGet'
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersBbidstatusGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersBbidstatusGetRequest($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
+    public function v1UsersBbidstatusGetRequest($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersBbidstatusGet'][0])
     {
 
-        // verify the required parameter 'base_role_ids' is set
-        if ($base_role_ids === null || (is_array($base_role_ids) && count($base_role_ids) === 0)) {
+        // verify the required parameter 'baseRoleIds' is set
+        if ($baseRoleIds === null || (is_array($baseRoleIds) && count($baseRoleIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $base_role_ids when calling v1UsersBbidstatusGet'
+                'Missing the required parameter $baseRoleIds when calling v1UsersBbidstatusGet'
             );
         }
 
@@ -1158,7 +1158,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $base_role_ids,
+            $baseRoleIds,
             'base_role_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -1246,16 +1246,16 @@ class UserApi
      *
      * Users Children of Parent
      *
-     * @param  int $parent_id Format - int32. (required)
+     * @param  int $parentId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByParentIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\ChildOfParentCollection
      */
-    public function v1UsersByParentIdStudentsGet($parent_id, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
+    public function v1UsersByParentIdStudentsGet($parentId, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
     {
-        [$response] = $this->v1UsersByParentIdStudentsGetWithHttpInfo($parent_id, $contentType);
+        [$response] = $this->v1UsersByParentIdStudentsGetWithHttpInfo($parentId, $contentType);
         return $response;
     }
 
@@ -1264,16 +1264,16 @@ class UserApi
      *
      * Users Children of Parent
      *
-     * @param  int $parent_id Format - int32. (required)
+     * @param  int $parentId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByParentIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\ChildOfParentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByParentIdStudentsGetWithHttpInfo($parent_id, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
+    public function v1UsersByParentIdStudentsGetWithHttpInfo($parentId, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
     {
-        $request = $this->v1UsersByParentIdStudentsGetRequest($parent_id, $contentType);
+        $request = $this->v1UsersByParentIdStudentsGetRequest($parentId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1388,15 +1388,15 @@ class UserApi
      *
      * Users Children of Parent
      *
-     * @param  int $parent_id Format - int32. (required)
+     * @param  int $parentId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByParentIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByParentIdStudentsGetAsync($parent_id, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
+    public function v1UsersByParentIdStudentsGetAsync($parentId, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
     {
-        return $this->v1UsersByParentIdStudentsGetAsyncWithHttpInfo($parent_id, $contentType)
+        return $this->v1UsersByParentIdStudentsGetAsyncWithHttpInfo($parentId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1409,16 +1409,16 @@ class UserApi
      *
      * Users Children of Parent
      *
-     * @param  int $parent_id Format - int32. (required)
+     * @param  int $parentId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByParentIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByParentIdStudentsGetAsyncWithHttpInfo($parent_id, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
+    public function v1UsersByParentIdStudentsGetAsyncWithHttpInfo($parentId, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
     {
         $returnType = '\SKY\School\Model\ChildOfParentCollection';
-        $request = $this->v1UsersByParentIdStudentsGetRequest($parent_id, $contentType);
+        $request = $this->v1UsersByParentIdStudentsGetRequest($parentId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1459,19 +1459,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByParentIdStudentsGet'
      *
-     * @param  int $parent_id Format - int32. (required)
+     * @param  int $parentId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByParentIdStudentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByParentIdStudentsGetRequest($parent_id, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
+    public function v1UsersByParentIdStudentsGetRequest($parentId, string $contentType = self::contentTypes['v1UsersByParentIdStudentsGet'][0])
     {
 
-        // verify the required parameter 'parent_id' is set
-        if ($parent_id === null || (is_array($parent_id) && count($parent_id) === 0)) {
+        // verify the required parameter 'parentId' is set
+        if ($parentId === null || (is_array($parentId) && count($parentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $parent_id when calling v1UsersByParentIdStudentsGet'
+                'Missing the required parameter $parentId when calling v1UsersByParentIdStudentsGet'
             );
         }
 
@@ -1486,10 +1486,10 @@ class UserApi
 
 
         // path params
-        if ($parent_id !== null) {
+        if ($parentId !== null) {
             $resourcePath = str_replace(
                 '{' . 'parent_id' . '}',
-                ObjectSerializer::toPathValue($parent_id),
+                ObjectSerializer::toPathValue($parentId),
                 $resourcePath
             );
         }
@@ -1563,18 +1563,18 @@ class UserApi
      *
      * Users address delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user (required)
-     * @param  int $address_id Format - int32. The ID of the user&#39;s address to delete. (required)
-     * @param  int $address_type_id Format - int32. The ID of the user&#39;s address type to delete. (required)
+     * @param  int $userId Format - int32. The ID of the user (required)
+     * @param  int $addressId Format - int32. The ID of the user&#39;s address to delete. (required)
+     * @param  int $addressTypeId Format - int32. The ID of the user&#39;s address type to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete($user_id, $address_id, $address_type_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
+    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete($userId, $addressId, $addressTypeId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
     {
-        $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteWithHttpInfo($user_id, $address_id, $address_type_id, $contentType);
+        $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteWithHttpInfo($userId, $addressId, $addressTypeId, $contentType);
     }
 
     /**
@@ -1582,18 +1582,18 @@ class UserApi
      *
      * Users address delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user (required)
-     * @param  int $address_id Format - int32. The ID of the user&#39;s address to delete. (required)
-     * @param  int $address_type_id Format - int32. The ID of the user&#39;s address type to delete. (required)
+     * @param  int $userId Format - int32. The ID of the user (required)
+     * @param  int $addressId Format - int32. The ID of the user&#39;s address to delete. (required)
+     * @param  int $addressTypeId Format - int32. The ID of the user&#39;s address type to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteWithHttpInfo($user_id, $address_id, $address_type_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
+    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteWithHttpInfo($userId, $addressId, $addressTypeId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
     {
-        $request = $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($user_id, $address_id, $address_type_id, $contentType);
+        $request = $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($userId, $addressId, $addressTypeId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1644,17 +1644,17 @@ class UserApi
      *
      * Users address delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user (required)
-     * @param  int $address_id Format - int32. The ID of the user&#39;s address to delete. (required)
-     * @param  int $address_type_id Format - int32. The ID of the user&#39;s address type to delete. (required)
+     * @param  int $userId Format - int32. The ID of the user (required)
+     * @param  int $addressId Format - int32. The ID of the user&#39;s address to delete. (required)
+     * @param  int $addressTypeId Format - int32. The ID of the user&#39;s address type to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsync($user_id, $address_id, $address_type_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
+    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsync($userId, $addressId, $addressTypeId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
     {
-        return $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsyncWithHttpInfo($user_id, $address_id, $address_type_id, $contentType)
+        return $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsyncWithHttpInfo($userId, $addressId, $addressTypeId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1667,18 +1667,18 @@ class UserApi
      *
      * Users address delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user (required)
-     * @param  int $address_id Format - int32. The ID of the user&#39;s address to delete. (required)
-     * @param  int $address_type_id Format - int32. The ID of the user&#39;s address type to delete. (required)
+     * @param  int $userId Format - int32. The ID of the user (required)
+     * @param  int $addressId Format - int32. The ID of the user&#39;s address to delete. (required)
+     * @param  int $addressTypeId Format - int32. The ID of the user&#39;s address type to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsyncWithHttpInfo($user_id, $address_id, $address_type_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
+    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteAsyncWithHttpInfo($userId, $addressId, $addressTypeId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($user_id, $address_id, $address_type_id, $contentType);
+        $request = $this->v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($userId, $addressId, $addressTypeId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1706,35 +1706,35 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
      *
-     * @param  int $user_id Format - int32. The ID of the user (required)
-     * @param  int $address_id Format - int32. The ID of the user&#39;s address to delete. (required)
-     * @param  int $address_type_id Format - int32. The ID of the user&#39;s address type to delete. (required)
+     * @param  int $userId Format - int32. The ID of the user (required)
+     * @param  int $addressId Format - int32. The ID of the user&#39;s address to delete. (required)
+     * @param  int $addressTypeId Format - int32. The ID of the user&#39;s address type to delete. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($user_id, $address_id, $address_type_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
+    public function v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDeleteRequest($userId, $addressId, $addressTypeId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
+                'Missing the required parameter $userId when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
             );
         }
 
-        // verify the required parameter 'address_id' is set
-        if ($address_id === null || (is_array($address_id) && count($address_id) === 0)) {
+        // verify the required parameter 'addressId' is set
+        if ($addressId === null || (is_array($addressId) && count($addressId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $address_id when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
+                'Missing the required parameter $addressId when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
             );
         }
 
-        // verify the required parameter 'address_type_id' is set
-        if ($address_type_id === null || (is_array($address_type_id) && count($address_type_id) === 0)) {
+        // verify the required parameter 'addressTypeId' is set
+        if ($addressTypeId === null || (is_array($addressTypeId) && count($addressTypeId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $address_type_id when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
+                'Missing the required parameter $addressTypeId when calling v1UsersByUserIdAddressesByAddressIdByAddressTypeIdDelete'
             );
         }
 
@@ -1749,26 +1749,26 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($address_id !== null) {
+        if ($addressId !== null) {
             $resourcePath = str_replace(
                 '{' . 'address_id' . '}',
-                ObjectSerializer::toPathValue($address_id),
+                ObjectSerializer::toPathValue($addressId),
                 $resourcePath
             );
         }
         // path params
-        if ($address_type_id !== null) {
+        if ($addressTypeId !== null) {
             $resourcePath = str_replace(
                 '{' . 'address_type_id' . '}',
-                ObjectSerializer::toPathValue($address_type_id),
+                ObjectSerializer::toPathValue($addressTypeId),
                 $resourcePath
             );
         }
@@ -1842,18 +1842,18 @@ class UserApi
      *
      * Users address update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $address_id Format - int32. The ID of the address to be updated. (required)
-     * @param  \SKY\School\Model\AddressEdit $address_edit Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $addressId Format - int32. The ID of the address to be updated. (required)
+     * @param  \SKY\School\Model\AddressEdit $addressEdit Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdAddressesByAddressIdPatch($user_id, $address_id, $address_edit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
+    public function v1UsersByUserIdAddressesByAddressIdPatch($userId, $addressId, $addressEdit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdAddressesByAddressIdPatchWithHttpInfo($user_id, $address_id, $address_edit, $contentType);
+        [$response] = $this->v1UsersByUserIdAddressesByAddressIdPatchWithHttpInfo($userId, $addressId, $addressEdit, $contentType);
         return $response;
     }
 
@@ -1862,18 +1862,18 @@ class UserApi
      *
      * Users address update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $address_id Format - int32. The ID of the address to be updated. (required)
-     * @param  \SKY\School\Model\AddressEdit $address_edit Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $addressId Format - int32. The ID of the address to be updated. (required)
+     * @param  \SKY\School\Model\AddressEdit $addressEdit Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdAddressesByAddressIdPatchWithHttpInfo($user_id, $address_id, $address_edit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
+    public function v1UsersByUserIdAddressesByAddressIdPatchWithHttpInfo($userId, $addressId, $addressEdit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
     {
-        $request = $this->v1UsersByUserIdAddressesByAddressIdPatchRequest($user_id, $address_id, $address_edit, $contentType);
+        $request = $this->v1UsersByUserIdAddressesByAddressIdPatchRequest($userId, $addressId, $addressEdit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1988,17 +1988,17 @@ class UserApi
      *
      * Users address update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $address_id Format - int32. The ID of the address to be updated. (required)
-     * @param  \SKY\School\Model\AddressEdit $address_edit Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $addressId Format - int32. The ID of the address to be updated. (required)
+     * @param  \SKY\School\Model\AddressEdit $addressEdit Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesByAddressIdPatchAsync($user_id, $address_id, $address_edit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
+    public function v1UsersByUserIdAddressesByAddressIdPatchAsync($userId, $addressId, $addressEdit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
     {
-        return $this->v1UsersByUserIdAddressesByAddressIdPatchAsyncWithHttpInfo($user_id, $address_id, $address_edit, $contentType)
+        return $this->v1UsersByUserIdAddressesByAddressIdPatchAsyncWithHttpInfo($userId, $addressId, $addressEdit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2011,18 +2011,18 @@ class UserApi
      *
      * Users address update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $address_id Format - int32. The ID of the address to be updated. (required)
-     * @param  \SKY\School\Model\AddressEdit $address_edit Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $addressId Format - int32. The ID of the address to be updated. (required)
+     * @param  \SKY\School\Model\AddressEdit $addressEdit Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesByAddressIdPatchAsyncWithHttpInfo($user_id, $address_id, $address_edit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
+    public function v1UsersByUserIdAddressesByAddressIdPatchAsyncWithHttpInfo($userId, $addressId, $addressEdit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdAddressesByAddressIdPatchRequest($user_id, $address_id, $address_edit, $contentType);
+        $request = $this->v1UsersByUserIdAddressesByAddressIdPatchRequest($userId, $addressId, $addressEdit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2063,28 +2063,28 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdAddressesByAddressIdPatch'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $address_id Format - int32. The ID of the address to be updated. (required)
-     * @param  \SKY\School\Model\AddressEdit $address_edit Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $addressId Format - int32. The ID of the address to be updated. (required)
+     * @param  \SKY\School\Model\AddressEdit $addressEdit Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdAddressesByAddressIdPatchRequest($user_id, $address_id, $address_edit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
+    public function v1UsersByUserIdAddressesByAddressIdPatchRequest($userId, $addressId, $addressEdit = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesByAddressIdPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdAddressesByAddressIdPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdAddressesByAddressIdPatch'
             );
         }
 
-        // verify the required parameter 'address_id' is set
-        if ($address_id === null || (is_array($address_id) && count($address_id) === 0)) {
+        // verify the required parameter 'addressId' is set
+        if ($addressId === null || (is_array($addressId) && count($addressId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $address_id when calling v1UsersByUserIdAddressesByAddressIdPatch'
+                'Missing the required parameter $addressId when calling v1UsersByUserIdAddressesByAddressIdPatch'
             );
         }
 
@@ -2100,18 +2100,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($address_id !== null) {
+        if ($addressId !== null) {
             $resourcePath = str_replace(
                 '{' . 'address_id' . '}',
-                ObjectSerializer::toPathValue($address_id),
+                ObjectSerializer::toPathValue($addressId),
                 $resourcePath
             );
         }
@@ -2124,12 +2124,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($address_edit)) {
+        if (isset($addressEdit)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($address_edit));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($addressEdit));
             } else {
-                $httpBody = $address_edit;
+                $httpBody = $addressEdit;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2192,16 +2192,16 @@ class UserApi
      *
      * Users addresses by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AddressReadCollection
      */
-    public function v1UsersByUserIdAddressesGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
+    public function v1UsersByUserIdAddressesGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdAddressesGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdAddressesGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -2210,16 +2210,16 @@ class UserApi
      *
      * Users addresses by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AddressReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdAddressesGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
+    public function v1UsersByUserIdAddressesGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
     {
-        $request = $this->v1UsersByUserIdAddressesGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdAddressesGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2334,15 +2334,15 @@ class UserApi
      *
      * Users addresses by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
+    public function v1UsersByUserIdAddressesGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
     {
-        return $this->v1UsersByUserIdAddressesGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdAddressesGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2355,16 +2355,16 @@ class UserApi
      *
      * Users addresses by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
+    public function v1UsersByUserIdAddressesGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
     {
         $returnType = '\SKY\School\Model\AddressReadCollection';
-        $request = $this->v1UsersByUserIdAddressesGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdAddressesGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2405,19 +2405,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdAddressesGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdAddressesGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
+    public function v1UsersByUserIdAddressesGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdAddressesGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdAddressesGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdAddressesGet'
             );
         }
 
@@ -2432,10 +2432,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -2509,17 +2509,17 @@ class UserApi
      *
      * Users address create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\AddressAdd $address_add Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\AddressAdd $addressAdd Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdAddressesPost($user_id, $address_add = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
+    public function v1UsersByUserIdAddressesPost($userId, $addressAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdAddressesPostWithHttpInfo($user_id, $address_add, $contentType);
+        [$response] = $this->v1UsersByUserIdAddressesPostWithHttpInfo($userId, $addressAdd, $contentType);
         return $response;
     }
 
@@ -2528,17 +2528,17 @@ class UserApi
      *
      * Users address create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\AddressAdd $address_add Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\AddressAdd $addressAdd Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdAddressesPostWithHttpInfo($user_id, $address_add = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
+    public function v1UsersByUserIdAddressesPostWithHttpInfo($userId, $addressAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
     {
-        $request = $this->v1UsersByUserIdAddressesPostRequest($user_id, $address_add, $contentType);
+        $request = $this->v1UsersByUserIdAddressesPostRequest($userId, $addressAdd, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2653,16 +2653,16 @@ class UserApi
      *
      * Users address create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\AddressAdd $address_add Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\AddressAdd $addressAdd Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesPostAsync($user_id, $address_add = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
+    public function v1UsersByUserIdAddressesPostAsync($userId, $addressAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
     {
-        return $this->v1UsersByUserIdAddressesPostAsyncWithHttpInfo($user_id, $address_add, $contentType)
+        return $this->v1UsersByUserIdAddressesPostAsyncWithHttpInfo($userId, $addressAdd, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2675,17 +2675,17 @@ class UserApi
      *
      * Users address create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\AddressAdd $address_add Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\AddressAdd $addressAdd Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesPostAsyncWithHttpInfo($user_id, $address_add = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
+    public function v1UsersByUserIdAddressesPostAsyncWithHttpInfo($userId, $addressAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdAddressesPostRequest($user_id, $address_add, $contentType);
+        $request = $this->v1UsersByUserIdAddressesPostRequest($userId, $addressAdd, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2726,20 +2726,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdAddressesPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\AddressAdd $address_add Address information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\AddressAdd $addressAdd Address information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdAddressesPostRequest($user_id, $address_add = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
+    public function v1UsersByUserIdAddressesPostRequest($userId, $addressAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdAddressesPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdAddressesPost'
             );
         }
 
@@ -2755,10 +2755,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -2771,12 +2771,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($address_add)) {
+        if (isset($addressAdd)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($address_add));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($addressAdd));
             } else {
-                $httpBody = $address_add;
+                $httpBody = $addressAdd;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2839,17 +2839,17 @@ class UserApi
      *
      * Users address create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\AddressShare $address_share The details about the address that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\AddressShare $addressShare The details about the address that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesSharePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdAddressesSharePost($user_id, $address_share = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
+    public function v1UsersByUserIdAddressesSharePost($userId, $addressShare = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
     {
-        [$response] = $this->v1UsersByUserIdAddressesSharePostWithHttpInfo($user_id, $address_share, $contentType);
+        [$response] = $this->v1UsersByUserIdAddressesSharePostWithHttpInfo($userId, $addressShare, $contentType);
         return $response;
     }
 
@@ -2858,17 +2858,17 @@ class UserApi
      *
      * Users address create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\AddressShare $address_share The details about the address that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\AddressShare $addressShare The details about the address that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesSharePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdAddressesSharePostWithHttpInfo($user_id, $address_share = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
+    public function v1UsersByUserIdAddressesSharePostWithHttpInfo($userId, $addressShare = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
     {
-        $request = $this->v1UsersByUserIdAddressesSharePostRequest($user_id, $address_share, $contentType);
+        $request = $this->v1UsersByUserIdAddressesSharePostRequest($userId, $addressShare, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2983,16 +2983,16 @@ class UserApi
      *
      * Users address create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\AddressShare $address_share The details about the address that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\AddressShare $addressShare The details about the address that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesSharePostAsync($user_id, $address_share = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
+    public function v1UsersByUserIdAddressesSharePostAsync($userId, $addressShare = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
     {
-        return $this->v1UsersByUserIdAddressesSharePostAsyncWithHttpInfo($user_id, $address_share, $contentType)
+        return $this->v1UsersByUserIdAddressesSharePostAsyncWithHttpInfo($userId, $addressShare, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3005,17 +3005,17 @@ class UserApi
      *
      * Users address create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\AddressShare $address_share The details about the address that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\AddressShare $addressShare The details about the address that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdAddressesSharePostAsyncWithHttpInfo($user_id, $address_share = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
+    public function v1UsersByUserIdAddressesSharePostAsyncWithHttpInfo($userId, $addressShare = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdAddressesSharePostRequest($user_id, $address_share, $contentType);
+        $request = $this->v1UsersByUserIdAddressesSharePostRequest($userId, $addressShare, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3056,20 +3056,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdAddressesSharePost'
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\AddressShare $address_share The details about the address that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\AddressShare $addressShare The details about the address that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdAddressesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdAddressesSharePostRequest($user_id, $address_share = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
+    public function v1UsersByUserIdAddressesSharePostRequest($userId, $addressShare = null, string $contentType = self::contentTypes['v1UsersByUserIdAddressesSharePost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdAddressesSharePost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdAddressesSharePost'
             );
         }
 
@@ -3085,10 +3085,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -3101,12 +3101,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($address_share)) {
+        if (isset($addressShare)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($address_share));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($addressShare));
             } else {
-                $httpBody = $address_share;
+                $httpBody = $addressShare;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3169,16 +3169,16 @@ class UserApi
      *
      * Users custom fields single
      *
-     * @param  int $user_id Format - int32. The id of the user to get custom fields for. (required)
+     * @param  int $userId Format - int32. The id of the user to get custom fields for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserAdminCustomField
      */
-    public function v1UsersByUserIdCustomfieldsGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
+    public function v1UsersByUserIdCustomfieldsGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdCustomfieldsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdCustomfieldsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -3187,16 +3187,16 @@ class UserApi
      *
      * Users custom fields single
      *
-     * @param  int $user_id Format - int32. The id of the user to get custom fields for. (required)
+     * @param  int $userId Format - int32. The id of the user to get custom fields for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserAdminCustomField, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdCustomfieldsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
+    public function v1UsersByUserIdCustomfieldsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
     {
-        $request = $this->v1UsersByUserIdCustomfieldsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3311,15 +3311,15 @@ class UserApi
      *
      * Users custom fields single
      *
-     * @param  int $user_id Format - int32. The id of the user to get custom fields for. (required)
+     * @param  int $userId Format - int32. The id of the user to get custom fields for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
+    public function v1UsersByUserIdCustomfieldsGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
     {
-        return $this->v1UsersByUserIdCustomfieldsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdCustomfieldsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3332,16 +3332,16 @@ class UserApi
      *
      * Users custom fields single
      *
-     * @param  int $user_id Format - int32. The id of the user to get custom fields for. (required)
+     * @param  int $userId Format - int32. The id of the user to get custom fields for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
+    public function v1UsersByUserIdCustomfieldsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
     {
         $returnType = '\SKY\School\Model\UserAdminCustomField';
-        $request = $this->v1UsersByUserIdCustomfieldsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3382,19 +3382,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdCustomfieldsGet'
      *
-     * @param  int $user_id Format - int32. The id of the user to get custom fields for. (required)
+     * @param  int $userId Format - int32. The id of the user to get custom fields for. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdCustomfieldsGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
+    public function v1UsersByUserIdCustomfieldsGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdCustomfieldsGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdCustomfieldsGet'
             );
         }
 
@@ -3409,10 +3409,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -3486,17 +3486,17 @@ class UserApi
      *
      * Users custom fields list update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return bool
      */
-    public function v1UsersByUserIdCustomfieldsListPatch($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
+    public function v1UsersByUserIdCustomfieldsListPatch($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdCustomfieldsListPatchWithHttpInfo($user_id, $user_admin_custom_field_update, $contentType);
+        [$response] = $this->v1UsersByUserIdCustomfieldsListPatchWithHttpInfo($userId, $userAdminCustomFieldUpdate, $contentType);
         return $response;
     }
 
@@ -3505,17 +3505,17 @@ class UserApi
      *
      * Users custom fields list update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of bool, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdCustomfieldsListPatchWithHttpInfo($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
+    public function v1UsersByUserIdCustomfieldsListPatchWithHttpInfo($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
     {
-        $request = $this->v1UsersByUserIdCustomfieldsListPatchRequest($user_id, $user_admin_custom_field_update, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsListPatchRequest($userId, $userAdminCustomFieldUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3630,16 +3630,16 @@ class UserApi
      *
      * Users custom fields list update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsListPatchAsync($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
+    public function v1UsersByUserIdCustomfieldsListPatchAsync($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
     {
-        return $this->v1UsersByUserIdCustomfieldsListPatchAsyncWithHttpInfo($user_id, $user_admin_custom_field_update, $contentType)
+        return $this->v1UsersByUserIdCustomfieldsListPatchAsyncWithHttpInfo($userId, $userAdminCustomFieldUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3652,17 +3652,17 @@ class UserApi
      *
      * Users custom fields list update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsListPatchAsyncWithHttpInfo($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
+    public function v1UsersByUserIdCustomfieldsListPatchAsyncWithHttpInfo($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
     {
         $returnType = 'bool';
-        $request = $this->v1UsersByUserIdCustomfieldsListPatchRequest($user_id, $user_admin_custom_field_update, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsListPatchRequest($userId, $userAdminCustomFieldUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3703,20 +3703,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdCustomfieldsListPatch'
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate[] $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdCustomfieldsListPatchRequest($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
+    public function v1UsersByUserIdCustomfieldsListPatchRequest($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdCustomfieldsListPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdCustomfieldsListPatch'
             );
         }
 
@@ -3732,10 +3732,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -3748,12 +3748,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_admin_custom_field_update)) {
+        if (isset($userAdminCustomFieldUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_admin_custom_field_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userAdminCustomFieldUpdate));
             } else {
-                $httpBody = $user_admin_custom_field_update;
+                $httpBody = $userAdminCustomFieldUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3816,17 +3816,17 @@ class UserApi
      *
      * Users custom fields list create (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $user_admin_custom_field_create Object that describes the list of custom fields that will be created for the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $userAdminCustomFieldCreate Object that describes the list of custom fields that will be created for the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return bool
      */
-    public function v1UsersByUserIdCustomfieldsListPost($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
+    public function v1UsersByUserIdCustomfieldsListPost($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdCustomfieldsListPostWithHttpInfo($user_id, $user_admin_custom_field_create, $contentType);
+        [$response] = $this->v1UsersByUserIdCustomfieldsListPostWithHttpInfo($userId, $userAdminCustomFieldCreate, $contentType);
         return $response;
     }
 
@@ -3835,17 +3835,17 @@ class UserApi
      *
      * Users custom fields list create (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $user_admin_custom_field_create Object that describes the list of custom fields that will be created for the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $userAdminCustomFieldCreate Object that describes the list of custom fields that will be created for the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of bool, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdCustomfieldsListPostWithHttpInfo($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
+    public function v1UsersByUserIdCustomfieldsListPostWithHttpInfo($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
     {
-        $request = $this->v1UsersByUserIdCustomfieldsListPostRequest($user_id, $user_admin_custom_field_create, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsListPostRequest($userId, $userAdminCustomFieldCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3960,16 +3960,16 @@ class UserApi
      *
      * Users custom fields list create (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $user_admin_custom_field_create Object that describes the list of custom fields that will be created for the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $userAdminCustomFieldCreate Object that describes the list of custom fields that will be created for the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsListPostAsync($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
+    public function v1UsersByUserIdCustomfieldsListPostAsync($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
     {
-        return $this->v1UsersByUserIdCustomfieldsListPostAsyncWithHttpInfo($user_id, $user_admin_custom_field_create, $contentType)
+        return $this->v1UsersByUserIdCustomfieldsListPostAsyncWithHttpInfo($userId, $userAdminCustomFieldCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3982,17 +3982,17 @@ class UserApi
      *
      * Users custom fields list create (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $user_admin_custom_field_create Object that describes the list of custom fields that will be created for the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $userAdminCustomFieldCreate Object that describes the list of custom fields that will be created for the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsListPostAsyncWithHttpInfo($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
+    public function v1UsersByUserIdCustomfieldsListPostAsyncWithHttpInfo($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
     {
         $returnType = 'bool';
-        $request = $this->v1UsersByUserIdCustomfieldsListPostRequest($user_id, $user_admin_custom_field_create, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsListPostRequest($userId, $userAdminCustomFieldCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4033,20 +4033,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdCustomfieldsListPost'
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $user_admin_custom_field_create Object that describes the list of custom fields that will be created for the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate[] $userAdminCustomFieldCreate Object that describes the list of custom fields that will be created for the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsListPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdCustomfieldsListPostRequest($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
+    public function v1UsersByUserIdCustomfieldsListPostRequest($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsListPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdCustomfieldsListPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdCustomfieldsListPost'
             );
         }
 
@@ -4062,10 +4062,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -4078,12 +4078,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_admin_custom_field_create)) {
+        if (isset($userAdminCustomFieldCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_admin_custom_field_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userAdminCustomFieldCreate));
             } else {
-                $httpBody = $user_admin_custom_field_create;
+                $httpBody = $userAdminCustomFieldCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4146,17 +4146,17 @@ class UserApi
      *
      * Users custom fields update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return bool
      */
-    public function v1UsersByUserIdCustomfieldsPatch($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
+    public function v1UsersByUserIdCustomfieldsPatch($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdCustomfieldsPatchWithHttpInfo($user_id, $user_admin_custom_field_update, $contentType);
+        [$response] = $this->v1UsersByUserIdCustomfieldsPatchWithHttpInfo($userId, $userAdminCustomFieldUpdate, $contentType);
         return $response;
     }
 
@@ -4165,17 +4165,17 @@ class UserApi
      *
      * Users custom fields update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of bool, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdCustomfieldsPatchWithHttpInfo($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
+    public function v1UsersByUserIdCustomfieldsPatchWithHttpInfo($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
     {
-        $request = $this->v1UsersByUserIdCustomfieldsPatchRequest($user_id, $user_admin_custom_field_update, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsPatchRequest($userId, $userAdminCustomFieldUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4290,16 +4290,16 @@ class UserApi
      *
      * Users custom fields update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsPatchAsync($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
+    public function v1UsersByUserIdCustomfieldsPatchAsync($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
     {
-        return $this->v1UsersByUserIdCustomfieldsPatchAsyncWithHttpInfo($user_id, $user_admin_custom_field_update, $contentType)
+        return $this->v1UsersByUserIdCustomfieldsPatchAsyncWithHttpInfo($userId, $userAdminCustomFieldUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4312,17 +4312,17 @@ class UserApi
      *
      * Users custom fields update
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsPatchAsyncWithHttpInfo($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
+    public function v1UsersByUserIdCustomfieldsPatchAsyncWithHttpInfo($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
     {
         $returnType = 'bool';
-        $request = $this->v1UsersByUserIdCustomfieldsPatchRequest($user_id, $user_admin_custom_field_update, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsPatchRequest($userId, $userAdminCustomFieldUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4363,20 +4363,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdCustomfieldsPatch'
      *
-     * @param  int $user_id Format - int32. The Id of the user to update an existing custom field for. (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $user_admin_custom_field_update Object that describes the custom field that should be updated. (optional)
+     * @param  int $userId Format - int32. The Id of the user to update an existing custom field for. (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldUpdate $userAdminCustomFieldUpdate Object that describes the custom field that should be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdCustomfieldsPatchRequest($user_id, $user_admin_custom_field_update = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
+    public function v1UsersByUserIdCustomfieldsPatchRequest($userId, $userAdminCustomFieldUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdCustomfieldsPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdCustomfieldsPatch'
             );
         }
 
@@ -4392,10 +4392,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -4408,12 +4408,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_admin_custom_field_update)) {
+        if (isset($userAdminCustomFieldUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_admin_custom_field_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userAdminCustomFieldUpdate));
             } else {
-                $httpBody = $user_admin_custom_field_update;
+                $httpBody = $userAdminCustomFieldUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4476,17 +4476,17 @@ class UserApi
      *
      * Users custom fields create
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $user_admin_custom_field_create Object that describes the custom field that will be created. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $userAdminCustomFieldCreate Object that describes the custom field that will be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return bool
      */
-    public function v1UsersByUserIdCustomfieldsPost($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
+    public function v1UsersByUserIdCustomfieldsPost($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdCustomfieldsPostWithHttpInfo($user_id, $user_admin_custom_field_create, $contentType);
+        [$response] = $this->v1UsersByUserIdCustomfieldsPostWithHttpInfo($userId, $userAdminCustomFieldCreate, $contentType);
         return $response;
     }
 
@@ -4495,17 +4495,17 @@ class UserApi
      *
      * Users custom fields create
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $user_admin_custom_field_create Object that describes the custom field that will be created. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $userAdminCustomFieldCreate Object that describes the custom field that will be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of bool, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdCustomfieldsPostWithHttpInfo($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
+    public function v1UsersByUserIdCustomfieldsPostWithHttpInfo($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
     {
-        $request = $this->v1UsersByUserIdCustomfieldsPostRequest($user_id, $user_admin_custom_field_create, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsPostRequest($userId, $userAdminCustomFieldCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4620,16 +4620,16 @@ class UserApi
      *
      * Users custom fields create
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $user_admin_custom_field_create Object that describes the custom field that will be created. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $userAdminCustomFieldCreate Object that describes the custom field that will be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsPostAsync($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
+    public function v1UsersByUserIdCustomfieldsPostAsync($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
     {
-        return $this->v1UsersByUserIdCustomfieldsPostAsyncWithHttpInfo($user_id, $user_admin_custom_field_create, $contentType)
+        return $this->v1UsersByUserIdCustomfieldsPostAsyncWithHttpInfo($userId, $userAdminCustomFieldCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4642,17 +4642,17 @@ class UserApi
      *
      * Users custom fields create
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $user_admin_custom_field_create Object that describes the custom field that will be created. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $userAdminCustomFieldCreate Object that describes the custom field that will be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdCustomfieldsPostAsyncWithHttpInfo($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
+    public function v1UsersByUserIdCustomfieldsPostAsyncWithHttpInfo($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
     {
         $returnType = 'bool';
-        $request = $this->v1UsersByUserIdCustomfieldsPostRequest($user_id, $user_admin_custom_field_create, $contentType);
+        $request = $this->v1UsersByUserIdCustomfieldsPostRequest($userId, $userAdminCustomFieldCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4693,20 +4693,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdCustomfieldsPost'
      *
-     * @param  int $user_id Format - int32. The Id of the user to create a custom field for (required)
-     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $user_admin_custom_field_create Object that describes the custom field that will be created. (optional)
+     * @param  int $userId Format - int32. The Id of the user to create a custom field for (required)
+     * @param  \SKY\School\Model\UserAdminCustomFieldCreate $userAdminCustomFieldCreate Object that describes the custom field that will be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdCustomfieldsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdCustomfieldsPostRequest($user_id, $user_admin_custom_field_create = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
+    public function v1UsersByUserIdCustomfieldsPostRequest($userId, $userAdminCustomFieldCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdCustomfieldsPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdCustomfieldsPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdCustomfieldsPost'
             );
         }
 
@@ -4722,10 +4722,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -4738,12 +4738,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_admin_custom_field_create)) {
+        if (isset($userAdminCustomFieldCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_admin_custom_field_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userAdminCustomFieldCreate));
             } else {
-                $httpBody = $user_admin_custom_field_create;
+                $httpBody = $userAdminCustomFieldCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -4806,17 +4806,17 @@ class UserApi
      *
      * User education delete (BETA)
      *
-     * @param  int $user_id Format - int32. (required)
-     * @param  int $education_id Format - int32. (required)
+     * @param  int $userId Format - int32. (required)
+     * @param  int $educationId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdEducationByEducationIdDelete($user_id, $education_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
+    public function v1UsersByUserIdEducationByEducationIdDelete($userId, $educationId, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
     {
-        $this->v1UsersByUserIdEducationByEducationIdDeleteWithHttpInfo($user_id, $education_id, $contentType);
+        $this->v1UsersByUserIdEducationByEducationIdDeleteWithHttpInfo($userId, $educationId, $contentType);
     }
 
     /**
@@ -4824,17 +4824,17 @@ class UserApi
      *
      * User education delete (BETA)
      *
-     * @param  int $user_id Format - int32. (required)
-     * @param  int $education_id Format - int32. (required)
+     * @param  int $userId Format - int32. (required)
+     * @param  int $educationId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEducationByEducationIdDeleteWithHttpInfo($user_id, $education_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
+    public function v1UsersByUserIdEducationByEducationIdDeleteWithHttpInfo($userId, $educationId, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
     {
-        $request = $this->v1UsersByUserIdEducationByEducationIdDeleteRequest($user_id, $education_id, $contentType);
+        $request = $this->v1UsersByUserIdEducationByEducationIdDeleteRequest($userId, $educationId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4885,16 +4885,16 @@ class UserApi
      *
      * User education delete (BETA)
      *
-     * @param  int $user_id Format - int32. (required)
-     * @param  int $education_id Format - int32. (required)
+     * @param  int $userId Format - int32. (required)
+     * @param  int $educationId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationByEducationIdDeleteAsync($user_id, $education_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
+    public function v1UsersByUserIdEducationByEducationIdDeleteAsync($userId, $educationId, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
     {
-        return $this->v1UsersByUserIdEducationByEducationIdDeleteAsyncWithHttpInfo($user_id, $education_id, $contentType)
+        return $this->v1UsersByUserIdEducationByEducationIdDeleteAsyncWithHttpInfo($userId, $educationId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4907,17 +4907,17 @@ class UserApi
      *
      * User education delete (BETA)
      *
-     * @param  int $user_id Format - int32. (required)
-     * @param  int $education_id Format - int32. (required)
+     * @param  int $userId Format - int32. (required)
+     * @param  int $educationId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationByEducationIdDeleteAsyncWithHttpInfo($user_id, $education_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
+    public function v1UsersByUserIdEducationByEducationIdDeleteAsyncWithHttpInfo($userId, $educationId, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdEducationByEducationIdDeleteRequest($user_id, $education_id, $contentType);
+        $request = $this->v1UsersByUserIdEducationByEducationIdDeleteRequest($userId, $educationId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4945,27 +4945,27 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEducationByEducationIdDelete'
      *
-     * @param  int $user_id Format - int32. (required)
-     * @param  int $education_id Format - int32. (required)
+     * @param  int $userId Format - int32. (required)
+     * @param  int $educationId Format - int32. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEducationByEducationIdDeleteRequest($user_id, $education_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
+    public function v1UsersByUserIdEducationByEducationIdDeleteRequest($userId, $educationId, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdDelete'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEducationByEducationIdDelete'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEducationByEducationIdDelete'
             );
         }
 
-        // verify the required parameter 'education_id' is set
-        if ($education_id === null || (is_array($education_id) && count($education_id) === 0)) {
+        // verify the required parameter 'educationId' is set
+        if ($educationId === null || (is_array($educationId) && count($educationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $education_id when calling v1UsersByUserIdEducationByEducationIdDelete'
+                'Missing the required parameter $educationId when calling v1UsersByUserIdEducationByEducationIdDelete'
             );
         }
 
@@ -4980,18 +4980,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($education_id !== null) {
+        if ($educationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'education_id' . '}',
-                ObjectSerializer::toPathValue($education_id),
+                ObjectSerializer::toPathValue($educationId),
                 $resourcePath
             );
         }
@@ -5065,18 +5065,18 @@ class UserApi
      *
      * Users education update (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $education_id Format - int32. The ID of the education. (required)
-     * @param  \SKY\School\Model\EducationUpdate $education_update The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $educationId Format - int32. The ID of the education. (required)
+     * @param  \SKY\School\Model\EducationUpdate $educationUpdate The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdEducationByEducationIdPatch($user_id, $education_id, $education_update = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
+    public function v1UsersByUserIdEducationByEducationIdPatch($userId, $educationId, $educationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdEducationByEducationIdPatchWithHttpInfo($user_id, $education_id, $education_update, $contentType);
+        [$response] = $this->v1UsersByUserIdEducationByEducationIdPatchWithHttpInfo($userId, $educationId, $educationUpdate, $contentType);
         return $response;
     }
 
@@ -5085,18 +5085,18 @@ class UserApi
      *
      * Users education update (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $education_id Format - int32. The ID of the education. (required)
-     * @param  \SKY\School\Model\EducationUpdate $education_update The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $educationId Format - int32. The ID of the education. (required)
+     * @param  \SKY\School\Model\EducationUpdate $educationUpdate The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEducationByEducationIdPatchWithHttpInfo($user_id, $education_id, $education_update = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
+    public function v1UsersByUserIdEducationByEducationIdPatchWithHttpInfo($userId, $educationId, $educationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
     {
-        $request = $this->v1UsersByUserIdEducationByEducationIdPatchRequest($user_id, $education_id, $education_update, $contentType);
+        $request = $this->v1UsersByUserIdEducationByEducationIdPatchRequest($userId, $educationId, $educationUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5211,17 +5211,17 @@ class UserApi
      *
      * Users education update (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $education_id Format - int32. The ID of the education. (required)
-     * @param  \SKY\School\Model\EducationUpdate $education_update The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $educationId Format - int32. The ID of the education. (required)
+     * @param  \SKY\School\Model\EducationUpdate $educationUpdate The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationByEducationIdPatchAsync($user_id, $education_id, $education_update = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
+    public function v1UsersByUserIdEducationByEducationIdPatchAsync($userId, $educationId, $educationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
     {
-        return $this->v1UsersByUserIdEducationByEducationIdPatchAsyncWithHttpInfo($user_id, $education_id, $education_update, $contentType)
+        return $this->v1UsersByUserIdEducationByEducationIdPatchAsyncWithHttpInfo($userId, $educationId, $educationUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5234,18 +5234,18 @@ class UserApi
      *
      * Users education update (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $education_id Format - int32. The ID of the education. (required)
-     * @param  \SKY\School\Model\EducationUpdate $education_update The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $educationId Format - int32. The ID of the education. (required)
+     * @param  \SKY\School\Model\EducationUpdate $educationUpdate The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationByEducationIdPatchAsyncWithHttpInfo($user_id, $education_id, $education_update = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
+    public function v1UsersByUserIdEducationByEducationIdPatchAsyncWithHttpInfo($userId, $educationId, $educationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdEducationByEducationIdPatchRequest($user_id, $education_id, $education_update, $contentType);
+        $request = $this->v1UsersByUserIdEducationByEducationIdPatchRequest($userId, $educationId, $educationUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5286,28 +5286,28 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEducationByEducationIdPatch'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $education_id Format - int32. The ID of the education. (required)
-     * @param  \SKY\School\Model\EducationUpdate $education_update The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $educationId Format - int32. The ID of the education. (required)
+     * @param  \SKY\School\Model\EducationUpdate $educationUpdate The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEducationByEducationIdPatchRequest($user_id, $education_id, $education_update = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
+    public function v1UsersByUserIdEducationByEducationIdPatchRequest($userId, $educationId, $educationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationByEducationIdPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEducationByEducationIdPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEducationByEducationIdPatch'
             );
         }
 
-        // verify the required parameter 'education_id' is set
-        if ($education_id === null || (is_array($education_id) && count($education_id) === 0)) {
+        // verify the required parameter 'educationId' is set
+        if ($educationId === null || (is_array($educationId) && count($educationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $education_id when calling v1UsersByUserIdEducationByEducationIdPatch'
+                'Missing the required parameter $educationId when calling v1UsersByUserIdEducationByEducationIdPatch'
             );
         }
 
@@ -5323,18 +5323,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($education_id !== null) {
+        if ($educationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'education_id' . '}',
-                ObjectSerializer::toPathValue($education_id),
+                ObjectSerializer::toPathValue($educationId),
                 $resourcePath
             );
         }
@@ -5347,12 +5347,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($education_update)) {
+        if (isset($educationUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($education_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($educationUpdate));
             } else {
-                $httpBody = $education_update;
+                $httpBody = $educationUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -5415,16 +5415,16 @@ class UserApi
      *
      * Users education by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EducationReadCollection
      */
-    public function v1UsersByUserIdEducationGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
+    public function v1UsersByUserIdEducationGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdEducationGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdEducationGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -5433,16 +5433,16 @@ class UserApi
      *
      * Users education by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EducationReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEducationGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
+    public function v1UsersByUserIdEducationGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
     {
-        $request = $this->v1UsersByUserIdEducationGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEducationGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5557,15 +5557,15 @@ class UserApi
      *
      * Users education by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
+    public function v1UsersByUserIdEducationGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
     {
-        return $this->v1UsersByUserIdEducationGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdEducationGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5578,16 +5578,16 @@ class UserApi
      *
      * Users education by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
+    public function v1UsersByUserIdEducationGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
     {
         $returnType = '\SKY\School\Model\EducationReadCollection';
-        $request = $this->v1UsersByUserIdEducationGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEducationGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5628,19 +5628,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEducationGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEducationGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
+    public function v1UsersByUserIdEducationGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdEducationGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEducationGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEducationGet'
             );
         }
 
@@ -5655,10 +5655,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -5732,17 +5732,17 @@ class UserApi
      *
      * Users education create (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EducationAdd $education_add The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EducationAdd $educationAdd The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdEducationPost($user_id, $education_add = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
+    public function v1UsersByUserIdEducationPost($userId, $educationAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdEducationPostWithHttpInfo($user_id, $education_add, $contentType);
+        [$response] = $this->v1UsersByUserIdEducationPostWithHttpInfo($userId, $educationAdd, $contentType);
         return $response;
     }
 
@@ -5751,17 +5751,17 @@ class UserApi
      *
      * Users education create (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EducationAdd $education_add The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EducationAdd $educationAdd The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEducationPostWithHttpInfo($user_id, $education_add = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
+    public function v1UsersByUserIdEducationPostWithHttpInfo($userId, $educationAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
     {
-        $request = $this->v1UsersByUserIdEducationPostRequest($user_id, $education_add, $contentType);
+        $request = $this->v1UsersByUserIdEducationPostRequest($userId, $educationAdd, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5876,16 +5876,16 @@ class UserApi
      *
      * Users education create (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EducationAdd $education_add The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EducationAdd $educationAdd The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationPostAsync($user_id, $education_add = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
+    public function v1UsersByUserIdEducationPostAsync($userId, $educationAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
     {
-        return $this->v1UsersByUserIdEducationPostAsyncWithHttpInfo($user_id, $education_add, $contentType)
+        return $this->v1UsersByUserIdEducationPostAsyncWithHttpInfo($userId, $educationAdd, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5898,17 +5898,17 @@ class UserApi
      *
      * Users education create (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EducationAdd $education_add The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EducationAdd $educationAdd The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEducationPostAsyncWithHttpInfo($user_id, $education_add = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
+    public function v1UsersByUserIdEducationPostAsyncWithHttpInfo($userId, $educationAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdEducationPostRequest($user_id, $education_add, $contentType);
+        $request = $this->v1UsersByUserIdEducationPostRequest($userId, $educationAdd, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5949,20 +5949,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEducationPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EducationAdd $education_add The education model. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EducationAdd $educationAdd The education model. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEducationPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEducationPostRequest($user_id, $education_add = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
+    public function v1UsersByUserIdEducationPostRequest($userId, $educationAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdEducationPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEducationPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEducationPost'
             );
         }
 
@@ -5978,10 +5978,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -5994,12 +5994,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($education_add)) {
+        if (isset($educationAdd)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($education_add));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($educationAdd));
             } else {
-                $httpBody = $education_add;
+                $httpBody = $educationAdd;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -6062,16 +6062,16 @@ class UserApi
      *
      * Users emergency contacts by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EmergencyContactList
      */
-    public function v1UsersByUserIdEmergencycontactsGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
+    public function v1UsersByUserIdEmergencycontactsGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdEmergencycontactsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdEmergencycontactsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -6080,16 +6080,16 @@ class UserApi
      *
      * Users emergency contacts by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EmergencyContactList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEmergencycontactsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
+    public function v1UsersByUserIdEmergencycontactsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
     {
-        $request = $this->v1UsersByUserIdEmergencycontactsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6204,15 +6204,15 @@ class UserApi
      *
      * Users emergency contacts by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
+    public function v1UsersByUserIdEmergencycontactsGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
     {
-        return $this->v1UsersByUserIdEmergencycontactsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdEmergencycontactsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6225,16 +6225,16 @@ class UserApi
      *
      * Users emergency contacts by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
+    public function v1UsersByUserIdEmergencycontactsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
     {
         $returnType = '\SKY\School\Model\EmergencyContactList';
-        $request = $this->v1UsersByUserIdEmergencycontactsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6275,19 +6275,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEmergencycontactsGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEmergencycontactsGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
+    public function v1UsersByUserIdEmergencycontactsGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEmergencycontactsGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEmergencycontactsGet'
             );
         }
 
@@ -6302,10 +6302,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -6379,17 +6379,17 @@ class UserApi
      *
      * Users emergency contact non-user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergency_contact_non_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergencyContactNonUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdEmergencycontactsNonuserPost($user_id, $emergency_contact_non_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsNonuserPost($userId, $emergencyContactNonUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
     {
-        $this->v1UsersByUserIdEmergencycontactsNonuserPostWithHttpInfo($user_id, $emergency_contact_non_user_create, $contentType);
+        $this->v1UsersByUserIdEmergencycontactsNonuserPostWithHttpInfo($userId, $emergencyContactNonUserCreate, $contentType);
     }
 
     /**
@@ -6397,17 +6397,17 @@ class UserApi
      *
      * Users emergency contact non-user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergency_contact_non_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergencyContactNonUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEmergencycontactsNonuserPostWithHttpInfo($user_id, $emergency_contact_non_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsNonuserPostWithHttpInfo($userId, $emergencyContactNonUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
     {
-        $request = $this->v1UsersByUserIdEmergencycontactsNonuserPostRequest($user_id, $emergency_contact_non_user_create, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsNonuserPostRequest($userId, $emergencyContactNonUserCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6458,16 +6458,16 @@ class UserApi
      *
      * Users emergency contact non-user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergency_contact_non_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergencyContactNonUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsNonuserPostAsync($user_id, $emergency_contact_non_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsNonuserPostAsync($userId, $emergencyContactNonUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
     {
-        return $this->v1UsersByUserIdEmergencycontactsNonuserPostAsyncWithHttpInfo($user_id, $emergency_contact_non_user_create, $contentType)
+        return $this->v1UsersByUserIdEmergencycontactsNonuserPostAsyncWithHttpInfo($userId, $emergencyContactNonUserCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6480,17 +6480,17 @@ class UserApi
      *
      * Users emergency contact non-user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergency_contact_non_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergencyContactNonUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsNonuserPostAsyncWithHttpInfo($user_id, $emergency_contact_non_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsNonuserPostAsyncWithHttpInfo($userId, $emergencyContactNonUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdEmergencycontactsNonuserPostRequest($user_id, $emergency_contact_non_user_create, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsNonuserPostRequest($userId, $emergencyContactNonUserCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6518,20 +6518,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEmergencycontactsNonuserPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergency_contact_non_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactNonUserCreate $emergencyContactNonUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEmergencycontactsNonuserPostRequest($user_id, $emergency_contact_non_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsNonuserPostRequest($userId, $emergencyContactNonUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsNonuserPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEmergencycontactsNonuserPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEmergencycontactsNonuserPost'
             );
         }
 
@@ -6547,10 +6547,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -6563,12 +6563,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($emergency_contact_non_user_create)) {
+        if (isset($emergencyContactNonUserCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($emergency_contact_non_user_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($emergencyContactNonUserCreate));
             } else {
-                $httpBody = $emergency_contact_non_user_create;
+                $httpBody = $emergencyContactNonUserCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -6631,17 +6631,17 @@ class UserApi
      *
      * Users emergency contact user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergency_contact_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergencyContactUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdEmergencycontactsUserPost($user_id, $emergency_contact_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsUserPost($userId, $emergencyContactUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
     {
-        $this->v1UsersByUserIdEmergencycontactsUserPostWithHttpInfo($user_id, $emergency_contact_user_create, $contentType);
+        $this->v1UsersByUserIdEmergencycontactsUserPostWithHttpInfo($userId, $emergencyContactUserCreate, $contentType);
     }
 
     /**
@@ -6649,17 +6649,17 @@ class UserApi
      *
      * Users emergency contact user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergency_contact_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergencyContactUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEmergencycontactsUserPostWithHttpInfo($user_id, $emergency_contact_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsUserPostWithHttpInfo($userId, $emergencyContactUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
     {
-        $request = $this->v1UsersByUserIdEmergencycontactsUserPostRequest($user_id, $emergency_contact_user_create, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsUserPostRequest($userId, $emergencyContactUserCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6710,16 +6710,16 @@ class UserApi
      *
      * Users emergency contact user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergency_contact_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergencyContactUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsUserPostAsync($user_id, $emergency_contact_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsUserPostAsync($userId, $emergencyContactUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
     {
-        return $this->v1UsersByUserIdEmergencycontactsUserPostAsyncWithHttpInfo($user_id, $emergency_contact_user_create, $contentType)
+        return $this->v1UsersByUserIdEmergencycontactsUserPostAsyncWithHttpInfo($userId, $emergencyContactUserCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6732,17 +6732,17 @@ class UserApi
      *
      * Users emergency contact user create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergency_contact_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergencyContactUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmergencycontactsUserPostAsyncWithHttpInfo($user_id, $emergency_contact_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsUserPostAsyncWithHttpInfo($userId, $emergencyContactUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdEmergencycontactsUserPostRequest($user_id, $emergency_contact_user_create, $contentType);
+        $request = $this->v1UsersByUserIdEmergencycontactsUserPostRequest($userId, $emergencyContactUserCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6770,20 +6770,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEmergencycontactsUserPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergency_contact_user_create  (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\EmergencyContactUserCreate $emergencyContactUserCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEmergencycontactsUserPostRequest($user_id, $emergency_contact_user_create = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
+    public function v1UsersByUserIdEmergencycontactsUserPostRequest($userId, $emergencyContactUserCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdEmergencycontactsUserPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEmergencycontactsUserPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEmergencycontactsUserPost'
             );
         }
 
@@ -6799,10 +6799,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -6815,12 +6815,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($emergency_contact_user_create)) {
+        if (isset($emergencyContactUserCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($emergency_contact_user_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($emergencyContactUserCreate));
             } else {
-                $httpBody = $emergency_contact_user_create;
+                $httpBody = $emergencyContactUserCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -6883,16 +6883,16 @@ class UserApi
      *
      * Users employment by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmploymentGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\FacultyEmploymentRead
      */
-    public function v1UsersByUserIdEmploymentGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
+    public function v1UsersByUserIdEmploymentGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdEmploymentGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdEmploymentGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -6901,16 +6901,16 @@ class UserApi
      *
      * Users employment by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmploymentGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\FacultyEmploymentRead, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdEmploymentGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
+    public function v1UsersByUserIdEmploymentGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
     {
-        $request = $this->v1UsersByUserIdEmploymentGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEmploymentGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7025,15 +7025,15 @@ class UserApi
      *
      * Users employment by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmploymentGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmploymentGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
+    public function v1UsersByUserIdEmploymentGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
     {
-        return $this->v1UsersByUserIdEmploymentGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdEmploymentGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7046,16 +7046,16 @@ class UserApi
      *
      * Users employment by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmploymentGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdEmploymentGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
+    public function v1UsersByUserIdEmploymentGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
     {
         $returnType = '\SKY\School\Model\FacultyEmploymentRead';
-        $request = $this->v1UsersByUserIdEmploymentGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdEmploymentGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7096,19 +7096,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdEmploymentGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdEmploymentGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdEmploymentGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
+    public function v1UsersByUserIdEmploymentGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdEmploymentGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdEmploymentGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdEmploymentGet'
             );
         }
 
@@ -7123,10 +7123,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -7200,16 +7200,16 @@ class UserApi
      *
      * User by ID
      *
-     * @param  int $user_id Format - int32. ID of the user to be returned. (required)
+     * @param  int $userId Format - int32. ID of the user to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserRead
      */
-    public function v1UsersByUserIdGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
+    public function v1UsersByUserIdGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -7218,16 +7218,16 @@ class UserApi
      *
      * User by ID
      *
-     * @param  int $user_id Format - int32. ID of the user to be returned. (required)
+     * @param  int $userId Format - int32. ID of the user to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserRead, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
+    public function v1UsersByUserIdGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
     {
-        $request = $this->v1UsersByUserIdGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7342,15 +7342,15 @@ class UserApi
      *
      * User by ID
      *
-     * @param  int $user_id Format - int32. ID of the user to be returned. (required)
+     * @param  int $userId Format - int32. ID of the user to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
+    public function v1UsersByUserIdGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
     {
-        return $this->v1UsersByUserIdGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7363,16 +7363,16 @@ class UserApi
      *
      * User by ID
      *
-     * @param  int $user_id Format - int32. ID of the user to be returned. (required)
+     * @param  int $userId Format - int32. ID of the user to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
+    public function v1UsersByUserIdGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
     {
         $returnType = '\SKY\School\Model\UserRead';
-        $request = $this->v1UsersByUserIdGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7413,19 +7413,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdGet'
      *
-     * @param  int $user_id Format - int32. ID of the user to be returned. (required)
+     * @param  int $userId Format - int32. ID of the user to be returned. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
+    public function v1UsersByUserIdGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdGet'
             );
         }
 
@@ -7440,10 +7440,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -7517,8 +7517,8 @@ class UserApi
      *
      * Users occupation delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
      * @param  bool $current Current Employment Status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'] to see the possible values for this operation
      *
@@ -7526,9 +7526,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdDelete($user_id, $occupation_id, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdDelete($userId, $occupationId, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
     {
-        [$response] = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteWithHttpInfo($user_id, $occupation_id, $current, $contentType);
+        [$response] = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteWithHttpInfo($userId, $occupationId, $current, $contentType);
         return $response;
     }
 
@@ -7537,8 +7537,8 @@ class UserApi
      *
      * Users occupation delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
      * @param  bool $current Current Employment Status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'] to see the possible values for this operation
      *
@@ -7546,9 +7546,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdDeleteWithHttpInfo($user_id, $occupation_id, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdDeleteWithHttpInfo($userId, $occupationId, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
     {
-        $request = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($user_id, $occupation_id, $current, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($userId, $occupationId, $current, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7663,17 +7663,17 @@ class UserApi
      *
      * Users occupation delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
      * @param  bool $current Current Employment Status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdDeleteAsync($user_id, $occupation_id, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdDeleteAsync($userId, $occupationId, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
     {
-        return $this->v1UsersByUserIdOccupationsByOccupationIdDeleteAsyncWithHttpInfo($user_id, $occupation_id, $current, $contentType)
+        return $this->v1UsersByUserIdOccupationsByOccupationIdDeleteAsyncWithHttpInfo($userId, $occupationId, $current, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7686,18 +7686,18 @@ class UserApi
      *
      * Users occupation delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
      * @param  bool $current Current Employment Status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdDeleteAsyncWithHttpInfo($user_id, $occupation_id, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdDeleteAsyncWithHttpInfo($userId, $occupationId, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($user_id, $occupation_id, $current, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($userId, $occupationId, $current, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7738,28 +7738,28 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdOccupationsByOccupationIdDelete'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
      * @param  bool $current Current Employment Status (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($user_id, $occupation_id, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdDeleteRequest($userId, $occupationId, $current = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdDelete'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdOccupationsByOccupationIdDelete'
+                'Missing the required parameter $userId when calling v1UsersByUserIdOccupationsByOccupationIdDelete'
             );
         }
 
-        // verify the required parameter 'occupation_id' is set
-        if ($occupation_id === null || (is_array($occupation_id) && count($occupation_id) === 0)) {
+        // verify the required parameter 'occupationId' is set
+        if ($occupationId === null || (is_array($occupationId) && count($occupationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $occupation_id when calling v1UsersByUserIdOccupationsByOccupationIdDelete'
+                'Missing the required parameter $occupationId when calling v1UsersByUserIdOccupationsByOccupationIdDelete'
             );
         }
 
@@ -7784,18 +7784,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($occupation_id !== null) {
+        if ($occupationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'occupation_id' . '}',
-                ObjectSerializer::toPathValue($occupation_id),
+                ObjectSerializer::toPathValue($occupationId),
                 $resourcePath
             );
         }
@@ -7869,18 +7869,18 @@ class UserApi
      *
      * Users occupation update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
-     * @param  \SKY\School\Model\OccupationUpdate $occupation_update The occupation information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
+     * @param  \SKY\School\Model\OccupationUpdate $occupationUpdate The occupation information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdPatch($user_id, $occupation_id, $occupation_update = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdPatch($userId, $occupationId, $occupationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdOccupationsByOccupationIdPatchWithHttpInfo($user_id, $occupation_id, $occupation_update, $contentType);
+        [$response] = $this->v1UsersByUserIdOccupationsByOccupationIdPatchWithHttpInfo($userId, $occupationId, $occupationUpdate, $contentType);
         return $response;
     }
 
@@ -7889,18 +7889,18 @@ class UserApi
      *
      * Users occupation update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
-     * @param  \SKY\School\Model\OccupationUpdate $occupation_update The occupation information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
+     * @param  \SKY\School\Model\OccupationUpdate $occupationUpdate The occupation information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdPatchWithHttpInfo($user_id, $occupation_id, $occupation_update = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdPatchWithHttpInfo($userId, $occupationId, $occupationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
     {
-        $request = $this->v1UsersByUserIdOccupationsByOccupationIdPatchRequest($user_id, $occupation_id, $occupation_update, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsByOccupationIdPatchRequest($userId, $occupationId, $occupationUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8015,17 +8015,17 @@ class UserApi
      *
      * Users occupation update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
-     * @param  \SKY\School\Model\OccupationUpdate $occupation_update The occupation information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
+     * @param  \SKY\School\Model\OccupationUpdate $occupationUpdate The occupation information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdPatchAsync($user_id, $occupation_id, $occupation_update = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdPatchAsync($userId, $occupationId, $occupationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
     {
-        return $this->v1UsersByUserIdOccupationsByOccupationIdPatchAsyncWithHttpInfo($user_id, $occupation_id, $occupation_update, $contentType)
+        return $this->v1UsersByUserIdOccupationsByOccupationIdPatchAsyncWithHttpInfo($userId, $occupationId, $occupationUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8038,18 +8038,18 @@ class UserApi
      *
      * Users occupation update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
-     * @param  \SKY\School\Model\OccupationUpdate $occupation_update The occupation information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
+     * @param  \SKY\School\Model\OccupationUpdate $occupationUpdate The occupation information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdPatchAsyncWithHttpInfo($user_id, $occupation_id, $occupation_update = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdPatchAsyncWithHttpInfo($userId, $occupationId, $occupationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdOccupationsByOccupationIdPatchRequest($user_id, $occupation_id, $occupation_update, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsByOccupationIdPatchRequest($userId, $occupationId, $occupationUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8090,28 +8090,28 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdOccupationsByOccupationIdPatch'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $occupation_id Format - int32. The ID of the occupation. (required)
-     * @param  \SKY\School\Model\OccupationUpdate $occupation_update The occupation information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $occupationId Format - int32. The ID of the occupation. (required)
+     * @param  \SKY\School\Model\OccupationUpdate $occupationUpdate The occupation information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdOccupationsByOccupationIdPatchRequest($user_id, $occupation_id, $occupation_update = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
+    public function v1UsersByUserIdOccupationsByOccupationIdPatchRequest($userId, $occupationId, $occupationUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsByOccupationIdPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdOccupationsByOccupationIdPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdOccupationsByOccupationIdPatch'
             );
         }
 
-        // verify the required parameter 'occupation_id' is set
-        if ($occupation_id === null || (is_array($occupation_id) && count($occupation_id) === 0)) {
+        // verify the required parameter 'occupationId' is set
+        if ($occupationId === null || (is_array($occupationId) && count($occupationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $occupation_id when calling v1UsersByUserIdOccupationsByOccupationIdPatch'
+                'Missing the required parameter $occupationId when calling v1UsersByUserIdOccupationsByOccupationIdPatch'
             );
         }
 
@@ -8127,18 +8127,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($occupation_id !== null) {
+        if ($occupationId !== null) {
             $resourcePath = str_replace(
                 '{' . 'occupation_id' . '}',
-                ObjectSerializer::toPathValue($occupation_id),
+                ObjectSerializer::toPathValue($occupationId),
                 $resourcePath
             );
         }
@@ -8151,12 +8151,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($occupation_update)) {
+        if (isset($occupationUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($occupation_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($occupationUpdate));
             } else {
-                $httpBody = $occupation_update;
+                $httpBody = $occupationUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -8219,16 +8219,16 @@ class UserApi
      *
      * Users occupations by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\OccupationReadCollection
      */
-    public function v1UsersByUserIdOccupationsGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
+    public function v1UsersByUserIdOccupationsGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdOccupationsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdOccupationsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -8237,16 +8237,16 @@ class UserApi
      *
      * Users occupations by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\OccupationReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdOccupationsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
+    public function v1UsersByUserIdOccupationsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
     {
-        $request = $this->v1UsersByUserIdOccupationsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8361,15 +8361,15 @@ class UserApi
      *
      * Users occupations by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
+    public function v1UsersByUserIdOccupationsGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
     {
-        return $this->v1UsersByUserIdOccupationsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdOccupationsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8382,16 +8382,16 @@ class UserApi
      *
      * Users occupations by user ID
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
+    public function v1UsersByUserIdOccupationsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
     {
         $returnType = '\SKY\School\Model\OccupationReadCollection';
-        $request = $this->v1UsersByUserIdOccupationsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8432,19 +8432,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdOccupationsGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdOccupationsGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
+    public function v1UsersByUserIdOccupationsGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdOccupationsGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdOccupationsGet'
             );
         }
 
@@ -8459,10 +8459,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -8536,17 +8536,17 @@ class UserApi
      *
      * Users occupation create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\OccupationCreate $occupation_create The occupation information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\OccupationCreate $occupationCreate The occupation information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdOccupationsPost($user_id, $occupation_create = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
+    public function v1UsersByUserIdOccupationsPost($userId, $occupationCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdOccupationsPostWithHttpInfo($user_id, $occupation_create, $contentType);
+        [$response] = $this->v1UsersByUserIdOccupationsPostWithHttpInfo($userId, $occupationCreate, $contentType);
         return $response;
     }
 
@@ -8555,17 +8555,17 @@ class UserApi
      *
      * Users occupation create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\OccupationCreate $occupation_create The occupation information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\OccupationCreate $occupationCreate The occupation information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdOccupationsPostWithHttpInfo($user_id, $occupation_create = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
+    public function v1UsersByUserIdOccupationsPostWithHttpInfo($userId, $occupationCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
     {
-        $request = $this->v1UsersByUserIdOccupationsPostRequest($user_id, $occupation_create, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsPostRequest($userId, $occupationCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8680,16 +8680,16 @@ class UserApi
      *
      * Users occupation create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\OccupationCreate $occupation_create The occupation information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\OccupationCreate $occupationCreate The occupation information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsPostAsync($user_id, $occupation_create = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
+    public function v1UsersByUserIdOccupationsPostAsync($userId, $occupationCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
     {
-        return $this->v1UsersByUserIdOccupationsPostAsyncWithHttpInfo($user_id, $occupation_create, $contentType)
+        return $this->v1UsersByUserIdOccupationsPostAsyncWithHttpInfo($userId, $occupationCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8702,17 +8702,17 @@ class UserApi
      *
      * Users occupation create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\OccupationCreate $occupation_create The occupation information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\OccupationCreate $occupationCreate The occupation information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdOccupationsPostAsyncWithHttpInfo($user_id, $occupation_create = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
+    public function v1UsersByUserIdOccupationsPostAsyncWithHttpInfo($userId, $occupationCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdOccupationsPostRequest($user_id, $occupation_create, $contentType);
+        $request = $this->v1UsersByUserIdOccupationsPostRequest($userId, $occupationCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8753,20 +8753,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdOccupationsPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\OccupationCreate $occupation_create The occupation information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\OccupationCreate $occupationCreate The occupation information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdOccupationsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdOccupationsPostRequest($user_id, $occupation_create = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
+    public function v1UsersByUserIdOccupationsPostRequest($userId, $occupationCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdOccupationsPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdOccupationsPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdOccupationsPost'
             );
         }
 
@@ -8782,10 +8782,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -8798,12 +8798,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($occupation_create)) {
+        if (isset($occupationCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($occupation_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($occupationCreate));
             } else {
-                $httpBody = $occupation_create;
+                $httpBody = $occupationCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -8866,18 +8866,18 @@ class UserApi
      *
      * Users phone delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The ID of the user&#39;s phone to delete. (required)
-     * @param  int $phone_type_id Format - int32. The ID of the phone type. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The ID of the user&#39;s phone to delete. (required)
+     * @param  int $phoneTypeId Format - int32. The ID of the phone type. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete($user_id, $phone_id, $phone_type_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete($userId, $phoneId, $phoneTypeId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
     {
-        $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteWithHttpInfo($user_id, $phone_id, $phone_type_id, $contentType);
+        $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteWithHttpInfo($userId, $phoneId, $phoneTypeId, $contentType);
     }
 
     /**
@@ -8885,18 +8885,18 @@ class UserApi
      *
      * Users phone delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The ID of the user&#39;s phone to delete. (required)
-     * @param  int $phone_type_id Format - int32. The ID of the phone type. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The ID of the user&#39;s phone to delete. (required)
+     * @param  int $phoneTypeId Format - int32. The ID of the phone type. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteWithHttpInfo($user_id, $phone_id, $phone_type_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteWithHttpInfo($userId, $phoneId, $phoneTypeId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
     {
-        $request = $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($user_id, $phone_id, $phone_type_id, $contentType);
+        $request = $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($userId, $phoneId, $phoneTypeId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8947,17 +8947,17 @@ class UserApi
      *
      * Users phone delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The ID of the user&#39;s phone to delete. (required)
-     * @param  int $phone_type_id Format - int32. The ID of the phone type. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The ID of the user&#39;s phone to delete. (required)
+     * @param  int $phoneTypeId Format - int32. The ID of the phone type. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsync($user_id, $phone_id, $phone_type_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsync($userId, $phoneId, $phoneTypeId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
     {
-        return $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsyncWithHttpInfo($user_id, $phone_id, $phone_type_id, $contentType)
+        return $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsyncWithHttpInfo($userId, $phoneId, $phoneTypeId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8970,18 +8970,18 @@ class UserApi
      *
      * Users phone delete (BETA)
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The ID of the user&#39;s phone to delete. (required)
-     * @param  int $phone_type_id Format - int32. The ID of the phone type. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The ID of the user&#39;s phone to delete. (required)
+     * @param  int $phoneTypeId Format - int32. The ID of the phone type. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsyncWithHttpInfo($user_id, $phone_id, $phone_type_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteAsyncWithHttpInfo($userId, $phoneId, $phoneTypeId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($user_id, $phone_id, $phone_type_id, $contentType);
+        $request = $this->v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($userId, $phoneId, $phoneTypeId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9009,35 +9009,35 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The ID of the user&#39;s phone to delete. (required)
-     * @param  int $phone_type_id Format - int32. The ID of the phone type. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The ID of the user&#39;s phone to delete. (required)
+     * @param  int $phoneTypeId Format - int32. The ID of the phone type. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($user_id, $phone_id, $phone_type_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDeleteRequest($userId, $phoneId, $phoneTypeId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
+                'Missing the required parameter $userId when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
             );
         }
 
-        // verify the required parameter 'phone_id' is set
-        if ($phone_id === null || (is_array($phone_id) && count($phone_id) === 0)) {
+        // verify the required parameter 'phoneId' is set
+        if ($phoneId === null || (is_array($phoneId) && count($phoneId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phone_id when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
+                'Missing the required parameter $phoneId when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
             );
         }
 
-        // verify the required parameter 'phone_type_id' is set
-        if ($phone_type_id === null || (is_array($phone_type_id) && count($phone_type_id) === 0)) {
+        // verify the required parameter 'phoneTypeId' is set
+        if ($phoneTypeId === null || (is_array($phoneTypeId) && count($phoneTypeId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phone_type_id when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
+                'Missing the required parameter $phoneTypeId when calling v1UsersByUserIdPhonesByPhoneIdByPhoneTypeIdDelete'
             );
         }
 
@@ -9052,26 +9052,26 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($phone_id !== null) {
+        if ($phoneId !== null) {
             $resourcePath = str_replace(
                 '{' . 'phone_id' . '}',
-                ObjectSerializer::toPathValue($phone_id),
+                ObjectSerializer::toPathValue($phoneId),
                 $resourcePath
             );
         }
         // path params
-        if ($phone_type_id !== null) {
+        if ($phoneTypeId !== null) {
             $resourcePath = str_replace(
                 '{' . 'phone_type_id' . '}',
-                ObjectSerializer::toPathValue($phone_type_id),
+                ObjectSerializer::toPathValue($phoneTypeId),
                 $resourcePath
             );
         }
@@ -9145,19 +9145,19 @@ class UserApi
      *
      * Users phone update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The phone id to be updated. (required)
-     * @param  bool $split_phone_if_shared Set to true if phone number is shared (optional, default to false)
-     * @param  \SKY\School\Model\PhoneUpdate $phone_update The phone information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The phone id to be updated. (required)
+     * @param  bool $splitPhoneIfShared Set to true if phone number is shared (optional, default to false)
+     * @param  \SKY\School\Model\PhoneUpdate $phoneUpdate The phone information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdPhonesByPhoneIdPatch($user_id, $phone_id, $split_phone_if_shared = false, $phone_update = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdPatch($userId, $phoneId, $splitPhoneIfShared = false, $phoneUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
     {
-        [$response] = $this->v1UsersByUserIdPhonesByPhoneIdPatchWithHttpInfo($user_id, $phone_id, $split_phone_if_shared, $phone_update, $contentType);
+        [$response] = $this->v1UsersByUserIdPhonesByPhoneIdPatchWithHttpInfo($userId, $phoneId, $splitPhoneIfShared, $phoneUpdate, $contentType);
         return $response;
     }
 
@@ -9166,19 +9166,19 @@ class UserApi
      *
      * Users phone update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The phone id to be updated. (required)
-     * @param  bool $split_phone_if_shared Set to true if phone number is shared (optional, default to false)
-     * @param  \SKY\School\Model\PhoneUpdate $phone_update The phone information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The phone id to be updated. (required)
+     * @param  bool $splitPhoneIfShared Set to true if phone number is shared (optional, default to false)
+     * @param  \SKY\School\Model\PhoneUpdate $phoneUpdate The phone information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdPhonesByPhoneIdPatchWithHttpInfo($user_id, $phone_id, $split_phone_if_shared = false, $phone_update = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdPatchWithHttpInfo($userId, $phoneId, $splitPhoneIfShared = false, $phoneUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
     {
-        $request = $this->v1UsersByUserIdPhonesByPhoneIdPatchRequest($user_id, $phone_id, $split_phone_if_shared, $phone_update, $contentType);
+        $request = $this->v1UsersByUserIdPhonesByPhoneIdPatchRequest($userId, $phoneId, $splitPhoneIfShared, $phoneUpdate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9293,18 +9293,18 @@ class UserApi
      *
      * Users phone update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The phone id to be updated. (required)
-     * @param  bool $split_phone_if_shared Set to true if phone number is shared (optional, default to false)
-     * @param  \SKY\School\Model\PhoneUpdate $phone_update The phone information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The phone id to be updated. (required)
+     * @param  bool $splitPhoneIfShared Set to true if phone number is shared (optional, default to false)
+     * @param  \SKY\School\Model\PhoneUpdate $phoneUpdate The phone information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesByPhoneIdPatchAsync($user_id, $phone_id, $split_phone_if_shared = false, $phone_update = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdPatchAsync($userId, $phoneId, $splitPhoneIfShared = false, $phoneUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
     {
-        return $this->v1UsersByUserIdPhonesByPhoneIdPatchAsyncWithHttpInfo($user_id, $phone_id, $split_phone_if_shared, $phone_update, $contentType)
+        return $this->v1UsersByUserIdPhonesByPhoneIdPatchAsyncWithHttpInfo($userId, $phoneId, $splitPhoneIfShared, $phoneUpdate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9317,19 +9317,19 @@ class UserApi
      *
      * Users phone update
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The phone id to be updated. (required)
-     * @param  bool $split_phone_if_shared Set to true if phone number is shared (optional, default to false)
-     * @param  \SKY\School\Model\PhoneUpdate $phone_update The phone information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The phone id to be updated. (required)
+     * @param  bool $splitPhoneIfShared Set to true if phone number is shared (optional, default to false)
+     * @param  \SKY\School\Model\PhoneUpdate $phoneUpdate The phone information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesByPhoneIdPatchAsyncWithHttpInfo($user_id, $phone_id, $split_phone_if_shared = false, $phone_update = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdPatchAsyncWithHttpInfo($userId, $phoneId, $splitPhoneIfShared = false, $phoneUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdPhonesByPhoneIdPatchRequest($user_id, $phone_id, $split_phone_if_shared, $phone_update, $contentType);
+        $request = $this->v1UsersByUserIdPhonesByPhoneIdPatchRequest($userId, $phoneId, $splitPhoneIfShared, $phoneUpdate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9370,29 +9370,29 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdPhonesByPhoneIdPatch'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  int $phone_id Format - int32. The phone id to be updated. (required)
-     * @param  bool $split_phone_if_shared Set to true if phone number is shared (optional, default to false)
-     * @param  \SKY\School\Model\PhoneUpdate $phone_update The phone information to be updated. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  int $phoneId Format - int32. The phone id to be updated. (required)
+     * @param  bool $splitPhoneIfShared Set to true if phone number is shared (optional, default to false)
+     * @param  \SKY\School\Model\PhoneUpdate $phoneUpdate The phone information to be updated. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdPhonesByPhoneIdPatchRequest($user_id, $phone_id, $split_phone_if_shared = false, $phone_update = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
+    public function v1UsersByUserIdPhonesByPhoneIdPatchRequest($userId, $phoneId, $splitPhoneIfShared = false, $phoneUpdate = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesByPhoneIdPatch'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdPhonesByPhoneIdPatch'
+                'Missing the required parameter $userId when calling v1UsersByUserIdPhonesByPhoneIdPatch'
             );
         }
 
-        // verify the required parameter 'phone_id' is set
-        if ($phone_id === null || (is_array($phone_id) && count($phone_id) === 0)) {
+        // verify the required parameter 'phoneId' is set
+        if ($phoneId === null || (is_array($phoneId) && count($phoneId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phone_id when calling v1UsersByUserIdPhonesByPhoneIdPatch'
+                'Missing the required parameter $phoneId when calling v1UsersByUserIdPhonesByPhoneIdPatch'
             );
         }
 
@@ -9408,7 +9408,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $split_phone_if_shared,
+            $splitPhoneIfShared,
             'split_phone_if_shared', // param base name
             'boolean', // openApiType
             'form', // style
@@ -9418,18 +9418,18 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
         // path params
-        if ($phone_id !== null) {
+        if ($phoneId !== null) {
             $resourcePath = str_replace(
                 '{' . 'phone_id' . '}',
-                ObjectSerializer::toPathValue($phone_id),
+                ObjectSerializer::toPathValue($phoneId),
                 $resourcePath
             );
         }
@@ -9442,12 +9442,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($phone_update)) {
+        if (isset($phoneUpdate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phone_update));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneUpdate));
             } else {
-                $httpBody = $phone_update;
+                $httpBody = $phoneUpdate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -9510,16 +9510,16 @@ class UserApi
      *
      * Users phones by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\PhoneReadCollection
      */
-    public function v1UsersByUserIdPhonesGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
+    public function v1UsersByUserIdPhonesGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdPhonesGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdPhonesGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -9528,16 +9528,16 @@ class UserApi
      *
      * Users phones by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\PhoneReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdPhonesGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
+    public function v1UsersByUserIdPhonesGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
     {
-        $request = $this->v1UsersByUserIdPhonesGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdPhonesGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9652,15 +9652,15 @@ class UserApi
      *
      * Users phones by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
+    public function v1UsersByUserIdPhonesGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
     {
-        return $this->v1UsersByUserIdPhonesGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdPhonesGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9673,16 +9673,16 @@ class UserApi
      *
      * Users phones by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
+    public function v1UsersByUserIdPhonesGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
     {
         $returnType = '\SKY\School\Model\PhoneReadCollection';
-        $request = $this->v1UsersByUserIdPhonesGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdPhonesGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9723,19 +9723,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdPhonesGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdPhonesGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
+    public function v1UsersByUserIdPhonesGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdPhonesGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdPhonesGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdPhonesGet'
             );
         }
 
@@ -9750,10 +9750,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -9827,17 +9827,17 @@ class UserApi
      *
      * Users phone create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\PhoneAdd $phone_add The phone information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\PhoneAdd $phoneAdd The phone information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdPhonesPost($user_id, $phone_add = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
+    public function v1UsersByUserIdPhonesPost($userId, $phoneAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
     {
-        [$response] = $this->v1UsersByUserIdPhonesPostWithHttpInfo($user_id, $phone_add, $contentType);
+        [$response] = $this->v1UsersByUserIdPhonesPostWithHttpInfo($userId, $phoneAdd, $contentType);
         return $response;
     }
 
@@ -9846,17 +9846,17 @@ class UserApi
      *
      * Users phone create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\PhoneAdd $phone_add The phone information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\PhoneAdd $phoneAdd The phone information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdPhonesPostWithHttpInfo($user_id, $phone_add = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
+    public function v1UsersByUserIdPhonesPostWithHttpInfo($userId, $phoneAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
     {
-        $request = $this->v1UsersByUserIdPhonesPostRequest($user_id, $phone_add, $contentType);
+        $request = $this->v1UsersByUserIdPhonesPostRequest($userId, $phoneAdd, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9971,16 +9971,16 @@ class UserApi
      *
      * Users phone create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\PhoneAdd $phone_add The phone information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\PhoneAdd $phoneAdd The phone information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesPostAsync($user_id, $phone_add = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
+    public function v1UsersByUserIdPhonesPostAsync($userId, $phoneAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
     {
-        return $this->v1UsersByUserIdPhonesPostAsyncWithHttpInfo($user_id, $phone_add, $contentType)
+        return $this->v1UsersByUserIdPhonesPostAsyncWithHttpInfo($userId, $phoneAdd, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9993,17 +9993,17 @@ class UserApi
      *
      * Users phone create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\PhoneAdd $phone_add The phone information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\PhoneAdd $phoneAdd The phone information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesPostAsyncWithHttpInfo($user_id, $phone_add = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
+    public function v1UsersByUserIdPhonesPostAsyncWithHttpInfo($userId, $phoneAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdPhonesPostRequest($user_id, $phone_add, $contentType);
+        $request = $this->v1UsersByUserIdPhonesPostRequest($userId, $phoneAdd, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10044,20 +10044,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdPhonesPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\PhoneAdd $phone_add The phone information to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\PhoneAdd $phoneAdd The phone information to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdPhonesPostRequest($user_id, $phone_add = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
+    public function v1UsersByUserIdPhonesPostRequest($userId, $phoneAdd = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdPhonesPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdPhonesPost'
             );
         }
 
@@ -10073,10 +10073,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -10089,12 +10089,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($phone_add)) {
+        if (isset($phoneAdd)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phone_add));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneAdd));
             } else {
-                $httpBody = $phone_add;
+                $httpBody = $phoneAdd;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -10157,17 +10157,17 @@ class UserApi
      *
      * Users phone create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\PhoneShare $phone_share The details about the phone number that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\PhoneShare $phoneShare The details about the phone number that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesSharePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersByUserIdPhonesSharePost($user_id, $phone_share = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
+    public function v1UsersByUserIdPhonesSharePost($userId, $phoneShare = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
     {
-        [$response] = $this->v1UsersByUserIdPhonesSharePostWithHttpInfo($user_id, $phone_share, $contentType);
+        [$response] = $this->v1UsersByUserIdPhonesSharePostWithHttpInfo($userId, $phoneShare, $contentType);
         return $response;
     }
 
@@ -10176,17 +10176,17 @@ class UserApi
      *
      * Users phone create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\PhoneShare $phone_share The details about the phone number that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\PhoneShare $phoneShare The details about the phone number that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesSharePost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdPhonesSharePostWithHttpInfo($user_id, $phone_share = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
+    public function v1UsersByUserIdPhonesSharePostWithHttpInfo($userId, $phoneShare = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
     {
-        $request = $this->v1UsersByUserIdPhonesSharePostRequest($user_id, $phone_share, $contentType);
+        $request = $this->v1UsersByUserIdPhonesSharePostRequest($userId, $phoneShare, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10301,16 +10301,16 @@ class UserApi
      *
      * Users phone create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\PhoneShare $phone_share The details about the phone number that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\PhoneShare $phoneShare The details about the phone number that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesSharePostAsync($user_id, $phone_share = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
+    public function v1UsersByUserIdPhonesSharePostAsync($userId, $phoneShare = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
     {
-        return $this->v1UsersByUserIdPhonesSharePostAsyncWithHttpInfo($user_id, $phone_share, $contentType)
+        return $this->v1UsersByUserIdPhonesSharePostAsyncWithHttpInfo($userId, $phoneShare, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10323,17 +10323,17 @@ class UserApi
      *
      * Users phone create - shared (BETA)
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\PhoneShare $phone_share The details about the phone number that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\PhoneShare $phoneShare The details about the phone number that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdPhonesSharePostAsyncWithHttpInfo($user_id, $phone_share = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
+    public function v1UsersByUserIdPhonesSharePostAsyncWithHttpInfo($userId, $phoneShare = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersByUserIdPhonesSharePostRequest($user_id, $phone_share, $contentType);
+        $request = $this->v1UsersByUserIdPhonesSharePostRequest($userId, $phoneShare, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10374,20 +10374,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdPhonesSharePost'
      *
-     * @param  int $user_id Format - int32. The Id of the user the existing address should be shared. (required)
-     * @param  \SKY\School\Model\PhoneShare $phone_share The details about the phone number that should be shared with the user. (optional)
+     * @param  int $userId Format - int32. The Id of the user the existing address should be shared. (required)
+     * @param  \SKY\School\Model\PhoneShare $phoneShare The details about the phone number that should be shared with the user. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdPhonesSharePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdPhonesSharePostRequest($user_id, $phone_share = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
+    public function v1UsersByUserIdPhonesSharePostRequest($userId, $phoneShare = null, string $contentType = self::contentTypes['v1UsersByUserIdPhonesSharePost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdPhonesSharePost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdPhonesSharePost'
             );
         }
 
@@ -10403,10 +10403,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -10419,12 +10419,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($phone_share)) {
+        if (isset($phoneShare)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phone_share));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneShare));
             } else {
-                $httpBody = $phone_share;
+                $httpBody = $phoneShare;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -10487,18 +10487,18 @@ class UserApi
      *
      * Users relationship delete
      *
-     * @param  int $user_id Format - int32. The ID of the user for whom you are deleting the relationship. (required)
-     * @param  int $left_user Format - int32. ID of the other user in the relationship. (required)
-     * @param  string $relationship_type Defines the relationship between left_user and this user. (required)
+     * @param  int $userId Format - int32. The ID of the user for whom you are deleting the relationship. (required)
+     * @param  int $leftUser Format - int32. ID of the other user in the relationship. (required)
+     * @param  string $relationshipType Defines the relationship between left_user and this user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdRelationshipsDelete($user_id, $left_user, $relationship_type, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
+    public function v1UsersByUserIdRelationshipsDelete($userId, $leftUser, $relationshipType, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
     {
-        $this->v1UsersByUserIdRelationshipsDeleteWithHttpInfo($user_id, $left_user, $relationship_type, $contentType);
+        $this->v1UsersByUserIdRelationshipsDeleteWithHttpInfo($userId, $leftUser, $relationshipType, $contentType);
     }
 
     /**
@@ -10506,18 +10506,18 @@ class UserApi
      *
      * Users relationship delete
      *
-     * @param  int $user_id Format - int32. The ID of the user for whom you are deleting the relationship. (required)
-     * @param  int $left_user Format - int32. ID of the other user in the relationship. (required)
-     * @param  string $relationship_type Defines the relationship between left_user and this user. (required)
+     * @param  int $userId Format - int32. The ID of the user for whom you are deleting the relationship. (required)
+     * @param  int $leftUser Format - int32. ID of the other user in the relationship. (required)
+     * @param  string $relationshipType Defines the relationship between left_user and this user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsDelete'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdRelationshipsDeleteWithHttpInfo($user_id, $left_user, $relationship_type, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
+    public function v1UsersByUserIdRelationshipsDeleteWithHttpInfo($userId, $leftUser, $relationshipType, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
     {
-        $request = $this->v1UsersByUserIdRelationshipsDeleteRequest($user_id, $left_user, $relationship_type, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsDeleteRequest($userId, $leftUser, $relationshipType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10568,17 +10568,17 @@ class UserApi
      *
      * Users relationship delete
      *
-     * @param  int $user_id Format - int32. The ID of the user for whom you are deleting the relationship. (required)
-     * @param  int $left_user Format - int32. ID of the other user in the relationship. (required)
-     * @param  string $relationship_type Defines the relationship between left_user and this user. (required)
+     * @param  int $userId Format - int32. The ID of the user for whom you are deleting the relationship. (required)
+     * @param  int $leftUser Format - int32. ID of the other user in the relationship. (required)
+     * @param  string $relationshipType Defines the relationship between left_user and this user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsDeleteAsync($user_id, $left_user, $relationship_type, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
+    public function v1UsersByUserIdRelationshipsDeleteAsync($userId, $leftUser, $relationshipType, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
     {
-        return $this->v1UsersByUserIdRelationshipsDeleteAsyncWithHttpInfo($user_id, $left_user, $relationship_type, $contentType)
+        return $this->v1UsersByUserIdRelationshipsDeleteAsyncWithHttpInfo($userId, $leftUser, $relationshipType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10591,18 +10591,18 @@ class UserApi
      *
      * Users relationship delete
      *
-     * @param  int $user_id Format - int32. The ID of the user for whom you are deleting the relationship. (required)
-     * @param  int $left_user Format - int32. ID of the other user in the relationship. (required)
-     * @param  string $relationship_type Defines the relationship between left_user and this user. (required)
+     * @param  int $userId Format - int32. The ID of the user for whom you are deleting the relationship. (required)
+     * @param  int $leftUser Format - int32. ID of the other user in the relationship. (required)
+     * @param  string $relationshipType Defines the relationship between left_user and this user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsDeleteAsyncWithHttpInfo($user_id, $left_user, $relationship_type, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
+    public function v1UsersByUserIdRelationshipsDeleteAsyncWithHttpInfo($userId, $leftUser, $relationshipType, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdRelationshipsDeleteRequest($user_id, $left_user, $relationship_type, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsDeleteRequest($userId, $leftUser, $relationshipType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10630,35 +10630,35 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdRelationshipsDelete'
      *
-     * @param  int $user_id Format - int32. The ID of the user for whom you are deleting the relationship. (required)
-     * @param  int $left_user Format - int32. ID of the other user in the relationship. (required)
-     * @param  string $relationship_type Defines the relationship between left_user and this user. (required)
+     * @param  int $userId Format - int32. The ID of the user for whom you are deleting the relationship. (required)
+     * @param  int $leftUser Format - int32. ID of the other user in the relationship. (required)
+     * @param  string $relationshipType Defines the relationship between left_user and this user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdRelationshipsDeleteRequest($user_id, $left_user, $relationship_type, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
+    public function v1UsersByUserIdRelationshipsDeleteRequest($userId, $leftUser, $relationshipType, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsDelete'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdRelationshipsDelete'
+                'Missing the required parameter $userId when calling v1UsersByUserIdRelationshipsDelete'
             );
         }
 
-        // verify the required parameter 'left_user' is set
-        if ($left_user === null || (is_array($left_user) && count($left_user) === 0)) {
+        // verify the required parameter 'leftUser' is set
+        if ($leftUser === null || (is_array($leftUser) && count($leftUser) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $left_user when calling v1UsersByUserIdRelationshipsDelete'
+                'Missing the required parameter $leftUser when calling v1UsersByUserIdRelationshipsDelete'
             );
         }
 
-        // verify the required parameter 'relationship_type' is set
-        if ($relationship_type === null || (is_array($relationship_type) && count($relationship_type) === 0)) {
+        // verify the required parameter 'relationshipType' is set
+        if ($relationshipType === null || (is_array($relationshipType) && count($relationshipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $relationship_type when calling v1UsersByUserIdRelationshipsDelete'
+                'Missing the required parameter $relationshipType when calling v1UsersByUserIdRelationshipsDelete'
             );
         }
 
@@ -10672,7 +10672,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $left_user,
+            $leftUser,
             'left_user', // param base name
             'integer', // openApiType
             'form', // style
@@ -10681,7 +10681,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $relationship_type,
+            $relationshipType,
             'relationship_type', // param base name
             'string', // openApiType
             'form', // style
@@ -10691,10 +10691,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -10768,16 +10768,16 @@ class UserApi
      *
      * Users relationships by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\RelationshipReadCollection
      */
-    public function v1UsersByUserIdRelationshipsGet($user_id, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
+    public function v1UsersByUserIdRelationshipsGet($userId, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
     {
-        [$response] = $this->v1UsersByUserIdRelationshipsGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersByUserIdRelationshipsGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -10786,16 +10786,16 @@ class UserApi
      *
      * Users relationships by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\RelationshipReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdRelationshipsGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
+    public function v1UsersByUserIdRelationshipsGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
     {
-        $request = $this->v1UsersByUserIdRelationshipsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10910,15 +10910,15 @@ class UserApi
      *
      * Users relationships by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsGetAsync($user_id, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
+    public function v1UsersByUserIdRelationshipsGetAsync($userId, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
     {
-        return $this->v1UsersByUserIdRelationshipsGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersByUserIdRelationshipsGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10931,16 +10931,16 @@ class UserApi
      *
      * Users relationships by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
+    public function v1UsersByUserIdRelationshipsGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
     {
         $returnType = '\SKY\School\Model\RelationshipReadCollection';
-        $request = $this->v1UsersByUserIdRelationshipsGetRequest($user_id, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10981,19 +10981,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdRelationshipsGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdRelationshipsGetRequest($user_id, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
+    public function v1UsersByUserIdRelationshipsGetRequest($userId, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdRelationshipsGet'
+                'Missing the required parameter $userId when calling v1UsersByUserIdRelationshipsGet'
             );
         }
 
@@ -11008,10 +11008,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -11085,17 +11085,17 @@ class UserApi
      *
      * Users relationship create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\RelationshipCreate $relationship_create Defines the relationship to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\RelationshipCreate $relationshipCreate Defines the relationship to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function v1UsersByUserIdRelationshipsPost($user_id, $relationship_create = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
+    public function v1UsersByUserIdRelationshipsPost($userId, $relationshipCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
     {
-        $this->v1UsersByUserIdRelationshipsPostWithHttpInfo($user_id, $relationship_create, $contentType);
+        $this->v1UsersByUserIdRelationshipsPostWithHttpInfo($userId, $relationshipCreate, $contentType);
     }
 
     /**
@@ -11103,17 +11103,17 @@ class UserApi
      *
      * Users relationship create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\RelationshipCreate $relationship_create Defines the relationship to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\RelationshipCreate $relationshipCreate Defines the relationship to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersByUserIdRelationshipsPostWithHttpInfo($user_id, $relationship_create = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
+    public function v1UsersByUserIdRelationshipsPostWithHttpInfo($userId, $relationshipCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
     {
-        $request = $this->v1UsersByUserIdRelationshipsPostRequest($user_id, $relationship_create, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsPostRequest($userId, $relationshipCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11164,16 +11164,16 @@ class UserApi
      *
      * Users relationship create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\RelationshipCreate $relationship_create Defines the relationship to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\RelationshipCreate $relationshipCreate Defines the relationship to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsPostAsync($user_id, $relationship_create = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
+    public function v1UsersByUserIdRelationshipsPostAsync($userId, $relationshipCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
     {
-        return $this->v1UsersByUserIdRelationshipsPostAsyncWithHttpInfo($user_id, $relationship_create, $contentType)
+        return $this->v1UsersByUserIdRelationshipsPostAsyncWithHttpInfo($userId, $relationshipCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11186,17 +11186,17 @@ class UserApi
      *
      * Users relationship create
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\RelationshipCreate $relationship_create Defines the relationship to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\RelationshipCreate $relationshipCreate Defines the relationship to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersByUserIdRelationshipsPostAsyncWithHttpInfo($user_id, $relationship_create = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
+    public function v1UsersByUserIdRelationshipsPostAsyncWithHttpInfo($userId, $relationshipCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
     {
         $returnType = '';
-        $request = $this->v1UsersByUserIdRelationshipsPostRequest($user_id, $relationship_create, $contentType);
+        $request = $this->v1UsersByUserIdRelationshipsPostRequest($userId, $relationshipCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11224,20 +11224,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersByUserIdRelationshipsPost'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
-     * @param  \SKY\School\Model\RelationshipCreate $relationship_create Defines the relationship to be created. (optional)
+     * @param  int $userId Format - int32. The ID of the user. (required)
+     * @param  \SKY\School\Model\RelationshipCreate $relationshipCreate Defines the relationship to be created. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersByUserIdRelationshipsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersByUserIdRelationshipsPostRequest($user_id, $relationship_create = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
+    public function v1UsersByUserIdRelationshipsPostRequest($userId, $relationshipCreate = null, string $contentType = self::contentTypes['v1UsersByUserIdRelationshipsPost'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersByUserIdRelationshipsPost'
+                'Missing the required parameter $userId when calling v1UsersByUserIdRelationshipsPost'
             );
         }
 
@@ -11253,10 +11253,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -11269,12 +11269,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($relationship_create)) {
+        if (isset($relationshipCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($relationship_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($relationshipCreate));
             } else {
-                $httpBody = $relationship_create;
+                $httpBody = $relationshipCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -11337,17 +11337,17 @@ class UserApi
      *
      * Users changed by base role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersChangedGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserExtendedCollection
      */
-    public function v1UsersChangedGet($base_role_ids, $start_date, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
+    public function v1UsersChangedGet($baseRoleIds, $startDate, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
     {
-        [$response] = $this->v1UsersChangedGetWithHttpInfo($base_role_ids, $start_date, $contentType);
+        [$response] = $this->v1UsersChangedGetWithHttpInfo($baseRoleIds, $startDate, $contentType);
         return $response;
     }
 
@@ -11356,17 +11356,17 @@ class UserApi
      *
      * Users changed by base role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersChangedGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserExtendedCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersChangedGetWithHttpInfo($base_role_ids, $start_date, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
+    public function v1UsersChangedGetWithHttpInfo($baseRoleIds, $startDate, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
     {
-        $request = $this->v1UsersChangedGetRequest($base_role_ids, $start_date, $contentType);
+        $request = $this->v1UsersChangedGetRequest($baseRoleIds, $startDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11481,16 +11481,16 @@ class UserApi
      *
      * Users changed by base role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersChangedGetAsync($base_role_ids, $start_date, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
+    public function v1UsersChangedGetAsync($baseRoleIds, $startDate, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
     {
-        return $this->v1UsersChangedGetAsyncWithHttpInfo($base_role_ids, $start_date, $contentType)
+        return $this->v1UsersChangedGetAsyncWithHttpInfo($baseRoleIds, $startDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11503,17 +11503,17 @@ class UserApi
      *
      * Users changed by base role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersChangedGetAsyncWithHttpInfo($base_role_ids, $start_date, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
+    public function v1UsersChangedGetAsyncWithHttpInfo($baseRoleIds, $startDate, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
     {
         $returnType = '\SKY\School\Model\UserExtendedCollection';
-        $request = $this->v1UsersChangedGetRequest($base_role_ids, $start_date, $contentType);
+        $request = $this->v1UsersChangedGetRequest($baseRoleIds, $startDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11554,27 +11554,27 @@ class UserApi
     /**
      * Create request for operation 'v1UsersChangedGet'
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersChangedGetRequest($base_role_ids, $start_date, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
+    public function v1UsersChangedGetRequest($baseRoleIds, $startDate, string $contentType = self::contentTypes['v1UsersChangedGet'][0])
     {
 
-        // verify the required parameter 'base_role_ids' is set
-        if ($base_role_ids === null || (is_array($base_role_ids) && count($base_role_ids) === 0)) {
+        // verify the required parameter 'baseRoleIds' is set
+        if ($baseRoleIds === null || (is_array($baseRoleIds) && count($baseRoleIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $base_role_ids when calling v1UsersChangedGet'
+                'Missing the required parameter $baseRoleIds when calling v1UsersChangedGet'
             );
         }
 
-        // verify the required parameter 'start_date' is set
-        if ($start_date === null || (is_array($start_date) && count($start_date) === 0)) {
+        // verify the required parameter 'startDate' is set
+        if ($startDate === null || (is_array($startDate) && count($startDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $start_date when calling v1UsersChangedGet'
+                'Missing the required parameter $startDate when calling v1UsersChangedGet'
             );
         }
 
@@ -11588,7 +11588,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $base_role_ids,
+            $baseRoleIds,
             'base_role_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -11597,7 +11597,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -11676,18 +11676,18 @@ class UserApi
      *
      * Users custom fields list by base role(s)
      *
-     * @param  string $base_role_ids A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
+     * @param  string $baseRoleIds A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
      * @param  int $marker Format - int32. The user&#39;s &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
-     * @param  string $field_ids A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
+     * @param  string $fieldIds A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserAdminCustomFieldCollection
      */
-    public function v1UsersCustomfieldsGet($base_role_ids, $marker = null, $field_ids = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
+    public function v1UsersCustomfieldsGet($baseRoleIds, $marker = null, $fieldIds = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
     {
-        [$response] = $this->v1UsersCustomfieldsGetWithHttpInfo($base_role_ids, $marker, $field_ids, $contentType);
+        [$response] = $this->v1UsersCustomfieldsGetWithHttpInfo($baseRoleIds, $marker, $fieldIds, $contentType);
         return $response;
     }
 
@@ -11696,18 +11696,18 @@ class UserApi
      *
      * Users custom fields list by base role(s)
      *
-     * @param  string $base_role_ids A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
+     * @param  string $baseRoleIds A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
      * @param  int $marker Format - int32. The user&#39;s &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
-     * @param  string $field_ids A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
+     * @param  string $fieldIds A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserAdminCustomFieldCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersCustomfieldsGetWithHttpInfo($base_role_ids, $marker = null, $field_ids = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
+    public function v1UsersCustomfieldsGetWithHttpInfo($baseRoleIds, $marker = null, $fieldIds = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
     {
-        $request = $this->v1UsersCustomfieldsGetRequest($base_role_ids, $marker, $field_ids, $contentType);
+        $request = $this->v1UsersCustomfieldsGetRequest($baseRoleIds, $marker, $fieldIds, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11822,17 +11822,17 @@ class UserApi
      *
      * Users custom fields list by base role(s)
      *
-     * @param  string $base_role_ids A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
+     * @param  string $baseRoleIds A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
      * @param  int $marker Format - int32. The user&#39;s &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
-     * @param  string $field_ids A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
+     * @param  string $fieldIds A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersCustomfieldsGetAsync($base_role_ids, $marker = null, $field_ids = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
+    public function v1UsersCustomfieldsGetAsync($baseRoleIds, $marker = null, $fieldIds = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
     {
-        return $this->v1UsersCustomfieldsGetAsyncWithHttpInfo($base_role_ids, $marker, $field_ids, $contentType)
+        return $this->v1UsersCustomfieldsGetAsyncWithHttpInfo($baseRoleIds, $marker, $fieldIds, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11845,18 +11845,18 @@ class UserApi
      *
      * Users custom fields list by base role(s)
      *
-     * @param  string $base_role_ids A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
+     * @param  string $baseRoleIds A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
      * @param  int $marker Format - int32. The user&#39;s &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
-     * @param  string $field_ids A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
+     * @param  string $fieldIds A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersCustomfieldsGetAsyncWithHttpInfo($base_role_ids, $marker = null, $field_ids = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
+    public function v1UsersCustomfieldsGetAsyncWithHttpInfo($baseRoleIds, $marker = null, $fieldIds = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
     {
         $returnType = '\SKY\School\Model\UserAdminCustomFieldCollection';
-        $request = $this->v1UsersCustomfieldsGetRequest($base_role_ids, $marker, $field_ids, $contentType);
+        $request = $this->v1UsersCustomfieldsGetRequest($baseRoleIds, $marker, $fieldIds, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11897,21 +11897,21 @@ class UserApi
     /**
      * Create request for operation 'v1UsersCustomfieldsGet'
      *
-     * @param  string $base_role_ids A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
+     * @param  string $baseRoleIds A comma delimited list of base role IDs to get users for. Example: &#x60;&#x60;&#x60;base_role_ids&#x3D;14,16&#x60;&#x60;&#x60; for Students and Parents. (required)
      * @param  int $marker Format - int32. The user&#39;s &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
-     * @param  string $field_ids A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
+     * @param  string $fieldIds A comma delimited list of field IDs to filter the result set down to. Only matching custom fields will be returned from that result set for all users in that set even if they don&#39;t have any data for the given &#x60;&#x60;&#x60;field_ids&#x60;&#x60;&#x60;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersCustomfieldsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersCustomfieldsGetRequest($base_role_ids, $marker = null, $field_ids = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
+    public function v1UsersCustomfieldsGetRequest($baseRoleIds, $marker = null, $fieldIds = null, string $contentType = self::contentTypes['v1UsersCustomfieldsGet'][0])
     {
 
-        // verify the required parameter 'base_role_ids' is set
-        if ($base_role_ids === null || (is_array($base_role_ids) && count($base_role_ids) === 0)) {
+        // verify the required parameter 'baseRoleIds' is set
+        if ($baseRoleIds === null || (is_array($baseRoleIds) && count($baseRoleIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $base_role_ids when calling v1UsersCustomfieldsGet'
+                'Missing the required parameter $baseRoleIds when calling v1UsersCustomfieldsGet'
             );
         }
 
@@ -11927,7 +11927,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $base_role_ids,
+            $baseRoleIds,
             'base_role_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -11945,7 +11945,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $field_ids,
+            $fieldIds,
             'field_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -12024,7 +12024,7 @@ class UserApi
      *
      * Users emergency contact changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEmergencycontactsChangedGet'] to see the possible values for this operation
      *
@@ -12032,9 +12032,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\EmergencyContactChangeCollection
      */
-    public function v1UsersEmergencycontactsChangedGet($start_date = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
+    public function v1UsersEmergencycontactsChangedGet($startDate = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
     {
-        [$response] = $this->v1UsersEmergencycontactsChangedGetWithHttpInfo($start_date, $marker, $contentType);
+        [$response] = $this->v1UsersEmergencycontactsChangedGetWithHttpInfo($startDate, $marker, $contentType);
         return $response;
     }
 
@@ -12043,7 +12043,7 @@ class UserApi
      *
      * Users emergency contact changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEmergencycontactsChangedGet'] to see the possible values for this operation
      *
@@ -12051,9 +12051,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\EmergencyContactChangeCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersEmergencycontactsChangedGetWithHttpInfo($start_date = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
+    public function v1UsersEmergencycontactsChangedGetWithHttpInfo($startDate = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
     {
-        $request = $this->v1UsersEmergencycontactsChangedGetRequest($start_date, $marker, $contentType);
+        $request = $this->v1UsersEmergencycontactsChangedGetRequest($startDate, $marker, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12168,16 +12168,16 @@ class UserApi
      *
      * Users emergency contact changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEmergencycontactsChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEmergencycontactsChangedGetAsync($start_date = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
+    public function v1UsersEmergencycontactsChangedGetAsync($startDate = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
     {
-        return $this->v1UsersEmergencycontactsChangedGetAsyncWithHttpInfo($start_date, $marker, $contentType)
+        return $this->v1UsersEmergencycontactsChangedGetAsyncWithHttpInfo($startDate, $marker, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12190,17 +12190,17 @@ class UserApi
      *
      * Users emergency contact changes
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEmergencycontactsChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEmergencycontactsChangedGetAsyncWithHttpInfo($start_date = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
+    public function v1UsersEmergencycontactsChangedGetAsyncWithHttpInfo($startDate = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
     {
         $returnType = '\SKY\School\Model\EmergencyContactChangeCollection';
-        $request = $this->v1UsersEmergencycontactsChangedGetRequest($start_date, $marker, $contentType);
+        $request = $this->v1UsersEmergencycontactsChangedGetRequest($startDate, $marker, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12241,14 +12241,14 @@ class UserApi
     /**
      * Create request for operation 'v1UsersEmergencycontactsChangedGet'
      *
-     * @param  \DateTime $start_date Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
+     * @param  \DateTime $startDate Format - date-time (as date-time in RFC3339). The date to begin looking for changes. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2022-04-16. (optional)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEmergencycontactsChangedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersEmergencycontactsChangedGetRequest($start_date = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
+    public function v1UsersEmergencycontactsChangedGetRequest($startDate = null, $marker = 0, string $contentType = self::contentTypes['v1UsersEmergencycontactsChangedGet'][0])
     {
 
 
@@ -12263,7 +12263,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $start_date,
+            $startDate,
             'start_date', // param base name
             'string', // openApiType
             'form', // style
@@ -12351,16 +12351,16 @@ class UserApi
      *
      * Users enrollment create
      *
-     * @param  \SKY\School\Model\UserEnrollmentCreate $user_enrollment_create  (optional)
+     * @param  \SKY\School\Model\UserEnrollmentCreate $userEnrollmentCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserEnrollmentResponse
      */
-    public function v1UsersEnrollPost($user_enrollment_create = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
+    public function v1UsersEnrollPost($userEnrollmentCreate = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
     {
-        [$response] = $this->v1UsersEnrollPostWithHttpInfo($user_enrollment_create, $contentType);
+        [$response] = $this->v1UsersEnrollPostWithHttpInfo($userEnrollmentCreate, $contentType);
         return $response;
     }
 
@@ -12369,16 +12369,16 @@ class UserApi
      *
      * Users enrollment create
      *
-     * @param  \SKY\School\Model\UserEnrollmentCreate $user_enrollment_create  (optional)
+     * @param  \SKY\School\Model\UserEnrollmentCreate $userEnrollmentCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserEnrollmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersEnrollPostWithHttpInfo($user_enrollment_create = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
+    public function v1UsersEnrollPostWithHttpInfo($userEnrollmentCreate = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
     {
-        $request = $this->v1UsersEnrollPostRequest($user_enrollment_create, $contentType);
+        $request = $this->v1UsersEnrollPostRequest($userEnrollmentCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12493,15 +12493,15 @@ class UserApi
      *
      * Users enrollment create
      *
-     * @param  \SKY\School\Model\UserEnrollmentCreate $user_enrollment_create  (optional)
+     * @param  \SKY\School\Model\UserEnrollmentCreate $userEnrollmentCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEnrollPostAsync($user_enrollment_create = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
+    public function v1UsersEnrollPostAsync($userEnrollmentCreate = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
     {
-        return $this->v1UsersEnrollPostAsyncWithHttpInfo($user_enrollment_create, $contentType)
+        return $this->v1UsersEnrollPostAsyncWithHttpInfo($userEnrollmentCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12514,16 +12514,16 @@ class UserApi
      *
      * Users enrollment create
      *
-     * @param  \SKY\School\Model\UserEnrollmentCreate $user_enrollment_create  (optional)
+     * @param  \SKY\School\Model\UserEnrollmentCreate $userEnrollmentCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEnrollPostAsyncWithHttpInfo($user_enrollment_create = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
+    public function v1UsersEnrollPostAsyncWithHttpInfo($userEnrollmentCreate = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
     {
         $returnType = '\SKY\School\Model\UserEnrollmentResponse';
-        $request = $this->v1UsersEnrollPostRequest($user_enrollment_create, $contentType);
+        $request = $this->v1UsersEnrollPostRequest($userEnrollmentCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12564,13 +12564,13 @@ class UserApi
     /**
      * Create request for operation 'v1UsersEnrollPost'
      *
-     * @param  \SKY\School\Model\UserEnrollmentCreate $user_enrollment_create  (optional)
+     * @param  \SKY\School\Model\UserEnrollmentCreate $userEnrollmentCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersEnrollPostRequest($user_enrollment_create = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
+    public function v1UsersEnrollPostRequest($userEnrollmentCreate = null, string $contentType = self::contentTypes['v1UsersEnrollPost'][0])
     {
 
 
@@ -12593,12 +12593,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_enrollment_create)) {
+        if (isset($userEnrollmentCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_enrollment_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userEnrollmentCreate));
             } else {
-                $httpBody = $user_enrollment_create;
+                $httpBody = $userEnrollmentCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -12661,9 +12661,9 @@ class UserApi
      *
      * Users enrollments by year
      *
-     * @param  string $school_year The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
-     * @param  int $school_level_id Format - int32. The school level Id to return enrollments for. Optional. (optional)
-     * @param  int $grade_level_id Format - int32. The grade level Id to return enrollments for. Optional. (optional)
+     * @param  string $schoolYear The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
+     * @param  int $schoolLevelId Format - int32. The school level Id to return enrollments for. Optional. (optional)
+     * @param  int $gradeLevelId Format - int32. The grade level Id to return enrollments for. Optional. (optional)
      * @param  int $limit Format - int32. The number of records to return.  Defaults to 1000. Maximum is 5000. (optional, default to 1000)
      * @param  int $offset Format - int32. The record to start the next collection on. Defaults to 0. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollmentsGet'] to see the possible values for this operation
@@ -12672,9 +12672,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserEnrollmentCollection
      */
-    public function v1UsersEnrollmentsGet($school_year, $school_level_id = null, $grade_level_id = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
+    public function v1UsersEnrollmentsGet($schoolYear, $schoolLevelId = null, $gradeLevelId = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
     {
-        [$response] = $this->v1UsersEnrollmentsGetWithHttpInfo($school_year, $school_level_id, $grade_level_id, $limit, $offset, $contentType);
+        [$response] = $this->v1UsersEnrollmentsGetWithHttpInfo($schoolYear, $schoolLevelId, $gradeLevelId, $limit, $offset, $contentType);
         return $response;
     }
 
@@ -12683,9 +12683,9 @@ class UserApi
      *
      * Users enrollments by year
      *
-     * @param  string $school_year The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
-     * @param  int $school_level_id Format - int32. The school level Id to return enrollments for. Optional. (optional)
-     * @param  int $grade_level_id Format - int32. The grade level Id to return enrollments for. Optional. (optional)
+     * @param  string $schoolYear The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
+     * @param  int $schoolLevelId Format - int32. The school level Id to return enrollments for. Optional. (optional)
+     * @param  int $gradeLevelId Format - int32. The grade level Id to return enrollments for. Optional. (optional)
      * @param  int $limit Format - int32. The number of records to return.  Defaults to 1000. Maximum is 5000. (optional, default to 1000)
      * @param  int $offset Format - int32. The record to start the next collection on. Defaults to 0. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollmentsGet'] to see the possible values for this operation
@@ -12694,9 +12694,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserEnrollmentCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersEnrollmentsGetWithHttpInfo($school_year, $school_level_id = null, $grade_level_id = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
+    public function v1UsersEnrollmentsGetWithHttpInfo($schoolYear, $schoolLevelId = null, $gradeLevelId = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
     {
-        $request = $this->v1UsersEnrollmentsGetRequest($school_year, $school_level_id, $grade_level_id, $limit, $offset, $contentType);
+        $request = $this->v1UsersEnrollmentsGetRequest($schoolYear, $schoolLevelId, $gradeLevelId, $limit, $offset, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -12811,9 +12811,9 @@ class UserApi
      *
      * Users enrollments by year
      *
-     * @param  string $school_year The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
-     * @param  int $school_level_id Format - int32. The school level Id to return enrollments for. Optional. (optional)
-     * @param  int $grade_level_id Format - int32. The grade level Id to return enrollments for. Optional. (optional)
+     * @param  string $schoolYear The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
+     * @param  int $schoolLevelId Format - int32. The school level Id to return enrollments for. Optional. (optional)
+     * @param  int $gradeLevelId Format - int32. The grade level Id to return enrollments for. Optional. (optional)
      * @param  int $limit Format - int32. The number of records to return.  Defaults to 1000. Maximum is 5000. (optional, default to 1000)
      * @param  int $offset Format - int32. The record to start the next collection on. Defaults to 0. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollmentsGet'] to see the possible values for this operation
@@ -12821,9 +12821,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEnrollmentsGetAsync($school_year, $school_level_id = null, $grade_level_id = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
+    public function v1UsersEnrollmentsGetAsync($schoolYear, $schoolLevelId = null, $gradeLevelId = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
     {
-        return $this->v1UsersEnrollmentsGetAsyncWithHttpInfo($school_year, $school_level_id, $grade_level_id, $limit, $offset, $contentType)
+        return $this->v1UsersEnrollmentsGetAsyncWithHttpInfo($schoolYear, $schoolLevelId, $gradeLevelId, $limit, $offset, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -12836,9 +12836,9 @@ class UserApi
      *
      * Users enrollments by year
      *
-     * @param  string $school_year The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
-     * @param  int $school_level_id Format - int32. The school level Id to return enrollments for. Optional. (optional)
-     * @param  int $grade_level_id Format - int32. The grade level Id to return enrollments for. Optional. (optional)
+     * @param  string $schoolYear The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
+     * @param  int $schoolLevelId Format - int32. The school level Id to return enrollments for. Optional. (optional)
+     * @param  int $gradeLevelId Format - int32. The grade level Id to return enrollments for. Optional. (optional)
      * @param  int $limit Format - int32. The number of records to return.  Defaults to 1000. Maximum is 5000. (optional, default to 1000)
      * @param  int $offset Format - int32. The record to start the next collection on. Defaults to 0. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollmentsGet'] to see the possible values for this operation
@@ -12846,10 +12846,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersEnrollmentsGetAsyncWithHttpInfo($school_year, $school_level_id = null, $grade_level_id = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
+    public function v1UsersEnrollmentsGetAsyncWithHttpInfo($schoolYear, $schoolLevelId = null, $gradeLevelId = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
     {
         $returnType = '\SKY\School\Model\UserEnrollmentCollection';
-        $request = $this->v1UsersEnrollmentsGetRequest($school_year, $school_level_id, $grade_level_id, $limit, $offset, $contentType);
+        $request = $this->v1UsersEnrollmentsGetRequest($schoolYear, $schoolLevelId, $gradeLevelId, $limit, $offset, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -12890,9 +12890,9 @@ class UserApi
     /**
      * Create request for operation 'v1UsersEnrollmentsGet'
      *
-     * @param  string $school_year The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
-     * @param  int $school_level_id Format - int32. The school level Id to return enrollments for. Optional. (optional)
-     * @param  int $grade_level_id Format - int32. The grade level Id to return enrollments for. Optional. (optional)
+     * @param  string $schoolYear The school year label to get enrollments for. The school year should be formatted like &#x60;&#x60;&#x60;2022-2023&#x60;&#x60;&#x60; (required)
+     * @param  int $schoolLevelId Format - int32. The school level Id to return enrollments for. Optional. (optional)
+     * @param  int $gradeLevelId Format - int32. The grade level Id to return enrollments for. Optional. (optional)
      * @param  int $limit Format - int32. The number of records to return.  Defaults to 1000. Maximum is 5000. (optional, default to 1000)
      * @param  int $offset Format - int32. The record to start the next collection on. Defaults to 0. (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersEnrollmentsGet'] to see the possible values for this operation
@@ -12900,13 +12900,13 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersEnrollmentsGetRequest($school_year, $school_level_id = null, $grade_level_id = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
+    public function v1UsersEnrollmentsGetRequest($schoolYear, $schoolLevelId = null, $gradeLevelId = null, $limit = 1000, $offset = 0, string $contentType = self::contentTypes['v1UsersEnrollmentsGet'][0])
     {
 
-        // verify the required parameter 'school_year' is set
-        if ($school_year === null || (is_array($school_year) && count($school_year) === 0)) {
+        // verify the required parameter 'schoolYear' is set
+        if ($schoolYear === null || (is_array($schoolYear) && count($schoolYear) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $school_year when calling v1UsersEnrollmentsGet'
+                'Missing the required parameter $schoolYear when calling v1UsersEnrollmentsGet'
             );
         }
 
@@ -12924,7 +12924,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -12933,7 +12933,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_level_id,
+            $schoolLevelId,
             'school_level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -12942,7 +12942,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $grade_level_id,
+            $gradeLevelId,
             'grade_level_id', // param base name
             'integer', // openApiType
             'form', // style
@@ -13039,16 +13039,16 @@ class UserApi
      *
      * Users extended by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserExtended
      */
-    public function v1UsersExtendedByUserIdGet($user_id, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
+    public function v1UsersExtendedByUserIdGet($userId, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
     {
-        [$response] = $this->v1UsersExtendedByUserIdGetWithHttpInfo($user_id, $contentType);
+        [$response] = $this->v1UsersExtendedByUserIdGetWithHttpInfo($userId, $contentType);
         return $response;
     }
 
@@ -13057,16 +13057,16 @@ class UserApi
      *
      * Users extended by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedByUserIdGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserExtended, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersExtendedByUserIdGetWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
+    public function v1UsersExtendedByUserIdGetWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
     {
-        $request = $this->v1UsersExtendedByUserIdGetRequest($user_id, $contentType);
+        $request = $this->v1UsersExtendedByUserIdGetRequest($userId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -13181,15 +13181,15 @@ class UserApi
      *
      * Users extended by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersExtendedByUserIdGetAsync($user_id, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
+    public function v1UsersExtendedByUserIdGetAsync($userId, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
     {
-        return $this->v1UsersExtendedByUserIdGetAsyncWithHttpInfo($user_id, $contentType)
+        return $this->v1UsersExtendedByUserIdGetAsyncWithHttpInfo($userId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13202,16 +13202,16 @@ class UserApi
      *
      * Users extended by user
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersExtendedByUserIdGetAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
+    public function v1UsersExtendedByUserIdGetAsyncWithHttpInfo($userId, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
     {
         $returnType = '\SKY\School\Model\UserExtended';
-        $request = $this->v1UsersExtendedByUserIdGetRequest($user_id, $contentType);
+        $request = $this->v1UsersExtendedByUserIdGetRequest($userId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13252,19 +13252,19 @@ class UserApi
     /**
      * Create request for operation 'v1UsersExtendedByUserIdGet'
      *
-     * @param  int $user_id Format - int32. The ID of the user. (required)
+     * @param  int $userId Format - int32. The ID of the user. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedByUserIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersExtendedByUserIdGetRequest($user_id, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
+    public function v1UsersExtendedByUserIdGetRequest($userId, string $contentType = self::contentTypes['v1UsersExtendedByUserIdGet'][0])
     {
 
-        // verify the required parameter 'user_id' is set
-        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_id when calling v1UsersExtendedByUserIdGet'
+                'Missing the required parameter $userId when calling v1UsersExtendedByUserIdGet'
             );
         }
 
@@ -13279,10 +13279,10 @@ class UserApi
 
 
         // path params
-        if ($user_id !== null) {
+        if ($userId !== null) {
             $resourcePath = str_replace(
                 '{' . 'user_id' . '}',
-                ObjectSerializer::toPathValue($user_id),
+                ObjectSerializer::toPathValue($userId),
                 $resourcePath
             );
         }
@@ -13356,7 +13356,7 @@ class UserApi
      *
      * Users extended by role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedGet'] to see the possible values for this operation
      *
@@ -13364,9 +13364,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserExtendedCollection
      */
-    public function v1UsersExtendedGet($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
+    public function v1UsersExtendedGet($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
     {
-        [$response] = $this->v1UsersExtendedGetWithHttpInfo($base_role_ids, $marker, $contentType);
+        [$response] = $this->v1UsersExtendedGetWithHttpInfo($baseRoleIds, $marker, $contentType);
         return $response;
     }
 
@@ -13375,7 +13375,7 @@ class UserApi
      *
      * Users extended by role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedGet'] to see the possible values for this operation
      *
@@ -13383,9 +13383,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserExtendedCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersExtendedGetWithHttpInfo($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
+    public function v1UsersExtendedGetWithHttpInfo($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
     {
-        $request = $this->v1UsersExtendedGetRequest($base_role_ids, $marker, $contentType);
+        $request = $this->v1UsersExtendedGetRequest($baseRoleIds, $marker, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -13500,16 +13500,16 @@ class UserApi
      *
      * Users extended by role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersExtendedGetAsync($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
+    public function v1UsersExtendedGetAsync($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
     {
-        return $this->v1UsersExtendedGetAsyncWithHttpInfo($base_role_ids, $marker, $contentType)
+        return $this->v1UsersExtendedGetAsyncWithHttpInfo($baseRoleIds, $marker, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -13522,17 +13522,17 @@ class UserApi
      *
      * Users extended by role(s)
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersExtendedGetAsyncWithHttpInfo($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
+    public function v1UsersExtendedGetAsyncWithHttpInfo($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
     {
         $returnType = '\SKY\School\Model\UserExtendedCollection';
-        $request = $this->v1UsersExtendedGetRequest($base_role_ids, $marker, $contentType);
+        $request = $this->v1UsersExtendedGetRequest($baseRoleIds, $marker, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -13573,20 +13573,20 @@ class UserApi
     /**
      * Create request for operation 'v1UsersExtendedGet'
      *
-     * @param  string $base_role_ids Comma delimited list of base role IDs to get users for. (required)
+     * @param  string $baseRoleIds Comma delimited list of base role IDs to get users for. (required)
      * @param  int $marker Format - int32. The user&#39;s ID to start at to return the next batch of data. Results will start with the next user in the result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersExtendedGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersExtendedGetRequest($base_role_ids, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
+    public function v1UsersExtendedGetRequest($baseRoleIds, $marker = null, string $contentType = self::contentTypes['v1UsersExtendedGet'][0])
     {
 
-        // verify the required parameter 'base_role_ids' is set
-        if ($base_role_ids === null || (is_array($base_role_ids) && count($base_role_ids) === 0)) {
+        // verify the required parameter 'baseRoleIds' is set
+        if ($baseRoleIds === null || (is_array($baseRoleIds) && count($baseRoleIds) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $base_role_ids when calling v1UsersExtendedGet'
+                'Missing the required parameter $baseRoleIds when calling v1UsersExtendedGet'
             );
         }
 
@@ -13601,7 +13601,7 @@ class UserApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $base_role_ids,
+            $baseRoleIds,
             'base_role_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -14283,16 +14283,16 @@ class UserApi
      *
      * User update
      *
-     * @param  \SKY\School\Model\UserEdit $user_edit User information to be updated (optional)
+     * @param  \SKY\School\Model\UserEdit $userEdit User information to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersPatch($user_edit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
+    public function v1UsersPatch($userEdit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
     {
-        [$response] = $this->v1UsersPatchWithHttpInfo($user_edit, $contentType);
+        [$response] = $this->v1UsersPatchWithHttpInfo($userEdit, $contentType);
         return $response;
     }
 
@@ -14301,16 +14301,16 @@ class UserApi
      *
      * User update
      *
-     * @param  \SKY\School\Model\UserEdit $user_edit User information to be updated (optional)
+     * @param  \SKY\School\Model\UserEdit $userEdit User information to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPatch'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersPatchWithHttpInfo($user_edit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
+    public function v1UsersPatchWithHttpInfo($userEdit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
     {
-        $request = $this->v1UsersPatchRequest($user_edit, $contentType);
+        $request = $this->v1UsersPatchRequest($userEdit, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -14425,15 +14425,15 @@ class UserApi
      *
      * User update
      *
-     * @param  \SKY\School\Model\UserEdit $user_edit User information to be updated (optional)
+     * @param  \SKY\School\Model\UserEdit $userEdit User information to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersPatchAsync($user_edit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
+    public function v1UsersPatchAsync($userEdit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
     {
-        return $this->v1UsersPatchAsyncWithHttpInfo($user_edit, $contentType)
+        return $this->v1UsersPatchAsyncWithHttpInfo($userEdit, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -14446,16 +14446,16 @@ class UserApi
      *
      * User update
      *
-     * @param  \SKY\School\Model\UserEdit $user_edit User information to be updated (optional)
+     * @param  \SKY\School\Model\UserEdit $userEdit User information to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersPatchAsyncWithHttpInfo($user_edit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
+    public function v1UsersPatchAsyncWithHttpInfo($userEdit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersPatchRequest($user_edit, $contentType);
+        $request = $this->v1UsersPatchRequest($userEdit, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -14496,13 +14496,13 @@ class UserApi
     /**
      * Create request for operation 'v1UsersPatch'
      *
-     * @param  \SKY\School\Model\UserEdit $user_edit User information to be updated (optional)
+     * @param  \SKY\School\Model\UserEdit $userEdit User information to be updated (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersPatchRequest($user_edit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
+    public function v1UsersPatchRequest($userEdit = null, string $contentType = self::contentTypes['v1UsersPatch'][0])
     {
 
 
@@ -14525,12 +14525,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_edit)) {
+        if (isset($userEdit)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_edit));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userEdit));
             } else {
-                $httpBody = $user_edit;
+                $httpBody = $userEdit;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -14890,16 +14890,16 @@ class UserApi
      *
      * User create
      *
-     * @param  \SKY\School\Model\UserAdd $user_add The user to be created (optional)
+     * @param  \SKY\School\Model\UserAdd $userAdd The user to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1UsersPost($user_add = null, string $contentType = self::contentTypes['v1UsersPost'][0])
+    public function v1UsersPost($userAdd = null, string $contentType = self::contentTypes['v1UsersPost'][0])
     {
-        [$response] = $this->v1UsersPostWithHttpInfo($user_add, $contentType);
+        [$response] = $this->v1UsersPostWithHttpInfo($userAdd, $contentType);
         return $response;
     }
 
@@ -14908,16 +14908,16 @@ class UserApi
      *
      * User create
      *
-     * @param  \SKY\School\Model\UserAdd $user_add The user to be created (optional)
+     * @param  \SKY\School\Model\UserAdd $userAdd The user to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1UsersPostWithHttpInfo($user_add = null, string $contentType = self::contentTypes['v1UsersPost'][0])
+    public function v1UsersPostWithHttpInfo($userAdd = null, string $contentType = self::contentTypes['v1UsersPost'][0])
     {
-        $request = $this->v1UsersPostRequest($user_add, $contentType);
+        $request = $this->v1UsersPostRequest($userAdd, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -15032,15 +15032,15 @@ class UserApi
      *
      * User create
      *
-     * @param  \SKY\School\Model\UserAdd $user_add The user to be created (optional)
+     * @param  \SKY\School\Model\UserAdd $userAdd The user to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersPostAsync($user_add = null, string $contentType = self::contentTypes['v1UsersPost'][0])
+    public function v1UsersPostAsync($userAdd = null, string $contentType = self::contentTypes['v1UsersPost'][0])
     {
-        return $this->v1UsersPostAsyncWithHttpInfo($user_add, $contentType)
+        return $this->v1UsersPostAsyncWithHttpInfo($userAdd, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -15053,16 +15053,16 @@ class UserApi
      *
      * User create
      *
-     * @param  \SKY\School\Model\UserAdd $user_add The user to be created (optional)
+     * @param  \SKY\School\Model\UserAdd $userAdd The user to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1UsersPostAsyncWithHttpInfo($user_add = null, string $contentType = self::contentTypes['v1UsersPost'][0])
+    public function v1UsersPostAsyncWithHttpInfo($userAdd = null, string $contentType = self::contentTypes['v1UsersPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1UsersPostRequest($user_add, $contentType);
+        $request = $this->v1UsersPostRequest($userAdd, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -15103,13 +15103,13 @@ class UserApi
     /**
      * Create request for operation 'v1UsersPost'
      *
-     * @param  \SKY\School\Model\UserAdd $user_add The user to be created (optional)
+     * @param  \SKY\School\Model\UserAdd $userAdd The user to be created (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1UsersPostRequest($user_add = null, string $contentType = self::contentTypes['v1UsersPost'][0])
+    public function v1UsersPostRequest($userAdd = null, string $contentType = self::contentTypes['v1UsersPost'][0])
     {
 
 
@@ -15132,12 +15132,12 @@ class UserApi
         );
 
         // for model (json/xml)
-        if (isset($user_add)) {
+        if (isset($userAdd)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_add));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($userAdd));
             } else {
-                $httpBody = $user_add;
+                $httpBody = $userAdd;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -15201,12 +15201,12 @@ class UserApi
      * Users by role(s)
      *
      * @param  string $roles Comma delimited list of role IDs to get users for. (required)
-     * @param  string $first_name Filter results by first name. (optional)
-     * @param  string $last_name Filter results by last name. (optional)
+     * @param  string $firstName Filter results by first name. (optional)
+     * @param  string $lastName Filter results by last name. (optional)
      * @param  string $email Filter results by e-mail. (optional)
-     * @param  string $maiden_name Filter results by maiden name. (optional)
-     * @param  string $grad_year The beginning date in a school year (ex. 2017). (optional)
-     * @param  string $end_grad_year The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
+     * @param  string $maidenName Filter results by maiden name. (optional)
+     * @param  string $gradYear The beginning date in a school year (ex. 2017). (optional)
+     * @param  string $endGradYear The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
      * @param  int $marker Format - int32. The record number start at to return the next batch of data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1usersget'] to see the possible values for this operation
      *
@@ -15214,9 +15214,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\UserReadCollection
      */
-    public function v1usersget($roles, $first_name = null, $last_name = null, $email = null, $maiden_name = null, $grad_year = null, $end_grad_year = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
+    public function v1usersget($roles, $firstName = null, $lastName = null, $email = null, $maidenName = null, $gradYear = null, $endGradYear = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
     {
-        [$response] = $this->v1usersgetWithHttpInfo($roles, $first_name, $last_name, $email, $maiden_name, $grad_year, $end_grad_year, $marker, $contentType);
+        [$response] = $this->v1usersgetWithHttpInfo($roles, $firstName, $lastName, $email, $maidenName, $gradYear, $endGradYear, $marker, $contentType);
         return $response;
     }
 
@@ -15226,12 +15226,12 @@ class UserApi
      * Users by role(s)
      *
      * @param  string $roles Comma delimited list of role IDs to get users for. (required)
-     * @param  string $first_name Filter results by first name. (optional)
-     * @param  string $last_name Filter results by last name. (optional)
+     * @param  string $firstName Filter results by first name. (optional)
+     * @param  string $lastName Filter results by last name. (optional)
      * @param  string $email Filter results by e-mail. (optional)
-     * @param  string $maiden_name Filter results by maiden name. (optional)
-     * @param  string $grad_year The beginning date in a school year (ex. 2017). (optional)
-     * @param  string $end_grad_year The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
+     * @param  string $maidenName Filter results by maiden name. (optional)
+     * @param  string $gradYear The beginning date in a school year (ex. 2017). (optional)
+     * @param  string $endGradYear The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
      * @param  int $marker Format - int32. The record number start at to return the next batch of data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1usersget'] to see the possible values for this operation
      *
@@ -15239,9 +15239,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\UserReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1usersgetWithHttpInfo($roles, $first_name = null, $last_name = null, $email = null, $maiden_name = null, $grad_year = null, $end_grad_year = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
+    public function v1usersgetWithHttpInfo($roles, $firstName = null, $lastName = null, $email = null, $maidenName = null, $gradYear = null, $endGradYear = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
     {
-        $request = $this->v1usersgetRequest($roles, $first_name, $last_name, $email, $maiden_name, $grad_year, $end_grad_year, $marker, $contentType);
+        $request = $this->v1usersgetRequest($roles, $firstName, $lastName, $email, $maidenName, $gradYear, $endGradYear, $marker, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -15357,21 +15357,21 @@ class UserApi
      * Users by role(s)
      *
      * @param  string $roles Comma delimited list of role IDs to get users for. (required)
-     * @param  string $first_name Filter results by first name. (optional)
-     * @param  string $last_name Filter results by last name. (optional)
+     * @param  string $firstName Filter results by first name. (optional)
+     * @param  string $lastName Filter results by last name. (optional)
      * @param  string $email Filter results by e-mail. (optional)
-     * @param  string $maiden_name Filter results by maiden name. (optional)
-     * @param  string $grad_year The beginning date in a school year (ex. 2017). (optional)
-     * @param  string $end_grad_year The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
+     * @param  string $maidenName Filter results by maiden name. (optional)
+     * @param  string $gradYear The beginning date in a school year (ex. 2017). (optional)
+     * @param  string $endGradYear The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
      * @param  int $marker Format - int32. The record number start at to return the next batch of data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1usersget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1usersgetAsync($roles, $first_name = null, $last_name = null, $email = null, $maiden_name = null, $grad_year = null, $end_grad_year = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
+    public function v1usersgetAsync($roles, $firstName = null, $lastName = null, $email = null, $maidenName = null, $gradYear = null, $endGradYear = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
     {
-        return $this->v1usersgetAsyncWithHttpInfo($roles, $first_name, $last_name, $email, $maiden_name, $grad_year, $end_grad_year, $marker, $contentType)
+        return $this->v1usersgetAsyncWithHttpInfo($roles, $firstName, $lastName, $email, $maidenName, $gradYear, $endGradYear, $marker, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -15385,22 +15385,22 @@ class UserApi
      * Users by role(s)
      *
      * @param  string $roles Comma delimited list of role IDs to get users for. (required)
-     * @param  string $first_name Filter results by first name. (optional)
-     * @param  string $last_name Filter results by last name. (optional)
+     * @param  string $firstName Filter results by first name. (optional)
+     * @param  string $lastName Filter results by last name. (optional)
      * @param  string $email Filter results by e-mail. (optional)
-     * @param  string $maiden_name Filter results by maiden name. (optional)
-     * @param  string $grad_year The beginning date in a school year (ex. 2017). (optional)
-     * @param  string $end_grad_year The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
+     * @param  string $maidenName Filter results by maiden name. (optional)
+     * @param  string $gradYear The beginning date in a school year (ex. 2017). (optional)
+     * @param  string $endGradYear The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
      * @param  int $marker Format - int32. The record number start at to return the next batch of data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1usersget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1usersgetAsyncWithHttpInfo($roles, $first_name = null, $last_name = null, $email = null, $maiden_name = null, $grad_year = null, $end_grad_year = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
+    public function v1usersgetAsyncWithHttpInfo($roles, $firstName = null, $lastName = null, $email = null, $maidenName = null, $gradYear = null, $endGradYear = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
     {
         $returnType = '\SKY\School\Model\UserReadCollection';
-        $request = $this->v1usersgetRequest($roles, $first_name, $last_name, $email, $maiden_name, $grad_year, $end_grad_year, $marker, $contentType);
+        $request = $this->v1usersgetRequest($roles, $firstName, $lastName, $email, $maidenName, $gradYear, $endGradYear, $marker, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -15442,19 +15442,19 @@ class UserApi
      * Create request for operation 'v1usersget'
      *
      * @param  string $roles Comma delimited list of role IDs to get users for. (required)
-     * @param  string $first_name Filter results by first name. (optional)
-     * @param  string $last_name Filter results by last name. (optional)
+     * @param  string $firstName Filter results by first name. (optional)
+     * @param  string $lastName Filter results by last name. (optional)
      * @param  string $email Filter results by e-mail. (optional)
-     * @param  string $maiden_name Filter results by maiden name. (optional)
-     * @param  string $grad_year The beginning date in a school year (ex. 2017). (optional)
-     * @param  string $end_grad_year The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
+     * @param  string $maidenName Filter results by maiden name. (optional)
+     * @param  string $gradYear The beginning date in a school year (ex. 2017). (optional)
+     * @param  string $endGradYear The end date in a school year (ex. 2018). Enter a grad_year and end_grad_year to find matching results in the date range. (optional)
      * @param  int $marker Format - int32. The record number start at to return the next batch of data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1usersget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1usersgetRequest($roles, $first_name = null, $last_name = null, $email = null, $maiden_name = null, $grad_year = null, $end_grad_year = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
+    public function v1usersgetRequest($roles, $firstName = null, $lastName = null, $email = null, $maidenName = null, $gradYear = null, $endGradYear = null, $marker = null, string $contentType = self::contentTypes['v1usersget'][0])
     {
 
         // verify the required parameter 'roles' is set
@@ -15490,7 +15490,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $first_name,
+            $firstName,
             'first_name', // param base name
             'string', // openApiType
             'form', // style
@@ -15499,7 +15499,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $last_name,
+            $lastName,
             'last_name', // param base name
             'string', // openApiType
             'form', // style
@@ -15517,7 +15517,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $maiden_name,
+            $maidenName,
             'maiden_name', // param base name
             'string', // openApiType
             'form', // style
@@ -15526,7 +15526,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $grad_year,
+            $gradYear,
             'grad_year', // param base name
             'string', // openApiType
             'form', // style
@@ -15535,7 +15535,7 @@ class UserApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $end_grad_year,
+            $endGradYear,
             'end_grad_year', // param base name
             'string', // openApiType
             'form', // style

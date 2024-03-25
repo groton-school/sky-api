@@ -59,7 +59,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'level_description' => 'string',
+        'levelDescription' => 'string',
         'name' => 'string',
         'sort' => 'int',
     ];
@@ -73,7 +73,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'level_description' => null,
+        'levelDescription' => null,
         'name' => null,
         'sort' => 'int32',
     ];
@@ -85,7 +85,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'level_description' => true,
+        'levelDescription' => true,
         'name' => true,
         'sort' => true,
     ];
@@ -177,7 +177,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'level_description' => 'level_description',
+        'levelDescription' => 'level_description',
         'name' => 'name',
         'sort' => 'sort',
     ];
@@ -189,7 +189,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'level_description' => 'setLevelDescription',
+        'levelDescription' => 'setLevelDescription',
         'name' => 'setName',
         'sort' => 'setSort',
     ];
@@ -201,7 +201,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'level_description' => 'getLevelDescription',
+        'levelDescription' => 'getLevelDescription',
         'name' => 'getName',
         'sort' => 'getSort',
     ];
@@ -264,7 +264,7 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('level_description', $data ?? [], null);
+        $this->setIfExists('levelDescription', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('sort', $data ?? [], null);
     }
@@ -346,35 +346,35 @@ class Department implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets level_description
+     * Gets levelDescription
      *
      * @return string|null
      */
     public function getLevelDescription()
     {
-        return $this->container['level_description'];
+        return $this->container['levelDescription'];
     }
 
     /**
-     * Sets level_description
+     * Sets levelDescription
      *
-     * @param string|null $level_description The description of the level this department is associated with
+     * @param string|null $levelDescription The description of the level this department is associated with
      *
      * @return self
      */
-    public function setLevelDescription($level_description)
+    public function setLevelDescription($levelDescription)
     {
-        if (is_null($level_description)) {
-            array_push($this->openAPINullablesSetToNull, 'level_description');
+        if (is_null($levelDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'levelDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_description', $nullablesSetToNull);
+            $index = array_search('levelDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_description'] = $level_description;
+        $this->container['levelDescription'] = $levelDescription;
 
         return $this;
     }

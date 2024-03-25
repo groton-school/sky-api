@@ -58,7 +58,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'opponent_id' => 'int',
+        'opponentId' => 'int',
     ];
 
     /**
@@ -69,7 +69,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'opponent_id' => 'int32',
+        'opponentId' => 'int32',
     ];
 
     /**
@@ -78,7 +78,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'opponent_id' => false,
+        'opponentId' => false,
     ];
 
     /**
@@ -167,7 +167,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'opponent_id' => 'opponent_id',
+        'opponentId' => 'opponent_id',
     ];
 
     /**
@@ -176,7 +176,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'opponent_id' => 'setOpponentId',
+        'opponentId' => 'setOpponentId',
     ];
 
     /**
@@ -185,7 +185,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'opponent_id' => 'getOpponentId',
+        'opponentId' => 'getOpponentId',
     ];
 
     /**
@@ -245,7 +245,7 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('opponent_id', $data ?? [], null);
+        $this->setIfExists('opponentId', $data ?? [], null);
     }
 
     /**
@@ -291,28 +291,28 @@ class GameOpponent implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets opponent_id
+     * Gets opponentId
      *
      * @return int|null
      */
     public function getOpponentId()
     {
-        return $this->container['opponent_id'];
+        return $this->container['opponentId'];
     }
 
     /**
-     * Sets opponent_id
+     * Sets opponentId
      *
-     * @param int|null $opponent_id the opponent id
+     * @param int|null $opponentId the opponent id
      *
      * @return self
      */
-    public function setOpponentId($opponent_id)
+    public function setOpponentId($opponentId)
     {
-        if (is_null($opponent_id)) {
-            throw new \InvalidArgumentException('non-nullable opponent_id cannot be null');
+        if (is_null($opponentId)) {
+            throw new \InvalidArgumentException('non-nullable opponentId cannot be null');
         }
-        $this->container['opponent_id'] = $opponent_id;
+        $this->container['opponentId'] = $opponentId;
 
         return $this;
     }

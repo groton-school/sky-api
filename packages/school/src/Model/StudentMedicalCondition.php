@@ -58,13 +58,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
+        'userId' => 'int',
         'condition' => 'string',
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
         'notes' => 'string',
-        'access_roles' => '\SKY\School\Model\StudentAccessRole[]',
-        'student_medications' => 'int[]',
+        'accessRoles' => '\SKY\School\Model\StudentAccessRole[]',
+        'studentMedications' => 'int[]',
     ];
 
     /**
@@ -75,13 +75,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
+        'userId' => 'int32',
         'condition' => null,
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
         'notes' => null,
-        'access_roles' => null,
-        'student_medications' => 'int32',
+        'accessRoles' => null,
+        'studentMedications' => 'int32',
     ];
 
     /**
@@ -90,13 +90,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
+        'userId' => false,
         'condition' => false,
-        'date_as_of' => false,
-        'date_until' => true,
+        'dateAsOf' => false,
+        'dateUntil' => true,
         'notes' => true,
-        'access_roles' => true,
-        'student_medications' => true,
+        'accessRoles' => true,
+        'studentMedications' => true,
     ];
 
     /**
@@ -185,13 +185,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
+        'userId' => 'user_id',
         'condition' => 'condition',
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
         'notes' => 'notes',
-        'access_roles' => 'access_roles',
-        'student_medications' => 'student_medications',
+        'accessRoles' => 'access_roles',
+        'studentMedications' => 'student_medications',
     ];
 
     /**
@@ -200,13 +200,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
+        'userId' => 'setUserId',
         'condition' => 'setCondition',
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
         'notes' => 'setNotes',
-        'access_roles' => 'setAccessRoles',
-        'student_medications' => 'setStudentMedications',
+        'accessRoles' => 'setAccessRoles',
+        'studentMedications' => 'setStudentMedications',
     ];
 
     /**
@@ -215,13 +215,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
+        'userId' => 'getUserId',
         'condition' => 'getCondition',
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
         'notes' => 'getNotes',
-        'access_roles' => 'getAccessRoles',
-        'student_medications' => 'getStudentMedications',
+        'accessRoles' => 'getAccessRoles',
+        'studentMedications' => 'getStudentMedications',
     ];
 
     /**
@@ -281,13 +281,13 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
         $this->setIfExists('condition', $data ?? [], null);
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('access_roles', $data ?? [], null);
-        $this->setIfExists('student_medications', $data ?? [], null);
+        $this->setIfExists('accessRoles', $data ?? [], null);
+        $this->setIfExists('studentMedications', $data ?? [], null);
     }
 
     /**
@@ -317,14 +317,14 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['user_id'] === null) {
-            $invalidProperties[] = "'user_id' can't be null";
+        if ($this->container['userId'] === null) {
+            $invalidProperties[] = "'userId' can't be null";
         }
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
         }
-        if ($this->container['date_as_of'] === null) {
-            $invalidProperties[] = "'date_as_of' can't be null";
+        if ($this->container['dateAsOf'] === null) {
+            $invalidProperties[] = "'dateAsOf' can't be null";
         }
         return $invalidProperties;
     }
@@ -342,28 +342,28 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int $user_id The user ID of the student.
+     * @param int $userId The user ID of the student.
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
@@ -396,62 +396,62 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime $date_as_of The start date for the condition. Use ISO-8601 date format: 2022-08-31.
+     * @param \DateTime $dateAsOf The start date for the condition. Use ISO-8601 date format: 2022-08-31.
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            throw new \InvalidArgumentException('non-nullable date_as_of cannot be null');
+        if (is_null($dateAsOf)) {
+            throw new \InvalidArgumentException('non-nullable dateAsOf cannot be null');
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The end date for the condition. Use ISO-8601 date format: 2022-08-31.
+     * @param \DateTime|null $dateUntil The end date for the condition. Use ISO-8601 date format: 2022-08-31.
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }
@@ -491,69 +491,69 @@ class StudentMedicalCondition implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets access_roles
+     * Gets accessRoles
      *
      * @return \SKY\School\Model\StudentAccessRole[]|null
      */
     public function getAccessRoles()
     {
-        return $this->container['access_roles'];
+        return $this->container['accessRoles'];
     }
 
     /**
-     * Sets access_roles
+     * Sets accessRoles
      *
-     * @param \SKY\School\Model\StudentAccessRole[]|null $access_roles An array of access role objects.
+     * @param \SKY\School\Model\StudentAccessRole[]|null $accessRoles An array of access role objects.
      *
      * @return self
      */
-    public function setAccessRoles($access_roles)
+    public function setAccessRoles($accessRoles)
     {
-        if (is_null($access_roles)) {
-            array_push($this->openAPINullablesSetToNull, 'access_roles');
+        if (is_null($accessRoles)) {
+            array_push($this->openAPINullablesSetToNull, 'accessRoles');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('access_roles', $nullablesSetToNull);
+            $index = array_search('accessRoles', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['access_roles'] = $access_roles;
+        $this->container['accessRoles'] = $accessRoles;
 
         return $this;
     }
 
     /**
-     * Gets student_medications
+     * Gets studentMedications
      *
      * @return int[]|null
      */
     public function getStudentMedications()
     {
-        return $this->container['student_medications'];
+        return $this->container['studentMedications'];
     }
 
     /**
-     * Sets student_medications
+     * Sets studentMedications
      *
-     * @param int[]|null $student_medications An array of student medication ID integers.
+     * @param int[]|null $studentMedications An array of student medication ID integers.
      *
      * @return self
      */
-    public function setStudentMedications($student_medications)
+    public function setStudentMedications($studentMedications)
     {
-        if (is_null($student_medications)) {
-            array_push($this->openAPINullablesSetToNull, 'student_medications');
+        if (is_null($studentMedications)) {
+            array_push($this->openAPINullablesSetToNull, 'studentMedications');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_medications', $nullablesSetToNull);
+            $index = array_search('studentMedications', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_medications'] = $student_medications;
+        $this->container['studentMedications'] = $studentMedications;
 
         return $this;
     }

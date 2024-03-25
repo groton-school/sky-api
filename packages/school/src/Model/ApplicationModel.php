@@ -59,8 +59,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'date_submitted' => '\DateTime',
-        'date_processed' => '\DateTime',
+        'dateSubmitted' => '\DateTime',
+        'dateProcessed' => '\DateTime',
         'source' => '\SKY\School\Model\SourceModel',
     ];
 
@@ -73,8 +73,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'date_submitted' => 'date-time',
-        'date_processed' => 'date-time',
+        'dateSubmitted' => 'date-time',
+        'dateProcessed' => 'date-time',
         'source' => null,
     ];
 
@@ -85,8 +85,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'date_submitted' => true,
-        'date_processed' => true,
+        'dateSubmitted' => true,
+        'dateProcessed' => true,
         'source' => false,
     ];
 
@@ -177,8 +177,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'date_submitted' => 'date_submitted',
-        'date_processed' => 'date_processed',
+        'dateSubmitted' => 'date_submitted',
+        'dateProcessed' => 'date_processed',
         'source' => 'source',
     ];
 
@@ -189,8 +189,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'date_submitted' => 'setDateSubmitted',
-        'date_processed' => 'setDateProcessed',
+        'dateSubmitted' => 'setDateSubmitted',
+        'dateProcessed' => 'setDateProcessed',
         'source' => 'setSource',
     ];
 
@@ -201,8 +201,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'date_submitted' => 'getDateSubmitted',
-        'date_processed' => 'getDateProcessed',
+        'dateSubmitted' => 'getDateSubmitted',
+        'dateProcessed' => 'getDateProcessed',
         'source' => 'getSource',
     ];
 
@@ -264,8 +264,8 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('date_submitted', $data ?? [], null);
-        $this->setIfExists('date_processed', $data ?? [], null);
+        $this->setIfExists('dateSubmitted', $data ?? [], null);
+        $this->setIfExists('dateProcessed', $data ?? [], null);
         $this->setIfExists('source', $data ?? [], null);
     }
 
@@ -346,69 +346,69 @@ class ApplicationModel implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets date_submitted
+     * Gets dateSubmitted
      *
      * @return \DateTime|null
      */
     public function getDateSubmitted()
     {
-        return $this->container['date_submitted'];
+        return $this->container['dateSubmitted'];
     }
 
     /**
-     * Sets date_submitted
+     * Sets dateSubmitted
      *
-     * @param \DateTime|null $date_submitted
+     * @param \DateTime|null $dateSubmitted
      *
      * @return self
      */
-    public function setDateSubmitted($date_submitted)
+    public function setDateSubmitted($dateSubmitted)
     {
-        if (is_null($date_submitted)) {
-            array_push($this->openAPINullablesSetToNull, 'date_submitted');
+        if (is_null($dateSubmitted)) {
+            array_push($this->openAPINullablesSetToNull, 'dateSubmitted');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_submitted', $nullablesSetToNull);
+            $index = array_search('dateSubmitted', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_submitted'] = $date_submitted;
+        $this->container['dateSubmitted'] = $dateSubmitted;
 
         return $this;
     }
 
     /**
-     * Gets date_processed
+     * Gets dateProcessed
      *
      * @return \DateTime|null
      */
     public function getDateProcessed()
     {
-        return $this->container['date_processed'];
+        return $this->container['dateProcessed'];
     }
 
     /**
-     * Sets date_processed
+     * Sets dateProcessed
      *
-     * @param \DateTime|null $date_processed
+     * @param \DateTime|null $dateProcessed
      *
      * @return self
      */
-    public function setDateProcessed($date_processed)
+    public function setDateProcessed($dateProcessed)
     {
-        if (is_null($date_processed)) {
-            array_push($this->openAPINullablesSetToNull, 'date_processed');
+        if (is_null($dateProcessed)) {
+            array_push($this->openAPINullablesSetToNull, 'dateProcessed');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_processed', $nullablesSetToNull);
+            $index = array_search('dateProcessed', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_processed'] = $date_processed;
+        $this->container['dateProcessed'] = $dateProcessed;
 
         return $this;
     }

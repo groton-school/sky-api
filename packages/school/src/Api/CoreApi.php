@@ -448,17 +448,17 @@ class CoreApi
      *
      * Core sessions
      *
-     * @param  int $level_num Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
-     * @param  string $school_year Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
+     * @param  int $levelNum Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
+     * @param  string $schoolYear Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SessionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\SchoolSessionCollection
      */
-    public function v1SessionsGet($level_num = null, $school_year = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
+    public function v1SessionsGet($levelNum = null, $schoolYear = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
     {
-        [$response] = $this->v1SessionsGetWithHttpInfo($level_num, $school_year, $contentType);
+        [$response] = $this->v1SessionsGetWithHttpInfo($levelNum, $schoolYear, $contentType);
         return $response;
     }
 
@@ -467,17 +467,17 @@ class CoreApi
      *
      * Core sessions
      *
-     * @param  int $level_num Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
-     * @param  string $school_year Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
+     * @param  int $levelNum Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
+     * @param  string $schoolYear Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SessionsGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\SchoolSessionCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1SessionsGetWithHttpInfo($level_num = null, $school_year = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
+    public function v1SessionsGetWithHttpInfo($levelNum = null, $schoolYear = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
     {
-        $request = $this->v1SessionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1SessionsGetRequest($levelNum, $schoolYear, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -592,16 +592,16 @@ class CoreApi
      *
      * Core sessions
      *
-     * @param  int $level_num Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
-     * @param  string $school_year Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
+     * @param  int $levelNum Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
+     * @param  string $schoolYear Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SessionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SessionsGetAsync($level_num = null, $school_year = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
+    public function v1SessionsGetAsync($levelNum = null, $schoolYear = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
     {
-        return $this->v1SessionsGetAsyncWithHttpInfo($level_num, $school_year, $contentType)
+        return $this->v1SessionsGetAsyncWithHttpInfo($levelNum, $schoolYear, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -614,17 +614,17 @@ class CoreApi
      *
      * Core sessions
      *
-     * @param  int $level_num Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
-     * @param  string $school_year Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
+     * @param  int $levelNum Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
+     * @param  string $schoolYear Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SessionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1SessionsGetAsyncWithHttpInfo($level_num = null, $school_year = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
+    public function v1SessionsGetAsyncWithHttpInfo($levelNum = null, $schoolYear = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
     {
         $returnType = '\SKY\School\Model\SchoolSessionCollection';
-        $request = $this->v1SessionsGetRequest($level_num, $school_year, $contentType);
+        $request = $this->v1SessionsGetRequest($levelNum, $schoolYear, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -665,14 +665,14 @@ class CoreApi
     /**
      * Create request for operation 'v1SessionsGet'
      *
-     * @param  int $level_num Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
-     * @param  string $school_year Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
+     * @param  int $levelNum Format - int32. Filter for a specific &#x60;&#x60;&#x60;level_num&#x60;&#x60;&#x60; (level number) (optional)
+     * @param  string $schoolYear Filter for a specific &#x60;&#x60;&#x60;school_year&#x60;&#x60;&#x60; (required format YYYY - YYYY (11 chars)) (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1SessionsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1SessionsGetRequest($level_num = null, $school_year = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
+    public function v1SessionsGetRequest($levelNum = null, $schoolYear = null, string $contentType = self::contentTypes['v1SessionsGet'][0])
     {
 
 
@@ -687,7 +687,7 @@ class CoreApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $level_num,
+            $levelNum,
             'level_num', // param base name
             'integer', // openApiType
             'form', // style
@@ -696,7 +696,7 @@ class CoreApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -2260,17 +2260,17 @@ class CoreApi
      *
      * Core terms
      *
-     * @param  string $school_year The school year to get terms for. Defaults to the current school year. (optional)
-     * @param  int $offering_type Format - int32. The offering type to filter terms by. (optional)
+     * @param  string $schoolYear The school year to get terms for. Defaults to the current school year. (optional)
+     * @param  int $offeringType Format - int32. The offering type to filter terms by. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1termsget'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\TermCollection
      */
-    public function v1termsget($school_year = null, $offering_type = null, string $contentType = self::contentTypes['v1termsget'][0])
+    public function v1termsget($schoolYear = null, $offeringType = null, string $contentType = self::contentTypes['v1termsget'][0])
     {
-        [$response] = $this->v1termsgetWithHttpInfo($school_year, $offering_type, $contentType);
+        [$response] = $this->v1termsgetWithHttpInfo($schoolYear, $offeringType, $contentType);
         return $response;
     }
 
@@ -2279,17 +2279,17 @@ class CoreApi
      *
      * Core terms
      *
-     * @param  string $school_year The school year to get terms for. Defaults to the current school year. (optional)
-     * @param  int $offering_type Format - int32. The offering type to filter terms by. (optional)
+     * @param  string $schoolYear The school year to get terms for. Defaults to the current school year. (optional)
+     * @param  int $offeringType Format - int32. The offering type to filter terms by. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1termsget'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\TermCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1termsgetWithHttpInfo($school_year = null, $offering_type = null, string $contentType = self::contentTypes['v1termsget'][0])
+    public function v1termsgetWithHttpInfo($schoolYear = null, $offeringType = null, string $contentType = self::contentTypes['v1termsget'][0])
     {
-        $request = $this->v1termsgetRequest($school_year, $offering_type, $contentType);
+        $request = $this->v1termsgetRequest($schoolYear, $offeringType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2404,16 +2404,16 @@ class CoreApi
      *
      * Core terms
      *
-     * @param  string $school_year The school year to get terms for. Defaults to the current school year. (optional)
-     * @param  int $offering_type Format - int32. The offering type to filter terms by. (optional)
+     * @param  string $schoolYear The school year to get terms for. Defaults to the current school year. (optional)
+     * @param  int $offeringType Format - int32. The offering type to filter terms by. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1termsget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1termsgetAsync($school_year = null, $offering_type = null, string $contentType = self::contentTypes['v1termsget'][0])
+    public function v1termsgetAsync($schoolYear = null, $offeringType = null, string $contentType = self::contentTypes['v1termsget'][0])
     {
-        return $this->v1termsgetAsyncWithHttpInfo($school_year, $offering_type, $contentType)
+        return $this->v1termsgetAsyncWithHttpInfo($schoolYear, $offeringType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2426,17 +2426,17 @@ class CoreApi
      *
      * Core terms
      *
-     * @param  string $school_year The school year to get terms for. Defaults to the current school year. (optional)
-     * @param  int $offering_type Format - int32. The offering type to filter terms by. (optional)
+     * @param  string $schoolYear The school year to get terms for. Defaults to the current school year. (optional)
+     * @param  int $offeringType Format - int32. The offering type to filter terms by. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1termsget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1termsgetAsyncWithHttpInfo($school_year = null, $offering_type = null, string $contentType = self::contentTypes['v1termsget'][0])
+    public function v1termsgetAsyncWithHttpInfo($schoolYear = null, $offeringType = null, string $contentType = self::contentTypes['v1termsget'][0])
     {
         $returnType = '\SKY\School\Model\TermCollection';
-        $request = $this->v1termsgetRequest($school_year, $offering_type, $contentType);
+        $request = $this->v1termsgetRequest($schoolYear, $offeringType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2477,14 +2477,14 @@ class CoreApi
     /**
      * Create request for operation 'v1termsget'
      *
-     * @param  string $school_year The school year to get terms for. Defaults to the current school year. (optional)
-     * @param  int $offering_type Format - int32. The offering type to filter terms by. (optional)
+     * @param  string $schoolYear The school year to get terms for. Defaults to the current school year. (optional)
+     * @param  int $offeringType Format - int32. The offering type to filter terms by. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1termsget'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1termsgetRequest($school_year = null, $offering_type = null, string $contentType = self::contentTypes['v1termsget'][0])
+    public function v1termsgetRequest($schoolYear = null, $offeringType = null, string $contentType = self::contentTypes['v1termsget'][0])
     {
 
 
@@ -2499,7 +2499,7 @@ class CoreApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -2508,7 +2508,7 @@ class CoreApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $offering_type,
+            $offeringType,
             'offering_type', // param base name
             'integer', // openApiType
             'form', // style

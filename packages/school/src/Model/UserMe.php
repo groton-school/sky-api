@@ -59,12 +59,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'preferred_name' => 'string',
-        'is_student' => 'bool',
-        'is_parent' => 'bool',
-        'is_faculty' => 'bool',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'preferredName' => 'string',
+        'isStudent' => 'bool',
+        'isParent' => 'bool',
+        'isFaculty' => 'bool',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'suffix' => 'string',
         'roles' => '\SKY\School\Model\Role[]',
     ];
@@ -78,12 +78,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'preferred_name' => null,
-        'is_student' => null,
-        'is_parent' => null,
-        'is_faculty' => null,
-        'first_name' => null,
-        'last_name' => null,
+        'preferredName' => null,
+        'isStudent' => null,
+        'isParent' => null,
+        'isFaculty' => null,
+        'firstName' => null,
+        'lastName' => null,
         'suffix' => null,
         'roles' => null,
     ];
@@ -95,12 +95,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'preferred_name' => true,
-        'is_student' => false,
-        'is_parent' => false,
-        'is_faculty' => false,
-        'first_name' => true,
-        'last_name' => true,
+        'preferredName' => true,
+        'isStudent' => false,
+        'isParent' => false,
+        'isFaculty' => false,
+        'firstName' => true,
+        'lastName' => true,
         'suffix' => true,
         'roles' => true,
     ];
@@ -192,12 +192,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'preferred_name' => 'preferred_name',
-        'is_student' => 'is_student',
-        'is_parent' => 'is_parent',
-        'is_faculty' => 'is_faculty',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'preferredName' => 'preferred_name',
+        'isStudent' => 'is_student',
+        'isParent' => 'is_parent',
+        'isFaculty' => 'is_faculty',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'suffix' => 'suffix',
         'roles' => 'roles',
     ];
@@ -209,12 +209,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'preferred_name' => 'setPreferredName',
-        'is_student' => 'setIsStudent',
-        'is_parent' => 'setIsParent',
-        'is_faculty' => 'setIsFaculty',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'preferredName' => 'setPreferredName',
+        'isStudent' => 'setIsStudent',
+        'isParent' => 'setIsParent',
+        'isFaculty' => 'setIsFaculty',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'suffix' => 'setSuffix',
         'roles' => 'setRoles',
     ];
@@ -226,12 +226,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'preferred_name' => 'getPreferredName',
-        'is_student' => 'getIsStudent',
-        'is_parent' => 'getIsParent',
-        'is_faculty' => 'getIsFaculty',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'preferredName' => 'getPreferredName',
+        'isStudent' => 'getIsStudent',
+        'isParent' => 'getIsParent',
+        'isFaculty' => 'getIsFaculty',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'suffix' => 'getSuffix',
         'roles' => 'getRoles',
     ];
@@ -294,12 +294,12 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
-        $this->setIfExists('is_student', $data ?? [], null);
-        $this->setIfExists('is_parent', $data ?? [], null);
-        $this->setIfExists('is_faculty', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
+        $this->setIfExists('isStudent', $data ?? [], null);
+        $this->setIfExists('isParent', $data ?? [], null);
+        $this->setIfExists('isFaculty', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
         $this->setIfExists('roles', $data ?? [], null);
     }
@@ -374,184 +374,184 @@ class UserMe implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name Preferred Name
+     * @param string|null $preferredName Preferred Name
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
 
     /**
-     * Gets is_student
+     * Gets isStudent
      *
      * @return bool|null
      */
     public function getIsStudent()
     {
-        return $this->container['is_student'];
+        return $this->container['isStudent'];
     }
 
     /**
-     * Sets is_student
+     * Sets isStudent
      *
-     * @param bool|null $is_student Is Student
+     * @param bool|null $isStudent Is Student
      *
      * @return self
      */
-    public function setIsStudent($is_student)
+    public function setIsStudent($isStudent)
     {
-        if (is_null($is_student)) {
-            throw new \InvalidArgumentException('non-nullable is_student cannot be null');
+        if (is_null($isStudent)) {
+            throw new \InvalidArgumentException('non-nullable isStudent cannot be null');
         }
-        $this->container['is_student'] = $is_student;
+        $this->container['isStudent'] = $isStudent;
 
         return $this;
     }
 
     /**
-     * Gets is_parent
+     * Gets isParent
      *
      * @return bool|null
      */
     public function getIsParent()
     {
-        return $this->container['is_parent'];
+        return $this->container['isParent'];
     }
 
     /**
-     * Sets is_parent
+     * Sets isParent
      *
-     * @param bool|null $is_parent Is Parent
+     * @param bool|null $isParent Is Parent
      *
      * @return self
      */
-    public function setIsParent($is_parent)
+    public function setIsParent($isParent)
     {
-        if (is_null($is_parent)) {
-            throw new \InvalidArgumentException('non-nullable is_parent cannot be null');
+        if (is_null($isParent)) {
+            throw new \InvalidArgumentException('non-nullable isParent cannot be null');
         }
-        $this->container['is_parent'] = $is_parent;
+        $this->container['isParent'] = $isParent;
 
         return $this;
     }
 
     /**
-     * Gets is_faculty
+     * Gets isFaculty
      *
      * @return bool|null
      */
     public function getIsFaculty()
     {
-        return $this->container['is_faculty'];
+        return $this->container['isFaculty'];
     }
 
     /**
-     * Sets is_faculty
+     * Sets isFaculty
      *
-     * @param bool|null $is_faculty Is faculty
+     * @param bool|null $isFaculty Is faculty
      *
      * @return self
      */
-    public function setIsFaculty($is_faculty)
+    public function setIsFaculty($isFaculty)
     {
-        if (is_null($is_faculty)) {
-            throw new \InvalidArgumentException('non-nullable is_faculty cannot be null');
+        if (is_null($isFaculty)) {
+            throw new \InvalidArgumentException('non-nullable isFaculty cannot be null');
         }
-        $this->container['is_faculty'] = $is_faculty;
+        $this->container['isFaculty'] = $isFaculty;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name The first name of a user
+     * @param string|null $firstName The first name of a user
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name The last name of a user
+     * @param string|null $lastName The last name of a user
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }

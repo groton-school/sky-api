@@ -58,9 +58,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timezone_name' => 'string',
-        'is_daylight_savings_time' => 'bool',
-        'utc_offset' => 'string',
+        'timezoneName' => 'string',
+        'isDaylightSavingsTime' => 'bool',
+        'utcOffset' => 'string',
     ];
 
     /**
@@ -71,9 +71,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'timezone_name' => null,
-        'is_daylight_savings_time' => null,
-        'utc_offset' => null,
+        'timezoneName' => null,
+        'isDaylightSavingsTime' => null,
+        'utcOffset' => null,
     ];
 
     /**
@@ -82,9 +82,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'timezone_name' => true,
-        'is_daylight_savings_time' => true,
-        'utc_offset' => true,
+        'timezoneName' => true,
+        'isDaylightSavingsTime' => true,
+        'utcOffset' => true,
     ];
 
     /**
@@ -173,9 +173,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'timezone_name' => 'timezone_name',
-        'is_daylight_savings_time' => 'is_daylight_savings_time',
-        'utc_offset' => 'utc_offset',
+        'timezoneName' => 'timezone_name',
+        'isDaylightSavingsTime' => 'is_daylight_savings_time',
+        'utcOffset' => 'utc_offset',
     ];
 
     /**
@@ -184,9 +184,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'timezone_name' => 'setTimezoneName',
-        'is_daylight_savings_time' => 'setIsDaylightSavingsTime',
-        'utc_offset' => 'setUtcOffset',
+        'timezoneName' => 'setTimezoneName',
+        'isDaylightSavingsTime' => 'setIsDaylightSavingsTime',
+        'utcOffset' => 'setUtcOffset',
     ];
 
     /**
@@ -195,9 +195,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'timezone_name' => 'getTimezoneName',
-        'is_daylight_savings_time' => 'getIsDaylightSavingsTime',
-        'utc_offset' => 'getUtcOffset',
+        'timezoneName' => 'getTimezoneName',
+        'isDaylightSavingsTime' => 'getIsDaylightSavingsTime',
+        'utcOffset' => 'getUtcOffset',
     ];
 
     /**
@@ -257,9 +257,9 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('timezone_name', $data ?? [], null);
-        $this->setIfExists('is_daylight_savings_time', $data ?? [], null);
-        $this->setIfExists('utc_offset', $data ?? [], null);
+        $this->setIfExists('timezoneName', $data ?? [], null);
+        $this->setIfExists('isDaylightSavingsTime', $data ?? [], null);
+        $this->setIfExists('utcOffset', $data ?? [], null);
     }
 
     /**
@@ -305,103 +305,103 @@ class Timezone implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets timezone_name
+     * Gets timezoneName
      *
      * @return string|null
      */
     public function getTimezoneName()
     {
-        return $this->container['timezone_name'];
+        return $this->container['timezoneName'];
     }
 
     /**
-     * Sets timezone_name
+     * Sets timezoneName
      *
-     * @param string|null $timezone_name The timezone the school is set to
+     * @param string|null $timezoneName The timezone the school is set to
      *
      * @return self
      */
-    public function setTimezoneName($timezone_name)
+    public function setTimezoneName($timezoneName)
     {
-        if (is_null($timezone_name)) {
-            array_push($this->openAPINullablesSetToNull, 'timezone_name');
+        if (is_null($timezoneName)) {
+            array_push($this->openAPINullablesSetToNull, 'timezoneName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('timezone_name', $nullablesSetToNull);
+            $index = array_search('timezoneName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['timezone_name'] = $timezone_name;
+        $this->container['timezoneName'] = $timezoneName;
 
         return $this;
     }
 
     /**
-     * Gets is_daylight_savings_time
+     * Gets isDaylightSavingsTime
      *
      * @return bool|null
      */
     public function getIsDaylightSavingsTime()
     {
-        return $this->container['is_daylight_savings_time'];
+        return $this->container['isDaylightSavingsTime'];
     }
 
     /**
-     * Sets is_daylight_savings_time
+     * Sets isDaylightSavingsTime
      *
-     * @param bool|null $is_daylight_savings_time Gets or sets the daylight savings time flag
+     * @param bool|null $isDaylightSavingsTime Gets or sets the daylight savings time flag
      *
      * @return self
      */
-    public function setIsDaylightSavingsTime($is_daylight_savings_time)
+    public function setIsDaylightSavingsTime($isDaylightSavingsTime)
     {
-        if (is_null($is_daylight_savings_time)) {
-            array_push($this->openAPINullablesSetToNull, 'is_daylight_savings_time');
+        if (is_null($isDaylightSavingsTime)) {
+            array_push($this->openAPINullablesSetToNull, 'isDaylightSavingsTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('is_daylight_savings_time', $nullablesSetToNull);
+            $index = array_search('isDaylightSavingsTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['is_daylight_savings_time'] = $is_daylight_savings_time;
+        $this->container['isDaylightSavingsTime'] = $isDaylightSavingsTime;
 
         return $this;
     }
 
     /**
-     * Gets utc_offset
+     * Gets utcOffset
      *
      * @return string|null
      */
     public function getUtcOffset()
     {
-        return $this->container['utc_offset'];
+        return $this->container['utcOffset'];
     }
 
     /**
-     * Sets utc_offset
+     * Sets utcOffset
      *
-     * @param string|null $utc_offset The UTC offset
+     * @param string|null $utcOffset The UTC offset
      *
      * @return self
      */
-    public function setUtcOffset($utc_offset)
+    public function setUtcOffset($utcOffset)
     {
-        if (is_null($utc_offset)) {
-            array_push($this->openAPINullablesSetToNull, 'utc_offset');
+        if (is_null($utcOffset)) {
+            array_push($this->openAPINullablesSetToNull, 'utcOffset');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('utc_offset', $nullablesSetToNull);
+            $index = array_search('utcOffset', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['utc_offset'] = $utc_offset;
+        $this->container['utcOffset'] = $utcOffset;
 
         return $this;
     }

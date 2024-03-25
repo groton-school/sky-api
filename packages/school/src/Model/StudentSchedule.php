@@ -58,27 +58,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'section_id' => 'int',
-        'section_identifier' => 'string',
-        'course_title' => 'string',
-        'course_code' => 'string',
-        'section_name' => 'string',
-        'block_id' => 'int',
-        'block_name' => 'string',
-        'room_id' => 'int',
-        'room_name' => 'string',
-        'room_number' => 'string',
-        'room_capacity' => 'int',
-        'room_code' => 'string',
-        'faculty_name' => 'string',
-        'faculty_firstname' => 'string',
-        'faculty_lastname' => 'string',
-        'start_time' => '\DateTime',
-        'end_time' => '\DateTime',
-        'meeting_date' => '\DateTime',
-        'faculty_user_id' => 'int',
-        'attendance_required' => 'bool',
-        'offering_type' => '\SKY\School\Model\OfferingType',
+        'sectionId' => 'int',
+        'sectionIdentifier' => 'string',
+        'courseTitle' => 'string',
+        'courseCode' => 'string',
+        'sectionName' => 'string',
+        'blockId' => 'int',
+        'blockName' => 'string',
+        'roomId' => 'int',
+        'roomName' => 'string',
+        'roomNumber' => 'string',
+        'roomCapacity' => 'int',
+        'roomCode' => 'string',
+        'facultyName' => 'string',
+        'facultyFirstname' => 'string',
+        'facultyLastname' => 'string',
+        'startTime' => '\DateTime',
+        'endTime' => '\DateTime',
+        'meetingDate' => '\DateTime',
+        'facultyUserId' => 'int',
+        'attendanceRequired' => 'bool',
+        'offeringType' => '\SKY\School\Model\OfferingType',
     ];
 
     /**
@@ -89,27 +89,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'section_id' => 'int32',
-        'section_identifier' => null,
-        'course_title' => null,
-        'course_code' => null,
-        'section_name' => null,
-        'block_id' => 'int32',
-        'block_name' => null,
-        'room_id' => 'int32',
-        'room_name' => null,
-        'room_number' => null,
-        'room_capacity' => 'int32',
-        'room_code' => null,
-        'faculty_name' => null,
-        'faculty_firstname' => null,
-        'faculty_lastname' => null,
-        'start_time' => 'date-time',
-        'end_time' => 'date-time',
-        'meeting_date' => 'date-time',
-        'faculty_user_id' => 'int32',
-        'attendance_required' => null,
-        'offering_type' => null,
+        'sectionId' => 'int32',
+        'sectionIdentifier' => null,
+        'courseTitle' => null,
+        'courseCode' => null,
+        'sectionName' => null,
+        'blockId' => 'int32',
+        'blockName' => null,
+        'roomId' => 'int32',
+        'roomName' => null,
+        'roomNumber' => null,
+        'roomCapacity' => 'int32',
+        'roomCode' => null,
+        'facultyName' => null,
+        'facultyFirstname' => null,
+        'facultyLastname' => null,
+        'startTime' => 'date-time',
+        'endTime' => 'date-time',
+        'meetingDate' => 'date-time',
+        'facultyUserId' => 'int32',
+        'attendanceRequired' => null,
+        'offeringType' => null,
     ];
 
     /**
@@ -118,27 +118,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'section_id' => true,
-        'section_identifier' => true,
-        'course_title' => true,
-        'course_code' => true,
-        'section_name' => true,
-        'block_id' => true,
-        'block_name' => true,
-        'room_id' => true,
-        'room_name' => true,
-        'room_number' => true,
-        'room_capacity' => true,
-        'room_code' => true,
-        'faculty_name' => true,
-        'faculty_firstname' => true,
-        'faculty_lastname' => true,
-        'start_time' => true,
-        'end_time' => true,
-        'meeting_date' => true,
-        'faculty_user_id' => true,
-        'attendance_required' => true,
-        'offering_type' => false,
+        'sectionId' => true,
+        'sectionIdentifier' => true,
+        'courseTitle' => true,
+        'courseCode' => true,
+        'sectionName' => true,
+        'blockId' => true,
+        'blockName' => true,
+        'roomId' => true,
+        'roomName' => true,
+        'roomNumber' => true,
+        'roomCapacity' => true,
+        'roomCode' => true,
+        'facultyName' => true,
+        'facultyFirstname' => true,
+        'facultyLastname' => true,
+        'startTime' => true,
+        'endTime' => true,
+        'meetingDate' => true,
+        'facultyUserId' => true,
+        'attendanceRequired' => true,
+        'offeringType' => false,
     ];
 
     /**
@@ -227,27 +227,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'section_id' => 'section_id',
-        'section_identifier' => 'section_identifier',
-        'course_title' => 'course_title',
-        'course_code' => 'course_code',
-        'section_name' => 'section_name',
-        'block_id' => 'block_id',
-        'block_name' => 'block_name',
-        'room_id' => 'room_id',
-        'room_name' => 'room_name',
-        'room_number' => 'room_number',
-        'room_capacity' => 'room_capacity',
-        'room_code' => 'room_code',
-        'faculty_name' => 'faculty_name',
-        'faculty_firstname' => 'faculty_firstname',
-        'faculty_lastname' => 'faculty_lastname',
-        'start_time' => 'start_time',
-        'end_time' => 'end_time',
-        'meeting_date' => 'meeting_date',
-        'faculty_user_id' => 'faculty_user_id',
-        'attendance_required' => 'attendance_required',
-        'offering_type' => 'offering_type',
+        'sectionId' => 'section_id',
+        'sectionIdentifier' => 'section_identifier',
+        'courseTitle' => 'course_title',
+        'courseCode' => 'course_code',
+        'sectionName' => 'section_name',
+        'blockId' => 'block_id',
+        'blockName' => 'block_name',
+        'roomId' => 'room_id',
+        'roomName' => 'room_name',
+        'roomNumber' => 'room_number',
+        'roomCapacity' => 'room_capacity',
+        'roomCode' => 'room_code',
+        'facultyName' => 'faculty_name',
+        'facultyFirstname' => 'faculty_firstname',
+        'facultyLastname' => 'faculty_lastname',
+        'startTime' => 'start_time',
+        'endTime' => 'end_time',
+        'meetingDate' => 'meeting_date',
+        'facultyUserId' => 'faculty_user_id',
+        'attendanceRequired' => 'attendance_required',
+        'offeringType' => 'offering_type',
     ];
 
     /**
@@ -256,27 +256,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'section_id' => 'setSectionId',
-        'section_identifier' => 'setSectionIdentifier',
-        'course_title' => 'setCourseTitle',
-        'course_code' => 'setCourseCode',
-        'section_name' => 'setSectionName',
-        'block_id' => 'setBlockId',
-        'block_name' => 'setBlockName',
-        'room_id' => 'setRoomId',
-        'room_name' => 'setRoomName',
-        'room_number' => 'setRoomNumber',
-        'room_capacity' => 'setRoomCapacity',
-        'room_code' => 'setRoomCode',
-        'faculty_name' => 'setFacultyName',
-        'faculty_firstname' => 'setFacultyFirstname',
-        'faculty_lastname' => 'setFacultyLastname',
-        'start_time' => 'setStartTime',
-        'end_time' => 'setEndTime',
-        'meeting_date' => 'setMeetingDate',
-        'faculty_user_id' => 'setFacultyUserId',
-        'attendance_required' => 'setAttendanceRequired',
-        'offering_type' => 'setOfferingType',
+        'sectionId' => 'setSectionId',
+        'sectionIdentifier' => 'setSectionIdentifier',
+        'courseTitle' => 'setCourseTitle',
+        'courseCode' => 'setCourseCode',
+        'sectionName' => 'setSectionName',
+        'blockId' => 'setBlockId',
+        'blockName' => 'setBlockName',
+        'roomId' => 'setRoomId',
+        'roomName' => 'setRoomName',
+        'roomNumber' => 'setRoomNumber',
+        'roomCapacity' => 'setRoomCapacity',
+        'roomCode' => 'setRoomCode',
+        'facultyName' => 'setFacultyName',
+        'facultyFirstname' => 'setFacultyFirstname',
+        'facultyLastname' => 'setFacultyLastname',
+        'startTime' => 'setStartTime',
+        'endTime' => 'setEndTime',
+        'meetingDate' => 'setMeetingDate',
+        'facultyUserId' => 'setFacultyUserId',
+        'attendanceRequired' => 'setAttendanceRequired',
+        'offeringType' => 'setOfferingType',
     ];
 
     /**
@@ -285,27 +285,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'section_id' => 'getSectionId',
-        'section_identifier' => 'getSectionIdentifier',
-        'course_title' => 'getCourseTitle',
-        'course_code' => 'getCourseCode',
-        'section_name' => 'getSectionName',
-        'block_id' => 'getBlockId',
-        'block_name' => 'getBlockName',
-        'room_id' => 'getRoomId',
-        'room_name' => 'getRoomName',
-        'room_number' => 'getRoomNumber',
-        'room_capacity' => 'getRoomCapacity',
-        'room_code' => 'getRoomCode',
-        'faculty_name' => 'getFacultyName',
-        'faculty_firstname' => 'getFacultyFirstname',
-        'faculty_lastname' => 'getFacultyLastname',
-        'start_time' => 'getStartTime',
-        'end_time' => 'getEndTime',
-        'meeting_date' => 'getMeetingDate',
-        'faculty_user_id' => 'getFacultyUserId',
-        'attendance_required' => 'getAttendanceRequired',
-        'offering_type' => 'getOfferingType',
+        'sectionId' => 'getSectionId',
+        'sectionIdentifier' => 'getSectionIdentifier',
+        'courseTitle' => 'getCourseTitle',
+        'courseCode' => 'getCourseCode',
+        'sectionName' => 'getSectionName',
+        'blockId' => 'getBlockId',
+        'blockName' => 'getBlockName',
+        'roomId' => 'getRoomId',
+        'roomName' => 'getRoomName',
+        'roomNumber' => 'getRoomNumber',
+        'roomCapacity' => 'getRoomCapacity',
+        'roomCode' => 'getRoomCode',
+        'facultyName' => 'getFacultyName',
+        'facultyFirstname' => 'getFacultyFirstname',
+        'facultyLastname' => 'getFacultyLastname',
+        'startTime' => 'getStartTime',
+        'endTime' => 'getEndTime',
+        'meetingDate' => 'getMeetingDate',
+        'facultyUserId' => 'getFacultyUserId',
+        'attendanceRequired' => 'getAttendanceRequired',
+        'offeringType' => 'getOfferingType',
     ];
 
     /**
@@ -365,27 +365,27 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('section_id', $data ?? [], null);
-        $this->setIfExists('section_identifier', $data ?? [], null);
-        $this->setIfExists('course_title', $data ?? [], null);
-        $this->setIfExists('course_code', $data ?? [], null);
-        $this->setIfExists('section_name', $data ?? [], null);
-        $this->setIfExists('block_id', $data ?? [], null);
-        $this->setIfExists('block_name', $data ?? [], null);
-        $this->setIfExists('room_id', $data ?? [], null);
-        $this->setIfExists('room_name', $data ?? [], null);
-        $this->setIfExists('room_number', $data ?? [], null);
-        $this->setIfExists('room_capacity', $data ?? [], null);
-        $this->setIfExists('room_code', $data ?? [], null);
-        $this->setIfExists('faculty_name', $data ?? [], null);
-        $this->setIfExists('faculty_firstname', $data ?? [], null);
-        $this->setIfExists('faculty_lastname', $data ?? [], null);
-        $this->setIfExists('start_time', $data ?? [], null);
-        $this->setIfExists('end_time', $data ?? [], null);
-        $this->setIfExists('meeting_date', $data ?? [], null);
-        $this->setIfExists('faculty_user_id', $data ?? [], null);
-        $this->setIfExists('attendance_required', $data ?? [], null);
-        $this->setIfExists('offering_type', $data ?? [], null);
+        $this->setIfExists('sectionId', $data ?? [], null);
+        $this->setIfExists('sectionIdentifier', $data ?? [], null);
+        $this->setIfExists('courseTitle', $data ?? [], null);
+        $this->setIfExists('courseCode', $data ?? [], null);
+        $this->setIfExists('sectionName', $data ?? [], null);
+        $this->setIfExists('blockId', $data ?? [], null);
+        $this->setIfExists('blockName', $data ?? [], null);
+        $this->setIfExists('roomId', $data ?? [], null);
+        $this->setIfExists('roomName', $data ?? [], null);
+        $this->setIfExists('roomNumber', $data ?? [], null);
+        $this->setIfExists('roomCapacity', $data ?? [], null);
+        $this->setIfExists('roomCode', $data ?? [], null);
+        $this->setIfExists('facultyName', $data ?? [], null);
+        $this->setIfExists('facultyFirstname', $data ?? [], null);
+        $this->setIfExists('facultyLastname', $data ?? [], null);
+        $this->setIfExists('startTime', $data ?? [], null);
+        $this->setIfExists('endTime', $data ?? [], null);
+        $this->setIfExists('meetingDate', $data ?? [], null);
+        $this->setIfExists('facultyUserId', $data ?? [], null);
+        $this->setIfExists('attendanceRequired', $data ?? [], null);
+        $this->setIfExists('offeringType', $data ?? [], null);
     }
 
     /**
@@ -431,708 +431,708 @@ class StudentSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets section_id
+     * Gets sectionId
      *
      * @return int|null
      */
     public function getSectionId()
     {
-        return $this->container['section_id'];
+        return $this->container['sectionId'];
     }
 
     /**
-     * Sets section_id
+     * Sets sectionId
      *
-     * @param int|null $section_id The Id of the section
+     * @param int|null $sectionId The Id of the section
      *
      * @return self
      */
-    public function setSectionId($section_id)
+    public function setSectionId($sectionId)
     {
-        if (is_null($section_id)) {
-            array_push($this->openAPINullablesSetToNull, 'section_id');
+        if (is_null($sectionId)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_id', $nullablesSetToNull);
+            $index = array_search('sectionId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_id'] = $section_id;
+        $this->container['sectionId'] = $sectionId;
 
         return $this;
     }
 
     /**
-     * Gets section_identifier
+     * Gets sectionIdentifier
      *
      * @return string|null
      */
     public function getSectionIdentifier()
     {
-        return $this->container['section_identifier'];
+        return $this->container['sectionIdentifier'];
     }
 
     /**
-     * Sets section_identifier
+     * Sets sectionIdentifier
      *
-     * @param string|null $section_identifier The identifier of the section
+     * @param string|null $sectionIdentifier The identifier of the section
      *
      * @return self
      */
-    public function setSectionIdentifier($section_identifier)
+    public function setSectionIdentifier($sectionIdentifier)
     {
-        if (is_null($section_identifier)) {
-            array_push($this->openAPINullablesSetToNull, 'section_identifier');
+        if (is_null($sectionIdentifier)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionIdentifier');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_identifier', $nullablesSetToNull);
+            $index = array_search('sectionIdentifier', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_identifier'] = $section_identifier;
+        $this->container['sectionIdentifier'] = $sectionIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets course_title
+     * Gets courseTitle
      *
      * @return string|null
      */
     public function getCourseTitle()
     {
-        return $this->container['course_title'];
+        return $this->container['courseTitle'];
     }
 
     /**
-     * Sets course_title
+     * Sets courseTitle
      *
-     * @param string|null $course_title The title of the course
+     * @param string|null $courseTitle The title of the course
      *
      * @return self
      */
-    public function setCourseTitle($course_title)
+    public function setCourseTitle($courseTitle)
     {
-        if (is_null($course_title)) {
-            array_push($this->openAPINullablesSetToNull, 'course_title');
+        if (is_null($courseTitle)) {
+            array_push($this->openAPINullablesSetToNull, 'courseTitle');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_title', $nullablesSetToNull);
+            $index = array_search('courseTitle', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_title'] = $course_title;
+        $this->container['courseTitle'] = $courseTitle;
 
         return $this;
     }
 
     /**
-     * Gets course_code
+     * Gets courseCode
      *
      * @return string|null
      */
     public function getCourseCode()
     {
-        return $this->container['course_code'];
+        return $this->container['courseCode'];
     }
 
     /**
-     * Sets course_code
+     * Sets courseCode
      *
-     * @param string|null $course_code The code of the course
+     * @param string|null $courseCode The code of the course
      *
      * @return self
      */
-    public function setCourseCode($course_code)
+    public function setCourseCode($courseCode)
     {
-        if (is_null($course_code)) {
-            array_push($this->openAPINullablesSetToNull, 'course_code');
+        if (is_null($courseCode)) {
+            array_push($this->openAPINullablesSetToNull, 'courseCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('course_code', $nullablesSetToNull);
+            $index = array_search('courseCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['course_code'] = $course_code;
+        $this->container['courseCode'] = $courseCode;
 
         return $this;
     }
 
     /**
-     * Gets section_name
+     * Gets sectionName
      *
      * @return string|null
      */
     public function getSectionName()
     {
-        return $this->container['section_name'];
+        return $this->container['sectionName'];
     }
 
     /**
-     * Sets section_name
+     * Sets sectionName
      *
-     * @param string|null $section_name The name of the section
+     * @param string|null $sectionName The name of the section
      *
      * @return self
      */
-    public function setSectionName($section_name)
+    public function setSectionName($sectionName)
     {
-        if (is_null($section_name)) {
-            array_push($this->openAPINullablesSetToNull, 'section_name');
+        if (is_null($sectionName)) {
+            array_push($this->openAPINullablesSetToNull, 'sectionName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('section_name', $nullablesSetToNull);
+            $index = array_search('sectionName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['section_name'] = $section_name;
+        $this->container['sectionName'] = $sectionName;
 
         return $this;
     }
 
     /**
-     * Gets block_id
+     * Gets blockId
      *
      * @return int|null
      */
     public function getBlockId()
     {
-        return $this->container['block_id'];
+        return $this->container['blockId'];
     }
 
     /**
-     * Sets block_id
+     * Sets blockId
      *
-     * @param int|null $block_id The Id of the block the section is scheduled in
+     * @param int|null $blockId The Id of the block the section is scheduled in
      *
      * @return self
      */
-    public function setBlockId($block_id)
+    public function setBlockId($blockId)
     {
-        if (is_null($block_id)) {
-            array_push($this->openAPINullablesSetToNull, 'block_id');
+        if (is_null($blockId)) {
+            array_push($this->openAPINullablesSetToNull, 'blockId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_id', $nullablesSetToNull);
+            $index = array_search('blockId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_id'] = $block_id;
+        $this->container['blockId'] = $blockId;
 
         return $this;
     }
 
     /**
-     * Gets block_name
+     * Gets blockName
      *
      * @return string|null
      */
     public function getBlockName()
     {
-        return $this->container['block_name'];
+        return $this->container['blockName'];
     }
 
     /**
-     * Sets block_name
+     * Sets blockName
      *
-     * @param string|null $block_name The name of the block the section is scheduled in
+     * @param string|null $blockName The name of the block the section is scheduled in
      *
      * @return self
      */
-    public function setBlockName($block_name)
+    public function setBlockName($blockName)
     {
-        if (is_null($block_name)) {
-            array_push($this->openAPINullablesSetToNull, 'block_name');
+        if (is_null($blockName)) {
+            array_push($this->openAPINullablesSetToNull, 'blockName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('block_name', $nullablesSetToNull);
+            $index = array_search('blockName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['block_name'] = $block_name;
+        $this->container['blockName'] = $blockName;
 
         return $this;
     }
 
     /**
-     * Gets room_id
+     * Gets roomId
      *
      * @return int|null
      */
     public function getRoomId()
     {
-        return $this->container['room_id'];
+        return $this->container['roomId'];
     }
 
     /**
-     * Sets room_id
+     * Sets roomId
      *
-     * @param int|null $room_id The Id of the room the section takes place in
+     * @param int|null $roomId The Id of the room the section takes place in
      *
      * @return self
      */
-    public function setRoomId($room_id)
+    public function setRoomId($roomId)
     {
-        if (is_null($room_id)) {
-            array_push($this->openAPINullablesSetToNull, 'room_id');
+        if (is_null($roomId)) {
+            array_push($this->openAPINullablesSetToNull, 'roomId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_id', $nullablesSetToNull);
+            $index = array_search('roomId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_id'] = $room_id;
+        $this->container['roomId'] = $roomId;
 
         return $this;
     }
 
     /**
-     * Gets room_name
+     * Gets roomName
      *
      * @return string|null
      */
     public function getRoomName()
     {
-        return $this->container['room_name'];
+        return $this->container['roomName'];
     }
 
     /**
-     * Sets room_name
+     * Sets roomName
      *
-     * @param string|null $room_name The name of the room the section takes place in
+     * @param string|null $roomName The name of the room the section takes place in
      *
      * @return self
      */
-    public function setRoomName($room_name)
+    public function setRoomName($roomName)
     {
-        if (is_null($room_name)) {
-            array_push($this->openAPINullablesSetToNull, 'room_name');
+        if (is_null($roomName)) {
+            array_push($this->openAPINullablesSetToNull, 'roomName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_name', $nullablesSetToNull);
+            $index = array_search('roomName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_name'] = $room_name;
+        $this->container['roomName'] = $roomName;
 
         return $this;
     }
 
     /**
-     * Gets room_number
+     * Gets roomNumber
      *
      * @return string|null
      */
     public function getRoomNumber()
     {
-        return $this->container['room_number'];
+        return $this->container['roomNumber'];
     }
 
     /**
-     * Sets room_number
+     * Sets roomNumber
      *
-     * @param string|null $room_number The number of the room the section takes place in
+     * @param string|null $roomNumber The number of the room the section takes place in
      *
      * @return self
      */
-    public function setRoomNumber($room_number)
+    public function setRoomNumber($roomNumber)
     {
-        if (is_null($room_number)) {
-            array_push($this->openAPINullablesSetToNull, 'room_number');
+        if (is_null($roomNumber)) {
+            array_push($this->openAPINullablesSetToNull, 'roomNumber');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_number', $nullablesSetToNull);
+            $index = array_search('roomNumber', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_number'] = $room_number;
+        $this->container['roomNumber'] = $roomNumber;
 
         return $this;
     }
 
     /**
-     * Gets room_capacity
+     * Gets roomCapacity
      *
      * @return int|null
      */
     public function getRoomCapacity()
     {
-        return $this->container['room_capacity'];
+        return $this->container['roomCapacity'];
     }
 
     /**
-     * Sets room_capacity
+     * Sets roomCapacity
      *
-     * @param int|null $room_capacity The capacity of the room the section takes place in
+     * @param int|null $roomCapacity The capacity of the room the section takes place in
      *
      * @return self
      */
-    public function setRoomCapacity($room_capacity)
+    public function setRoomCapacity($roomCapacity)
     {
-        if (is_null($room_capacity)) {
-            array_push($this->openAPINullablesSetToNull, 'room_capacity');
+        if (is_null($roomCapacity)) {
+            array_push($this->openAPINullablesSetToNull, 'roomCapacity');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_capacity', $nullablesSetToNull);
+            $index = array_search('roomCapacity', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_capacity'] = $room_capacity;
+        $this->container['roomCapacity'] = $roomCapacity;
 
         return $this;
     }
 
     /**
-     * Gets room_code
+     * Gets roomCode
      *
      * @return string|null
      */
     public function getRoomCode()
     {
-        return $this->container['room_code'];
+        return $this->container['roomCode'];
     }
 
     /**
-     * Sets room_code
+     * Sets roomCode
      *
-     * @param string|null $room_code The code of the room the section takes place in
+     * @param string|null $roomCode The code of the room the section takes place in
      *
      * @return self
      */
-    public function setRoomCode($room_code)
+    public function setRoomCode($roomCode)
     {
-        if (is_null($room_code)) {
-            array_push($this->openAPINullablesSetToNull, 'room_code');
+        if (is_null($roomCode)) {
+            array_push($this->openAPINullablesSetToNull, 'roomCode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('room_code', $nullablesSetToNull);
+            $index = array_search('roomCode', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['room_code'] = $room_code;
+        $this->container['roomCode'] = $roomCode;
 
         return $this;
     }
 
     /**
-     * Gets faculty_name
+     * Gets facultyName
      *
      * @return string|null
      */
     public function getFacultyName()
     {
-        return $this->container['faculty_name'];
+        return $this->container['facultyName'];
     }
 
     /**
-     * Sets faculty_name
+     * Sets facultyName
      *
-     * @param string|null $faculty_name The full name of the head teacher
+     * @param string|null $facultyName The full name of the head teacher
      *
      * @return self
      */
-    public function setFacultyName($faculty_name)
+    public function setFacultyName($facultyName)
     {
-        if (is_null($faculty_name)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_name');
+        if (is_null($facultyName)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_name', $nullablesSetToNull);
+            $index = array_search('facultyName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_name'] = $faculty_name;
+        $this->container['facultyName'] = $facultyName;
 
         return $this;
     }
 
     /**
-     * Gets faculty_firstname
+     * Gets facultyFirstname
      *
      * @return string|null
      */
     public function getFacultyFirstname()
     {
-        return $this->container['faculty_firstname'];
+        return $this->container['facultyFirstname'];
     }
 
     /**
-     * Sets faculty_firstname
+     * Sets facultyFirstname
      *
-     * @param string|null $faculty_firstname The first name of the head teacher
+     * @param string|null $facultyFirstname The first name of the head teacher
      *
      * @return self
      */
-    public function setFacultyFirstname($faculty_firstname)
+    public function setFacultyFirstname($facultyFirstname)
     {
-        if (is_null($faculty_firstname)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_firstname');
+        if (is_null($facultyFirstname)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyFirstname');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_firstname', $nullablesSetToNull);
+            $index = array_search('facultyFirstname', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_firstname'] = $faculty_firstname;
+        $this->container['facultyFirstname'] = $facultyFirstname;
 
         return $this;
     }
 
     /**
-     * Gets faculty_lastname
+     * Gets facultyLastname
      *
      * @return string|null
      */
     public function getFacultyLastname()
     {
-        return $this->container['faculty_lastname'];
+        return $this->container['facultyLastname'];
     }
 
     /**
-     * Sets faculty_lastname
+     * Sets facultyLastname
      *
-     * @param string|null $faculty_lastname The last name of the head teacher
+     * @param string|null $facultyLastname The last name of the head teacher
      *
      * @return self
      */
-    public function setFacultyLastname($faculty_lastname)
+    public function setFacultyLastname($facultyLastname)
     {
-        if (is_null($faculty_lastname)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_lastname');
+        if (is_null($facultyLastname)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyLastname');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_lastname', $nullablesSetToNull);
+            $index = array_search('facultyLastname', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_lastname'] = $faculty_lastname;
+        $this->container['facultyLastname'] = $facultyLastname;
 
         return $this;
     }
 
     /**
-     * Gets start_time
+     * Gets startTime
      *
      * @return \DateTime|null
      */
     public function getStartTime()
     {
-        return $this->container['start_time'];
+        return $this->container['startTime'];
     }
 
     /**
-     * Sets start_time
+     * Sets startTime
      *
-     * @param \DateTime|null $start_time The start time of the meeting
+     * @param \DateTime|null $startTime The start time of the meeting
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartTime($startTime)
     {
-        if (is_null($start_time)) {
-            array_push($this->openAPINullablesSetToNull, 'start_time');
+        if (is_null($startTime)) {
+            array_push($this->openAPINullablesSetToNull, 'startTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('start_time', $nullablesSetToNull);
+            $index = array_search('startTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['start_time'] = $start_time;
+        $this->container['startTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * Gets end_time
+     * Gets endTime
      *
      * @return \DateTime|null
      */
     public function getEndTime()
     {
-        return $this->container['end_time'];
+        return $this->container['endTime'];
     }
 
     /**
-     * Sets end_time
+     * Sets endTime
      *
-     * @param \DateTime|null $end_time The end time of the meeting
+     * @param \DateTime|null $endTime The end time of the meeting
      *
      * @return self
      */
-    public function setEndTime($end_time)
+    public function setEndTime($endTime)
     {
-        if (is_null($end_time)) {
-            array_push($this->openAPINullablesSetToNull, 'end_time');
+        if (is_null($endTime)) {
+            array_push($this->openAPINullablesSetToNull, 'endTime');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_time', $nullablesSetToNull);
+            $index = array_search('endTime', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_time'] = $end_time;
+        $this->container['endTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * Gets meeting_date
+     * Gets meetingDate
      *
      * @return \DateTime|null
      */
     public function getMeetingDate()
     {
-        return $this->container['meeting_date'];
+        return $this->container['meetingDate'];
     }
 
     /**
-     * Sets meeting_date
+     * Sets meetingDate
      *
-     * @param \DateTime|null $meeting_date The date the meeting takes place
+     * @param \DateTime|null $meetingDate The date the meeting takes place
      *
      * @return self
      */
-    public function setMeetingDate($meeting_date)
+    public function setMeetingDate($meetingDate)
     {
-        if (is_null($meeting_date)) {
-            array_push($this->openAPINullablesSetToNull, 'meeting_date');
+        if (is_null($meetingDate)) {
+            array_push($this->openAPINullablesSetToNull, 'meetingDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('meeting_date', $nullablesSetToNull);
+            $index = array_search('meetingDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['meeting_date'] = $meeting_date;
+        $this->container['meetingDate'] = $meetingDate;
 
         return $this;
     }
 
     /**
-     * Gets faculty_user_id
+     * Gets facultyUserId
      *
      * @return int|null
      */
     public function getFacultyUserId()
     {
-        return $this->container['faculty_user_id'];
+        return $this->container['facultyUserId'];
     }
 
     /**
-     * Sets faculty_user_id
+     * Sets facultyUserId
      *
-     * @param int|null $faculty_user_id The user Id of the head teacher
+     * @param int|null $facultyUserId The user Id of the head teacher
      *
      * @return self
      */
-    public function setFacultyUserId($faculty_user_id)
+    public function setFacultyUserId($facultyUserId)
     {
-        if (is_null($faculty_user_id)) {
-            array_push($this->openAPINullablesSetToNull, 'faculty_user_id');
+        if (is_null($facultyUserId)) {
+            array_push($this->openAPINullablesSetToNull, 'facultyUserId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('faculty_user_id', $nullablesSetToNull);
+            $index = array_search('facultyUserId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['faculty_user_id'] = $faculty_user_id;
+        $this->container['facultyUserId'] = $facultyUserId;
 
         return $this;
     }
 
     /**
-     * Gets attendance_required
+     * Gets attendanceRequired
      *
      * @return bool|null
      */
     public function getAttendanceRequired()
     {
-        return $this->container['attendance_required'];
+        return $this->container['attendanceRequired'];
     }
 
     /**
-     * Sets attendance_required
+     * Sets attendanceRequired
      *
-     * @param bool|null $attendance_required Returns true if attendance is required
+     * @param bool|null $attendanceRequired Returns true if attendance is required
      *
      * @return self
      */
-    public function setAttendanceRequired($attendance_required)
+    public function setAttendanceRequired($attendanceRequired)
     {
-        if (is_null($attendance_required)) {
-            array_push($this->openAPINullablesSetToNull, 'attendance_required');
+        if (is_null($attendanceRequired)) {
+            array_push($this->openAPINullablesSetToNull, 'attendanceRequired');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('attendance_required', $nullablesSetToNull);
+            $index = array_search('attendanceRequired', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['attendance_required'] = $attendance_required;
+        $this->container['attendanceRequired'] = $attendanceRequired;
 
         return $this;
     }
 
     /**
-     * Gets offering_type
+     * Gets offeringType
      *
      * @return \SKY\School\Model\OfferingType|null
      */
     public function getOfferingType()
     {
-        return $this->container['offering_type'];
+        return $this->container['offeringType'];
     }
 
     /**
-     * Sets offering_type
+     * Sets offeringType
      *
-     * @param \SKY\School\Model\OfferingType|null $offering_type offering_type
+     * @param \SKY\School\Model\OfferingType|null $offeringType offeringType
      *
      * @return self
      */
-    public function setOfferingType($offering_type)
+    public function setOfferingType($offeringType)
     {
-        if (is_null($offering_type)) {
-            throw new \InvalidArgumentException('non-nullable offering_type cannot be null');
+        if (is_null($offeringType)) {
+            throw new \InvalidArgumentException('non-nullable offeringType cannot be null');
         }
-        $this->container['offering_type'] = $offering_type;
+        $this->container['offeringType'] = $offeringType;
 
         return $this;
     }

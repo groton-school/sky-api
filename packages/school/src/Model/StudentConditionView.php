@@ -60,10 +60,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $openAPITypes = [
         'id' => 'int',
         'condition' => '\SKY\School\Model\IdDescriptorField',
-        'date_as_of' => '\DateTime',
-        'date_until' => '\DateTime',
+        'dateAsOf' => '\DateTime',
+        'dateUntil' => '\DateTime',
         'notes' => 'string',
-        'student_medications' => '\SKY\School\Model\StudentMedication[]',
+        'studentMedications' => '\SKY\School\Model\StudentMedication[]',
     ];
 
     /**
@@ -76,10 +76,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $openAPIFormats = [
         'id' => 'int32',
         'condition' => null,
-        'date_as_of' => 'date-time',
-        'date_until' => 'date-time',
+        'dateAsOf' => 'date-time',
+        'dateUntil' => 'date-time',
         'notes' => null,
-        'student_medications' => null,
+        'studentMedications' => null,
     ];
 
     /**
@@ -90,10 +90,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static array $openAPINullables = [
         'id' => false,
         'condition' => false,
-        'date_as_of' => true,
-        'date_until' => true,
+        'dateAsOf' => true,
+        'dateUntil' => true,
         'notes' => true,
-        'student_medications' => true,
+        'studentMedications' => true,
     ];
 
     /**
@@ -184,10 +184,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $attributeMap = [
         'id' => 'id',
         'condition' => 'condition',
-        'date_as_of' => 'date_as_of',
-        'date_until' => 'date_until',
+        'dateAsOf' => 'date_as_of',
+        'dateUntil' => 'date_until',
         'notes' => 'notes',
-        'student_medications' => 'student_medications',
+        'studentMedications' => 'student_medications',
     ];
 
     /**
@@ -198,10 +198,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $setters = [
         'id' => 'setId',
         'condition' => 'setCondition',
-        'date_as_of' => 'setDateAsOf',
-        'date_until' => 'setDateUntil',
+        'dateAsOf' => 'setDateAsOf',
+        'dateUntil' => 'setDateUntil',
         'notes' => 'setNotes',
-        'student_medications' => 'setStudentMedications',
+        'studentMedications' => 'setStudentMedications',
     ];
 
     /**
@@ -212,10 +212,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $getters = [
         'id' => 'getId',
         'condition' => 'getCondition',
-        'date_as_of' => 'getDateAsOf',
-        'date_until' => 'getDateUntil',
+        'dateAsOf' => 'getDateAsOf',
+        'dateUntil' => 'getDateUntil',
         'notes' => 'getNotes',
-        'student_medications' => 'getStudentMedications',
+        'studentMedications' => 'getStudentMedications',
     ];
 
     /**
@@ -277,10 +277,10 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('condition', $data ?? [], null);
-        $this->setIfExists('date_as_of', $data ?? [], null);
-        $this->setIfExists('date_until', $data ?? [], null);
+        $this->setIfExists('dateAsOf', $data ?? [], null);
+        $this->setIfExists('dateUntil', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('student_medications', $data ?? [], null);
+        $this->setIfExists('studentMedications', $data ?? [], null);
     }
 
     /**
@@ -380,69 +380,69 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets date_as_of
+     * Gets dateAsOf
      *
      * @return \DateTime|null
      */
     public function getDateAsOf()
     {
-        return $this->container['date_as_of'];
+        return $this->container['dateAsOf'];
     }
 
     /**
-     * Sets date_as_of
+     * Sets dateAsOf
      *
-     * @param \DateTime|null $date_as_of The start date for the condition.
+     * @param \DateTime|null $dateAsOf The start date for the condition.
      *
      * @return self
      */
-    public function setDateAsOf($date_as_of)
+    public function setDateAsOf($dateAsOf)
     {
-        if (is_null($date_as_of)) {
-            array_push($this->openAPINullablesSetToNull, 'date_as_of');
+        if (is_null($dateAsOf)) {
+            array_push($this->openAPINullablesSetToNull, 'dateAsOf');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_as_of', $nullablesSetToNull);
+            $index = array_search('dateAsOf', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_as_of'] = $date_as_of;
+        $this->container['dateAsOf'] = $dateAsOf;
 
         return $this;
     }
 
     /**
-     * Gets date_until
+     * Gets dateUntil
      *
      * @return \DateTime|null
      */
     public function getDateUntil()
     {
-        return $this->container['date_until'];
+        return $this->container['dateUntil'];
     }
 
     /**
-     * Sets date_until
+     * Sets dateUntil
      *
-     * @param \DateTime|null $date_until The end date for the condition.
+     * @param \DateTime|null $dateUntil The end date for the condition.
      *
      * @return self
      */
-    public function setDateUntil($date_until)
+    public function setDateUntil($dateUntil)
     {
-        if (is_null($date_until)) {
-            array_push($this->openAPINullablesSetToNull, 'date_until');
+        if (is_null($dateUntil)) {
+            array_push($this->openAPINullablesSetToNull, 'dateUntil');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_until', $nullablesSetToNull);
+            $index = array_search('dateUntil', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_until'] = $date_until;
+        $this->container['dateUntil'] = $dateUntil;
 
         return $this;
     }
@@ -482,35 +482,35 @@ class StudentConditionView implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets student_medications
+     * Gets studentMedications
      *
      * @return \SKY\School\Model\StudentMedication[]|null
      */
     public function getStudentMedications()
     {
-        return $this->container['student_medications'];
+        return $this->container['studentMedications'];
     }
 
     /**
-     * Sets student_medications
+     * Sets studentMedications
      *
-     * @param \SKY\School\Model\StudentMedication[]|null $student_medications An array of student medication objects.
+     * @param \SKY\School\Model\StudentMedication[]|null $studentMedications An array of student medication objects.
      *
      * @return self
      */
-    public function setStudentMedications($student_medications)
+    public function setStudentMedications($studentMedications)
     {
-        if (is_null($student_medications)) {
-            array_push($this->openAPINullablesSetToNull, 'student_medications');
+        if (is_null($studentMedications)) {
+            array_push($this->openAPINullablesSetToNull, 'studentMedications');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_medications', $nullablesSetToNull);
+            $index = array_search('studentMedications', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_medications'] = $student_medications;
+        $this->container['studentMedications'] = $studentMedications;
 
         return $this;
     }

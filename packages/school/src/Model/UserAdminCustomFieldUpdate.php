@@ -59,13 +59,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'field_id' => 'int',
-        'data_type_id' => 'int',
-        'int_value' => 'int',
-        'text_value' => 'string',
-        'decimal_value' => 'float',
-        'date_value' => '\DateTime',
-        'bit_value' => 'bool',
+        'fieldId' => 'int',
+        'dataTypeId' => 'int',
+        'intValue' => 'int',
+        'textValue' => 'string',
+        'decimalValue' => 'float',
+        'dateValue' => '\DateTime',
+        'bitValue' => 'bool',
     ];
 
     /**
@@ -77,13 +77,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'field_id' => 'int32',
-        'data_type_id' => 'int32',
-        'int_value' => 'int32',
-        'text_value' => null,
-        'decimal_value' => 'double',
-        'date_value' => 'date-time',
-        'bit_value' => null,
+        'fieldId' => 'int32',
+        'dataTypeId' => 'int32',
+        'intValue' => 'int32',
+        'textValue' => null,
+        'decimalValue' => 'double',
+        'dateValue' => 'date-time',
+        'bitValue' => null,
     ];
 
     /**
@@ -93,13 +93,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'field_id' => false,
-        'data_type_id' => false,
-        'int_value' => true,
-        'text_value' => true,
-        'decimal_value' => true,
-        'date_value' => true,
-        'bit_value' => true,
+        'fieldId' => false,
+        'dataTypeId' => false,
+        'intValue' => true,
+        'textValue' => true,
+        'decimalValue' => true,
+        'dateValue' => true,
+        'bitValue' => true,
     ];
 
     /**
@@ -189,13 +189,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'field_id' => 'field_id',
-        'data_type_id' => 'data_type_id',
-        'int_value' => 'int_value',
-        'text_value' => 'text_value',
-        'decimal_value' => 'decimal_value',
-        'date_value' => 'date_value',
-        'bit_value' => 'bit_value',
+        'fieldId' => 'field_id',
+        'dataTypeId' => 'data_type_id',
+        'intValue' => 'int_value',
+        'textValue' => 'text_value',
+        'decimalValue' => 'decimal_value',
+        'dateValue' => 'date_value',
+        'bitValue' => 'bit_value',
     ];
 
     /**
@@ -205,13 +205,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $setters = [
         'id' => 'setId',
-        'field_id' => 'setFieldId',
-        'data_type_id' => 'setDataTypeId',
-        'int_value' => 'setIntValue',
-        'text_value' => 'setTextValue',
-        'decimal_value' => 'setDecimalValue',
-        'date_value' => 'setDateValue',
-        'bit_value' => 'setBitValue',
+        'fieldId' => 'setFieldId',
+        'dataTypeId' => 'setDataTypeId',
+        'intValue' => 'setIntValue',
+        'textValue' => 'setTextValue',
+        'decimalValue' => 'setDecimalValue',
+        'dateValue' => 'setDateValue',
+        'bitValue' => 'setBitValue',
     ];
 
     /**
@@ -221,13 +221,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $getters = [
         'id' => 'getId',
-        'field_id' => 'getFieldId',
-        'data_type_id' => 'getDataTypeId',
-        'int_value' => 'getIntValue',
-        'text_value' => 'getTextValue',
-        'decimal_value' => 'getDecimalValue',
-        'date_value' => 'getDateValue',
-        'bit_value' => 'getBitValue',
+        'fieldId' => 'getFieldId',
+        'dataTypeId' => 'getDataTypeId',
+        'intValue' => 'getIntValue',
+        'textValue' => 'getTextValue',
+        'decimalValue' => 'getDecimalValue',
+        'dateValue' => 'getDateValue',
+        'bitValue' => 'getBitValue',
     ];
 
     /**
@@ -288,13 +288,13 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('field_id', $data ?? [], null);
-        $this->setIfExists('data_type_id', $data ?? [], null);
-        $this->setIfExists('int_value', $data ?? [], null);
-        $this->setIfExists('text_value', $data ?? [], null);
-        $this->setIfExists('decimal_value', $data ?? [], null);
-        $this->setIfExists('date_value', $data ?? [], null);
-        $this->setIfExists('bit_value', $data ?? [], null);
+        $this->setIfExists('fieldId', $data ?? [], null);
+        $this->setIfExists('dataTypeId', $data ?? [], null);
+        $this->setIfExists('intValue', $data ?? [], null);
+        $this->setIfExists('textValue', $data ?? [], null);
+        $this->setIfExists('decimalValue', $data ?? [], null);
+        $this->setIfExists('dateValue', $data ?? [], null);
+        $this->setIfExists('bitValue', $data ?? [], null);
     }
 
     /**
@@ -374,225 +374,225 @@ class UserAdminCustomFieldUpdate implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
-     * Gets field_id
+     * Gets fieldId
      *
      * @return int|null
      */
     public function getFieldId()
     {
-        return $this->container['field_id'];
+        return $this->container['fieldId'];
     }
 
     /**
-     * Sets field_id
+     * Sets fieldId
      *
-     * @param int|null $field_id The ID of the custom field to update. This value is returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
+     * @param int|null $fieldId The ID of the custom field to update. This value is returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
      *
      * @return self
      */
-    public function setFieldId($field_id)
+    public function setFieldId($fieldId)
     {
-        if (is_null($field_id)) {
-            throw new \InvalidArgumentException('non-nullable field_id cannot be null');
+        if (is_null($fieldId)) {
+            throw new \InvalidArgumentException('non-nullable fieldId cannot be null');
         }
-        $this->container['field_id'] = $field_id;
+        $this->container['fieldId'] = $fieldId;
 
         return $this;
     }
 
     /**
-     * Gets data_type_id
+     * Gets dataTypeId
      *
      * @return int|null
      */
     public function getDataTypeId()
     {
-        return $this->container['data_type_id'];
+        return $this->container['dataTypeId'];
     }
 
     /**
-     * Sets data_type_id
+     * Sets dataTypeId
      *
-     * @param int|null $data_type_id The ID of the data type of the custom field. This value is returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
+     * @param int|null $dataTypeId The ID of the data type of the custom field. This value is returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
      *
      * @return self
      */
-    public function setDataTypeId($data_type_id)
+    public function setDataTypeId($dataTypeId)
     {
-        if (is_null($data_type_id)) {
-            throw new \InvalidArgumentException('non-nullable data_type_id cannot be null');
+        if (is_null($dataTypeId)) {
+            throw new \InvalidArgumentException('non-nullable dataTypeId cannot be null');
         }
-        $this->container['data_type_id'] = $data_type_id;
+        $this->container['dataTypeId'] = $dataTypeId;
 
         return $this;
     }
 
     /**
-     * Gets int_value
+     * Gets intValue
      *
      * @return int|null
      */
     public function getIntValue()
     {
-        return $this->container['int_value'];
+        return $this->container['intValue'];
     }
 
     /**
-     * Sets int_value
+     * Sets intValue
      *
-     * @param int|null $int_value If the field format is Number, use this property for the value of the custom field. Values must be a whole number (positive or negative).<br />  If the field format is Dropdown or Checkbox List, use this property for the value of the custom field. The value is the table value ID returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
+     * @param int|null $intValue If the field format is Number, use this property for the value of the custom field. Values must be a whole number (positive or negative).<br />  If the field format is Dropdown or Checkbox List, use this property for the value of the custom field. The value is the table value ID returned from <a href=\"https://developer.sky.blackbaud.com/docs/services/school/operations/V1CustomfieldsGet\" target=\"_blank\">Core custom fields</a>.
      *
      * @return self
      */
-    public function setIntValue($int_value)
+    public function setIntValue($intValue)
     {
-        if (is_null($int_value)) {
-            array_push($this->openAPINullablesSetToNull, 'int_value');
+        if (is_null($intValue)) {
+            array_push($this->openAPINullablesSetToNull, 'intValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('int_value', $nullablesSetToNull);
+            $index = array_search('intValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['int_value'] = $int_value;
+        $this->container['intValue'] = $intValue;
 
         return $this;
     }
 
     /**
-     * Gets text_value
+     * Gets textValue
      *
      * @return string|null
      */
     public function getTextValue()
     {
-        return $this->container['text_value'];
+        return $this->container['textValue'];
     }
 
     /**
-     * Sets text_value
+     * Sets textValue
      *
-     * @param string|null $text_value If the field format is Text input or Text paragraph, use this property for the value of the custom field.
+     * @param string|null $textValue If the field format is Text input or Text paragraph, use this property for the value of the custom field.
      *
      * @return self
      */
-    public function setTextValue($text_value)
+    public function setTextValue($textValue)
     {
-        if (is_null($text_value)) {
-            array_push($this->openAPINullablesSetToNull, 'text_value');
+        if (is_null($textValue)) {
+            array_push($this->openAPINullablesSetToNull, 'textValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('text_value', $nullablesSetToNull);
+            $index = array_search('textValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['text_value'] = $text_value;
+        $this->container['textValue'] = $textValue;
 
         return $this;
     }
 
     /**
-     * Gets decimal_value
+     * Gets decimalValue
      *
      * @return float|null
      */
     public function getDecimalValue()
     {
-        return $this->container['decimal_value'];
+        return $this->container['decimalValue'];
     }
 
     /**
-     * Sets decimal_value
+     * Sets decimalValue
      *
-     * @param float|null $decimal_value If the field format is Currency, use this property for the value of the custom field. Values must be between 0.00 and 99,999,999.99.
+     * @param float|null $decimalValue If the field format is Currency, use this property for the value of the custom field. Values must be between 0.00 and 99,999,999.99.
      *
      * @return self
      */
-    public function setDecimalValue($decimal_value)
+    public function setDecimalValue($decimalValue)
     {
-        if (is_null($decimal_value)) {
-            array_push($this->openAPINullablesSetToNull, 'decimal_value');
+        if (is_null($decimalValue)) {
+            array_push($this->openAPINullablesSetToNull, 'decimalValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decimal_value', $nullablesSetToNull);
+            $index = array_search('decimalValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decimal_value'] = $decimal_value;
+        $this->container['decimalValue'] = $decimalValue;
 
         return $this;
     }
 
     /**
-     * Gets date_value
+     * Gets dateValue
      *
      * @return \DateTime|null
      */
     public function getDateValue()
     {
-        return $this->container['date_value'];
+        return $this->container['dateValue'];
     }
 
     /**
-     * Sets date_value
+     * Sets dateValue
      *
-     * @param \DateTime|null $date_value If field format is Date, use this property for the value of the custom field. Values must be formatted YYYY/MM/DD.
+     * @param \DateTime|null $dateValue If field format is Date, use this property for the value of the custom field. Values must be formatted YYYY/MM/DD.
      *
      * @return self
      */
-    public function setDateValue($date_value)
+    public function setDateValue($dateValue)
     {
-        if (is_null($date_value)) {
-            array_push($this->openAPINullablesSetToNull, 'date_value');
+        if (is_null($dateValue)) {
+            array_push($this->openAPINullablesSetToNull, 'dateValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_value', $nullablesSetToNull);
+            $index = array_search('dateValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_value'] = $date_value;
+        $this->container['dateValue'] = $dateValue;
 
         return $this;
     }
 
     /**
-     * Gets bit_value
+     * Gets bitValue
      *
      * @return bool|null
      */
     public function getBitValue()
     {
-        return $this->container['bit_value'];
+        return $this->container['bitValue'];
     }
 
     /**
-     * Sets bit_value
+     * Sets bitValue
      *
-     * @param bool|null $bit_value If field format is Yes/No or Checkbox, use this property for the value of the custom field. Values must be 'true\" or 'false'.
+     * @param bool|null $bitValue If field format is Yes/No or Checkbox, use this property for the value of the custom field. Values must be 'true\" or 'false'.
      *
      * @return self
      */
-    public function setBitValue($bit_value)
+    public function setBitValue($bitValue)
     {
-        if (is_null($bit_value)) {
-            array_push($this->openAPINullablesSetToNull, 'bit_value');
+        if (is_null($bitValue)) {
+            array_push($this->openAPINullablesSetToNull, 'bitValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('bit_value', $nullablesSetToNull);
+            $index = array_search('bitValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['bit_value'] = $bit_value;
+        $this->container['bitValue'] = $bitValue;
 
         return $this;
     }

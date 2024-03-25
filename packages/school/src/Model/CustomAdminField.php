@@ -59,25 +59,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'data_type_id' => 'int',
-        'data_type' => 'string',
-        'data_type_description' => 'string',
-        'field_id' => 'int',
-        'field_name' => 'string',
-        'bit_value' => 'bool',
-        'int_value' => 'int',
-        'decimal_value' => 'float',
-        'text_value' => 'string',
-        'date_value' => '\DateTime',
-        'last_modified_user_id' => 'int',
-        'last_modified_date' => '\DateTime',
+        'dataTypeId' => 'int',
+        'dataType' => 'string',
+        'dataTypeDescription' => 'string',
+        'fieldId' => 'int',
+        'fieldName' => 'string',
+        'bitValue' => 'bool',
+        'intValue' => 'int',
+        'decimalValue' => 'float',
+        'textValue' => 'string',
+        'dateValue' => '\DateTime',
+        'lastModifiedUserId' => 'int',
+        'lastModifiedDate' => '\DateTime',
         'status' => 'bool',
         'unique' => 'bool',
         'required' => 'bool',
-        'table_id' => 'int',
-        'table_value_id' => 'int',
-        'table_value' => 'string',
-        'table_value_abbreviation' => 'string',
+        'tableId' => 'int',
+        'tableValueId' => 'int',
+        'tableValue' => 'string',
+        'tableValueAbbreviation' => 'string',
     ];
 
     /**
@@ -89,25 +89,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'data_type_id' => 'int32',
-        'data_type' => null,
-        'data_type_description' => null,
-        'field_id' => 'int32',
-        'field_name' => null,
-        'bit_value' => null,
-        'int_value' => 'int32',
-        'decimal_value' => 'float',
-        'text_value' => null,
-        'date_value' => 'date-time',
-        'last_modified_user_id' => 'int32',
-        'last_modified_date' => 'date-time',
+        'dataTypeId' => 'int32',
+        'dataType' => null,
+        'dataTypeDescription' => null,
+        'fieldId' => 'int32',
+        'fieldName' => null,
+        'bitValue' => null,
+        'intValue' => 'int32',
+        'decimalValue' => 'float',
+        'textValue' => null,
+        'dateValue' => 'date-time',
+        'lastModifiedUserId' => 'int32',
+        'lastModifiedDate' => 'date-time',
         'status' => null,
         'unique' => null,
         'required' => null,
-        'table_id' => 'int32',
-        'table_value_id' => 'int32',
-        'table_value' => null,
-        'table_value_abbreviation' => null,
+        'tableId' => 'int32',
+        'tableValueId' => 'int32',
+        'tableValue' => null,
+        'tableValueAbbreviation' => null,
     ];
 
     /**
@@ -117,25 +117,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'data_type_id' => false,
-        'data_type' => true,
-        'data_type_description' => true,
-        'field_id' => false,
-        'field_name' => true,
-        'bit_value' => true,
-        'int_value' => true,
-        'decimal_value' => true,
-        'text_value' => true,
-        'date_value' => true,
-        'last_modified_user_id' => false,
-        'last_modified_date' => false,
+        'dataTypeId' => false,
+        'dataType' => true,
+        'dataTypeDescription' => true,
+        'fieldId' => false,
+        'fieldName' => true,
+        'bitValue' => true,
+        'intValue' => true,
+        'decimalValue' => true,
+        'textValue' => true,
+        'dateValue' => true,
+        'lastModifiedUserId' => false,
+        'lastModifiedDate' => false,
         'status' => false,
         'unique' => false,
         'required' => false,
-        'table_id' => true,
-        'table_value_id' => true,
-        'table_value' => true,
-        'table_value_abbreviation' => true,
+        'tableId' => true,
+        'tableValueId' => true,
+        'tableValue' => true,
+        'tableValueAbbreviation' => true,
     ];
 
     /**
@@ -225,25 +225,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'data_type_id' => 'data_type_id',
-        'data_type' => 'data_type',
-        'data_type_description' => 'data_type_description',
-        'field_id' => 'field_id',
-        'field_name' => 'field_name',
-        'bit_value' => 'bit_value',
-        'int_value' => 'int_value',
-        'decimal_value' => 'decimal_value',
-        'text_value' => 'text_value',
-        'date_value' => 'date_value',
-        'last_modified_user_id' => 'last_modified_user_id',
-        'last_modified_date' => 'last_modified_date',
+        'dataTypeId' => 'data_type_id',
+        'dataType' => 'data_type',
+        'dataTypeDescription' => 'data_type_description',
+        'fieldId' => 'field_id',
+        'fieldName' => 'field_name',
+        'bitValue' => 'bit_value',
+        'intValue' => 'int_value',
+        'decimalValue' => 'decimal_value',
+        'textValue' => 'text_value',
+        'dateValue' => 'date_value',
+        'lastModifiedUserId' => 'last_modified_user_id',
+        'lastModifiedDate' => 'last_modified_date',
         'status' => 'status',
         'unique' => 'unique',
         'required' => 'required',
-        'table_id' => 'table_id',
-        'table_value_id' => 'table_value_id',
-        'table_value' => 'table_value',
-        'table_value_abbreviation' => 'table_value_abbreviation',
+        'tableId' => 'table_id',
+        'tableValueId' => 'table_value_id',
+        'tableValue' => 'table_value',
+        'tableValueAbbreviation' => 'table_value_abbreviation',
     ];
 
     /**
@@ -253,25 +253,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'data_type_id' => 'setDataTypeId',
-        'data_type' => 'setDataType',
-        'data_type_description' => 'setDataTypeDescription',
-        'field_id' => 'setFieldId',
-        'field_name' => 'setFieldName',
-        'bit_value' => 'setBitValue',
-        'int_value' => 'setIntValue',
-        'decimal_value' => 'setDecimalValue',
-        'text_value' => 'setTextValue',
-        'date_value' => 'setDateValue',
-        'last_modified_user_id' => 'setLastModifiedUserId',
-        'last_modified_date' => 'setLastModifiedDate',
+        'dataTypeId' => 'setDataTypeId',
+        'dataType' => 'setDataType',
+        'dataTypeDescription' => 'setDataTypeDescription',
+        'fieldId' => 'setFieldId',
+        'fieldName' => 'setFieldName',
+        'bitValue' => 'setBitValue',
+        'intValue' => 'setIntValue',
+        'decimalValue' => 'setDecimalValue',
+        'textValue' => 'setTextValue',
+        'dateValue' => 'setDateValue',
+        'lastModifiedUserId' => 'setLastModifiedUserId',
+        'lastModifiedDate' => 'setLastModifiedDate',
         'status' => 'setStatus',
         'unique' => 'setUnique',
         'required' => 'setRequired',
-        'table_id' => 'setTableId',
-        'table_value_id' => 'setTableValueId',
-        'table_value' => 'setTableValue',
-        'table_value_abbreviation' => 'setTableValueAbbreviation',
+        'tableId' => 'setTableId',
+        'tableValueId' => 'setTableValueId',
+        'tableValue' => 'setTableValue',
+        'tableValueAbbreviation' => 'setTableValueAbbreviation',
     ];
 
     /**
@@ -281,25 +281,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'data_type_id' => 'getDataTypeId',
-        'data_type' => 'getDataType',
-        'data_type_description' => 'getDataTypeDescription',
-        'field_id' => 'getFieldId',
-        'field_name' => 'getFieldName',
-        'bit_value' => 'getBitValue',
-        'int_value' => 'getIntValue',
-        'decimal_value' => 'getDecimalValue',
-        'text_value' => 'getTextValue',
-        'date_value' => 'getDateValue',
-        'last_modified_user_id' => 'getLastModifiedUserId',
-        'last_modified_date' => 'getLastModifiedDate',
+        'dataTypeId' => 'getDataTypeId',
+        'dataType' => 'getDataType',
+        'dataTypeDescription' => 'getDataTypeDescription',
+        'fieldId' => 'getFieldId',
+        'fieldName' => 'getFieldName',
+        'bitValue' => 'getBitValue',
+        'intValue' => 'getIntValue',
+        'decimalValue' => 'getDecimalValue',
+        'textValue' => 'getTextValue',
+        'dateValue' => 'getDateValue',
+        'lastModifiedUserId' => 'getLastModifiedUserId',
+        'lastModifiedDate' => 'getLastModifiedDate',
         'status' => 'getStatus',
         'unique' => 'getUnique',
         'required' => 'getRequired',
-        'table_id' => 'getTableId',
-        'table_value_id' => 'getTableValueId',
-        'table_value' => 'getTableValue',
-        'table_value_abbreviation' => 'getTableValueAbbreviation',
+        'tableId' => 'getTableId',
+        'tableValueId' => 'getTableValueId',
+        'tableValue' => 'getTableValue',
+        'tableValueAbbreviation' => 'getTableValueAbbreviation',
     ];
 
     /**
@@ -360,25 +360,25 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('data_type_id', $data ?? [], null);
-        $this->setIfExists('data_type', $data ?? [], null);
-        $this->setIfExists('data_type_description', $data ?? [], null);
-        $this->setIfExists('field_id', $data ?? [], null);
-        $this->setIfExists('field_name', $data ?? [], null);
-        $this->setIfExists('bit_value', $data ?? [], null);
-        $this->setIfExists('int_value', $data ?? [], null);
-        $this->setIfExists('decimal_value', $data ?? [], null);
-        $this->setIfExists('text_value', $data ?? [], null);
-        $this->setIfExists('date_value', $data ?? [], null);
-        $this->setIfExists('last_modified_user_id', $data ?? [], null);
-        $this->setIfExists('last_modified_date', $data ?? [], null);
+        $this->setIfExists('dataTypeId', $data ?? [], null);
+        $this->setIfExists('dataType', $data ?? [], null);
+        $this->setIfExists('dataTypeDescription', $data ?? [], null);
+        $this->setIfExists('fieldId', $data ?? [], null);
+        $this->setIfExists('fieldName', $data ?? [], null);
+        $this->setIfExists('bitValue', $data ?? [], null);
+        $this->setIfExists('intValue', $data ?? [], null);
+        $this->setIfExists('decimalValue', $data ?? [], null);
+        $this->setIfExists('textValue', $data ?? [], null);
+        $this->setIfExists('dateValue', $data ?? [], null);
+        $this->setIfExists('lastModifiedUserId', $data ?? [], null);
+        $this->setIfExists('lastModifiedDate', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('unique', $data ?? [], null);
         $this->setIfExists('required', $data ?? [], null);
-        $this->setIfExists('table_id', $data ?? [], null);
-        $this->setIfExists('table_value_id', $data ?? [], null);
-        $this->setIfExists('table_value', $data ?? [], null);
-        $this->setIfExists('table_value_abbreviation', $data ?? [], null);
+        $this->setIfExists('tableId', $data ?? [], null);
+        $this->setIfExists('tableValueId', $data ?? [], null);
+        $this->setIfExists('tableValue', $data ?? [], null);
+        $this->setIfExists('tableValueAbbreviation', $data ?? [], null);
     }
 
     /**
@@ -458,381 +458,381 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets data_type_id
+     * Gets dataTypeId
      *
      * @return int|null
      */
     public function getDataTypeId()
     {
-        return $this->container['data_type_id'];
+        return $this->container['dataTypeId'];
     }
 
     /**
-     * Sets data_type_id
+     * Sets dataTypeId
      *
-     * @param int|null $data_type_id Data Type Id
+     * @param int|null $dataTypeId Data Type Id
      *
      * @return self
      */
-    public function setDataTypeId($data_type_id)
+    public function setDataTypeId($dataTypeId)
     {
-        if (is_null($data_type_id)) {
-            throw new \InvalidArgumentException('non-nullable data_type_id cannot be null');
+        if (is_null($dataTypeId)) {
+            throw new \InvalidArgumentException('non-nullable dataTypeId cannot be null');
         }
-        $this->container['data_type_id'] = $data_type_id;
+        $this->container['dataTypeId'] = $dataTypeId;
 
         return $this;
     }
 
     /**
-     * Gets data_type
+     * Gets dataType
      *
      * @return string|null
      */
     public function getDataType()
     {
-        return $this->container['data_type'];
+        return $this->container['dataType'];
     }
 
     /**
-     * Sets data_type
+     * Sets dataType
      *
-     * @param string|null $data_type Data Type
+     * @param string|null $dataType Data Type
      *
      * @return self
      */
-    public function setDataType($data_type)
+    public function setDataType($dataType)
     {
-        if (is_null($data_type)) {
-            array_push($this->openAPINullablesSetToNull, 'data_type');
+        if (is_null($dataType)) {
+            array_push($this->openAPINullablesSetToNull, 'dataType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data_type', $nullablesSetToNull);
+            $index = array_search('dataType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['data_type'] = $data_type;
+        $this->container['dataType'] = $dataType;
 
         return $this;
     }
 
     /**
-     * Gets data_type_description
+     * Gets dataTypeDescription
      *
      * @return string|null
      */
     public function getDataTypeDescription()
     {
-        return $this->container['data_type_description'];
+        return $this->container['dataTypeDescription'];
     }
 
     /**
-     * Sets data_type_description
+     * Sets dataTypeDescription
      *
-     * @param string|null $data_type_description Data Type Description
+     * @param string|null $dataTypeDescription Data Type Description
      *
      * @return self
      */
-    public function setDataTypeDescription($data_type_description)
+    public function setDataTypeDescription($dataTypeDescription)
     {
-        if (is_null($data_type_description)) {
-            array_push($this->openAPINullablesSetToNull, 'data_type_description');
+        if (is_null($dataTypeDescription)) {
+            array_push($this->openAPINullablesSetToNull, 'dataTypeDescription');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data_type_description', $nullablesSetToNull);
+            $index = array_search('dataTypeDescription', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['data_type_description'] = $data_type_description;
+        $this->container['dataTypeDescription'] = $dataTypeDescription;
 
         return $this;
     }
 
     /**
-     * Gets field_id
+     * Gets fieldId
      *
      * @return int|null
      */
     public function getFieldId()
     {
-        return $this->container['field_id'];
+        return $this->container['fieldId'];
     }
 
     /**
-     * Sets field_id
+     * Sets fieldId
      *
-     * @param int|null $field_id The custom field Id
+     * @param int|null $fieldId The custom field Id
      *
      * @return self
      */
-    public function setFieldId($field_id)
+    public function setFieldId($fieldId)
     {
-        if (is_null($field_id)) {
-            throw new \InvalidArgumentException('non-nullable field_id cannot be null');
+        if (is_null($fieldId)) {
+            throw new \InvalidArgumentException('non-nullable fieldId cannot be null');
         }
-        $this->container['field_id'] = $field_id;
+        $this->container['fieldId'] = $fieldId;
 
         return $this;
     }
 
     /**
-     * Gets field_name
+     * Gets fieldName
      *
      * @return string|null
      */
     public function getFieldName()
     {
-        return $this->container['field_name'];
+        return $this->container['fieldName'];
     }
 
     /**
-     * Sets field_name
+     * Sets fieldName
      *
-     * @param string|null $field_name Field Name
+     * @param string|null $fieldName Field Name
      *
      * @return self
      */
-    public function setFieldName($field_name)
+    public function setFieldName($fieldName)
     {
-        if (is_null($field_name)) {
-            array_push($this->openAPINullablesSetToNull, 'field_name');
+        if (is_null($fieldName)) {
+            array_push($this->openAPINullablesSetToNull, 'fieldName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('field_name', $nullablesSetToNull);
+            $index = array_search('fieldName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['field_name'] = $field_name;
+        $this->container['fieldName'] = $fieldName;
 
         return $this;
     }
 
     /**
-     * Gets bit_value
+     * Gets bitValue
      *
      * @return bool|null
      */
     public function getBitValue()
     {
-        return $this->container['bit_value'];
+        return $this->container['bitValue'];
     }
 
     /**
-     * Sets bit_value
+     * Sets bitValue
      *
-     * @param bool|null $bit_value Bit Value
+     * @param bool|null $bitValue Bit Value
      *
      * @return self
      */
-    public function setBitValue($bit_value)
+    public function setBitValue($bitValue)
     {
-        if (is_null($bit_value)) {
-            array_push($this->openAPINullablesSetToNull, 'bit_value');
+        if (is_null($bitValue)) {
+            array_push($this->openAPINullablesSetToNull, 'bitValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('bit_value', $nullablesSetToNull);
+            $index = array_search('bitValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['bit_value'] = $bit_value;
+        $this->container['bitValue'] = $bitValue;
 
         return $this;
     }
 
     /**
-     * Gets int_value
+     * Gets intValue
      *
      * @return int|null
      */
     public function getIntValue()
     {
-        return $this->container['int_value'];
+        return $this->container['intValue'];
     }
 
     /**
-     * Sets int_value
+     * Sets intValue
      *
-     * @param int|null $int_value Int Value
+     * @param int|null $intValue Int Value
      *
      * @return self
      */
-    public function setIntValue($int_value)
+    public function setIntValue($intValue)
     {
-        if (is_null($int_value)) {
-            array_push($this->openAPINullablesSetToNull, 'int_value');
+        if (is_null($intValue)) {
+            array_push($this->openAPINullablesSetToNull, 'intValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('int_value', $nullablesSetToNull);
+            $index = array_search('intValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['int_value'] = $int_value;
+        $this->container['intValue'] = $intValue;
 
         return $this;
     }
 
     /**
-     * Gets decimal_value
+     * Gets decimalValue
      *
      * @return float|null
      */
     public function getDecimalValue()
     {
-        return $this->container['decimal_value'];
+        return $this->container['decimalValue'];
     }
 
     /**
-     * Sets decimal_value
+     * Sets decimalValue
      *
-     * @param float|null $decimal_value Decimal Value
+     * @param float|null $decimalValue Decimal Value
      *
      * @return self
      */
-    public function setDecimalValue($decimal_value)
+    public function setDecimalValue($decimalValue)
     {
-        if (is_null($decimal_value)) {
-            array_push($this->openAPINullablesSetToNull, 'decimal_value');
+        if (is_null($decimalValue)) {
+            array_push($this->openAPINullablesSetToNull, 'decimalValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decimal_value', $nullablesSetToNull);
+            $index = array_search('decimalValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decimal_value'] = $decimal_value;
+        $this->container['decimalValue'] = $decimalValue;
 
         return $this;
     }
 
     /**
-     * Gets text_value
+     * Gets textValue
      *
      * @return string|null
      */
     public function getTextValue()
     {
-        return $this->container['text_value'];
+        return $this->container['textValue'];
     }
 
     /**
-     * Sets text_value
+     * Sets textValue
      *
-     * @param string|null $text_value Text Value
+     * @param string|null $textValue Text Value
      *
      * @return self
      */
-    public function setTextValue($text_value)
+    public function setTextValue($textValue)
     {
-        if (is_null($text_value)) {
-            array_push($this->openAPINullablesSetToNull, 'text_value');
+        if (is_null($textValue)) {
+            array_push($this->openAPINullablesSetToNull, 'textValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('text_value', $nullablesSetToNull);
+            $index = array_search('textValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['text_value'] = $text_value;
+        $this->container['textValue'] = $textValue;
 
         return $this;
     }
 
     /**
-     * Gets date_value
+     * Gets dateValue
      *
      * @return \DateTime|null
      */
     public function getDateValue()
     {
-        return $this->container['date_value'];
+        return $this->container['dateValue'];
     }
 
     /**
-     * Sets date_value
+     * Sets dateValue
      *
-     * @param \DateTime|null $date_value Date Value
+     * @param \DateTime|null $dateValue Date Value
      *
      * @return self
      */
-    public function setDateValue($date_value)
+    public function setDateValue($dateValue)
     {
-        if (is_null($date_value)) {
-            array_push($this->openAPINullablesSetToNull, 'date_value');
+        if (is_null($dateValue)) {
+            array_push($this->openAPINullablesSetToNull, 'dateValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('date_value', $nullablesSetToNull);
+            $index = array_search('dateValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['date_value'] = $date_value;
+        $this->container['dateValue'] = $dateValue;
 
         return $this;
     }
 
     /**
-     * Gets last_modified_user_id
+     * Gets lastModifiedUserId
      *
      * @return int|null
      */
     public function getLastModifiedUserId()
     {
-        return $this->container['last_modified_user_id'];
+        return $this->container['lastModifiedUserId'];
     }
 
     /**
-     * Sets last_modified_user_id
+     * Sets lastModifiedUserId
      *
-     * @param int|null $last_modified_user_id Last Modified User Id
+     * @param int|null $lastModifiedUserId Last Modified User Id
      *
      * @return self
      */
-    public function setLastModifiedUserId($last_modified_user_id)
+    public function setLastModifiedUserId($lastModifiedUserId)
     {
-        if (is_null($last_modified_user_id)) {
-            throw new \InvalidArgumentException('non-nullable last_modified_user_id cannot be null');
+        if (is_null($lastModifiedUserId)) {
+            throw new \InvalidArgumentException('non-nullable lastModifiedUserId cannot be null');
         }
-        $this->container['last_modified_user_id'] = $last_modified_user_id;
+        $this->container['lastModifiedUserId'] = $lastModifiedUserId;
 
         return $this;
     }
 
     /**
-     * Gets last_modified_date
+     * Gets lastModifiedDate
      *
      * @return \DateTime|null
      */
     public function getLastModifiedDate()
     {
-        return $this->container['last_modified_date'];
+        return $this->container['lastModifiedDate'];
     }
 
     /**
-     * Sets last_modified_date
+     * Sets lastModifiedDate
      *
-     * @param \DateTime|null $last_modified_date Last Modified Date
+     * @param \DateTime|null $lastModifiedDate Last Modified Date
      *
      * @return self
      */
-    public function setLastModifiedDate($last_modified_date)
+    public function setLastModifiedDate($lastModifiedDate)
     {
-        if (is_null($last_modified_date)) {
-            throw new \InvalidArgumentException('non-nullable last_modified_date cannot be null');
+        if (is_null($lastModifiedDate)) {
+            throw new \InvalidArgumentException('non-nullable lastModifiedDate cannot be null');
         }
-        $this->container['last_modified_date'] = $last_modified_date;
+        $this->container['lastModifiedDate'] = $lastModifiedDate;
 
         return $this;
     }
@@ -919,137 +919,137 @@ class CustomAdminField implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets table_id
+     * Gets tableId
      *
      * @return int|null
      */
     public function getTableId()
     {
-        return $this->container['table_id'];
+        return $this->container['tableId'];
     }
 
     /**
-     * Sets table_id
+     * Sets tableId
      *
-     * @param int|null $table_id Table Id
+     * @param int|null $tableId Table Id
      *
      * @return self
      */
-    public function setTableId($table_id)
+    public function setTableId($tableId)
     {
-        if (is_null($table_id)) {
-            array_push($this->openAPINullablesSetToNull, 'table_id');
+        if (is_null($tableId)) {
+            array_push($this->openAPINullablesSetToNull, 'tableId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_id', $nullablesSetToNull);
+            $index = array_search('tableId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_id'] = $table_id;
+        $this->container['tableId'] = $tableId;
 
         return $this;
     }
 
     /**
-     * Gets table_value_id
+     * Gets tableValueId
      *
      * @return int|null
      */
     public function getTableValueId()
     {
-        return $this->container['table_value_id'];
+        return $this->container['tableValueId'];
     }
 
     /**
-     * Sets table_value_id
+     * Sets tableValueId
      *
-     * @param int|null $table_value_id Table Value Id
+     * @param int|null $tableValueId Table Value Id
      *
      * @return self
      */
-    public function setTableValueId($table_value_id)
+    public function setTableValueId($tableValueId)
     {
-        if (is_null($table_value_id)) {
-            array_push($this->openAPINullablesSetToNull, 'table_value_id');
+        if (is_null($tableValueId)) {
+            array_push($this->openAPINullablesSetToNull, 'tableValueId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_value_id', $nullablesSetToNull);
+            $index = array_search('tableValueId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_value_id'] = $table_value_id;
+        $this->container['tableValueId'] = $tableValueId;
 
         return $this;
     }
 
     /**
-     * Gets table_value
+     * Gets tableValue
      *
      * @return string|null
      */
     public function getTableValue()
     {
-        return $this->container['table_value'];
+        return $this->container['tableValue'];
     }
 
     /**
-     * Sets table_value
+     * Sets tableValue
      *
-     * @param string|null $table_value Table Value
+     * @param string|null $tableValue Table Value
      *
      * @return self
      */
-    public function setTableValue($table_value)
+    public function setTableValue($tableValue)
     {
-        if (is_null($table_value)) {
-            array_push($this->openAPINullablesSetToNull, 'table_value');
+        if (is_null($tableValue)) {
+            array_push($this->openAPINullablesSetToNull, 'tableValue');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_value', $nullablesSetToNull);
+            $index = array_search('tableValue', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_value'] = $table_value;
+        $this->container['tableValue'] = $tableValue;
 
         return $this;
     }
 
     /**
-     * Gets table_value_abbreviation
+     * Gets tableValueAbbreviation
      *
      * @return string|null
      */
     public function getTableValueAbbreviation()
     {
-        return $this->container['table_value_abbreviation'];
+        return $this->container['tableValueAbbreviation'];
     }
 
     /**
-     * Sets table_value_abbreviation
+     * Sets tableValueAbbreviation
      *
-     * @param string|null $table_value_abbreviation Table Value Abbreviation
+     * @param string|null $tableValueAbbreviation Table Value Abbreviation
      *
      * @return self
      */
-    public function setTableValueAbbreviation($table_value_abbreviation)
+    public function setTableValueAbbreviation($tableValueAbbreviation)
     {
-        if (is_null($table_value_abbreviation)) {
-            array_push($this->openAPINullablesSetToNull, 'table_value_abbreviation');
+        if (is_null($tableValueAbbreviation)) {
+            array_push($this->openAPINullablesSetToNull, 'tableValueAbbreviation');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('table_value_abbreviation', $nullablesSetToNull);
+            $index = array_search('tableValueAbbreviation', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['table_value_abbreviation'] = $table_value_abbreviation;
+        $this->container['tableValueAbbreviation'] = $tableValueAbbreviation;
 
         return $this;
     }

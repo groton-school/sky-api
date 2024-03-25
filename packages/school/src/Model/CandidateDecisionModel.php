@@ -60,8 +60,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'decision_type' => 'string',
-        'decision_type_id' => 'int',
+        'decisionType' => 'string',
+        'decisionTypeId' => 'int',
         'date' => '\DateTime',
     ];
 
@@ -75,8 +75,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'decision_type' => null,
-        'decision_type_id' => 'int32',
+        'decisionType' => null,
+        'decisionTypeId' => 'int32',
         'date' => 'date-time',
     ];
 
@@ -88,8 +88,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'decision_type' => true,
-        'decision_type_id' => true,
+        'decisionType' => true,
+        'decisionTypeId' => true,
         'date' => true,
     ];
 
@@ -181,8 +181,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'decision_type' => 'decision_type',
-        'decision_type_id' => 'decision_type_id',
+        'decisionType' => 'decision_type',
+        'decisionTypeId' => 'decision_type_id',
         'date' => 'date',
     ];
 
@@ -194,8 +194,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'decision_type' => 'setDecisionType',
-        'decision_type_id' => 'setDecisionTypeId',
+        'decisionType' => 'setDecisionType',
+        'decisionTypeId' => 'setDecisionTypeId',
         'date' => 'setDate',
     ];
 
@@ -207,8 +207,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'decision_type' => 'getDecisionType',
-        'decision_type_id' => 'getDecisionTypeId',
+        'decisionType' => 'getDecisionType',
+        'decisionTypeId' => 'getDecisionTypeId',
         'date' => 'getDate',
     ];
 
@@ -271,8 +271,8 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('decision_type', $data ?? [], null);
-        $this->setIfExists('decision_type_id', $data ?? [], null);
+        $this->setIfExists('decisionType', $data ?? [], null);
+        $this->setIfExists('decisionTypeId', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
     }
 
@@ -387,69 +387,69 @@ class CandidateDecisionModel implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets decision_type
+     * Gets decisionType
      *
      * @return string|null
      */
     public function getDecisionType()
     {
-        return $this->container['decision_type'];
+        return $this->container['decisionType'];
     }
 
     /**
-     * Sets decision_type
+     * Sets decisionType
      *
-     * @param string|null $decision_type
+     * @param string|null $decisionType
      *
      * @return self
      */
-    public function setDecisionType($decision_type)
+    public function setDecisionType($decisionType)
     {
-        if (is_null($decision_type)) {
-            array_push($this->openAPINullablesSetToNull, 'decision_type');
+        if (is_null($decisionType)) {
+            array_push($this->openAPINullablesSetToNull, 'decisionType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decision_type', $nullablesSetToNull);
+            $index = array_search('decisionType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decision_type'] = $decision_type;
+        $this->container['decisionType'] = $decisionType;
 
         return $this;
     }
 
     /**
-     * Gets decision_type_id
+     * Gets decisionTypeId
      *
      * @return int|null
      */
     public function getDecisionTypeId()
     {
-        return $this->container['decision_type_id'];
+        return $this->container['decisionTypeId'];
     }
 
     /**
-     * Sets decision_type_id
+     * Sets decisionTypeId
      *
-     * @param int|null $decision_type_id
+     * @param int|null $decisionTypeId
      *
      * @return self
      */
-    public function setDecisionTypeId($decision_type_id)
+    public function setDecisionTypeId($decisionTypeId)
     {
-        if (is_null($decision_type_id)) {
-            array_push($this->openAPINullablesSetToNull, 'decision_type_id');
+        if (is_null($decisionTypeId)) {
+            array_push($this->openAPINullablesSetToNull, 'decisionTypeId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('decision_type_id', $nullablesSetToNull);
+            $index = array_search('decisionTypeId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['decision_type_id'] = $decision_type_id;
+        $this->container['decisionTypeId'] = $decisionTypeId;
 
         return $this;
     }

@@ -28,7 +28,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1AthleticsHighlightsByHighlightIdGet()`
 
 ```php
-v1AthleticsHighlightsByHighlightIdGet($highlight_id): \SKY\School\Model\Highlight
+v1AthleticsHighlightsByHighlightIdGet($highlightId): \SKY\School\Model\Highlight
 ```
 
 Athletics highlights by ID
@@ -59,10 +59,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$highlight_id = 56; // int | Format - int32. ID of the highlight to be returned.
+$highlightId = 56; // int | Format - int32. ID of the highlight to be returned.
 
 try {
-    $result = $apiInstance->v1AthleticsHighlightsByHighlightIdGet($highlight_id);
+    $result = $apiInstance->v1AthleticsHighlightsByHighlightIdGet($highlightId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsHighlightsByHighlightIdGet: ', $e->getMessage(), PHP_EOL;
@@ -73,7 +73,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **highlight_id** | **int**| Format - int32. ID of the highlight to be returned. | |
+| **highlightId** | **int**| Format - int32. ID of the highlight to be returned. | |
 
 ### Return type
 
@@ -159,7 +159,7 @@ This endpoint does not need any parameter.
 ## `v1AthleticsLocationsPost()`
 
 ```php
-v1AthleticsLocationsPost($location_create_model): int
+v1AthleticsLocationsPost($locationCreateModel): int
 ```
 
 Athletics location create
@@ -190,10 +190,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$location_create_model = {"opponent_id":864549,"name":"South City Main Field","directions":"Go straight, take left at light","travel_time":15,"address_line1":"123a Main Street","address_line2":"","address_line3":"","city":"Springfield","state":"Texas","state_short":"TX","country":"USA","zip":"12345-0954","province":"","map_url":"http://www.somemap.com/"}; // \SKY\School\Model\LocationCreateModel | The location to be created
+$locationCreateModel = {"opponent_id":864549,"name":"South City Main Field","directions":"Go straight, take left at light","travel_time":15,"address_line1":"123a Main Street","address_line2":"","address_line3":"","city":"Springfield","state":"Texas","state_short":"TX","country":"USA","zip":"12345-0954","province":"","map_url":"http://www.somemap.com/"}; // \SKY\School\Model\LocationCreateModel | The location to be created
 
 try {
-    $result = $apiInstance->v1AthleticsLocationsPost($location_create_model);
+    $result = $apiInstance->v1AthleticsLocationsPost($locationCreateModel);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsLocationsPost: ', $e->getMessage(), PHP_EOL;
@@ -204,7 +204,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **location_create_model** | [**\SKY\School\Model\LocationCreateModel**](../Model/LocationCreateModel.md)| The location to be created | [optional] |
+| **locationCreateModel** | [**\SKY\School\Model\LocationCreateModel**](../Model/LocationCreateModel.md)| The location to be created | [optional] |
 
 ### Return type
 
@@ -290,7 +290,7 @@ This endpoint does not need any parameter.
 ## `v1AthleticsOpponentsPost()`
 
 ```php
-v1AthleticsOpponentsPost($opponent_update_model): int
+v1AthleticsOpponentsPost($opponentUpdateModel): int
 ```
 
 Athletics opponent create
@@ -321,10 +321,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$opponent_update_model = {"name":"South City Jets","phone1":"(123) 456-9568","ad_first_name":"Pat","ad_last_name":"Malone","ad_email":"AthleticDirector@southcity.edu","fax":"(987) 654-4321","phone2":"","asst_ad_first_name":"Chris","asst_ad_last_name":"Humphrey","asst_ad_email":"AsstAthleticDirector@southcity.edu","address_id":195095,"address_line1":"123 Main Street","address_line2":"","address_line3":"","city":"Springfield","state_short":"","country":"Canada","province":"","zip":"12345-0954","conference_id":45958}; // \SKY\School\Model\OpponentUpdateModel | The opponent to be created
+$opponentUpdateModel = {"name":"South City Jets","phone1":"(123) 456-9568","ad_first_name":"Pat","ad_last_name":"Malone","ad_email":"AthleticDirector@southcity.edu","fax":"(987) 654-4321","phone2":"","asst_ad_first_name":"Chris","asst_ad_last_name":"Humphrey","asst_ad_email":"AsstAthleticDirector@southcity.edu","address_id":195095,"address_line1":"123 Main Street","address_line2":"","address_line3":"","city":"Springfield","state_short":"","country":"Canada","province":"","zip":"12345-0954","conference_id":45958}; // \SKY\School\Model\OpponentUpdateModel | The opponent to be created
 
 try {
-    $result = $apiInstance->v1AthleticsOpponentsPost($opponent_update_model);
+    $result = $apiInstance->v1AthleticsOpponentsPost($opponentUpdateModel);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsOpponentsPost: ', $e->getMessage(), PHP_EOL;
@@ -335,7 +335,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **opponent_update_model** | [**\SKY\School\Model\OpponentUpdateModel**](../Model/OpponentUpdateModel.md)| The opponent to be created | [optional] |
+| **opponentUpdateModel** | [**\SKY\School\Model\OpponentUpdateModel**](../Model/OpponentUpdateModel.md)| The opponent to be created | [optional] |
 
 ### Return type
 
@@ -357,7 +357,7 @@ try {
 ## `v1AthleticsResultPost()`
 
 ```php
-v1AthleticsResultPost($result_create)
+v1AthleticsResultPost($resultCreate)
 ```
 
 Athletics game result
@@ -388,10 +388,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$result_create = {"schedule_id":12345,"schedule_type":0,"send_notification":false,"opponents":[{"opponent_id":7654,"score":"5","win_loss":"Win","score_versus":"2"}]}; // \SKY\School\Model\ResultCreate | 
+$resultCreate = {"schedule_id":12345,"schedule_type":0,"send_notification":false,"opponents":[{"opponent_id":7654,"score":"5","win_loss":"Win","score_versus":"2"}]}; // \SKY\School\Model\ResultCreate | 
 
 try {
-    $apiInstance->v1AthleticsResultPost($result_create);
+    $apiInstance->v1AthleticsResultPost($resultCreate);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsResultPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -401,7 +401,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **result_create** | [**\SKY\School\Model\ResultCreate**](../Model/ResultCreate.md)|  | [optional] |
+| **resultCreate** | [**\SKY\School\Model\ResultCreate**](../Model/ResultCreate.md)|  | [optional] |
 
 ### Return type
 
@@ -423,7 +423,7 @@ void (empty response body)
 ## `v1AthleticsSchedulesGet()`
 
 ```php
-v1AthleticsSchedulesGet($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified): \SKY\School\Model\ScheduleItemCollection
+v1AthleticsSchedulesGet($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified): \SKY\School\Model\ScheduleItemCollection
 ```
 
 Athletics schedules
@@ -454,15 +454,15 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filter games/practices after this date
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filter games/practices before this date
-$school_year = 'school_year_example'; // string | Filter on a specific school year. Defaults to current school year.
-$include_practice = false; // bool | Set to ```true``` to include practices with games. Defaults to false.
-$team_id = 0; // int | Format - int32. Filter games/practices for a specific team. Defaults to all teams.
-$last_modified = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date.
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filter games/practices after this date
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Filter games/practices before this date
+$schoolYear = 'schoolYear_example'; // string | Filter on a specific school year. Defaults to current school year.
+$includePractice = false; // bool | Set to ```true``` to include practices with games. Defaults to false.
+$teamId = 0; // int | Format - int32. Filter games/practices for a specific team. Defaults to all teams.
+$lastModified = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date.
 
 try {
-    $result = $apiInstance->v1AthleticsSchedulesGet($start_date, $end_date, $school_year, $include_practice, $team_id, $last_modified);
+    $result = $apiInstance->v1AthleticsSchedulesGet($startDate, $endDate, $schoolYear, $includePractice, $teamId, $lastModified);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsSchedulesGet: ', $e->getMessage(), PHP_EOL;
@@ -473,12 +473,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filter games/practices after this date | [optional] |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filter games/practices before this date | [optional] |
-| **school_year** | **string**| Filter on a specific school year. Defaults to current school year. | [optional] |
-| **include_practice** | **bool**| Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. | [optional] [default to false] |
-| **team_id** | **int**| Format - int32. Filter games/practices for a specific team. Defaults to all teams. | [optional] [default to 0] |
-| **last_modified** | **\DateTime**| Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. | [optional] |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filter games/practices after this date | [optional] |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). Filter games/practices before this date | [optional] |
+| **schoolYear** | **string**| Filter on a specific school year. Defaults to current school year. | [optional] |
+| **includePractice** | **bool**| Set to &#x60;&#x60;&#x60;true&#x60;&#x60;&#x60; to include practices with games. Defaults to false. | [optional] [default to false] |
+| **teamId** | **int**| Format - int32. Filter games/practices for a specific team. Defaults to all teams. | [optional] [default to 0] |
+| **lastModified** | **\DateTime**| Format - date-time (as date-time in RFC3339). Set date to limit results to games with information changed on and after that date. | [optional] |
 
 ### Return type
 
@@ -500,7 +500,7 @@ try {
 ## `v1AthleticsSportsGet()`
 
 ```php
-v1AthleticsSportsGet($season_id): \SKY\School\Model\SportCollection
+v1AthleticsSportsGet($seasonId): \SKY\School\Model\SportCollection
 ```
 
 Athletics sports
@@ -531,10 +531,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$season_id = 56; // int | Format - int32. Season ID
+$seasonId = 56; // int | Format - int32. Season ID
 
 try {
-    $result = $apiInstance->v1AthleticsSportsGet($season_id);
+    $result = $apiInstance->v1AthleticsSportsGet($seasonId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsSportsGet: ', $e->getMessage(), PHP_EOL;
@@ -545,7 +545,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **season_id** | **int**| Format - int32. Season ID | [optional] |
+| **seasonId** | **int**| Format - int32. Season ID | [optional] |
 
 ### Return type
 
@@ -631,7 +631,7 @@ This endpoint does not need any parameter.
 ## `v1AthleticsTeamsByTeamIdRosterGet()`
 
 ```php
-v1AthleticsTeamsByTeamIdRosterGet($team_id): \SKY\School\Model\Roster
+v1AthleticsTeamsByTeamIdRosterGet($teamId): \SKY\School\Model\Roster
 ```
 
 Athletics team roster
@@ -662,10 +662,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. The ID for the team to get the roster for.
+$teamId = 56; // int | Format - int32. The ID for the team to get the roster for.
 
 try {
-    $result = $apiInstance->v1AthleticsTeamsByTeamIdRosterGet($team_id);
+    $result = $apiInstance->v1AthleticsTeamsByTeamIdRosterGet($teamId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdRosterGet: ', $e->getMessage(), PHP_EOL;
@@ -676,7 +676,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. The ID for the team to get the roster for. | |
+| **teamId** | **int**| Format - int32. The ID for the team to get the roster for. | |
 
 ### Return type
 
@@ -698,7 +698,7 @@ try {
 ## `v1AthleticsTeamsByTeamIdScheduleByGameIdDelete()`
 
 ```php
-v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($team_id, $game_id)
+v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($teamId, $gameId)
 ```
 
 Athletics game delete
@@ -729,11 +729,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. ID of the team for the game to be deleted
-$game_id = 56; // int | Format - int32. ID of the game to be deleted
+$teamId = 56; // int | Format - int32. ID of the team for the game to be deleted
+$gameId = 56; // int | Format - int32. ID of the game to be deleted
 
 try {
-    $apiInstance->v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($team_id, $game_id);
+    $apiInstance->v1AthleticsTeamsByTeamIdScheduleByGameIdDelete($teamId, $gameId);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdScheduleByGameIdDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -743,8 +743,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. ID of the team for the game to be deleted | |
-| **game_id** | **int**| Format - int32. ID of the game to be deleted | |
+| **teamId** | **int**| Format - int32. ID of the team for the game to be deleted | |
+| **gameId** | **int**| Format - int32. ID of the game to be deleted | |
 
 ### Return type
 
@@ -766,7 +766,7 @@ void (empty response body)
 ## `v1AthleticsTeamsByTeamIdSchedulePatch()`
 
 ```php
-v1AthleticsTeamsByTeamIdSchedulePatch($team_id, $game_update)
+v1AthleticsTeamsByTeamIdSchedulePatch($teamId, $gameUpdate)
 ```
 
 Athletics game update
@@ -797,11 +797,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. ID of the team for the game to be updated
-$game_update = {"game_id":84509,"schedule_type":0,"title":"Game Title","game_date":"2021-10-05T01:30:00.0000000+00:00","game_date_end":"2021-10-05T03:30:00.0000000+00:00","home_away_type":1,"location_id":5489,"dismissal_time":"2024-02-13","departure_time":"2024-02-13","departure_note":"We are departing at lunch","pickup_time":"2024-02-13","pickup_note":"We will return at end of school","league_ind":true,"scrimmage_ind":false,"tournament_ind":false,"invitational_ind":true,"playoff_ind":false,"additional_notes":"Please read this.","send_notifications":true,"skip_validation":false,"transportation":[{"transportation_id":54095,"full_day":false,"begin_use":"2021-10-05T12:00:00.0000000+00:00","end_use":"2021-10-05T04:15:00.0000000+00:00"}],"opponents":[{"opponent_id":94508}]}; // \SKY\School\Model\GameUpdate | Information for the game to be updated
+$teamId = 56; // int | Format - int32. ID of the team for the game to be updated
+$gameUpdate = {"game_id":84509,"schedule_type":0,"title":"Game Title","game_date":"2021-10-05T01:30:00.0000000+00:00","game_date_end":"2021-10-05T03:30:00.0000000+00:00","home_away_type":1,"location_id":5489,"dismissal_time":"2024-02-13","departure_time":"2024-02-13","departure_note":"We are departing at lunch","pickup_time":"2024-02-13","pickup_note":"We will return at end of school","league_ind":true,"scrimmage_ind":false,"tournament_ind":false,"invitational_ind":true,"playoff_ind":false,"additional_notes":"Please read this.","send_notifications":true,"skip_validation":false,"transportation":[{"transportation_id":54095,"full_day":false,"begin_use":"2021-10-05T12:00:00.0000000+00:00","end_use":"2021-10-05T04:15:00.0000000+00:00"}],"opponents":[{"opponent_id":94508}]}; // \SKY\School\Model\GameUpdate | Information for the game to be updated
 
 try {
-    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePatch($team_id, $game_update);
+    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePatch($teamId, $gameUpdate);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdSchedulePatch: ', $e->getMessage(), PHP_EOL;
 }
@@ -811,8 +811,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. ID of the team for the game to be updated | |
-| **game_update** | [**\SKY\School\Model\GameUpdate**](../Model/GameUpdate.md)| Information for the game to be updated | [optional] |
+| **teamId** | **int**| Format - int32. ID of the team for the game to be updated | |
+| **gameUpdate** | [**\SKY\School\Model\GameUpdate**](../Model/GameUpdate.md)| Information for the game to be updated | [optional] |
 
 ### Return type
 
@@ -834,7 +834,7 @@ void (empty response body)
 ## `v1AthleticsTeamsByTeamIdSchedulePost()`
 
 ```php
-v1AthleticsTeamsByTeamIdSchedulePost($team_id, $game_create): int
+v1AthleticsTeamsByTeamIdSchedulePost($teamId, $gameCreate): int
 ```
 
 Athletics game create
@@ -865,11 +865,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. ID of the team for the game to be created
-$game_create = {"schedule_type":0,"title":"Game Title","game_date":"2021-10-05T01:30:00.0000000+00:00","game_date_end":"2021-10-05T03:30:00.0000000+00:00","home_away_type":1,"location_id":5489,"dismissal_time":"2024-02-13","departure_time":"2024-02-13","departure_note":"We are departing at lunch","pickup_time":"2024-02-13","pickup_note":"We will return at end of school","league_ind":true,"scrimmage_ind":false,"tournament_ind":false,"invitational_ind":true,"playoff_ind":false,"additional_notes":"Please read this.","send_notifications":true,"skip_validation":false,"transportation":[{"transportation_id":54095,"full_day":false,"begin_use":"2021-10-05T12:00:00.0000000+00:00","end_use":"2021-10-05T04:15:00.0000000+00:00"}],"opponents":[{"opponent_id":94508}]}; // \SKY\School\Model\GameCreate | Information about the game to be created
+$teamId = 56; // int | Format - int32. ID of the team for the game to be created
+$gameCreate = {"schedule_type":0,"title":"Game Title","game_date":"2021-10-05T01:30:00.0000000+00:00","game_date_end":"2021-10-05T03:30:00.0000000+00:00","home_away_type":1,"location_id":5489,"dismissal_time":"2024-02-13","departure_time":"2024-02-13","departure_note":"We are departing at lunch","pickup_time":"2024-02-13","pickup_note":"We will return at end of school","league_ind":true,"scrimmage_ind":false,"tournament_ind":false,"invitational_ind":true,"playoff_ind":false,"additional_notes":"Please read this.","send_notifications":true,"skip_validation":false,"transportation":[{"transportation_id":54095,"full_day":false,"begin_use":"2021-10-05T12:00:00.0000000+00:00","end_use":"2021-10-05T04:15:00.0000000+00:00"}],"opponents":[{"opponent_id":94508}]}; // \SKY\School\Model\GameCreate | Information about the game to be created
 
 try {
-    $result = $apiInstance->v1AthleticsTeamsByTeamIdSchedulePost($team_id, $game_create);
+    $result = $apiInstance->v1AthleticsTeamsByTeamIdSchedulePost($teamId, $gameCreate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdSchedulePost: ', $e->getMessage(), PHP_EOL;
@@ -880,8 +880,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. ID of the team for the game to be created | |
-| **game_create** | [**\SKY\School\Model\GameCreate**](../Model/GameCreate.md)| Information about the game to be created | [optional] |
+| **teamId** | **int**| Format - int32. ID of the team for the game to be created | |
+| **gameCreate** | [**\SKY\School\Model\GameCreate**](../Model/GameCreate.md)| Information about the game to be created | [optional] |
 
 ### Return type
 
@@ -903,7 +903,7 @@ try {
 ## `v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete()`
 
 ```php
-v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($team_id, $practice_id)
+v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($teamId, $practiceId)
 ```
 
 Athletics practice delete
@@ -934,11 +934,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. ID of the team for the practice to be deleted
-$practice_id = 56; // int | Format - int32. ID of the practice to be deleted
+$teamId = 56; // int | Format - int32. ID of the team for the practice to be deleted
+$practiceId = 56; // int | Format - int32. ID of the practice to be deleted
 
 try {
-    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($team_id, $practice_id);
+    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete($teamId, $practiceId);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdSchedulePracticeByPracticeIdDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -948,8 +948,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. ID of the team for the practice to be deleted | |
-| **practice_id** | **int**| Format - int32. ID of the practice to be deleted | |
+| **teamId** | **int**| Format - int32. ID of the team for the practice to be deleted | |
+| **practiceId** | **int**| Format - int32. ID of the practice to be deleted | |
 
 ### Return type
 
@@ -971,7 +971,7 @@ void (empty response body)
 ## `v1AthleticsTeamsByTeamIdSchedulePracticePatch()`
 
 ```php
-v1AthleticsTeamsByTeamIdSchedulePracticePatch($team_id, $practice_update)
+v1AthleticsTeamsByTeamIdSchedulePracticePatch($teamId, $practiceUpdate)
 ```
 
 Athletics practice update
@@ -1002,11 +1002,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. The ID of the team for the practice to be updated
-$practice_update = {"id":45623,"send_notification":true,"title":"JV Softball extra practice","practice_start_date":"2021-10-04T04:30:00.0000000+00:00","practice_end_date":"2021-10-04T06:00:00.0000000+00:00","location_id":2454,"transportation_id":5689,"dismissal_time":"2021-10-04T04:00:00.0000000+00:00","departure_time":"2021-10-04T04:20:00.0000000+00:00","pickup_time":"2021-10-04T06:10:00.0000000+00:00","practice_note":"some note about this practice","skip_validation":false}; // \SKY\School\Model\PracticeUpdate | Information about the practice to be updated
+$teamId = 56; // int | Format - int32. The ID of the team for the practice to be updated
+$practiceUpdate = {"id":45623,"send_notification":true,"title":"JV Softball extra practice","practice_start_date":"2021-10-04T04:30:00.0000000+00:00","practice_end_date":"2021-10-04T06:00:00.0000000+00:00","location_id":2454,"transportation_id":5689,"dismissal_time":"2021-10-04T04:00:00.0000000+00:00","departure_time":"2021-10-04T04:20:00.0000000+00:00","pickup_time":"2021-10-04T06:10:00.0000000+00:00","practice_note":"some note about this practice","skip_validation":false}; // \SKY\School\Model\PracticeUpdate | Information about the practice to be updated
 
 try {
-    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticePatch($team_id, $practice_update);
+    $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticePatch($teamId, $practiceUpdate);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdSchedulePracticePatch: ', $e->getMessage(), PHP_EOL;
 }
@@ -1016,8 +1016,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. The ID of the team for the practice to be updated | |
-| **practice_update** | [**\SKY\School\Model\PracticeUpdate**](../Model/PracticeUpdate.md)| Information about the practice to be updated | [optional] |
+| **teamId** | **int**| Format - int32. The ID of the team for the practice to be updated | |
+| **practiceUpdate** | [**\SKY\School\Model\PracticeUpdate**](../Model/PracticeUpdate.md)| Information about the practice to be updated | [optional] |
 
 ### Return type
 
@@ -1039,7 +1039,7 @@ void (empty response body)
 ## `v1AthleticsTeamsByTeamIdSchedulePracticePost()`
 
 ```php
-v1AthleticsTeamsByTeamIdSchedulePracticePost($team_id, $practice_create): int
+v1AthleticsTeamsByTeamIdSchedulePracticePost($teamId, $practiceCreate): int
 ```
 
 Athletics practice create
@@ -1070,11 +1070,11 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$team_id = 56; // int | Format - int32. ID of the team for the practice to be created
-$practice_create = {"send_notification":true,"title":"JV Softball extra practice","practice_start_date":"2021-10-04T04:30:00.0000000+00:00","practice_end_date":"2021-10-04T06:00:00.0000000+00:00","location_id":2454,"transportation_id":5689,"dismissal_time":"2021-10-04T04:00:00.0000000+00:00","departure_time":"2021-10-04T04:20:00.0000000+00:00","pickup_time":"2021-10-04T06:10:00.0000000+00:00","practice_note":"some note about this practice","skip_validation":false}; // \SKY\School\Model\PracticeCreate | Information about the practice to be created
+$teamId = 56; // int | Format - int32. ID of the team for the practice to be created
+$practiceCreate = {"send_notification":true,"title":"JV Softball extra practice","practice_start_date":"2021-10-04T04:30:00.0000000+00:00","practice_end_date":"2021-10-04T06:00:00.0000000+00:00","location_id":2454,"transportation_id":5689,"dismissal_time":"2021-10-04T04:00:00.0000000+00:00","departure_time":"2021-10-04T04:20:00.0000000+00:00","pickup_time":"2021-10-04T06:10:00.0000000+00:00","practice_note":"some note about this practice","skip_validation":false}; // \SKY\School\Model\PracticeCreate | Information about the practice to be created
 
 try {
-    $result = $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticePost($team_id, $practice_create);
+    $result = $apiInstance->v1AthleticsTeamsByTeamIdSchedulePracticePost($teamId, $practiceCreate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsByTeamIdSchedulePracticePost: ', $e->getMessage(), PHP_EOL;
@@ -1085,8 +1085,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **team_id** | **int**| Format - int32. ID of the team for the practice to be created | |
-| **practice_create** | [**\SKY\School\Model\PracticeCreate**](../Model/PracticeCreate.md)| Information about the practice to be created | [optional] |
+| **teamId** | **int**| Format - int32. ID of the team for the practice to be created | |
+| **practiceCreate** | [**\SKY\School\Model\PracticeCreate**](../Model/PracticeCreate.md)| Information about the practice to be created | [optional] |
 
 ### Return type
 
@@ -1108,7 +1108,7 @@ try {
 ## `v1AthleticsTeamsGet()`
 
 ```php
-v1AthleticsTeamsGet($school_year): \SKY\School\Model\TeamCollection
+v1AthleticsTeamsGet($schoolYear): \SKY\School\Model\TeamCollection
 ```
 
 Athletics teams
@@ -1139,10 +1139,10 @@ $apiInstance = new SKY\School\Api\AthleticsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$school_year = 'school_year_example'; // string | School year
+$schoolYear = 'schoolYear_example'; // string | School year
 
 try {
-    $result = $apiInstance->v1AthleticsTeamsGet($school_year);
+    $result = $apiInstance->v1AthleticsTeamsGet($schoolYear);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AthleticsApi->v1AthleticsTeamsGet: ', $e->getMessage(), PHP_EOL;
@@ -1153,7 +1153,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **school_year** | **string**| School year | [optional] |
+| **schoolYear** | **string**| School year | [optional] |
 
 ### Return type
 

@@ -58,12 +58,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_set_id' => 'int',
+        'scheduleSetId' => 'int',
         'title' => 'string',
-        'meeting_time' => 'bool',
+        'meetingTime' => 'bool',
         'rotation' => 'bool',
-        'begin_date' => '\DateTime',
-        'end_date' => '\DateTime',
+        'beginDate' => '\DateTime',
+        'endDate' => '\DateTime',
     ];
 
     /**
@@ -74,12 +74,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_set_id' => 'int32',
+        'scheduleSetId' => 'int32',
         'title' => null,
-        'meeting_time' => null,
+        'meetingTime' => null,
         'rotation' => null,
-        'begin_date' => 'date-time',
-        'end_date' => 'date-time',
+        'beginDate' => 'date-time',
+        'endDate' => 'date-time',
     ];
 
     /**
@@ -88,12 +88,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_set_id' => false,
+        'scheduleSetId' => false,
         'title' => true,
-        'meeting_time' => false,
+        'meetingTime' => false,
         'rotation' => false,
-        'begin_date' => true,
-        'end_date' => true,
+        'beginDate' => true,
+        'endDate' => true,
     ];
 
     /**
@@ -182,12 +182,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_set_id' => 'schedule_set_id',
+        'scheduleSetId' => 'schedule_set_id',
         'title' => 'title',
-        'meeting_time' => 'meeting_time',
+        'meetingTime' => 'meeting_time',
         'rotation' => 'rotation',
-        'begin_date' => 'begin_date',
-        'end_date' => 'end_date',
+        'beginDate' => 'begin_date',
+        'endDate' => 'end_date',
     ];
 
     /**
@@ -196,12 +196,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'schedule_set_id' => 'setScheduleSetId',
+        'scheduleSetId' => 'setScheduleSetId',
         'title' => 'setTitle',
-        'meeting_time' => 'setMeetingTime',
+        'meetingTime' => 'setMeetingTime',
         'rotation' => 'setRotation',
-        'begin_date' => 'setBeginDate',
-        'end_date' => 'setEndDate',
+        'beginDate' => 'setBeginDate',
+        'endDate' => 'setEndDate',
     ];
 
     /**
@@ -210,12 +210,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'schedule_set_id' => 'getScheduleSetId',
+        'scheduleSetId' => 'getScheduleSetId',
         'title' => 'getTitle',
-        'meeting_time' => 'getMeetingTime',
+        'meetingTime' => 'getMeetingTime',
         'rotation' => 'getRotation',
-        'begin_date' => 'getBeginDate',
-        'end_date' => 'getEndDate',
+        'beginDate' => 'getBeginDate',
+        'endDate' => 'getEndDate',
     ];
 
     /**
@@ -275,12 +275,12 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_set_id', $data ?? [], null);
+        $this->setIfExists('scheduleSetId', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('meeting_time', $data ?? [], null);
+        $this->setIfExists('meetingTime', $data ?? [], null);
         $this->setIfExists('rotation', $data ?? [], null);
-        $this->setIfExists('begin_date', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
+        $this->setIfExists('beginDate', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
     }
 
     /**
@@ -326,28 +326,28 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets schedule_set_id
+     * Gets scheduleSetId
      *
      * @return int|null
      */
     public function getScheduleSetId()
     {
-        return $this->container['schedule_set_id'];
+        return $this->container['scheduleSetId'];
     }
 
     /**
-     * Sets schedule_set_id
+     * Sets scheduleSetId
      *
-     * @param int|null $schedule_set_id
+     * @param int|null $scheduleSetId
      *
      * @return self
      */
-    public function setScheduleSetId($schedule_set_id)
+    public function setScheduleSetId($scheduleSetId)
     {
-        if (is_null($schedule_set_id)) {
-            throw new \InvalidArgumentException('non-nullable schedule_set_id cannot be null');
+        if (is_null($scheduleSetId)) {
+            throw new \InvalidArgumentException('non-nullable scheduleSetId cannot be null');
         }
-        $this->container['schedule_set_id'] = $schedule_set_id;
+        $this->container['scheduleSetId'] = $scheduleSetId;
 
         return $this;
     }
@@ -387,28 +387,28 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets meeting_time
+     * Gets meetingTime
      *
      * @return bool|null
      */
     public function getMeetingTime()
     {
-        return $this->container['meeting_time'];
+        return $this->container['meetingTime'];
     }
 
     /**
-     * Sets meeting_time
+     * Sets meetingTime
      *
-     * @param bool|null $meeting_time
+     * @param bool|null $meetingTime
      *
      * @return self
      */
-    public function setMeetingTime($meeting_time)
+    public function setMeetingTime($meetingTime)
     {
-        if (is_null($meeting_time)) {
-            throw new \InvalidArgumentException('non-nullable meeting_time cannot be null');
+        if (is_null($meetingTime)) {
+            throw new \InvalidArgumentException('non-nullable meetingTime cannot be null');
         }
-        $this->container['meeting_time'] = $meeting_time;
+        $this->container['meetingTime'] = $meetingTime;
 
         return $this;
     }
@@ -441,69 +441,69 @@ class ScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets begin_date
+     * Gets beginDate
      *
      * @return \DateTime|null
      */
     public function getBeginDate()
     {
-        return $this->container['begin_date'];
+        return $this->container['beginDate'];
     }
 
     /**
-     * Sets begin_date
+     * Sets beginDate
      *
-     * @param \DateTime|null $begin_date
+     * @param \DateTime|null $beginDate
      *
      * @return self
      */
-    public function setBeginDate($begin_date)
+    public function setBeginDate($beginDate)
     {
-        if (is_null($begin_date)) {
-            array_push($this->openAPINullablesSetToNull, 'begin_date');
+        if (is_null($beginDate)) {
+            array_push($this->openAPINullablesSetToNull, 'beginDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('begin_date', $nullablesSetToNull);
+            $index = array_search('beginDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['begin_date'] = $begin_date;
+        $this->container['beginDate'] = $beginDate;
 
         return $this;
     }
 
     /**
-     * Gets end_date
+     * Gets endDate
      *
      * @return \DateTime|null
      */
     public function getEndDate()
     {
-        return $this->container['end_date'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets end_date
+     * Sets endDate
      *
-     * @param \DateTime|null $end_date
+     * @param \DateTime|null $endDate
      *
      * @return self
      */
-    public function setEndDate($end_date)
+    public function setEndDate($endDate)
     {
-        if (is_null($end_date)) {
-            array_push($this->openAPINullablesSetToNull, 'end_date');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('end_date', $nullablesSetToNull);
+            $index = array_search('endDate', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['end_date'] = $end_date;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }

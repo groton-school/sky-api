@@ -1,5 +1,5 @@
 {
-  "name": "groton-school/sky-api.appengine-client-example",
+  "name": "example/appengine-client",
   "description": "Blackbaud SKY API AppEngine Client Example",
   "license": "GPL-3.0",
   "authors": [

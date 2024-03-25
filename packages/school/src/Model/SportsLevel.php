@@ -62,10 +62,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'description' => 'string',
         'gender' => 'string',
-        'level_of_play' => 'string',
-        'sport_id' => 'int',
+        'levelOfPlay' => 'string',
+        'sportId' => 'int',
         'sport' => 'string',
-        'season_id' => 'int',
+        'seasonId' => 'int',
         'season' => 'string',
     ];
 
@@ -81,10 +81,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'description' => null,
         'gender' => null,
-        'level_of_play' => null,
-        'sport_id' => 'int32',
+        'levelOfPlay' => null,
+        'sportId' => 'int32',
         'sport' => null,
-        'season_id' => 'int32',
+        'seasonId' => 'int32',
         'season' => null,
     ];
 
@@ -98,10 +98,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => true,
         'description' => true,
         'gender' => true,
-        'level_of_play' => true,
-        'sport_id' => true,
+        'levelOfPlay' => true,
+        'sportId' => true,
         'sport' => true,
-        'season_id' => true,
+        'seasonId' => true,
         'season' => true,
     ];
 
@@ -195,10 +195,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'description' => 'description',
         'gender' => 'gender',
-        'level_of_play' => 'level_of_play',
-        'sport_id' => 'sport_id',
+        'levelOfPlay' => 'level_of_play',
+        'sportId' => 'sport_id',
         'sport' => 'sport',
-        'season_id' => 'season_id',
+        'seasonId' => 'season_id',
         'season' => 'season',
     ];
 
@@ -212,10 +212,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'description' => 'setDescription',
         'gender' => 'setGender',
-        'level_of_play' => 'setLevelOfPlay',
-        'sport_id' => 'setSportId',
+        'levelOfPlay' => 'setLevelOfPlay',
+        'sportId' => 'setSportId',
         'sport' => 'setSport',
-        'season_id' => 'setSeasonId',
+        'seasonId' => 'setSeasonId',
         'season' => 'setSeason',
     ];
 
@@ -229,10 +229,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'description' => 'getDescription',
         'gender' => 'getGender',
-        'level_of_play' => 'getLevelOfPlay',
-        'sport_id' => 'getSportId',
+        'levelOfPlay' => 'getLevelOfPlay',
+        'sportId' => 'getSportId',
         'sport' => 'getSport',
-        'season_id' => 'getSeasonId',
+        'seasonId' => 'getSeasonId',
         'season' => 'getSeason',
     ];
 
@@ -297,10 +297,10 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
-        $this->setIfExists('level_of_play', $data ?? [], null);
-        $this->setIfExists('sport_id', $data ?? [], null);
+        $this->setIfExists('levelOfPlay', $data ?? [], null);
+        $this->setIfExists('sportId', $data ?? [], null);
         $this->setIfExists('sport', $data ?? [], null);
-        $this->setIfExists('season_id', $data ?? [], null);
+        $this->setIfExists('seasonId', $data ?? [], null);
         $this->setIfExists('season', $data ?? [], null);
     }
 
@@ -483,69 +483,69 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets level_of_play
+     * Gets levelOfPlay
      *
      * @return string|null
      */
     public function getLevelOfPlay()
     {
-        return $this->container['level_of_play'];
+        return $this->container['levelOfPlay'];
     }
 
     /**
-     * Sets level_of_play
+     * Sets levelOfPlay
      *
-     * @param string|null $level_of_play Indicates where this sport competes (e.g. varsity or JV)
+     * @param string|null $levelOfPlay Indicates where this sport competes (e.g. varsity or JV)
      *
      * @return self
      */
-    public function setLevelOfPlay($level_of_play)
+    public function setLevelOfPlay($levelOfPlay)
     {
-        if (is_null($level_of_play)) {
-            array_push($this->openAPINullablesSetToNull, 'level_of_play');
+        if (is_null($levelOfPlay)) {
+            array_push($this->openAPINullablesSetToNull, 'levelOfPlay');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('level_of_play', $nullablesSetToNull);
+            $index = array_search('levelOfPlay', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['level_of_play'] = $level_of_play;
+        $this->container['levelOfPlay'] = $levelOfPlay;
 
         return $this;
     }
 
     /**
-     * Gets sport_id
+     * Gets sportId
      *
      * @return int|null
      */
     public function getSportId()
     {
-        return $this->container['sport_id'];
+        return $this->container['sportId'];
     }
 
     /**
-     * Sets sport_id
+     * Sets sportId
      *
-     * @param int|null $sport_id ID of the sport
+     * @param int|null $sportId ID of the sport
      *
      * @return self
      */
-    public function setSportId($sport_id)
+    public function setSportId($sportId)
     {
-        if (is_null($sport_id)) {
-            array_push($this->openAPINullablesSetToNull, 'sport_id');
+        if (is_null($sportId)) {
+            array_push($this->openAPINullablesSetToNull, 'sportId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sport_id', $nullablesSetToNull);
+            $index = array_search('sportId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sport_id'] = $sport_id;
+        $this->container['sportId'] = $sportId;
 
         return $this;
     }
@@ -585,35 +585,35 @@ class SportsLevel implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets season_id
+     * Gets seasonId
      *
      * @return int|null
      */
     public function getSeasonId()
     {
-        return $this->container['season_id'];
+        return $this->container['seasonId'];
     }
 
     /**
-     * Sets season_id
+     * Sets seasonId
      *
-     * @param int|null $season_id ID of the season during which the sport competes
+     * @param int|null $seasonId ID of the season during which the sport competes
      *
      * @return self
      */
-    public function setSeasonId($season_id)
+    public function setSeasonId($seasonId)
     {
-        if (is_null($season_id)) {
-            array_push($this->openAPINullablesSetToNull, 'season_id');
+        if (is_null($seasonId)) {
+            array_push($this->openAPINullablesSetToNull, 'seasonId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('season_id', $nullablesSetToNull);
+            $index = array_search('seasonId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['season_id'] = $season_id;
+        $this->container['seasonId'] = $seasonId;
 
         return $this;
     }

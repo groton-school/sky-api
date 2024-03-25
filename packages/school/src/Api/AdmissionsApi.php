@@ -139,18 +139,18 @@ class AdmissionsApi
      *
      * Admissions candidates
      *
-     * @param  string $school_year The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
-     * @param  string $status_ids One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
-     * @param  \DateTime $modified_date Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
+     * @param  string $schoolYear The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
+     * @param  string $statusIds One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
+     * @param  \DateTime $modifiedDate Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\CandidateReadCollection
      */
-    public function v1AdmissionsCandidatesGet($school_year = null, $status_ids = null, $modified_date = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
+    public function v1AdmissionsCandidatesGet($schoolYear = null, $statusIds = null, $modifiedDate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
     {
-        [$response] = $this->v1AdmissionsCandidatesGetWithHttpInfo($school_year, $status_ids, $modified_date, $contentType);
+        [$response] = $this->v1AdmissionsCandidatesGetWithHttpInfo($schoolYear, $statusIds, $modifiedDate, $contentType);
         return $response;
     }
 
@@ -159,18 +159,18 @@ class AdmissionsApi
      *
      * Admissions candidates
      *
-     * @param  string $school_year The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
-     * @param  string $status_ids One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
-     * @param  \DateTime $modified_date Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
+     * @param  string $schoolYear The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
+     * @param  string $statusIds One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
+     * @param  \DateTime $modifiedDate Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesGet'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\CandidateReadCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AdmissionsCandidatesGetWithHttpInfo($school_year = null, $status_ids = null, $modified_date = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
+    public function v1AdmissionsCandidatesGetWithHttpInfo($schoolYear = null, $statusIds = null, $modifiedDate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
     {
-        $request = $this->v1AdmissionsCandidatesGetRequest($school_year, $status_ids, $modified_date, $contentType);
+        $request = $this->v1AdmissionsCandidatesGetRequest($schoolYear, $statusIds, $modifiedDate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -285,17 +285,17 @@ class AdmissionsApi
      *
      * Admissions candidates
      *
-     * @param  string $school_year The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
-     * @param  string $status_ids One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
-     * @param  \DateTime $modified_date Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
+     * @param  string $schoolYear The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
+     * @param  string $statusIds One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
+     * @param  \DateTime $modifiedDate Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsCandidatesGetAsync($school_year = null, $status_ids = null, $modified_date = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
+    public function v1AdmissionsCandidatesGetAsync($schoolYear = null, $statusIds = null, $modifiedDate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
     {
-        return $this->v1AdmissionsCandidatesGetAsyncWithHttpInfo($school_year, $status_ids, $modified_date, $contentType)
+        return $this->v1AdmissionsCandidatesGetAsyncWithHttpInfo($schoolYear, $statusIds, $modifiedDate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -308,18 +308,18 @@ class AdmissionsApi
      *
      * Admissions candidates
      *
-     * @param  string $school_year The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
-     * @param  string $status_ids One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
-     * @param  \DateTime $modified_date Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
+     * @param  string $schoolYear The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
+     * @param  string $statusIds One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
+     * @param  \DateTime $modifiedDate Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsCandidatesGetAsyncWithHttpInfo($school_year = null, $status_ids = null, $modified_date = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
+    public function v1AdmissionsCandidatesGetAsyncWithHttpInfo($schoolYear = null, $statusIds = null, $modifiedDate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
     {
         $returnType = '\SKY\School\Model\CandidateReadCollection';
-        $request = $this->v1AdmissionsCandidatesGetRequest($school_year, $status_ids, $modified_date, $contentType);
+        $request = $this->v1AdmissionsCandidatesGetRequest($schoolYear, $statusIds, $modifiedDate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -360,15 +360,15 @@ class AdmissionsApi
     /**
      * Create request for operation 'v1AdmissionsCandidatesGet'
      *
-     * @param  string $school_year The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
-     * @param  string $status_ids One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
-     * @param  \DateTime $modified_date Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
+     * @param  string $schoolYear The school year for which to return results.  Corresponds to &#x60;&#x60;&#x60;school_year_label&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/v1yearsget\&quot;&gt;Year list&lt;/a&gt;.  Default is current year. (optional)
+     * @param  string $statusIds One or more comma delimited status Id(s) to filter results on.  Corresponds to &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; in the &lt;a href&#x3D;\&quot;https://developer.sky.blackbaud.com/docs/services/school/operations/V1AdmissionsStatusGet\&quot;&gt;Status list&lt;/a&gt;.  Default is no status Id filter. (optional)
+     * @param  \DateTime $modifiedDate Format - date-time (as date-time in RFC3339). The date last modified to filter results to on or after. Use &lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_8601\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO-8601&lt;/a&gt; date format: 2003-04-21. Default is no modified date filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AdmissionsCandidatesGetRequest($school_year = null, $status_ids = null, $modified_date = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
+    public function v1AdmissionsCandidatesGetRequest($schoolYear = null, $statusIds = null, $modifiedDate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesGet'][0])
     {
 
 
@@ -384,7 +384,7 @@ class AdmissionsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $school_year,
+            $schoolYear,
             'school_year', // param base name
             'string', // openApiType
             'form', // style
@@ -393,7 +393,7 @@ class AdmissionsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $status_ids,
+            $statusIds,
             'status_ids', // param base name
             'string', // openApiType
             'form', // style
@@ -402,7 +402,7 @@ class AdmissionsApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $modified_date,
+            $modifiedDate,
             'modified_date', // param base name
             'string', // openApiType
             'form', // style
@@ -481,16 +481,16 @@ class AdmissionsApi
      *
      * Admissions candidate create
      *
-     * @param  \SKY\School\Model\CandidateCreate $candidate_create  (optional)
+     * @param  \SKY\School\Model\CandidateCreate $candidateCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int
      */
-    public function v1AdmissionsCandidatesPost($candidate_create = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
+    public function v1AdmissionsCandidatesPost($candidateCreate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
     {
-        [$response] = $this->v1AdmissionsCandidatesPostWithHttpInfo($candidate_create, $contentType);
+        [$response] = $this->v1AdmissionsCandidatesPostWithHttpInfo($candidateCreate, $contentType);
         return $response;
     }
 
@@ -499,16 +499,16 @@ class AdmissionsApi
      *
      * Admissions candidate create
      *
-     * @param  \SKY\School\Model\CandidateCreate $candidate_create  (optional)
+     * @param  \SKY\School\Model\CandidateCreate $candidateCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesPost'] to see the possible values for this operation
      *
      * @throws \SKY\School\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AdmissionsCandidatesPostWithHttpInfo($candidate_create = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
+    public function v1AdmissionsCandidatesPostWithHttpInfo($candidateCreate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
     {
-        $request = $this->v1AdmissionsCandidatesPostRequest($candidate_create, $contentType);
+        $request = $this->v1AdmissionsCandidatesPostRequest($candidateCreate, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -623,15 +623,15 @@ class AdmissionsApi
      *
      * Admissions candidate create
      *
-     * @param  \SKY\School\Model\CandidateCreate $candidate_create  (optional)
+     * @param  \SKY\School\Model\CandidateCreate $candidateCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsCandidatesPostAsync($candidate_create = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
+    public function v1AdmissionsCandidatesPostAsync($candidateCreate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
     {
-        return $this->v1AdmissionsCandidatesPostAsyncWithHttpInfo($candidate_create, $contentType)
+        return $this->v1AdmissionsCandidatesPostAsyncWithHttpInfo($candidateCreate, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -644,16 +644,16 @@ class AdmissionsApi
      *
      * Admissions candidate create
      *
-     * @param  \SKY\School\Model\CandidateCreate $candidate_create  (optional)
+     * @param  \SKY\School\Model\CandidateCreate $candidateCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsCandidatesPostAsyncWithHttpInfo($candidate_create = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
+    public function v1AdmissionsCandidatesPostAsyncWithHttpInfo($candidateCreate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
     {
         $returnType = 'int';
-        $request = $this->v1AdmissionsCandidatesPostRequest($candidate_create, $contentType);
+        $request = $this->v1AdmissionsCandidatesPostRequest($candidateCreate, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -694,13 +694,13 @@ class AdmissionsApi
     /**
      * Create request for operation 'v1AdmissionsCandidatesPost'
      *
-     * @param  \SKY\School\Model\CandidateCreate $candidate_create  (optional)
+     * @param  \SKY\School\Model\CandidateCreate $candidateCreate  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsCandidatesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AdmissionsCandidatesPostRequest($candidate_create = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
+    public function v1AdmissionsCandidatesPostRequest($candidateCreate = null, string $contentType = self::contentTypes['v1AdmissionsCandidatesPost'][0])
     {
 
 
@@ -723,12 +723,12 @@ class AdmissionsApi
         );
 
         // for model (json/xml)
-        if (isset($candidate_create)) {
+        if (isset($candidateCreate)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($candidate_create));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($candidateCreate));
             } else {
-                $httpBody = $candidate_create;
+                $httpBody = $candidateCreate;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -791,7 +791,7 @@ class AdmissionsApi
      *
      * Admissions checklists
      *
-     * @param  string $search_text Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
+     * @param  string $searchText Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
      * @param  bool $inactive flag to return only inactive checklists (default is both). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsChecklistsGet'] to see the possible values for this operation
      *
@@ -799,9 +799,9 @@ class AdmissionsApi
      * @throws \InvalidArgumentException
      * @return \SKY\School\Model\AdmissionsCheckListCollection
      */
-    public function v1AdmissionsChecklistsGet($search_text = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
+    public function v1AdmissionsChecklistsGet($searchText = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
     {
-        [$response] = $this->v1AdmissionsChecklistsGetWithHttpInfo($search_text, $inactive, $contentType);
+        [$response] = $this->v1AdmissionsChecklistsGetWithHttpInfo($searchText, $inactive, $contentType);
         return $response;
     }
 
@@ -810,7 +810,7 @@ class AdmissionsApi
      *
      * Admissions checklists
      *
-     * @param  string $search_text Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
+     * @param  string $searchText Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
      * @param  bool $inactive flag to return only inactive checklists (default is both). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsChecklistsGet'] to see the possible values for this operation
      *
@@ -818,9 +818,9 @@ class AdmissionsApi
      * @throws \InvalidArgumentException
      * @return array of \SKY\School\Model\AdmissionsCheckListCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function v1AdmissionsChecklistsGetWithHttpInfo($search_text = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
+    public function v1AdmissionsChecklistsGetWithHttpInfo($searchText = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
     {
-        $request = $this->v1AdmissionsChecklistsGetRequest($search_text, $inactive, $contentType);
+        $request = $this->v1AdmissionsChecklistsGetRequest($searchText, $inactive, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -935,16 +935,16 @@ class AdmissionsApi
      *
      * Admissions checklists
      *
-     * @param  string $search_text Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
+     * @param  string $searchText Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
      * @param  bool $inactive flag to return only inactive checklists (default is both). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsChecklistsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsChecklistsGetAsync($search_text = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
+    public function v1AdmissionsChecklistsGetAsync($searchText = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
     {
-        return $this->v1AdmissionsChecklistsGetAsyncWithHttpInfo($search_text, $inactive, $contentType)
+        return $this->v1AdmissionsChecklistsGetAsyncWithHttpInfo($searchText, $inactive, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -957,17 +957,17 @@ class AdmissionsApi
      *
      * Admissions checklists
      *
-     * @param  string $search_text Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
+     * @param  string $searchText Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
      * @param  bool $inactive flag to return only inactive checklists (default is both). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsChecklistsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function v1AdmissionsChecklistsGetAsyncWithHttpInfo($search_text = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
+    public function v1AdmissionsChecklistsGetAsyncWithHttpInfo($searchText = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
     {
         $returnType = '\SKY\School\Model\AdmissionsCheckListCollection';
-        $request = $this->v1AdmissionsChecklistsGetRequest($search_text, $inactive, $contentType);
+        $request = $this->v1AdmissionsChecklistsGetRequest($searchText, $inactive, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1008,14 +1008,14 @@ class AdmissionsApi
     /**
      * Create request for operation 'v1AdmissionsChecklistsGet'
      *
-     * @param  string $search_text Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
+     * @param  string $searchText Applies a case-insensitive search against check lists \&quot;name\&quot;. (optional)
      * @param  bool $inactive flag to return only inactive checklists (default is both). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AdmissionsChecklistsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function v1AdmissionsChecklistsGetRequest($search_text = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
+    public function v1AdmissionsChecklistsGetRequest($searchText = null, $inactive = null, string $contentType = self::contentTypes['v1AdmissionsChecklistsGet'][0])
     {
 
 
@@ -1030,7 +1030,7 @@ class AdmissionsApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $search_text,
+            $searchText,
             'search_text', // param base name
             'string', // openApiType
             'form', // style

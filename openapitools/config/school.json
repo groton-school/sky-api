@@ -1,0 +1,7 @@
+{
+  "!include": "../base.json",
+  "inputSpec": "var/2022-04-01_preview/Education Management/school.json",
+  "outputDir": "packages/school",
+  "gitRepoId": "sky-api.school",
+  "invokerPackage": "SKY\\School"
+}

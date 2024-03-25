@@ -60,7 +60,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'content_type' => 'string',
+        'contentType' => 'string',
         'primary' => 'bool',
     ];
 
@@ -74,7 +74,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'int32',
         'name' => null,
-        'content_type' => null,
+        'contentType' => null,
         'primary' => null,
     ];
 
@@ -86,7 +86,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => true,
         'name' => true,
-        'content_type' => true,
+        'contentType' => true,
         'primary' => true,
     ];
 
@@ -178,7 +178,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'content_type' => 'content_type',
+        'contentType' => 'content_type',
         'primary' => 'primary',
     ];
 
@@ -190,7 +190,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'content_type' => 'setContentType',
+        'contentType' => 'setContentType',
         'primary' => 'setPrimary',
     ];
 
@@ -202,7 +202,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'content_type' => 'getContentType',
+        'contentType' => 'getContentType',
         'primary' => 'getPrimary',
     ];
 
@@ -265,7 +265,7 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('content_type', $data ?? [], null);
+        $this->setIfExists('contentType', $data ?? [], null);
         $this->setIfExists('primary', $data ?? [], null);
     }
 
@@ -380,35 +380,35 @@ class Category implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets content_type
+     * Gets contentType
      *
      * @return string|null
      */
     public function getContentType()
     {
-        return $this->container['content_type'];
+        return $this->container['contentType'];
     }
 
     /**
-     * Sets content_type
+     * Sets contentType
      *
-     * @param string|null $content_type The type of content type the news comes from
+     * @param string|null $contentType The type of content type the news comes from
      *
      * @return self
      */
-    public function setContentType($content_type)
+    public function setContentType($contentType)
     {
-        if (is_null($content_type)) {
-            array_push($this->openAPINullablesSetToNull, 'content_type');
+        if (is_null($contentType)) {
+            array_push($this->openAPINullablesSetToNull, 'contentType');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('content_type', $nullablesSetToNull);
+            $index = array_search('contentType', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['content_type'] = $content_type;
+        $this->container['contentType'] = $contentType;
 
         return $this;
     }

@@ -58,9 +58,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedule_set_id' => 'int',
-        'holiday_label' => 'string',
-        'day_label' => 'string',
+        'scheduleSetId' => 'int',
+        'holidayLabel' => 'string',
+        'dayLabel' => 'string',
         'blocks' => '\SKY\School\Model\MasterScheduleBlock[]',
     ];
 
@@ -72,9 +72,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'schedule_set_id' => 'int32',
-        'holiday_label' => null,
-        'day_label' => null,
+        'scheduleSetId' => 'int32',
+        'holidayLabel' => null,
+        'dayLabel' => null,
         'blocks' => null,
     ];
 
@@ -84,9 +84,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'schedule_set_id' => true,
-        'holiday_label' => true,
-        'day_label' => true,
+        'scheduleSetId' => true,
+        'holidayLabel' => true,
+        'dayLabel' => true,
         'blocks' => true,
     ];
 
@@ -176,9 +176,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'schedule_set_id' => 'schedule_set_id',
-        'holiday_label' => 'holiday_label',
-        'day_label' => 'day_label',
+        'scheduleSetId' => 'schedule_set_id',
+        'holidayLabel' => 'holiday_label',
+        'dayLabel' => 'day_label',
         'blocks' => 'blocks',
     ];
 
@@ -188,9 +188,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'schedule_set_id' => 'setScheduleSetId',
-        'holiday_label' => 'setHolidayLabel',
-        'day_label' => 'setDayLabel',
+        'scheduleSetId' => 'setScheduleSetId',
+        'holidayLabel' => 'setHolidayLabel',
+        'dayLabel' => 'setDayLabel',
         'blocks' => 'setBlocks',
     ];
 
@@ -200,9 +200,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'schedule_set_id' => 'getScheduleSetId',
-        'holiday_label' => 'getHolidayLabel',
-        'day_label' => 'getDayLabel',
+        'scheduleSetId' => 'getScheduleSetId',
+        'holidayLabel' => 'getHolidayLabel',
+        'dayLabel' => 'getDayLabel',
         'blocks' => 'getBlocks',
     ];
 
@@ -263,9 +263,9 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('schedule_set_id', $data ?? [], null);
-        $this->setIfExists('holiday_label', $data ?? [], null);
-        $this->setIfExists('day_label', $data ?? [], null);
+        $this->setIfExists('scheduleSetId', $data ?? [], null);
+        $this->setIfExists('holidayLabel', $data ?? [], null);
+        $this->setIfExists('dayLabel', $data ?? [], null);
         $this->setIfExists('blocks', $data ?? [], null);
     }
 
@@ -312,103 +312,103 @@ class MasterScheduleSet implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets schedule_set_id
+     * Gets scheduleSetId
      *
      * @return int|null
      */
     public function getScheduleSetId()
     {
-        return $this->container['schedule_set_id'];
+        return $this->container['scheduleSetId'];
     }
 
     /**
-     * Sets schedule_set_id
+     * Sets scheduleSetId
      *
-     * @param int|null $schedule_set_id
+     * @param int|null $scheduleSetId
      *
      * @return self
      */
-    public function setScheduleSetId($schedule_set_id)
+    public function setScheduleSetId($scheduleSetId)
     {
-        if (is_null($schedule_set_id)) {
-            array_push($this->openAPINullablesSetToNull, 'schedule_set_id');
+        if (is_null($scheduleSetId)) {
+            array_push($this->openAPINullablesSetToNull, 'scheduleSetId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('schedule_set_id', $nullablesSetToNull);
+            $index = array_search('scheduleSetId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['schedule_set_id'] = $schedule_set_id;
+        $this->container['scheduleSetId'] = $scheduleSetId;
 
         return $this;
     }
 
     /**
-     * Gets holiday_label
+     * Gets holidayLabel
      *
      * @return string|null
      */
     public function getHolidayLabel()
     {
-        return $this->container['holiday_label'];
+        return $this->container['holidayLabel'];
     }
 
     /**
-     * Sets holiday_label
+     * Sets holidayLabel
      *
-     * @param string|null $holiday_label
+     * @param string|null $holidayLabel
      *
      * @return self
      */
-    public function setHolidayLabel($holiday_label)
+    public function setHolidayLabel($holidayLabel)
     {
-        if (is_null($holiday_label)) {
-            array_push($this->openAPINullablesSetToNull, 'holiday_label');
+        if (is_null($holidayLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'holidayLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('holiday_label', $nullablesSetToNull);
+            $index = array_search('holidayLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['holiday_label'] = $holiday_label;
+        $this->container['holidayLabel'] = $holidayLabel;
 
         return $this;
     }
 
     /**
-     * Gets day_label
+     * Gets dayLabel
      *
      * @return string|null
      */
     public function getDayLabel()
     {
-        return $this->container['day_label'];
+        return $this->container['dayLabel'];
     }
 
     /**
-     * Sets day_label
+     * Sets dayLabel
      *
-     * @param string|null $day_label
+     * @param string|null $dayLabel
      *
      * @return self
      */
-    public function setDayLabel($day_label)
+    public function setDayLabel($dayLabel)
     {
-        if (is_null($day_label)) {
-            array_push($this->openAPINullablesSetToNull, 'day_label');
+        if (is_null($dayLabel)) {
+            array_push($this->openAPINullablesSetToNull, 'dayLabel');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('day_label', $nullablesSetToNull);
+            $index = array_search('dayLabel', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['day_label'] = $day_label;
+        $this->container['dayLabel'] = $dayLabel;
 
         return $this;
     }

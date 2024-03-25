@@ -1,20 +1,34 @@
 {
   "name": "groton-school/sky-api.oneroster",
-  "description": "PHP client for Blackbaud's SKY API - OneRoster API",
-  "license": "GPL-3.0",
-  "autoload": {
-    "psr-4": {
-      "Blackbaud\\SKY\\": "src/"
-    }
-  },
+  "description": "OneRoster v1.1 API. For details on the OneRoster Version 1.1 Specification, <a href=\"https://www.imsglobal.org/oneroster-v11-final-specification\">click here</a>. The <a href=\"https://developer.blackbaud.com/skyapi/bbem/oneroster/authorization\">Authorization</a> page provides steps to setup and test these endpoints.",
+  "keywords": [
+    "openapitools",
+    "openapi-generator",
+    "openapi",
+    "php",
+    "sdk",
+    "rest",
+    "api"
+  ],
+  "homepage": "https://openapi-generator.tech",
+  "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Seth Battis",
-      "email": "sbattis@groton.org"
+      "name": "OpenAPI",
+      "homepage": "https://openapi-generator.tech"
     }
   ],
   "require": {
-    "battis/openapi-client-generator": "^0.1",
-    "groton-school/oauth2-blackbaudsky": "^0.2"
+    "php": "^7.4 || ^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.4",
+    "guzzlehttp/psr7": "^1.7 || ^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SKY\\OneRoster\\": "src/"
+    }
   }
 }

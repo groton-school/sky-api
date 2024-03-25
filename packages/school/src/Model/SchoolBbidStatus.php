@@ -59,13 +59,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'current_authentication' => 'string',
-        'days_remaining' => 'int',
+        'currentAuthentication' => 'string',
+        'daysRemaining' => 'int',
         'email' => 'string',
-        'invalid_message' => 'string',
+        'invalidMessage' => 'string',
         'invited' => '\DateTime',
         'name' => 'string',
-        'status_id' => 'int',
+        'statusId' => 'int',
         'status' => 'string',
         'username' => 'string',
     ];
@@ -79,13 +79,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'current_authentication' => null,
-        'days_remaining' => 'int32',
+        'currentAuthentication' => null,
+        'daysRemaining' => 'int32',
         'email' => null,
-        'invalid_message' => null,
+        'invalidMessage' => null,
         'invited' => 'date-time',
         'name' => null,
-        'status_id' => 'int32',
+        'statusId' => 'int32',
         'status' => null,
         'username' => null,
     ];
@@ -97,13 +97,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'current_authentication' => true,
-        'days_remaining' => false,
+        'currentAuthentication' => true,
+        'daysRemaining' => false,
         'email' => true,
-        'invalid_message' => true,
+        'invalidMessage' => true,
         'invited' => true,
         'name' => true,
-        'status_id' => false,
+        'statusId' => false,
         'status' => true,
         'username' => true,
     ];
@@ -195,13 +195,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'current_authentication' => 'current_authentication',
-        'days_remaining' => 'days_remaining',
+        'currentAuthentication' => 'current_authentication',
+        'daysRemaining' => 'days_remaining',
         'email' => 'email',
-        'invalid_message' => 'invalid_message',
+        'invalidMessage' => 'invalid_message',
         'invited' => 'invited',
         'name' => 'name',
-        'status_id' => 'status_id',
+        'statusId' => 'status_id',
         'status' => 'status',
         'username' => 'username',
     ];
@@ -213,13 +213,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'current_authentication' => 'setCurrentAuthentication',
-        'days_remaining' => 'setDaysRemaining',
+        'currentAuthentication' => 'setCurrentAuthentication',
+        'daysRemaining' => 'setDaysRemaining',
         'email' => 'setEmail',
-        'invalid_message' => 'setInvalidMessage',
+        'invalidMessage' => 'setInvalidMessage',
         'invited' => 'setInvited',
         'name' => 'setName',
-        'status_id' => 'setStatusId',
+        'statusId' => 'setStatusId',
         'status' => 'setStatus',
         'username' => 'setUsername',
     ];
@@ -231,13 +231,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'current_authentication' => 'getCurrentAuthentication',
-        'days_remaining' => 'getDaysRemaining',
+        'currentAuthentication' => 'getCurrentAuthentication',
+        'daysRemaining' => 'getDaysRemaining',
         'email' => 'getEmail',
-        'invalid_message' => 'getInvalidMessage',
+        'invalidMessage' => 'getInvalidMessage',
         'invited' => 'getInvited',
         'name' => 'getName',
-        'status_id' => 'getStatusId',
+        'statusId' => 'getStatusId',
         'status' => 'getStatus',
         'username' => 'getUsername',
     ];
@@ -300,13 +300,13 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('current_authentication', $data ?? [], null);
-        $this->setIfExists('days_remaining', $data ?? [], null);
+        $this->setIfExists('currentAuthentication', $data ?? [], null);
+        $this->setIfExists('daysRemaining', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('invalid_message', $data ?? [], null);
+        $this->setIfExists('invalidMessage', $data ?? [], null);
         $this->setIfExists('invited', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('status_id', $data ?? [], null);
+        $this->setIfExists('statusId', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('username', $data ?? [], null);
     }
@@ -381,62 +381,62 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets current_authentication
+     * Gets currentAuthentication
      *
      * @return string|null
      */
     public function getCurrentAuthentication()
     {
-        return $this->container['current_authentication'];
+        return $this->container['currentAuthentication'];
     }
 
     /**
-     * Sets current_authentication
+     * Sets currentAuthentication
      *
-     * @param string|null $current_authentication The users current authentication method
+     * @param string|null $currentAuthentication The users current authentication method
      *
      * @return self
      */
-    public function setCurrentAuthentication($current_authentication)
+    public function setCurrentAuthentication($currentAuthentication)
     {
-        if (is_null($current_authentication)) {
-            array_push($this->openAPINullablesSetToNull, 'current_authentication');
+        if (is_null($currentAuthentication)) {
+            array_push($this->openAPINullablesSetToNull, 'currentAuthentication');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('current_authentication', $nullablesSetToNull);
+            $index = array_search('currentAuthentication', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['current_authentication'] = $current_authentication;
+        $this->container['currentAuthentication'] = $currentAuthentication;
 
         return $this;
     }
 
     /**
-     * Gets days_remaining
+     * Gets daysRemaining
      *
      * @return int|null
      */
     public function getDaysRemaining()
     {
-        return $this->container['days_remaining'];
+        return $this->container['daysRemaining'];
     }
 
     /**
-     * Sets days_remaining
+     * Sets daysRemaining
      *
-     * @param int|null $days_remaining The number of days remaining on the users invitation
+     * @param int|null $daysRemaining The number of days remaining on the users invitation
      *
      * @return self
      */
-    public function setDaysRemaining($days_remaining)
+    public function setDaysRemaining($daysRemaining)
     {
-        if (is_null($days_remaining)) {
-            throw new \InvalidArgumentException('non-nullable days_remaining cannot be null');
+        if (is_null($daysRemaining)) {
+            throw new \InvalidArgumentException('non-nullable daysRemaining cannot be null');
         }
-        $this->container['days_remaining'] = $days_remaining;
+        $this->container['daysRemaining'] = $daysRemaining;
 
         return $this;
     }
@@ -476,35 +476,35 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets invalid_message
+     * Gets invalidMessage
      *
      * @return string|null
      */
     public function getInvalidMessage()
     {
-        return $this->container['invalid_message'];
+        return $this->container['invalidMessage'];
     }
 
     /**
-     * Sets invalid_message
+     * Sets invalidMessage
      *
-     * @param string|null $invalid_message If the user is not able to be invited to use BBID via Education Management, this message should indicate why
+     * @param string|null $invalidMessage If the user is not able to be invited to use BBID via Education Management, this message should indicate why
      *
      * @return self
      */
-    public function setInvalidMessage($invalid_message)
+    public function setInvalidMessage($invalidMessage)
     {
-        if (is_null($invalid_message)) {
-            array_push($this->openAPINullablesSetToNull, 'invalid_message');
+        if (is_null($invalidMessage)) {
+            array_push($this->openAPINullablesSetToNull, 'invalidMessage');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('invalid_message', $nullablesSetToNull);
+            $index = array_search('invalidMessage', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['invalid_message'] = $invalid_message;
+        $this->container['invalidMessage'] = $invalidMessage;
 
         return $this;
     }
@@ -578,28 +578,28 @@ class SchoolBbidStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets status_id
+     * Gets statusId
      *
      * @return int|null
      */
     public function getStatusId()
     {
-        return $this->container['status_id'];
+        return $this->container['statusId'];
     }
 
     /**
-     * Sets status_id
+     * Sets statusId
      *
-     * @param int|null $status_id The id of the users current status
+     * @param int|null $statusId The id of the users current status
      *
      * @return self
      */
-    public function setStatusId($status_id)
+    public function setStatusId($statusId)
     {
-        if (is_null($status_id)) {
-            throw new \InvalidArgumentException('non-nullable status_id cannot be null');
+        if (is_null($statusId)) {
+            throw new \InvalidArgumentException('non-nullable statusId cannot be null');
         }
-        $this->container['status_id'] = $status_id;
+        $this->container['statusId'] = $statusId;
 
         return $this;
     }

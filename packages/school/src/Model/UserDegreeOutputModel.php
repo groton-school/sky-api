@@ -58,11 +58,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'preferred_name' => 'string',
-        'student_degrees' => '\SKY\School\Model\DegreeOutputModel[]',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'preferredName' => 'string',
+        'studentDegrees' => '\SKY\School\Model\DegreeOutputModel[]',
     ];
 
     /**
@@ -73,11 +73,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => 'int32',
-        'first_name' => null,
-        'last_name' => null,
-        'preferred_name' => null,
-        'student_degrees' => null,
+        'userId' => 'int32',
+        'firstName' => null,
+        'lastName' => null,
+        'preferredName' => null,
+        'studentDegrees' => null,
     ];
 
     /**
@@ -86,11 +86,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
-        'first_name' => true,
-        'last_name' => true,
-        'preferred_name' => true,
-        'student_degrees' => true,
+        'userId' => false,
+        'firstName' => true,
+        'lastName' => true,
+        'preferredName' => true,
+        'studentDegrees' => true,
     ];
 
     /**
@@ -179,11 +179,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
-        'preferred_name' => 'preferred_name',
-        'student_degrees' => 'student_degrees',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
+        'preferredName' => 'preferred_name',
+        'studentDegrees' => 'student_degrees',
     ];
 
     /**
@@ -192,11 +192,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'preferred_name' => 'setPreferredName',
-        'student_degrees' => 'setStudentDegrees',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'preferredName' => 'setPreferredName',
+        'studentDegrees' => 'setStudentDegrees',
     ];
 
     /**
@@ -205,11 +205,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'preferred_name' => 'getPreferredName',
-        'student_degrees' => 'getStudentDegrees',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'preferredName' => 'getPreferredName',
+        'studentDegrees' => 'getStudentDegrees',
     ];
 
     /**
@@ -269,11 +269,11 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('preferred_name', $data ?? [], null);
-        $this->setIfExists('student_degrees', $data ?? [], null);
+        $this->setIfExists('userId', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('preferredName', $data ?? [], null);
+        $this->setIfExists('studentDegrees', $data ?? [], null);
     }
 
     /**
@@ -319,164 +319,164 @@ class UserDegreeOutputModel implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets user_id
+     * Gets userId
      *
      * @return int|null
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
+     * Sets userId
      *
-     * @param int|null $user_id The Id of the user for whom this data belongs
+     * @param int|null $userId The Id of the user for whom this data belongs
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($userId)) {
+            throw new \InvalidArgumentException('non-nullable userId cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      *
      * @return string|null
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
+     * Sets firstName
      *
-     * @param string|null $first_name
+     * @param string|null $firstName
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        if (is_null($first_name)) {
-            array_push($this->openAPINullablesSetToNull, 'first_name');
+        if (is_null($firstName)) {
+            array_push($this->openAPINullablesSetToNull, 'firstName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('first_name', $nullablesSetToNull);
+            $index = array_search('firstName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      *
      * @return string|null
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
+     * Sets lastName
      *
-     * @param string|null $last_name
+     * @param string|null $lastName
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        if (is_null($last_name)) {
-            array_push($this->openAPINullablesSetToNull, 'last_name');
+        if (is_null($lastName)) {
+            array_push($this->openAPINullablesSetToNull, 'lastName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_name', $nullablesSetToNull);
+            $index = array_search('lastName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
 
     /**
-     * Gets preferred_name
+     * Gets preferredName
      *
      * @return string|null
      */
     public function getPreferredName()
     {
-        return $this->container['preferred_name'];
+        return $this->container['preferredName'];
     }
 
     /**
-     * Sets preferred_name
+     * Sets preferredName
      *
-     * @param string|null $preferred_name
+     * @param string|null $preferredName
      *
      * @return self
      */
-    public function setPreferredName($preferred_name)
+    public function setPreferredName($preferredName)
     {
-        if (is_null($preferred_name)) {
-            array_push($this->openAPINullablesSetToNull, 'preferred_name');
+        if (is_null($preferredName)) {
+            array_push($this->openAPINullablesSetToNull, 'preferredName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preferred_name', $nullablesSetToNull);
+            $index = array_search('preferredName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['preferred_name'] = $preferred_name;
+        $this->container['preferredName'] = $preferredName;
 
         return $this;
     }
 
     /**
-     * Gets student_degrees
+     * Gets studentDegrees
      *
      * @return \SKY\School\Model\DegreeOutputModel[]|null
      */
     public function getStudentDegrees()
     {
-        return $this->container['student_degrees'];
+        return $this->container['studentDegrees'];
     }
 
     /**
-     * Sets student_degrees
+     * Sets studentDegrees
      *
-     * @param \SKY\School\Model\DegreeOutputModel[]|null $student_degrees The list of degrees for the user
+     * @param \SKY\School\Model\DegreeOutputModel[]|null $studentDegrees The list of degrees for the user
      *
      * @return self
      */
-    public function setStudentDegrees($student_degrees)
+    public function setStudentDegrees($studentDegrees)
     {
-        if (is_null($student_degrees)) {
-            array_push($this->openAPINullablesSetToNull, 'student_degrees');
+        if (is_null($studentDegrees)) {
+            array_push($this->openAPINullablesSetToNull, 'studentDegrees');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('student_degrees', $nullablesSetToNull);
+            $index = array_search('studentDegrees', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['student_degrees'] = $student_degrees;
+        $this->container['studentDegrees'] = $studentDegrees;
 
         return $this;
     }

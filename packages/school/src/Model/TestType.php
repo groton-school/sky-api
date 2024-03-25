@@ -59,8 +59,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'sub_tests' => '\SKY\School\Model\SubTest[]',
-        'test_name' => 'string',
+        'subTests' => '\SKY\School\Model\SubTest[]',
+        'testName' => 'string',
     ];
 
     /**
@@ -72,8 +72,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int32',
-        'sub_tests' => null,
-        'test_name' => null,
+        'subTests' => null,
+        'testName' => null,
     ];
 
     /**
@@ -83,8 +83,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => true,
-        'sub_tests' => true,
-        'test_name' => true,
+        'subTests' => true,
+        'testName' => true,
     ];
 
     /**
@@ -174,8 +174,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'sub_tests' => 'sub_tests',
-        'test_name' => 'test_name',
+        'subTests' => 'sub_tests',
+        'testName' => 'test_name',
     ];
 
     /**
@@ -185,8 +185,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'sub_tests' => 'setSubTests',
-        'test_name' => 'setTestName',
+        'subTests' => 'setSubTests',
+        'testName' => 'setTestName',
     ];
 
     /**
@@ -196,8 +196,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'sub_tests' => 'getSubTests',
-        'test_name' => 'getTestName',
+        'subTests' => 'getSubTests',
+        'testName' => 'getTestName',
     ];
 
     /**
@@ -258,8 +258,8 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('sub_tests', $data ?? [], null);
-        $this->setIfExists('test_name', $data ?? [], null);
+        $this->setIfExists('subTests', $data ?? [], null);
+        $this->setIfExists('testName', $data ?? [], null);
     }
 
     /**
@@ -339,69 +339,69 @@ class TestType implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets sub_tests
+     * Gets subTests
      *
      * @return \SKY\School\Model\SubTest[]|null
      */
     public function getSubTests()
     {
-        return $this->container['sub_tests'];
+        return $this->container['subTests'];
     }
 
     /**
-     * Sets sub_tests
+     * Sets subTests
      *
-     * @param \SKY\School\Model\SubTest[]|null $sub_tests List of Subtests
+     * @param \SKY\School\Model\SubTest[]|null $subTests List of Subtests
      *
      * @return self
      */
-    public function setSubTests($sub_tests)
+    public function setSubTests($subTests)
     {
-        if (is_null($sub_tests)) {
-            array_push($this->openAPINullablesSetToNull, 'sub_tests');
+        if (is_null($subTests)) {
+            array_push($this->openAPINullablesSetToNull, 'subTests');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('sub_tests', $nullablesSetToNull);
+            $index = array_search('subTests', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['sub_tests'] = $sub_tests;
+        $this->container['subTests'] = $subTests;
 
         return $this;
     }
 
     /**
-     * Gets test_name
+     * Gets testName
      *
      * @return string|null
      */
     public function getTestName()
     {
-        return $this->container['test_name'];
+        return $this->container['testName'];
     }
 
     /**
-     * Sets test_name
+     * Sets testName
      *
-     * @param string|null $test_name The Test Type
+     * @param string|null $testName The Test Type
      *
      * @return self
      */
-    public function setTestName($test_name)
+    public function setTestName($testName)
     {
-        if (is_null($test_name)) {
-            array_push($this->openAPINullablesSetToNull, 'test_name');
+        if (is_null($testName)) {
+            array_push($this->openAPINullablesSetToNull, 'testName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('test_name', $nullablesSetToNull);
+            $index = array_search('testName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['test_name'] = $test_name;
+        $this->container['testName'] = $testName;
 
         return $this;
     }

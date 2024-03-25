@@ -57,7 +57,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pattern_num' => 'int',
+        'patternNum' => 'int',
         'sun' => 'bool',
         'mon' => 'bool',
         'tue' => 'bool',
@@ -65,8 +65,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => 'bool',
         'fri' => 'bool',
         'sat' => 'bool',
-        'meeting_time_list' => '\SKY\School\Model\ScheduleSetMettingTime[]',
-        'has_attendance' => 'bool',
+        'meetingTimeList' => '\SKY\School\Model\ScheduleSetMettingTime[]',
+        'hasAttendance' => 'bool',
     ];
 
     /**
@@ -77,7 +77,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'pattern_num' => 'int32',
+        'patternNum' => 'int32',
         'sun' => null,
         'mon' => null,
         'tue' => null,
@@ -85,8 +85,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => null,
         'fri' => null,
         'sat' => null,
-        'meeting_time_list' => null,
-        'has_attendance' => null,
+        'meetingTimeList' => null,
+        'hasAttendance' => null,
     ];
 
     /**
@@ -95,7 +95,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'pattern_num' => true,
+        'patternNum' => true,
         'sun' => true,
         'mon' => true,
         'tue' => true,
@@ -103,8 +103,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => true,
         'fri' => true,
         'sat' => true,
-        'meeting_time_list' => true,
-        'has_attendance' => true,
+        'meetingTimeList' => true,
+        'hasAttendance' => true,
     ];
 
     /**
@@ -193,7 +193,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'pattern_num' => 'PatternNum',
+        'patternNum' => 'PatternNum',
         'sun' => 'Sun',
         'mon' => 'Mon',
         'tue' => 'Tue',
@@ -201,8 +201,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => 'Thu',
         'fri' => 'Fri',
         'sat' => 'Sat',
-        'meeting_time_list' => 'MeetingTimeList',
-        'has_attendance' => 'HasAttendance',
+        'meetingTimeList' => 'MeetingTimeList',
+        'hasAttendance' => 'HasAttendance',
     ];
 
     /**
@@ -211,7 +211,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'pattern_num' => 'setPatternNum',
+        'patternNum' => 'setPatternNum',
         'sun' => 'setSun',
         'mon' => 'setMon',
         'tue' => 'setTue',
@@ -219,8 +219,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => 'setThu',
         'fri' => 'setFri',
         'sat' => 'setSat',
-        'meeting_time_list' => 'setMeetingTimeList',
-        'has_attendance' => 'setHasAttendance',
+        'meetingTimeList' => 'setMeetingTimeList',
+        'hasAttendance' => 'setHasAttendance',
     ];
 
     /**
@@ -229,7 +229,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'pattern_num' => 'getPatternNum',
+        'patternNum' => 'getPatternNum',
         'sun' => 'getSun',
         'mon' => 'getMon',
         'tue' => 'getTue',
@@ -237,8 +237,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         'thu' => 'getThu',
         'fri' => 'getFri',
         'sat' => 'getSat',
-        'meeting_time_list' => 'getMeetingTimeList',
-        'has_attendance' => 'getHasAttendance',
+        'meetingTimeList' => 'getMeetingTimeList',
+        'hasAttendance' => 'getHasAttendance',
     ];
 
     /**
@@ -298,7 +298,7 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('pattern_num', $data ?? [], null);
+        $this->setIfExists('patternNum', $data ?? [], null);
         $this->setIfExists('sun', $data ?? [], null);
         $this->setIfExists('mon', $data ?? [], null);
         $this->setIfExists('tue', $data ?? [], null);
@@ -306,8 +306,8 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('thu', $data ?? [], null);
         $this->setIfExists('fri', $data ?? [], null);
         $this->setIfExists('sat', $data ?? [], null);
-        $this->setIfExists('meeting_time_list', $data ?? [], null);
-        $this->setIfExists('has_attendance', $data ?? [], null);
+        $this->setIfExists('meetingTimeList', $data ?? [], null);
+        $this->setIfExists('hasAttendance', $data ?? [], null);
     }
 
     /**
@@ -353,35 +353,35 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets pattern_num
+     * Gets patternNum
      *
      * @return int|null
      */
     public function getPatternNum()
     {
-        return $this->container['pattern_num'];
+        return $this->container['patternNum'];
     }
 
     /**
-     * Sets pattern_num
+     * Sets patternNum
      *
-     * @param int|null $pattern_num pattern_num
+     * @param int|null $patternNum patternNum
      *
      * @return self
      */
-    public function setPatternNum($pattern_num)
+    public function setPatternNum($patternNum)
     {
-        if (is_null($pattern_num)) {
-            array_push($this->openAPINullablesSetToNull, 'pattern_num');
+        if (is_null($patternNum)) {
+            array_push($this->openAPINullablesSetToNull, 'patternNum');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pattern_num', $nullablesSetToNull);
+            $index = array_search('patternNum', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['pattern_num'] = $pattern_num;
+        $this->container['patternNum'] = $patternNum;
 
         return $this;
     }
@@ -625,69 +625,69 @@ class ScheduleSetMettingPattern implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets meeting_time_list
+     * Gets meetingTimeList
      *
      * @return \SKY\School\Model\ScheduleSetMettingTime[]|null
      */
     public function getMeetingTimeList()
     {
-        return $this->container['meeting_time_list'];
+        return $this->container['meetingTimeList'];
     }
 
     /**
-     * Sets meeting_time_list
+     * Sets meetingTimeList
      *
-     * @param \SKY\School\Model\ScheduleSetMettingTime[]|null $meeting_time_list meeting_time_list
+     * @param \SKY\School\Model\ScheduleSetMettingTime[]|null $meetingTimeList meetingTimeList
      *
      * @return self
      */
-    public function setMeetingTimeList($meeting_time_list)
+    public function setMeetingTimeList($meetingTimeList)
     {
-        if (is_null($meeting_time_list)) {
-            array_push($this->openAPINullablesSetToNull, 'meeting_time_list');
+        if (is_null($meetingTimeList)) {
+            array_push($this->openAPINullablesSetToNull, 'meetingTimeList');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('meeting_time_list', $nullablesSetToNull);
+            $index = array_search('meetingTimeList', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['meeting_time_list'] = $meeting_time_list;
+        $this->container['meetingTimeList'] = $meetingTimeList;
 
         return $this;
     }
 
     /**
-     * Gets has_attendance
+     * Gets hasAttendance
      *
      * @return bool|null
      */
     public function getHasAttendance()
     {
-        return $this->container['has_attendance'];
+        return $this->container['hasAttendance'];
     }
 
     /**
-     * Sets has_attendance
+     * Sets hasAttendance
      *
-     * @param bool|null $has_attendance has_attendance
+     * @param bool|null $hasAttendance hasAttendance
      *
      * @return self
      */
-    public function setHasAttendance($has_attendance)
+    public function setHasAttendance($hasAttendance)
     {
-        if (is_null($has_attendance)) {
-            array_push($this->openAPINullablesSetToNull, 'has_attendance');
+        if (is_null($hasAttendance)) {
+            array_push($this->openAPINullablesSetToNull, 'hasAttendance');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('has_attendance', $nullablesSetToNull);
+            $index = array_search('hasAttendance', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['has_attendance'] = $has_attendance;
+        $this->container['hasAttendance'] = $hasAttendance;
 
         return $this;
     }

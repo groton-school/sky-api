@@ -12,7 +12,7 @@ All URIs are relative to https://api.sky.blackbaud.com/school, except if the ope
 ## `v1EventsCalendarGet()`
 
 ```php
-v1EventsCalendarGet($start_date, $end_date): \SKY\School\Model\CalendarItemCollection
+v1EventsCalendarGet($startDate, $endDate): \SKY\School\Model\CalendarItemCollection
 ```
 
 Calendar for User (BETA)
@@ -43,11 +43,11 @@ $apiInstance = new SKY\School\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$startDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
+$endDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Format - date-time (as date-time in RFC3339).
 
 try {
-    $result = $apiInstance->v1EventsCalendarGet($start_date, $end_date);
+    $result = $apiInstance->v1EventsCalendarGet($startDate, $endDate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->v1EventsCalendarGet: ', $e->getMessage(), PHP_EOL;
@@ -58,8 +58,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
-| **end_date** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
+| **startDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
+| **endDate** | **\DateTime**| Format - date-time (as date-time in RFC3339). | [optional] |
 
 ### Return type
 
@@ -148,7 +148,7 @@ try {
 ## `v1EventsCategoriesPost()`
 
 ```php
-v1EventsCategoriesPost($event_category): \SKY\School\Model\EventCategoryCreateResponseExample
+v1EventsCategoriesPost($eventCategory): \SKY\School\Model\EventCategoryCreateResponseExample
 ```
 
 Events category create
@@ -179,10 +179,10 @@ $apiInstance = new SKY\School\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$event_category = {"description":"Test Category","calendar_url":"http://www.example.com/calendar/test_calendar.ics","include_brief_description":true,"include_long_description":false,"public":true,"roles":[12345]}; // \SKY\School\Model\EventCategory
+$eventCategory = {"description":"Test Category","calendar_url":"http://www.example.com/calendar/test_calendar.ics","include_brief_description":true,"include_long_description":false,"public":true,"roles":[12345]}; // \SKY\School\Model\EventCategory
 
 try {
-    $result = $apiInstance->v1EventsCategoriesPost($event_category);
+    $result = $apiInstance->v1EventsCategoriesPost($eventCategory);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->v1EventsCategoriesPost: ', $e->getMessage(), PHP_EOL;
@@ -193,7 +193,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **event_category** | [**\SKY\School\Model\EventCategory**](../Model/EventCategory.md)|  | [optional] |
+| **eventCategory** | [**\SKY\School\Model\EventCategory**](../Model/EventCategory.md)|  | [optional] |
 
 ### Return type
 

@@ -58,8 +58,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status_id' => 'int',
-        'status_name' => 'string',
+        'statusId' => 'int',
+        'statusName' => 'string',
         'ordinal' => 'int',
     ];
 
@@ -71,8 +71,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'status_id' => 'int32',
-        'status_name' => null,
+        'statusId' => 'int32',
+        'statusName' => null,
         'ordinal' => 'int32',
     ];
 
@@ -82,8 +82,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'status_id' => true,
-        'status_name' => true,
+        'statusId' => true,
+        'statusName' => true,
         'ordinal' => true,
     ];
 
@@ -173,8 +173,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_id' => 'status_id',
-        'status_name' => 'status_name',
+        'statusId' => 'status_id',
+        'statusName' => 'status_name',
         'ordinal' => 'ordinal',
     ];
 
@@ -184,8 +184,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'status_id' => 'setStatusId',
-        'status_name' => 'setStatusName',
+        'statusId' => 'setStatusId',
+        'statusName' => 'setStatusName',
         'ordinal' => 'setOrdinal',
     ];
 
@@ -195,8 +195,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'status_id' => 'getStatusId',
-        'status_name' => 'getStatusName',
+        'statusId' => 'getStatusId',
+        'statusName' => 'getStatusName',
         'ordinal' => 'getOrdinal',
     ];
 
@@ -257,8 +257,8 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('status_id', $data ?? [], null);
-        $this->setIfExists('status_name', $data ?? [], null);
+        $this->setIfExists('statusId', $data ?? [], null);
+        $this->setIfExists('statusName', $data ?? [], null);
         $this->setIfExists('ordinal', $data ?? [], null);
     }
 
@@ -305,69 +305,69 @@ class AdmissionsChecklistStatus implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets status_id
+     * Gets statusId
      *
      * @return int|null
      */
     public function getStatusId()
     {
-        return $this->container['status_id'];
+        return $this->container['statusId'];
     }
 
     /**
-     * Sets status_id
+     * Sets statusId
      *
-     * @param int|null $status_id Identifier for this status
+     * @param int|null $statusId Identifier for this status
      *
      * @return self
      */
-    public function setStatusId($status_id)
+    public function setStatusId($statusId)
     {
-        if (is_null($status_id)) {
-            array_push($this->openAPINullablesSetToNull, 'status_id');
+        if (is_null($statusId)) {
+            array_push($this->openAPINullablesSetToNull, 'statusId');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('status_id', $nullablesSetToNull);
+            $index = array_search('statusId', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['status_id'] = $status_id;
+        $this->container['statusId'] = $statusId;
 
         return $this;
     }
 
     /**
-     * Gets status_name
+     * Gets statusName
      *
      * @return string|null
      */
     public function getStatusName()
     {
-        return $this->container['status_name'];
+        return $this->container['statusName'];
     }
 
     /**
-     * Sets status_name
+     * Sets statusName
      *
-     * @param string|null $status_name Name of the status
+     * @param string|null $statusName Name of the status
      *
      * @return self
      */
-    public function setStatusName($status_name)
+    public function setStatusName($statusName)
     {
-        if (is_null($status_name)) {
-            array_push($this->openAPINullablesSetToNull, 'status_name');
+        if (is_null($statusName)) {
+            array_push($this->openAPINullablesSetToNull, 'statusName');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('status_name', $nullablesSetToNull);
+            $index = array_search('statusName', $nullablesSetToNull);
             if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['status_name'] = $status_name;
+        $this->container['statusName'] = $statusName;
 
         return $this;
     }
