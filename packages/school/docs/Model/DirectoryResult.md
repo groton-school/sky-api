@@ -1,0 +1,46 @@
+# # DirectoryResult
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**user_id** | **int** | The Id of the user | [optional]
+**first_name** | **string** | The first name of the user | [optional]
+**last_name** | **string** | The last name of the user | [optional]
+**email** | **string** | The email address of the user | [optional]
+**address_line1** | **string** | The first line of the user address | [optional]
+**address_line2** | **string** | The second line of the user address | [optional]
+**address_line3** | **string** | The third line of the user address | [optional]
+**city** | **string** | The city the user lives in | [optional]
+**state** | **string** | The state the user lives in | [optional]
+**zip** | **string** | The zip code the user lives in | [optional]
+**country** | **string** | The country the user lives in | [optional]
+**home_phone** | **string** | The user&#39;s home phone number | [optional]
+**cell_phone** | **string** | The user&#39;s cell phone number | [optional]
+**office_phone** | **string** | The user&#39;s office phone number | [optional]
+**home_phone2** | **string** | The user&#39;s secondary home phone number | [optional]
+**has_relationships** | **bool** | Returns true if the user has relationships | [optional]
+**prefix** | **string** | The user&#39;s prefix | [optional]
+**preferred_name** | **string** | The user&#39;s preferred name | [optional]
+**profile_photo** | **string** | The user&#39;s profile photo | [optional]
+**middlename** | **string** | The user&#39;s middle name | [optional]
+**maiden_name** | **string** | The user&#39;s maiden name | [optional]
+**suffix** | **string** | The user&#39;s suffix | [optional]
+**grad_year** | **string** | The user&#39;s graduation year | [optional]
+**grade** | **string** | The user&#39;s grade | [optional]
+**grade_display** | **string** | Grade display | [optional]
+**department** | **string** | The department the user belongs to | [optional]
+**department_display** | **string** | How the user&#39;s department should be displayed | [optional]
+**spouse_id** | **int** | The Id of the user&#39;s spouse | [optional]
+**child_names** | **string** | The user&#39;s children | [optional]
+**grade_numeric** | **int** | The numeric grade of the user | [optional]
+**grade_numeric_display** | **string** | The way the numeric grade should be displayed | [optional]
+**total_count** | **int** | The total count of records | [optional]
+**deceased** | **bool** | Returns true if the user is deceased | [optional]
+**student** | **bool** | Returns true if the user is a student | [optional]
+**preferred_address_id** | **int** | The Id of the preferred address for the user | [optional]
+**preferred_address_lat** | **float** | Preferred address latitude | [optional]
+**preferred_address_lng** | **float** | Preferred address longitude | [optional]
+**job_title** | **string** | The user&#39;s job title | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

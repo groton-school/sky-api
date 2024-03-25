@@ -1,0 +1,47 @@
+# # ScheduleSetDetails
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**schedule_set_id** | **int** |  | [optional]
+**schedule_set_description** | **string** |  | [optional]
+**short_description** | **string** |  | [optional]
+**offering_type** | **string** |  | [optional]
+**school_year_label** | **string** |  | [optional]
+**level_num** | **int** |  | [optional]
+**effdate** | **\DateTime** |  | [optional]
+**enddate** | **\DateTime** |  | [optional]
+**start_day** | **int** |  | [optional]
+**start_week** | **int** |  | [optional]
+**max_day** | **int** |  | [optional]
+**max_week** | **int** |  | [optional]
+**meeting_list** | [**\SKY\School\Model\ScheduleSetMettingPattern[]**](ScheduleSetMettingPattern.md) |  | [optional]
+**access_list** | [**\SKY\School\Model\ScheduleSetAccess[]**](ScheduleSetAccess.md) |  | [optional]
+**rotation_list** | [**\SKY\School\Model\ScheduleSetRotation[]**](ScheduleSetRotation.md) |  | [optional]
+**defined_rotation_pattern** | **bool** |  | [optional]
+**meeting_time_created** | **bool** |  | [optional]
+**block_rotation_created** | **bool** |  | [optional]
+**sun** | **bool** |  | [optional]
+**mon** | **bool** |  | [optional]
+**tue** | **bool** |  | [optional]
+**wed** | **bool** |  | [optional]
+**thu** | **bool** |  | [optional]
+**fri** | **bool** |  | [optional]
+**sat** | **bool** |  | [optional]
+**sun_in_use** | **bool** |  | [optional]
+**mon_in_use** | **bool** |  | [optional]
+**tue_in_use** | **bool** |  | [optional]
+**wed_in_use** | **bool** |  | [optional]
+**thu_in_use** | **bool** |  | [optional]
+**fri_in_use** | **bool** |  | [optional]
+**sat_in_use** | **bool** |  | [optional]
+**block_group_id** | **int** |  | [optional]
+**meeting_time_id** | **int** |  | [optional]
+**insert_date** | **\DateTime** |  | [optional]
+**last_modify_date** | **\DateTime** |  | [optional]
+**last_modify_user_id** | **int** |  | [optional]
+**fields_to_null** | **string[]** |  | [optional]
+**vendor_external_id** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
