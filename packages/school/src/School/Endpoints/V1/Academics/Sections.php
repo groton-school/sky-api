@@ -39,22 +39,22 @@ class Sections extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments
      *   $_assignments
      */
-    protected Assignments $_assignments = null;
+    protected ?Assignments $_assignments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students
      *   $_students
      */
-    protected Students $_students = null;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
      *   $_cycles
      */
-    protected Cycles $_cycles = null;
+    protected ?Cycles $_cycles = null;
 
     /**
      * Returns a collection of academic sections for the specified school
@@ -77,12 +77,12 @@ class Sections extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): AcademicsSectionCollection
+    public function list_(array $params): AcademicsSectionCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
         return new AcademicsSectionCollection($this->send("get", [], ["level_num" => $params['level_num'],
-        "school_year" => $params['school_year']]));
+            "school_year" => $params['school_year']]));
     }
 }

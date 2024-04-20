@@ -48,7 +48,7 @@ class Customsearch extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentCollection
+    public function list_(array $params): ConstituentCollection
     {
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['first_name']), new ArgumentException("Parameter `first_name` is required"));
@@ -66,18 +66,18 @@ class Customsearch extends BaseEndpoint
         assert(isset($params['record_ids']), new ArgumentException("Parameter `record_ids` is required"));
 
         return new ConstituentCollection($this->send("get", [], ["limit" => $params['limit'],
-        "first_name" => $params['first_name'],
-        "last_name" => $params['last_name'],
-        "alias_type" => $params['alias_type'],
-        "lookup_id" => $params['lookup_id'],
-        "address_lines" => $params['address_lines'],
-        "city" => $params['city'],
-        "state" => $params['state'],
-        "post_code" => $params['post_code'],
-        "email" => $params['email'],
-        "phone_number" => $params['phone_number'],
-        "include_maiden_name" => $params['include_maiden_name'],
-        "include_alias" => $params['include_alias'],
-        "record_ids" => $params['record_ids']]));
+            "first_name" => $params['first_name'],
+            "last_name" => $params['last_name'],
+            "alias_type" => $params['alias_type'],
+            "lookup_id" => $params['lookup_id'],
+            "address_lines" => $params['address_lines'],
+            "city" => $params['city'],
+            "state" => $params['state'],
+            "post_code" => $params['post_code'],
+            "email" => $params['email'],
+            "phone_number" => $params['phone_number'],
+            "include_maiden_name" => $params['include_maiden_name'],
+            "include_alias" => $params['include_alias'],
+            "record_ids" => $params['record_ids']]));
     }
 }

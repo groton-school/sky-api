@@ -43,15 +43,15 @@ class Sets extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ScheduleSetCollection
+    public function list_(array $params): ScheduleSetCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
         return new ScheduleSetCollection($this->send("get", [], ["level_num" => $params['level_num'],
-        "school_year" => $params['school_year'],
-        "group_type" => $params['group_type']]));
+            "school_year" => $params['school_year'],
+            "group_type" => $params['group_type']]));
     }
 
     /**

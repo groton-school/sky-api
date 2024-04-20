@@ -43,7 +43,7 @@ class Constituentduplicatematch extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentDuplicateMatchListCollection
+    public function list_(array $params): ConstituentDuplicateMatchListCollection
     {
         assert(isset($params['max_results']), new ArgumentException("Parameter `max_results` is required"));
         assert(isset($params['email_address']), new ArgumentException("Parameter `email_address` is required"));
@@ -57,14 +57,14 @@ class Constituentduplicatematch extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentDuplicateMatchListCollection($this->send("get", [], ["max_results" => $params['max_results'],
-        "email_address" => $params['email_address'],
-        "first_name" => $params['first_name'],
-        "key_name" => $params['key_name'],
-        "address_block" => $params['address_block'],
-        "country" => $params['country'],
-        "post_code" => $params['post_code'],
-        "phone_number" => $params['phone_number'],
-        "title" => $params['title'],
-        "limit" => $params['limit']]));
+            "email_address" => $params['email_address'],
+            "first_name" => $params['first_name'],
+            "key_name" => $params['key_name'],
+            "address_block" => $params['address_block'],
+            "country" => $params['country'],
+            "post_code" => $params['post_code'],
+            "phone_number" => $params['phone_number'],
+            "title" => $params['title'],
+            "limit" => $params['limit']]));
     }
 }

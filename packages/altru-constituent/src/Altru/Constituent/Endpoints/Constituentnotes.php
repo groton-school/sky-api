@@ -33,10 +33,10 @@ class Constituentnotes extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentnotes\View
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentnotes\View
      *   $_view
      */
-    protected View $_view = null;
+    protected ?View $_view = null;
 
     /**
      * This dataform template is used to add a constituent note.
@@ -51,7 +51,7 @@ class Constituentnotes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentNote $requestBody): PostResponse
+    public function post(NewConstituentNote $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -65,13 +65,13 @@ class Constituentnotes extends BaseEndpoint
      * @param array{constituent_note_id: string} $params An associative array
      *     - constituent_note_id: The constituent note id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentNoteId(array $params): void
+    public function deleteByConstituentNoteId(array $params): mixed
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
 
@@ -87,13 +87,13 @@ class Constituentnotes extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentNoteId(array $params, UpdateConstituentNote $requestBody): void
+    public function patchOnConstituentNoteId(array $params, UpdateConstituentNote $requestBody): mixed
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

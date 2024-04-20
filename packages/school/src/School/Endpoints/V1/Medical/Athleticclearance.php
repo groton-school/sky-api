@@ -36,7 +36,7 @@ class Athleticclearance extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentAthleticRequirementUpdate $requestBody): array
+    public function post(StudentAthleticRequirementUpdate $requestBody): array
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

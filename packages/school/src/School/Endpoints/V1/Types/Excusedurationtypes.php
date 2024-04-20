@@ -3,7 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Components\ExcuseDurationTypes;
+use Blackbaud\SKY\School\Components\ExcuseDurationTypes as Components_ExcuseDurationTypes;
 
 /**
  * @api
@@ -24,8 +24,8 @@ class Excusedurationtypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\ExcuseDurationTypes Success
      */
-    public function getAllBy(): ExcuseDurationTypes
+    public function get(): Components_ExcuseDurationTypes
     {
-        return new ExcuseDurationTypes($this->send("get", [], []));
+        return new Components_ExcuseDurationTypes($this->send("get", [], []));
     }
 }

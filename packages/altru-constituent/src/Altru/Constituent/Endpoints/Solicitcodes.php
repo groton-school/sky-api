@@ -32,7 +32,7 @@ class Solicitcodes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentSolicitCode $requestBody): PostResponse
+    public function post(NewConstituentSolicitCode $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -67,13 +67,13 @@ class Solicitcodes extends BaseEndpoint
      *   associative array
      *     - constituent_solicit_code_id: The constituent solicit code id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentSolicitCodeId(array $params): void
+    public function deleteByConstituentSolicitCodeId(array $params): mixed
     {
         assert(isset($params['constituent_solicit_code_id']), new ArgumentException("Parameter `constituent_solicit_code_id` is required"));
 
@@ -90,13 +90,13 @@ class Solicitcodes extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentSolicitCodeId(array $params, UpdateConstituentSolicitCode $requestBody): void
+    public function patchOnConstituentSolicitCodeId(array $params, UpdateConstituentSolicitCode $requestBody): mixed
     {
         assert(isset($params['constituent_solicit_code_id']), new ArgumentException("Parameter `constituent_solicit_code_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

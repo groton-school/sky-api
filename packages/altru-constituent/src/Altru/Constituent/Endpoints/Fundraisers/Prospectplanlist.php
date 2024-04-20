@@ -36,7 +36,7 @@ class Prospectplanlist extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): ConstituentFundraiserListCollection
+    public function searchByConstituentId(array $params): ConstituentFundraiserListCollection
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['site_filter_mode']), new ArgumentException("Parameter `site_filter_mode` is required"));
@@ -45,8 +45,8 @@ class Prospectplanlist extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentFundraiserListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["site_filter_mode" => $params['site_filter_mode'],
-        "sites_selected" => $params['sites_selected'],
-        "include_historical_plans" => $params['include_historical_plans'],
-        "limit" => $params['limit']]));
+            "sites_selected" => $params['sites_selected'],
+            "include_historical_plans" => $params['include_historical_plans'],
+            "limit" => $params['limit']]));
     }
 }

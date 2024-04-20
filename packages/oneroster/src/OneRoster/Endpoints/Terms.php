@@ -32,10 +32,10 @@ class Terms extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Terms\GradingPeriods
      *   $_gradingPeriods
      */
-    protected GradingPeriods $_gradingPeriods = null;
+    protected ?GradingPeriods $_gradingPeriods = null;
 
     /**
      * Returns a collection of terms.
@@ -43,7 +43,7 @@ class Terms extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\AcademicSessionsOutputModel
      *   OK - It was possible to read the collection.
      */
-    public function getAllBy(): AcademicSessionsOutputModel
+    public function get(): AcademicSessionsOutputModel
     {
         return new AcademicSessionsOutputModel($this->send("get", [], []));
     }

@@ -42,12 +42,12 @@ class Checklists extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): AdmissionsCheckListCollection
+    public function list_(array $params): AdmissionsCheckListCollection
     {
         assert(isset($params['search_text']), new ArgumentException("Parameter `search_text` is required"));
         assert(isset($params['inactive']), new ArgumentException("Parameter `inactive` is required"));
 
         return new AdmissionsCheckListCollection($this->send("get", [], ["search_text" => $params['search_text'],
-        "inactive" => $params['inactive']]));
+            "inactive" => $params['inactive']]));
     }
 }

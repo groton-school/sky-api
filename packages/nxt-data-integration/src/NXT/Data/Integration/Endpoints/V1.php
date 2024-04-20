@@ -24,8 +24,8 @@ class V1 extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re $_re Routing
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re $_re Routing
      *   class for the subnamespace `Re`
      */
-    protected Re $_re = null;
+    protected ?Re $_re = null;
 }

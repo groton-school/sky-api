@@ -66,12 +66,12 @@ class Taxdeclarations extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\GiftAidTaxDeclarationEdit
      *   $requestBody Description of changes for the tax declaration.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, GiftAidTaxDeclarationEdit $requestBody): void
+    public function patchOnId(array $params, GiftAidTaxDeclarationEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -92,7 +92,7 @@ class Taxdeclarations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(GiftAidTaxDeclarationCreate $requestBody): PostResponse
+    public function post(GiftAidTaxDeclarationCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

@@ -31,10 +31,10 @@ class LineItems extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems\Results
      *   $_results
      */
-    protected Results $_results = null;
+    protected ?Results $_results = null;
 
     /**
      * Returns a collection of lineItems for the specified `class_id`.

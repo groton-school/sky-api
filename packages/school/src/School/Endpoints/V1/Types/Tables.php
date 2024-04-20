@@ -25,7 +25,7 @@ class Tables extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\TableCollection Success
      */
-    public function getAllBy(): TableCollection
+    public function list_(): TableCollection
     {
         return new TableCollection($this->send("get", [], []));
     }

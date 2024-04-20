@@ -31,10 +31,10 @@ class Simplelists extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Simplelists\Translation
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Simplelists\Translation
      *   $_translation
      */
-    protected Translation $_translation = null;
+    protected ?Translation $_translation = null;
 
     /**
      * Gets the data for a simple datalist using ID or Name and any

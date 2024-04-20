@@ -47,12 +47,12 @@ class Changed extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): EmergencyContactChangeCollection
+    public function list_(array $params): EmergencyContactChangeCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
         return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $params['start_date'],
-        "marker" => $params['marker']]));
+            "marker" => $params['marker']]));
     }
 }

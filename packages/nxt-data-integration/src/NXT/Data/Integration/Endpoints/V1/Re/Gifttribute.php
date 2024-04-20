@@ -4,7 +4,7 @@ namespace Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Blackbaud\SKY\NXT\Data\Integration\Components\GiftTribute;
+use Blackbaud\SKY\NXT\Data\Integration\Components\GiftTribute as Components_GiftTribute;
 use Blackbaud\SKY\NXT\Data\Integration\Components\GiftTributeCollection;
 use Blackbaud\SKY\NXT\Data\Integration\Components\GiftTributeCreate;
 use Blackbaud\SKY\NXT\Data\Integration\Components\GiftTributeEdit;
@@ -43,22 +43,22 @@ class Gifttribute extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Importid
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Importid
      *   $_importid
      */
-    protected Importid $_importid = null;
+    protected ?Importid $_importid = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Gift
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Gift
      *   $_gift
      */
-    protected Gift $_gift = null;
+    protected ?Gift $_gift = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Acknowledgees
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute\Acknowledgees
      *   $_acknowledgees
      */
-    protected Acknowledgees $_acknowledgees = null;
+    protected ?Acknowledgees $_acknowledgees = null;
 
     /**
      * Returns details about a tribute with the given ID.
@@ -73,11 +73,11 @@ class Gifttribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByGiftTributeId(array $params): GiftTribute
+    public function getByGiftTributeId(array $params): Components_GiftTribute
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return new GiftTribute($this->send("get", ["{giftTributeId}" => $params['giftTributeId']], []));
+        return new Components_GiftTribute($this->send("get", ["{giftTributeId}" => $params['giftTributeId']], []));
     }
 
     /**
@@ -87,13 +87,13 @@ class Gifttribute extends BaseEndpoint
      *     - giftTributeId: Format - int32. The ID of the gift tribute to
      *   delete.
      *
-     * @return void Returned when the operation succeeds. The response body
+     * @return mixed Returned when the operation succeeds. The response body
      *   contains the gift tribute record.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByGiftTributeId(array $params): void
+    public function deleteByGiftTributeId(array $params): mixed
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
@@ -109,12 +109,12 @@ class Gifttribute extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\GiftTributeEdit
      *   $requestBody Description of changes for the gift tribute.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByGiftTributeId(array $params, GiftTributeEdit $requestBody): void
+    public function patchOnGiftTributeId(array $params, GiftTributeEdit $requestBody): mixed
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -136,13 +136,13 @@ class Gifttribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): GiftTributeCollection
+    public function list_(array $params): GiftTributeCollection
     {
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new GiftTributeCollection($this->send("get", [], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -158,7 +158,7 @@ class Gifttribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(GiftTributeCreate $requestBody): PostResponse
+    public function post(GiftTributeCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

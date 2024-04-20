@@ -29,9 +29,9 @@ class Lists extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Lists\Advanced $_advanced
      */
-    protected Advanced $_advanced = null;
+    protected ?Advanced $_advanced = null;
 
     /**
      * Returns a list of basic or advanced lists the authorized user has
@@ -89,7 +89,7 @@ class Lists extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\ListReadCollection Success
      */
-    public function getAllBy(): ListReadCollection
+    public function list_(): ListReadCollection
     {
         return new ListReadCollection($this->send("get", [], []));
     }

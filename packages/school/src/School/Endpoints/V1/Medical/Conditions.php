@@ -64,7 +64,7 @@ class Conditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConditionId(array $params, StudentConditionUpdate $requestBody): int
+    public function patchOnConditionId(array $params, StudentConditionUpdate $requestBody): int
     {
         assert(isset($params['condition_id']), new ArgumentException("Parameter `condition_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -93,7 +93,7 @@ class Conditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentMedicalCondition $requestBody): int
+    public function post(StudentMedicalCondition $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

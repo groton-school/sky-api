@@ -35,7 +35,7 @@ class Patronorders extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): ConstituentListCollection
+    public function searchByConstituentId(array $params): ConstituentListCollection
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['show_date_range']), new ArgumentException("Parameter `show_date_range` is required"));
@@ -43,7 +43,7 @@ class Patronorders extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["show_date_range" => $params['show_date_range'],
-        "sales_method" => $params['sales_method'],
-        "limit" => $params['limit']]));
+            "sales_method" => $params['sales_method'],
+            "limit" => $params['limit']]));
     }
 }

@@ -26,7 +26,7 @@ class Testtypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\TestTypeCollection Success
      */
-    public function getAllBy(): TestTypeCollection
+    public function list_(): TestTypeCollection
     {
         return new TestTypeCollection($this->send("get", [], []));
     }

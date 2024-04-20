@@ -45,31 +45,32 @@ class Classes extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems $_lineItems
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\LineItems $_lineItems
      *   Routing class for the subnamespace `LineItems`
      */
-    protected LineItems $_lineItems = null;
+    protected ?LineItems $_lineItems = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Results $_results
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Results $_results
      */
-    protected Results $_results = null;
+    protected ?Results $_results = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers $_teachers
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Teachers $_teachers
      */
-    protected Teachers $_teachers = null;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students $_students
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students $_students
      *   Routing class for the subnamespace `Students`
      */
-    protected Students $_students = null;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories $_categories
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Categories
+     *   $_categories
      */
-    protected Categories $_categories = null;
+    protected ?Categories $_categories = null;
 
     /**
      * Returns a collection of classes.
@@ -77,7 +78,7 @@ class Classes extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\ClassesOutputModel OK - It
      *   was possible to read the collection.
      */
-    public function getAllBy(): ClassesOutputModel
+    public function get(): ClassesOutputModel
     {
         return new ClassesOutputModel($this->send("get", [], []));
     }

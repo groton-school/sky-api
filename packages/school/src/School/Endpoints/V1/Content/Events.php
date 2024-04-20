@@ -24,8 +24,8 @@ class Events extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Events\Categories
      *   $_categories
      */
-    protected Categories $_categories = null;
+    protected ?Categories $_categories = null;
 }

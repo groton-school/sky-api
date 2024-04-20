@@ -40,7 +40,7 @@ class Sections extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTeacherId(array $params): AcademicsSectionCollection
+    public function searchByTeacherId(array $params): AcademicsSectionCollection
     {
         assert(isset($params['teacher_id']), new ArgumentException("Parameter `teacher_id` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));

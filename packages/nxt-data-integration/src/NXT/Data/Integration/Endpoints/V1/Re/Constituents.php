@@ -34,16 +34,16 @@ class Constituents extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents\Customsearch
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents\Customsearch
      *   $_customsearch
      */
-    protected Customsearch $_customsearch = null;
+    protected ?Customsearch $_customsearch = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents\Fund
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents\Fund
      *   $_fund
      */
-    protected Fund $_fund = null;
+    protected ?Fund $_fund = null;
 
     /**
      * Deletes a constituent. The constituent cannot have any gifts or
@@ -52,13 +52,13 @@ class Constituents extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The constituent system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   constituent.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 

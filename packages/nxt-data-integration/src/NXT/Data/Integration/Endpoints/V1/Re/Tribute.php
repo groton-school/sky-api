@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\NXT\Data\Integration\Components\PostResponse;
-use Blackbaud\SKY\NXT\Data\Integration\Components\Tribute as TributeDisambiguate;
+use Blackbaud\SKY\NXT\Data\Integration\Components\Tribute as Components_Tribute;
 use Blackbaud\SKY\NXT\Data\Integration\Components\TributeCollection;
 use Blackbaud\SKY\NXT\Data\Integration\Components\TributeCreate;
 use Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Acknowledgee;
@@ -46,28 +46,28 @@ class Tribute extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Importid
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Importid
      *   $_importid
      */
-    protected Importid $_importid = null;
+    protected ?Importid $_importid = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Acknowledgee
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Acknowledgee
      *   $_acknowledgee
      */
-    protected Acknowledgee $_acknowledgee = null;
+    protected ?Acknowledgee $_acknowledgee = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Constituent
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Constituent
      *   $_constituent
      */
-    protected Constituent $_constituent = null;
+    protected ?Constituent $_constituent = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Acknowledgees
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute\Acknowledgees
      *   $_acknowledgees
      */
-    protected Acknowledgees $_acknowledgees = null;
+    protected ?Acknowledgees $_acknowledgees = null;
 
     /**
      * Returns details about a tribute.
@@ -82,11 +82,11 @@ class Tribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getById(array $params): Tribute
+    public function getById(array $params): Components_Tribute
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new TributeDisambiguate($this->send("get", ["{id}" => $params['id']], []));
+        return new Components_Tribute($this->send("get", ["{id}" => $params['id']], []));
     }
 
     /**
@@ -95,13 +95,13 @@ class Tribute extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The tribute system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   tribute.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -122,13 +122,13 @@ class Tribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TributeCollection
+    public function list_(array $params): TributeCollection
     {
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new TributeCollection($this->send("get", [], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -144,7 +144,7 @@ class Tribute extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(TributeCreate $requestBody): PostResponse
+    public function post(TributeCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

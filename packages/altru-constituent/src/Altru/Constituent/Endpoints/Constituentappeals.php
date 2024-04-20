@@ -34,10 +34,10 @@ class Constituentappeals extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals\Appeals
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals\Appeals
      *   $_appeals
      */
-    protected Appeals $_appeals = null;
+    protected ?Appeals $_appeals = null;
 
     /**
      * Data form for adding a Constituent Appeal record.
@@ -52,7 +52,7 @@ class Constituentappeals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentAppeal $requestBody): PostResponse
+    public function post(NewConstituentAppeal $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -88,13 +88,13 @@ class Constituentappeals extends BaseEndpoint
      *   array
      *     - constituent_appeal_id: The constituent appeal id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentAppealId(array $params): void
+    public function deleteByConstituentAppealId(array $params): mixed
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
 
@@ -111,13 +111,13 @@ class Constituentappeals extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentAppealId(array $params, UpdateConstituentAppeal $requestBody): void
+    public function patchOnConstituentAppealId(array $params, UpdateConstituentAppeal $requestBody): mixed
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

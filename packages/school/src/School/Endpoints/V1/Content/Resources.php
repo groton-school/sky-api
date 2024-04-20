@@ -30,7 +30,7 @@ class Resources extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\ResourceCollection Success
      */
-    public function getAllBy(): ResourceCollection
+    public function list_(): ResourceCollection
     {
         return new ResourceCollection($this->send("get", [], []));
     }

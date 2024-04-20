@@ -20,7 +20,7 @@ class Me extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\UserMe Success
      */
-    public function getAllBy(): UserMe
+    public function get(): UserMe
     {
         return new UserMe($this->send("get", [], []));
     }

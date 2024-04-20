@@ -23,7 +23,7 @@ class Schedules extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings $_meetings
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Schedules\Meetings $_meetings
      */
-    protected Meetings $_meetings = null;
+    protected ?Meetings $_meetings = null;
 }

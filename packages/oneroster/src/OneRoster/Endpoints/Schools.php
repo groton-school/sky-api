@@ -48,36 +48,36 @@ class Schools extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes $_classes
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes $_classes
      *   Routing class for the subnamespace `Classes`
      */
-    protected Classes $_classes = null;
+    protected ?Classes $_classes = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers $_teachers
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Teachers $_teachers
      */
-    protected Teachers $_teachers = null;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Students $_students
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Students $_students
      */
-    protected Students $_students = null;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Enrollments
      *   $_enrollments
      */
-    protected Enrollments $_enrollments = null;
+    protected ?Enrollments $_enrollments = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms $_terms
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Terms $_terms
      */
-    protected Terms $_terms = null;
+    protected ?Terms $_terms = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses $_courses
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Courses $_courses
      */
-    protected Courses $_courses = null;
+    protected ?Courses $_courses = null;
 
     /**
      * Returns a collection of schools.
@@ -85,7 +85,7 @@ class Schools extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
      *   possible to read the collection.
      */
-    public function getAllBy(): OrgsOutputModel
+    public function get(): OrgsOutputModel
     {
         return new OrgsOutputModel($this->send("get", [], []));
     }

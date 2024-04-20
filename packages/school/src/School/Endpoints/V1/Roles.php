@@ -27,7 +27,7 @@ class Roles extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\RoleCollection Success
      */
-    public function getAllBy(): RoleCollection
+    public function list_(): RoleCollection
     {
         return new RoleCollection($this->send("get", [], []));
     }

@@ -32,9 +32,9 @@ class Addresses extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $_share
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share $_share
      */
-    protected Share $_share = null;
+    protected ?Share $_share = null;
 
     /**
      * Returns a collection of addresses.
@@ -52,7 +52,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): AddressReadCollection
+    public function searchByUserId(array $params): AddressReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -81,7 +81,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, AddressAdd $requestBody): int
+    public function postToUserId(array $params, AddressAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -113,14 +113,14 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUserIdAndAddressId(array $params, AddressEdit $requestBody): int
+    public function patchOnUserIdAndAddressId(array $params, AddressEdit $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $params['user_id'],
-        "{address_id}" => $params['address_id']], [], $requestBody);
+            "{address_id}" => $params['address_id']], [], $requestBody);
     }
 
     /**
@@ -149,19 +149,19 @@ class Addresses extends BaseEndpoint
      *     - address_type_id: Format - int32. The ID of the user's address
      *   type to delete.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserIdAndAddressIdAndAddressTypeId(array $params): void
+    public function deleteByUserIdAndAddressIdAndAddressTypeId(array $params): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
         assert(isset($params['address_type_id']), new ArgumentException("Parameter `address_type_id` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id'],
-        "{address_id}" => $params['address_id'],
-        "{address_type_id}" => $params['address_type_id']], []);
+            "{address_id}" => $params['address_id'],
+            "{address_type_id}" => $params['address_type_id']], []);
     }
 }

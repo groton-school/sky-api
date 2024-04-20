@@ -108,134 +108,134 @@ class Re extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Appeals
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Appeals
      *   $_appeals
      */
-    protected Appeals $_appeals = null;
+    protected ?Appeals $_appeals = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Campaigns
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Campaigns
      *   $_campaigns
      */
-    protected Campaigns $_campaigns = null;
+    protected ?Campaigns $_campaigns = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Codetables
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Codetables
      *   $_codetables Routing class for the subnamespace `Codetables`
      */
-    protected Codetables $_codetables = null;
+    protected ?Codetables $_codetables = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituents
      *   $_constituents Routing class for the subnamespace `Constituents`
      */
-    protected Constituents $_constituents = null;
+    protected ?Constituents $_constituents = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constitappeals
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constitappeals
      *   $_constitappeals
      */
-    protected Constitappeals $_constitappeals = null;
+    protected ?Constitappeals $_constitappeals = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Countries
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Countries
      *   $_countries
      */
-    protected Countries $_countries = null;
+    protected ?Countries $_countries = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Customfieldcategories
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Customfieldcategories
      *   $_customfieldcategories
      */
-    protected Customfieldcategories $_customfieldcategories = null;
+    protected ?Customfieldcategories $_customfieldcategories = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Funds $_funds
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Funds $_funds
      *   Routing class for the subnamespace `Funds`
      */
-    protected Funds $_funds = null;
+    protected ?Funds $_funds = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Serialnumber
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Serialnumber
      *   $_serialnumber
      */
-    protected Serialnumber $_serialnumber = null;
+    protected ?Serialnumber $_serialnumber = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Nameformatconfigurations
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Nameformatconfigurations
      *   $_nameformatconfigurations Routing class for the subnamespace
      *   `Nameformatconfigurations`
      */
-    protected Nameformatconfigurations $_nameformatconfigurations = null;
+    protected ?Nameformatconfigurations $_nameformatconfigurations = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Phonetypes
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Phonetypes
      *   $_phonetypes
      */
-    protected Phonetypes $_phonetypes = null;
+    protected ?Phonetypes $_phonetypes = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Proposals
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Proposals
      *   $_proposals
      */
-    protected Proposals $_proposals = null;
+    protected ?Proposals $_proposals = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Users $_users
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Users $_users
      */
-    protected Users $_users = null;
+    protected ?Users $_users = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituentidmap
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Constituentidmap
      *   $_constituentidmap
      */
-    protected Constituentidmap $_constituentidmap = null;
+    protected ?Constituentidmap $_constituentidmap = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Installedcountry
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Installedcountry
      *   $_installedcountry
      */
-    protected Installedcountry $_installedcountry = null;
+    protected ?Installedcountry $_installedcountry = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Tribute
      *   $_tribute Routing class for the subnamespace `Tribute`
      */
-    protected Tribute $_tribute = null;
+    protected ?Tribute $_tribute = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifttribute
      *   $_gifttribute Routing class for the subnamespace `Gifttribute`
      */
-    protected Gifttribute $_gifttribute = null;
+    protected ?Gifttribute $_gifttribute = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftidmap
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftidmap
      *   $_giftidmap
      */
-    protected Giftidmap $_giftidmap = null;
+    protected ?Giftidmap $_giftidmap = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifts $_gifts
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifts $_gifts
      *   Routing class for the subnamespace `Gifts`
      */
-    protected Gifts $_gifts = null;
+    protected ?Gifts $_gifts = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap
      *   $_importidmap Routing class for the subnamespace `Importidmap`
      */
-    protected Importidmap $_importidmap = null;
+    protected ?Importidmap $_importidmap = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships
      *   $_relationships Routing class for the subnamespace `Relationships`
      */
-    protected Relationships $_relationships = null;
+    protected ?Relationships $_relationships = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid
      *   $_giftaid Routing class for the subnamespace `Giftaid`
      */
-    protected Giftaid $_giftaid = null;
+    protected ?Giftaid $_giftaid = null;
 }

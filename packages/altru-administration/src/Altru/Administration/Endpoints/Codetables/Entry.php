@@ -33,7 +33,7 @@ class Entry extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByCodeTableName(array $params, NewCodeTableEntry $requestBody): PostResponse
+    public function postToCodeTableName(array $params, NewCodeTableEntry $requestBody): PostResponse
     {
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -50,13 +50,13 @@ class Entry extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be updated
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByCodeTableName(array $params, UpdateCodeTable $requestBody): void
+    public function patchOnCodeTableName(array $params, UpdateCodeTable $requestBody): mixed
     {
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

@@ -32,7 +32,7 @@ class Emailaddresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentEmailAddress $requestBody): PostResponse
+    public function post(NewConstituentEmailAddress $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -66,13 +66,13 @@ class Emailaddresses extends BaseEndpoint
      * @param array{email_address_id: string} $params An associative array
      *     - email_address_id: The email address id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByEmailAddressId(array $params): void
+    public function deleteByEmailAddressId(array $params): mixed
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
 
@@ -88,13 +88,13 @@ class Emailaddresses extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByEmailAddressId(array $params, UpdateConstituentEmailAddress $requestBody): void
+    public function patchOnEmailAddressId(array $params, UpdateConstituentEmailAddress $requestBody): mixed
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

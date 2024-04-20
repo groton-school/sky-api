@@ -48,13 +48,13 @@ class Fields extends BaseEndpoint
      *     - id: Format - int32. The name format configuration field option
      *   system ID.
      *
-     * @return void Returned when the operation successfully deletes the name
+     * @return mixed Returned when the operation successfully deletes the name
      *   format configuration field.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -71,12 +71,12 @@ class Fields extends BaseEndpoint
      *   $requestBody Description of changes for the name format configuration
      *   field option.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, NameFormatConfigurationFieldEdit $requestBody): void
+    public function patchOnId(array $params, NameFormatConfigurationFieldEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -91,7 +91,7 @@ class Fields extends BaseEndpoint
      *   Returned when the operation succeeds. The response body contains the
      *   name format configuration field options list.
      */
-    public function getAllBy(): NameFormatConfigurationFieldCollection
+    public function list_(): NameFormatConfigurationFieldCollection
     {
         return new NameFormatConfigurationFieldCollection($this->send("get", [], []));
     }
@@ -109,7 +109,7 @@ class Fields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NameFormatConfigurationFieldCreate $requestBody): PostResponse
+    public function post(NameFormatConfigurationFieldCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

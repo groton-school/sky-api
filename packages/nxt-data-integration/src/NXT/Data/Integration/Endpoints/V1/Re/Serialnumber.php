@@ -20,7 +20,7 @@ class Serialnumber extends BaseEndpoint
      * @return string Returned when the operation succeeds. The response body
      *   contains the serial number.
      */
-    public function getAllBy(): string
+    public function get(): string
     {
         return $this->send("get", [], []);
     }

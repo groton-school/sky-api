@@ -25,7 +25,7 @@ class Checkliststatus extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\AdmissionsChecklistStatusCollection
      *   Success
      */
-    public function getAllBy(): AdmissionsChecklistStatusCollection
+    public function list_(): AdmissionsChecklistStatusCollection
     {
         return new AdmissionsChecklistStatusCollection($this->send("get", [], []));
     }

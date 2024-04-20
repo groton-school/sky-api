@@ -31,7 +31,7 @@ class Gradelevels extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\GradeLevelCollection Success
      */
-    public function getAllBy(): GradeLevelCollection
+    public function list_(): GradeLevelCollection
     {
         return new GradeLevelCollection($this->send("get", [], []));
     }

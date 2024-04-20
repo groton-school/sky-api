@@ -30,12 +30,12 @@ class Immunizations extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\StudentImmunizationUpdate
      *   $requestBody The immunizations to update
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentImmunizationUpdate $requestBody): void
+    public function post(StudentImmunizationUpdate $requestBody): mixed
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

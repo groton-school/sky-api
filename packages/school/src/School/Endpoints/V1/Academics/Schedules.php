@@ -27,13 +27,14 @@ class Schedules extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets $_sets
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Sets
+     *   $_sets
      */
-    protected Sets $_sets = null;
+    protected ?Sets $_sets = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules\Master
      *   $_master
      */
-    protected Master $_master = null;
+    protected ?Master $_master = null;
 }

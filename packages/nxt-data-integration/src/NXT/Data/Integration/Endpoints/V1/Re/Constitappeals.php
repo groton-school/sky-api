@@ -31,7 +31,7 @@ class Constitappeals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(ConstituentAppealCreate $requestBody): PostResponse
+    public function post(ConstituentAppealCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -44,13 +44,13 @@ class Constitappeals extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The ID for the constituent appeal to delete.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   constituent appeal.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -65,12 +65,12 @@ class Constitappeals extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\ConstituentAppealEdit
      *   $requestBody The changes made to the constituent appeal.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, ConstituentAppealEdit $requestBody): void
+    public function patchOnId(array $params, ConstituentAppealEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

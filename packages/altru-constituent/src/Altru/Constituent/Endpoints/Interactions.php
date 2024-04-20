@@ -32,7 +32,7 @@ class Interactions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentInteraction $requestBody): PostResponse
+    public function post(NewConstituentInteraction $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -68,13 +68,13 @@ class Interactions extends BaseEndpoint
      *   array
      *     - constituent_interaction_id: The constituent interaction id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentInteractionId(array $params): void
+    public function deleteByConstituentInteractionId(array $params): mixed
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
 
@@ -91,13 +91,13 @@ class Interactions extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentInteractionId(array $params, UpdateConstituentInteraction $requestBody): void
+    public function patchOnConstituentInteractionId(array $params, UpdateConstituentInteraction $requestBody): mixed
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

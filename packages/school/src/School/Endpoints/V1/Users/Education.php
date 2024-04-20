@@ -36,7 +36,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): EducationReadCollection
+    public function searchByUserId(array $params): EducationReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -68,7 +68,7 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, EducationAdd $requestBody): int
+    public function postToUserId(array $params, EducationAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -96,18 +96,18 @@ class Education extends BaseEndpoint
      *     - user_id: Format - int32.
      *     - education_id: Format - int32.
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserIdAndEducationId(array $params): void
+    public function deleteByUserIdAndEducationId(array $params): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['education_id']), new ArgumentException("Parameter `education_id` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id'],
-        "{education_id}" => $params['education_id']], []);
+            "{education_id}" => $params['education_id']], []);
     }
 
     /**
@@ -137,13 +137,13 @@ class Education extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUserIdAndEducationId(array $params, EducationUpdate $requestBody): int
+    public function patchOnUserIdAndEducationId(array $params, EducationUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['education_id']), new ArgumentException("Parameter `education_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $params['user_id'],
-        "{education_id}" => $params['education_id']], [], $requestBody);
+            "{education_id}" => $params['education_id']], [], $requestBody);
     }
 }

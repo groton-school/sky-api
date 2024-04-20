@@ -46,13 +46,13 @@ class Customfieldcategories extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The custom field category system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   custom field category.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -67,12 +67,12 @@ class Customfieldcategories extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\CustomFieldCategoryEdit
      *   $requestBody Description of changes for the custom field category.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, CustomFieldCategoryEdit $requestBody): void
+    public function patchOnId(array $params, CustomFieldCategoryEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -99,7 +99,7 @@ class Customfieldcategories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CustomFieldCategoryCollection
+    public function list_(array $params): CustomFieldCategoryCollection
     {
         assert(isset($params['record_type']), new ArgumentException("Parameter `record_type` is required"));
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
@@ -107,9 +107,9 @@ class Customfieldcategories extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new CustomFieldCategoryCollection($this->send("get", [], ["record_type" => $params['record_type'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -125,7 +125,7 @@ class Customfieldcategories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(CustomFieldCategoryCreate $requestBody): PostResponse
+    public function post(CustomFieldCategoryCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

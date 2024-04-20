@@ -46,13 +46,13 @@ class Appeals extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The appeal system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   appeal.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -67,12 +67,12 @@ class Appeals extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\AppealEdit
      *   $requestBody Description of changes for the appeal.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, AppealEdit $requestBody): void
+    public function patchOnId(array $params, AppealEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -98,7 +98,7 @@ class Appeals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): AppealCollection
+    public function list_(array $params): AppealCollection
     {
         assert(isset($params['appeal_id']), new ArgumentException("Parameter `appeal_id` is required"));
         assert(isset($params['description']), new ArgumentException("Parameter `description` is required"));
@@ -107,10 +107,10 @@ class Appeals extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new AppealCollection($this->send("get", [], ["appeal_id" => $params['appeal_id'],
-        "description" => $params['description'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "description" => $params['description'],
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -126,7 +126,7 @@ class Appeals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(AppealCreate $requestBody): PostResponse
+    public function post(AppealCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

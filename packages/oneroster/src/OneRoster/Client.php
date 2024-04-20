@@ -70,82 +70,83 @@ class Client extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\AcademicSessions
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\AcademicSessions
      *   $_academicSessions
      */
-    protected AcademicSessions $_academicSessions = null;
+    protected ?AcademicSessions $_academicSessions = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Terms $_terms Routing class for
-     *   the subnamespace `Terms`
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Terms $_terms Routing class
+     *   for the subnamespace `Terms`
      */
-    protected Terms $_terms = null;
+    protected ?Terms $_terms = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\GradingPeriods $_gradingPeriods
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\GradingPeriods
+     *   $_gradingPeriods
      */
-    protected GradingPeriods $_gradingPeriods = null;
+    protected ?GradingPeriods $_gradingPeriods = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Categories $_categories
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Categories $_categories
      */
-    protected Categories $_categories = null;
+    protected ?Categories $_categories = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes $_classes Routing class
-     *   for the subnamespace `Classes`
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes $_classes Routing
+     *   class for the subnamespace `Classes`
      */
-    protected Classes $_classes = null;
+    protected ?Classes $_classes = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Courses $_courses
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Courses $_courses
      */
-    protected Courses $_courses = null;
+    protected ?Courses $_courses = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Enrollments $_enrollments
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Enrollments $_enrollments
      */
-    protected Enrollments $_enrollments = null;
+    protected ?Enrollments $_enrollments = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\LineItems $_lineItems
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\LineItems $_lineItems
      */
-    protected LineItems $_lineItems = null;
+    protected ?LineItems $_lineItems = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Orgs $_orgs
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Orgs $_orgs
      */
-    protected Orgs $_orgs = null;
+    protected ?Orgs $_orgs = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Results $_results
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Results $_results
      */
-    protected Results $_results = null;
+    protected ?Results $_results = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools $_schools Routing class
-     *   for the subnamespace `Schools`
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools $_schools Routing
+     *   class for the subnamespace `Schools`
      */
-    protected Schools $_schools = null;
+    protected ?Schools $_schools = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Users $_users
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Users $_users
      */
-    protected Users $_users = null;
+    protected ?Users $_users = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Teachers $_teachers Routing
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Teachers $_teachers Routing
      *   class for the subnamespace `Teachers`
      */
-    protected Teachers $_teachers = null;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Students $_students
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Students $_students
      */
-    protected Students $_students = null;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Demographics $_demographics
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Demographics $_demographics
      */
-    protected Demographics $_demographics = null;
+    protected ?Demographics $_demographics = null;
 }

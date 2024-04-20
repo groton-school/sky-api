@@ -39,12 +39,12 @@ class Sessions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): SchoolSessionCollection
+    public function list_(array $params): SchoolSessionCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
         return new SchoolSessionCollection($this->send("get", [], ["level_num" => $params['level_num'],
-        "school_year" => $params['school_year']]));
+            "school_year" => $params['school_year']]));
     }
 }

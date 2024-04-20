@@ -32,10 +32,10 @@ class Schedule extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule\Practice
      *   $_practice
      */
-    protected Practice $_practice = null;
+    protected ?Practice $_practice = null;
 
     /**
      * Creates a new athletic game for the specified ```team\_id```.
@@ -64,7 +64,7 @@ class Schedule extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByTeamId(array $params, GameCreate $requestBody): int
+    public function postToTeamId(array $params, GameCreate $requestBody): int
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -95,12 +95,12 @@ class Schedule extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\GameUpdate $requestBody
      *   Information for the game to be updated
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByTeamId(array $params, GameUpdate $requestBody): void
+    public function patchOnTeamId(array $params, GameUpdate $requestBody): mixed
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -123,17 +123,17 @@ class Schedule extends BaseEndpoint
      *   deleted
      *     - game_id: Format - int32. ID of the game to be deleted
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByTeamIdAndGameId(array $params): void
+    public function deleteByTeamIdAndGameId(array $params): mixed
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['game_id']), new ArgumentException("Parameter `game_id` is required"));
 
         return $this->send("delete", ["{team_id}" => $params['team_id'],
-        "{game_id}" => $params['game_id']], []);
+            "{game_id}" => $params['game_id']], []);
     }
 }

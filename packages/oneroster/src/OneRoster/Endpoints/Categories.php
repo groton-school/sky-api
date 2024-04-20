@@ -24,7 +24,7 @@ class Categories extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\CategoriesOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAllBy(): CategoriesOutputModel
+    public function get(): CategoriesOutputModel
     {
         return new CategoriesOutputModel($this->send("get", [], []));
     }

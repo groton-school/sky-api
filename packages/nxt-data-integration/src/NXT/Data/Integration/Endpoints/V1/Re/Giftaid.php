@@ -28,14 +28,14 @@ class Giftaid extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Taxdeclarations
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Taxdeclarations
      *   $_taxdeclarations
      */
-    protected Taxdeclarations $_taxdeclarations = null;
+    protected ?Taxdeclarations $_taxdeclarations = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Constituents
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Constituents
      *   $_constituents Routing class for the subnamespace `Constituents`
      */
-    protected Constituents $_constituents = null;
+    protected ?Constituents $_constituents = null;
 }

@@ -33,7 +33,7 @@ class Organizations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewOrganization $requestBody): PostResponse
+    public function post(NewOrganization $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -69,13 +69,13 @@ class Organizations extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentId(array $params, UpdateOrganization $requestBody): void
+    public function patchOnConstituentId(array $params, UpdateOrganization $requestBody): mixed
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

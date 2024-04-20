@@ -115,146 +115,146 @@ class Client extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals
      *   $_individuals Routing class for the subnamespace `Individuals`
      */
-    protected Individuals $_individuals = null;
+    protected ?Individuals $_individuals = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Organizations
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Organizations
      *   $_organizations
      */
-    protected Organizations $_organizations = null;
+    protected ?Organizations $_organizations = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents
      *   $_constituents Routing class for the subnamespace `Constituents`
      */
-    protected Constituents $_constituents = null;
+    protected ?Constituents $_constituents = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses $_addresses
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses $_addresses
      *   Routing class for the subnamespace `Addresses`
      */
-    protected Addresses $_addresses = null;
+    protected ?Addresses $_addresses = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Alternatelookupids
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Alternatelookupids
      *   $_alternatelookupids
      */
-    protected Alternatelookupids $_alternatelookupids = null;
+    protected ?Alternatelookupids $_alternatelookupids = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentcorrespondencecodes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentcorrespondencecodes
      *   $_constituentcorrespondencecodes Routing class for the subnamespace
      *   `Constituentcorrespondencecodes`
      */
-    protected Constituentcorrespondencecodes $_constituentcorrespondencecodes = null;
+    protected ?Constituentcorrespondencecodes $_constituentcorrespondencecodes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Emailaddresses
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Emailaddresses
      *   $_emailaddresses
      */
-    protected Emailaddresses $_emailaddresses = null;
+    protected ?Emailaddresses $_emailaddresses = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Interactions
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Interactions
      *   $_interactions
      */
-    protected Interactions $_interactions = null;
+    protected ?Interactions $_interactions = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Phones $_phones
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Phones $_phones
      */
-    protected Phones $_phones = null;
+    protected ?Phones $_phones = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Solicitcodes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Solicitcodes
      *   $_solicitcodes
      */
-    protected Solicitcodes $_solicitcodes = null;
+    protected ?Solicitcodes $_solicitcodes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentattributes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentattributes
      *   $_constituentattributes
      */
-    protected Constituentattributes $_constituentattributes = null;
+    protected ?Constituentattributes $_constituentattributes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentnotes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentnotes
      *   $_constituentnotes Routing class for the subnamespace
      *   `Constituentnotes`
      */
-    protected Constituentnotes $_constituentnotes = null;
+    protected ?Constituentnotes $_constituentnotes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Mergetwoconstituents
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Mergetwoconstituents
      *   $_mergetwoconstituents
      */
-    protected Mergetwoconstituents $_mergetwoconstituents = null;
+    protected ?Mergetwoconstituents $_mergetwoconstituents = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentinactivityreasoncodes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentinactivityreasoncodes
      *   $_constituentinactivityreasoncodes
      */
-    protected Constituentinactivityreasoncodes $_constituentinactivityreasoncodes = null;
+    protected ?Constituentinactivityreasoncodes $_constituentinactivityreasoncodes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
      *   $_constituentmergeconfiguration
      */
-    protected Constituentmergeconfiguration $_constituentmergeconfiguration = null;
+    protected ?Constituentmergeconfiguration $_constituentmergeconfiguration = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Tribute $_tribute
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Tribute $_tribute
      */
-    protected Tribute $_tribute = null;
+    protected ?Tribute $_tribute = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes $_tributes
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes $_tributes
      *   Routing class for the subnamespace `Tributes`
      */
-    protected Tributes $_tributes = null;
+    protected ?Tributes $_tributes = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals
      *   $_constituentappeals Routing class for the subnamespace
      *   `Constituentappeals`
      */
-    protected Constituentappeals $_constituentappeals = null;
+    protected ?Constituentappeals $_constituentappeals = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\States $_states
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\States $_states
      */
-    protected States $_states = null;
+    protected ?States $_states = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappealresponses
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappealresponses
      *   $_constituentappealresponses
      */
-    protected Constituentappealresponses $_constituentappealresponses = null;
+    protected ?Constituentappealresponses $_constituentappealresponses = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers
      *   $_fundraisers Routing class for the subnamespace `Fundraisers`
      */
-    protected Fundraisers $_fundraisers = null;
+    protected ?Fundraisers $_fundraisers = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Educationalhistories
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Educationalhistories
      *   $_educationalhistories
      */
-    protected Educationalhistories $_educationalhistories = null;
+    protected ?Educationalhistories $_educationalhistories = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Relationshipjobsinfo
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Relationshipjobsinfo
      *   $_relationshipjobsinfo
      */
-    protected Relationshipjobsinfo $_relationshipjobsinfo = null;
+    protected ?Relationshipjobsinfo $_relationshipjobsinfo = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent
      *   $_constituent Routing class for the subnamespace `Constituent`
      */
-    protected Constituent $_constituent = null;
+    protected ?Constituent $_constituent = null;
 }

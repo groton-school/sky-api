@@ -23,7 +23,7 @@ class Buildings extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\BuildingReadCollection Success
      */
-    public function getAllBy(): BuildingReadCollection
+    public function list_(): BuildingReadCollection
     {
         return new BuildingReadCollection($this->send("get", [], []));
     }

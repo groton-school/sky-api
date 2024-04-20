@@ -42,12 +42,12 @@ class Terms extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TermCollection
+    public function list_(array $params): TermCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
         return new TermCollection($this->send("get", [], ["school_year" => $params['school_year'],
-        "offering_type" => $params['offering_type']]));
+            "offering_type" => $params['offering_type']]));
     }
 }

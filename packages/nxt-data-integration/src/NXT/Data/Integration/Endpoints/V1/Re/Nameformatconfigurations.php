@@ -35,10 +35,10 @@ class Nameformatconfigurations extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Nameformatconfigurations\Fields
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Nameformatconfigurations\Fields
      *   $_fields
      */
-    protected Fields $_fields = null;
+    protected ?Fields $_fields = null;
 
     /**
      * Returns details about a name format configuration.
@@ -67,13 +67,13 @@ class Nameformatconfigurations extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The name format configuration system ID.
      *
-     * @return void Returned when the operation successfully deletes the name
+     * @return mixed Returned when the operation successfully deletes the name
      *   format configuration.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -89,12 +89,12 @@ class Nameformatconfigurations extends BaseEndpoint
      *   $requestBody Description of changes for the name format configuration
      *   field.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, NameFormatConfigurationEdit $requestBody): void
+    public function patchOnId(array $params, NameFormatConfigurationEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -109,7 +109,7 @@ class Nameformatconfigurations extends BaseEndpoint
      *   Returned when the operation succeeds. The response body contains the
      *   name format configuration field options list.
      */
-    public function getAllBy(): NameFormatConfigurationCollection
+    public function list_(): NameFormatConfigurationCollection
     {
         return new NameFormatConfigurationCollection($this->send("get", [], []));
     }
@@ -127,7 +127,7 @@ class Nameformatconfigurations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NameFormatConfigurationCreate $requestBody): PostResponse
+    public function post(NameFormatConfigurationCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

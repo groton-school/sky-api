@@ -32,7 +32,7 @@ class Relationshipjobsinfo extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewRelationshipJobInfo $requestBody): PostResponse
+    public function post(NewRelationshipJobInfo $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -69,13 +69,13 @@ class Relationshipjobsinfo extends BaseEndpoint
      *     - relationship_job_information_id: The relationship job information
      *   id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByRelationshipJobInformationId(array $params): void
+    public function deleteByRelationshipJobInformationId(array $params): mixed
     {
         assert(isset($params['relationship_job_information_id']), new ArgumentException("Parameter `relationship_job_information_id` is required"));
 
@@ -93,13 +93,13 @@ class Relationshipjobsinfo extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByRelationshipJobInformationId(array $params, UpdateRelationshipJobInfo $requestBody): void
+    public function patchOnRelationshipJobInformationId(array $params, UpdateRelationshipJobInfo $requestBody): mixed
     {
         assert(isset($params['relationship_job_information_id']), new ArgumentException("Parameter `relationship_job_information_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

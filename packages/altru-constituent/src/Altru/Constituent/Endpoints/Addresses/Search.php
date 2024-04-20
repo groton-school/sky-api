@@ -44,7 +44,7 @@ class Search extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentAddressSearchCollection
+    public function list_(array $params): ConstituentAddressSearchCollection
     {
         assert(isset($params['key_name']), new ArgumentException("Parameter `key_name` is required"));
         assert(isset($params['first_name']), new ArgumentException("Parameter `first_name` is required"));
@@ -59,15 +59,15 @@ class Search extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentAddressSearchCollection($this->send("get", [], ["key_name" => $params['key_name'],
-        "first_name" => $params['first_name'],
-        "lookup_id" => $params['lookup_id'],
-        "address_block" => $params['address_block'],
-        "city" => $params['city'],
-        "state" => $params['state'],
-        "post_code" => $params['post_code'],
-        "country" => $params['country'],
-        "only_primary_address" => $params['only_primary_address'],
-        "exact_match_only" => $params['exact_match_only'],
-        "limit" => $params['limit']]));
+            "first_name" => $params['first_name'],
+            "lookup_id" => $params['lookup_id'],
+            "address_block" => $params['address_block'],
+            "city" => $params['city'],
+            "state" => $params['state'],
+            "post_code" => $params['post_code'],
+            "country" => $params['country'],
+            "only_primary_address" => $params['only_primary_address'],
+            "exact_match_only" => $params['exact_match_only'],
+            "limit" => $params['limit']]));
     }
 }

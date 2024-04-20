@@ -31,10 +31,10 @@ class Enrollments extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments\Changes
      *   $_changes
      */
-    protected Changes $_changes = null;
+    protected ?Changes $_changes = null;
 
     /**
      * Returns a collection of course sections in which the provided student
@@ -59,7 +59,7 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): EnrollmentCollection
+    public function searchByUserId(array $params): EnrollmentCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));

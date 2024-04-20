@@ -34,15 +34,16 @@ class Teams extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster $_roster
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Roster
+     *   $_roster
      */
-    protected Roster $_roster = null;
+    protected ?Roster $_roster = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams\Schedule
      *   $_schedule Routing class for the subnamespace `Schedule`
      */
-    protected Schedule $_schedule = null;
+    protected ?Schedule $_schedule = null;
 
     /**
      * Returns a collection of athletic teams for the current school year.
@@ -69,7 +70,7 @@ class Teams extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TeamCollection
+    public function list_(array $params): TeamCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 

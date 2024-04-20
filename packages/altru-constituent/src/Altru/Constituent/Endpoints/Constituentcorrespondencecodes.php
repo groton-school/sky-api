@@ -34,10 +34,10 @@ class Constituentcorrespondencecodes extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentcorrespondencecodes\Response
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentcorrespondencecodes\Response
      *   $_response
      */
-    protected Response $_response = null;
+    protected ?Response $_response = null;
 
     /**
      * This dataform template is used to add correspondence record for a
@@ -53,7 +53,7 @@ class Constituentcorrespondencecodes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentCorrespondenceCode $requestBody): PostResponse
+    public function post(NewConstituentCorrespondenceCode $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -88,13 +88,13 @@ class Constituentcorrespondencecodes extends BaseEndpoint
      *   associative array
      *     - constituent_correspondence_id: The constituent correspondence id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentCorrespondenceId(array $params): void
+    public function deleteByConstituentCorrespondenceId(array $params): mixed
     {
         assert(isset($params['constituent_correspondence_id']), new ArgumentException("Parameter `constituent_correspondence_id` is required"));
 
@@ -111,13 +111,13 @@ class Constituentcorrespondencecodes extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentCorrespondenceId(array $params, UpdateConstituentCorrespondenceCode $requestBody): void
+    public function patchOnConstituentCorrespondenceId(array $params, UpdateConstituentCorrespondenceCode $requestBody): mixed
     {
         assert(isset($params['constituent_correspondence_id']), new ArgumentException("Parameter `constituent_correspondence_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

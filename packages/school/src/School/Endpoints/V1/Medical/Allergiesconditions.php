@@ -37,7 +37,7 @@ class Allergiesconditions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentMedicalAllergyCondition $requestBody): int
+    public function post(StudentMedicalAllergyCondition $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

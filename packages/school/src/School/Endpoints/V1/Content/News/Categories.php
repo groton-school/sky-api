@@ -27,7 +27,7 @@ class Categories extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\NewsCategoryCollection Success
      */
-    public function getAllBy(): NewsCategoryCollection
+    public function list_(): NewsCategoryCollection
     {
         return new NewsCategoryCollection($this->send("get", [], []));
     }

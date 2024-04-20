@@ -42,13 +42,13 @@ class Gradedassignments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudentIdAndSectionId(array $params): StudentGradedAssignmentCollection
+    public function searchByStudentIdAndSectionId(array $params): StudentGradedAssignmentCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['marking_period_id']), new ArgumentException("Parameter `marking_period_id` is required"));
 
         return new StudentGradedAssignmentCollection($this->send("get", ["{student_id}" => $params['student_id'],
-        "{section_id}" => $params['section_id']], ["marking_period_id" => $params['marking_period_id']]));
+            "{section_id}" => $params['section_id']], ["marking_period_id" => $params['marking_period_id']]));
     }
 }

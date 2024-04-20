@@ -41,13 +41,13 @@ class Extended extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): UserExtendedCollection
+    public function list_(array $params): UserExtendedCollection
     {
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
         return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
-        "marker" => $params['marker']]));
+            "marker" => $params['marker']]));
     }
 
     /**

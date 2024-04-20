@@ -3,7 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Components\Timezone as TimezoneDisambiguate;
+use Blackbaud\SKY\School\Components\Timezone as Components_Timezone;
 
 /**
  * @api
@@ -29,8 +29,8 @@ class Timezone extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\Timezone Success
      */
-    public function getAllBy(): Timezone
+    public function get(): Components_Timezone
     {
-        return new TimezoneDisambiguate($this->send("get", [], []));
+        return new Components_Timezone($this->send("get", [], []));
     }
 }

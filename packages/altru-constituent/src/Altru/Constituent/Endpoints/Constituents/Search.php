@@ -100,7 +100,7 @@ class Search extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentSearchCollection
+    public function list_(array $params): ConstituentSearchCollection
     {
         assert(isset($params['constituent_quick_find']), new ArgumentException("Parameter `constituent_quick_find` is required"));
         assert(isset($params['full_name']), new ArgumentException("Parameter `full_name` is required"));
@@ -135,35 +135,35 @@ class Search extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentSearchCollection($this->send("get", [], ["constituent_quick_find" => $params['constituent_quick_find'],
-        "full_name" => $params['full_name'],
-        "key_name" => $params['key_name'],
-        "first_name" => $params['first_name'],
-        "lookup_id" => $params['lookup_id'],
-        "address_block" => $params['address_block'],
-        "city" => $params['city'],
-        "state" => $params['state'],
-        "post_code" => $params['post_code'],
-        "country" => $params['country'],
-        "include_inactive" => $params['include_inactive'],
-        "include_deceased" => $params['include_deceased'],
-        "only_primary_address" => $params['only_primary_address'],
-        "exact_match_only" => $params['exact_match_only'],
-        "check_nickname" => $params['check_nickname'],
-        "check_aliases" => $params['check_aliases'],
-        "classof" => $params['classof'],
-        "minimum_date" => $params['minimum_date'],
-        "exclude_households" => $params['exclude_households'],
-        "email_address" => $params['email_address'],
-        "include_individuals" => $params['include_individuals'],
-        "include_organizations" => $params['include_organizations'],
-        "include_groups" => $params['include_groups'],
-        "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
-        "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
-        "phone_number" => $params['phone_number'],
-        "middle_name" => $params['middle_name'],
-        "suffix" => $params['suffix'],
-        "constituency" => $params['constituency'],
-        "sourcecode" => $params['sourcecode'],
-        "limit" => $params['limit']]));
+            "full_name" => $params['full_name'],
+            "key_name" => $params['key_name'],
+            "first_name" => $params['first_name'],
+            "lookup_id" => $params['lookup_id'],
+            "address_block" => $params['address_block'],
+            "city" => $params['city'],
+            "state" => $params['state'],
+            "post_code" => $params['post_code'],
+            "country" => $params['country'],
+            "include_inactive" => $params['include_inactive'],
+            "include_deceased" => $params['include_deceased'],
+            "only_primary_address" => $params['only_primary_address'],
+            "exact_match_only" => $params['exact_match_only'],
+            "check_nickname" => $params['check_nickname'],
+            "check_aliases" => $params['check_aliases'],
+            "classof" => $params['classof'],
+            "minimum_date" => $params['minimum_date'],
+            "exclude_households" => $params['exclude_households'],
+            "email_address" => $params['email_address'],
+            "include_individuals" => $params['include_individuals'],
+            "include_organizations" => $params['include_organizations'],
+            "include_groups" => $params['include_groups'],
+            "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
+            "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
+            "phone_number" => $params['phone_number'],
+            "middle_name" => $params['middle_name'],
+            "suffix" => $params['suffix'],
+            "constituency" => $params['constituency'],
+            "sourcecode" => $params['sourcecode'],
+            "limit" => $params['limit']]));
     }
 }

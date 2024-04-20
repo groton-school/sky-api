@@ -34,12 +34,12 @@ class User extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\EmergencyContactUserCreate
      *   $requestBody
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, EmergencyContactUserCreate $requestBody): void
+    public function postToUserId(array $params, EmergencyContactUserCreate $requestBody): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

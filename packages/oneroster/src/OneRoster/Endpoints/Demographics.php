@@ -23,7 +23,7 @@ class Demographics extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\DemographicsOutputModel
      *   Success
      */
-    public function getAllBy(): DemographicsOutputModel
+    public function get(): DemographicsOutputModel
     {
         return new DemographicsOutputModel($this->send("get", [], []));
     }

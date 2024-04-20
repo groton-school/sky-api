@@ -46,13 +46,13 @@ class Campaigns extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The campaign system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   campaign.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -67,12 +67,12 @@ class Campaigns extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\CampaignEdit
      *   $requestBody Description of changes for the campaign.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, CampaignEdit $requestBody): void
+    public function patchOnId(array $params, CampaignEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -100,7 +100,7 @@ class Campaigns extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CampaignCollection
+    public function list_(array $params): CampaignCollection
     {
         assert(isset($params['campaign_id']), new ArgumentException("Parameter `campaign_id` is required"));
         assert(isset($params['description']), new ArgumentException("Parameter `description` is required"));
@@ -109,10 +109,10 @@ class Campaigns extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new CampaignCollection($this->send("get", [], ["campaign_id" => $params['campaign_id'],
-        "description" => $params['description'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "description" => $params['description'],
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -128,7 +128,7 @@ class Campaigns extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(CampaignCreate $requestBody): PostResponse
+    public function post(CampaignCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

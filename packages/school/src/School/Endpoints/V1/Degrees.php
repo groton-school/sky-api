@@ -24,8 +24,8 @@ class Degrees extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Degrees\Studentdegrees
      *   $_studentdegrees
      */
-    protected Studentdegrees $_studentdegrees = null;
+    protected ?Studentdegrees $_studentdegrees = null;
 }

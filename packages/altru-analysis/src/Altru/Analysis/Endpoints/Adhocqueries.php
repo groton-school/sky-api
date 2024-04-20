@@ -30,9 +30,9 @@ class Adhocqueries extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Analysis\Endpoints\Adhocqueries\Id $_id
+     * @var ?\Blackbaud\SKY\Altru\Analysis\Endpoints\Adhocqueries\Id $_id
      */
-    protected Id $_id = null;
+    protected ?Id $_id = null;
 
     /**
      * Gets the results for the given query ID.

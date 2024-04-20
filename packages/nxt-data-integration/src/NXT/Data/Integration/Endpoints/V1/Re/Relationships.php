@@ -28,14 +28,14 @@ class Relationships extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Constituents
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Constituents
      *   $_constituents Routing class for the subnamespace `Constituents`
      */
-    protected Constituents $_constituents = null;
+    protected ?Constituents $_constituents = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Funds
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Funds
      *   $_funds Routing class for the subnamespace `Funds`
      */
-    protected Funds $_funds = null;
+    protected ?Funds $_funds = null;
 }

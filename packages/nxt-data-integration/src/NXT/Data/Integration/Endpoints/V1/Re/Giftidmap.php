@@ -4,7 +4,7 @@ namespace Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Blackbaud\SKY\NXT\Data\Integration\Components\GiftIdMap;
+use Blackbaud\SKY\NXT\Data\Integration\Components\GiftIdMap as Components_GiftIdMap;
 
 /**
  * @api
@@ -29,10 +29,10 @@ class Giftidmap extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByGiftlookupid(array $params): GiftIdMap
+    public function getByGiftlookupid(array $params): Components_GiftIdMap
     {
         assert(isset($params['giftlookupid']), new ArgumentException("Parameter `giftlookupid` is required"));
 
-        return new GiftIdMap($this->send("get", ["{giftlookupid}" => $params['giftlookupid']], []));
+        return new Components_GiftIdMap($this->send("get", ["{giftlookupid}" => $params['giftlookupid']], []));
     }
 }

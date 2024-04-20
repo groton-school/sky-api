@@ -41,7 +41,7 @@ class Studentdegrees extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudentId(array $params): UserDegreeOutputModelCollection
+    public function searchByStudentId(array $params): UserDegreeOutputModelCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
 

@@ -31,7 +31,7 @@ class Categories extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\EventsCategoryCollection
      *   Success
      */
-    public function getAllBy(): EventsCategoryCollection
+    public function list_(): EventsCategoryCollection
     {
         return new EventsCategoryCollection($this->send("get", [], []));
     }

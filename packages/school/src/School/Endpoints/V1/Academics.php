@@ -59,61 +59,61 @@ class Academics extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections $_sections
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections $_sections
      *   Routing class for the subnamespace `Sections`
      */
-    protected Sections $_sections = null;
+    protected ?Sections $_sections = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Departments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Departments
      *   $_departments
      */
-    protected Departments $_departments = null;
+    protected ?Departments $_departments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Specialdays
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Specialdays
      *   $_specialdays
      */
-    protected Specialdays $_specialdays = null;
+    protected ?Specialdays $_specialdays = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Courses $_courses
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Courses $_courses
      */
-    protected Courses $_courses = null;
+    protected ?Courses $_courses = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments
      *   $_enrollments Routing class for the subnamespace `Enrollments`
      */
-    protected Enrollments $_enrollments = null;
+    protected ?Enrollments $_enrollments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Assignments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Assignments
      *   $_assignments
      */
-    protected Assignments $_assignments = null;
+    protected ?Assignments $_assignments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Gradedassignments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Gradedassignments
      *   $_gradedassignments
      */
-    protected Gradedassignments $_gradedassignments = null;
+    protected ?Gradedassignments $_gradedassignments = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers $_teachers
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers $_teachers
      *   Routing class for the subnamespace `Teachers`
      */
-    protected Teachers $_teachers = null;
+    protected ?Teachers $_teachers = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules $_schedules
-     *   Routing class for the subnamespace `Schedules`
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules
+     *   $_schedules Routing class for the subnamespace `Schedules`
      */
-    protected Schedules $_schedules = null;
+    protected ?Schedules $_schedules = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Student $_student
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Student $_student
      *   Routing class for the subnamespace `Student`
      */
-    protected Student $_student = null;
+    protected ?Student $_student = null;
 }

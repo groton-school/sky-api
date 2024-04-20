@@ -38,16 +38,16 @@ class Fundraisers extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\List_
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\List_
      *   $_list_
      */
-    protected List_ $_list_ = null;
+    protected ?List_ $_list_ = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\Prospectplanlist
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\Prospectplanlist
      *   $_prospectplanlist
      */
-    protected Prospectplanlist $_prospectplanlist = null;
+    protected ?Prospectplanlist $_prospectplanlist = null;
 
     /**
      * This dataform template is used to add a fundraiser constituency to a
@@ -63,7 +63,7 @@ class Fundraisers extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentFundraiser $requestBody): PostResponse
+    public function post(NewConstituentFundraiser $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -100,13 +100,13 @@ class Fundraisers extends BaseEndpoint
      *   array
      *     - fundraiser_date_range_id: The fundraiser date range id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByFundraiserDateRangeId(array $params): void
+    public function deleteByFundraiserDateRangeId(array $params): mixed
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
 
@@ -124,13 +124,13 @@ class Fundraisers extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByFundraiserDateRangeId(array $params, UpdateConstituentFundraiser $requestBody): void
+    public function patchOnFundraiserDateRangeId(array $params, UpdateConstituentFundraiser $requestBody): mixed
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

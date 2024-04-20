@@ -24,8 +24,8 @@ class Constituents extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Constituents\Taxdeclarations
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Giftaid\Constituents\Taxdeclarations
      *   $_taxdeclarations
      */
-    protected Taxdeclarations $_taxdeclarations = null;
+    protected ?Taxdeclarations $_taxdeclarations = null;
 }

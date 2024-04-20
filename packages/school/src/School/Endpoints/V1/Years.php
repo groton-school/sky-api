@@ -31,7 +31,7 @@ class Years extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\YearCollection Success
      */
-    public function getAllBy(): YearCollection
+    public function list_(): YearCollection
     {
         return new YearCollection($this->send("get", [], []));
     }

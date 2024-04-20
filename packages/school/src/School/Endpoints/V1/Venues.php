@@ -23,7 +23,7 @@ class Venues extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings $_buildings
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Venues\Buildings $_buildings
      */
-    protected Buildings $_buildings = null;
+    protected ?Buildings $_buildings = null;
 }

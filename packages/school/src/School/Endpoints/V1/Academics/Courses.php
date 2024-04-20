@@ -38,12 +38,12 @@ class Courses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CourseCollection
+    public function list_(array $params): CourseCollection
     {
         assert(isset($params['department_id']), new ArgumentException("Parameter `department_id` is required"));
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
         return new CourseCollection($this->send("get", [], ["department_id" => $params['department_id'],
-        "level_id" => $params['level_id']]));
+            "level_id" => $params['level_id']]));
     }
 }

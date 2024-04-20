@@ -39,22 +39,22 @@ class Emergencycontacts extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Changed
      *   $_changed
      */
-    protected Changed $_changed = null;
+    protected ?Changed $_changed = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\User
      *   $_user
      */
-    protected User $_user = null;
+    protected ?User $_user = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts\Nonuser
      *   $_nonuser
      */
-    protected Nonuser $_nonuser = null;
+    protected ?Nonuser $_nonuser = null;
 
     /**
      * Returns a collection of a emergency contacts for the specified

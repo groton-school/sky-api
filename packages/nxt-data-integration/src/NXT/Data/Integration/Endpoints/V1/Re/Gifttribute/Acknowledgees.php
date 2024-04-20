@@ -31,7 +31,7 @@ class Acknowledgees extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByGiftTributeId(array $params): GiftTributeAcknowledgeeCollection
+    public function searchByGiftTributeId(array $params): GiftTributeAcknowledgeeCollection
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
@@ -49,12 +49,12 @@ class Acknowledgees extends BaseEndpoint
      *   $requestBody Description of changes for the gift tribute acknowledgee.
 
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByGiftTributeAcknowledgeeId(array $params, GiftTributeAcknowledgeeEdit $requestBody): void
+    public function patchOnGiftTributeAcknowledgeeId(array $params, GiftTributeAcknowledgeeEdit $requestBody): mixed
     {
         assert(isset($params['giftTributeAcknowledgeeId']), new ArgumentException("Parameter `giftTributeAcknowledgeeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

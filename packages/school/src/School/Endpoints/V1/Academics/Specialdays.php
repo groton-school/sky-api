@@ -34,7 +34,7 @@ class Specialdays extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): SpecialDayCollection
+    public function list_(array $params): SpecialDayCollection
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 

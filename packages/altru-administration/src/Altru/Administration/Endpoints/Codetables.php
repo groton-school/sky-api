@@ -44,38 +44,38 @@ class Codetables extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Codetableentryid
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Codetableentryid
      *   $_codetableentryid
      */
-    protected Codetableentryid $_codetableentryid = null;
+    protected ?Codetableentryid $_codetableentryid = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entries
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entries
      *   $_entries
      */
-    protected Entries $_entries = null;
+    protected ?Entries $_entries = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entry
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entry
      *   $_entry
      */
-    protected Entry $_entry = null;
+    protected ?Entry $_entry = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entryid
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entryid
      *   $_entryid
      */
-    protected Entryid $_entryid = null;
+    protected ?Entryid $_entryid = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entrydescription
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\Entrydescription
      *   $_entrydescription
      */
-    protected Entrydescription $_entrydescription = null;
+    protected ?Entrydescription $_entrydescription = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\List_
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables\List_
      *   $_list_
      */
-    protected List_ $_list_ = null;
+    protected ?List_ $_list_ = null;
 }

@@ -32,10 +32,10 @@ class Testscores extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Testscores\Testtypes
      *   $_testtypes
      */
-    protected Testtypes $_testtypes = null;
+    protected ?Testtypes $_testtypes = null;
 
     /**
      * Returns a collection of test scores.
@@ -52,7 +52,7 @@ class Testscores extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TestScoreCollection
+    public function list_(array $params): TestScoreCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -75,7 +75,7 @@ class Testscores extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, TestScoreAdd $requestBody): int
+    public function postToUserId(array $params, TestScoreAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

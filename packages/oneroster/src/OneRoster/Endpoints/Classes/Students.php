@@ -31,10 +31,10 @@ class Students extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Classes\Students\Results
      *   $_results
      */
-    protected Results $_results = null;
+    protected ?Results $_results = null;
 
     /**
      * Returns a collection of student user data for the specified `class_id`.

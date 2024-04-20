@@ -40,7 +40,7 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
         return new TableEntry($this->send("get", ["{code_table_id}" => $params['code_table_id'],
-        "{id}" => $params['id']], []));
+            "{id}" => $params['id']], []));
     }
 
     /**
@@ -50,19 +50,19 @@ class Tableentries extends BaseEndpoint
      *     - code_table_id: Format - int32. The code table ID.
      *     - id: Format - int32. The table entry system ID.
      *
-     * @return void Returned when the operation successfully deletes the table
-     *   entry.
+     * @return mixed Returned when the operation successfully deletes the
+     *   table entry.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByCodeTableIdAndId(array $params): void
+    public function deleteByCodeTableIdAndId(array $params): mixed
     {
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
         return $this->send("delete", ["{code_table_id}" => $params['code_table_id'],
-        "{id}" => $params['id']], []);
+            "{id}" => $params['id']], []);
     }
 
     /**
@@ -74,19 +74,19 @@ class Tableentries extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\TableEntryEdit
      *   $requestBody Description of changes for the table entry.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByCodeTableIdAndId(array $params, TableEntryEdit $requestBody): void
+    public function patchOnCodeTableIdAndId(array $params, TableEntryEdit $requestBody): mixed
     {
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{code_table_id}" => $params['code_table_id'],
-        "{id}" => $params['id']], [], $requestBody);
+            "{id}" => $params['id']], [], $requestBody);
     }
 
     /**
@@ -112,7 +112,7 @@ class Tableentries extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByCodeTableId(array $params): TableEntryCollection
+    public function searchByCodeTableId(array $params): TableEntryCollection
     {
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['long_description']), new ArgumentException("Parameter `long_description` is required"));
@@ -123,11 +123,11 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new TableEntryCollection($this->send("get", ["{code_table_id}" => $params['code_table_id']], ["long_description" => $params['long_description'],
-        "short_description" => $params['short_description'],
-        "numeric_value" => $params['numeric_value'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "short_description" => $params['short_description'],
+            "numeric_value" => $params['numeric_value'],
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -145,7 +145,7 @@ class Tableentries extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByCodeTableId(array $params, TableEntryCreate $requestBody): PostResponse
+    public function postToCodeTableId(array $params, TableEntryCreate $requestBody): PostResponse
     {
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

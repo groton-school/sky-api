@@ -38,7 +38,7 @@ class Students extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySectionId(array $params): StudentCollection
+    public function searchBySectionId(array $params): StudentCollection
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
 
@@ -67,7 +67,7 @@ class Students extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(BulkEnrollment $requestBody): PostResponse
+    public function post(BulkEnrollment $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

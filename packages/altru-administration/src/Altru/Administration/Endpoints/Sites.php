@@ -24,8 +24,8 @@ class Sites extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Sites\Search
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Sites\Search
      *   $_search
      */
-    protected Search $_search = null;
+    protected ?Search $_search = null;
 }

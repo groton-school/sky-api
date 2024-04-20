@@ -40,14 +40,14 @@ class Audit extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): UserAuditReadCollection
+    public function list_(array $params): UserAuditReadCollection
     {
         assert(isset($params['role_id']), new ArgumentException("Parameter `role_id` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
         return new UserAuditReadCollection($this->send("get", [], ["role_id" => $params['role_id'],
-        "start_date" => $params['start_date'],
-        "end_date" => $params['end_date']]));
+            "start_date" => $params['start_date'],
+            "end_date" => $params['end_date']]));
     }
 }

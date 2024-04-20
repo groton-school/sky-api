@@ -31,7 +31,7 @@ class Sportslevels extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\SportsLevelCollection Success
      */
-    public function getAllBy(): SportsLevelCollection
+    public function list_(): SportsLevelCollection
     {
         return new SportsLevelCollection($this->send("get", [], []));
     }

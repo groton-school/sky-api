@@ -63,7 +63,7 @@ class Schedules extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ScheduleItemCollection
+    public function list_(array $params): ScheduleItemCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
@@ -73,10 +73,10 @@ class Schedules extends BaseEndpoint
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
 
         return new ScheduleItemCollection($this->send("get", [], ["start_date" => $params['start_date'],
-        "end_date" => $params['end_date'],
-        "school_year" => $params['school_year'],
-        "include_practice" => $params['include_practice'],
-        "team_id" => $params['team_id'],
-        "last_modified" => $params['last_modified']]));
+            "end_date" => $params['end_date'],
+            "school_year" => $params['school_year'],
+            "include_practice" => $params['include_practice'],
+            "team_id" => $params['team_id'],
+            "last_modified" => $params['last_modified']]));
     }
 }

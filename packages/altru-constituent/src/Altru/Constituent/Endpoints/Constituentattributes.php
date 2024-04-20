@@ -32,7 +32,7 @@ class Constituentattributes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentAttribute $requestBody): PostResponse
+    public function post(NewConstituentAttribute $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -67,13 +67,13 @@ class Constituentattributes extends BaseEndpoint
      *   array
      *     - constituent_attribute_id: The constituent attribute id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByConstituentAttributeId(array $params): void
+    public function deleteByConstituentAttributeId(array $params): mixed
     {
         assert(isset($params['constituent_attribute_id']), new ArgumentException("Parameter `constituent_attribute_id` is required"));
 
@@ -90,13 +90,13 @@ class Constituentattributes extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentAttributeId(array $params, UpdateConstituentAttribute $requestBody): void
+    public function patchOnConstituentAttributeId(array $params, UpdateConstituentAttribute $requestBody): mixed
     {
         assert(isset($params['constituent_attribute_id']), new ArgumentException("Parameter `constituent_attribute_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

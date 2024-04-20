@@ -23,7 +23,7 @@ class Orgs extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\OrgsOutputModel OK - It was
      *   possible to read the collection.
      */
-    public function getAllBy(): OrgsOutputModel
+    public function get(): OrgsOutputModel
     {
         return new OrgsOutputModel($this->send("get", [], []));
     }

@@ -27,7 +27,7 @@ class Addresstypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\AddressTypeCollection Success
      */
-    public function getAllBy(): AddressTypeCollection
+    public function list_(): AddressTypeCollection
     {
         return new AddressTypeCollection($this->send("get", [], []));
     }

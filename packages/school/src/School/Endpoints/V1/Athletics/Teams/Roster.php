@@ -4,7 +4,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Athletics\Teams;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Blackbaud\SKY\School\Components\Roster as RosterDisambiguate;
+use Blackbaud\SKY\School\Components\Roster as Components_Roster;
 
 /**
  * @api
@@ -43,10 +43,10 @@ class Roster extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTeamId(array $params): Roster
+    public function getByTeamId(array $params): Components_Roster
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
 
-        return new RosterDisambiguate($this->send("get", ["{team_id}" => $params['team_id']], []));
+        return new Components_Roster($this->send("get", ["{team_id}" => $params['team_id']], []));
     }
 }

@@ -32,13 +32,13 @@ class Taxdeclarations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getById(array $params): GiftAidTaxDeclarationCollection
+    public function searchById(array $params): GiftAidTaxDeclarationCollection
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new GiftAidTaxDeclarationCollection($this->send("get", ["{id}" => $params['id']], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 }

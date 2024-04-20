@@ -30,7 +30,7 @@ class Status extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\AdmissionsStatusesCollection
      *   Success
      */
-    public function getAllBy(): AdmissionsStatusesCollection
+    public function list_(): AdmissionsStatusesCollection
     {
         return new AdmissionsStatusesCollection($this->send("get", [], []));
     }

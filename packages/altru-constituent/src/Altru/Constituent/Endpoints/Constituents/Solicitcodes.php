@@ -40,7 +40,7 @@ class Solicitcodes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): ConstituentSolicitCodeListCollection
+    public function searchByConstituentId(array $params): ConstituentSolicitCodeListCollection
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['site_id']), new ArgumentException("Parameter `site_id` is required"));
@@ -51,10 +51,10 @@ class Solicitcodes extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentSolicitCodeListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["site_id" => $params['site_id'],
-        "site_filter_mode" => $params['site_filter_mode'],
-        "sites_selected" => $params['sites_selected'],
-        "show_expired" => $params['show_expired'],
-        "date_range" => $params['date_range'],
-        "limit" => $params['limit']]));
+            "site_filter_mode" => $params['site_filter_mode'],
+            "sites_selected" => $params['sites_selected'],
+            "show_expired" => $params['show_expired'],
+            "date_range" => $params['date_range'],
+            "limit" => $params['limit']]));
     }
 }

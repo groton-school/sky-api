@@ -35,7 +35,7 @@ class Locations extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\LocationCollection Success
      */
-    public function getAllBy(): LocationCollection
+    public function list_(): LocationCollection
     {
         return new LocationCollection($this->send("get", [], []));
     }
@@ -67,7 +67,7 @@ class Locations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(LocationCreateModel $requestBody): int
+    public function post(LocationCreateModel $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

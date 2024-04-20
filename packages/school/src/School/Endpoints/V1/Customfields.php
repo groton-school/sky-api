@@ -26,7 +26,7 @@ class Customfields extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\AdminCustomFieldsCollection
      *   Success
      */
-    public function getAllBy(): AdminCustomFieldsCollection
+    public function list_(): AdminCustomFieldsCollection
     {
         return new AdminCustomFieldsCollection($this->send("get", [], []));
     }

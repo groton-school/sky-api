@@ -32,7 +32,7 @@ class Venues extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\AthleticVenueCollection
      *   Success
      */
-    public function getAllBy(): AthleticVenueCollection
+    public function list_(): AthleticVenueCollection
     {
         return new AthleticVenueCollection($this->send("get", [], []));
     }

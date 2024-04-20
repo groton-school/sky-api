@@ -31,7 +31,7 @@ class Acknowledgee extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(TributeAcknowledgeeCreate $requestBody): PostResponse
+    public function post(TributeAcknowledgeeCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

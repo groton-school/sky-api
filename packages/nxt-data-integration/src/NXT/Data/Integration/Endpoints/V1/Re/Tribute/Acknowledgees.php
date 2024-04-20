@@ -30,7 +30,7 @@ class Acknowledgees extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByTributeId(array $params): TributeAcknowledgeeCollection
+    public function searchByTributeId(array $params): TributeAcknowledgeeCollection
     {
         assert(isset($params['tributeId']), new ArgumentException("Parameter `tributeId` is required"));
 

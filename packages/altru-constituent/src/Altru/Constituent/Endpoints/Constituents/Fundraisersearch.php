@@ -74,7 +74,7 @@ class Fundraisersearch extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentFundraiserSearchCollection
+    public function list_(array $params): ConstituentFundraiserSearchCollection
     {
         assert(isset($params['constituent_type']), new ArgumentException("Parameter `constituent_type` is required"));
         assert(isset($params['full_name']), new ArgumentException("Parameter `full_name` is required"));
@@ -109,35 +109,35 @@ class Fundraisersearch extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentFundraiserSearchCollection($this->send("get", [], ["constituent_type" => $params['constituent_type'],
-        "full_name" => $params['full_name'],
-        "key_name" => $params['key_name'],
-        "first_name" => $params['first_name'],
-        "lookup_id" => $params['lookup_id'],
-        "address_block" => $params['address_block'],
-        "city" => $params['city'],
-        "state" => $params['state'],
-        "post_code" => $params['post_code'],
-        "country" => $params['country'],
-        "include_inactive" => $params['include_inactive'],
-        "include_deceased" => $params['include_deceased'],
-        "only_primary_address" => $params['only_primary_address'],
-        "exact_match_only" => $params['exact_match_only'],
-        "only_prospects" => $params['only_prospects'],
-        "only_fundraisers" => $params['only_fundraisers'],
-        "only_staff" => $params['only_staff'],
-        "only_volunteers" => $params['only_volunteers'],
-        "ssn" => $params['ssn'],
-        "check_nick_name" => $params['check_nick_name'],
-        "check_aliases" => $params['check_aliases'],
-        "check_merged_constituents" => $params['check_merged_constituents'],
-        "minimum_date" => $params['minimum_date'],
-        "include_individuals" => $params['include_individuals'],
-        "include_organizations" => $params['include_organizations'],
-        "include_groups" => $params['include_groups'],
-        "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
-        "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
-        "site_filter_mode" => $params['site_filter_mode'],
-        "sites_selected" => $params['sites_selected'],
-        "limit" => $params['limit']]));
+            "full_name" => $params['full_name'],
+            "key_name" => $params['key_name'],
+            "first_name" => $params['first_name'],
+            "lookup_id" => $params['lookup_id'],
+            "address_block" => $params['address_block'],
+            "city" => $params['city'],
+            "state" => $params['state'],
+            "post_code" => $params['post_code'],
+            "country" => $params['country'],
+            "include_inactive" => $params['include_inactive'],
+            "include_deceased" => $params['include_deceased'],
+            "only_primary_address" => $params['only_primary_address'],
+            "exact_match_only" => $params['exact_match_only'],
+            "only_prospects" => $params['only_prospects'],
+            "only_fundraisers" => $params['only_fundraisers'],
+            "only_staff" => $params['only_staff'],
+            "only_volunteers" => $params['only_volunteers'],
+            "ssn" => $params['ssn'],
+            "check_nick_name" => $params['check_nick_name'],
+            "check_aliases" => $params['check_aliases'],
+            "check_merged_constituents" => $params['check_merged_constituents'],
+            "minimum_date" => $params['minimum_date'],
+            "include_individuals" => $params['include_individuals'],
+            "include_organizations" => $params['include_organizations'],
+            "include_groups" => $params['include_groups'],
+            "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
+            "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
+            "site_filter_mode" => $params['site_filter_mode'],
+            "sites_selected" => $params['sites_selected'],
+            "limit" => $params['limit']]));
     }
 }

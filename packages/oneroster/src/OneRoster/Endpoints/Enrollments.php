@@ -23,7 +23,7 @@ class Enrollments extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\EnrollmentsOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAllBy(): EnrollmentsOutputModel
+    public function get(): EnrollmentsOutputModel
     {
         return new EnrollmentsOutputModel($this->send("get", [], []));
     }

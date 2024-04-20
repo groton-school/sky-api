@@ -24,8 +24,8 @@ class Gifts extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifts\Notes
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Gifts\Notes
      *   $_notes
      */
-    protected Notes $_notes = null;
+    protected ?Notes $_notes = null;
 }

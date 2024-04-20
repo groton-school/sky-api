@@ -36,12 +36,12 @@ class All extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): DormCollection
+    public function list_(array $params): DormCollection
     {
         assert(isset($params['level_number']), new ArgumentException("Parameter `level_number` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
         return new DormCollection($this->send("get", [], ["level_number" => $params['level_number'],
-        "school_year" => $params['school_year']]));
+            "school_year" => $params['school_year']]));
     }
 }

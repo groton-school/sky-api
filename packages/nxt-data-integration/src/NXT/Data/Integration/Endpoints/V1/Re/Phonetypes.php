@@ -46,13 +46,13 @@ class Phonetypes extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The phone type system ID.
      *
-     * @return void Returned when the operation successfully deletes the phone
-     *   type.
+     * @return mixed Returned when the operation successfully deletes the
+     *   phone type.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -67,12 +67,12 @@ class Phonetypes extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\PhoneTypeEdit
      *   $requestBody Description of changes for the phone type.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, PhoneTypeEdit $requestBody): void
+    public function patchOnId(array $params, PhoneTypeEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -102,7 +102,7 @@ class Phonetypes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): PhoneTypeCollection
+    public function list_(array $params): PhoneTypeCollection
     {
         assert(isset($params['description']), new ArgumentException("Parameter `description` is required"));
         assert(isset($params['type']), new ArgumentException("Parameter `type` is required"));
@@ -112,11 +112,11 @@ class Phonetypes extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new PhoneTypeCollection($this->send("get", [], ["description" => $params['description'],
-        "type" => $params['type'],
-        "format" => $params['format'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "type" => $params['type'],
+            "format" => $params['format'],
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -132,7 +132,7 @@ class Phonetypes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(PhoneTypeCreate $requestBody): PostResponse
+    public function post(PhoneTypeCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

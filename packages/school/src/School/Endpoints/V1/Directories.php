@@ -31,7 +31,7 @@ class Directories extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\DirectoryModelCollection
      *   Success
      */
-    public function getAllBy(): DirectoryModelCollection
+    public function list_(): DirectoryModelCollection
     {
         return new DirectoryModelCollection($this->send("get", [], []));
     }
@@ -68,13 +68,13 @@ class Directories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByDirectoryId(array $params): DirectoryResultCollection
+    public function searchByDirectoryId(array $params): DirectoryResultCollection
     {
         assert(isset($params['directory_id']), new ArgumentException("Parameter `directory_id` is required"));
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
         assert(isset($params['search_all']), new ArgumentException("Parameter `search_all` is required"));
 
         return new DirectoryResultCollection($this->send("get", ["{directory_id}" => $params['directory_id']], ["search" => $params['search'],
-        "search_all" => $params['search_all']]));
+            "search_all" => $params['search_all']]));
     }
 }

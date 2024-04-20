@@ -36,7 +36,7 @@ class Transportationtypes extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\TransportationCollection
      *   Success
      */
-    public function getAllBy(): TransportationCollection
+    public function list_(): TransportationCollection
     {
         return new TransportationCollection($this->send("get", [], []));
     }

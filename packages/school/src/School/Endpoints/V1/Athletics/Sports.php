@@ -42,7 +42,7 @@ class Sports extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): SportCollection
+    public function list_(array $params): SportCollection
     {
         assert(isset($params['season_id']), new ArgumentException("Parameter `season_id` is required"));
 

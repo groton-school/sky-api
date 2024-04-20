@@ -45,13 +45,13 @@ class Countries extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The country system ID.
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   country.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -66,12 +66,12 @@ class Countries extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\CountryEdit
      *   $requestBody Description of changes for the country.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, CountryEdit $requestBody): void
+    public function patchOnId(array $params, CountryEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -93,13 +93,13 @@ class Countries extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CountryCollection
+    public function list_(array $params): CountryCollection
     {
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new CountryCollection($this->send("get", [], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -115,7 +115,7 @@ class Countries extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(CountryCreate $requestBody): PostResponse
+    public function post(CountryCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

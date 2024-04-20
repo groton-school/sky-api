@@ -33,7 +33,7 @@ class Enroll extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
+    public function post(UserEnrollmentCreate $requestBody): UserEnrollmentResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

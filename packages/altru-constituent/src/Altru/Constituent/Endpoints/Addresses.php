@@ -37,15 +37,15 @@ class Addresses extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search
      *   $_search
      */
-    protected Search $_search = null;
+    protected ?Search $_search = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $_view
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $_view
      */
-    protected View $_view = null;
+    protected ?View $_view = null;
 
     /**
      * This dataform template is used to add an address.
@@ -60,7 +60,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentAddress $requestBody): PostResponse
+    public function post(NewConstituentAddress $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -94,13 +94,13 @@ class Addresses extends BaseEndpoint
      * @param array{address_id: string} $params An associative array
      *     - address_id: The address id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByAddressId(array $params): void
+    public function deleteByAddressId(array $params): mixed
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
 
@@ -116,13 +116,13 @@ class Addresses extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByAddressId(array $params, UpdateConstituentAddress $requestBody): void
+    public function patchOnAddressId(array $params, UpdateConstituentAddress $requestBody): mixed
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

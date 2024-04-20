@@ -24,7 +24,7 @@ class LineItems extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\LineItemsOutputModel OK -
      *   It was possible to read the collection.
      */
-    public function getAllBy(): LineItemsOutputModel
+    public function get(): LineItemsOutputModel
     {
         return new LineItemsOutputModel($this->send("get", [], []));
     }

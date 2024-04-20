@@ -27,7 +27,7 @@ class Levels extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\LevelCollection Success
      */
-    public function getAllBy(): LevelCollection
+    public function list_(): LevelCollection
     {
         return new LevelCollection($this->send("get", [], []));
     }

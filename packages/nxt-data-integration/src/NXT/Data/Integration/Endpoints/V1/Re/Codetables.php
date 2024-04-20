@@ -35,10 +35,10 @@ class Codetables extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Codetables\Tableentries
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Codetables\Tableentries
      *   $_tableentries
      */
-    protected Tableentries $_tableentries = null;
+    protected ?Tableentries $_tableentries = null;
 
     /**
      * Returns a list of code tables.
@@ -58,7 +58,7 @@ class Codetables extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CodeTableCollection
+    public function list_(array $params): CodeTableCollection
     {
         assert(isset($params['name']), new ArgumentException("Parameter `name` is required"));
         assert(isset($params['include_hidden_system']), new ArgumentException("Parameter `include_hidden_system` is required"));
@@ -66,9 +66,9 @@ class Codetables extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new CodeTableCollection($this->send("get", [], ["name" => $params['name'],
-        "include_hidden_system" => $params['include_hidden_system'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "include_hidden_system" => $params['include_hidden_system'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -84,7 +84,7 @@ class Codetables extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(CodeTableCreate $requestBody): PostResponse
+    public function post(CodeTableCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -117,13 +117,13 @@ class Codetables extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The code table system IDs.
      *
-     * @return void Returned when the operation successfully deletes the code
+     * @return mixed Returned when the operation successfully deletes the code
      *   table.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -138,12 +138,12 @@ class Codetables extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\CodeTableEdit
      *   $requestBody Description of changes for the code table.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, CodeTableEdit $requestBody): void
+    public function patchOnId(array $params, CodeTableEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

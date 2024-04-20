@@ -24,8 +24,8 @@ class Teachers extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers\Sections
      *   $_sections
      */
-    protected Sections $_sections = null;
+    protected ?Sections $_sections = null;
 }

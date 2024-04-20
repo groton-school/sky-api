@@ -48,13 +48,13 @@ class Response extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentCorrespondenceId(array $params, UpdateConstituentCorrespondenceCode $requestBody): void
+    public function patchOnConstituentCorrespondenceId(array $params, UpdateConstituentCorrespondenceCode $requestBody): mixed
     {
         assert(isset($params['constituent_correspondence_id']), new ArgumentException("Parameter `constituent_correspondence_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

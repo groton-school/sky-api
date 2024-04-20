@@ -38,16 +38,16 @@ class Individuals extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Recentrevenueview
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Recentrevenueview
      *   $_recentrevenueview
      */
-    protected Recentrevenueview $_recentrevenueview = null;
+    protected ?Recentrevenueview $_recentrevenueview = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Revenuesummaryview
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Revenuesummaryview
      *   $_revenuesummaryview
      */
-    protected Revenuesummaryview $_revenuesummaryview = null;
+    protected ?Revenuesummaryview $_revenuesummaryview = null;
 
     /**
      * This dataform template is used to add individuals, including
@@ -63,7 +63,7 @@ class Individuals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewIndividual $requestBody): PostResponse
+    public function post(NewIndividual $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -101,13 +101,13 @@ class Individuals extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentId(array $params, UpdateIndividual $requestBody): void
+    public function patchOnConstituentId(array $params, UpdateIndividual $requestBody): mixed
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

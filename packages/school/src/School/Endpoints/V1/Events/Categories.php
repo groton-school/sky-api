@@ -37,7 +37,7 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): EventCategoryCollection
+    public function list_(array $params): EventCategoryCollection
     {
         assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
 
@@ -65,7 +65,7 @@ class Categories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(EventCategory $requestBody): EventCategoryCreateResponseExample
+    public function post(EventCategory $requestBody): EventCategoryCreateResponseExample
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

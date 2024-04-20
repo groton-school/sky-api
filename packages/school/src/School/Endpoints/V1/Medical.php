@@ -50,48 +50,49 @@ class Medical extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Securityroles
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Securityroles
      *   $_securityroles
      */
-    protected Securityroles $_securityroles = null;
+    protected ?Securityroles $_securityroles = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Allergiesconditions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Allergiesconditions
      *   $_allergiesconditions
      */
-    protected Allergiesconditions $_allergiesconditions = null;
+    protected ?Allergiesconditions $_allergiesconditions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Medications
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Medications
      *   $_medications
      */
-    protected Medications $_medications = null;
+    protected ?Medications $_medications = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Immunizations
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Immunizations
      *   $_immunizations
      */
-    protected Immunizations $_immunizations = null;
+    protected ?Immunizations $_immunizations = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Allergies $_allergies
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Allergies $_allergies
      */
-    protected Allergies $_allergies = null;
+    protected ?Allergies $_allergies = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Conditions $_conditions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Conditions
+     *   $_conditions
      */
-    protected Conditions $_conditions = null;
+    protected ?Conditions $_conditions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Athleticclearance
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Athleticclearance
      *   $_athleticclearance
      */
-    protected Athleticclearance $_athleticclearance = null;
+    protected ?Athleticclearance $_athleticclearance = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users $_users Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users $_users Routing
      *   class for the subnamespace `Users`
      */
-    protected Users $_users = null;
+    protected ?Users $_users = null;
 }

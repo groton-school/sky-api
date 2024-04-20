@@ -23,7 +23,7 @@ class Advisories extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Advisories\Sections $_sections
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Advisories\Sections $_sections
      */
-    protected Sections $_sections = null;
+    protected ?Sections $_sections = null;
 }

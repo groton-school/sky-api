@@ -32,7 +32,7 @@ class Educationalhistories extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewEducation $requestBody): PostResponse
+    public function post(NewEducation $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -68,13 +68,13 @@ class Educationalhistories extends BaseEndpoint
      *   array
      *     - educational_history_id: The educational history id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByEducationalHistoryId(array $params): void
+    public function deleteByEducationalHistoryId(array $params): mixed
     {
         assert(isset($params['educational_history_id']), new ArgumentException("Parameter `educational_history_id` is required"));
 
@@ -91,13 +91,13 @@ class Educationalhistories extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByEducationalHistoryId(array $params, UpdateEducation $requestBody): void
+    public function patchOnEducationalHistoryId(array $params, UpdateEducation $requestBody): mixed
     {
         assert(isset($params['educational_history_id']), new ArgumentException("Parameter `educational_history_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

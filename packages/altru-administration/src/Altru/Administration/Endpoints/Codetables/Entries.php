@@ -28,7 +28,7 @@ class Entries extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByCodeTableName(array $params): CodeTableEntryCollection
+    public function searchByCodeTableName(array $params): CodeTableEntryCollection
     {
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
 

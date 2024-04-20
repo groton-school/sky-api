@@ -21,7 +21,7 @@ class Installedcountry extends BaseEndpoint
      * @return string Returned when the operation succeeds. The response body
      *   contains the installed country.
      */
-    public function getAllBy(): string
+    public function get(): string
     {
         return $this->send("get", [], []);
     }

@@ -34,13 +34,13 @@ class Constituent extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): FundCollection
+    public function searchByConstituentId(array $params): FundCollection
     {
         assert(isset($params['constituentId']), new ArgumentException("Parameter `constituentId` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new FundCollection($this->send("get", ["{constituentId}" => $params['constituentId']], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 }

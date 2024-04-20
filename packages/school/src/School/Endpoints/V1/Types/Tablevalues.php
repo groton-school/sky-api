@@ -42,14 +42,14 @@ class Tablevalues extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TableValueCollection
+    public function list_(array $params): TableValueCollection
     {
         assert(isset($params['tableId']), new ArgumentException("Parameter `tableId` is required"));
         assert(isset($params['tableName']), new ArgumentException("Parameter `tableName` is required"));
         assert(isset($params['includeInactive']), new ArgumentException("Parameter `includeInactive` is required"));
 
         return new TableValueCollection($this->send("get", [], ["tableId" => $params['tableId'],
-        "tableName" => $params['tableName'],
-        "includeInactive" => $params['includeInactive']]));
+            "tableName" => $params['tableName'],
+            "includeInactive" => $params['includeInactive']]));
     }
 }

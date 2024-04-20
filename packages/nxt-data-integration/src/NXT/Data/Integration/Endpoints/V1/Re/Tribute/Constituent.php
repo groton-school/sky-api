@@ -30,7 +30,7 @@ class Constituent extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): TributeCollection
+    public function searchByConstituentId(array $params): TributeCollection
     {
         assert(isset($params['constituentId']), new ArgumentException("Parameter `constituentId` is required"));
 

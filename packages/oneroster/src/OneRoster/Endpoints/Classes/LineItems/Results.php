@@ -37,6 +37,6 @@ class Results extends BaseEndpoint
         assert(isset($params['li_id']), new ArgumentException("Parameter `li_id` is required"));
 
         return new ResultsOutputModelSvc($this->send("get", ["{class_id}" => $params['class_id'],
-        "{li_id}" => $params['li_id']], []));
+            "{li_id}" => $params['li_id']], []));
     }
 }

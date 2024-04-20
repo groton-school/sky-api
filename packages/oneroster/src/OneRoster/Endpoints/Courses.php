@@ -23,7 +23,7 @@ class Courses extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\CoursesOutputModel OK - It
      *   was possible to read the collection.
      */
-    public function getAllBy(): CoursesOutputModel
+    public function get(): CoursesOutputModel
     {
         return new CoursesOutputModel($this->send("get", [], []));
     }

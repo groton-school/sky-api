@@ -26,12 +26,12 @@ class Events extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Events\Categories $_categories
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Events\Categories $_categories
      */
-    protected Categories $_categories = null;
+    protected ?Categories $_categories = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Events\Calendar $_calendar
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Events\Calendar $_calendar
      */
-    protected Calendar $_calendar = null;
+    protected ?Calendar $_calendar = null;
 }

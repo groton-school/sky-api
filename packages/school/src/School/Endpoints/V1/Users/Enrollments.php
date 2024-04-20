@@ -48,7 +48,7 @@ class Enrollments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): UserEnrollmentCollection
+    public function list_(array $params): UserEnrollmentCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['school_level_id']), new ArgumentException("Parameter `school_level_id` is required"));
@@ -57,9 +57,9 @@ class Enrollments extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new UserEnrollmentCollection($this->send("get", [], ["school_year" => $params['school_year'],
-        "school_level_id" => $params['school_level_id'],
-        "grade_level_id" => $params['grade_level_id'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "school_level_id" => $params['school_level_id'],
+            "grade_level_id" => $params['grade_level_id'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 }

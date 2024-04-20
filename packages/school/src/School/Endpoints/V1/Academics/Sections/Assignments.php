@@ -53,7 +53,7 @@ class Assignments extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getBySectionId(array $params): AssignmentCollection
+    public function searchBySectionId(array $params): AssignmentCollection
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['types']), new ArgumentException("Parameter `types` is required"));
@@ -63,9 +63,9 @@ class Assignments extends BaseEndpoint
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
 
         return new AssignmentCollection($this->send("get", ["{section_id}" => $params['section_id']], ["types" => $params['types'],
-        "status" => $params['status'],
-        "persona_id" => $params['persona_id'],
-        "filter" => $params['filter'],
-        "search" => $params['search']]));
+            "status" => $params['status'],
+            "persona_id" => $params['persona_id'],
+            "filter" => $params['filter'],
+            "search" => $params['search']]));
     }
 }

@@ -23,7 +23,7 @@ class Dorms extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Dorms\All $_all
      */
-    protected All $_all = null;
+    protected ?All $_all = null;
 }

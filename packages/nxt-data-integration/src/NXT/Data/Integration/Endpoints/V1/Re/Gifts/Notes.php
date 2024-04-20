@@ -33,7 +33,7 @@ class Notes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(GiftNoteCreate $requestBody): PostResponse
+    public function post(GiftNoteCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -66,13 +66,13 @@ class Notes extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The gift note ID.
      *
-     * @return void Returned when the operation successfully deletes the gift
+     * @return mixed Returned when the operation successfully deletes the gift
      *   note.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -87,12 +87,12 @@ class Notes extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\GiftNoteEdit
      *   $requestBody The gift note details.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, GiftNoteEdit $requestBody): void
+    public function patchOnId(array $params, GiftNoteEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -116,13 +116,13 @@ class Notes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByGiftId(array $params): GiftNoteCollection
+    public function searchByGiftId(array $params): GiftNoteCollection
     {
         assert(isset($params['gift_id']), new ArgumentException("Parameter `gift_id` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new GiftNoteCollection($this->send("get", ["{gift_id}" => $params['gift_id']], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 }

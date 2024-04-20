@@ -29,7 +29,7 @@ class Gift extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByGiftId(array $params): GiftTributeCollection
+    public function searchByGiftId(array $params): GiftTributeCollection
     {
         assert(isset($params['giftId']), new ArgumentException("Parameter `giftId` is required"));
 

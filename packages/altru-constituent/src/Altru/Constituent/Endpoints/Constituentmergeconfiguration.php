@@ -30,7 +30,7 @@ class Constituentmergeconfiguration extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentMergeListCollection
+    public function list_(array $params): ConstituentMergeListCollection
     {
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 

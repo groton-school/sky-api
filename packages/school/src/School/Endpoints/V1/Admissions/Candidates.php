@@ -65,15 +65,15 @@ class Candidates extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CandidateReadCollection
+    public function list_(array $params): CandidateReadCollection
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['status_ids']), new ArgumentException("Parameter `status_ids` is required"));
         assert(isset($params['modified_date']), new ArgumentException("Parameter `modified_date` is required"));
 
         return new CandidateReadCollection($this->send("get", [], ["school_year" => $params['school_year'],
-        "status_ids" => $params['status_ids'],
-        "modified_date" => $params['modified_date']]));
+            "status_ids" => $params['status_ids'],
+            "modified_date" => $params['modified_date']]));
     }
 
     /**
@@ -95,7 +95,7 @@ class Candidates extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(CandidateCreate $requestBody): int
+    public function post(CandidateCreate $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

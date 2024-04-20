@@ -28,14 +28,14 @@ class Importidmap extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap\Constituent
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap\Constituent
      *   $_constituent
      */
-    protected Constituent $_constituent = null;
+    protected ?Constituent $_constituent = null;
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap\Gift
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Importidmap\Gift
      *   $_gift
      */
-    protected Gift $_gift = null;
+    protected ?Gift $_gift = null;
 }

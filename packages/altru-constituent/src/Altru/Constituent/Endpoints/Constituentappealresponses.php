@@ -50,13 +50,13 @@ class Constituentappealresponses extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByConstituentAppealId(array $params, UpdateConstituentAppealResponse $requestBody): void
+    public function patchOnConstituentAppealId(array $params, UpdateConstituentAppealResponse $requestBody): mixed
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -77,7 +77,7 @@ class Constituentappealresponses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentAppealResponse $requestBody): PostResponse
+    public function post(NewConstituentAppealResponse $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

@@ -38,7 +38,7 @@ class Practice extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByTeamId(array $params, PracticeCreate $requestBody): int
+    public function postToTeamId(array $params, PracticeCreate $requestBody): int
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -61,12 +61,12 @@ class Practice extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\PracticeUpdate $requestBody
      *   Information about the practice to be updated
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByTeamId(array $params, PracticeUpdate $requestBody): void
+    public function patchOnTeamId(array $params, PracticeUpdate $requestBody): mixed
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -91,17 +91,17 @@ class Practice extends BaseEndpoint
      *   deleted
      *     - practice_id: Format - int32. ID of the practice to be deleted
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByTeamIdAndPracticeId(array $params): void
+    public function deleteByTeamIdAndPracticeId(array $params): mixed
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['practice_id']), new ArgumentException("Parameter `practice_id` is required"));
 
         return $this->send("delete", ["{team_id}" => $params['team_id'],
-        "{practice_id}" => $params['practice_id']], []);
+            "{practice_id}" => $params['practice_id']], []);
     }
 }

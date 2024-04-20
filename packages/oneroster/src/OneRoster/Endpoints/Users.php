@@ -22,7 +22,7 @@ class Users extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
-    public function getAllBy(): UsersOutputModel
+    public function get(): UsersOutputModel
     {
         return new UsersOutputModel($this->send("get", [], []));
     }

@@ -77,7 +77,7 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): MeetingCollection
+    public function list_(array $params): MeetingCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
@@ -87,11 +87,11 @@ class Meetings extends BaseEndpoint
         assert(isset($params['show_time_for_current_date']), new ArgumentException("Parameter `show_time_for_current_date` is required"));
 
         return new MeetingCollection($this->send("get", [], ["start_date" => $params['start_date'],
-        "end_date" => $params['end_date'],
-        "offering_types" => $params['offering_types'],
-        "section_ids" => $params['section_ids'],
-        "last_modified" => $params['last_modified'],
-        "show_time_for_current_date" => $params['show_time_for_current_date']]));
+            "end_date" => $params['end_date'],
+            "offering_types" => $params['offering_types'],
+            "section_ids" => $params['section_ids'],
+            "last_modified" => $params['last_modified'],
+            "show_time_for_current_date" => $params['show_time_for_current_date']]));
     }
 
     /**
@@ -127,13 +127,13 @@ class Meetings extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByStudentId(array $params): StudentScheduleCollection
+    public function searchByStudentId(array $params): StudentScheduleCollection
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
         return new StudentScheduleCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $params['start_date'],
-        "end_date" => $params['end_date']]));
+            "end_date" => $params['end_date']]));
     }
 }

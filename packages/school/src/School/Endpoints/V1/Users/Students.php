@@ -34,7 +34,7 @@ class Students extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByParentId(array $params): ChildOfParentCollection
+    public function searchByParentId(array $params): ChildOfParentCollection
     {
         assert(isset($params['parent_id']), new ArgumentException("Parameter `parent_id` is required"));
 

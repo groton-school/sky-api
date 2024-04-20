@@ -30,7 +30,7 @@ class Mergetwoconstituents extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentMerge $requestBody): PostResponse
+    public function post(NewConstituentMerge $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

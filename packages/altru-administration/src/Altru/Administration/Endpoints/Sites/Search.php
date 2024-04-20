@@ -39,7 +39,7 @@ class Search extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): SiteSearchCollection
+    public function list_(array $params): SiteSearchCollection
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['site_id']), new ArgumentException("Parameter `site_id` is required"));
@@ -50,11 +50,11 @@ class Search extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new SiteSearchCollection($this->send("get", [], ["id" => $params['id'],
-        "site_id" => $params['site_id'],
-        "name" => $params['name'],
-        "short_name" => $params['short_name'],
-        "acronym" => $params['acronym'],
-        "sitetype" => $params['sitetype'],
-        "limit" => $params['limit']]));
+            "site_id" => $params['site_id'],
+            "name" => $params['name'],
+            "short_name" => $params['short_name'],
+            "acronym" => $params['acronym'],
+            "sitetype" => $params['sitetype'],
+            "limit" => $params['limit']]));
     }
 }

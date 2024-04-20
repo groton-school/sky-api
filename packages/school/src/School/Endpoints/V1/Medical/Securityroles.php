@@ -25,7 +25,7 @@ class Securityroles extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\SecurityRoleCollection Success
      */
-    public function getAllBy(): SecurityRoleCollection
+    public function list_(): SecurityRoleCollection
     {
         return new SecurityRoleCollection($this->send("get", [], []));
     }

@@ -93,106 +93,109 @@ class Users extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Relationships
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Relationships
      *   $_relationships
      */
-    protected Relationships $_relationships = null;
+    protected ?Relationships $_relationships = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phonetypes $_phonetypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phonetypes $_phonetypes
      */
-    protected Phonetypes $_phonetypes = null;
+    protected ?Phonetypes $_phonetypes = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Extended $_extended
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Extended $_extended
      */
-    protected Extended $_extended = null;
+    protected ?Extended $_extended = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Changed $_changed
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Changed $_changed
      */
-    protected Changed $_changed = null;
+    protected ?Changed $_changed = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phones $_phones Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phones $_phones Routing
      *   class for the subnamespace `Phones`
      */
-    protected Phones $_phones = null;
+    protected ?Phones $_phones = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Occupations $_occupations
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Occupations
+     *   $_occupations
      */
-    protected Occupations $_occupations = null;
+    protected ?Occupations $_occupations = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Emergencycontacts
      *   $_emergencycontacts Routing class for the subnamespace
      *   `Emergencycontacts`
      */
-    protected Emergencycontacts $_emergencycontacts = null;
+    protected ?Emergencycontacts $_emergencycontacts = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresses $_addresses
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresses $_addresses
      *   Routing class for the subnamespace `Addresses`
      */
-    protected Addresses $_addresses = null;
+    protected ?Addresses $_addresses = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Addresstypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Addresstypes
      *   $_addresstypes
      */
-    protected Addresstypes $_addresstypes = null;
+    protected ?Addresstypes $_addresstypes = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Education $_education
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Education $_education
      */
-    protected Education $_education = null;
+    protected ?Education $_education = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Audit $_audit
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Audit $_audit
      */
-    protected Audit $_audit = null;
+    protected ?Audit $_audit = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Enroll $_enroll
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Enroll $_enroll
      */
-    protected Enroll $_enroll = null;
+    protected ?Enroll $_enroll = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Employment $_employment
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Employment $_employment
      */
-    protected Employment $_employment = null;
+    protected ?Employment $_employment = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Gendertypes $_gendertypes
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Gendertypes
+     *   $_gendertypes
      */
-    protected Gendertypes $_gendertypes = null;
+    protected ?Gendertypes $_gendertypes = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Bbidstatus $_bbidstatus
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Bbidstatus $_bbidstatus
      */
-    protected Bbidstatus $_bbidstatus = null;
+    protected ?Bbidstatus $_bbidstatus = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Students $_students
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Students $_students
      */
-    protected Students $_students = null;
+    protected ?Students $_students = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Me $_me
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Me $_me
      */
-    protected Me $_me = null;
+    protected ?Me $_me = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Customfields
      *   $_customfields Routing class for the subnamespace `Customfields`
      */
-    protected Customfields $_customfields = null;
+    protected ?Customfields $_customfields = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Enrollments $_enrollments
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Enrollments
+     *   $_enrollments
      */
-    protected Enrollments $_enrollments = null;
+    protected ?Enrollments $_enrollments = null;
 
     /**
      * Returns a paginated collection of users, limited to 100 users per page.
@@ -235,7 +238,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): UserReadCollection
+    public function list_(array $params): UserReadCollection
     {
         assert(isset($params['roles']), new ArgumentException("Parameter `roles` is required"));
         assert(isset($params['first_name']), new ArgumentException("Parameter `first_name` is required"));
@@ -247,13 +250,13 @@ class Users extends BaseEndpoint
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
         return new UserReadCollection($this->send("get", [], ["roles" => $params['roles'],
-        "first_name" => $params['first_name'],
-        "last_name" => $params['last_name'],
-        "email" => $params['email'],
-        "maiden_name" => $params['maiden_name'],
-        "grad_year" => $params['grad_year'],
-        "end_grad_year" => $params['end_grad_year'],
-        "marker" => $params['marker']]));
+            "first_name" => $params['first_name'],
+            "last_name" => $params['last_name'],
+            "email" => $params['email'],
+            "maiden_name" => $params['maiden_name'],
+            "grad_year" => $params['grad_year'],
+            "end_grad_year" => $params['end_grad_year'],
+            "marker" => $params['marker']]));
     }
 
     /**
@@ -276,7 +279,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(UserAdd $requestBody): int
+    public function post(UserAdd $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -303,7 +306,7 @@ class Users extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchBy(UserEdit $requestBody): int
+    public function patch(UserEdit $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

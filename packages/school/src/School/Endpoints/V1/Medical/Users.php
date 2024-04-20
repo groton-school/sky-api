@@ -44,38 +44,38 @@ class Users extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergiesconditions
      *   $_allergiesconditions
      */
-    protected Allergiesconditions $_allergiesconditions = null;
+    protected ?Allergiesconditions $_allergiesconditions = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Medications
      *   $_medications
      */
-    protected Medications $_medications = null;
+    protected ?Medications $_medications = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Immunizations
      *   $_immunizations
      */
-    protected Immunizations $_immunizations = null;
+    protected ?Immunizations $_immunizations = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Athleticrequirements
      *   $_athleticrequirements
      */
-    protected Athleticrequirements $_athleticrequirements = null;
+    protected ?Athleticrequirements $_athleticrequirements = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Allergies
      *   $_allergies
      */
-    protected Allergies $_allergies = null;
+    protected ?Allergies $_allergies = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Medical\Users\Conditions
      *   $_conditions
      */
-    protected Conditions $_conditions = null;
+    protected ?Conditions $_conditions = null;
 }

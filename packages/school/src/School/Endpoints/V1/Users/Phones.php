@@ -32,9 +32,9 @@ class Phones extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share $_share
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Phones\Share $_share
      */
-    protected Share $_share = null;
+    protected ?Share $_share = null;
 
     /**
      * Returns a collection phone numbers for the specified ```user\_id```.
@@ -47,7 +47,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): PhoneReadCollection
+    public function searchByUserId(array $params): PhoneReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -76,7 +76,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, PhoneAdd $requestBody): int
+    public function postToUserId(array $params, PhoneAdd $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -108,20 +108,20 @@ class Phones extends BaseEndpoint
      *     - phone_id: Format - int32. The ID of the user's phone to delete.
      *     - phone_type_id: Format - int32. The ID of the phone type.
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserIdAndPhoneIdAndPhoneTypeId(array $params): void
+    public function deleteByUserIdAndPhoneIdAndPhoneTypeId(array $params): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
         assert(isset($params['phone_type_id']), new ArgumentException("Parameter `phone_type_id` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id'],
-        "{phone_id}" => $params['phone_id'],
-        "{phone_type_id}" => $params['phone_type_id']], []);
+            "{phone_id}" => $params['phone_id'],
+            "{phone_type_id}" => $params['phone_type_id']], []);
     }
 
     /**
@@ -142,7 +142,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUserIdAndPhoneId(array $params, PhoneUpdate $requestBody): int
+    public function patchOnUserIdAndPhoneId(array $params, PhoneUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
@@ -150,6 +150,6 @@ class Phones extends BaseEndpoint
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $params['user_id'],
-        "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $params['split_phone_if_shared']], $requestBody);
+            "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $params['split_phone_if_shared']], $requestBody);
     }
 }

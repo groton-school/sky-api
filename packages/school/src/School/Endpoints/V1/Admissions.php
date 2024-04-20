@@ -35,25 +35,25 @@ class Admissions extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checklists
      *   $_checklists
      */
-    protected Checklists $_checklists = null;
+    protected ?Checklists $_checklists = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Candidates
      *   $_candidates
      */
-    protected Candidates $_candidates = null;
+    protected ?Candidates $_candidates = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Checkliststatus
      *   $_checkliststatus
      */
-    protected Checkliststatus $_checkliststatus = null;
+    protected ?Checkliststatus $_checkliststatus = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Admissions\Status $_status
      */
-    protected Status $_status = null;
+    protected ?Status $_status = null;
 }

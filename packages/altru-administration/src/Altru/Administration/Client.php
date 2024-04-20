@@ -36,26 +36,26 @@ class Client extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Simplelists
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Simplelists
      *   $_simplelists Routing class for the subnamespace `Simplelists`
      */
-    protected Simplelists $_simplelists = null;
+    protected ?Simplelists $_simplelists = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Codetables
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Codetables
      *   $_codetables Routing class for the subnamespace `Codetables`
      */
-    protected Codetables $_codetables = null;
+    protected ?Codetables $_codetables = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Sites $_sites
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Sites $_sites
      *   Routing class for the subnamespace `Sites`
      */
-    protected Sites $_sites = null;
+    protected ?Sites $_sites = null;
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Currencies
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Currencies
      *   $_currencies Routing class for the subnamespace `Currencies`
      */
-    protected Currencies $_currencies = null;
+    protected ?Currencies $_currencies = null;
 }

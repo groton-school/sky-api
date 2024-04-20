@@ -3,7 +3,7 @@
 namespace Blackbaud\SKY\School\Endpoints\V1\Types;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
-use Blackbaud\SKY\School\Components\AttendanceTypes;
+use Blackbaud\SKY\School\Components\AttendanceTypes as Components_AttendanceTypes;
 
 /**
  * @api
@@ -24,8 +24,8 @@ class Attendancetypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\AttendanceTypes Success
      */
-    public function getAllBy(): AttendanceTypes
+    public function get(): Components_AttendanceTypes
     {
-        return new AttendanceTypes($this->send("get", [], []));
+        return new Components_AttendanceTypes($this->send("get", [], []));
     }
 }

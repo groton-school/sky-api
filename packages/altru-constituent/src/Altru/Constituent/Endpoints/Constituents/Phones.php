@@ -31,7 +31,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentId(array $params): ConstituentPhoneListCollection
+    public function searchByConstituentId(array $params): ConstituentPhoneListCollection
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));

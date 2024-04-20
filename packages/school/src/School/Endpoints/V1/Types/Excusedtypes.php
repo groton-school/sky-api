@@ -26,7 +26,7 @@ class Excusedtypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\ExcusedTypesCollection Success
      */
-    public function getAllBy(): ExcusedTypesCollection
+    public function list_(): ExcusedTypesCollection
     {
         return new ExcusedTypesCollection($this->send("get", [], []));
     }

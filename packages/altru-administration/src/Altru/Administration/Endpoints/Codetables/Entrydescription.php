@@ -36,6 +36,6 @@ class Entrydescription extends BaseEndpoint
         assert(isset($params['entry_description']), new ArgumentException("Parameter `entry_description` is required"));
 
         return new CodeTableEntryId($this->send("get", ["{code_table_name}" => $params['code_table_name'],
-        "{entry_description}" => $params['entry_description']], []));
+            "{entry_description}" => $params['entry_description']], []));
     }
 }

@@ -24,8 +24,8 @@ class Currencies extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Administration\Endpoints\Currencies\Currencyconfiguration
+     * @var ?\Blackbaud\SKY\Altru\Administration\Endpoints\Currencies\Currencyconfiguration
      *   $_currencyconfiguration
      */
-    protected Currencyconfiguration $_currencyconfiguration = null;
+    protected ?Currencyconfiguration $_currencyconfiguration = null;
 }

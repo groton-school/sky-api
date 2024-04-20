@@ -24,7 +24,7 @@ class Results extends BaseEndpoint
      * @return \Blackbaud\SKY\OneRoster\Components\ResultsOutputModelSvc OK -
      *   It was possible to read the collection.
      */
-    public function getAllBy(): ResultsOutputModelSvc
+    public function get(): ResultsOutputModelSvc
     {
         return new ResultsOutputModelSvc($this->send("get", [], []));
     }

@@ -48,7 +48,7 @@ class Master extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): MasterScheduleDayCollection
+    public function list_(array $params): MasterScheduleDayCollection
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
@@ -56,8 +56,8 @@ class Master extends BaseEndpoint
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
         return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $params['level_num'],
-        "start_date" => $params['start_date'],
-        "end_date" => $params['end_date'],
-        "offering_type" => $params['offering_type']]));
+            "start_date" => $params['start_date'],
+            "end_date" => $params['end_date'],
+            "offering_type" => $params['offering_type']]));
     }
 }

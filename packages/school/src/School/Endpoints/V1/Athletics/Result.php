@@ -36,12 +36,12 @@ class Result extends BaseEndpoint
      *
      * @param \Blackbaud\SKY\School\Components\ResultCreate $requestBody
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(ResultCreate $requestBody): void
+    public function post(ResultCreate $requestBody): mixed
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

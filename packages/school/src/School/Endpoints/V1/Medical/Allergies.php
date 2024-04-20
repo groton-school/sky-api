@@ -64,7 +64,7 @@ class Allergies extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByAllergyId(array $params, StudentAllergyUpdate $requestBody): int
+    public function patchOnAllergyId(array $params, StudentAllergyUpdate $requestBody): int
     {
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -93,7 +93,7 @@ class Allergies extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentMedicalAllergy $requestBody): int
+    public function post(StudentMedicalAllergy $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

@@ -32,13 +32,13 @@ class States extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByCountryId(array $params): StateListCollection
+    public function searchByCountryId(array $params): StateListCollection
     {
         assert(isset($params['country_id']), new ArgumentException("Parameter `country_id` is required"));
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new StateListCollection($this->send("get", ["{country_id}" => $params['country_id']], ["include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit']]));
+            "limit" => $params['limit']]));
     }
 }

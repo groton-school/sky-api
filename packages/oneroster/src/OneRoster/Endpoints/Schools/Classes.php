@@ -31,10 +31,10 @@ class Classes extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Schools\Classes\Enrollments
      *   $_enrollments
      */
-    protected Enrollments $_enrollments = null;
+    protected ?Enrollments $_enrollments = null;
 
     /**
      * Returns a collection of classes for the specified `school_id`.

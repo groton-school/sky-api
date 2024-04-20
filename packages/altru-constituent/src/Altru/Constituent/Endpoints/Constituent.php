@@ -24,8 +24,8 @@ class Constituent extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent\Constituentmemberships
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent\Constituentmemberships
      *   $_constituentmemberships
      */
-    protected Constituentmemberships $_constituentmemberships = null;
+    protected ?Constituentmemberships $_constituentmemberships = null;
 }

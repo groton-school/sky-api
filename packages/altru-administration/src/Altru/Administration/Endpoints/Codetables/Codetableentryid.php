@@ -23,17 +23,17 @@ class Codetableentryid extends BaseEndpoint
      *     - code_table_name: The name of the code table.
      *     - entry_id: The code table entry ID.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByCodeTableNameAndEntryId(array $params): void
+    public function deleteByCodeTableNameAndEntryId(array $params): mixed
     {
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['entry_id']), new ArgumentException("Parameter `entry_id` is required"));
 
         return $this->send("delete", ["{code_table_name}" => $params['code_table_name'],
-        "{entry_id}" => $params['entry_id']], []);
+            "{entry_id}" => $params['entry_id']], []);
     }
 }

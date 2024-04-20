@@ -35,7 +35,7 @@ class List_ extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentFundraiserListCollection
+    public function list_(array $params): ConstituentFundraiserListCollection
     {
         assert(isset($params['org_positions_selection_id']), new ArgumentException("Parameter `org_positions_selection_id` is required"));
         assert(isset($params['include_stewardship']), new ArgumentException("Parameter `include_stewardship` is required"));
@@ -44,9 +44,9 @@ class List_ extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentFundraiserListCollection($this->send("get", [], ["org_positions_selection_id" => $params['org_positions_selection_id'],
-        "include_stewardship" => $params['include_stewardship'],
-        "show_inactive" => $params['show_inactive'],
-        "only_owned_interactions" => $params['only_owned_interactions'],
-        "limit" => $params['limit']]));
+            "include_stewardship" => $params['include_stewardship'],
+            "show_inactive" => $params['show_inactive'],
+            "only_owned_interactions" => $params['only_owned_interactions'],
+            "limit" => $params['limit']]));
     }
 }

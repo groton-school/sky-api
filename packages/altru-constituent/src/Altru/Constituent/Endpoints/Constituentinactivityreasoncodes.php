@@ -31,12 +31,12 @@ class Constituentinactivityreasoncodes extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): ConstituentInactivityReasonCodesListCollection
+    public function list_(array $params): ConstituentInactivityReasonCodesListCollection
     {
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new ConstituentInactivityReasonCodesListCollection($this->send("get", [], ["include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit']]));
+            "limit" => $params['limit']]));
     }
 }

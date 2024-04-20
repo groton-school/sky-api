@@ -34,10 +34,10 @@ class Customfields extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Users\Customfields\List_
      *   $_list_
      */
-    protected List_ $_list_ = null;
+    protected ?List_ $_list_ = null;
 
     /**
      * Returns a paginated collection of users with custom admin fields,
@@ -73,15 +73,15 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): UserAdminCustomFieldCollection
+    public function list_(array $params): UserAdminCustomFieldCollection
     {
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
         assert(isset($params['field_ids']), new ArgumentException("Parameter `field_ids` is required"));
 
         return new UserAdminCustomFieldCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
-        "marker" => $params['marker'],
-        "field_ids" => $params['field_ids']]));
+            "marker" => $params['marker'],
+            "field_ids" => $params['field_ids']]));
     }
 
     /**
@@ -134,7 +134,7 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, UserAdminCustomFieldCreate $requestBody): bool
+    public function postToUserId(array $params, UserAdminCustomFieldCreate $requestBody): bool
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -162,7 +162,7 @@ class Customfields extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUserId(array $params, UserAdminCustomFieldUpdate $requestBody): bool
+    public function patchOnUserId(array $params, UserAdminCustomFieldUpdate $requestBody): bool
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

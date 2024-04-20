@@ -27,7 +27,7 @@ class Gendertypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\GenderTypeCollection Success
      */
-    public function getAllBy(): GenderTypeCollection
+    public function list_(): GenderTypeCollection
     {
         return new GenderTypeCollection($this->send("get", [], []));
     }

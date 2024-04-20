@@ -30,10 +30,10 @@ class Tributes extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes\Search
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes\Search
      *   $_search
      */
-    protected Search $_search = null;
+    protected ?Search $_search = null;
 
     /**
      * Deletes a revenue tribute record from the system.
@@ -41,13 +41,13 @@ class Tributes extends BaseEndpoint
      * @param array{revenue_tribute_id: string} $params An associative array
      *     - revenue_tribute_id: The revenue tribute id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByRevenueTributeId(array $params): void
+    public function deleteByRevenueTributeId(array $params): mixed
     {
         assert(isset($params['revenue_tribute_id']), new ArgumentException("Parameter `revenue_tribute_id` is required"));
 

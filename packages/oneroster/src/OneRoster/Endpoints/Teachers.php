@@ -31,9 +31,9 @@ class Teachers extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
+     * @var ?\Blackbaud\SKY\OneRoster\Endpoints\Teachers\Classes $_classes
      */
-    protected Classes $_classes = null;
+    protected ?Classes $_classes = null;
 
     /**
      * Returns a collection of teacher user data.
@@ -46,7 +46,7 @@ class Teachers extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\OneRoster\Components\UsersOutputModel Success
      */
-    public function getAllBy(): UsersOutputModel
+    public function get(): UsersOutputModel
     {
         return new UsersOutputModel($this->send("get", [], []));
     }

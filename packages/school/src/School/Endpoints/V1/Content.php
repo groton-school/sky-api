@@ -31,19 +31,19 @@ class Content extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Resources $_resources
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Resources $_resources
      */
-    protected Resources $_resources = null;
+    protected ?Resources $_resources = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News $_news Routing
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News $_news Routing
      *   class for the subnamespace `News`
      */
-    protected News $_news = null;
+    protected ?News $_news = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\Events $_events Routing
-     *   class for the subnamespace `Events`
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\Events $_events
+     *   Routing class for the subnamespace `Events`
      */
-    protected Events $_events = null;
+    protected ?Events $_events = null;
 }

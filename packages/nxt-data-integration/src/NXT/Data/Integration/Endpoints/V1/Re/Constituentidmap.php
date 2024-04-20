@@ -4,7 +4,7 @@ namespace Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
-use Blackbaud\SKY\NXT\Data\Integration\Components\ConstituentIdMap;
+use Blackbaud\SKY\NXT\Data\Integration\Components\ConstituentIdMap as Components_ConstituentIdMap;
 
 /**
  * @api
@@ -30,10 +30,10 @@ class Constituentidmap extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByConstituentid(array $params): ConstituentIdMap
+    public function getByConstituentid(array $params): Components_ConstituentIdMap
     {
         assert(isset($params['constituentid']), new ArgumentException("Parameter `constituentid` is required"));
 
-        return new ConstituentIdMap($this->send("get", ["{constituentid}" => $params['constituentid']], []));
+        return new Components_ConstituentIdMap($this->send("get", ["{constituentid}" => $params['constituentid']], []));
     }
 }

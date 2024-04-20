@@ -33,7 +33,7 @@ class Alternatelookupids extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentAlternateLookupId $requestBody): PostResponse
+    public function post(NewConstituentAlternateLookupId $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -70,13 +70,13 @@ class Alternatelookupids extends BaseEndpoint
      *   array
      *     - alternate_lookup_id_id: The alternate lookup id id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByAlternateLookupIdId(array $params): void
+    public function deleteByAlternateLookupIdId(array $params): mixed
     {
         assert(isset($params['alternate_lookup_id_id']), new ArgumentException("Parameter `alternate_lookup_id_id` is required"));
 
@@ -94,13 +94,13 @@ class Alternatelookupids extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByAlternateLookupIdId(array $params, UpdateConstituentAlternateLookupId $requestBody): void
+    public function patchOnAlternateLookupIdId(array $params, UpdateConstituentAlternateLookupId $requestBody): mixed
     {
         assert(isset($params['alternate_lookup_id_id']), new ArgumentException("Parameter `alternate_lookup_id_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

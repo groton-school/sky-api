@@ -45,7 +45,7 @@ class Attendance extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): AttendanceGetCollection
+    public function list_(array $params): AttendanceGetCollection
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
         assert(isset($params['day']), new ArgumentException("Parameter `day` is required"));
@@ -53,9 +53,9 @@ class Attendance extends BaseEndpoint
         assert(isset($params['excuse_type']), new ArgumentException("Parameter `excuse_type` is required"));
 
         return new AttendanceGetCollection($this->send("get", [], ["level_id" => $params['level_id'],
-        "day" => $params['day'],
-        "offering_type" => $params['offering_type'],
-        "excuse_type" => $params['excuse_type']]));
+            "day" => $params['day'],
+            "offering_type" => $params['offering_type'],
+            "excuse_type" => $params['excuse_type']]));
     }
 
     /**
@@ -71,12 +71,12 @@ class Attendance extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\AttendanceCreate $requestBody
      *   Information about the attendance report
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(AttendanceCreate $requestBody): void
+    public function post(AttendanceCreate $requestBody): mixed
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

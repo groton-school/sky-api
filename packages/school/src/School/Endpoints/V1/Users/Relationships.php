@@ -39,7 +39,7 @@ class Relationships extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): RelationshipReadCollection
+    public function searchByUserId(array $params): RelationshipReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -67,12 +67,12 @@ class Relationships extends BaseEndpoint
      * @param \Blackbaud\SKY\School\Components\RelationshipCreate $requestBody
      *   Defines the relationship to be created.
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, RelationshipCreate $requestBody): void
+    public function postToUserId(array $params, RelationshipCreate $requestBody): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -105,18 +105,18 @@ class Relationships extends BaseEndpoint
      *     - relationship_type: Defines the relationship between left\_user
      *   and this user.
      *
-     * @return void Success
+     * @return mixed Success
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByUserId(array $params): void
+    public function deleteByUserId(array $params): mixed
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['left_user']), new ArgumentException("Parameter `left_user` is required"));
         assert(isset($params['relationship_type']), new ArgumentException("Parameter `relationship_type` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id']], ["left_user" => $params['left_user'],
-        "relationship_type" => $params['relationship_type']]);
+            "relationship_type" => $params['relationship_type']]);
     }
 }

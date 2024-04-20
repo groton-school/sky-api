@@ -36,6 +36,6 @@ class Entryid extends BaseEndpoint
         assert(isset($params['entry_id']), new ArgumentException("Parameter `entry_id` is required"));
 
         return new CodeTableEntryDescription($this->send("get", ["{code_table_name}" => $params['code_table_name'],
-        "{entry_id}" => $params['entry_id']], []));
+            "{entry_id}" => $params['entry_id']], []));
     }
 }

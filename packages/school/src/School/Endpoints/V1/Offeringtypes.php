@@ -29,7 +29,7 @@ class Offeringtypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\OfferingTypeCollection Success
      */
-    public function getAllBy(): OfferingTypeCollection
+    public function list_(): OfferingTypeCollection
     {
         return new OfferingTypeCollection($this->send("get", [], []));
     }

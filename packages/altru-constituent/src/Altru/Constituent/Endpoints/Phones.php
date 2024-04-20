@@ -32,7 +32,7 @@ class Phones extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(NewConstituentPhone $requestBody): PostResponse
+    public function post(NewConstituentPhone $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -66,13 +66,13 @@ class Phones extends BaseEndpoint
      * @param array{phone_id: string} $params An associative array
      *     - phone_id: The phone id
      *
-     * @return void Returned when the operation successfully deletes the
+     * @return mixed Returned when the operation successfully deletes the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteByPhoneId(array $params): void
+    public function deleteByPhoneId(array $params): mixed
     {
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
 
@@ -88,13 +88,13 @@ class Phones extends BaseEndpoint
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
-     * @return void Returned when the operation successfully edits the
+     * @return mixed Returned when the operation successfully edits the
      *   resource.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByPhoneId(array $params, UpdateConstituentPhone $requestBody): void
+    public function patchOnPhoneId(array $params, UpdateConstituentPhone $requestBody): mixed
     {
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

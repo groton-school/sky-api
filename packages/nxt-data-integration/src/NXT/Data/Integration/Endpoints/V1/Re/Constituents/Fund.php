@@ -34,13 +34,13 @@ class Fund extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByFundId(array $params): ConstituentByFundCollection
+    public function searchByFundId(array $params): ConstituentByFundCollection
     {
         assert(isset($params['fundId']), new ArgumentException("Parameter `fundId` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new ConstituentByFundCollection($this->send("get", ["{fundId}" => $params['fundId']], ["limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "offset" => $params['offset']]));
     }
 }

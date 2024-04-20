@@ -39,12 +39,12 @@ class Calendar extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): CalendarItemCollection
+    public function list_(array $params): CalendarItemCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
         return new CalendarItemCollection($this->send("get", [], ["start_date" => $params['start_date'],
-        "end_date" => $params['end_date']]));
+            "end_date" => $params['end_date']]));
     }
 }

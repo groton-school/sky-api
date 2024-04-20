@@ -25,7 +25,7 @@ class Phonetypes extends BaseEndpoint
      *
      * @return \Blackbaud\SKY\School\Components\PhoneTypeCollection Success
      */
-    public function getAllBy(): PhoneTypeCollection
+    public function list_(): PhoneTypeCollection
     {
         return new PhoneTypeCollection($this->send("get", [], []));
     }

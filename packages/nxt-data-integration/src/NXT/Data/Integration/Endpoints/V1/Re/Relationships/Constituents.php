@@ -24,8 +24,8 @@ class Constituents extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Constituents\Fund
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Relationships\Constituents\Fund
      *   $_fund
      */
-    protected Fund $_fund = null;
+    protected ?Fund $_fund = null;
 }

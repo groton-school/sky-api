@@ -27,13 +27,13 @@ class News extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Categories
      *   $_categories
      */
-    protected Categories $_categories = null;
+    protected ?Categories $_categories = null;
 
     /**
-     * @var \Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Content\News\Items $_items
      */
-    protected Items $_items = null;
+    protected ?Items $_items = null;
 }

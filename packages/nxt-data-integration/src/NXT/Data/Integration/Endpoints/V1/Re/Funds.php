@@ -35,10 +35,10 @@ class Funds extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Funds\Constituent
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1\Re\Funds\Constituent
      *   $_constituent
      */
-    protected Constituent $_constituent = null;
+    protected ?Constituent $_constituent = null;
 
     /**
      * Returns details about a fund.
@@ -66,12 +66,13 @@ class Funds extends BaseEndpoint
      * @param array{id: int} $params An associative array
      *     - id: Format - int32. The fund system ID.
      *
-     * @return void Returned when the operation successfully deletes the fund.
+     * @return mixed Returned when the operation successfully deletes the
+     *   fund.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function deleteById(array $params): void
+    public function deleteById(array $params): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
@@ -86,12 +87,12 @@ class Funds extends BaseEndpoint
      * @param \Blackbaud\SKY\NXT\Data\Integration\Components\FundEdit
      *   $requestBody Description of changes for the fund.
      *
-     * @return void Returned when the operation succeeds.
+     * @return mixed Returned when the operation succeeds.
      *
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchById(array $params, FundEdit $requestBody): void
+    public function patchOnId(array $params, FundEdit $requestBody): mixed
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -117,7 +118,7 @@ class Funds extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): FundCollection
+    public function list_(array $params): FundCollection
     {
         assert(isset($params['fund_id']), new ArgumentException("Parameter `fund_id` is required"));
         assert(isset($params['description']), new ArgumentException("Parameter `description` is required"));
@@ -126,10 +127,10 @@ class Funds extends BaseEndpoint
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
         return new FundCollection($this->send("get", [], ["fund_id" => $params['fund_id'],
-        "description" => $params['description'],
-        "include_inactive" => $params['include_inactive'],
-        "limit" => $params['limit'],
-        "offset" => $params['offset']]));
+            "description" => $params['description'],
+            "include_inactive" => $params['include_inactive'],
+            "limit" => $params['limit'],
+            "offset" => $params['offset']]));
     }
 
     /**
@@ -145,7 +146,7 @@ class Funds extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(FundCreate $requestBody): PostResponse
+    public function post(FundCreate $requestBody): PostResponse
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

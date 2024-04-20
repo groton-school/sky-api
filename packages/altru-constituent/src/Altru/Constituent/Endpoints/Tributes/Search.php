@@ -47,7 +47,7 @@ class Search extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): TributeSearchCollection
+    public function list_(array $params): TributeSearchCollection
     {
         assert(isset($params['tribute_text']), new ArgumentException("Parameter `tribute_text` is required"));
         assert(isset($params['tributee_key_name']), new ArgumentException("Parameter `tributee_key_name` is required"));
@@ -64,17 +64,17 @@ class Search extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
         return new TributeSearchCollection($this->send("get", [], ["tribute_text" => $params['tribute_text'],
-        "tributee_key_name" => $params['tributee_key_name'],
-        "tributee_first_name" => $params['tributee_first_name'],
-        "tributee_lookup_id" => $params['tributee_lookup_id'],
-        "tribute_type" => $params['tribute_type'],
-        "acknowledgee_key_name" => $params['acknowledgee_key_name'],
-        "acknowledgee_first_name" => $params['acknowledgee_first_name'],
-        "date_filter" => $params['date_filter'],
-        "designation" => $params['designation'],
-        "site_id" => $params['site_id'],
-        "include_inactive" => $params['include_inactive'],
-        "exact__matchonly" => $params['exact__matchonly'],
-        "limit" => $params['limit']]));
+            "tributee_key_name" => $params['tributee_key_name'],
+            "tributee_first_name" => $params['tributee_first_name'],
+            "tributee_lookup_id" => $params['tributee_lookup_id'],
+            "tribute_type" => $params['tribute_type'],
+            "acknowledgee_key_name" => $params['acknowledgee_key_name'],
+            "acknowledgee_first_name" => $params['acknowledgee_first_name'],
+            "date_filter" => $params['date_filter'],
+            "designation" => $params['designation'],
+            "site_id" => $params['site_id'],
+            "include_inactive" => $params['include_inactive'],
+            "exact__matchonly" => $params['exact__matchonly'],
+            "limit" => $params['limit']]));
     }
 }

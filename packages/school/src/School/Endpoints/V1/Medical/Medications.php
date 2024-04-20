@@ -38,7 +38,7 @@ class Medications extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(StudentMedicationCreate $requestBody): int
+    public function post(StudentMedicationCreate $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
@@ -93,7 +93,7 @@ class Medications extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByMedicationId(array $params, StudentMedicationUpdate $requestBody): int
+    public function patchOnMedicationId(array $params, StudentMedicationUpdate $requestBody): int
     {
         assert(isset($params['medication_id']), new ArgumentException("Parameter `medication_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));

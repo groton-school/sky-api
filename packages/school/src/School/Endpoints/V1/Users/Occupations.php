@@ -35,7 +35,7 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function getByUserId(array $params): OccupationReadCollection
+    public function searchByUserId(array $params): OccupationReadCollection
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
@@ -66,7 +66,7 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postByUserId(array $params, OccupationCreate $requestBody): int
+    public function postToUserId(array $params, OccupationCreate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
@@ -107,7 +107,7 @@ class Occupations extends BaseEndpoint
         assert(isset($params['current']), new ArgumentException("Parameter `current` is required"));
 
         return $this->send("delete", ["{user_id}" => $params['user_id'],
-        "{occupation_id}" => $params['occupation_id']], ["current" => $params['current']]);
+            "{occupation_id}" => $params['occupation_id']], ["current" => $params['current']]);
     }
 
     /**
@@ -136,13 +136,13 @@ class Occupations extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchByUserIdAndOccupationId(array $params, OccupationUpdate $requestBody): int
+    public function patchOnUserIdAndOccupationId(array $params, OccupationUpdate $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['occupation_id']), new ArgumentException("Parameter `occupation_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
         return $this->send("patch", ["{user_id}" => $params['user_id'],
-        "{occupation_id}" => $params['occupation_id']], [], $requestBody);
+            "{occupation_id}" => $params['occupation_id']], [], $requestBody);
     }
 }

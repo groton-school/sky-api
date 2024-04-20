@@ -34,7 +34,7 @@ class Items extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function filterByBy(array $params): NewsItemCollection
+    public function list_(array $params): NewsItemCollection
     {
         assert(isset($params['categories']), new ArgumentException("Parameter `categories` is required"));
 

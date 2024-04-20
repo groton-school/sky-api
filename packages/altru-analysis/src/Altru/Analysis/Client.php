@@ -24,8 +24,8 @@ class Client extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\Altru\Analysis\Endpoints\Adhocqueries
+     * @var ?\Blackbaud\SKY\Altru\Analysis\Endpoints\Adhocqueries
      *   $_adhocqueries Routing class for the subnamespace `Adhocqueries`
      */
-    protected Adhocqueries $_adhocqueries = null;
+    protected ?Adhocqueries $_adhocqueries = null;
 }

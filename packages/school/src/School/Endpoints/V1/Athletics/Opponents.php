@@ -36,7 +36,7 @@ class Opponents extends BaseEndpoint
      * @return \Blackbaud\SKY\School\Components\OpponentFlyweightCollection
      *   Success
      */
-    public function getAllBy(): OpponentFlyweightCollection
+    public function list_(): OpponentFlyweightCollection
     {
         return new OpponentFlyweightCollection($this->send("get", [], []));
     }
@@ -67,7 +67,7 @@ class Opponents extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function postBy(OpponentUpdateModel $requestBody): int
+    public function post(OpponentUpdateModel $requestBody): int
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 

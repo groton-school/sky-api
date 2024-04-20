@@ -24,8 +24,8 @@ class Client extends BaseEndpoint
     ];
 
     /**
-     * @var \Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1 $_v1 Routing
+     * @var ?\Blackbaud\SKY\NXT\Data\Integration\Endpoints\V1 $_v1 Routing
      *   class for the subnamespace `V1`
      */
-    protected V1 $_v1 = null;
+    protected ?V1 $_v1 = null;
 }
