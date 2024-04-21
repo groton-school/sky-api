@@ -3,13 +3,13 @@
 namespace GrotonSchool\SKY\AppEngine;
 
 use Battis\LazySecrets\Cache;
-use Battis\OpenAPI\Client\TokenStorage as ClientTokenStorage;
+use Battis\OpenAPI\Client\TokenStorage;
 use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Token\AccessTokenInterface;
 
-class TokenStorage extends ClientTokenStorage
+class GoogleSecretsToken extends TokenStorage
 {
-    private const ACCESS_TOKEN = "BLACKBAUD_API_TOKEN";
+    private const ACCESS_TOKEN = 'BLACKBAUD_API_TOKEN';
 
     private Cache $secrets;
 
@@ -19,9 +19,9 @@ class TokenStorage extends ClientTokenStorage
     public function __construct(mixed $projectId)
     {
         $this->secrets =
-          $projectId instanceof Cache
-            ? $projectId
-            : new Cache($projectId ?? $_ENV["GOOGLE_CLOUD_PROJECT"]);
+            $projectId instanceof Cache
+                ? $projectId
+                : new Cache($projectId ?? $_ENV['GOOGLE_CLOUD_PROJECT']);
     }
 
     public function getToken(): ?AccessTokenInterface

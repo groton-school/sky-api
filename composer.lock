@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d875f52bc2fb23d65d56e99a7589c034",
+    "content-hash": "8c298611262ae8c76c2a475a33f7e45f",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -131,16 +131,56 @@
             "time": "2024-03-05T19:23:50+00:00"
         },
         {
-            "name": "battis/openapi-client-generator",
+            "name": "battis/openapi-client.base",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/battis/openapi-client.base.git",
+                "reference": "95618fdd333a13ac2152b398522cd94433d7f623"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/95618fdd333a13ac2152b398522cd94433d7f623",
+                "reference": "95618fdd333a13ac2152b398522cd94433d7f623",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Battis\\OpenAPI\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Seth Battis",
+                    "email": "seth@battis.net"
+                }
+            ],
+            "description": "Base for a PHP client for a RESTful API from its OpenAPI description file",
+            "support": {
+                "issues": "https://github.com/battis/openapi-client.base/issues",
+                "source": "https://github.com/battis/openapi-client.base/tree/v0.2.3"
+            },
+            "time": "2024-04-21T21:57:08+00:00"
+        },
+        {
+            "name": "battis/openapi-client.generator",
             "version": "v0.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/battis/openapi-client-generator.git",
+                "url": "https://github.com/battis/openapi-client.generator.git",
                 "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client-generator/zipball/4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
                 "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
                 "shasum": ""
             },
@@ -179,8 +219,8 @@
             ],
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
             "support": {
-                "issues": "https://github.com/battis/openapi-client-generator/issues",
-                "source": "https://github.com/battis/openapi-client-generator/tree/v0.2.1"
+                "issues": "https://github.com/battis/openapi-client.generator/issues",
+                "source": "https://github.com/battis/openapi-client.generator/tree/v0.2.1"
             },
             "time": "2024-04-20T14:57:22+00:00"
         },

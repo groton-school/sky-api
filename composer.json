@@ -12,7 +12,8 @@
     "ext-curl": "*",
     "battis/data-utilities": "^1.2",
     "battis/lazy-secrets": "^1.1",
-    "battis/openapi-client-generator": "^0.2",
+    "battis/openapi-client.generator": "^0.2",
+    "battis/openapi-client.base": "^0.2",
     "guzzlehttp/guzzle": "^7.4",
     "league/oauth2-client": "^2.6"
   },
