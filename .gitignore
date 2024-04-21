@@ -1,9 +1,12 @@
+.env
+.env.*
+!.env.example
 .DS_Store
 *.cache
 .cache
 /coverage/
-/docs/
 node_modules
-/tools/
-/var/
-/vendor/
+/tools
+var/*
+!var/README.md
+vendor

@@ -18,11 +18,11 @@ importers:
   examples/appengine-client:
     devDependencies:
       '@battis/partly-gcloudy':
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: file:../../../partly-gcloudy
+        version: file:../partly-gcloudy
       '@battis/qui-cli':
-        specifier: ^0.4.0
-        version: 0.4.0
+        specifier: ^0.4.1
+        version: 0.4.1
 
 packages:
 
@@ -75,8 +75,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.24.0':
-    resolution: {integrity: sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==}
+  '@babel/runtime@7.24.4':
+    resolution: {integrity: sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.0':
@@ -99,8 +99,8 @@ packages:
     resolution: {integrity: sha512-HiKv3lydmZqqzpc2uduYgPAR9xVu1wuLskjygDnKmNs05fgJ48PoHBdhLgdNbZ5K8/NB80Z+kty3eIttTEgOEg==}
     engines: {node: '>=12.17'}
 
-  '@battis/partly-gcloudy@0.4.0':
-    resolution: {integrity: sha512-rR7zbI4oKXhpYivsM0HYNvNsmtTfQxKlWfl5v01dz2S3i/DntfCBsa1cT4I7k93m+FtSHCI5NOvva/Tf8kLsVA==}
+  '@battis/partly-gcloudy@file:../partly-gcloudy':
+    resolution: {directory: ../partly-gcloudy, type: directory}
     engines: {node: '>=12.17'}
 
   '@battis/prettier-config@1.3.2':
@@ -111,8 +111,8 @@ packages:
     resolution: {integrity: sha512-GbbETeDVKHh2o6YIVNMppoecceqJJuexDxF500tneBG8oZIHSMxPO3c7y+ibhba6OhjSTAXCXQatRrfTvFZ2JA==}
     engines: {node: '>=12.17'}
 
-  '@battis/qui-cli@0.4.0':
-    resolution: {integrity: sha512-lR8PsDnRlF3g/DLq9OkCRa+er6yVi1mgpj5sLMNAffLLmsacD2aOqxXCtEIGhvyLtr+o4o7ziwmnJwabu0ULMA==}
+  '@battis/qui-cli@0.4.1':
+    resolution: {integrity: sha512-bwdWpRdjquZdoeg4M8R1I5CYDk3/lzmgxUWp7FwjA9OAURRgGrWIZdorhuRQj2Q93aeKCN5BQ/E+0xsvNB3BzQ==}
     engines: {node: '>=12.17'}
 
   '@battis/typescript-tricks@0.4.3':
@@ -202,8 +202,8 @@ packages:
     resolution: {integrity: sha512-RzlRISXWqIKEf83FDC9ZtJ3JvuK1l7aGpretf41BCWYrvla2wU8W8MTRNMiPrPJ+1SIqrRC1nZdZ60hD9hRXLg==}
     engines: {node: '>=14.18.0'}
 
-  '@inquirer/type@1.2.1':
-    resolution: {integrity: sha512-xwMfkPAxeo8Ji/IxfUSqzRi0/+F2GIqJmpc5/thelgMGsjNZcjDDRBO9TLXT1s/hdx/mK5QbVIvgoLIFgXhTMQ==}
+  '@inquirer/type@1.3.0':
+    resolution: {integrity: sha512-RW4Zf6RCTnInRaOZuRHTqAUl+v6VJuQGglir7nW2BkT3OXOphMhkIFhvFRjorBx2l0VwtC/M4No8vYR65TdN9Q==}
     engines: {node: '>=18'}
 
   '@isaacs/cliui@8.0.2':
@@ -280,8 +280,8 @@ packages:
   '@types/mute-stream@0.0.4':
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
 
-  '@types/node@20.11.27':
-    resolution: {integrity: sha512-qyUZfMnCg1KEz57r7pzFtSGt49f6RPkPBis3Vo4PbS7roQEDn22hiHzl/Lo1q4i4hDEgBJmBF/NTNg2XR0HbFg==}
+  '@types/node@20.12.7':
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -938,6 +938,9 @@ packages:
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
+  ms@2.1.3:
+    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
   mute-stream@1.0.0:
     resolution: {integrity: sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -1075,6 +1078,10 @@ packages:
   resolve@1.19.0:
     resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
 
+  resolve@1.22.8:
+    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
+    hasBin: true
+
   restore-cursor@4.0.0:
     resolution: {integrity: sha512-I9fPXU9geO9bHOt9pHHOhOkYerIMsmVaWB0rA2AI9ERh/+x/i7MV5HKBNrg+ljO5eoPVgCcnFuRjJ9uH6I/3eg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -1189,6 +1196,10 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
+  supports-preserve-symlinks-flag@1.0.0:
+    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
+    engines: {node: '>= 0.4'}
+
   text-hex@1.0.0:
     resolution: {integrity: sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==}
 
@@ -1267,8 +1278,8 @@ packages:
     resolution: {integrity: sha512-ajBj65K5I7denzer2IYW6+2bNIVqLGDHqDw3Ow8Ohh+vdW+rv4MZ6eiDvHoKhfJFZ2auyN8byXieDDJ96ViONg==}
     engines: {node: '>= 12.0.0'}
 
-  winston@3.12.0:
-    resolution: {integrity: sha512-OwbxKaOlESDi01mC9rkM0dQqQt2I8DAUMRLZ/HpbwvDXm85IryEHgoogy5fziQy38PntgZsLlhAYHz//UPHZ5w==}
+  winston@3.13.0:
+    resolution: {integrity: sha512-rwidmA1w3SE4j0E5MuIufFhyJPBDG7Nu71RkZor1p2+qHvJSZ9GYDA81AyleQcZbh/+V6HjeBdfnTZJm9rSeQQ==}
     engines: {node: '>= 12.0.0'}
 
   wrap-ansi@6.2.0:
@@ -1349,7 +1360,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.17.0
 
-  '@babel/runtime@7.24.0':
+  '@babel/runtime@7.24.4':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -1399,13 +1410,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@battis/partly-gcloudy@0.4.0':
+  '@battis/partly-gcloudy@file:../partly-gcloudy':
     dependencies:
       '@battis/qui-cli': 0.3.9
       '@battis/typescript-tricks': 0.4.3
       '@inquirer/core': 3.1.2
       '@inquirer/select': 1.3.3
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       app-root-path: 3.1.0
       lodash: 4.17.21
       rword: 3.2.1
@@ -1434,9 +1445,9 @@ snapshots:
       ora: 6.3.1
       shelljs: 0.8.5
       strip-ansi: 7.1.0
-      winston: 3.12.0
+      winston: 3.13.0
 
-  '@battis/qui-cli@0.4.0':
+  '@battis/qui-cli@0.4.1':
     dependencies:
       '@inquirer/prompts': 2.3.1
       app-root-path: 3.1.0
@@ -1450,7 +1461,7 @@ snapshots:
       ora: 6.3.1
       shelljs: 0.8.5
       strip-ansi: 7.1.0
-      winston: 3.12.0
+      winston: 3.13.0
 
   '@battis/typescript-tricks@0.4.3': {}
 
@@ -1500,7 +1511,7 @@ snapshots:
   '@inquirer/checkbox@1.5.2':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       figures: 3.2.0
@@ -1508,14 +1519,14 @@ snapshots:
   '@inquirer/confirm@2.0.17':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       chalk: 4.1.2
 
   '@inquirer/core@2.3.1':
     dependencies:
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       '@types/mute-stream': 0.0.1
-      '@types/node': 20.11.27
+      '@types/node': 20.12.7
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -1530,9 +1541,9 @@ snapshots:
 
   '@inquirer/core@3.1.2':
     dependencies:
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       '@types/mute-stream': 0.0.1
-      '@types/node': 20.11.27
+      '@types/node': 20.12.7
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -1546,9 +1557,9 @@ snapshots:
 
   '@inquirer/core@6.0.0':
     dependencies:
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.11.27
+      '@types/node': 20.12.7
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -1564,27 +1575,27 @@ snapshots:
   '@inquirer/editor@1.2.15':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       chalk: 4.1.2
       external-editor: 3.1.0
 
   '@inquirer/expand@1.1.16':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       chalk: 4.1.2
       figures: 3.2.0
 
   '@inquirer/input@1.2.16':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       chalk: 4.1.2
 
   '@inquirer/password@1.1.16':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
 
@@ -1603,18 +1614,18 @@ snapshots:
   '@inquirer/rawlist@1.2.16':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       chalk: 4.1.2
 
   '@inquirer/select@1.3.3':
     dependencies:
       '@inquirer/core': 6.0.0
-      '@inquirer/type': 1.2.1
+      '@inquirer/type': 1.3.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       figures: 3.2.0
 
-  '@inquirer/type@1.2.1': {}
+  '@inquirer/type@1.3.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -1695,13 +1706,13 @@ snapshots:
 
   '@types/mute-stream@0.0.1':
     dependencies:
-      '@types/node': 20.11.27
+      '@types/node': 20.12.7
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.11.27
+      '@types/node': 20.12.7
 
-  '@types/node@20.11.27':
+  '@types/node@20.12.7':
     dependencies:
       undici-types: 5.26.5
 
@@ -2335,7 +2346,7 @@ snapshots:
       '@colors/colors': 1.6.0
       '@types/triple-beam': 1.3.5
       fecha: 4.2.3
-      ms: 2.1.2
+      ms: 2.1.3
       safe-stable-stringify: 2.4.3
       triple-beam: 1.4.1
 
@@ -2378,6 +2389,8 @@ snapshots:
   moo@0.5.2: {}
 
   ms@2.1.2: {}
+
+  ms@2.1.3: {}
 
   mute-stream@1.0.0: {}
 
@@ -2500,7 +2513,7 @@ snapshots:
 
   rechoir@0.6.2:
     dependencies:
-      resolve: 1.19.0
+      resolve: 1.22.8
 
   regenerator-runtime@0.14.1: {}
 
@@ -2512,6 +2525,12 @@ snapshots:
     dependencies:
       is-core-module: 2.13.1
       path-parse: 1.0.7
+
+  resolve@1.22.8:
+    dependencies:
+      is-core-module: 2.13.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
 
   restore-cursor@4.0.0:
     dependencies:
@@ -2613,6 +2632,8 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
+  supports-preserve-symlinks-flag@1.0.0: {}
+
   text-hex@1.0.0: {}
 
   text-table@0.2.0: {}
@@ -2676,7 +2697,7 @@ snapshots:
       readable-stream: 3.6.2
       triple-beam: 1.4.1
 
-  winston@3.12.0:
+  winston@3.13.0:
     dependencies:
       '@colors/colors': 1.6.0
       '@dabh/diagnostics': 2.0.3
@@ -2716,7 +2737,7 @@ snapshots:
 
   yup@0.32.9:
     dependencies:
-      '@babel/runtime': 7.24.0
+      '@babel/runtime': 7.24.4
       '@types/lodash': 4.17.0
       lodash: 4.17.21
       lodash-es: 4.17.21
