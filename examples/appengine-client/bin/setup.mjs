@@ -46,6 +46,7 @@ async function guideBlackbaudAppCreation({
 
 (async () => {
   const args = await gcloud.init({
+    env: { loadDotEnv: 'examples/appengine-client/.env' },
     args: {
       options,
       flags: {
@@ -113,14 +114,6 @@ async function guideBlackbaudAppCreation({
       name: 'BLACKBAUD_REDIRECT_URL',
       value: blackbaud.redirectUrl
     });
-    await gcloud.secrets.set({
-      name: 'GOOGLE_DELEGATED_ADMIN',
-      value: args.values.delegatedAdmin
-    });
-    await gcloud.secrets.set({
-      name: 'GOOGLE_CREDENTIALS',
-      path: credentialsPath
-    });
     fs.unlinkSync(credentialsPath);
     await gcloud.secrets.enableAppEngineAccess();
 
@@ -130,6 +123,5 @@ async function guideBlackbaudAppCreation({
         url
       )}`
     });
-
   }
 })();
