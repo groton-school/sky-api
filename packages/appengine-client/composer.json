@@ -10,7 +10,7 @@
   ],
   "require": {
     "battis/lazy-secrets": "^1.1",
-    "battis/openapi-client-generator": "^0.1"
+    "battis/openapi-client-generator": "^0.2"
   },
   "autoload": {
     "psr-4": {
