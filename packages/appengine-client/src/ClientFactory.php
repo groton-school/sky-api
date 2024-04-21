@@ -18,7 +18,7 @@ class ClientFactory
     private const REDIRECT_URL = 'BLACKBAUD_REDIRECT_URL';
 
     private Cache $secrets;
-    private TokenStorage $storage;
+    private GoogleSecretsToken $storage;
 
     public function __construct(?string $projectId = null)
     {
