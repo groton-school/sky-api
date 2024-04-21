@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "battis/openapi-client-generator": "^0.2",
+    "battis/openapi-client.base": "^0.2",
     "groton-school/oauth2-blackbaudsky": "^0.2"
   }
 }
