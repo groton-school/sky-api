@@ -1,7 +1,9 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 define('PUBLIC_PATH', __DIR__ . '/../public');
-define('WORKFLOW_PATH', __DIR__);
+define('WORKFLOW_PATH', __DIR__ . '/Actions');
 
 $endpoint = @parse_url($_SERVER['REQUEST_URI'])['path'];
 if (is_file(PUBLIC_PATH . $endpoint)) {
