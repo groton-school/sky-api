@@ -1,9 +1,7 @@
 runtime: php82
 basic_scaling:
   max_instances: 1
-entrypoint: serve public/index.php
+entrypoint: serve src/app.php
 handlers:
-  - url: /assets
-    static_dir: public/assets
-  - url: .*
-    script: auto
+  - url: (.+)
+    script: public/\1

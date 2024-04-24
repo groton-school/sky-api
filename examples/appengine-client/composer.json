@@ -9,8 +9,8 @@
     }
   ],
   "require": {
-    "groton-school/sky-api.school": "^0.2.8",
-    "groton-school/sky-api-appengine": "^0.2.8"
+    "groton-school/sky-api.school": "^0.2",
+    "groton-school/sky-api-appengine": "^0.2"
   },
   "scripts": {
     "setup": [

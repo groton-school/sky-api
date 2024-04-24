@@ -5,5 +5,3 @@
 !/php.ini
 !/public
 !/src
-/src/*
-!/src/server
