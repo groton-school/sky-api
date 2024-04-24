@@ -19,11 +19,18 @@ class ClientFactory
 
     private Cache $secrets;
     private GoogleSecretsToken $storage;
+    private BlackbaudSKY $oauth2;
 
     public function __construct(?string $projectId = null)
     {
         $this->secrets = new Cache($projectId ?? $_ENV['GOOGLE_CLOUD_PROJECT']);
-        $this->storage = new GoogleSecretsToken($this->secrets);
+        $this->storage = new GoogleSecretsToken($this->secrets, $this->oauth2);
+        $this->oauth2 = new BlackbaudSKY([
+            BlackbaudSKY::ACCESS_KEY => $this->secrets->get(self::ACCESS_KEY),
+            'clientId' => $this->secrets->get(self::CLIENT_ID),
+            'clientSecret' => $this->secrets->get(self::CLIENT_SECRET),
+            'redirectUri' => $this->secrets->get(self::REDIRECT_URL),
+        ]);
     }
 
     /**
@@ -35,18 +42,6 @@ class ClientFactory
      */
     public function get(string $class): BaseEndpoint
     {
-        return new $class(
-            new Client(
-                new BlackbaudSKY([
-                    BlackbaudSKY::ACCESS_KEY => $this->secrets->get(
-                        self::ACCESS_KEY
-                    ),
-                    'clientId' => $this->secrets->get(self::CLIENT_ID),
-                    'clientSecret' => $this->secrets->get(self::CLIENT_SECRET),
-                    'redirectUri' => $this->secrets->get(self::REDIRECT_URL),
-                ]),
-                $this->storage
-            )
-        );
+        return new $class(new Client($this->oauth2, $this->storage));
     }
 }

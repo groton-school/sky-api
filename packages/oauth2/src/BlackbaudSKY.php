@@ -12,21 +12,21 @@ use Psr\Http\Message\ResponseInterface;
 class BlackbaudSKY extends AbstractProvider
 {
     use ArrayAccessorTrait;
-    public const ACCESS_KEY = "Bb-Api-Subscription-Key";
-    public const ACCESS_TOKEN = "access_token";
+    public const ACCESS_KEY = 'Bb-Api-Subscription-Key';
+    public const ACCESS_TOKEN = 'access_token';
 
-    public const SESSION_STATE = "oauth2_state";
+    public const SESSION_STATE = 'oauth2_state';
 
-    public const ARG_AUTH_CODE = "authorization_code";
+    public const ARG_AUTH_CODE = 'authorization_code';
 
-    public const PARAM_CODE = "code";
-    public const PARAM_STATE = "state";
+    public const PARAM_CODE = 'code';
+    public const PARAM_STATE = 'state';
 
-    public const OPT_PARAMS = "params";
-    public const OPT_REDIRECT_URI = "redirect_uri";
-    public const OPT_AUTH_CODE_CALLBACK = "authorization_code_callback";
-    public const OPT_ACCESS_TOKEN_CALLBACK = "access_token_callback";
-    public const OPT_ERROR_CALLBACK = "error_callback";
+    public const OPT_PARAMS = 'params';
+    public const OPT_REDIRECT_URI = 'redirect_uri';
+    public const OPT_AUTH_CODE_CALLBACK = 'authorization_code_callback';
+    public const OPT_ACCESS_TOKEN_CALLBACK = 'access_token_callback';
+    public const OPT_ERROR_CALLBACK = 'error_callback';
 
     private $accessKey;
 
@@ -38,7 +38,7 @@ class BlackbaudSKY extends AbstractProvider
         parent::__construct($options, $collaborators);
 
         if (empty($options[self::ACCESS_KEY])) {
-            throw new Exception("Blackbaud access key required");
+            throw new Exception('Blackbaud access key required');
         } else {
             $this->accessKey = $options[self::ACCESS_KEY];
         }
@@ -50,17 +50,17 @@ class BlackbaudSKY extends AbstractProvider
 
     public function getBaseAuthorizationUrl()
     {
-        return "https://oauth2.sky.blackbaud.com/authorization";
+        return 'https://oauth2.sky.blackbaud.com/authorization';
     }
 
     public function getBaseAccessTokenUrl(array $params)
     {
-        return "https://oauth2.sky.blackbaud.com/token";
+        return 'https://oauth2.sky.blackbaud.com/token';
     }
 
     public function getBaseApiUrl()
     {
-        return "https://api.sky.blackbaud.com";
+        return 'https://api.sky.blackbaud.com';
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
@@ -86,12 +86,12 @@ class BlackbaudSKY extends AbstractProvider
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-      self::ACCESS_KEY => $this->accessKey,
-      "Authorization" => "Bearer " . $token,
-    ];
+            self::ACCESS_KEY => $this->accessKey,
+            'Authorization' => 'Bearer ' . $token,
+        ];
     }
 
-    public function getAccessToken($grant = "", array $options = [])
+    public function getAccessToken($grant = '', array $options = [])
     {
         if (!empty($grant)) {
             $this->accessToken = parent::getAccessToken($grant, $options);
@@ -99,7 +99,7 @@ class BlackbaudSKY extends AbstractProvider
         } elseif (!empty($this->accessToken)) {
             return $this->accessToken->getToken();
         } else {
-            throw new Exception("Stored access token or grant type required");
+            throw new Exception('Stored access token or grant type required');
         }
     }
 
@@ -117,7 +117,7 @@ class BlackbaudSKY extends AbstractProvider
             if ($this->accessToken) {
                 $token = $this->accessToken;
             } else {
-                throw new Exception("No access token provided or cached");
+                throw new Exception('No access token provided or cached');
             }
         }
         return new SkyAPIEndpoint($this, $path, $token);
