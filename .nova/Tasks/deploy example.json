@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "cd examples\/appengine-client\nsource .env\ngcloud app deploy --project=$PROJECT --quiet"
+    }
+  },
+  "openLogOnRun" : "start"
+}

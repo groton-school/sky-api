@@ -27,9 +27,10 @@ class GoogleSecretsToken extends TokenStorage
     public function getToken(): ?AccessTokenInterface
     {
         $result = $this->secrets->get(self::ACCESS_TOKEN);
+        $options = json_decode($result);
         if ($result !== null) {
             /** @psalm-suppress MixedArgument */
-            return new AccessToken($result);
+            return new AccessToken($options);
         }
         return null;
     }
