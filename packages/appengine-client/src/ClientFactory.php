@@ -24,13 +24,13 @@ class ClientFactory
     public function __construct(?string $projectId = null)
     {
         $this->secrets = new Cache($projectId ?? $_ENV['GOOGLE_CLOUD_PROJECT']);
-        $this->storage = new GoogleSecretsToken($this->secrets, $this->oauth2);
         $this->oauth2 = new BlackbaudSKY([
             BlackbaudSKY::ACCESS_KEY => $this->secrets->get(self::ACCESS_KEY),
             'clientId' => $this->secrets->get(self::CLIENT_ID),
             'clientSecret' => $this->secrets->get(self::CLIENT_SECRET),
             'redirectUri' => $this->secrets->get(self::REDIRECT_URL),
         ]);
+        $this->storage = new GoogleSecretsToken($this->secrets, $this->oauth2);
     }
 
     /**
