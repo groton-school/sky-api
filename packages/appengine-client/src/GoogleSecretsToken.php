@@ -4,6 +4,7 @@ namespace GrotonSchool\SKY\AppEngine;
 
 use Battis\LazySecrets\Cache;
 use Battis\OpenAPI\Client\TokenStorage;
+use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Token\AccessTokenInterface;
 
 class GoogleSecretsToken extends TokenStorage
@@ -25,7 +26,11 @@ class GoogleSecretsToken extends TokenStorage
 
     public function getToken(): ?AccessTokenInterface
     {
-        return $this->secrets->get(self::ACCESS_TOKEN);
+        $result = $this->secrets->get(self::ACCESS_TOKEN);
+        if ($result != null) {
+            return new AccessToken($result);
+        }
+        return null;
     }
 
     public function setToken(AccessTokenInterface $token): bool
