@@ -2,7 +2,7 @@
   "actions" : {
     "run" : {
       "enabled" : true,
-      "script" : "cd examples\/appengine-client\nsource .env\ngcloud app deploy --project=$PROJECT --quiet"
+      "script" : "example\/sky-api.appengine-client\/bin\/deploy.mjs -v"
     }
   },
   "openLogOnRun" : "start"
