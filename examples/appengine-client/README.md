@@ -1,4 +1,4 @@
-# groton-school/sky-api-appengine Example
+# groton-school/sky-api.appengine Example
 
 Simple Google App Engine app demonstrating how to configure access to SKY API.
 
