@@ -5,7 +5,9 @@
 *.cache
 .cache
 /coverage/
+/examples/**/composer.lock
 node_modules
+/packages/**/composer.lock
 /tools
 var/*
 !var/README.md
