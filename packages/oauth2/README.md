@@ -1,11 +1,12 @@
 # Blackbaud SKY API OAuth 2.0 Client
 
-TThis package provides Blackbaud SKY OAuth 2.0 support for the [PHP League's OAuth 2.0 Client](https://oauth2-client.thephpleague.com/)
+This package provides Blackbaud SKY OAuth 2.0 support for the [PHP League's OAuth 2.0 Client](https://oauth2-client.thephpleague.com/)
+
+See [this example](https://github.com/groton-school/sky-api/tree/main/examples/oauth2) for usage.
 
 [![Version](http://poser.pugx.org/groton-school/oauth2-blackbaudsky/version)](https://packagist.org/packages/groton-school/oauth2-blackbaudsky)
 [![License](http://poser.pugx.org/groton-school/oauth2-blackbaudsky/license)](https://packagist.org/packages/groton-school/oauth2-blackbaudsky)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/groton-school/OAuth2-BlackbaudSKY/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/groton-school/OAuth2-BlackbaudSKY/?branch=main)
-[![Code Coverage](https://scrutinizer-ci.com/g/groton-school/OAuth2-BlackbaudSKY/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/groton-school/OAuth2-BlackbaudSKY/?branch=main)
+
 ---
 
 This package is compliant with [PSR-1][], [PSR-2][], [PSR-4][], and [PSR-7][]. If you notice compliance oversights, please send a patch via pull request. If you're interesting in contributing to this library, please take a look at our [contributing guidelines](CONTRIBUTING.md).
@@ -14,13 +15,13 @@ This package is compliant with [PSR-1][], [PSR-2][], [PSR-4][], and [PSR-7][]. I
 
 The following versions of PHP are supported.
 
-* PHP 5.6
-* PHP 7.0
-* PHP 7.1
-* PHP 7.2
-* PHP 7.3
-* PHP 7.4
-* PHP 8.0
+- PHP 5.6
+- PHP 7.0
+- PHP 7.1
+- PHP 7.2
+- PHP 7.3
+- PHP 7.4
+- PHP 8.0
 
 ## Usage
 
@@ -38,76 +39,73 @@ Now, you don't really have an account on Lock'd In, but for the sake of this exa
 
 ```php
 $sky = new \GrotonSchool\OAuth2\Client\Provider\BlackbaudSKY([
-    BlackbaudSKY::ACCESS_KEY  => 'key',        // A Blackbaud SKY API subscription access key 
-    'clientId'                => 'demoapp',    // The client ID assigned to your app by Blackbaud
-    'clientSecret'            => 'demopass',   // The client password assigned to your app by Blackbaud
-    'redirectUri'             => 'http://example.com/your-redirect-url/'
+  BlackbaudSKY::ACCESS_KEY => 'key', // A Blackbaud SKY API subscription access key
+  'clientId' => 'demoapp', // The client ID assigned to your app by Blackbaud
+  'clientSecret' => 'demopass', // The client password assigned to your app by Blackbaud
+  'redirectUri' => 'http://example.com/your-redirect-url/',
 ]);
 
 // If we don't have an authorization code then get one
 if (!isset($_GET['code'])) {
+  // Fetch the authorization URL from the provider; this returns the
+  // urlAuthorize option and generates and applies any necessary parameters
+  // (e.g. state).
+  $authorizationUrl = $sky->getAuthorizationUrl();
 
-    // Fetch the authorization URL from the provider; this returns the
-    // urlAuthorize option and generates and applies any necessary parameters
-    // (e.g. state).
-    $authorizationUrl = $sky->getAuthorizationUrl();
+  // Get the state generated for you and store it to the session.
+  $_SESSION['oauth2state'] = $sky->getState();
 
-    // Get the state generated for you and store it to the session.
-    $_SESSION['oauth2state'] = $sky->getState();
+  // Redirect the user to the authorization URL.
+  header('Location: ' . $authorizationUrl);
+  exit();
 
-    // Redirect the user to the authorization URL.
-    header('Location: ' . $authorizationUrl);
-    exit;
+  // Check given state against previously stored one to mitigate CSRF attack
+} elseif (
+  empty($_GET['state']) ||
+  (isset($_SESSION['oauth2state']) &&
+    $_GET['state'] !== $_SESSION['oauth2state'])
+) {
+  if (isset($_SESSION['oauth2state'])) {
+    unset($_SESSION['oauth2state']);
+  }
 
-// Check given state against previously stored one to mitigate CSRF attack
-} elseif (empty($_GET['state']) || (isset($_SESSION['oauth2state']) && $_GET['state'] !== $_SESSION['oauth2state'])) {
-
-    if (isset($_SESSION['oauth2state'])) {
-        unset($_SESSION['oauth2state']);
-    }
-    
-    exit('Invalid state');
-
+  exit('Invalid state');
 } else {
+  try {
+    // Try to get an access token using the authorization code grant.
+    $accessToken = $sky->getAccessToken('authorization_code', [
+      'code' => $_GET['code'],
+    ]);
 
-    try {
+    // We have an access token, which we may use in authenticated
+    // requests against the service provider's API.
+    echo 'Access Token: ' . $accessToken->getToken() . '<br>';
+    echo 'Refresh Token: ' . $accessToken->getRefreshToken() . '<br>';
+    echo 'Expired in: ' . $accessToken->getExpires() . '<br>';
+    echo 'Already expired? ' .
+      ($accessToken->hasExpired() ? 'expired' : 'not expired') .
+      '<br>';
 
-        // Try to get an access token using the authorization code grant.
-        $accessToken = $sky->getAccessToken('authorization_code', [
-            'code' => $_GET['code']
-        ]);
+    // The provider provides a way to get an authenticated API request for
+    // the service, using the access token; it returns an object conforming
+    // to Psr\Http\Message\RequestInterface.
+    $request = $sky->getAuthenticatedRequest(
+      'GET',
+      'https://api.sky.blackbaud.com/school/v1/academics/departments',
+      $accessToken
+    );
 
-        // We have an access token, which we may use in authenticated
-        // requests against the service provider's API.
-        echo 'Access Token: ' . $accessToken->getToken() . "<br>";
-        echo 'Refresh Token: ' . $accessToken->getRefreshToken() . "<br>";
-        echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
-        echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
+    // For convenience, the provider also wraps endpoints with a Guzzle client
+    $school = $sky->endpoint('school/v1');
+    var_export($school->get('levels'));
 
-        // The provider provides a way to get an authenticated API request for
-        // the service, using the access token; it returns an object conforming
-        // to Psr\Http\Message\RequestInterface.
-        $request = $sky->getAuthenticatedRequest(
-            'GET',
-            'https://api.sky.blackbaud.com/school/v1/academics/departments',
-            $accessToken
-        );
-
-        // For convenience, the provider also wraps endpoints with a Guzzle client
-        $school = $sky->endpoint('school/v1');
-        var_export($school->get('levels'));
-
-        // ...and those endpoints can also nest further endpoints
-        $academics = $school->endpoint('academics');
-        var_export($academics->get('departments'));
-
-    } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
-
-        // Failed to get the access token or user details.
-        exit($e->getMessage());
-
-    }
-
+    // ...and those endpoints can also nest further endpoints
+    $academics = $school->endpoint('academics');
+    var_export($academics->get('departments'));
+  } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+    // Failed to get the access token or user details.
+    exit($e->getMessage());
+  }
 }
 ```
 
@@ -119,19 +117,19 @@ _This example uses [Brent Shaffer's](https://github.com/bshaffer) demo OAuth 2.0
 
 ```php
 $sky = new \League\OAuth2\Client\Provider\GenericProvider([
-    BlackbaudSKY::ACCESS_KEY  => 'key',        // A Blackbaud SKY API subscription access key 
-    'clientId'                => 'demoapp',    // The client ID assigned to your app by Blackbaud
-    'clientSecret'            => 'demopass'   // The client password assigned to your app by Blackbaud
+  BlackbaudSKY::ACCESS_KEY => 'key', // A Blackbaud SKY API subscription access key
+  'clientId' => 'demoapp', // The client ID assigned to your app by Blackbaud
+  'clientSecret' => 'demopass', // The client password assigned to your app by Blackbaud
 ]);
 
 $existingAccessToken = getAccessTokenFromYourDataStore();
 
 if ($existingAccessToken->hasExpired()) {
-    $newAccessToken = $sky->getAccessToken('refresh_token', [
-        'refresh_token' => $existingAccessToken->getRefreshToken()
-    ]);
+  $newAccessToken = $sky->getAccessToken('refresh_token', [
+    'refresh_token' => $existingAccessToken->getRefreshToken(),
+  ]);
 
-    // Purge old access token and store new access token to your data store.
+  // Purge old access token and store new access token to your data store.
 }
 ```
 
@@ -139,9 +137,9 @@ if ($existingAccessToken->hasExpired()) {
 
 It is possible to use a proxy to debug HTTP calls made to a provider. All you need to do is set the `proxy` and `verify` options when creating your Provider instance. Make sure you enable SSL proxying in your proxy.
 
-``` php
+```php
 $sky = new \League\OAuth2\Client\Provider\GenericProvider([
-    BlackbaudSKY::ACCESS_KEY  => 'key',        // A Blackbaud SKY API subscription access key 
+    BlackbaudSKY::ACCESS_KEY  => 'key',        // A Blackbaud SKY API subscription access key
     'clientId'                => 'demoapp',    // The client ID assigned to your app by Blackbaud
     'clientSecret'            => 'demopass',   // The client password assigned to your app by Blackbaud
     'redirectUri'             => 'http://example.com/your-redirect-url/'
@@ -154,14 +152,13 @@ $sky = new \League\OAuth2\Client\Provider\GenericProvider([
 
 Via Composer
 
-``` bash
+```bash
 $ composer require groton-school/oauth2-blackbaudsky
 ```
 
 ## License
 
 The MIT License (MIT). Please see [License File](https://github.com/thephpleague/oauth2-client/blob/master/LICENSE) for more information.
-
 
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
