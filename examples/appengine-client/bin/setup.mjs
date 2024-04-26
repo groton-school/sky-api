@@ -2,7 +2,10 @@
 import options from './options.mjs';
 import gcloud from '@battis/partly-gcloudy';
 import cli from '@battis/qui-cli';
-import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 async function guideBlackbaudAppCreation({
   url,
@@ -46,7 +49,7 @@ async function guideBlackbaudAppCreation({
 
 (async () => {
   const args = await gcloud.init({
-    env: { loadDotEnv: 'examples/appengine-client/.env' },
+    env: { root: path.join(__dirname, '..') },
     args: {
       options,
       flags: {
@@ -74,21 +77,7 @@ async function guideBlackbaudAppCreation({
       },
       deploy: args.values.deploy
     });
-
-    // must create an instance so that IAP can be configured
-    if (!args.values.built) {
-      cli.shell.exec('pnpm run build');
-    }
-    if (!args.values.deployed) {
-      cli.shell.exec('pnpm run deploy');
-    }
-
-    // enable IAP to limit access to app
-    await gcloud.iap.enable({
-      applicationTitle: project.name,
-      supportEmail: args.values.supportEmail,
-      users: args.values.users
-    });
+    const url = `https://${appEngine.defaultHostname}`;
 
     // guide storage of Blackbaud credentials in Secret Manager, SKY App creation and configuration
     const blackbaud = await guideBlackbaudAppCreation({
@@ -101,7 +90,6 @@ async function guideBlackbaudAppCreation({
       name: 'BLACKBAUD_ACCESS_KEY',
       value: blackbaud.accessKey
     });
-    await gcloud.secrets.set({ name: 'BLACKBAUD_API_TOKEN', value: 'null' });
     await gcloud.secrets.set({
       name: 'BLACKBAUD_CLIENT_ID',
       value: blackbaud.clientId
@@ -114,14 +102,6 @@ async function guideBlackbaudAppCreation({
       name: 'BLACKBAUD_REDIRECT_URL',
       value: blackbaud.redirectUrl
     });
-    fs.unlinkSync(credentialsPath);
     await gcloud.secrets.enableAppEngineAccess();
-
-    // authorize the app to use Blackbaud SKY API manually
-    await cli.prompts.confirm({
-      message: `Confirm that you have authorized the app at ${cli.colors.url(
-        url
-      )}`
-    });
   }
 })();
