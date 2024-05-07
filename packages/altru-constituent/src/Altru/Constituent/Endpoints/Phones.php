@@ -56,7 +56,7 @@ class Phones extends BaseEndpoint
     {
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
 
-        return new ConstituentPhone($this->send("get", ["{phone_id}" => $params['phone_id']], []));
+        return new ConstituentPhone($this->send("get", ["phone_id" => $params['phone_id']], []));
     }
 
     /**
@@ -76,7 +76,7 @@ class Phones extends BaseEndpoint
     {
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
 
-        return $this->send("delete", ["{phone_id}" => $params['phone_id']], []);
+        return $this->send("delete", ["phone_id" => $params['phone_id']], []);
     }
 
     /**
@@ -99,6 +99,6 @@ class Phones extends BaseEndpoint
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{phone_id}" => $params['phone_id']], [], $requestBody);
+        return $this->send("patch", ["phone_id" => $params['phone_id']], [], $requestBody);
     }
 }

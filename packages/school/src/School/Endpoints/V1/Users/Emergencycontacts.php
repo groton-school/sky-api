@@ -75,6 +75,6 @@ class Emergencycontacts extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new EmergencyContactList($this->send("get", ["{user_id}" => $params['user_id']], []));
+        return new EmergencyContactList($this->send("get", ["user_id" => $params['user_id']], []));
     }
 }

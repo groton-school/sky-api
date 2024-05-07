@@ -44,7 +44,7 @@ class Prospectplanlist extends BaseEndpoint
         assert(isset($params['include_historical_plans']), new ArgumentException("Parameter `include_historical_plans` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentFundraiserListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["site_filter_mode" => $params['site_filter_mode'],
+        return new ConstituentFundraiserListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["site_filter_mode" => $params['site_filter_mode'],
             "sites_selected" => $params['sites_selected'],
             "include_historical_plans" => $params['include_historical_plans'],
             "limit" => $params['limit']]));

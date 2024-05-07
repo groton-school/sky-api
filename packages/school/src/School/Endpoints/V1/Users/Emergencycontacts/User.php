@@ -44,6 +44,6 @@ class User extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
+        return $this->send("post", ["user_id" => $params['user_id']], [], $requestBody);
     }
 }

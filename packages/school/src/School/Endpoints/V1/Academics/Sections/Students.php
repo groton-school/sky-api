@@ -42,7 +42,7 @@ class Students extends BaseEndpoint
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
 
-        return new StudentCollection($this->send("get", ["{section_id}" => $params['section_id']], []));
+        return new StudentCollection($this->send("get", ["section_id" => $params['section_id']], []));
     }
 
     /**

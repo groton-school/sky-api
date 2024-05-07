@@ -57,7 +57,7 @@ class Constituentattributes extends BaseEndpoint
     {
         assert(isset($params['constituent_attribute_id']), new ArgumentException("Parameter `constituent_attribute_id` is required"));
 
-        return new ConstituentAttribute($this->send("get", ["{constituent_attribute_id}" => $params['constituent_attribute_id']], []));
+        return new ConstituentAttribute($this->send("get", ["constituent_attribute_id" => $params['constituent_attribute_id']], []));
     }
 
     /**
@@ -77,7 +77,7 @@ class Constituentattributes extends BaseEndpoint
     {
         assert(isset($params['constituent_attribute_id']), new ArgumentException("Parameter `constituent_attribute_id` is required"));
 
-        return $this->send("delete", ["{constituent_attribute_id}" => $params['constituent_attribute_id']], []);
+        return $this->send("delete", ["constituent_attribute_id" => $params['constituent_attribute_id']], []);
     }
 
     /**
@@ -101,6 +101,6 @@ class Constituentattributes extends BaseEndpoint
         assert(isset($params['constituent_attribute_id']), new ArgumentException("Parameter `constituent_attribute_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{constituent_attribute_id}" => $params['constituent_attribute_id']], [], $requestBody);
+        return $this->send("patch", ["constituent_attribute_id" => $params['constituent_attribute_id']], [], $requestBody);
     }
 }

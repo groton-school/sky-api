@@ -52,6 +52,6 @@ class LineItems extends BaseEndpoint
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new LineItemsOutputModel($this->send("get", ["{class_id}" => $params['class_id']], []));
+        return new LineItemsOutputModel($this->send("get", ["class_id" => $params['class_id']], []));
     }
 }

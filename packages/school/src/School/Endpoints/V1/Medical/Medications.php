@@ -69,7 +69,7 @@ class Medications extends BaseEndpoint
     {
         assert(isset($params['medication_id']), new ArgumentException("Parameter `medication_id` is required"));
 
-        return $this->send("delete", ["{medication_id}" => $params['medication_id']], []);
+        return $this->send("delete", ["medication_id" => $params['medication_id']], []);
     }
 
     /**
@@ -98,6 +98,6 @@ class Medications extends BaseEndpoint
         assert(isset($params['medication_id']), new ArgumentException("Parameter `medication_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{medication_id}" => $params['medication_id']], [], $requestBody);
+        return $this->send("patch", ["medication_id" => $params['medication_id']], [], $requestBody);
     }
 }

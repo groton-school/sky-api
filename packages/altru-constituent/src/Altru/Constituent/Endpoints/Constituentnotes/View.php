@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
 
-        return new ConstituentNoteView($this->send("get", ["{constituent_note_id}" => $params['constituent_note_id']], []));
+        return new ConstituentNoteView($this->send("get", ["constituent_note_id" => $params['constituent_note_id']], []));
     }
 }

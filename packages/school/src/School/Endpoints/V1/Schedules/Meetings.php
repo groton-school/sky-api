@@ -133,7 +133,7 @@ class Meetings extends BaseEndpoint
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new StudentScheduleCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $params['start_date'],
+        return new StudentScheduleCollection($this->send("get", ["student_id" => $params['student_id']], ["start_date" => $params['start_date'],
             "end_date" => $params['end_date']]));
     }
 }

@@ -45,7 +45,7 @@ class LineItems extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new LineItemOutputModel($this->send("get", ["{id}" => $params['id']], []));
+        return new LineItemOutputModel($this->send("get", ["id" => $params['id']], []));
     }
 
     /**
@@ -67,6 +67,6 @@ class LineItems extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new LineItemOutputModel($this->send("put", ["{id}" => $params['id']], [], $requestBody));
+        return new LineItemOutputModel($this->send("put", ["id" => $params['id']], [], $requestBody));
     }
 }

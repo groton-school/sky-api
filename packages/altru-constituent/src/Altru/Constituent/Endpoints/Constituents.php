@@ -233,7 +233,7 @@ class Constituents extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return $this->send("delete", ["{constituent_id}" => $params['constituent_id']], []);
+        return $this->send("delete", ["constituent_id" => $params['constituent_id']], []);
     }
 
     /**

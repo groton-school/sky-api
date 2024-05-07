@@ -51,7 +51,7 @@ class Phones extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new PhoneReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
+        return new PhoneReadCollection($this->send("get", ["user_id" => $params['user_id']], []));
     }
 
     /**
@@ -81,7 +81,7 @@ class Phones extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
+        return $this->send("post", ["user_id" => $params['user_id']], [], $requestBody);
     }
 
     /**
@@ -119,9 +119,9 @@ class Phones extends BaseEndpoint
         assert(isset($params['phone_id']), new ArgumentException("Parameter `phone_id` is required"));
         assert(isset($params['phone_type_id']), new ArgumentException("Parameter `phone_type_id` is required"));
 
-        return $this->send("delete", ["{user_id}" => $params['user_id'],
-            "{phone_id}" => $params['phone_id'],
-            "{phone_type_id}" => $params['phone_type_id']], []);
+        return $this->send("delete", ["user_id" => $params['user_id'],
+            "phone_id" => $params['phone_id'],
+            "phone_type_id" => $params['phone_type_id']], []);
     }
 
     /**
@@ -149,7 +149,7 @@ class Phones extends BaseEndpoint
         assert(isset($params['split_phone_if_shared']), new ArgumentException("Parameter `split_phone_if_shared` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $params['user_id'],
-            "{phone_id}" => $params['phone_id']], ["split_phone_if_shared" => $params['split_phone_if_shared']], $requestBody);
+        return $this->send("patch", ["user_id" => $params['user_id'],
+            "phone_id" => $params['phone_id']], ["split_phone_if_shared" => $params['split_phone_if_shared']], $requestBody);
     }
 }

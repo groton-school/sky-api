@@ -64,6 +64,6 @@ class Enrollments extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new EnrollmentCollection($this->send("get", ["{user_id}" => $params['user_id']], ["school_year" => $params['school_year']]));
+        return new EnrollmentCollection($this->send("get", ["user_id" => $params['user_id']], ["school_year" => $params['school_year']]));
     }
 }

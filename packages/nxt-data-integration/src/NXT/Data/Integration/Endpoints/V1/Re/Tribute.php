@@ -86,7 +86,7 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new Components_Tribute($this->send("get", ["{id}" => $params['id']], []));
+        return new Components_Tribute($this->send("get", ["id" => $params['id']], []));
     }
 
     /**
@@ -105,7 +105,7 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return $this->send("delete", ["{id}" => $params['id']], []);
+        return $this->send("delete", ["id" => $params['id']], []);
     }
 
     /**

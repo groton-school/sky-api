@@ -48,7 +48,7 @@ class Assignments extends BaseEndpoint
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
         assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
 
-        return new StudentAssignmentCollection($this->send("get", ["{student_id}" => $params['student_id']], ["start_date" => $params['start_date'],
+        return new StudentAssignmentCollection($this->send("get", ["student_id" => $params['student_id']], ["start_date" => $params['start_date'],
             "end_date" => $params['end_date'],
             "section_ids" => $params['section_ids']]));
     }

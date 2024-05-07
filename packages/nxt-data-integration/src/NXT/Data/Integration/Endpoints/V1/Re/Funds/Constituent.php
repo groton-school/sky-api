@@ -40,7 +40,7 @@ class Constituent extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new FundCollection($this->send("get", ["{constituentId}" => $params['constituentId']], ["limit" => $params['limit'],
+        return new FundCollection($this->send("get", ["constituentId" => $params['constituentId']], ["limit" => $params['limit'],
             "offset" => $params['offset']]));
     }
 }

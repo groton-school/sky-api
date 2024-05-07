@@ -39,7 +39,7 @@ class Relationshipjobsinfo extends BaseEndpoint
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new RelationshipJobInfoListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["include_inactive" => $params['include_inactive'],
+        return new RelationshipJobInfoListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["include_inactive" => $params['include_inactive'],
             "limit" => $params['limit']]));
     }
 }

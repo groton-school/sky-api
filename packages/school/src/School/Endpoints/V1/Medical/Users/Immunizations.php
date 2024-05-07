@@ -45,6 +45,6 @@ class Immunizations extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['include_']), new ArgumentException("Parameter `include_` is required"));
 
-        return array_map(fn($a) => new StudentImmunizationRead($a), $this->send("get", ["{user_id}" => $params['user_id']], ["include_" => $params['include_']]));
+        return array_map(fn($a) => new StudentImmunizationRead($a), $this->send("get", ["user_id" => $params['user_id']], ["include_" => $params['include_']]));
     }
 }

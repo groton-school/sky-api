@@ -45,7 +45,7 @@ class Categories extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new CategoryOutputModel($this->send("get", ["{id}" => $params['id']], []));
+        return new CategoryOutputModel($this->send("get", ["id" => $params['id']], []));
     }
 
     /**
@@ -67,6 +67,6 @@ class Categories extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new CategoryOutputModel($this->send("put", ["{id}" => $params['id']], [], $requestBody));
+        return new CategoryOutputModel($this->send("put", ["id" => $params['id']], [], $requestBody));
     }
 }

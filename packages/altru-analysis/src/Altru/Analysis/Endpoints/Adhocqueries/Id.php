@@ -32,6 +32,6 @@ class Id extends BaseEndpoint
     {
         assert(isset($params['query_name']), new ArgumentException("Parameter `query_name` is required"));
 
-        return new GetAdHocQueryId($this->send("get", ["{query_name}" => $params['query_name']], []));
+        return new GetAdHocQueryId($this->send("get", ["query_name" => $params['query_name']], []));
     }
 }

@@ -37,7 +37,7 @@ class Campaigns extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new Campaign($this->send("get", ["{id}" => $params['id']], []));
+        return new Campaign($this->send("get", ["id" => $params['id']], []));
     }
 
     /**
@@ -56,7 +56,7 @@ class Campaigns extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return $this->send("delete", ["{id}" => $params['id']], []);
+        return $this->send("delete", ["id" => $params['id']], []);
     }
 
     /**
@@ -77,7 +77,7 @@ class Campaigns extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{id}" => $params['id']], [], $requestBody);
+        return $this->send("patch", ["id" => $params['id']], [], $requestBody);
     }
 
     /**

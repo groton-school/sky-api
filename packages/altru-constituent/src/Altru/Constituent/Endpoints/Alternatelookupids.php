@@ -59,7 +59,7 @@ class Alternatelookupids extends BaseEndpoint
     {
         assert(isset($params['alternate_lookup_id_id']), new ArgumentException("Parameter `alternate_lookup_id_id` is required"));
 
-        return new ConstituentAlternateLookupId($this->send("get", ["{alternate_lookup_id_id}" => $params['alternate_lookup_id_id']], []));
+        return new ConstituentAlternateLookupId($this->send("get", ["alternate_lookup_id_id" => $params['alternate_lookup_id_id']], []));
     }
 
     /**
@@ -80,7 +80,7 @@ class Alternatelookupids extends BaseEndpoint
     {
         assert(isset($params['alternate_lookup_id_id']), new ArgumentException("Parameter `alternate_lookup_id_id` is required"));
 
-        return $this->send("delete", ["{alternate_lookup_id_id}" => $params['alternate_lookup_id_id']], []);
+        return $this->send("delete", ["alternate_lookup_id_id" => $params['alternate_lookup_id_id']], []);
     }
 
     /**
@@ -105,6 +105,6 @@ class Alternatelookupids extends BaseEndpoint
         assert(isset($params['alternate_lookup_id_id']), new ArgumentException("Parameter `alternate_lookup_id_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{alternate_lookup_id_id}" => $params['alternate_lookup_id_id']], [], $requestBody);
+        return $this->send("patch", ["alternate_lookup_id_id" => $params['alternate_lookup_id_id']], [], $requestBody);
     }
 }

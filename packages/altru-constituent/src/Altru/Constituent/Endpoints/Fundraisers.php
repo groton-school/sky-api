@@ -89,7 +89,7 @@ class Fundraisers extends BaseEndpoint
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
 
-        return new ConstituentFundraiser($this->send("get", ["{fundraiser_date_range_id}" => $params['fundraiser_date_range_id']], []));
+        return new ConstituentFundraiser($this->send("get", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], []));
     }
 
     /**
@@ -110,7 +110,7 @@ class Fundraisers extends BaseEndpoint
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
 
-        return $this->send("delete", ["{fundraiser_date_range_id}" => $params['fundraiser_date_range_id']], []);
+        return $this->send("delete", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], []);
     }
 
     /**
@@ -135,6 +135,6 @@ class Fundraisers extends BaseEndpoint
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{fundraiser_date_range_id}" => $params['fundraiser_date_range_id']], [], $requestBody);
+        return $this->send("patch", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], [], $requestBody);
     }
 }

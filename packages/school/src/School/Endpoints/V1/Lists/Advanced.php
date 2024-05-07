@@ -95,7 +95,7 @@ class Advanced extends BaseEndpoint
         assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
         assert(isset($params['page_size']), new ArgumentException("Parameter `page_size` is required"));
 
-        return new ListResult($this->send("get", ["{list_id}" => $params['list_id']], ["page" => $params['page'],
+        return new ListResult($this->send("get", ["list_id" => $params['list_id']], ["page" => $params['page'],
             "page_size" => $params['page_size']]));
     }
 }

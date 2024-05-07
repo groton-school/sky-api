@@ -44,6 +44,6 @@ class Enrollments extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new EnrollmentOutputModel($this->send("get", ["{id}" => $params['id']], []));
+        return new EnrollmentOutputModel($this->send("get", ["id" => $params['id']], []));
     }
 }

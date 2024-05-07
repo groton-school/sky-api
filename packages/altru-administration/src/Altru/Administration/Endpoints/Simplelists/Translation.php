@@ -38,7 +38,7 @@ class Translation extends BaseEndpoint
         assert(isset($params['entry_id']), new ArgumentException("Parameter `entry_id` is required"));
         assert(isset($params['simple_list_name']), new ArgumentException("Parameter `simple_list_name` is required"));
 
-        return new SimpleListTranslation($this->send("get", ["{simple_list_id}" => $params['simple_list_id']], ["entry_id" => $params['entry_id'],
+        return new SimpleListTranslation($this->send("get", ["simple_list_id" => $params['simple_list_id']], ["entry_id" => $params['entry_id'],
             "simple_list_name" => $params['simple_list_name']]));
     }
 }

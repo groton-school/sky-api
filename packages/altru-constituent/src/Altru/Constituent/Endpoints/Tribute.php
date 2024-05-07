@@ -56,7 +56,7 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['revenue_tribute_id']), new ArgumentException("Parameter `revenue_tribute_id` is required"));
 
-        return new Components_Tribute($this->send("get", ["{revenue_tribute_id}" => $params['revenue_tribute_id']], []));
+        return new Components_Tribute($this->send("get", ["revenue_tribute_id" => $params['revenue_tribute_id']], []));
     }
 
     /**
@@ -79,6 +79,6 @@ class Tribute extends BaseEndpoint
         assert(isset($params['revenue_tribute_id']), new ArgumentException("Parameter `revenue_tribute_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{revenue_tribute_id}" => $params['revenue_tribute_id']], [], $requestBody);
+        return $this->send("patch", ["revenue_tribute_id" => $params['revenue_tribute_id']], [], $requestBody);
     }
 }

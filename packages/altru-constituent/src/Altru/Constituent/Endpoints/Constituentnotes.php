@@ -75,7 +75,7 @@ class Constituentnotes extends BaseEndpoint
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
 
-        return $this->send("delete", ["{constituent_note_id}" => $params['constituent_note_id']], []);
+        return $this->send("delete", ["constituent_note_id" => $params['constituent_note_id']], []);
     }
 
     /**
@@ -98,6 +98,6 @@ class Constituentnotes extends BaseEndpoint
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{constituent_note_id}" => $params['constituent_note_id']], [], $requestBody);
+        return $this->send("patch", ["constituent_note_id" => $params['constituent_note_id']], [], $requestBody);
     }
 }

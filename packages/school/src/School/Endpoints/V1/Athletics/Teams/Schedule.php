@@ -69,7 +69,7 @@ class Schedule extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{team_id}" => $params['team_id']], [], $requestBody);
+        return $this->send("post", ["team_id" => $params['team_id']], [], $requestBody);
     }
 
     /**
@@ -105,7 +105,7 @@ class Schedule extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{team_id}" => $params['team_id']], [], $requestBody);
+        return $this->send("patch", ["team_id" => $params['team_id']], [], $requestBody);
     }
 
     /**
@@ -133,7 +133,7 @@ class Schedule extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['game_id']), new ArgumentException("Parameter `game_id` is required"));
 
-        return $this->send("delete", ["{team_id}" => $params['team_id'],
-            "{game_id}" => $params['game_id']], []);
+        return $this->send("delete", ["team_id" => $params['team_id'],
+            "game_id" => $params['game_id']], []);
     }
 }

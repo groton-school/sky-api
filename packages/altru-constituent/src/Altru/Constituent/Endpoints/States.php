@@ -38,7 +38,7 @@ class States extends BaseEndpoint
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new StateListCollection($this->send("get", ["{country_id}" => $params['country_id']], ["include_inactive" => $params['include_inactive'],
+        return new StateListCollection($this->send("get", ["country_id" => $params['country_id']], ["include_inactive" => $params['include_inactive'],
             "limit" => $params['limit']]));
     }
 }

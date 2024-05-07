@@ -32,6 +32,6 @@ class Classes extends BaseEndpoint
     {
         assert(isset($params['teacher_id']), new ArgumentException("Parameter `teacher_id` is required"));
 
-        return new ClassOutputModel($this->send("get", ["{teacher_id}" => $params['teacher_id']], []));
+        return new ClassOutputModel($this->send("get", ["teacher_id" => $params['teacher_id']], []));
     }
 }

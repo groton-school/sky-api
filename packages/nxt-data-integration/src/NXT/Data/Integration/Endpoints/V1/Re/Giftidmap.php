@@ -33,6 +33,6 @@ class Giftidmap extends BaseEndpoint
     {
         assert(isset($params['giftlookupid']), new ArgumentException("Parameter `giftlookupid` is required"));
 
-        return new Components_GiftIdMap($this->send("get", ["{giftlookupid}" => $params['giftlookupid']], []));
+        return new Components_GiftIdMap($this->send("get", ["giftlookupid" => $params['giftlookupid']], []));
     }
 }

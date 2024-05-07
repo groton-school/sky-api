@@ -50,7 +50,7 @@ class Solicitcodes extends BaseEndpoint
         assert(isset($params['date_range']), new ArgumentException("Parameter `date_range` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentSolicitCodeListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["site_id" => $params['site_id'],
+        return new ConstituentSolicitCodeListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["site_id" => $params['site_id'],
             "site_filter_mode" => $params['site_filter_mode'],
             "sites_selected" => $params['sites_selected'],
             "show_expired" => $params['show_expired'],

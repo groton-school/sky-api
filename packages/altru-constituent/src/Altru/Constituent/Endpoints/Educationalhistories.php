@@ -57,7 +57,7 @@ class Educationalhistories extends BaseEndpoint
     {
         assert(isset($params['educational_history_id']), new ArgumentException("Parameter `educational_history_id` is required"));
 
-        return new Education($this->send("get", ["{educational_history_id}" => $params['educational_history_id']], []));
+        return new Education($this->send("get", ["educational_history_id" => $params['educational_history_id']], []));
     }
 
     /**
@@ -78,7 +78,7 @@ class Educationalhistories extends BaseEndpoint
     {
         assert(isset($params['educational_history_id']), new ArgumentException("Parameter `educational_history_id` is required"));
 
-        return $this->send("delete", ["{educational_history_id}" => $params['educational_history_id']], []);
+        return $this->send("delete", ["educational_history_id" => $params['educational_history_id']], []);
     }
 
     /**
@@ -102,6 +102,6 @@ class Educationalhistories extends BaseEndpoint
         assert(isset($params['educational_history_id']), new ArgumentException("Parameter `educational_history_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{educational_history_id}" => $params['educational_history_id']], [], $requestBody);
+        return $this->send("patch", ["educational_history_id" => $params['educational_history_id']], [], $requestBody);
     }
 }

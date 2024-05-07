@@ -107,7 +107,7 @@ class Customfields extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserAdminCustomField($this->send("get", ["{user_id}" => $params['user_id']], []));
+        return new UserAdminCustomField($this->send("get", ["user_id" => $params['user_id']], []));
     }
 
     /**
@@ -139,7 +139,7 @@ class Customfields extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
+        return $this->send("post", ["user_id" => $params['user_id']], [], $requestBody);
     }
 
     /**
@@ -167,6 +167,6 @@ class Customfields extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{user_id}" => $params['user_id']], [], $requestBody);
+        return $this->send("patch", ["user_id" => $params['user_id']], [], $requestBody);
     }
 }

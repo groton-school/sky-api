@@ -74,7 +74,7 @@ class Directories extends BaseEndpoint
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
         assert(isset($params['search_all']), new ArgumentException("Parameter `search_all` is required"));
 
-        return new DirectoryResultCollection($this->send("get", ["{directory_id}" => $params['directory_id']], ["search" => $params['search'],
+        return new DirectoryResultCollection($this->send("get", ["directory_id" => $params['directory_id']], ["search" => $params['search'],
             "search_all" => $params['search_all']]));
     }
 }

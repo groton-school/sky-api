@@ -48,6 +48,6 @@ class Sections extends BaseEndpoint
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
 
-        return new AcademicsSectionStudentCollection($this->send("get", ["{student_id}" => $params['student_id']], []));
+        return new AcademicsSectionStudentCollection($this->send("get", ["student_id" => $params['student_id']], []));
     }
 }

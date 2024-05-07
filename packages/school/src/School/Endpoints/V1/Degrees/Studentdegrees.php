@@ -45,6 +45,6 @@ class Studentdegrees extends BaseEndpoint
     {
         assert(isset($params['student_id']), new ArgumentException("Parameter `student_id` is required"));
 
-        return new UserDegreeOutputModelCollection($this->send("get", ["{student_id}" => $params['student_id']], []));
+        return new UserDegreeOutputModelCollection($this->send("get", ["student_id" => $params['student_id']], []));
     }
 }

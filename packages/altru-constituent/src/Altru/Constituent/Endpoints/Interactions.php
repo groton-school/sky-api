@@ -57,7 +57,7 @@ class Interactions extends BaseEndpoint
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
 
-        return new ConstituentInteraction($this->send("get", ["{constituent_interaction_id}" => $params['constituent_interaction_id']], []));
+        return new ConstituentInteraction($this->send("get", ["constituent_interaction_id" => $params['constituent_interaction_id']], []));
     }
 
     /**
@@ -78,7 +78,7 @@ class Interactions extends BaseEndpoint
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
 
-        return $this->send("delete", ["{constituent_interaction_id}" => $params['constituent_interaction_id']], []);
+        return $this->send("delete", ["constituent_interaction_id" => $params['constituent_interaction_id']], []);
     }
 
     /**
@@ -102,6 +102,6 @@ class Interactions extends BaseEndpoint
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{constituent_interaction_id}" => $params['constituent_interaction_id']], [], $requestBody);
+        return $this->send("patch", ["constituent_interaction_id" => $params['constituent_interaction_id']], [], $requestBody);
     }
 }

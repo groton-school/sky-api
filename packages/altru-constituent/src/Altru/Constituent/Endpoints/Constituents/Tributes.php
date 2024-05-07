@@ -37,6 +37,6 @@ class Tributes extends BaseEndpoint
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new TributeListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["limit" => $params['limit']]));
+        return new TributeListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["limit" => $params['limit']]));
     }
 }

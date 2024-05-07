@@ -44,6 +44,6 @@ class AcademicSessions extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new AcademicSessionOutputModel($this->send("get", ["{id}" => $params['id']], []));
+        return new AcademicSessionOutputModel($this->send("get", ["id" => $params['id']], []));
     }
 }

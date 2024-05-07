@@ -77,7 +77,7 @@ class Gifttribute extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return new Components_GiftTribute($this->send("get", ["{giftTributeId}" => $params['giftTributeId']], []));
+        return new Components_GiftTribute($this->send("get", ["giftTributeId" => $params['giftTributeId']], []));
     }
 
     /**
@@ -97,7 +97,7 @@ class Gifttribute extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return $this->send("delete", ["{giftTributeId}" => $params['giftTributeId']], []);
+        return $this->send("delete", ["giftTributeId" => $params['giftTributeId']], []);
     }
 
     /**
@@ -119,7 +119,7 @@ class Gifttribute extends BaseEndpoint
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{giftTributeId}" => $params['giftTributeId']], [], $requestBody);
+        return $this->send("patch", ["giftTributeId" => $params['giftTributeId']], [], $requestBody);
     }
 
     /**

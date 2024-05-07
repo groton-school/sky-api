@@ -58,7 +58,7 @@ class Relationshipjobsinfo extends BaseEndpoint
     {
         assert(isset($params['relationship_job_information_id']), new ArgumentException("Parameter `relationship_job_information_id` is required"));
 
-        return new RelationshipJobInfo($this->send("get", ["{relationship_job_information_id}" => $params['relationship_job_information_id']], []));
+        return new RelationshipJobInfo($this->send("get", ["relationship_job_information_id" => $params['relationship_job_information_id']], []));
     }
 
     /**
@@ -79,7 +79,7 @@ class Relationshipjobsinfo extends BaseEndpoint
     {
         assert(isset($params['relationship_job_information_id']), new ArgumentException("Parameter `relationship_job_information_id` is required"));
 
-        return $this->send("delete", ["{relationship_job_information_id}" => $params['relationship_job_information_id']], []);
+        return $this->send("delete", ["relationship_job_information_id" => $params['relationship_job_information_id']], []);
     }
 
     /**
@@ -104,6 +104,6 @@ class Relationshipjobsinfo extends BaseEndpoint
         assert(isset($params['relationship_job_information_id']), new ArgumentException("Parameter `relationship_job_information_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{relationship_job_information_id}" => $params['relationship_job_information_id']], [], $requestBody);
+        return $this->send("patch", ["relationship_job_information_id" => $params['relationship_job_information_id']], [], $requestBody);
     }
 }

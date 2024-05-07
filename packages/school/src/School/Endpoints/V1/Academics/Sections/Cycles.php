@@ -43,7 +43,7 @@ class Cycles extends BaseEndpoint
         assert(isset($params['duration_id']), new ArgumentException("Parameter `duration_id` is required"));
         assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
-        return new SectionCycles($this->send("get", ["{section_id}" => $params['section_id']], ["duration_id" => $params['duration_id'],
+        return new SectionCycles($this->send("get", ["section_id" => $params['section_id']], ["duration_id" => $params['duration_id'],
             "group_type" => $params['group_type']]));
     }
 }

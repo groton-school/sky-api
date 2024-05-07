@@ -76,6 +76,6 @@ class Sets extends BaseEndpoint
     {
         assert(isset($params['schedule_set_id']), new ArgumentException("Parameter `schedule_set_id` is required"));
 
-        return new ScheduleSetDetails($this->send("get", ["{schedule_set_id}" => $params['schedule_set_id']], []));
+        return new ScheduleSetDetails($this->send("get", ["schedule_set_id" => $params['schedule_set_id']], []));
     }
 }

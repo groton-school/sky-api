@@ -42,7 +42,7 @@ class Patronorders extends BaseEndpoint
         assert(isset($params['sales_method']), new ArgumentException("Parameter `sales_method` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["show_date_range" => $params['show_date_range'],
+        return new ConstituentListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["show_date_range" => $params['show_date_range'],
             "sales_method" => $params['sales_method'],
             "limit" => $params['limit']]));
     }

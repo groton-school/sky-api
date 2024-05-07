@@ -33,6 +33,6 @@ class Importid extends BaseEndpoint
     {
         assert(isset($params['importid']), new ArgumentException("Parameter `importid` is required"));
 
-        return new Tribute($this->send("get", ["{importid}" => $params['importid']], []));
+        return new Tribute($this->send("get", ["importid" => $params['importid']], []));
     }
 }

@@ -333,6 +333,6 @@ class Users extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserRead($this->send("get", ["{user_id}" => $params['user_id']], []));
+        return new UserRead($this->send("get", ["user_id" => $params['user_id']], []));
     }
 }

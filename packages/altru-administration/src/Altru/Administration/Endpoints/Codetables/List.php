@@ -38,7 +38,7 @@ class List_ extends BaseEndpoint
         assert(isset($params['include_inactive']), new ArgumentException("Parameter `include_inactive` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new CodeTableListCollection($this->send("get", ["{code_table_id}" => $params['code_table_id']], ["include_inactive" => $params['include_inactive'],
+        return new CodeTableListCollection($this->send("get", ["code_table_id" => $params['code_table_id']], ["include_inactive" => $params['include_inactive'],
             "limit" => $params['limit']]));
     }
 }

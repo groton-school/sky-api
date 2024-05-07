@@ -38,7 +38,7 @@ class Entry extends BaseEndpoint
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", ["{code_table_name}" => $params['code_table_name']], [], $requestBody));
+        return new PostResponse($this->send("post", ["code_table_name" => $params['code_table_name']], [], $requestBody));
     }
 
     /**
@@ -61,6 +61,6 @@ class Entry extends BaseEndpoint
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{code_table_name}" => $params['code_table_name']], [], $requestBody);
+        return $this->send("patch", ["code_table_name" => $params['code_table_name']], [], $requestBody);
     }
 }

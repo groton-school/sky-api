@@ -31,6 +31,6 @@ class Proposals extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return $this->send("delete", ["{id}" => $params['id']], []);
+        return $this->send("delete", ["id" => $params['id']], []);
     }
 }

@@ -32,6 +32,6 @@ class Entries extends BaseEndpoint
     {
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
 
-        return new CodeTableEntryCollection($this->send("get", ["{code_table_name}" => $params['code_table_name']], []));
+        return new CodeTableEntryCollection($this->send("get", ["code_table_name" => $params['code_table_name']], []));
     }
 }

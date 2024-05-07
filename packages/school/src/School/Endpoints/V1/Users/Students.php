@@ -38,6 +38,6 @@ class Students extends BaseEndpoint
     {
         assert(isset($params['parent_id']), new ArgumentException("Parameter `parent_id` is required"));
 
-        return new ChildOfParentCollection($this->send("get", ["{parent_id}" => $params['parent_id']], []));
+        return new ChildOfParentCollection($this->send("get", ["parent_id" => $params['parent_id']], []));
     }
 }

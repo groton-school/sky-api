@@ -56,7 +56,7 @@ class Emailaddresses extends BaseEndpoint
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
 
-        return new ConstituentEmailAddress($this->send("get", ["{email_address_id}" => $params['email_address_id']], []));
+        return new ConstituentEmailAddress($this->send("get", ["email_address_id" => $params['email_address_id']], []));
     }
 
     /**
@@ -76,7 +76,7 @@ class Emailaddresses extends BaseEndpoint
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
 
-        return $this->send("delete", ["{email_address_id}" => $params['email_address_id']], []);
+        return $this->send("delete", ["email_address_id" => $params['email_address_id']], []);
     }
 
     /**
@@ -99,6 +99,6 @@ class Emailaddresses extends BaseEndpoint
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{email_address_id}" => $params['email_address_id']], [], $requestBody);
+        return $this->send("patch", ["email_address_id" => $params['email_address_id']], [], $requestBody);
     }
 }

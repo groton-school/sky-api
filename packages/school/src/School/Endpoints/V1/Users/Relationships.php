@@ -43,7 +43,7 @@ class Relationships extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new RelationshipReadCollection($this->send("get", ["{user_id}" => $params['user_id']], []));
+        return new RelationshipReadCollection($this->send("get", ["user_id" => $params['user_id']], []));
     }
 
     /**
@@ -77,7 +77,7 @@ class Relationships extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["{user_id}" => $params['user_id']], [], $requestBody);
+        return $this->send("post", ["user_id" => $params['user_id']], [], $requestBody);
     }
 
     /**
@@ -116,7 +116,7 @@ class Relationships extends BaseEndpoint
         assert(isset($params['left_user']), new ArgumentException("Parameter `left_user` is required"));
         assert(isset($params['relationship_type']), new ArgumentException("Parameter `relationship_type` is required"));
 
-        return $this->send("delete", ["{user_id}" => $params['user_id']], ["left_user" => $params['left_user'],
+        return $this->send("delete", ["user_id" => $params['user_id']], ["left_user" => $params['left_user'],
             "relationship_type" => $params['relationship_type']]);
     }
 }

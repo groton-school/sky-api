@@ -35,7 +35,7 @@ class Acknowledgees extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return new GiftTributeAcknowledgeeCollection($this->send("get", ["{giftTributeId}" => $params['giftTributeId']], []));
+        return new GiftTributeAcknowledgeeCollection($this->send("get", ["giftTributeId" => $params['giftTributeId']], []));
     }
 
     /**
@@ -59,6 +59,6 @@ class Acknowledgees extends BaseEndpoint
         assert(isset($params['giftTributeAcknowledgeeId']), new ArgumentException("Parameter `giftTributeAcknowledgeeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{giftTributeAcknowledgeeId}" => $params['giftTributeAcknowledgeeId']], [], $requestBody);
+        return $this->send("patch", ["giftTributeAcknowledgeeId" => $params['giftTributeAcknowledgeeId']], [], $requestBody);
     }
 }

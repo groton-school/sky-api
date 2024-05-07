@@ -44,6 +44,6 @@ class Orgs extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new OrgOutputModel($this->send("get", ["{id}" => $params['id']], []));
+        return new OrgOutputModel($this->send("get", ["id" => $params['id']], []));
     }
 }

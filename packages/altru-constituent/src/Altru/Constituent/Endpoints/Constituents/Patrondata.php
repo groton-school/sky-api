@@ -39,7 +39,7 @@ class Patrondata extends BaseEndpoint
         assert(isset($params['show_date_range']), new ArgumentException("Parameter `show_date_range` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["show_date_range" => $params['show_date_range'],
+        return new ConstituentListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["show_date_range" => $params['show_date_range'],
             "limit" => $params['limit']]));
     }
 }

@@ -57,7 +57,7 @@ class Organizations extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new Organization($this->send("get", ["{constituent_id}" => $params['constituent_id']], []));
+        return new Organization($this->send("get", ["constituent_id" => $params['constituent_id']], []));
     }
 
     /**
@@ -80,6 +80,6 @@ class Organizations extends BaseEndpoint
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{constituent_id}" => $params['constituent_id']], [], $requestBody);
+        return $this->send("patch", ["constituent_id" => $params['constituent_id']], [], $requestBody);
     }
 }

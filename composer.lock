@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.base.git",
-                "reference": "b6c646cc9518eda16da9ff4a172489c39f35d88c"
+                "reference": "5382f64d9bdd14ed32af3ba9e1ca66ae86315b49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/b6c646cc9518eda16da9ff4a172489c39f35d88c",
-                "reference": "b6c646cc9518eda16da9ff4a172489c39f35d88c",
+                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/5382f64d9bdd14ed32af3ba9e1ca66ae86315b49",
+                "reference": "5382f64d9bdd14ed32af3ba9e1ca66ae86315b49",
                 "shasum": ""
             },
             "require": {
@@ -168,24 +168,25 @@
                 "issues": "https://github.com/battis/openapi-client.base/issues",
                 "source": "https://github.com/battis/openapi-client.base/tree/v0.2.14"
             },
-            "time": "2024-05-03T19:42:50+00:00"
+            "time": "2024-05-03T22:19:17+00:00"
         },
         {
             "name": "battis/openapi-client.generator",
-            "version": "v0.2.1",
+            "version": "v0.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.generator.git",
-                "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70"
+                "reference": "72ff6250569f96e8530439faecfdc780937fb185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
-                "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/72ff6250569f96e8530439faecfdc780937fb185",
+                "reference": "72ff6250569f96e8530439faecfdc780937fb185",
                 "shasum": ""
             },
             "require": {
                 "battis/data-utilities": "^1.2",
+                "battis/openapi-client.base": "^0.2",
                 "battis/php-generator": "^0.2",
                 "cebe/php-openapi": "^1.7",
                 "friendsofphp/php-cs-fixer": "^3.49",
@@ -195,8 +196,7 @@
                 "pahanini/monolog-cli-formatter": "^2.0",
                 "psr/log": "^3.0",
                 "psr/simple-cache": "^3.0",
-                "sspat/reserved-words": "^3.0",
-                "symfony/filesystem": "^7.0"
+                "sspat/reserved-words": "^3.0"
             },
             "suggest": {
                 "php-di/php-di": "Easier configuration and extension using dependency injection"
@@ -220,9 +220,9 @@
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
             "support": {
                 "issues": "https://github.com/battis/openapi-client.generator/issues",
-                "source": "https://github.com/battis/openapi-client.generator/tree/v0.2.1"
+                "source": "https://github.com/battis/openapi-client.generator/tree/v0.2.14"
             },
-            "time": "2024-04-20T14:57:22+00:00"
+            "time": "2024-05-03T22:19:17+00:00"
         },
         {
             "name": "battis/php-generator",
@@ -550,16 +550,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255"
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6c1925561632e83d60a44492e0b344cf48ab85ef",
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef",
                 "shasum": ""
             },
             "require": {
@@ -596,7 +596,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/3.0.4"
+                "source": "https://github.com/composer/xdebug-handler/tree/3.0.5"
             },
             "funding": [
                 {
@@ -612,7 +612,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-26T18:29:49+00:00"
+            "time": "2024-05-06T16:37:16+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -679,16 +679,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.54.0",
+            "version": "v3.55.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "2aecbc8640d7906c38777b3dcab6f4ca79004d08"
+                "reference": "c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/2aecbc8640d7906c38777b3dcab6f4ca79004d08",
-                "reference": "2aecbc8640d7906c38777b3dcab6f4ca79004d08",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e",
+                "reference": "c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e",
                 "shasum": ""
             },
             "require": {
@@ -760,7 +760,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.54.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.55.0"
             },
             "funding": [
                 {
@@ -768,7 +768,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-17T08:12:13+00:00"
+            "time": "2024-05-06T00:10:15+00:00"
         },
         {
             "name": "google/auth",

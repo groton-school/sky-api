@@ -38,7 +38,7 @@ class Contactinformationphone extends BaseEndpoint
         assert(isset($params['include_former']), new ArgumentException("Parameter `include_former` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentContactListCollection($this->send("get", ["{constituent_id}" => $params['constituent_id']], ["include_former" => $params['include_former'],
+        return new ConstituentContactListCollection($this->send("get", ["constituent_id" => $params['constituent_id']], ["include_former" => $params['include_former'],
             "limit" => $params['limit']]));
     }
 }

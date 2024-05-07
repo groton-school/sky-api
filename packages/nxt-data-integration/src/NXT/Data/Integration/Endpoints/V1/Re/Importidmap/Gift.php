@@ -33,6 +33,6 @@ class Gift extends BaseEndpoint
     {
         assert(isset($params['importid']), new ArgumentException("Parameter `importid` is required"));
 
-        return new ImportIdMap($this->send("get", ["{importid}" => $params['importid']], []));
+        return new ImportIdMap($this->send("get", ["importid" => $params['importid']], []));
     }
 }

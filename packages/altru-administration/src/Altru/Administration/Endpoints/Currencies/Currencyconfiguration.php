@@ -34,6 +34,6 @@ class Currencyconfiguration extends BaseEndpoint
     {
         assert(isset($params['currency_id']), new ArgumentException("Parameter `currency_id` is required"));
 
-        return new CurrencyConfigurationView($this->send("get", ["{currency_id}" => $params['currency_id']], []));
+        return new CurrencyConfigurationView($this->send("get", ["currency_id" => $params['currency_id']], []));
     }
 }

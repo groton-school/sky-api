@@ -33,6 +33,6 @@ class Revenuesummaryview extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new IndividualRevenueSummaryView($this->send("get", ["{constituent_id}" => $params['constituent_id']], []));
+        return new IndividualRevenueSummaryView($this->send("get", ["constituent_id" => $params['constituent_id']], []));
     }
 }

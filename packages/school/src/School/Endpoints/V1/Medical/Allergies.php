@@ -40,7 +40,7 @@ class Allergies extends BaseEndpoint
     {
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
 
-        return $this->send("delete", ["{allergy_id}" => $params['allergy_id']], []);
+        return $this->send("delete", ["allergy_id" => $params['allergy_id']], []);
     }
 
     /**
@@ -69,7 +69,7 @@ class Allergies extends BaseEndpoint
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["{allergy_id}" => $params['allergy_id']], [], $requestBody);
+        return $this->send("patch", ["allergy_id" => $params['allergy_id']], [], $requestBody);
     }
 
     /**

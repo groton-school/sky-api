@@ -39,6 +39,6 @@ class Allergies extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return array_map(fn($a) => new StudentAllergiesView($a), $this->send("get", ["{user_id}" => $params['user_id']], []));
+        return array_map(fn($a) => new StudentAllergiesView($a), $this->send("get", ["user_id" => $params['user_id']], []));
     }
 }
