@@ -24,18 +24,13 @@ class Runner
 
         foreach (
             [
-                'var/2022-04-01_preview/Altru/alt-adnmg.json' =>
-                    'packages/altru-administration/src',
-                'var/2022-04-01_preview/Altru/alt-anamg.json' =>
-                    'packages/altru-analysis/src',
-                'var/2022-04-01_preview/Altru/alt-conmg.json' =>
-                    'packages/altru-constituent/src',
-                'var/2022-04-01_preview/Church Management/nxt-data-integration.json' =>
+                'var/alt-adnmg.json' => 'packages/altru-administration/src',
+                'var/alt-anamg.json' => 'packages/altru-analysis/src',
+                'var/alt-conmg.json' => 'packages/altru-constituent/src',
+                'var/nxt-data-integration.json' =>
                     'packages/nxt-data-integration/src',
-                'var/2022-04-01_preview/Education Management/afe-rostr.json' =>
-                    'packages/oneroster/src',
-                'var/2022-04-01_preview/Education Management/school.json' =>
-                    'packages/school/src',
+                'var/afe-rostr.json' => 'packages/oneroster/src',
+                'var/school.json' => 'packages/school/src',
             ]
             as $specPath => $basePath
         ) {
