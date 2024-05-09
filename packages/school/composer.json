@@ -13,9 +13,8 @@
       "email": "sbattis@groton.org"
     }
   ],
-  
   "require": {
     "battis/openapi-client.base": "@dev",
-    "groton-school/oauth2-blackbaudsky": "^0.2"
+    "groton-school/oauth2-blackbaudsky": "^0.2-stable"
   }
 }
