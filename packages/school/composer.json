@@ -2,6 +2,8 @@
   "name": "groton-school/sky-api.school",
   "description": "PHP client for Blackbaud's SKY API - School API",
   "license": "GPL-3.0",
+  "prefer-stable": true,
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Blackbaud\\SKY\\": "src/"
@@ -15,6 +17,6 @@
   ],
   "require": {
     "battis/openapi-client.base": "@dev",
-    "groton-school/oauth2-blackbaudsky": "^0.2-stable"
+    "groton-school/oauth2-blackbaudsky": "^0.2"
   }
 }

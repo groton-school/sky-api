@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c999c5db7e66d2f127bb7a85a908a564",
+    "content-hash": "f708e4f55d03f09caf37a9e5f771d86d",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.base.git",
-                "reference": "3d27c017da131c919b228a5e019ed79072e0a5d2"
+                "reference": "0d0f38f3d23bdabad11718bc064dc9fe5f827f2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/3d27c017da131c919b228a5e019ed79072e0a5d2",
-                "reference": "3d27c017da131c919b228a5e019ed79072e0a5d2",
+                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/0d0f38f3d23bdabad11718bc064dc9fe5f827f2b",
+                "reference": "0d0f38f3d23bdabad11718bc064dc9fe5f827f2b",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                 "issues": "https://github.com/battis/openapi-client.base/issues",
                 "source": "https://github.com/battis/openapi-client.base/tree/main"
             },
-            "time": "2024-05-09T15:50:20+00:00"
+            "time": "2024-05-09T16:07:25+00:00"
         },
         {
             "name": "battis/openapi-client.generator",
@@ -177,12 +177,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.generator.git",
-                "reference": "01e358755732cbdb3e505ac03aa08ceefbf50142"
+                "reference": "9473ddda18fc7298c678b00c4267d11403cbc5bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/01e358755732cbdb3e505ac03aa08ceefbf50142",
-                "reference": "01e358755732cbdb3e505ac03aa08ceefbf50142",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/9473ddda18fc7298c678b00c4267d11403cbc5bc",
+                "reference": "9473ddda18fc7298c678b00c4267d11403cbc5bc",
                 "shasum": ""
             },
             "require": {
@@ -224,7 +224,7 @@
                 "issues": "https://github.com/battis/openapi-client.generator/issues",
                 "source": "https://github.com/battis/openapi-client.generator/tree/main"
             },
-            "time": "2024-05-09T15:50:18+00:00"
+            "time": "2024-05-09T16:07:27+00:00"
         },
         {
             "name": "battis/php-generator",
@@ -4525,12 +4525,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "battis/openapi-client.base": 20,
         "battis/openapi-client.generator": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "ext-curl": "*"
