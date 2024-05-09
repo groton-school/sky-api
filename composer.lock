@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c74b49cb641b7ac00bfc0b69e0bd16",
+    "content-hash": "c999c5db7e66d2f127bb7a85a908a564",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -132,21 +132,22 @@
         },
         {
             "name": "battis/openapi-client.base",
-            "version": "v0.2.14",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.base.git",
-                "reference": "5382f64d9bdd14ed32af3ba9e1ca66ae86315b49"
+                "reference": "541fc4642db8cf9463d623b6b6d0b08d09c1a675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/5382f64d9bdd14ed32af3ba9e1ca66ae86315b49",
-                "reference": "5382f64d9bdd14ed32af3ba9e1ca66ae86315b49",
+                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/541fc4642db8cf9463d623b6b6d0b08d09c1a675",
+                "reference": "541fc4642db8cf9463d623b6b6d0b08d09c1a675",
                 "shasum": ""
             },
             "require": {
                 "league/oauth2-client": "^2.7"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -166,27 +167,26 @@
             "description": "Base for a PHP client for a RESTful API from its OpenAPI description file",
             "support": {
                 "issues": "https://github.com/battis/openapi-client.base/issues",
-                "source": "https://github.com/battis/openapi-client.base/tree/v0.2.14"
+                "source": "https://github.com/battis/openapi-client.base/tree/v0.2.15"
             },
-            "time": "2024-05-03T22:19:17+00:00"
+            "time": "2024-05-08T19:27:43+00:00"
         },
         {
             "name": "battis/openapi-client.generator",
-            "version": "v0.2.14",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.generator.git",
-                "reference": "72ff6250569f96e8530439faecfdc780937fb185"
+                "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/72ff6250569f96e8530439faecfdc780937fb185",
-                "reference": "72ff6250569f96e8530439faecfdc780937fb185",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
+                "reference": "4b6e8c654196046e0c7b8a3534ad5e6b65506c70",
                 "shasum": ""
             },
             "require": {
                 "battis/data-utilities": "^1.2",
-                "battis/openapi-client.base": "^0.2",
                 "battis/php-generator": "^0.2",
                 "cebe/php-openapi": "^1.7",
                 "friendsofphp/php-cs-fixer": "^3.49",
@@ -196,7 +196,8 @@
                 "pahanini/monolog-cli-formatter": "^2.0",
                 "psr/log": "^3.0",
                 "psr/simple-cache": "^3.0",
-                "sspat/reserved-words": "^3.0"
+                "sspat/reserved-words": "^3.0",
+                "symfony/filesystem": "^7.0"
             },
             "suggest": {
                 "php-di/php-di": "Easier configuration and extension using dependency injection"
@@ -220,9 +221,9 @@
             "description": "Generate a PHP client for a RESTful API from its OpenAPI description file",
             "support": {
                 "issues": "https://github.com/battis/openapi-client.generator/issues",
-                "source": "https://github.com/battis/openapi-client.generator/tree/v0.2.14"
+                "source": "https://github.com/battis/openapi-client.generator/tree/v0.2.1"
             },
-            "time": "2024-05-03T22:19:17+00:00"
+            "time": "2024-04-20T14:57:22+00:00"
         },
         {
             "name": "battis/php-generator",
@@ -679,16 +680,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.55.0",
+            "version": "v3.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e"
+                "reference": "4429303e62a4ce583ddfe64ff5c34c76bcf74931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e",
-                "reference": "c9eeacb559bfa0bcc7f778cfb7b42715c83d2c7e",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/4429303e62a4ce583ddfe64ff5c34c76bcf74931",
+                "reference": "4429303e62a4ce583ddfe64ff5c34c76bcf74931",
                 "shasum": ""
             },
             "require": {
@@ -760,7 +761,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.55.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.56.0"
             },
             "funding": [
                 {
@@ -768,7 +769,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-06T00:10:15+00:00"
+            "time": "2024-05-07T15:50:05+00:00"
         },
         {
             "name": "google/auth",
@@ -4524,7 +4525,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "battis/openapi-client.base": 20,
+        "battis/openapi-client.generator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

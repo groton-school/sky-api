@@ -8,9 +8,10 @@
       "email": "seth@battis.net"
     }
   ],
+  
   "require": {
     "battis/lazy-secrets": "^1.1",
-    "battis/openapi-client.base": "^0.2"
+    "battis/openapi-client.base": "@dev"
   },
   "autoload": {
     "psr-4": {
