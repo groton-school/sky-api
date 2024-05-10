@@ -86,7 +86,7 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new Components_Tribute($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new Components_Tribute($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), []));
     }
 
     /**
@@ -105,7 +105,7 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), []);
     }
 
     /**
@@ -127,7 +127,7 @@ class Tribute extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new TributeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit','offset']), ARRAY_FILTER_USE_KEY)));
+        return new TributeCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -147,6 +147,6 @@ class Tribute extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
+        return new PostResponse($this->send("post", [], [], $requestBody));
     }
 }

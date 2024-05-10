@@ -63,6 +63,6 @@ class Search extends BaseEndpoint
         assert(isset($params['exact_match_only']), new ArgumentException("Parameter `exact_match_only` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new TributeSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['tribute_text','tributee_key_name','tributee_first_name','tributee_lookup_id','tribute_type','acknowledgee_key_name','acknowledgee_first_name','date_filter','designation','site_id','include_inactive','exact_match_only','limit']), ARRAY_FILTER_USE_KEY)));
+        return new TributeSearchCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['tribute_text','tributee_key_name','tributee_first_name','tributee_lookup_id','tribute_type','acknowledgee_key_name','acknowledgee_first_name','date_filter','designation','site_id','include_inactive','exact_match_only','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

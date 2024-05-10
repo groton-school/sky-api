@@ -52,7 +52,7 @@ class Attendance extends BaseEndpoint
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
         assert(isset($params['excuse_type']), new ArgumentException("Parameter `excuse_type` is required"));
 
-        return new AttendanceGetCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_id','day','offering_type','excuse_type']), ARRAY_FILTER_USE_KEY)));
+        return new AttendanceGetCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['level_id','day','offering_type','excuse_type']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -77,6 +77,6 @@ class Attendance extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
+        return $this->send("post", [], [], $requestBody);
     }
 }

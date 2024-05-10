@@ -34,6 +34,6 @@ class Contactview extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new ConstituentPrimaryContactInformationView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new ConstituentPrimaryContactInformationView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

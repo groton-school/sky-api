@@ -43,6 +43,6 @@ class Courses extends BaseEndpoint
         assert(isset($params['department_id']), new ArgumentException("Parameter `department_id` is required"));
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
-        return new CourseCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['department_id','level_id']), ARRAY_FILTER_USE_KEY)));
+        return new CourseCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['department_id','level_id']), ARRAY_FILTER_USE_KEY)));
     }
 }

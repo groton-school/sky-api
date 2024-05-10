@@ -54,6 +54,6 @@ class Enrollments extends BaseEndpoint
         assert(isset($params['school_level_id']), new ArgumentException("Parameter `school_level_id` is required"));
         assert(isset($params['grade_level_id']), new ArgumentException("Parameter `grade_level_id` is required"));
 
-        return new UserEnrollmentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['school_year','school_level_id','grade_level_id','limit','offset']), ARRAY_FILTER_USE_KEY)));
+        return new UserEnrollmentCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['school_year','school_level_id','grade_level_id','limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 }

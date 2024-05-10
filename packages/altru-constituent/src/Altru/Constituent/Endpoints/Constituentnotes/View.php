@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
 
-        return new ConstituentNoteView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_note_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new ConstituentNoteView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_note_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

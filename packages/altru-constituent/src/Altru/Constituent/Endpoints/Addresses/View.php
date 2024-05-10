@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
 
-        return new ConstituentAddressView($this->send("get", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new ConstituentAddressView($this->send("get", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

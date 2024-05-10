@@ -33,6 +33,6 @@ class Gradelevels extends BaseEndpoint
      */
     public function list_(): GradeLevelCollection
     {
-        return new GradeLevelCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new GradeLevelCollection($this->send("get", [], []));
     }
 }

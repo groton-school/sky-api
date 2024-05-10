@@ -32,6 +32,6 @@ class Enrollments extends BaseEndpoint
     {
         assert(isset($params['school_id']), new ArgumentException("Parameter `school_id` is required"));
 
-        return new EnrollmentsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['school_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new EnrollmentsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['school_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

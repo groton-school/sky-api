@@ -49,6 +49,6 @@ class Constituentinactivityreasoncodes extends BaseEndpoint
         assert(isset($params['more_rows_range_key']), new ArgumentException("Parameter `more_rows_range_key` is required"));
         assert(isset($params['start_row_index']), new ArgumentException("Parameter `start_row_index` is required"));
 
-        return new ConstituentInactivityReasonCodesListCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['include_inactive','limit','session_key','infinity_session','more_rows_range_key','start_row_index']), ARRAY_FILTER_USE_KEY)));
+        return new ConstituentInactivityReasonCodesListCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['include_inactive','limit','session_key','infinity_session','more_rows_range_key','start_row_index']), ARRAY_FILTER_USE_KEY)));
     }
 }

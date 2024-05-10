@@ -44,6 +44,6 @@ class Changed extends BaseEndpoint
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
 
-        return new UserExtendedCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['base_role_ids','start_date']), ARRAY_FILTER_USE_KEY)));
+        return new UserExtendedCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['base_role_ids','start_date']), ARRAY_FILTER_USE_KEY)));
     }
 }

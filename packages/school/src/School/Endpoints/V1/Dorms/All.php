@@ -41,6 +41,6 @@ class All extends BaseEndpoint
         assert(isset($params['level_number']), new ArgumentException("Parameter `level_number` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new DormCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_number','school_year']), ARRAY_FILTER_USE_KEY)));
+        return new DormCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['level_number','school_year']), ARRAY_FILTER_USE_KEY)));
     }
 }

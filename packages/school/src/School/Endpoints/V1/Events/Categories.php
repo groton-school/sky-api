@@ -41,7 +41,7 @@ class Categories extends BaseEndpoint
     {
         assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
 
-        return new EventCategoryCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['page']), ARRAY_FILTER_USE_KEY)));
+        return new EventCategoryCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['page']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -69,6 +69,6 @@ class Categories extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new EventCategoryCreateResponseExample($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
+        return new EventCategoryCreateResponseExample($this->send("post", [], [], $requestBody));
     }
 }

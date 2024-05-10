@@ -38,6 +38,6 @@ class Transportationtypes extends BaseEndpoint
      */
     public function list_(): TransportationCollection
     {
-        return new TransportationCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new TransportationCollection($this->send("get", [], []));
     }
 }

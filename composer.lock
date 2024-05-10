@@ -177,12 +177,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.generator.git",
-                "reference": "a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62"
+                "reference": "4826f9c9a1774b4ceaeed3501e80c751618d4f55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62",
-                "reference": "a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/4826f9c9a1774b4ceaeed3501e80c751618d4f55",
+                "reference": "4826f9c9a1774b4ceaeed3501e80c751618d4f55",
                 "shasum": ""
             },
             "require": {
@@ -224,7 +224,7 @@
                 "issues": "https://github.com/battis/openapi-client.generator/issues",
                 "source": "https://github.com/battis/openapi-client.generator/tree/main"
             },
-            "time": "2024-05-10T14:11:53+00:00"
+            "time": "2024-05-10T14:25:56+00:00"
         },
         {
             "name": "battis/php-generator",

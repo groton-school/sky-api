@@ -35,7 +35,7 @@ class Acknowledgees extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return new GiftTributeAcknowledgeeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['giftTributeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new GiftTributeAcknowledgeeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['giftTributeId']), ARRAY_FILTER_USE_KEY), []));
     }
 
     /**
@@ -59,6 +59,6 @@ class Acknowledgees extends BaseEndpoint
         assert(isset($params['giftTributeAcknowledgeeId']), new ArgumentException("Parameter `giftTributeAcknowledgeeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['giftTributeAcknowledgeeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['giftTributeAcknowledgeeId']), ARRAY_FILTER_USE_KEY), [], $requestBody);
     }
 }

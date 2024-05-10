@@ -41,6 +41,6 @@ class Allergiesconditions extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
+        return $this->send("post", [], [], $requestBody);
     }
 }

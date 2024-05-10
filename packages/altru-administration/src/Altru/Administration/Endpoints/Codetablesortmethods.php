@@ -34,6 +34,6 @@ class Codetablesortmethods extends BaseEndpoint
     {
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
 
-        return new CodeTableSortMethod($this->send("get", array_filter($params, fn($key) => in_array($key, ['code_table_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new CodeTableSortMethod($this->send("get", array_filter($params, fn($key) => in_array($key, ['code_table_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

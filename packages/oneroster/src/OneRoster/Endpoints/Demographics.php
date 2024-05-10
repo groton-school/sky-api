@@ -25,7 +25,7 @@ class Demographics extends BaseEndpoint
      */
     public function get(): DemographicsOutputModel
     {
-        return new DemographicsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new DemographicsOutputModel($this->send("get", [], []));
     }
 
     /**
@@ -44,6 +44,6 @@ class Demographics extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new DemographicOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new DemographicOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

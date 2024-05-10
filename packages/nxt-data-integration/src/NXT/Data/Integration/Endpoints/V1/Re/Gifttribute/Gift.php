@@ -33,6 +33,6 @@ class Gift extends BaseEndpoint
     {
         assert(isset($params['giftId']), new ArgumentException("Parameter `giftId` is required"));
 
-        return new GiftTributeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['giftId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new GiftTributeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['giftId']), ARRAY_FILTER_USE_KEY), []));
     }
 }

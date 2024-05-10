@@ -29,6 +29,6 @@ class Levels extends BaseEndpoint
      */
     public function list_(): LevelCollection
     {
-        return new LevelCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new LevelCollection($this->send("get", [], []));
     }
 }

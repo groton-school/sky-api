@@ -49,6 +49,6 @@ class Changes extends BaseEndpoint
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new EnrollmentChangesCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date']), ARRAY_FILTER_USE_KEY)));
+        return new EnrollmentChangesCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['start_date','end_date']), ARRAY_FILTER_USE_KEY)));
     }
 }

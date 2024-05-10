@@ -22,6 +22,6 @@ class Serialnumber extends BaseEndpoint
      */
     public function get(): string
     {
-        return $this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
+        return $this->send("get", [], []);
     }
 }

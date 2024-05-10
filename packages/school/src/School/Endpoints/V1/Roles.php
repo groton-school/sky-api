@@ -29,6 +29,6 @@ class Roles extends BaseEndpoint
      */
     public function list_(): RoleCollection
     {
-        return new RoleCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new RoleCollection($this->send("get", [], []));
     }
 }

@@ -49,6 +49,6 @@ class Bbidstatus extends BaseEndpoint
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new SchoolBbidStatusCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['base_role_ids','marker']), ARRAY_FILTER_USE_KEY)));
+        return new SchoolBbidStatusCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['base_role_ids','marker']), ARRAY_FILTER_USE_KEY)));
     }
 }

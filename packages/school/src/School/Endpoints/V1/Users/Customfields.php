@@ -79,7 +79,7 @@ class Customfields extends BaseEndpoint
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
         assert(isset($params['field_ids']), new ArgumentException("Parameter `field_ids` is required"));
 
-        return new UserAdminCustomFieldCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['base_role_ids','marker','field_ids']), ARRAY_FILTER_USE_KEY)));
+        return new UserAdminCustomFieldCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['base_role_ids','marker','field_ids']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -105,7 +105,7 @@ class Customfields extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserAdminCustomField($this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new UserAdminCustomField($this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), []));
     }
 
     /**
@@ -137,7 +137,7 @@ class Customfields extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), [], $requestBody);
     }
 
     /**
@@ -165,6 +165,6 @@ class Customfields extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), [], $requestBody);
     }
 }

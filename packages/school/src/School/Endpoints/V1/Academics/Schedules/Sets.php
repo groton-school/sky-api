@@ -48,7 +48,7 @@ class Sets extends BaseEndpoint
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new ScheduleSetCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_num','school_year','group_type']), ARRAY_FILTER_USE_KEY)));
+        return new ScheduleSetCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['level_num','school_year','group_type']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -73,6 +73,6 @@ class Sets extends BaseEndpoint
     {
         assert(isset($params['schedule_set_id']), new ArgumentException("Parameter `schedule_set_id` is required"));
 
-        return new ScheduleSetDetails($this->send("get", array_filter($params, fn($key) => in_array($key, ['schedule_set_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new ScheduleSetDetails($this->send("get", array_filter($params, fn($key) => in_array($key, ['schedule_set_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

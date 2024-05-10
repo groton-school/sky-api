@@ -48,7 +48,7 @@ class Tablevalues extends BaseEndpoint
     {
         assert(isset($params['tableName']), new ArgumentException("Parameter `tableName` is required"));
 
-        return new TableValueCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['tableId','tableName','includeInactive']), ARRAY_FILTER_USE_KEY)));
+        return new TableValueCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['tableId','tableName','includeInactive']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -70,6 +70,6 @@ class Tablevalues extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new AddTableValuesResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
+        return new AddTableValuesResponse($this->send("post", [], [], $requestBody));
     }
 }

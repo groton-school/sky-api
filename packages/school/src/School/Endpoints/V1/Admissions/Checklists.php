@@ -47,6 +47,6 @@ class Checklists extends BaseEndpoint
         assert(isset($params['search_text']), new ArgumentException("Parameter `search_text` is required"));
         assert(isset($params['inactive']), new ArgumentException("Parameter `inactive` is required"));
 
-        return new AdmissionsCheckListCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['search_text','inactive']), ARRAY_FILTER_USE_KEY)));
+        return new AdmissionsCheckListCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['search_text','inactive']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -49,6 +49,6 @@ class Search extends BaseEndpoint
         assert(isset($params['sitetype']), new ArgumentException("Parameter `sitetype` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new SiteSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['id','site_id','name','short_name','acronym','sitetype','limit']), ARRAY_FILTER_USE_KEY)));
+        return new SiteSearchCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['id','site_id','name','short_name','acronym','sitetype','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

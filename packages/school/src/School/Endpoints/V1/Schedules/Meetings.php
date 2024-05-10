@@ -84,7 +84,7 @@ class Meetings extends BaseEndpoint
         assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
 
-        return new MeetingCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date','offering_types','section_ids','last_modified','show_time_for_current_date']), ARRAY_FILTER_USE_KEY)));
+        return new MeetingCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['start_date','end_date','offering_types','section_ids','last_modified','show_time_for_current_date']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**

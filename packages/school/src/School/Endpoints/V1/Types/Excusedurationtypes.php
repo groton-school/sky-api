@@ -26,6 +26,6 @@ class Excusedurationtypes extends BaseEndpoint
      */
     public function get(): Components_ExcuseDurationTypes
     {
-        return new Components_ExcuseDurationTypes($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new Components_ExcuseDurationTypes($this->send("get", [], []));
     }
 }

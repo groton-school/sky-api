@@ -47,6 +47,6 @@ class Roster extends BaseEndpoint
     {
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
 
-        return new Components_Roster($this->send("get", array_filter($params, fn($key) => in_array($key, ['team_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new Components_Roster($this->send("get", array_filter($params, fn($key) => in_array($key, ['team_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

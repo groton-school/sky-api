@@ -24,6 +24,6 @@ class Information extends BaseEndpoint
      */
     public function get(): GetVersionInformationView
     {
-        return new GetVersionInformationView($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new GetVersionInformationView($this->send("get", [], []));
     }
 }

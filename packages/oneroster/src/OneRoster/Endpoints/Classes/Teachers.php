@@ -38,6 +38,6 @@ class Teachers extends BaseEndpoint
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new UsersOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['class_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new UsersOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['class_id']), ARRAY_FILTER_USE_KEY), []));
     }
 }

@@ -70,6 +70,6 @@ class Schedules extends BaseEndpoint
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
 
-        return new ScheduleItemCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date','school_year','include_practice','team_id','last_modified']), ARRAY_FILTER_USE_KEY)));
+        return new ScheduleItemCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['start_date','end_date','school_year','include_practice','team_id','last_modified']), ARRAY_FILTER_USE_KEY)));
     }
 }

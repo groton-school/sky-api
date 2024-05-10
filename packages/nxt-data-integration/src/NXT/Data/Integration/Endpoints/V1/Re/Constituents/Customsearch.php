@@ -65,6 +65,6 @@ class Customsearch extends BaseEndpoint
         assert(isset($params['include_alias']), new ArgumentException("Parameter `include_alias` is required"));
         assert(isset($params['record_ids']), new ArgumentException("Parameter `record_ids` is required"));
 
-        return new ConstituentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit','first_name','last_name','alias_type','lookup_id','address_lines','city','state','post_code','email','phone_number','include_maiden_name','include_alias','record_ids']), ARRAY_FILTER_USE_KEY)));
+        return new ConstituentCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['limit','first_name','last_name','alias_type','lookup_id','address_lines','city','state','post_code','email','phone_number','include_maiden_name','include_alias','record_ids']), ARRAY_FILTER_USE_KEY)));
     }
 }

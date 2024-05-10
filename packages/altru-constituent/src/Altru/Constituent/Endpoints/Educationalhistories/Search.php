@@ -85,6 +85,6 @@ class Search extends BaseEndpoint
         assert(isset($params['primary_only']), new ArgumentException("Parameter `primary_only` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new EducationSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['full_name_educational_institution','key_name','first_name','lookup_id','exact_match_only','check_nick_name','check_aliases','check_alternate_lookup_ids','educational_institution','academic_catalog_program','educational_program','constituency_status','educational_history_status','academic_catalog_degree','educational_degree','class_of','primary_only','limit']), ARRAY_FILTER_USE_KEY)));
+        return new EducationSearchCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['full_name_educational_institution','key_name','first_name','lookup_id','exact_match_only','check_nick_name','check_aliases','check_alternate_lookup_ids','educational_institution','academic_catalog_program','educational_program','constituency_status','educational_history_status','academic_catalog_degree','educational_degree','class_of','primary_only','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

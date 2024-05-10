@@ -51,6 +51,6 @@ class Changed extends BaseEndpoint
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
 
-        return new EmergencyContactChangeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','marker']), ARRAY_FILTER_USE_KEY)));
+        return new EmergencyContactChangeCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['start_date','marker']), ARRAY_FILTER_USE_KEY)));
     }
 }

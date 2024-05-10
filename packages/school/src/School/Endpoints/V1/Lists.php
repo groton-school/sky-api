@@ -91,6 +91,6 @@ class Lists extends BaseEndpoint
      */
     public function list_(): ListReadCollection
     {
-        return new ListReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new ListReadCollection($this->send("get", [], []));
     }
 }

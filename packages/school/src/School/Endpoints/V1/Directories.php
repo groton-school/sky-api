@@ -33,7 +33,7 @@ class Directories extends BaseEndpoint
      */
     public function list_(): DirectoryModelCollection
     {
-        return new DirectoryModelCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
+        return new DirectoryModelCollection($this->send("get", [], []));
     }
 
     /**
