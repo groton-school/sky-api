@@ -58,16 +58,6 @@ class Search extends BaseEndpoint
         assert(isset($params['exact_match_only']), new ArgumentException("Parameter `exact_match_only` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentAddressSearchCollection($this->send("get", [], ["key_name" => $params['key_name'],
-            "first_name" => $params['first_name'],
-            "lookup_id" => $params['lookup_id'],
-            "address_block" => $params['address_block'],
-            "city" => $params['city'],
-            "state" => $params['state'],
-            "post_code" => $params['post_code'],
-            "country" => $params['country'],
-            "only_primary_address" => $params['only_primary_address'],
-            "exact_match_only" => $params['exact_match_only'],
-            "limit" => $params['limit']]));
+        return new ConstituentAddressSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['key_name','first_name','lookup_id','address_block','city','state','post_code','country','only_primary_address','exact_match_only','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -32,6 +32,6 @@ class GradingPeriods extends BaseEndpoint
     {
         assert(isset($params['term_id']), new ArgumentException("Parameter `term_id` is required"));
 
-        return new AcademicSessionsOutputModel($this->send("get", ["term_id" => $params['term_id']], []));
+        return new AcademicSessionsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['term_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

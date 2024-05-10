@@ -51,8 +51,6 @@ class Athleticrequirements extends BaseEndpoint
         assert(isset($params['season']), new ArgumentException("Parameter `season` is required"));
         assert(isset($params['include_']), new ArgumentException("Parameter `include_` is required"));
 
-        return array_map(fn($a) => new StudentAthleticRequirementRead($a), $this->send("get", ["user_id" => $params['user_id']], ["schoolYear" => $params['schoolYear'],
-            "season" => $params['season'],
-            "include_" => $params['include_']]));
+        return array_map(fn($a) => new StudentAthleticRequirementRead($a), $this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['schoolYear','season','include_']), ARRAY_FILTER_USE_KEY)));
     }
 }

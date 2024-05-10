@@ -33,6 +33,6 @@ class Sportslevels extends BaseEndpoint
      */
     public function list_(): SportsLevelCollection
     {
-        return new SportsLevelCollection($this->send("get", [], []));
+        return new SportsLevelCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

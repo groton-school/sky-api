@@ -16,6 +16,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   item
  * @property ?bool $featured Returns true if the news item is featured
  * @property ?\Blackbaud\SKY\School\Components\MediaItem[] $media_item
+ * @property ?string $date_created The date the news item was created.
  * @property ?\Blackbaud\SKY\School\Components\Category[] $categories The list
  *   of categories the news item is published to
  *
@@ -34,6 +35,7 @@ class NewsItem extends BaseComponent
         "long_description" => "string",
         "featured" => "bool",
         "media_item" => "\Blackbaud\SKY\School\Components\MediaItem[]",
+        "date_created" => "string",
         "categories" => "\Blackbaud\SKY\School\Components\Category[]",
     ];
 }

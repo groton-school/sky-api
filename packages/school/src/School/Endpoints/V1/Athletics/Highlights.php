@@ -50,6 +50,6 @@ class Highlights extends BaseEndpoint
     {
         assert(isset($params['highlight_id']), new ArgumentException("Parameter `highlight_id` is required"));
 
-        return new Highlight($this->send("get", ["highlight_id" => $params['highlight_id']], []));
+        return new Highlight($this->send("get", array_filter($params, fn($key) => in_array($key, ['highlight_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -7,16 +7,16 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * CreateConstituentInteraction
  *
- * @property string $constituent_id The constituent id.
- * @property string $interaction_type The contact method. This codetable can
+ * @property string $constituent_id The constituent ID.
+ * @property string $interaction_type The contact method. This code table can
  *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/interactiontypecode/entries
  * @property string $objective The summary.
  * @property string $fundraiser_id The owner.
- * @property string $expected_date The expected date.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
- * @property string $actual_date The actual date.Uses the format YYYY-MM-DD.
- *   An example date: *2019-11-21*.
+ * @property string $expected_date The expected date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $actual_date The actual date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $status The status. Available values are *pending*,
  *   *completed*, *canceled*, *declined*
  * @property string $comment The comment.
@@ -24,15 +24,15 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $constituent_name The constituent name. Read-only in the
  *   SOAP API.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentInteractionParticipants[]
- *   $participants participants
+ *   $participants Participants.
  * @property string $interaction_category The category. This simple list can
  *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/cbba7545-b66f-44ac-aa24-d9c2f8cbc4ec.
  * @property string $interaction_subcategory The subcategory. This simple list
  *   can be queried at
- *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/0eacc39b-07d1-4641-8774-e319559535a7?parameters=interaction\_category\_id,{interaction\_category\_id}.
+ *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/0eacc39b-07d1-4641-8774-e319559535a7?parameters=interactioncategoryid,{interactioncategoryid}.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentInteractionSites[]
- *   $sites sites
+ *   $sites Sites.
  * @property bool $site_required Indicates whether site required. Read-only in
  *   the SOAP API.
  * @property string $selected_constituent_id The constituent.

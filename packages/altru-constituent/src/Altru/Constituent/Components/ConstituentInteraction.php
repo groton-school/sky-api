@@ -7,23 +7,23 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * GetConstituentInteraction
  *
- * @property string $interaction_type The contact method. This codetable can
+ * @property string $interaction_type The contact method. This code table can
  *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/interactiontypecode/entries
  * @property string $objective The summary.
  * @property string $fundraiser_id The owner.
- * @property string $expected_date The expected date.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
- * @property string $actual_date The actual date.Uses the format YYYY-MM-DD.
- *   An example date: *2019-11-21*.
+ * @property string $expected_date The expected date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $actual_date The actual date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $status The status. Available values are *pending*,
  *   *completed*, *canceled*, *declined*
  * @property string $comment The comment.
  * @property bool $step Indicates whether is step. Read-only in the SOAP API.
  * @property string $event_id The event.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentInteractionParticipants[]
- *   $participants participants
- * @property string $constituent_id The constituent id. Read-only in the SOAP
+ *   $participants Participants.
+ * @property string $constituent_id The constituent ID. Read-only in the SOAP
  *   API.
  * @property string $constituent_name The constituent name. Read-only in the
  *   SOAP API.
@@ -32,9 +32,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/cbba7545-b66f-44ac-aa24-d9c2f8cbc4ec.
  * @property string $interaction_subcategory The subcategory. This simple list
  *   can be queried at
- *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/0eacc39b-07d1-4641-8774-e319559535a7?parameters=interaction\_category\_id,{interaction\_category\_id}.
+ *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/0eacc39b-07d1-4641-8774-e319559535a7?parameters=interactioncategoryid,{interactioncategoryid}.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentInteractionSites[]
- *   $sites sites
+ *   $sites Sites.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute
  *   $expected_start_time HourMinute
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute

@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * GetConstituentPhone
  *
- * @property string $phone_type The type. This codetable can be queried at
+ * @property string $phone_type The type. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
  * @property string $number The number.
  * @property bool $primary Indicates whether set as primary phone number.
@@ -24,14 +24,14 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   Read-only in the SOAP API.
  * @property bool $update_matching_household_phone Indicates whether update
  *   matching phone numbers in household.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneMatchinghouseholdmembers[]
- *   $matching_household_members matching\_household\_members
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneMatchingHouseholdMembers[]
+ *   $matching_household_members Matching household members.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute
  *   $start_time HourMinute
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute $end_time
  *   HourMinute
- * @property string $info_source The information source. This codetable can be
- *   queried at
+ * @property string $info_source The information source. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  * @property string $info_source_comments The comments.
  * @property string $country The country. This simple list can be queried at
@@ -40,17 +40,17 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   $seasonal_start_date MonthDay
  * @property \Blackbaud\SKY\Altru\Constituent\Components\MonthDay
  *   $seasonal_end_date MonthDay
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $do_not_call_reason The reason. This codetable can be
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $do_not_call_reason The reason. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotcallreasoncode/entries
  * @property bool $confidential Indicates whether this phone number is
  *   confidential.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneCountrycodes[]
- *   $country_codes country\_codes
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneCountryCodes[]
+ *   $country_codes Country codes.
  * @property string $constituent_data_review_rollback_reason The reason. This
  *   simple list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/484441bc-f0e6-4f5f-a6bf-49f02881dd13.
@@ -81,7 +81,7 @@ class ConstituentPhone extends BaseComponent
         "household" => "bool",
         "household_member" => "bool",
         "update_matching_household_phone" => "bool",
-        "matching_household_members" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneMatchinghouseholdmembers[]",
+        "matching_household_members" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneMatchingHouseholdMembers[]",
         "start_time" => "\Blackbaud\SKY\Altru\Constituent\Components\HourMinute",
         "end_time" => "\Blackbaud\SKY\Altru\Constituent\Components\HourMinute",
         "info_source" => "string",
@@ -93,7 +93,7 @@ class ConstituentPhone extends BaseComponent
         "end_date" => "string",
         "do_not_call_reason" => "string",
         "confidential" => "bool",
-        "country_codes" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneCountrycodes[]",
+        "country_codes" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentPhoneCountryCodes[]",
         "constituent_data_review_rollback_reason" => "string",
         "forced_primary" => "bool",
         "can_edit_primary" => "bool",

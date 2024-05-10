@@ -5,10 +5,7 @@ namespace Blackbaud\SKY\Altru\Administration\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * Fetching data all at once quickly becomes unmanageable. The collection
- * entity helps by returning paginated chunks of large data sets. This entity
- * includes helpful metadata and properties to paginate and iterate through
- * the data.
+ * A collection of items. Data lists can contain paginated results.
  *
  * @property int $count The number of items available for retrieval into the
  *   collection after applying any request parameters.

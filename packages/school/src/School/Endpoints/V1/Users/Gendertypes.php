@@ -29,6 +29,6 @@ class Gendertypes extends BaseEndpoint
      */
     public function list_(): GenderTypeCollection
     {
-        return new GenderTypeCollection($this->send("get", [], []));
+        return new GenderTypeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

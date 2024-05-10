@@ -22,6 +22,6 @@ class Me extends BaseEndpoint
      */
     public function get(): UserMe
     {
-        return new UserMe($this->send("get", [], []));
+        return new UserMe($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\Altru\Constituent\Components\ConstituentFundraiser;
+use Blackbaud\SKY\Altru\Constituent\Components\EditConstituentFundraiser;
 use Blackbaud\SKY\Altru\Constituent\Components\NewConstituentFundraiser;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentFundraiser;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\List_;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers\Prospectplanlist;
 
@@ -50,7 +50,7 @@ class Fundraisers extends BaseEndpoint
     protected ?Prospectplanlist $_prospectplanlist = null;
 
     /**
-     * This dataform template is used to add a fundraiser constituency to a
+     * This operation is used to add a fundraiser constituency to a
      * constituent.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentFundraiser
@@ -67,11 +67,11 @@ class Fundraisers extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * This dataform template is used to edit a fundraiser constituency of a
+     * This operation is used to edit a fundraiser constituency of a
      * constituent.
      *
      * @param array{fundraiser_date_range_id: string} $params An associative
@@ -89,7 +89,7 @@ class Fundraisers extends BaseEndpoint
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
 
-        return new ConstituentFundraiser($this->send("get", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], []));
+        return new ConstituentFundraiser($this->send("get", array_filter($params, fn($key) => in_array($key, ['fundraiser_date_range_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -110,17 +110,17 @@ class Fundraisers extends BaseEndpoint
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
 
-        return $this->send("delete", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['fundraiser_date_range_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * This dataform template is used to edit a fundraiser constituency of a
+     * This operation is used to edit a fundraiser constituency of a
      * constituent.
      *
      * @param array{fundraiser_date_range_id: string} $params An associative
      *   array
      *     - fundraiser_date_range_id: The fundraiser date range id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentFundraiser
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditConstituentFundraiser
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -130,11 +130,11 @@ class Fundraisers extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnFundraiserDateRangeId(array $params, UpdateConstituentFundraiser $requestBody): mixed
+    public function patchOnFundraiserDateRangeId(array $params, EditConstituentFundraiser $requestBody): mixed
     {
         assert(isset($params['fundraiser_date_range_id']), new ArgumentException("Parameter `fundraiser_date_range_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["fundraiser_date_range_id" => $params['fundraiser_date_range_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['fundraiser_date_range_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

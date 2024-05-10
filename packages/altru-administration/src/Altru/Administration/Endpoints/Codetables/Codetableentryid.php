@@ -33,7 +33,6 @@ class Codetableentryid extends BaseEndpoint
         assert(isset($params['code_table_name']), new ArgumentException("Parameter `code_table_name` is required"));
         assert(isset($params['entry_id']), new ArgumentException("Parameter `entry_id` is required"));
 
-        return $this->send("delete", ["code_table_name" => $params['code_table_name'],
-            "entry_id" => $params['entry_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['code_table_name','entry_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 }

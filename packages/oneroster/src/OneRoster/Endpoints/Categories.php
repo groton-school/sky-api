@@ -26,7 +26,7 @@ class Categories extends BaseEndpoint
      */
     public function get(): CategoriesOutputModel
     {
-        return new CategoriesOutputModel($this->send("get", [], []));
+        return new CategoriesOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -45,7 +45,7 @@ class Categories extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new CategoryOutputModel($this->send("get", ["id" => $params['id']], []));
+        return new CategoryOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -67,6 +67,6 @@ class Categories extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new CategoryOutputModel($this->send("put", ["id" => $params['id']], [], $requestBody));
+        return new CategoryOutputModel($this->send("put", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

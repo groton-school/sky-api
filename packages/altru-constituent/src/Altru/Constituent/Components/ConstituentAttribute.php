@@ -17,11 +17,11 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $string_value The value.
  * @property int $number_value The value.
  * @property float $money_value The value.
- * @property string $date_value The value.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $date_value The value. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $booleanvalue The value. Available values are *no*, *yes*
- * @property string $code_table_value The value. This codetable can be queried
- *   at
+ * @property string $code_table_value The value. This code table can be
+ *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
  * @property \Blackbaud\SKY\Altru\Constituent\Components\FuzzyDate
@@ -32,15 +32,15 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $memo_value The value.
  * @property string $comment The comment.
  * @property string $constituent_search_list_catalog_id The constituent search
- *   list catalog id. Read-only in the SOAP API.
+ *   list catalog ID. Read-only in the SOAP API.
  * @property string $code_table_name The code table name. Read-only in the
  *   SOAP API.
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $currency The currency. This simple list can be queried at
- *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/13612288-b37e-409d-ba52-6ab31637ddd6?parameters=transaction\_currency\_id,{transaction\_currency\_id}&amp;parameters=base\_currency\_id,{base\_currency\_id}&amp;parameters=current\_currency\_id,{currency\_id}.
+ *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/13612288-b37e-409d-ba52-6ab31637ddd6?parameters=transaction\_currency\_id,{transaction\_currency\_id}&amp;parameters=base\_currency\_id,{base\_currency\_id}&amp;parameters=current\_currency\_id,{currencyid}.
  * @property string $transaction_currency_id The transaction currency.
  *   Read-only in the SOAP API.
  * @property string $base_currency_id The base currency. Read-only in the SOAP

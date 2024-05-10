@@ -34,6 +34,6 @@ class Constituentidmap extends BaseEndpoint
     {
         assert(isset($params['constituentid']), new ArgumentException("Parameter `constituentid` is required"));
 
-        return new Components_ConstituentIdMap($this->send("get", ["constituentid" => $params['constituentid']], []));
+        return new Components_ConstituentIdMap($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituentid']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

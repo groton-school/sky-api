@@ -74,6 +74,6 @@ class Teams extends BaseEndpoint
     {
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new TeamCollection($this->send("get", [], ["school_year" => $params['school_year']]));
+        return new TeamCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['school_year']), ARRAY_FILTER_USE_KEY)));
     }
 }

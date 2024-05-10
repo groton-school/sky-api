@@ -47,7 +47,6 @@ class Terms extends BaseEndpoint
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
-        return new TermCollection($this->send("get", [], ["school_year" => $params['school_year'],
-            "offering_type" => $params['offering_type']]));
+        return new TermCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['school_year','offering_type']), ARRAY_FILTER_USE_KEY)));
     }
 }

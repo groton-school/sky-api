@@ -23,6 +23,6 @@ class Installedcountry extends BaseEndpoint
      */
     public function get(): string
     {
-        return $this->send("get", [], []);
+        return $this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 }

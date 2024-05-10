@@ -13,6 +13,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   from
  * @property ?bool $primary Set to true if the new category is the primary
  *   source of the news item
+ * @property ?string $publish_date The publish date
+ * @property ?string $expire_date The date of expiration
  *
  * @api
  */
@@ -26,5 +28,7 @@ class Category extends BaseComponent
         "name" => "string",
         "content_type" => "string",
         "primary" => "bool",
+        "publish_date" => "string",
+        "expire_date" => "string",
     ];
 }

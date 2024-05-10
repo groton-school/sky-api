@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * NewEducationAffiliatedadditionalinformation
+ * NewEducationAffiliateDadditionalInformation
  *
  * @property string $id id
  * @property string $academiccatalogcollege The college/school. This simple
@@ -26,7 +26,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @api
  */
-class NewEducationAffiliatedadditionalinformation extends BaseComponent
+class NewEducationAffiliateDadditionalInformation extends BaseComponent
 {
     /**
      * @var string[] $fields

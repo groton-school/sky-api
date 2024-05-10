@@ -85,7 +85,7 @@ class Search extends BaseEndpoint
      *     - middle_name: represents a filter on the middle name of the
      *   constituent.
      *     - suffix: represents a filter on the suffix code of the constituent
-     *   name. This codetable can be queried at
+     *   name. This code table can be queried at
      *   https://api.sky.blackbaud.com/alt-adnmg/codetables/SUFFIXCODE/entries
      *     - constituency: represents a filter on the constituency of the
      *   constituent. SimpleDataListID=7821c1ab-3001-485b-aec7-f55749f959e6.
@@ -134,36 +134,6 @@ class Search extends BaseEndpoint
         assert(isset($params['sourcecode']), new ArgumentException("Parameter `sourcecode` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentSearchCollection($this->send("get", [], ["constituent_quick_find" => $params['constituent_quick_find'],
-            "full_name" => $params['full_name'],
-            "key_name" => $params['key_name'],
-            "first_name" => $params['first_name'],
-            "lookup_id" => $params['lookup_id'],
-            "address_block" => $params['address_block'],
-            "city" => $params['city'],
-            "state" => $params['state'],
-            "post_code" => $params['post_code'],
-            "country" => $params['country'],
-            "include_inactive" => $params['include_inactive'],
-            "include_deceased" => $params['include_deceased'],
-            "only_primary_address" => $params['only_primary_address'],
-            "exact_match_only" => $params['exact_match_only'],
-            "check_nickname" => $params['check_nickname'],
-            "check_aliases" => $params['check_aliases'],
-            "classof" => $params['classof'],
-            "minimum_date" => $params['minimum_date'],
-            "exclude_households" => $params['exclude_households'],
-            "email_address" => $params['email_address'],
-            "include_individuals" => $params['include_individuals'],
-            "include_organizations" => $params['include_organizations'],
-            "include_groups" => $params['include_groups'],
-            "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
-            "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
-            "phone_number" => $params['phone_number'],
-            "middle_name" => $params['middle_name'],
-            "suffix" => $params['suffix'],
-            "constituency" => $params['constituency'],
-            "sourcecode" => $params['sourcecode'],
-            "limit" => $params['limit']]));
+        return new ConstituentSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['constituent_quick_find','full_name','key_name','first_name','lookup_id','address_block','city','state','post_code','country','include_inactive','include_deceased','only_primary_address','exact_match_only','check_nickname','check_aliases','classof','minimum_date','exclude_households','email_address','include_individuals','include_organizations','include_groups','check_alternate_lookup_ids','fuzzy_search_on_name','phone_number','middle_name','suffix','constituency','sourcecode','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

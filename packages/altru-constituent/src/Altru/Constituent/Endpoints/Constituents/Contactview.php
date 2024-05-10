@@ -17,8 +17,8 @@ class Contactview extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituents/{constituent_id}/contactview";
 
     /**
-     * This view form displays the preferred address, phone, and email
-     * information for a given constituent
+     * This view operation displays the preferred address, phone, and email
+     * inoperationation for a given constituent
      *
      * @param array{constituent_id: string} $params An associative array
      *     - constituent_id: The constituent id.
@@ -34,6 +34,6 @@ class Contactview extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new ConstituentPrimaryContactInformationView($this->send("get", ["constituent_id" => $params['constituent_id']], []));
+        return new ConstituentPrimaryContactInformationView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

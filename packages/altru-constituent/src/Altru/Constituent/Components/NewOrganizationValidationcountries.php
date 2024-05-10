@@ -5,14 +5,14 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * NewOrganizationValidationcountries
+ * NewOrganizationValidationCountries
  *
  * @property string $country_id countryid
  * @property bool $browsable browsable
  *
  * @api
  */
-class NewOrganizationValidationcountries extends BaseComponent
+class NewOrganizationValidationCountries extends BaseComponent
 {
     /**
      * @var string[] $fields

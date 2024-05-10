@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * GetConstituentAppealResponse
  *
  * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentAppealResponseResponses[]
- *   $responses responses
+ *   $responses Responses.
  *
  * @api
  */

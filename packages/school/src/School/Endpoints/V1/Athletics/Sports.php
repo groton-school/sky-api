@@ -46,6 +46,6 @@ class Sports extends BaseEndpoint
     {
         assert(isset($params['season_id']), new ArgumentException("Parameter `season_id` is required"));
 
-        return new SportCollection($this->send("get", [], ["season_id" => $params['season_id']]));
+        return new SportCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['season_id']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentMergeConfiguration
+ * ListConstituentMergeConfigurations
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $name The name.
  * @property string $description The description.
  *

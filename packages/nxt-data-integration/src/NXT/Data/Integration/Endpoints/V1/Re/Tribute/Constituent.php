@@ -34,6 +34,6 @@ class Constituent extends BaseEndpoint
     {
         assert(isset($params['constituentId']), new ArgumentException("Parameter `constituentId` is required"));
 
-        return new TributeCollection($this->send("get", ["constituentId" => $params['constituentId']], []));
+        return new TributeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituentId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

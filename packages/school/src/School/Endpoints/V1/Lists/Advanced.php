@@ -74,7 +74,19 @@ class Advanced extends BaseEndpoint
      *
      * - SkyApi Data Sync
      *
-     * @param array{list_id: int, page: int, page_size: int} $params An
+     * **Rate Limiting:**- Any successful calls made to the GET List Single
+     * endpoint will have no restrictions
+     *
+     * - Any call resulting in an error to the GET List Single endpoint will
+     * trigger a temporary time-out on the Environment and BBID of the calls
+     * origin. This time-out/hold will be for 60 seconds. After that calls may
+     * resume.
+     *
+     * - If calls are made to the endpoint while the time-out is in place the
+     * response back will be Status 429 too many requests and an error of
+     * "Limited by error rate" will appear.
+     *
+     * @param array{list_id: int, page?: int, page_size?: int} $params An
      *   associative array
      *     - list_id: Format - int32. The ID of the list. To learn how to find
      *   the list ID, see [KB article
@@ -92,10 +104,7 @@ class Advanced extends BaseEndpoint
     public function getByListId(array $params): ListResult
     {
         assert(isset($params['list_id']), new ArgumentException("Parameter `list_id` is required"));
-        assert(isset($params['page']), new ArgumentException("Parameter `page` is required"));
-        assert(isset($params['page_size']), new ArgumentException("Parameter `page_size` is required"));
 
-        return new ListResult($this->send("get", ["list_id" => $params['list_id']], ["page" => $params['page'],
-            "page_size" => $params['page_size']]));
+        return new ListResult($this->send("get", array_filter($params, fn($key) => in_array($key, ['list_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['page','page_size']), ARRAY_FILTER_USE_KEY)));
     }
 }

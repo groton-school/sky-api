@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListEducation
+ * ListEducations
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $program The program.
  * @property string $name The educational institution.
  * @property string $degree The degree.

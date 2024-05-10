@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ConstituentAddressMatchinghouseholdmembers
+ * ConstituentAddressMatchingHouseholdMembers
  *
  * @property string $constituent_id constituent id
  * @property string $name household member
@@ -13,7 +13,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @api
  */
-class ConstituentAddressMatchinghouseholdmembers extends BaseComponent
+class ConstituentAddressMatchingHouseholdMembers extends BaseComponent
 {
     /**
      * @var string[] $fields

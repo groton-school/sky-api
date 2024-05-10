@@ -5,11 +5,11 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentAlternateLookupId
+ * ListConstituentAlternateLookupIds
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $type The type.
- * @property string $alternate_lookup_id The lookup id.
+ * @property string $alternate_lookup_id The lookup ID.
  *
  * @api
  */

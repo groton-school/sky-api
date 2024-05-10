@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentPhone
+ * ListConstituentPhones
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $phone_number The phone number.
  * @property string $type The type.
  * @property bool $primary Indicates whether primary.
@@ -19,12 +19,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $info_source The information source.
  * @property string $info_source_comments The information source comments.
  * @property string $country The country.
- * @property string $phone_type_code_id The phone type code id.
+ * @property string $phone_type_code_id The phone type code ID.
  * @property bool $donotcall Indicates whether donotcall.
- * @property string $start_date The startdate.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The enddate.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The startdate. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The enddate. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  *
  * @api
  */

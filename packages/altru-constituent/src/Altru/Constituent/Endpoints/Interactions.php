@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\Altru\Constituent\Components\ConstituentInteraction;
+use Blackbaud\SKY\Altru\Constituent\Components\EditConstituentInteraction;
 use Blackbaud\SKY\Altru\Constituent\Components\NewConstituentInteraction;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentInteraction;
 
 /**
  * @api
@@ -20,7 +20,7 @@ class Interactions extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/interactions/{constituent_interaction_id}";
 
     /**
-     * Add dataform for interaction records.
+     * Add dataoperation for interaction records.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentInteraction
      *   $requestBody ConfigurationMessage object representing operation
@@ -36,11 +36,11 @@ class Interactions extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * Edit form for a non-move interaction.
+     * Edit operation for a non-move interaction.
      *
      * @param array{constituent_interaction_id: string} $params An associative
      *   array
@@ -57,7 +57,7 @@ class Interactions extends BaseEndpoint
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
 
-        return new ConstituentInteraction($this->send("get", ["constituent_interaction_id" => $params['constituent_interaction_id']], []));
+        return new ConstituentInteraction($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_interaction_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -78,16 +78,16 @@ class Interactions extends BaseEndpoint
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
 
-        return $this->send("delete", ["constituent_interaction_id" => $params['constituent_interaction_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['constituent_interaction_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * Edit form for a non-move interaction.
+     * Edit operation for a non-move interaction.
      *
      * @param array{constituent_interaction_id: string} $params An associative
      *   array
      *     - constituent_interaction_id: The constituent interaction id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentInteraction
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditConstituentInteraction
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -97,11 +97,11 @@ class Interactions extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnConstituentInteractionId(array $params, UpdateConstituentInteraction $requestBody): mixed
+    public function patchOnConstituentInteractionId(array $params, EditConstituentInteraction $requestBody): mixed
     {
         assert(isset($params['constituent_interaction_id']), new ArgumentException("Parameter `constituent_interaction_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["constituent_interaction_id" => $params['constituent_interaction_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['constituent_interaction_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

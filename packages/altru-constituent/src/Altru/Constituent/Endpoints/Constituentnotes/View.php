@@ -17,7 +17,7 @@ class View extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituentnotes/{constituent_note_id}/view";
 
     /**
-     * This dataform template displays a constituent note.
+     * This operation displays a constituent note.
      *
      * @param array{constituent_note_id: string} $params An associative array
      *     - constituent_note_id: The constituent note id.
@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['constituent_note_id']), new ArgumentException("Parameter `constituent_note_id` is required"));
 
-        return new ConstituentNoteView($this->send("get", ["constituent_note_id" => $params['constituent_note_id']], []));
+        return new ConstituentNoteView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_note_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

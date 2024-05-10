@@ -45,7 +45,7 @@ class Terms extends BaseEndpoint
      */
     public function get(): AcademicSessionsOutputModel
     {
-        return new AcademicSessionsOutputModel($this->send("get", [], []));
+        return new AcademicSessionsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -64,6 +64,6 @@ class Terms extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new AcademicSessionOutputModel($this->send("get", ["id" => $params['id']], []));
+        return new AcademicSessionOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

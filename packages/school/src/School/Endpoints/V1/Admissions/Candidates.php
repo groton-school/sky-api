@@ -71,9 +71,7 @@ class Candidates extends BaseEndpoint
         assert(isset($params['status_ids']), new ArgumentException("Parameter `status_ids` is required"));
         assert(isset($params['modified_date']), new ArgumentException("Parameter `modified_date` is required"));
 
-        return new CandidateReadCollection($this->send("get", [], ["school_year" => $params['school_year'],
-            "status_ids" => $params['status_ids'],
-            "modified_date" => $params['modified_date']]));
+        return new CandidateReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['school_year','status_ids','modified_date']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -99,6 +97,6 @@ class Candidates extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", [], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

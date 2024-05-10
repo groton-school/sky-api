@@ -41,7 +41,6 @@ class Sections extends BaseEndpoint
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
 
-        return new AdvisoriesSectionCollection($this->send("get", [], ["level_num" => $params['level_num'],
-            "school_year" => $params['school_year']]));
+        return new AdvisoriesSectionCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_num','school_year']), ARRAY_FILTER_USE_KEY)));
     }
 }

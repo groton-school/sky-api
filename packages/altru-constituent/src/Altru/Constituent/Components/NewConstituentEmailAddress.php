@@ -7,8 +7,8 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * CreateConstituentEmailAddress
  *
- * @property string $constituent_id The constituent id.
- * @property string $email_address_type The type. This codetable can be
+ * @property string $constituent_id The constituent ID.
+ * @property string $email_address_type The type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/emailaddresstypecode/entries
  * @property string $email_address The email address.
@@ -24,8 +24,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   copy email address information to household members.
  * @property bool $do_not_email Indicates whether do not send email to this
  *   address.
- * @property string $info_source The information source. This codetable can be
- *   queried at
+ * @property string $info_source The information source. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  * @property string $info_source_comments The comments.
  * @property string $constituent_data_review_rollback_reason The reason. This
@@ -39,8 +39,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   API.
  * @property string $origin The origin. Available values are *user*, *web
  *   forms*
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  *
  * @api
  */

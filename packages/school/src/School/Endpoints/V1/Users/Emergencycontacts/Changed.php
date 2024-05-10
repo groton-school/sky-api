@@ -31,7 +31,7 @@ class Changed extends BaseEndpoint
      *
      * - SKY API Data Sync
      *
-     * @param array{start_date: string, marker: int} $params An associative
+     * @param array{start_date: string, marker?: int} $params An associative
      *   array
      *     - start_date: Format - date-time (as date-time in RFC3339). The
      *   date to begin looking for changes. Use
@@ -50,9 +50,7 @@ class Changed extends BaseEndpoint
     public function list_(array $params): EmergencyContactChangeCollection
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
-        assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new EmergencyContactChangeCollection($this->send("get", [], ["start_date" => $params['start_date'],
-            "marker" => $params['marker']]));
+        return new EmergencyContactChangeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','marker']), ARRAY_FILTER_USE_KEY)));
     }
 }

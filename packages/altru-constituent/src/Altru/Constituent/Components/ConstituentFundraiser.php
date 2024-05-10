@@ -7,10 +7,10 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * GetConstituentFundraiser
  *
- * @property string $date_from The date from.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $date_to The date to.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $date_from The date from. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $date_to The date to. Uses the format YYYY-MM-DDThh:mm:ss.
+ *   An example date: *1955-11-05T22:04:00*.
  *
  * @api
  */

@@ -5,19 +5,19 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentAppeal
+ * ListConstituentAppeals
  *
- * @property string $id The id.
- * @property string $appeal_id The appeal id.
+ * @property string $id The ID.
+ * @property string $appeal_id The appeal ID.
  * @property string $appeal The appeal.
  * @property string $description The description.
- * @property string $date_sent The date sent.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $date_sent The date sent. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $source_code The source code.
  * @property int $finder_number The finder number.
  * @property string $comments The comments.
- * @property string $mkt_segmentation_id The mailing id.
- * @property string $mkt_segmentation_segment_id The segment id.
+ * @property string $mkt_segmentation_id The mailing ID.
+ * @property string $mkt_segmentation_segment_id The segment ID.
  * @property string $letter The letter.
  * @property string $package The package.
  * @property string $mailing The mailing.

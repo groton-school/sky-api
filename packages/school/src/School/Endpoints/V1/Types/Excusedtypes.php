@@ -28,6 +28,6 @@ class Excusedtypes extends BaseEndpoint
      */
     public function list_(): ExcusedTypesCollection
     {
-        return new ExcusedTypesCollection($this->send("get", [], []));
+        return new ExcusedTypesCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

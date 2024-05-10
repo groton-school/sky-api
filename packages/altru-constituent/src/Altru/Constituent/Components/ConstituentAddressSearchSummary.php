@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * SearchConstituentAddress
+ * SearchConstituentAddresses
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $name The name.
  * @property string $address The address.
  * @property string $city The city.

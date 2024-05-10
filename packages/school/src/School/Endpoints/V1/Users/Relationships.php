@@ -6,6 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\RelationshipCreate;
 use Blackbaud\SKY\School\Components\RelationshipReadCollection;
+use Blackbaud\SKY\School\Components\RelationshipUpdate;
 
 /**
  * @api
@@ -13,9 +14,9 @@ use Blackbaud\SKY\School\Components\RelationshipReadCollection;
 class Relationships extends BaseEndpoint
 {
     /**
-     * @var string $url Endpoint URL pattern
+     * @var string $url
      */
-    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/relationships";
+    protected string $url = "https://api.sky.blackbaud.com/school/v1/users/{user_id}/relationships/{left_user_id}";
 
     /**
      * Returns a collection of a relationships for the specified
@@ -43,7 +44,7 @@ class Relationships extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new RelationshipReadCollection($this->send("get", ["user_id" => $params['user_id']], []));
+        return new RelationshipReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -77,7 +78,7 @@ class Relationships extends BaseEndpoint
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["user_id" => $params['user_id']], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -116,7 +117,41 @@ class Relationships extends BaseEndpoint
         assert(isset($params['left_user']), new ArgumentException("Parameter `left_user` is required"));
         assert(isset($params['relationship_type']), new ArgumentException("Parameter `relationship_type` is required"));
 
-        return $this->send("delete", ["user_id" => $params['user_id']], ["left_user" => $params['left_user'],
-            "relationship_type" => $params['relationship_type']]);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['left_user','relationship_type']), ARRAY_FILTER_USE_KEY));
+    }
+
+    /**
+     * Updates a relationship record for the specified ```user\_id```.
+     *
+     *  Returns 200 OK Requires at least one of the following roles in the
+     * Education Management system:
+     *
+     * - Contact Card Manager
+     *
+     * - Platform Manager
+     *
+     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
+     * day deprecation period.\*\*\*
+     *
+     * @param array{user_id: int, left_user_id: int} $params An associative
+     *   array
+     *     - user_id: Format - int32. The ID of the user.
+     *     - left_user_id: Format - int32. The user ID of the relationship to
+     *   the user
+     * @param \Blackbaud\SKY\School\Components\RelationshipUpdate $requestBody
+     *   Defines the relationship to be updated.
+     *
+     * @return mixed Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
+     */
+    public function patchOnUserIdAndLeftUserId(array $params, RelationshipUpdate $requestBody): mixed
+    {
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['left_user_id']), new ArgumentException("Parameter `left_user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['user_id','left_user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

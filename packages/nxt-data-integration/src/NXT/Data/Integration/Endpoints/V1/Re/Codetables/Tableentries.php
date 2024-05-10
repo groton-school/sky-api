@@ -39,8 +39,7 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new TableEntry($this->send("get", ["code_table_id" => $params['code_table_id'],
-            "id" => $params['id']], []));
+        return new TableEntry($this->send("get", array_filter($params, fn($key) => in_array($key, ['code_table_id','id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -61,8 +60,7 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return $this->send("delete", ["code_table_id" => $params['code_table_id'],
-            "id" => $params['id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['code_table_id','id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
@@ -85,8 +83,7 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["code_table_id" => $params['code_table_id'],
-            "id" => $params['id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['code_table_id','id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -122,12 +119,7 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new TableEntryCollection($this->send("get", ["code_table_id" => $params['code_table_id']], ["long_description" => $params['long_description'],
-            "short_description" => $params['short_description'],
-            "numeric_value" => $params['numeric_value'],
-            "include_inactive" => $params['include_inactive'],
-            "limit" => $params['limit'],
-            "offset" => $params['offset']]));
+        return new TableEntryCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['code_table_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['long_description','short_description','numeric_value','include_inactive','limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -150,6 +142,6 @@ class Tableentries extends BaseEndpoint
         assert(isset($params['code_table_id']), new ArgumentException("Parameter `code_table_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", ["code_table_id" => $params['code_table_id']], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['code_table_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

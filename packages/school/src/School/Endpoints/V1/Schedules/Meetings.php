@@ -49,9 +49,9 @@ class Meetings extends BaseEndpoint
      *
      * - Scheduling Manager
      *
-     * @param array{start_date: string, end_date: string, offering_types:
+     * @param array{start_date: string, end_date: string, offering_types?:
      *   string, section_ids: string, last_modified: string,
-     *   show_time_for_current_date: bool} $params An associative array
+     *   show_time_for_current_date?: bool} $params An associative array
      *     - start_date: Format - date-time (as date-time in RFC3339). Use
      *   [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date format:
      *   2022-04-01.
@@ -81,17 +81,10 @@ class Meetings extends BaseEndpoint
     {
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
-        assert(isset($params['offering_types']), new ArgumentException("Parameter `offering_types` is required"));
         assert(isset($params['section_ids']), new ArgumentException("Parameter `section_ids` is required"));
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
-        assert(isset($params['show_time_for_current_date']), new ArgumentException("Parameter `show_time_for_current_date` is required"));
 
-        return new MeetingCollection($this->send("get", [], ["start_date" => $params['start_date'],
-            "end_date" => $params['end_date'],
-            "offering_types" => $params['offering_types'],
-            "section_ids" => $params['section_ids'],
-            "last_modified" => $params['last_modified'],
-            "show_time_for_current_date" => $params['show_time_for_current_date']]));
+        return new MeetingCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date','offering_types','section_ids','last_modified','show_time_for_current_date']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -103,13 +96,12 @@ class Meetings extends BaseEndpoint
      * Default date range is 30 days.
      *
      *  Requires at least one of the following roles in the Education
-     * Management system:
+     * Management system and group page access should be set for one of the
+     * roles:
      *
      * - Student
      *
      * - Parent
-     *
-     * - Platform Manager
      *
      * - Attendance Manager
      *
@@ -133,7 +125,6 @@ class Meetings extends BaseEndpoint
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new StudentScheduleCollection($this->send("get", ["student_id" => $params['student_id']], ["start_date" => $params['start_date'],
-            "end_date" => $params['end_date']]));
+        return new StudentScheduleCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['student_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -59,6 +59,6 @@ class Simplelists extends BaseEndpoint
         assert(isset($params['simple_list_id']), new ArgumentException("Parameter `simple_list_id` is required"));
         assert(isset($params['parameters']), new ArgumentException("Parameter `parameters` is required"));
 
-        return new ApiCollectionSimpleListLoad($this->send("get", ["simple_list_id" => $params['simple_list_id']], ["parameters" => $params['parameters']]));
+        return new ApiCollectionSimpleListLoad($this->send("get", array_filter($params, fn($key) => in_array($key, ['simple_list_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['parameters']), ARRAY_FILTER_USE_KEY)));
     }
 }

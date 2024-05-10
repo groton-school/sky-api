@@ -59,23 +59,24 @@ use Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes;
  *   $mergetwoconstituents
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentinactivityreasoncodes
  *   $constituentinactivityreasoncodes
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
- *   $constituentmergeconfiguration
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Tribute $tribute
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes $tributes
  *   Routing class for the subnamespace `Tributes`
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals
  *   $constituentappeals Routing class for the subnamespace `Constituentappeals`
 
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\States $states
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappealresponses
  *   $constituentappealresponses
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers
  *   $fundraisers Routing class for the subnamespace `Fundraisers`
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Educationalhistories
- *   $educationalhistories
+ *   $educationalhistories Routing class for the subnamespace
+ *   `Educationalhistories`
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Relationshipjobsinfo
  *   $relationshipjobsinfo
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\States $states
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
+ *   $constituentmergeconfiguration
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent
  *   $constituent Routing class for the subnamespace `Constituent`
  *
@@ -102,15 +103,15 @@ class Client extends BaseEndpoint
         "constituentnotes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentnotes",
         "mergetwoconstituents" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Mergetwoconstituents",
         "constituentinactivityreasoncodes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentinactivityreasoncodes",
-        "constituentmergeconfiguration" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration",
         "tribute" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Tribute",
         "tributes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Tributes",
         "constituentappeals" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals",
-        "states" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\States",
         "constituentappealresponses" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappealresponses",
         "fundraisers" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Fundraisers",
         "educationalhistories" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Educationalhistories",
         "relationshipjobsinfo" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Relationshipjobsinfo",
+        "states" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\States",
+        "constituentmergeconfiguration" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration",
         "constituent" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent",
     ];
 
@@ -200,12 +201,6 @@ class Client extends BaseEndpoint
     protected ?Constituentinactivityreasoncodes $_constituentinactivityreasoncodes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
-     *   $_constituentmergeconfiguration
-     */
-    protected ?Constituentmergeconfiguration $_constituentmergeconfiguration = null;
-
-    /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Tribute $_tribute
      */
     protected ?Tribute $_tribute = null;
@@ -224,11 +219,6 @@ class Client extends BaseEndpoint
     protected ?Constituentappeals $_constituentappeals = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\States $_states
-     */
-    protected ?States $_states = null;
-
-    /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappealresponses
      *   $_constituentappealresponses
      */
@@ -242,7 +232,8 @@ class Client extends BaseEndpoint
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Educationalhistories
-     *   $_educationalhistories
+     *   $_educationalhistories Routing class for the subnamespace
+     *   `Educationalhistories`
      */
     protected ?Educationalhistories $_educationalhistories = null;
 
@@ -251,6 +242,17 @@ class Client extends BaseEndpoint
      *   $_relationshipjobsinfo
      */
     protected ?Relationshipjobsinfo $_relationshipjobsinfo = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\States $_states
+     */
+    protected ?States $_states = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentmergeconfiguration
+     *   $_constituentmergeconfiguration
+     */
+    protected ?Constituentmergeconfiguration $_constituentmergeconfiguration = null;
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituent

@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentDuplicateMatch
+ * ListConstituentDuplicateMatches
  *
- * @property string $constituent_id The constituent id.
+ * @property string $constituent_id The constituent ID.
  * @property int $match_score The match score.
  *
  * @api

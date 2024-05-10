@@ -26,7 +26,7 @@ class LineItems extends BaseEndpoint
      */
     public function get(): LineItemsOutputModel
     {
-        return new LineItemsOutputModel($this->send("get", [], []));
+        return new LineItemsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -45,7 +45,7 @@ class LineItems extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new LineItemOutputModel($this->send("get", ["id" => $params['id']], []));
+        return new LineItemOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -67,6 +67,6 @@ class LineItems extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new LineItemOutputModel($this->send("put", ["id" => $params['id']], [], $requestBody));
+        return new LineItemOutputModel($this->send("put", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

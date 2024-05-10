@@ -75,10 +75,6 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $host_id The hostId in the user profile
  * @property ?\Blackbaud\SKY\School\Components\HomeLanguageRead[]
  *   $home_languages List of user home languages
- * @property bool $is_latino_hispanic **Deprecated**: The islatinohispanic in
- *   the user profile
- * @property bool $is_international The isinternational in the user profile
- *   (will be deprecated 02/15/2024)
  * @property bool $is_responsible_signer The isresponsiblesigner in the user
  *   profile
  * @property \Blackbaud\SKY\School\Components\UserInState $in_state An object
@@ -193,8 +189,6 @@ class UserExtended extends BaseComponent
         "greeting" => "string",
         "host_id" => "string",
         "home_languages" => "\Blackbaud\SKY\School\Components\HomeLanguageRead[]",
-        "is_latino_hispanic" => "bool",
-        "is_international" => "bool",
         "is_responsible_signer" => "bool",
         "in_state" => "\Blackbaud\SKY\School\Components\UserInState",
         "international" => "string",

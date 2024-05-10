@@ -17,7 +17,7 @@ class Revenuesummaryview extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/individuals/{constituent_id}/revenuesummaryview";
 
     /**
-     * Displays revenue summary information about an individual.
+     * Displays revenue summary inoperationation about an individual.
      *
      * @param array{constituent_id: string} $params An associative array
      *     - constituent_id: The constituent id.
@@ -33,6 +33,6 @@ class Revenuesummaryview extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new IndividualRevenueSummaryView($this->send("get", ["constituent_id" => $params['constituent_id']], []));
+        return new IndividualRevenueSummaryView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

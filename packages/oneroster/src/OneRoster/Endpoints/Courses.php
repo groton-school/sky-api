@@ -25,7 +25,7 @@ class Courses extends BaseEndpoint
      */
     public function get(): CoursesOutputModel
     {
-        return new CoursesOutputModel($this->send("get", [], []));
+        return new CoursesOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -44,6 +44,6 @@ class Courses extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new CourseOutputModel($this->send("get", ["id" => $params['id']], []));
+        return new CourseOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -40,7 +40,7 @@ class Allergies extends BaseEndpoint
     {
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
 
-        return $this->send("delete", ["allergy_id" => $params['allergy_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['allergy_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
@@ -69,7 +69,7 @@ class Allergies extends BaseEndpoint
         assert(isset($params['allergy_id']), new ArgumentException("Parameter `allergy_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["allergy_id" => $params['allergy_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['allergy_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -97,6 +97,6 @@ class Allergies extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", [], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

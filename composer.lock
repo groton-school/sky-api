@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f708e4f55d03f09caf37a9e5f771d86d",
+    "content-hash": "4772994eeeae9a79f0005b6975f7c37d",
     "packages": [
         {
             "name": "battis/data-utilities",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.base.git",
-                "reference": "0d0f38f3d23bdabad11718bc064dc9fe5f827f2b"
+                "reference": "9f0501c00832757ae287e03d0adae4ebf1fd9ece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/0d0f38f3d23bdabad11718bc064dc9fe5f827f2b",
-                "reference": "0d0f38f3d23bdabad11718bc064dc9fe5f827f2b",
+                "url": "https://api.github.com/repos/battis/openapi-client.base/zipball/9f0501c00832757ae287e03d0adae4ebf1fd9ece",
+                "reference": "9f0501c00832757ae287e03d0adae4ebf1fd9ece",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                 "issues": "https://github.com/battis/openapi-client.base/issues",
                 "source": "https://github.com/battis/openapi-client.base/tree/main"
             },
-            "time": "2024-05-09T16:07:25+00:00"
+            "time": "2024-05-09T17:01:40+00:00"
         },
         {
             "name": "battis/openapi-client.generator",
@@ -177,18 +177,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/openapi-client.generator.git",
-                "reference": "9473ddda18fc7298c678b00c4267d11403cbc5bc"
+                "reference": "a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/9473ddda18fc7298c678b00c4267d11403cbc5bc",
-                "reference": "9473ddda18fc7298c678b00c4267d11403cbc5bc",
+                "url": "https://api.github.com/repos/battis/openapi-client.generator/zipball/a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62",
+                "reference": "a0c4eb0d7c2ca2a62fb00cba49ec032529b4da62",
                 "shasum": ""
             },
             "require": {
                 "battis/data-utilities": "^1.2",
                 "battis/openapi-client.base": "@dev",
-                "battis/php-generator": "@dev",
+                "battis/php-generator": "dev-main",
                 "cebe/php-openapi": "^1.7",
                 "friendsofphp/php-cs-fixer": "^3.49",
                 "league/html-to-markdown": "^5.1",
@@ -224,20 +224,20 @@
                 "issues": "https://github.com/battis/openapi-client.generator/issues",
                 "source": "https://github.com/battis/openapi-client.generator/tree/main"
             },
-            "time": "2024-05-09T16:07:27+00:00"
+            "time": "2024-05-10T14:11:53+00:00"
         },
         {
             "name": "battis/php-generator",
-            "version": "v0.2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/battis/php-generator.git",
-                "reference": "bf00942847d04c6361207cad8d2b808868143a94"
+                "reference": "052e6846b3e79e72fd6cdea890e7c008f428041e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/battis/php-generator/zipball/bf00942847d04c6361207cad8d2b808868143a94",
-                "reference": "bf00942847d04c6361207cad8d2b808868143a94",
+                "url": "https://api.github.com/repos/battis/php-generator/zipball/052e6846b3e79e72fd6cdea890e7c008f428041e",
+                "reference": "052e6846b3e79e72fd6cdea890e7c008f428041e",
                 "shasum": ""
             },
             "require": {
@@ -246,6 +246,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^11.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -265,9 +266,9 @@
             "description": "Generate PHP code dynamically",
             "support": {
                 "issues": "https://github.com/battis/php-generator/issues",
-                "source": "https://github.com/battis/php-generator/tree/v0.2"
+                "source": "https://github.com/battis/php-generator/tree/main"
             },
-            "time": "2024-04-20T14:54:43+00:00"
+            "time": "2024-05-10T14:05:28+00:00"
         },
         {
             "name": "brick/math",
@@ -681,16 +682,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.56.0",
+            "version": "v3.56.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "4429303e62a4ce583ddfe64ff5c34c76bcf74931"
+                "reference": "69c6168ae8bc96dc656c7f6c7271120a68ae5903"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/4429303e62a4ce583ddfe64ff5c34c76bcf74931",
-                "reference": "4429303e62a4ce583ddfe64ff5c34c76bcf74931",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/69c6168ae8bc96dc656c7f6c7271120a68ae5903",
+                "reference": "69c6168ae8bc96dc656c7f6c7271120a68ae5903",
                 "shasum": ""
             },
             "require": {
@@ -762,7 +763,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.56.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.56.1"
             },
             "funding": [
                 {
@@ -770,7 +771,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-07T15:50:05+00:00"
+            "time": "2024-05-10T11:31:15+00:00"
         },
         {
             "name": "google/auth",
@@ -2128,20 +2129,20 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -2165,7 +2166,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -2177,9 +2178,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
         },
         {
             "name": "psr/http-message",

@@ -17,12 +17,13 @@ class Constituentduplicatematch extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituents/constituentduplicatematch";
 
     /**
-     * List of constituents matching web forms automatch threshold.
+     * List of constituents matching web operations automatch threshold.
      *
      * @param array{max_results: int, email_address: string, first_name:
      *   string, key_name: string, address_block: string, country: string,
-     *   post_code: string, phone_number: string, title: string, limit: int}
-     *   $params An associative array
+     *   post_code: string, phone_number: string, title: string, limit: int,
+     *   session_key: string, infinity_session: string, more_rows_range_key:
+     *   string, start_row_index: int} $params An associative array
      *     - max_results: max number of rows
      *     - email_address: email address
      *     - first_name: first name
@@ -32,9 +33,17 @@ class Constituentduplicatematch extends BaseEndpoint
      *   SimpleDataListID=c9649672-353d-42e8-8c25-4d34bbabfbba.
      *     - post_code: address zip code
      *     - phone_number: phone number
-     *     - title: title This codetable can be queried at
+     *     - title: title This code table can be queried at
      *   https://api.sky.blackbaud.com/alt-adnmg/codetables/TITLECODE/entries
      *     - limit: Limits the number of records to return.
+     *     - session_key: A unique key provided by user for paging results.
+     *   The same key will be returned in a successful response.
+     *     - infinity_session: Values for cookies related to the Infinity load
+     *   balancer session.
+     *     - more_rows_range_key: Key for accessing cached results on
+     *   subsequent calls to this data list.
+     *     - start_row_index: Number of rows to skip,get result after these
+     *   rows.
      *
      * @return \Blackbaud\SKY\Altru\Constituent\Components\ConstituentDuplicateMatchListCollection
      *   Returned when the operation succeeds. The response body contains a
@@ -55,16 +64,11 @@ class Constituentduplicatematch extends BaseEndpoint
         assert(isset($params['phone_number']), new ArgumentException("Parameter `phone_number` is required"));
         assert(isset($params['title']), new ArgumentException("Parameter `title` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
+        assert(isset($params['session_key']), new ArgumentException("Parameter `session_key` is required"));
+        assert(isset($params['infinity_session']), new ArgumentException("Parameter `infinity_session` is required"));
+        assert(isset($params['more_rows_range_key']), new ArgumentException("Parameter `more_rows_range_key` is required"));
+        assert(isset($params['start_row_index']), new ArgumentException("Parameter `start_row_index` is required"));
 
-        return new ConstituentDuplicateMatchListCollection($this->send("get", [], ["max_results" => $params['max_results'],
-            "email_address" => $params['email_address'],
-            "first_name" => $params['first_name'],
-            "key_name" => $params['key_name'],
-            "address_block" => $params['address_block'],
-            "country" => $params['country'],
-            "post_code" => $params['post_code'],
-            "phone_number" => $params['phone_number'],
-            "title" => $params['title'],
-            "limit" => $params['limit']]));
+        return new ConstituentDuplicateMatchListCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['max_results','email_address','first_name','key_name','address_block','country','post_code','phone_number','title','limit','session_key','infinity_session','more_rows_range_key','start_row_index']), ARRAY_FILTER_USE_KEY)));
     }
 }

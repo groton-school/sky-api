@@ -28,7 +28,7 @@ class Sets extends BaseEndpoint
      *
      * - Schedule Manager
      *
-     * @param array{level_num: int, school_year: string, group_type: int}
+     * @param array{level_num: int, school_year: string, group_type?: int}
      *   $params An associative array
      *     - level_num: Format - int32. Level Number indicates which school
      *   you are working with.
@@ -47,11 +47,8 @@ class Sets extends BaseEndpoint
     {
         assert(isset($params['level_num']), new ArgumentException("Parameter `level_num` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
-        assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
-        return new ScheduleSetCollection($this->send("get", [], ["level_num" => $params['level_num'],
-            "school_year" => $params['school_year'],
-            "group_type" => $params['group_type']]));
+        return new ScheduleSetCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_num','school_year','group_type']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -76,6 +73,6 @@ class Sets extends BaseEndpoint
     {
         assert(isset($params['schedule_set_id']), new ArgumentException("Parameter `schedule_set_id` is required"));
 
-        return new ScheduleSetDetails($this->send("get", ["schedule_set_id" => $params['schedule_set_id']], []));
+        return new ScheduleSetDetails($this->send("get", array_filter($params, fn($key) => in_array($key, ['schedule_set_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

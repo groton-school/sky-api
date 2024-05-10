@@ -25,7 +25,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $do_not_mail_reason_code_id The donotmailreasoncodeid.
  * @property bool $do_not_call Indicates whether donotcall.
  * @property bool $do_not_email Indicates whether donotemail.
- * @property bool $is_confidential Indicates whether isconfidential.
+ * @property bool $confidential Indicates whether isconfidential.
  * @property string $do_not_call_reason_code_id The donotcallreasoncodeid.
  * @property bool $phone_is_confidential Indicates whether
  *   phoneisconfidential.
@@ -56,7 +56,7 @@ class ConstituentPrimaryContactInformationView extends BaseComponent
         "do_not_mail_reason_code_id" => "string",
         "do_not_call" => "bool",
         "do_not_email" => "bool",
-        "is_confidential" => "bool",
+        "confidential" => "bool",
         "do_not_call_reason_code_id" => "string",
         "phone_is_confidential" => "bool",
     ];

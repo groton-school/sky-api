@@ -5,19 +5,19 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentAddress
+ * ListConstituentAddresses
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $contact_info The contact information.
  * @property string $type The type.
  * @property string $primary The primary.
  * @property string $do_not_contact The do not contact.
  * @property bool $confidential Indicates whether confidential.
  * @property bool $former Indicates whether isformer.
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property bool $geocoded Indicates whether isgeocoded.
  * @property bool $pending_geocode Indicates whether pendinggeocode.
  * @property bool $invalid_geocode Indicates whether invalidgeocode.

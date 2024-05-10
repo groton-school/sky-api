@@ -7,12 +7,12 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * CreateTribute
  *
- * @property string $revenue_id The revenue id.
+ * @property string $revenue_id The revenue ID.
  * @property string $tribute_id The tribute.
  * @property float $amount The amount.
  * @property string $designation_id The default designation.
  * @property \Blackbaud\SKY\Altru\Constituent\Components\NewTributeSplits[]
- *   $splits splits
+ *   $splits Splits.
  * @property bool $apply_default_designation Indicates whether apply default
  *   designation to revenue.
  * @property bool $revenue_posted Indicates whether isrevenueposted. Read-only

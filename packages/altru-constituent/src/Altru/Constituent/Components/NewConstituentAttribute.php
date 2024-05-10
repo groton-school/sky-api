@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * CreateConstituentAttribute
  *
- * @property string $attribute_context_id The attribute context id.
+ * @property string $attribute_context_id The attribute context ID.
  * @property string $header_caption The headercaption. Read-only in the SOAP
  *   API.
  * @property string $attribute_category The category. This simple list can be
@@ -16,11 +16,11 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $string_value The value.
  * @property int $number_value The value.
  * @property float $money_value The value.
- * @property string $date_value The value.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $date_value The value. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $boolean_value The value. Available values are *no*, *yes*
- * @property string $code_table_value The value. This codetable can be queried
- *   at
+ * @property string $code_table_value The value. This code table can be
+ *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
  * @property \Blackbaud\SKY\Altru\Constituent\Components\FuzzyDate
@@ -29,13 +29,13 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute
  *   $hour_minute_value HourMinute
  * @property string $memo_value The value.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAttributeAttributecategories[]
- *   $attribute_categories attribute\_categories
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAttributeAttributeCategories[]
+ *   $attribute_categories Attribute categories.
  * @property string $comment The comment.
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $record_type_string The record type. Read-only in the SOAP
  *   API.
  * @property string $currency The currency. This simple list can be queried at
@@ -66,7 +66,7 @@ class NewConstituentAttribute extends BaseComponent
         "constituent_id_value" => "string",
         "hour_minute_value" => "\Blackbaud\SKY\Altru\Constituent\Components\HourMinute",
         "memo_value" => "string",
-        "attribute_categories" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAttributeAttributecategories[]",
+        "attribute_categories" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAttributeAttributeCategories[]",
         "comment" => "string",
         "start_date" => "string",
         "end_date" => "string",

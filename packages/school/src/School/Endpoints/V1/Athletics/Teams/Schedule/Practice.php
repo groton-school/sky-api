@@ -43,7 +43,7 @@ class Practice extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", ["team_id" => $params['team_id']], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['team_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -71,7 +71,7 @@ class Practice extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["team_id" => $params['team_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['team_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -101,7 +101,6 @@ class Practice extends BaseEndpoint
         assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['practice_id']), new ArgumentException("Parameter `practice_id` is required"));
 
-        return $this->send("delete", ["team_id" => $params['team_id'],
-            "practice_id" => $params['practice_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['team_id','practice_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 }

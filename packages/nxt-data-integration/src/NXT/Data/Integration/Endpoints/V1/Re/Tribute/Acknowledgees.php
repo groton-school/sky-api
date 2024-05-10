@@ -34,6 +34,6 @@ class Acknowledgees extends BaseEndpoint
     {
         assert(isset($params['tributeId']), new ArgumentException("Parameter `tributeId` is required"));
 
-        return new TributeAcknowledgeeCollection($this->send("get", ["tributeId" => $params['tributeId']], []));
+        return new TributeAcknowledgeeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['tributeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

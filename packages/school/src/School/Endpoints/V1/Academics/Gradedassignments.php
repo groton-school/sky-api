@@ -48,7 +48,6 @@ class Gradedassignments extends BaseEndpoint
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['marking_period_id']), new ArgumentException("Parameter `marking_period_id` is required"));
 
-        return new StudentGradedAssignmentCollection($this->send("get", ["student_id" => $params['student_id'],
-            "section_id" => $params['section_id']], ["marking_period_id" => $params['marking_period_id']]));
+        return new StudentGradedAssignmentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['student_id','section_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['marking_period_id']), ARRAY_FILTER_USE_KEY)));
     }
 }

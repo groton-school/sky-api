@@ -17,7 +17,7 @@ class View extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/addresses/{address_id}/view";
 
     /**
-     * This dataform template is used for viewing basic address information.
+     * This operation is used for viewing basic address inoperationation.
      *
      * @param array{address_id: string} $params An associative array
      *     - address_id: The address id.
@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
 
-        return new ConstituentAddressView($this->send("get", ["address_id" => $params['address_id']], []));
+        return new ConstituentAddressView($this->send("get", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -5,14 +5,14 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ConstituentStudentrelationconstituencies
+ * ConstituentStudentRelationConstituencies
  *
  * @property string $description description
  * @property int $sequence sequence
  *
  * @api
  */
-class ConstituentStudentrelationconstituencies extends BaseComponent
+class ConstituentStudentRelationConstituencies extends BaseComponent
 {
     /**
      * @var string[] $fields

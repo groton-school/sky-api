@@ -56,7 +56,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $primary_education The primary education.
  * @property string $primary_business_id The primarybusinessid.
  * @property string $primary_business The primary business.
- * @property string $lookup_id The lookup id.
+ * @property string $lookup_id The lookup ID.
  * @property bool $wealthpoint_update_pending Indicates whether
  *   wealthpointupdatepending.
  * @property bool $education_attribute_defined Indicates whether
@@ -85,7 +85,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $committee_member_constituency_text The
  *   committeememberconstituencytext.
  * @property string $faculty_constituency_text The facultyconstituencytext.
- * @property bool $isdeceased Indicates whether isdeceased.
+ * @property bool $deceased Indicates whether isdeceased.
  * @property string $current_enrollment_id The currentenrollmentid.
  * @property string $current_school The school.
  * @property string $current_enrollment_id_2 The currentenrollmentid2.
@@ -102,35 +102,35 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   phoneisconfidential.
  * @property bool $address_is_confidential Indicates whether
  *   addressisconfidential.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentConstituenciesdisplayorder[]
- *   $constituencies_display_order constituencies\_display\_order
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentConstituenciesDisplayOrder[]
+ *   $constituencies_display_order Constituencies display order.
  * @property int $sponsor_type_code The sponsortypecode.
  * @property string $lifecycle_stage The donor lifecycle.
- * @property string $lifecycle_stage_as_of The as of.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
+ * @property string $lifecycle_stage_as_of The as of. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $planned_giver_stage The plannedgiverstage.
- * @property string $planned_giver_stage_as_of The as of.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
+ * @property string $planned_giver_stage_as_of The as of. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property int $donor_state_code The donorstatecode.
  * @property string $donor_state The donor state.
- * @property string $last_revenue_date The lastrevenuedate.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
+ * @property string $last_revenue_date The lastrevenuedate. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $address_id The addressid.
  * @property string $phone_number_id The phonenumberid.
  * @property string $email_address_id The emailaddressid.
  * @property string $top_parent_id The topparentid.
  * @property string $top_parent The top parent organization.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentUserdefinedconstituencies[]
- *   $user_defined_constituencies user\_defined\_constituencies
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentStudentrelationconstituencies[]
- *   $student_relation_constituencies student\_relation\_constituencies
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentUserDefinedConstituencies[]
+ *   $user_defined_constituencies User defined constituencies.
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentStudentRelationConstituencies[]
+ *   $student_relation_constituencies Student relation constituencies.
  * @property bool $user_granted_constitpersonalinfo_edit Indicates whether
  *   user\_granted\_constitpersonalinfo\_edit.
  * @property string $name The name.
  * @property string $fundraising_group_constituency_text The
  *   fundraisinggroupconstituencytext.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentSocialmediaaccounts[]
- *   $social_media_accounts social\_media\_accounts
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentSocialMediaAccounts[]
+ *   $social_media_accounts Social media accounts.
  *
  * @api
  */
@@ -205,7 +205,7 @@ class ConstituentSummaryProfileView extends BaseComponent
         "constituent_inactivity_reason" => "string",
         "committee_member_constituency_text" => "string",
         "faculty_constituency_text" => "string",
-        "isdeceased" => "bool",
+        "deceased" => "bool",
         "current_enrollment_id" => "string",
         "current_school" => "string",
         "current_enrollment_id_2" => "string",
@@ -217,7 +217,7 @@ class ConstituentSummaryProfileView extends BaseComponent
         "student_relation_constituency_text" => "string",
         "phone_is_confidential" => "bool",
         "address_is_confidential" => "bool",
-        "constituencies_display_order" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentConstituenciesdisplayorder[]",
+        "constituencies_display_order" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentConstituenciesDisplayOrder[]",
         "sponsor_type_code" => "int",
         "lifecycle_stage" => "string",
         "lifecycle_stage_as_of" => "string",
@@ -231,11 +231,11 @@ class ConstituentSummaryProfileView extends BaseComponent
         "email_address_id" => "string",
         "top_parent_id" => "string",
         "top_parent" => "string",
-        "user_defined_constituencies" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentUserdefinedconstituencies[]",
-        "student_relation_constituencies" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentStudentrelationconstituencies[]",
+        "user_defined_constituencies" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentUserDefinedConstituencies[]",
+        "student_relation_constituencies" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentStudentRelationConstituencies[]",
         "user_granted_constitpersonalinfo_edit" => "bool",
         "name" => "string",
         "fundraising_group_constituency_text" => "string",
-        "social_media_accounts" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentSocialmediaaccounts[]",
+        "social_media_accounts" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentSocialMediaAccounts[]",
     ];
 }

@@ -30,7 +30,7 @@ class Enrollments extends BaseEndpoint
      * - SKY API Data Sync
      *
      * @param array{school_year: string, school_level_id: int, grade_level_id:
-     *   int, limit: int, offset: int} $params An associative array
+     *   int, limit?: int, offset?: int} $params An associative array
      *     - school_year: The school year label to get enrollments for. The
      *   school year should be formatted like ```2022-2023```
      *     - school_level_id: Format - int32. The school level Id to return
@@ -53,13 +53,7 @@ class Enrollments extends BaseEndpoint
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
         assert(isset($params['school_level_id']), new ArgumentException("Parameter `school_level_id` is required"));
         assert(isset($params['grade_level_id']), new ArgumentException("Parameter `grade_level_id` is required"));
-        assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
-        assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new UserEnrollmentCollection($this->send("get", [], ["school_year" => $params['school_year'],
-            "school_level_id" => $params['school_level_id'],
-            "grade_level_id" => $params['grade_level_id'],
-            "limit" => $params['limit'],
-            "offset" => $params['offset']]));
+        return new UserEnrollmentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['school_year','school_level_id','grade_level_id','limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListConstituentFundraiser
+ * ListConstituentFundraisers
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $name The name.
  * @property int $prospect_plans_as_primary_manager The prospect plans (as
  *   primary manager).

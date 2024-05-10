@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\Altru\Constituent\Components\ConstituentEmailAddress;
+use Blackbaud\SKY\Altru\Constituent\Components\EditConstituentEmailAddress;
 use Blackbaud\SKY\Altru\Constituent\Components\NewConstituentEmailAddress;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentEmailAddress;
 
 /**
  * @api
@@ -20,7 +20,7 @@ class Emailaddresses extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/emailaddresses/{email_address_id}";
 
     /**
-     * This dataform template is used to add email addresses.
+     * This operation is used to add email addresses.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentEmailAddress
      *   $requestBody ConfigurationMessage object representing operation
@@ -36,11 +36,11 @@ class Emailaddresses extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * This dataform template is used to edit email addresses.
+     * This operation is used to edit email addresses.
      *
      * @param array{email_address_id: string} $params An associative array
      *     - email_address_id: The email address id.
@@ -56,7 +56,7 @@ class Emailaddresses extends BaseEndpoint
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
 
-        return new ConstituentEmailAddress($this->send("get", ["email_address_id" => $params['email_address_id']], []));
+        return new ConstituentEmailAddress($this->send("get", array_filter($params, fn($key) => in_array($key, ['email_address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -76,15 +76,15 @@ class Emailaddresses extends BaseEndpoint
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
 
-        return $this->send("delete", ["email_address_id" => $params['email_address_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['email_address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * This dataform template is used to edit email addresses.
+     * This operation is used to edit email addresses.
      *
      * @param array{email_address_id: string} $params An associative array
      *     - email_address_id: The email address id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentEmailAddress
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditConstituentEmailAddress
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -94,11 +94,11 @@ class Emailaddresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnEmailAddressId(array $params, UpdateConstituentEmailAddress $requestBody): mixed
+    public function patchOnEmailAddressId(array $params, EditConstituentEmailAddress $requestBody): mixed
     {
         assert(isset($params['email_address_id']), new ArgumentException("Parameter `email_address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["email_address_id" => $params['email_address_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['email_address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

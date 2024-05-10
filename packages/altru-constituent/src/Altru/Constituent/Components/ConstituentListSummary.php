@@ -7,14 +7,14 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * ListPatronData
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $sales_order_id The salesorderid.
- * @property string $refund_date The refund date.Uses the format YYYY-MM-DD.
- *   An example date: *2019-11-21*.
+ * @property string $refund_date The refund date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property float $refund_total The refund amount.
  * @property string $refund_items The refund items.
- * @property string $transaction_date The order date.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
+ * @property string $transaction_date The order date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $order_number The order number.
  * @property float $order_total The order total.
  *

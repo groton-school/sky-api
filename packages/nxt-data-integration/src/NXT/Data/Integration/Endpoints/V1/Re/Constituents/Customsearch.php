@@ -65,19 +65,6 @@ class Customsearch extends BaseEndpoint
         assert(isset($params['include_alias']), new ArgumentException("Parameter `include_alias` is required"));
         assert(isset($params['record_ids']), new ArgumentException("Parameter `record_ids` is required"));
 
-        return new ConstituentCollection($this->send("get", [], ["limit" => $params['limit'],
-            "first_name" => $params['first_name'],
-            "last_name" => $params['last_name'],
-            "alias_type" => $params['alias_type'],
-            "lookup_id" => $params['lookup_id'],
-            "address_lines" => $params['address_lines'],
-            "city" => $params['city'],
-            "state" => $params['state'],
-            "post_code" => $params['post_code'],
-            "email" => $params['email'],
-            "phone_number" => $params['phone_number'],
-            "include_maiden_name" => $params['include_maiden_name'],
-            "include_alias" => $params['include_alias'],
-            "record_ids" => $params['record_ids']]));
+        return new ConstituentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit','first_name','last_name','alias_type','lookup_id','address_lines','city','state','post_code','email','phone_number','include_maiden_name','include_alias','record_ids']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ConstituentSocialmediaaccounts
+ * ConstituentSocialMediaAccounts
  *
  * @property string $id id
  * @property string $social_media_service_id socialmediaserviceid
@@ -23,7 +23,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @api
  */
-class ConstituentSocialmediaaccounts extends BaseComponent
+class ConstituentSocialMediaAccounts extends BaseComponent
 {
     /**
      * @var string[] $fields

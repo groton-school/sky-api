@@ -27,6 +27,6 @@ class Phonetypes extends BaseEndpoint
      */
     public function list_(): PhoneTypeCollection
     {
-        return new PhoneTypeCollection($this->send("get", [], []));
+        return new PhoneTypeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

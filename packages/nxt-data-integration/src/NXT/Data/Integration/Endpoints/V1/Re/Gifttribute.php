@@ -77,7 +77,7 @@ class Gifttribute extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return new Components_GiftTribute($this->send("get", ["giftTributeId" => $params['giftTributeId']], []));
+        return new Components_GiftTribute($this->send("get", array_filter($params, fn($key) => in_array($key, ['giftTributeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -97,7 +97,7 @@ class Gifttribute extends BaseEndpoint
     {
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
 
-        return $this->send("delete", ["giftTributeId" => $params['giftTributeId']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['giftTributeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
@@ -119,7 +119,7 @@ class Gifttribute extends BaseEndpoint
         assert(isset($params['giftTributeId']), new ArgumentException("Parameter `giftTributeId` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["giftTributeId" => $params['giftTributeId']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['giftTributeId']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -141,8 +141,7 @@ class Gifttribute extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new GiftTributeCollection($this->send("get", [], ["limit" => $params['limit'],
-            "offset" => $params['offset']]));
+        return new GiftTributeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -162,6 +161,6 @@ class Gifttribute extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

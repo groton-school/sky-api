@@ -9,7 +9,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @property string $source_id The the constituent whose data will be merged
  *   into the target constituent..
- * @property string $targetid The the constituent record that will represent
+ * @property string $target_id The the constituent record that will represent
  *   the consolidated view of the constituent's data after the merge has
  *   completed..
  * @property string $config The the merge configuration that will be used to
@@ -34,7 +34,7 @@ class NewConstituentMerge extends BaseComponent
      */
     protected static array $fields = [
         "source_id" => "string",
-        "targetid" => "string",
+        "target_id" => "string",
         "config" => "string",
         "delete_source" => "bool",
         "constituent_inactivity_reason_code" => "string",

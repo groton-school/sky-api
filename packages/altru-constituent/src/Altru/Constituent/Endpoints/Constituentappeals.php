@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\Altru\Constituent\Components\ConstituentAppeal;
+use Blackbaud\SKY\Altru\Constituent\Components\EditConstituentAppeal;
 use Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAppeal;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentAppeal;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Constituentappeals\Appeals;
 
 /**
@@ -40,7 +40,7 @@ class Constituentappeals extends BaseEndpoint
     protected ?Appeals $_appeals = null;
 
     /**
-     * Data form for adding a Constituent Appeal record.
+     * Operation for adding a constituent appeal record.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAppeal
      *   $requestBody ConfigurationMessage object representing operation
@@ -56,11 +56,11 @@ class Constituentappeals extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * Data form for editing a Constituent Appeal record.
+     * Operation for editing a constituent appeal record.
      *
      * @param array{constituent_appeal_id: string} $params An associative
      *   array
@@ -77,12 +77,12 @@ class Constituentappeals extends BaseEndpoint
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
 
-        return new ConstituentAppeal($this->send("get", ["constituent_appeal_id" => $params['constituent_appeal_id']], []));
+        return new ConstituentAppeal($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_appeal_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
-     * This delete method handles the basic deletion rules for a Constituent
-     * Appeal.
+     * This delete method handles the basic deletion rules for a constituent
+     * appeal.
      *
      * @param array{constituent_appeal_id: string} $params An associative
      *   array
@@ -98,16 +98,16 @@ class Constituentappeals extends BaseEndpoint
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
 
-        return $this->send("delete", ["constituent_appeal_id" => $params['constituent_appeal_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['constituent_appeal_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * Data form for editing a Constituent Appeal record.
+     * Operation for editing a constituent appeal record.
      *
      * @param array{constituent_appeal_id: string} $params An associative
      *   array
      *     - constituent_appeal_id: The constituent appeal id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentAppeal
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditConstituentAppeal
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -117,11 +117,11 @@ class Constituentappeals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnConstituentAppealId(array $params, UpdateConstituentAppeal $requestBody): mixed
+    public function patchOnConstituentAppealId(array $params, EditConstituentAppeal $requestBody): mixed
     {
         assert(isset($params['constituent_appeal_id']), new ArgumentException("Parameter `constituent_appeal_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["constituent_appeal_id" => $params['constituent_appeal_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['constituent_appeal_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

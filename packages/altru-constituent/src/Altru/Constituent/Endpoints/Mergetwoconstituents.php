@@ -18,7 +18,7 @@ class Mergetwoconstituents extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/mergetwoconstituents";
 
     /**
-     * This form lets the user merge two selected constituent records.
+     * This operation lets the user merge two selected constituent records.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentMerge
      *   $requestBody ConfigurationMessage object representing operation
@@ -34,6 +34,6 @@ class Mergetwoconstituents extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

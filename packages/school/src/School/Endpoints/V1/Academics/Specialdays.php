@@ -38,6 +38,6 @@ class Specialdays extends BaseEndpoint
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
 
-        return new SpecialDayCollection($this->send("get", [], ["level_id" => $params['level_id']]));
+        return new SpecialDayCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_id']), ARRAY_FILTER_USE_KEY)));
     }
 }

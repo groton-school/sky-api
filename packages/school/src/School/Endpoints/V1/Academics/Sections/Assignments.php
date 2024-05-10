@@ -62,10 +62,6 @@ class Assignments extends BaseEndpoint
         assert(isset($params['filter']), new ArgumentException("Parameter `filter` is required"));
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
 
-        return new AssignmentCollection($this->send("get", ["section_id" => $params['section_id']], ["types" => $params['types'],
-            "status" => $params['status'],
-            "persona_id" => $params['persona_id'],
-            "filter" => $params['filter'],
-            "search" => $params['search']]));
+        return new AssignmentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['section_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['types','status','persona_id','filter','search']), ARRAY_FILTER_USE_KEY)));
     }
 }

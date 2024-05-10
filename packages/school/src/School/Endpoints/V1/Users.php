@@ -205,7 +205,7 @@ class Users extends BaseEndpoint
      * of results. For example: ```marker=101``` will return the second set of
      * results.
      *
-     *  Results dependant on the directory settings of each user.
+     *  Results are dependent on the directory settings of each user.
      *
      *  Requires at least one of the following roles in the Education
      * Management system:
@@ -249,14 +249,7 @@ class Users extends BaseEndpoint
         assert(isset($params['end_grad_year']), new ArgumentException("Parameter `end_grad_year` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new UserReadCollection($this->send("get", [], ["roles" => $params['roles'],
-            "first_name" => $params['first_name'],
-            "last_name" => $params['last_name'],
-            "email" => $params['email'],
-            "maiden_name" => $params['maiden_name'],
-            "grad_year" => $params['grad_year'],
-            "end_grad_year" => $params['end_grad_year'],
-            "marker" => $params['marker']]));
+        return new UserReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['roles','first_name','last_name','email','maiden_name','grad_year','end_grad_year','marker']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -283,7 +276,7 @@ class Users extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", [], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -310,7 +303,7 @@ class Users extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", [], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -333,6 +326,6 @@ class Users extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserRead($this->send("get", ["user_id" => $params['user_id']], []));
+        return new UserRead($this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

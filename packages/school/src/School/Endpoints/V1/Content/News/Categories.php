@@ -29,6 +29,6 @@ class Categories extends BaseEndpoint
      */
     public function list_(): NewsCategoryCollection
     {
-        return new NewsCategoryCollection($this->send("get", [], []));
+        return new NewsCategoryCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

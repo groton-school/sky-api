@@ -42,8 +42,8 @@ class Schedules extends BaseEndpoint
      * - Pending Coach
      *
      * @param array{start_date: string, end_date: string, school_year: string,
-     *   include_practice: bool, team_id: int, last_modified: string} $params An
-     *   associative array
+     *   include_practice?: bool, team_id?: int, last_modified: string} $params
+     *   An associative array
      *     - start_date: Format - date-time (as date-time in RFC3339). Filter
      *   games/practices after this date
      *     - end_date: Format - date-time (as date-time in RFC3339). Filter
@@ -68,15 +68,8 @@ class Schedules extends BaseEndpoint
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
         assert(isset($params['school_year']), new ArgumentException("Parameter `school_year` is required"));
-        assert(isset($params['include_practice']), new ArgumentException("Parameter `include_practice` is required"));
-        assert(isset($params['team_id']), new ArgumentException("Parameter `team_id` is required"));
         assert(isset($params['last_modified']), new ArgumentException("Parameter `last_modified` is required"));
 
-        return new ScheduleItemCollection($this->send("get", [], ["start_date" => $params['start_date'],
-            "end_date" => $params['end_date'],
-            "school_year" => $params['school_year'],
-            "include_practice" => $params['include_practice'],
-            "team_id" => $params['team_id'],
-            "last_modified" => $params['last_modified']]));
+        return new ScheduleItemCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['start_date','end_date','school_year','include_practice','team_id','last_modified']), ARRAY_FILTER_USE_KEY)));
     }
 }

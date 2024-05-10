@@ -38,7 +38,6 @@ class Taxdeclarations extends BaseEndpoint
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
         assert(isset($params['offset']), new ArgumentException("Parameter `offset` is required"));
 
-        return new GiftAidTaxDeclarationCollection($this->send("get", ["id" => $params['id']], ["limit" => $params['limit'],
-            "offset" => $params['offset']]));
+        return new GiftAidTaxDeclarationCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit','offset']), ARRAY_FILTER_USE_KEY)));
     }
 }

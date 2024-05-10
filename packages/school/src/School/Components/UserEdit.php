@@ -60,10 +60,6 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   This will return: Yes, No, or No answer.
  * @property ?bool $is_abroad Set to true if user is currently abroad. Allowed
  *   value: true, false. Defaults to false.
- * @property bool $is_international Set to true if user is international (will
- *   be deprecated 02/15/2024)
- * @property ?bool $is_latino_hispanic Set to true if user is latino or
- *   hispanic (will be deprecated 02/15/2024).
  * @property ?string $latino_hispanic Whether the user is Latino/Hispanic.
  *   Allowed values: Yes, No, or No answer.
  * @property bool $is_responsible_signer Set to true if user is a responsible
@@ -157,8 +153,6 @@ class UserEdit extends BaseComponent
         "id" => "int",
         "international" => "string",
         "is_abroad" => "bool",
-        "is_international" => "bool",
-        "is_latino_hispanic" => "bool",
         "latino_hispanic" => "string",
         "is_responsible_signer" => "bool",
         "in_state" => "\Blackbaud\SKY\School\Components\UserInState",

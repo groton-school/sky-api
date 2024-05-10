@@ -11,12 +11,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $web_address The website.
  * @property string $picture The image.
  * @property string $picture_thumbnail The picture thumbnail.
- * @property string $industry The industry. This codetable can be queried at
+ * @property string $industry The industry. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/industrycode/entries
  * @property int $num_employees The no. of employees.
  * @property int $num_subsidiaries The no. of subsidiary orgs.
  * @property string $parent_corp_id The parent org.
- * @property string $address_type The address type. This codetable can be
+ * @property string $address_type The address type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
@@ -24,49 +24,50 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $address_city The city.
  * @property string $address_state The state. This simple list can be queried
  *   at
- *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/7fa91401-596c-4f7c-936d-6e41683121d7?parameters=country\_id,{address\_country\_id}.
+ *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/7fa91401-596c-4f7c-936d-6e41683121d7?parameters=country\_id,{address\_countryid}.
  * @property string $address_postcode The zip.
  * @property string $address_country The country. This simple list can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/c9649672-353d-42e8-8c25-4d34bbabfbba.
  * @property bool $address_do_not_mail Indicates whether do not send mail to
  *   this address.
- * @property string $address_do_not_mail_reason The reason. This codetable can
- *   be queried at
+ * @property string $address_do_not_mail_reason The reason. This code table
+ *   can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotmailreasoncode/entries
- * @property string $phone_type The phone type. This codetable can be queried
+ * @property string $phone_type The phone type. This code table can be queried
  *   at https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
 
  * @property string $phone_number The phone number.
- * @property string $email_address_type The email type. This codetable can be
+ * @property string $email_address_type The email type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/emailaddresstypecode/entries
  * @property string $email_address The email address.
  * @property bool $skip_adding_security_groups Indicates whether skip adding
  *   security groups.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationZiplookupcountries[]
- *   $zip_lookup_countries zip\_lookup\_countries
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationZipLookupCountries[]
+ *   $zip_lookup_countries Zip lookup countries.
  * @property bool $omit_from_validation Indicates whether omit from
  *   validation.
  * @property string $dpc The dpc.
  * @property string $cart The cart.
  * @property string $lot The lot.
- * @property string $county The county. This codetable can be queried at
+ * @property string $county The county. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/countycode/entries
  * @property string $congressional_district The congressional district. This
- *   codetable can be queried at
+ *   code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/congressionaldistrictcode/entries
  * @property string $last_validation_attempt_date The last validation attempt
- *   date.Uses the format YYYY-MM-DD. An example date: *2019-11-21*.
+ *   date. Uses the format YYYY-MM-DDThh:mm:ss. An example date:
+ *   *1955-11-05T22:04:00*.
  * @property string $validation_message The validation message.
  * @property int $certification_data The certification data.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationValidationcountries[]
- *   $validation_countries validation\_countries
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationValidationCountries[]
+ *   $validation_countries Validation countries.
  * @property bool $is_primary Indicates whether this is a primary
  *   organization.
  * @property bool $skip_adding_sites Indicates whether skip adding sites.
- * @property string $info_source The information source. This codetable can be
- *   queried at
+ * @property string $info_source The information source. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  *
  * @api
@@ -98,7 +99,7 @@ class NewOrganization extends BaseComponent
         "email_address_type" => "string",
         "email_address" => "string",
         "skip_adding_security_groups" => "bool",
-        "zip_lookup_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationZiplookupcountries[]",
+        "zip_lookup_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationZipLookupCountries[]",
         "omit_from_validation" => "bool",
         "dpc" => "string",
         "cart" => "string",
@@ -108,7 +109,7 @@ class NewOrganization extends BaseComponent
         "last_validation_attempt_date" => "string",
         "validation_message" => "string",
         "certification_data" => "int",
-        "validation_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationValidationcountries[]",
+        "validation_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewOrganizationValidationCountries[]",
         "is_primary" => "bool",
         "skip_adding_sites" => "bool",
         "info_source" => "string",

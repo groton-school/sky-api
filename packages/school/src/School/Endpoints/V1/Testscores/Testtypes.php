@@ -28,6 +28,6 @@ class Testtypes extends BaseEndpoint
      */
     public function list_(): TestTypeCollection
     {
-        return new TestTypeCollection($this->send("get", [], []));
+        return new TestTypeCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

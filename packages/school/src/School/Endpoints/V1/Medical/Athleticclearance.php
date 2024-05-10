@@ -5,7 +5,6 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Medical;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\StudentAthleticRequirementUpdate;
-use string;
 
 /**
  * @api
@@ -40,6 +39,6 @@ class Athleticclearance extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return array_map(fn($a) => new string($a), $this->send("post", [], [], $requestBody));
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

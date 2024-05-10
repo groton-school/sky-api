@@ -7,7 +7,7 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * GetConstituentEmailAddress
  *
- * @property string $email_address_type The type. This codetable can be
+ * @property string $email_address_type The type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/emailaddresstypecode/entries
  * @property string $email_address The email address.
@@ -25,10 +25,10 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   Read-only in the SOAP API.
  * @property bool $update_matching_household_email_address Indicates whether
  *   update matching email addresses in household.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentEmailAddressMatchinghouseholdmembers[]
- *   $matching_household_members matching\_household\_members
- * @property string $info_source The information source. This codetable can be
- *   queried at
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentEmailAddressMatchingHouseholdMembers[]
+ *   $matching_household_members Matching household members.
+ * @property string $info_source The information source. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  * @property string $info_source_comments The comments.
  * @property string $constituent_data_review_rollback_reason The reason. This
@@ -42,14 +42,15 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   API.
  * @property string $origin The origin. Read-only in the SOAP API. Available
  *   values are *user*, *web forms*
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property bool $invalid_email Indicates whether invalid email. Read-only in
  *   the SOAP API.
  * @property string $email_bounced_date The email bounced date. Read-only in
- *   the SOAP API.Uses the format YYYY-MM-DD. An example date: *2019-11-21*.
+ *   the SOAP API. Uses the format YYYY-MM-DDThh:mm:ss. An example date:
+ *   *1955-11-05T22:04:00*.
  *
  * @api
  */
@@ -69,7 +70,7 @@ class ConstituentEmailAddress extends BaseComponent
         "household" => "bool",
         "household_member" => "bool",
         "update_matching_household_email_address" => "bool",
-        "matching_household_members" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentEmailAddressMatchinghouseholdmembers[]",
+        "matching_household_members" => "\Blackbaud\SKY\Altru\Constituent\Components\ConstituentEmailAddressMatchingHouseholdMembers[]",
         "info_source" => "string",
         "info_source_comments" => "string",
         "constituent_data_review_rollback_reason" => "string",

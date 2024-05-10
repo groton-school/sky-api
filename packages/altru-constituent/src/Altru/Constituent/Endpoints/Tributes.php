@@ -51,6 +51,6 @@ class Tributes extends BaseEndpoint
     {
         assert(isset($params['revenue_tribute_id']), new ArgumentException("Parameter `revenue_tribute_id` is required"));
 
-        return $this->send("delete", ["revenue_tribute_id" => $params['revenue_tribute_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['revenue_tribute_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 }

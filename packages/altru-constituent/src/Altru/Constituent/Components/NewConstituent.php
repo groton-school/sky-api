@@ -14,9 +14,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $middle_name The the constituent's middle name. character
  *   limit: 50..
  * @property string $title The the constituent's primary title. for
- *   individuals only.. This codetable can be queried at
+ *   individuals only.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
- * @property string $suffix The the constituent's suffix.. This codetable can
+ * @property string $suffix The the constituent's suffix.. This code table can
  *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property string $nick_name The the constituent's nickname. character
@@ -28,10 +28,10 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $gender The the constituent's gender.. Available values
  *   are *unknown*, *male*, *female*, *other*
  * @property string $marital_status The the constituent's marital status..
- *   This codetable can be queried at
+ *   This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/maritalstatuscode/entries
  * @property string $address_type The the address type of the constituent's
- *   address.. This codetable can be queried at
+ *   address.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
  * @property string $address_country The the country of the constituent's
@@ -49,15 +49,15 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property bool $address_do_not_mail Indicates whether indicates whether the
  *   constituent should not be contacted at this address..
  * @property string $address_do_not_mail_reason The indicates the reason the
- *   constituent should not be contacted at this address.. This codetable can be
- *   queried at
+ *   constituent should not be contacted at this address.. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotmailreasoncode/entries
  * @property string $phone_type The the phone type of the constituent's
- *   phone.. This codetable can be queried at
+ *   phone.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
  * @property string $phone_number The the constituent's phone number..
  * @property string $email_address_type The the email address type of the
- *   constituent's email.. This codetable can be queried at
+ *   constituent's email.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/emailaddresstypecode/entries
  * @property string $email_address The the constituent's email address..
  * @property bool $skip_adding_security_groups Indicates whether skip adding
@@ -73,10 +73,10 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $spouse_middle_name The the related individual's middle
  *   name. character limit: 50..
  * @property string $spouse_title The the related individual's title. This
- *   codetable can be queried at
+ *   code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
  * @property string $spouse_suffix The the related individual's suffix. This
- *   codetable can be queried at
+ *   code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property string $spouse_nick_name The the related individual's nickname.
  *   character limit: 50..
@@ -86,18 +86,19 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   $spouse_birth_date FuzzyDate
  * @property string $spouse_gender The the related individual's gender..
  *   Available values are *unknown*, *male*, *female*, *other*
- * @property string $spouse_relationshiptypecode The the type of relationship
- *   between the constituent and related individual. can be expressed as, "the
- *   individual is the constituent's \_\_\_\_\_\_\_".. This simple list can be
- *   queried at
+ * @property string $spouse_relationship_type_code The the type of
+ *   relationship between the constituent and related individual. can be
+ *   expressed as, "the individual is the constituent's \_\_\_\_\_\_\_".. This
+ *   simple list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/4e869c5a-9b9d-4e84-b6e0-1fc66bafbafc?parameters=gender,{gendercode}&amp;parameters=appliestoconstituenttype,{constituent\_type}.
- * @property string $spouse_reciprocaltypecode The the type of relationship
+ * @property string $spouse_reciprocal_type_code The the type of relationship
  *   between the related individual and the constituent. can be expressed as,
  *   "the constituent is the individual's \_\_\_\_\_\_\_".. This simple list can
  *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/c3018803-2ea5-4f62-91cf-412e88d15f9b?parameters=appliestoconstituenttype,{constituent\_type}&amp;parameters=constituentid,{spouse\_id}&amp;parameters=appliestorelationshiptypeid,{spouse\_relationshiptypecodeid}&amp;parameters=gender,{spouse\_gendercode}&amp;parameters=relatestoconstituenttype,{0}.
  * @property string $spouse_start_date The the start date of the
- *   relationship..Uses the format YYYY-MM-DD. An example date: *2019-11-21*.
+ *   relationship.. Uses the format YYYY-MM-DDThh:mm:ss. An example date:
+ *   *1955-11-05T22:04:00*.
  * @property bool $copy_primary_information Indicates whether indicates
  *   whether to copy the constituent's primary information to the related
  *   constituent's record..
@@ -115,7 +116,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $organization_name The the related organization's name.
  *   character limit: 100..
  * @property string $organization_address_type The the address type of the
- *   related organization's address.. This codetable can be queried at
+ *   related organization's address.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
  * @property string $organization_country The the country of the related
@@ -133,31 +134,33 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property bool $organization_do_not_mail Indicates whether indicates
  *   whether the organization should not be contacted at this address..
  * @property string $organization_do_not_mail_reason The indicates the reason
- *   the organization should not be contacted at this address.. This codetable
+ *   the organization should not be contacted at this address.. This code table
  *   can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotmailreasoncode/entries
  * @property string $organization_phone_type The the phone type of the related
- *   organization's phone.. This codetable can be queried at
+ *   organization's phone.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
  * @property string $organization_number The the related organization's phone
  *   number. character limit: 100..
- * @property string $organization_relationshiptypecode The the type of
+ * @property string $organization_relationship_type_code The the type of
  *   relationship between the constituent and related organization. can be
  *   expressed as, "the organization is the constituent's \_\_\_\_\_\_\_".. This
  *   simple list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/4e869c5a-9b9d-4e84-b6e0-1fc66bafbafc?parameters=gender,{gendercode}&amp;parameters=appliestoconstituenttype,{constituent\_type}.
- * @property string $organization_reciprocaltypecode The the type of
+ * @property string $organization_reciprocal_type_code The the type of
  *   relationship between the related organization and the constituent. can be
  *   expressed as, "the constituent is the organization's \_\_\_\_\_\_\_".. This
  *   simple list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/c3018803-2ea5-4f62-91cf-412e88d15f9b?parameters=appliestoconstituenttype,{constituent\_type}&amp;parameters=constituentid,{organization\_id}&amp;parameters=appliestorelationshiptypeid,{organization\_relationshiptypecodeid}&amp;parameters=relatestoconstituenttype,{1}.
  * @property string $organization_start_date The the related organization's
- *   start date..Uses the format YYYY-MM-DD. An example date: *2019-11-21*.
+ *   start date.. Uses the format YYYY-MM-DDThh:mm:ss. An example date:
+ *   *1955-11-05T22:04:00*.
  * @property string $organization_end_date The the related organization's end
- *   date..Uses the format YYYY-MM-DD. An example date: *2019-11-21*.
+ *   date.. Uses the format YYYY-MM-DDThh:mm:ss. An example date:
+ *   *1955-11-05T22:04:00*.
  * @property bool $contact Indicates whether contact.
  * @property string $contact_type The the related organization's contact
- *   type.. This codetable can be queried at
+ *   type.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/contacttypecode/entries
 
  * @property bool $primary_contact Indicates whether indicates whether this is
@@ -167,25 +170,25 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property bool $matching_gift_relationship Indicates whether indicates
  *   whether this organization will match an individual's contributions..
  * @property string $reciprocal_recognition_type The recognition credit type.
- *   This codetable can be queried at
+ *   This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/revenuerecognitiontypecode/entries
  * @property string $primary_recognition_type The recognition credit type.
- *   This codetable can be queried at
+ *   This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/revenuerecognitiontypecode/entries
  * @property bool $address_omit_from_validation Indicates whether indicates
  *   the constituent's address is omitted from validation..
  * @property string $address_dpc The address dpc.
  * @property string $address_cart The address cart.
  * @property string $address_lot The address lot.
- * @property string $address_county The address county. This codetable can be
+ * @property string $address_county The address county. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/countycode/entries
  * @property string $address_congressional_district The address congressional
- *   district. This codetable can be queried at
+ *   district. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/congressionaldistrictcode/entries
  * @property string $address_last_validation_attempt_date The address last
- *   validation attempt date.Uses the format YYYY-MM-DD. An example date:
- *   *2019-11-21*.
+ *   validation attempt date. Uses the format YYYY-MM-DDThh:mm:ss. An example
+ *   date: *1955-11-05T22:04:00*.
  * @property string $address_validation_message The address validation
  *   message.
  * @property int $address_certification_data The address certification data.
@@ -194,53 +197,53 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $organization_dpc The organization dpc.
  * @property string $organization_cart The organization cart.
  * @property string $organization_lot The organization lot.
- * @property string $organization_county The organization county. This
- *   codetable can be queried at
+ * @property string $organization_county The organization county. This code
+ *   table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/countycode/entries
  * @property string $organization_congressional_district The organization
- *   congressional district. This codetable can be queried at
+ *   congressional district. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/congressionaldistrictcode/entries
  * @property string $organization_last_validation_attempt_date The
- *   organization last validation attempt date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ *   organization last validation attempt date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $organization_validation_message The organization
  *   validation message.
  * @property int $organization_certification_data The organization
  *   certification data.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentValidationcountries[]
- *   $validation_countries validation\_countries
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentZiplookupcountries[]
- *   $zip_lookup_countries zip\_lookup\_countries
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentValidationCountries[]
+ *   $validation_countries Validation countries.
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentZipLookupCountries[]
+ *   $zip_lookup_countries Zip lookup countries.
  * @property bool $spouse_relationship Indicates whether indicates whether
  *   this is a spouse relationship with the constituent..
  * @property bool $house_hold_copy_primary_contact_info Indicates whether
  *   indicates whether to copy the individual's primary contact information to
  *   the household..
  * @property string $job_category The the constituent's job category.. This
- *   codetable can be queried at
+ *   code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/jobcategorycode/entries
 
  * @property string $career_level The the constituent's career level.. This
- *   codetable can be queried at
+ *   code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/careerlevelcode/entries
 
  * @property string $address_info_source The the infomation source of the
- *   constituent's address .. This codetable can be queried at
+ *   constituent's address .. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  * @property string $organization_info_source The the infomation source of the
- *   related organization.. This codetable can be queried at
+ *   related organization.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
- * @property string $title_2 The the constituent's second title.. This
- *   codetable can be queried at
+ * @property string $title_2 The the constituent's second title.. This code
+ *   table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
  * @property string $suffix_2 The the related individual's second suffix..
- *   This codetable can be queried at
+ *   This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property string $spouse_title_2 The the related individual's second
- *   title.. This codetable can be queried at
+ *   title.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
  * @property string $spouse_suffix_2 The the constituent's second suffix..
- *   This codetable can be queried at
+ *   This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property bool $skip_adding_sites Indicates whether skip adding sites.
  * @property int $constituent_type The the constituent's type.. Read-only in
@@ -258,16 +261,16 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   match percentage for recognition credits applied to the organization from
  *   gifts made by the individual..
  * @property string $organization_primary_recognition_type The the recognition
- *   type of credits applied to the individual from the organization.. This
- *   codetable can be queried at
+ *   type of credits applied to the individual from the organization.. This code
+ *   table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/revenuerecognitiontypecode/entries
  * @property string $organization_reciprocal_recognition_type The the
  *   recognition type of credits applied to the organization from the
- *   individual.. This codetable can be queried at
+ *   individual.. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/revenuerecognitiontypecode/entries
- * @property bool $optoutads Indicates whether individual opted out of
+ * @property bool $opt_out_ads Indicates whether individual opted out of
  *   targeted advertising..
- * @property bool $optoutsale Indicates whether individual opted out of sale
+ * @property bool $opt_out_sale Indicates whether individual opted out of sale
  *   of personal data..
  * @property bool $gpc Indicates whether gpc.
  *
@@ -313,8 +316,8 @@ class NewConstituent extends BaseComponent
         "spouse_maiden_name" => "string",
         "spouse_birth_date" => "\Blackbaud\SKY\Altru\Constituent\Components\FuzzyDate",
         "spouse_gender" => "string",
-        "spouse_relationshiptypecode" => "string",
-        "spouse_reciprocaltypecode" => "string",
+        "spouse_relationship_type_code" => "string",
+        "spouse_reciprocal_type_code" => "string",
         "spouse_start_date" => "string",
         "copy_primary_information" => "bool",
         "primary_soft_credit_relationship_exists" => "bool",
@@ -334,8 +337,8 @@ class NewConstituent extends BaseComponent
         "organization_do_not_mail_reason" => "string",
         "organization_phone_type" => "string",
         "organization_number" => "string",
-        "organization_relationshiptypecode" => "string",
-        "organization_reciprocaltypecode" => "string",
+        "organization_relationship_type_code" => "string",
+        "organization_reciprocal_type_code" => "string",
         "organization_start_date" => "string",
         "organization_end_date" => "string",
         "contact" => "bool",
@@ -363,8 +366,8 @@ class NewConstituent extends BaseComponent
         "organization_last_validation_attempt_date" => "string",
         "organization_validation_message" => "string",
         "organization_certification_data" => "int",
-        "validation_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentValidationcountries[]",
-        "zip_lookup_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentZiplookupcountries[]",
+        "validation_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentValidationCountries[]",
+        "zip_lookup_countries" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentZipLookupCountries[]",
         "spouse_relationship" => "bool",
         "house_hold_copy_primary_contact_info" => "bool",
         "job_category" => "string",
@@ -383,8 +386,8 @@ class NewConstituent extends BaseComponent
         "organization_reciprocal_soft_credit_match_factor" => "float",
         "organization_primary_recognition_type" => "string",
         "organization_reciprocal_recognition_type" => "string",
-        "optoutads" => "bool",
-        "optoutsale" => "bool",
+        "opt_out_ads" => "bool",
+        "opt_out_sale" => "bool",
         "gpc" => "bool",
     ];
 }

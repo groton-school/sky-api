@@ -33,7 +33,7 @@ class Directories extends BaseEndpoint
      */
     public function list_(): DirectoryModelCollection
     {
-        return new DirectoryModelCollection($this->send("get", [], []));
+        return new DirectoryModelCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -56,7 +56,7 @@ class Directories extends BaseEndpoint
      *
      * - Student
      *
-     * @param array{directory_id: int, search: string, search_all: bool}
+     * @param array{directory_id: int, search: string, search_all?: bool}
      *   $params An associative array
      *     - directory_id: Format - int32.
      *     - search:
@@ -72,9 +72,7 @@ class Directories extends BaseEndpoint
     {
         assert(isset($params['directory_id']), new ArgumentException("Parameter `directory_id` is required"));
         assert(isset($params['search']), new ArgumentException("Parameter `search` is required"));
-        assert(isset($params['search_all']), new ArgumentException("Parameter `search_all` is required"));
 
-        return new DirectoryResultCollection($this->send("get", ["directory_id" => $params['directory_id']], ["search" => $params['search'],
-            "search_all" => $params['search_all']]));
+        return new DirectoryResultCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['directory_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['search','search_all']), ARRAY_FILTER_USE_KEY)));
     }
 }

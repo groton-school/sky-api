@@ -40,7 +40,7 @@ class Conditions extends BaseEndpoint
     {
         assert(isset($params['condition_id']), new ArgumentException("Parameter `condition_id` is required"));
 
-        return $this->send("delete", ["condition_id" => $params['condition_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['condition_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
@@ -69,7 +69,7 @@ class Conditions extends BaseEndpoint
         assert(isset($params['condition_id']), new ArgumentException("Parameter `condition_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["condition_id" => $params['condition_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['condition_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 
     /**
@@ -97,6 +97,6 @@ class Conditions extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("post", [], [], $requestBody);
+        return $this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

@@ -29,44 +29,44 @@ use Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View;
 /**
  * Routing class for the subnamespace `Constituents`
  *
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View
+ *   $view
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata
+ *   $patrondata
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders
+ *   $patronorders
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview
+ *   $contactview
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture
+ *   $profilepicture
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Addresses
  *   $addresses
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Alternatelookupids
  *   $alternatelookupids
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist
+ *   $constituentattributelist
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch
+ *   $constituentduplicatematch
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Emailaddresses
  *   $emailaddresses
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Phones
  *   $phones
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Solicitcodes
  *   $solicitcodes
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View
- *   $view
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist
- *   $constituentattributelist
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress
- *   $contactinformationemailaddress
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone
- *   $contactinformationphone
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata
- *   $patrondata
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders
- *   $patronorders
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search
- *   $search
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview
- *   $contactview
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Tributes
- *   $tributes
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Fundraisersearch
- *   $fundraisersearch
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture
- *   $profilepicture
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch
- *   $constituentduplicatematch
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Educationalhistories
  *   $educationalhistories
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Relationshipjobsinfo
  *   $relationshipjobsinfo
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Tributes
+ *   $tributes
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Fundraisersearch
+ *   $fundraisersearch
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search
+ *   $search
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress
+ *   $contactinformationemailaddress
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone
+ *   $contactinformationphone
  *
  * @api
  */
@@ -82,26 +82,56 @@ class Constituents extends BaseEndpoint
      *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
+        "view" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View",
+        "patrondata" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata",
+        "patronorders" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders",
+        "contactview" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview",
+        "profilepicture" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture",
         "addresses" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Addresses",
         "alternatelookupids" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Alternatelookupids",
+        "constituentattributelist" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist",
+        "constituentduplicatematch" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch",
         "emailaddresses" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Emailaddresses",
         "phones" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Phones",
         "solicitcodes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Solicitcodes",
-        "view" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View",
-        "constituentattributelist" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist",
-        "contactinformationemailaddress" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress",
-        "contactinformationphone" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone",
-        "patrondata" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata",
-        "patronorders" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders",
-        "search" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search",
-        "contactview" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview",
-        "tributes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Tributes",
-        "fundraisersearch" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Fundraisersearch",
-        "profilepicture" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture",
-        "constituentduplicatematch" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch",
         "educationalhistories" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Educationalhistories",
         "relationshipjobsinfo" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Relationshipjobsinfo",
+        "tributes" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Tributes",
+        "fundraisersearch" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Fundraisersearch",
+        "search" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search",
+        "contactinformationemailaddress" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress",
+        "contactinformationphone" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone",
     ];
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View
+     *   $_view
+     */
+    protected ?View $_view = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata
+     *   $_patrondata
+     */
+    protected ?Patrondata $_patrondata = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders
+     *   $_patronorders
+     */
+    protected ?Patronorders $_patronorders = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview
+     *   $_contactview
+     */
+    protected ?Contactview $_contactview = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture
+     *   $_profilepicture
+     */
+    protected ?Profilepicture $_profilepicture = null;
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Addresses
@@ -114,6 +144,18 @@ class Constituents extends BaseEndpoint
      *   $_alternatelookupids
      */
     protected ?Alternatelookupids $_alternatelookupids = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist
+     *   $_constituentattributelist
+     */
+    protected ?Constituentattributelist $_constituentattributelist = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch
+     *   $_constituentduplicatematch
+     */
+    protected ?Constituentduplicatematch $_constituentduplicatematch = null;
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Emailaddresses
@@ -134,52 +176,16 @@ class Constituents extends BaseEndpoint
     protected ?Solicitcodes $_solicitcodes = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\View
-     *   $_view
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Educationalhistories
+     *   $_educationalhistories
      */
-    protected ?View $_view = null;
+    protected ?Educationalhistories $_educationalhistories = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentattributelist
-     *   $_constituentattributelist
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Relationshipjobsinfo
+     *   $_relationshipjobsinfo
      */
-    protected ?Constituentattributelist $_constituentattributelist = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress
-     *   $_contactinformationemailaddress
-     */
-    protected ?Contactinformationemailaddress $_contactinformationemailaddress = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone
-     *   $_contactinformationphone
-     */
-    protected ?Contactinformationphone $_contactinformationphone = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patrondata
-     *   $_patrondata
-     */
-    protected ?Patrondata $_patrondata = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Patronorders
-     *   $_patronorders
-     */
-    protected ?Patronorders $_patronorders = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search
-     *   $_search
-     */
-    protected ?Search $_search = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactview
-     *   $_contactview
-     */
-    protected ?Contactview $_contactview = null;
+    protected ?Relationshipjobsinfo $_relationshipjobsinfo = null;
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Tributes
@@ -194,28 +200,22 @@ class Constituents extends BaseEndpoint
     protected ?Fundraisersearch $_fundraisersearch = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Profilepicture
-     *   $_profilepicture
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Search
+     *   $_search
      */
-    protected ?Profilepicture $_profilepicture = null;
+    protected ?Search $_search = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Constituentduplicatematch
-     *   $_constituentduplicatematch
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationemailaddress
+     *   $_contactinformationemailaddress
      */
-    protected ?Constituentduplicatematch $_constituentduplicatematch = null;
+    protected ?Contactinformationemailaddress $_contactinformationemailaddress = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Educationalhistories
-     *   $_educationalhistories
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Contactinformationphone
+     *   $_contactinformationphone
      */
-    protected ?Educationalhistories $_educationalhistories = null;
-
-    /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Constituents\Relationshipjobsinfo
-     *   $_relationshipjobsinfo
-     */
-    protected ?Relationshipjobsinfo $_relationshipjobsinfo = null;
+    protected ?Contactinformationphone $_contactinformationphone = null;
 
     /**
      * This deletion handles only the basic deletion rules for a constituent.
@@ -233,11 +233,11 @@ class Constituents extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return $this->send("delete", ["constituent_id" => $params['constituent_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * This dataform template is used to add an individual constituent,
+     * This operation is used to add an individual constituent,
      * spouse(optional), and business(optional).
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituent
@@ -254,6 +254,6 @@ class Constituents extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

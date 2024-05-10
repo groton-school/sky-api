@@ -5,18 +5,18 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\Altru\Constituent\Components\ConstituentAddress;
+use Blackbaud\SKY\Altru\Constituent\Components\EditConstituentAddress;
 use Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAddress;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentAddress;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View;
 
 /**
  * Routing class for the subnamespace `Addresses`
  *
+ * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $view
  * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search
  *   $search
- * @property \Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $view
  *
  * @api
  */
@@ -32,9 +32,14 @@ class Addresses extends BaseEndpoint
      *   $endpoints Routing subpaths
      */
     protected array $endpoints = [
-        "search" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search",
         "view" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View",
+        "search" => "\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search",
     ];
+
+    /**
+     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $_view
+     */
+    protected ?View $_view = null;
 
     /**
      * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\Search
@@ -43,12 +48,7 @@ class Addresses extends BaseEndpoint
     protected ?Search $_search = null;
 
     /**
-     * @var ?\Blackbaud\SKY\Altru\Constituent\Endpoints\Addresses\View $_view
-     */
-    protected ?View $_view = null;
-
-    /**
-     * This dataform template is used to add an address.
+     * This operation is used to add an address.
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentAddress
      *   $requestBody ConfigurationMessage object representing operation
@@ -64,11 +64,11 @@ class Addresses extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * This dataform template is used to edit an address.
+     * This operation is used to edit an address.
      *
      * @param array{address_id: string} $params An associative array
      *     - address_id: The address id.
@@ -84,7 +84,7 @@ class Addresses extends BaseEndpoint
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
 
-        return new ConstituentAddress($this->send("get", ["address_id" => $params['address_id']], []));
+        return new ConstituentAddress($this->send("get", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -104,15 +104,15 @@ class Addresses extends BaseEndpoint
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
 
-        return $this->send("delete", ["address_id" => $params['address_id']], []);
+        return $this->send("delete", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY));
     }
 
     /**
-     * This dataform template is used to edit an address.
+     * This operation is used to edit an address.
      *
      * @param array{address_id: string} $params An associative array
      *     - address_id: The address id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateConstituentAddress
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditConstituentAddress
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -122,11 +122,11 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnAddressId(array $params, UpdateConstituentAddress $requestBody): mixed
+    public function patchOnAddressId(array $params, EditConstituentAddress $requestBody): mixed
     {
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["address_id" => $params['address_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['address_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

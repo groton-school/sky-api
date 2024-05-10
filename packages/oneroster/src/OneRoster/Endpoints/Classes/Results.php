@@ -32,6 +32,6 @@ class Results extends BaseEndpoint
     {
         assert(isset($params['class_id']), new ArgumentException("Parameter `class_id` is required"));
 
-        return new ResultsOutputModelSvc($this->send("get", ["class_id" => $params['class_id']], []));
+        return new ResultsOutputModelSvc($this->send("get", array_filter($params, fn($key) => in_array($key, ['class_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

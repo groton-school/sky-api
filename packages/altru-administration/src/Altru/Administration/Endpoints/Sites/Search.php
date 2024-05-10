@@ -27,7 +27,7 @@ class Search extends BaseEndpoint
      *     - name: name
      *     - short_name: short name
      *     - acronym: acronym
-     *     - sitetype: site type This codetable can be queried at
+     *     - sitetype: site type This code table can be queried at
      *   https://api.sky.blackbaud.com/alt-adnmg/codetables/SITETYPECODE/entries
 
      *     - limit: Limits the number of records to return.
@@ -49,12 +49,6 @@ class Search extends BaseEndpoint
         assert(isset($params['sitetype']), new ArgumentException("Parameter `sitetype` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new SiteSearchCollection($this->send("get", [], ["id" => $params['id'],
-            "site_id" => $params['site_id'],
-            "name" => $params['name'],
-            "short_name" => $params['short_name'],
-            "acronym" => $params['acronym'],
-            "sitetype" => $params['sitetype'],
-            "limit" => $params['limit']]));
+        return new SiteSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['id','site_id','name','short_name','acronym','sitetype','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

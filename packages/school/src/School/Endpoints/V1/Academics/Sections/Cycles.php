@@ -23,7 +23,7 @@ class Cycles extends BaseEndpoint
      *
      * - Academic Group Manager
      *
-     * @param array{section_id: int, duration_id: int, group_type: int}
+     * @param array{section_id: int, duration_id: int, group_type?: int}
      *   $params An associative array
      *     - section_id: Format - int32. The ID of the section.
      *     - duration_id: Format - int32. The ID of the term for which you
@@ -41,9 +41,7 @@ class Cycles extends BaseEndpoint
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
         assert(isset($params['duration_id']), new ArgumentException("Parameter `duration_id` is required"));
-        assert(isset($params['group_type']), new ArgumentException("Parameter `group_type` is required"));
 
-        return new SectionCycles($this->send("get", ["section_id" => $params['section_id']], ["duration_id" => $params['duration_id'],
-            "group_type" => $params['group_type']]));
+        return new SectionCycles($this->send("get", array_filter($params, fn($key) => in_array($key, ['section_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['duration_id','group_type']), ARRAY_FILTER_USE_KEY)));
     }
 }

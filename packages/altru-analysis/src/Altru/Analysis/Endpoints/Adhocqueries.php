@@ -52,6 +52,6 @@ class Adhocqueries extends BaseEndpoint
         assert(isset($params['query_id']), new ArgumentException("Parameter `query_id` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new AdHocQueryRead($this->send("get", ["query_id" => $params['query_id']], ["limit" => $params['limit']]));
+        return new AdHocQueryRead($this->send("get", array_filter($params, fn($key) => in_array($key, ['query_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -17,8 +17,8 @@ class Currencyconfiguration extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-adnmg/currencies/{currency_id}/currencyconfiguration";
 
     /**
-     * This view form loads information necessary for formatting a value as
-     * currency.
+     * This view operation loads inoperationation necessary for
+     * operationatting a value as currency.
      *
      * @param array{currency_id: string} $params An associative array
      *     - currency_id: The currency id.
@@ -34,6 +34,6 @@ class Currencyconfiguration extends BaseEndpoint
     {
         assert(isset($params['currency_id']), new ArgumentException("Parameter `currency_id` is required"));
 
-        return new CurrencyConfigurationView($this->send("get", ["currency_id" => $params['currency_id']], []));
+        return new CurrencyConfigurationView($this->send("get", array_filter($params, fn($key) => in_array($key, ['currency_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

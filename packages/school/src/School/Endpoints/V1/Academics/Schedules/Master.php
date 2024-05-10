@@ -55,9 +55,6 @@ class Master extends BaseEndpoint
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
         assert(isset($params['offering_type']), new ArgumentException("Parameter `offering_type` is required"));
 
-        return new MasterScheduleDayCollection($this->send("get", [], ["level_num" => $params['level_num'],
-            "start_date" => $params['start_date'],
-            "end_date" => $params['end_date'],
-            "offering_type" => $params['offering_type']]));
+        return new MasterScheduleDayCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['level_num','start_date','end_date','offering_type']), ARRAY_FILTER_USE_KEY)));
     }
 }

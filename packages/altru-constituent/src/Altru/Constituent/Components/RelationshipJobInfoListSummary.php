@@ -5,19 +5,19 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListRelationshipJobInfo
+ * ListRelationshipJobInfos
  *
  * @property string $relationship_set_id The relationshipsetid.
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $reciprocal_id The reciprocalid.
  * @property string $name The name.
  * @property string $job_title The job title.
  * @property string $job_category The job category.
  * @property string $career_level The career level.
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $end_date The end date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $end_date The end date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $job_schedule The schedule.
  * @property string $job_department The department.
  * @property string $job_division The division.

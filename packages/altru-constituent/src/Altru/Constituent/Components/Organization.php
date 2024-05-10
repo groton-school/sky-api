@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * GetOrganization
  *
  * @property string $organization_name The name.
- * @property string $industry The industry. This codetable can be queried at
+ * @property string $industry The industry. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/industrycode/entries
  * @property int $num_employees The no. of employees.
  * @property int $num_subsidiaries The no. of subsidiary orgs.
@@ -19,8 +19,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $web_address The website.
  * @property bool $is_primary Indicates whether this is a primary
  *   organization.
- * @property string $primary_address_id The primary address id.
- * @property string $address_type The address type. This codetable can be
+ * @property string $primary_address_id The primary address ID.
+ * @property string $address_type The address type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/addresstypecode/entries
 
@@ -31,20 +31,20 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $address_city The city.
  * @property string $address_state The state. This simple list can be queried
  *   at
- *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/7fa91401-596c-4f7c-936d-6e41683121d7?parameters=country\_id,{address\_country\_id}.
+ *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/7fa91401-596c-4f7c-936d-6e41683121d7?parameters=country\_id,{address\_countryid}.
  * @property string $address_postcode The zip.
  * @property bool $address_do_not_mail Indicates whether do not send mail to
  *   this address.
- * @property string $address_do_not_mail_reason The reason. This codetable can
- *   be queried at
+ * @property string $address_do_not_mail_reason The reason. This code table
+ *   can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotmailreasoncode/entries
- * @property string $primary_phone_id The primary phone id.
- * @property string $phone_type The phone type. This codetable can be queried
+ * @property string $primary_phone_id The primary phone ID.
+ * @property string $phone_type The phone type. This code table can be queried
  *   at https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
 
  * @property string $phone_number The phone number.
- * @property string $primary_email_address_id The primary email address id.
- * @property string $email_address_type The email type. This codetable can be
+ * @property string $primary_email_address_id The primary email address ID.
+ * @property string $email_address_type The email type. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/emailaddresstypecode/entries
  * @property string $email_address The email address.

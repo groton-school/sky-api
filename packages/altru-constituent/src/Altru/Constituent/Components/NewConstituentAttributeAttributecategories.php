@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * NewConstituentAttributeAttributecategories
+ * NewConstituentAttributeAttributeCategories
  *
  * @property string $id id
  * @property int $data_type_code datatypecode
@@ -15,7 +15,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @api
  */
-class NewConstituentAttributeAttributecategories extends BaseComponent
+class NewConstituentAttributeAttributeCategories extends BaseComponent
 {
     /**
      * @var string[] $fields

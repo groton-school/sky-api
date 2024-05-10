@@ -5,9 +5,9 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * ListState
+ * ListStates
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $state The state.
  * @property string $abbreviation The abbreviation.
  * @property bool $active Indicates whether active.

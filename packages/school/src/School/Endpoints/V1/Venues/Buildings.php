@@ -25,6 +25,6 @@ class Buildings extends BaseEndpoint
      */
     public function list_(): BuildingReadCollection
     {
-        return new BuildingReadCollection($this->send("get", [], []));
+        return new BuildingReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

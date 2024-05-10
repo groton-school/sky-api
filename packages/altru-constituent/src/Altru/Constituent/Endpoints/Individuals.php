@@ -4,10 +4,10 @@ namespace Blackbaud\SKY\Altru\Constituent\Endpoints;
 
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
+use Blackbaud\SKY\Altru\Constituent\Components\EditIndividual;
 use Blackbaud\SKY\Altru\Constituent\Components\Individual;
 use Blackbaud\SKY\Altru\Constituent\Components\NewIndividual;
 use Blackbaud\SKY\Altru\Constituent\Components\PostResponse;
-use Blackbaud\SKY\Altru\Constituent\Components\UpdateIndividual;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Recentrevenueview;
 use Blackbaud\SKY\Altru\Constituent\Endpoints\Individuals\Revenuesummaryview;
 
@@ -50,8 +50,8 @@ class Individuals extends BaseEndpoint
     protected ?Revenuesummaryview $_revenuesummaryview = null;
 
     /**
-     * This dataform template is used to add individuals, including
-     * biographical and contact information.
+     * This operation is used to add an individual constituent,
+     * spouse(optional), and business(optional).
      *
      * @param \Blackbaud\SKY\Altru\Constituent\Components\NewIndividual
      *   $requestBody ConfigurationMessage object representing operation
@@ -67,11 +67,11 @@ class Individuals extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
-     * This dataform template is used to edit biographical information for an
+     * This operation is used to edit biographical inoperationation for an
      * individual.
      *
      * @param array{constituent_id: string} $params An associative array
@@ -88,16 +88,16 @@ class Individuals extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new Individual($this->send("get", ["constituent_id" => $params['constituent_id']], []));
+        return new Individual($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
-     * This dataform template is used to edit biographical information for an
+     * This operation is used to edit biographical inoperationation for an
      * individual.
      *
      * @param array{constituent_id: string} $params An associative array
      *     - constituent_id: The constituent id.
-     * @param \Blackbaud\SKY\Altru\Constituent\Components\UpdateIndividual
+     * @param \Blackbaud\SKY\Altru\Constituent\Components\EditIndividual
      *   $requestBody ConfigurationMessage object representing operation
      *   intended to be created
      *
@@ -107,11 +107,11 @@ class Individuals extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnConstituentId(array $params, UpdateIndividual $requestBody): mixed
+    public function patchOnConstituentId(array $params, EditIndividual $requestBody): mixed
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return $this->send("patch", ["constituent_id" => $params['constituent_id']], [], $requestBody);
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody);
     }
 }

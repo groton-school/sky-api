@@ -26,7 +26,7 @@ class Results extends BaseEndpoint
      */
     public function get(): ResultsOutputModelSvc
     {
-        return new ResultsOutputModelSvc($this->send("get", [], []));
+        return new ResultsOutputModelSvc($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -45,7 +45,7 @@ class Results extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new ResultOutputModelSvc($this->send("get", ["id" => $params['id']], []));
+        return new ResultOutputModelSvc($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -67,7 +67,7 @@ class Results extends BaseEndpoint
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new ResultOutputModelSvc($this->send("put", ["id" => $params['id']], [], $requestBody));
+        return new ResultOutputModelSvc($this->send("put", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 
     /**
@@ -86,6 +86,6 @@ class Results extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new ResultsOutputModelSvc($this->send("delete", ["id" => $params['id']], []));
+        return new ResultsOutputModelSvc($this->send("delete", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

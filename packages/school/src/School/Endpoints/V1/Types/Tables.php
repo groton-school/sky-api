@@ -27,6 +27,6 @@ class Tables extends BaseEndpoint
      */
     public function list_(): TableCollection
     {
-        return new TableCollection($this->send("get", [], []));
+        return new TableCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

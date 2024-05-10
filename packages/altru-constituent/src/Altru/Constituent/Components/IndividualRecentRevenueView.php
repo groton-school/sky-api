@@ -8,7 +8,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * ViewIndividualRecentRevenue
  *
  * @property \Blackbaud\SKY\Altru\Constituent\Components\ConstituentRevenueConstituentrevenuerecent[]
- *   $constituentrevenuerecent constituentrevenuerecent
+ *   $constituentrevenuerecent Constituentrevenuerecent.
  *
  * @api
  */

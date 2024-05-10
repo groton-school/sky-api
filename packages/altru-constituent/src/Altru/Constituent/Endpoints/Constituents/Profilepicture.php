@@ -17,7 +17,7 @@ class Profilepicture extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituents/{constituent_id}/profilepicture";
 
     /**
-     * Defines the fields for the individual Personal Information tile.
+     * Defines the fields for the individual personal inoperationation tile.
      *
      * @param array{constituent_id: string} $params An associative array
      *     - constituent_id: The constituent id.
@@ -33,6 +33,6 @@ class Profilepicture extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new ConstituentProfilePictureView($this->send("get", ["constituent_id" => $params['constituent_id']], []));
+        return new ConstituentProfilePictureView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -27,6 +27,6 @@ class Securityroles extends BaseEndpoint
      */
     public function list_(): SecurityRoleCollection
     {
-        return new SecurityRoleCollection($this->send("get", [], []));
+        return new SecurityRoleCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

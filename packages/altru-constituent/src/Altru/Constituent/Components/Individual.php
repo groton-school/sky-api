@@ -12,9 +12,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $middle_name The middle name.
  * @property string $maiden_name The maiden name.
  * @property string $nickname The nickname.
- * @property string $title The title. This codetable can be queried at
+ * @property string $title The title. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
- * @property string $suffix The suffix. This codetable can be queried at
+ * @property string $suffix The suffix. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property string $gender The gender. Available values are *unknown*,
  *   *male*, *female*, *other*
@@ -26,12 +26,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property string $picture_thumbnail The image.
  * @property bool $picture_changed Indicates whether picture changed.
  * @property string $web_address The website.
- * @property string $marital_status The marital status. This codetable can be
+ * @property string $marital_status The marital status. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/maritalstatuscode/entries
- * @property string $title_2 The title 2. This codetable can be queried at
+ * @property string $title_2 The title 2. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/titlecode/entries
- * @property string $suffix_2 The suffix 2. This codetable can be queried at
+ * @property string $suffix_2 The suffix 2. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/suffixcode/entries
  * @property bool $deceased Indicates whether is deceased. Read-only in the
  *   SOAP API.

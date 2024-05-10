@@ -42,7 +42,7 @@ class Students extends BaseEndpoint
     {
         assert(isset($params['section_id']), new ArgumentException("Parameter `section_id` is required"));
 
-        return new StudentCollection($this->send("get", ["section_id" => $params['section_id']], []));
+        return new StudentCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['section_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -71,6 +71,6 @@ class Students extends BaseEndpoint
     {
         assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
 
-        return new PostResponse($this->send("post", [], [], $requestBody));
+        return new PostResponse($this->send("post", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), $requestBody));
     }
 }

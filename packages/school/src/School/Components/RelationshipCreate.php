@@ -15,6 +15,13 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   Signing Contract' option.
  * @property int $left_user ID of the other individual in the relationship
  *   with this person
+ * @property bool $resides_with Set to true if the child user resides with the
+ *   parent user.
+ * @property bool $do_not_contact Set to true to indicate the relationship
+ *   user (specified by left\_user) should not be contacted.
+ * @property bool $primary Set to true if the relationship user (specified by
+ *   left\_user) is the primary contact.
+ * @property ?string $comments Comment for the relationship
  *
  * @api
  */
@@ -29,5 +36,9 @@ class RelationshipCreate extends BaseComponent
         "list_as_parent" => "bool",
         "tuition_responsible_signer" => "bool",
         "left_user" => "int",
+        "resides_with" => "bool",
+        "do_not_contact" => "bool",
+        "primary" => "bool",
+        "comments" => "string",
     ];
 }

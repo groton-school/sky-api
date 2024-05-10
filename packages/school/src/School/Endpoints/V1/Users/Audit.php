@@ -46,8 +46,6 @@ class Audit extends BaseEndpoint
         assert(isset($params['start_date']), new ArgumentException("Parameter `start_date` is required"));
         assert(isset($params['end_date']), new ArgumentException("Parameter `end_date` is required"));
 
-        return new UserAuditReadCollection($this->send("get", [], ["role_id" => $params['role_id'],
-            "start_date" => $params['start_date'],
-            "end_date" => $params['end_date']]));
+        return new UserAuditReadCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['role_id','start_date','end_date']), ARRAY_FILTER_USE_KEY)));
     }
 }

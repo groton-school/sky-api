@@ -46,8 +46,7 @@ class Extended extends BaseEndpoint
         assert(isset($params['base_role_ids']), new ArgumentException("Parameter `base_role_ids` is required"));
         assert(isset($params['marker']), new ArgumentException("Parameter `marker` is required"));
 
-        return new UserExtendedCollection($this->send("get", [], ["base_role_ids" => $params['base_role_ids'],
-            "marker" => $params['marker']]));
+        return new UserExtendedCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['base_role_ids','marker']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -69,6 +68,6 @@ class Extended extends BaseEndpoint
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
 
-        return new UserExtended($this->send("get", ["user_id" => $params['user_id']], []));
+        return new UserExtended($this->send("get", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

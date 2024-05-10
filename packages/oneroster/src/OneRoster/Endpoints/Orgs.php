@@ -25,7 +25,7 @@ class Orgs extends BaseEndpoint
      */
     public function get(): OrgsOutputModel
     {
-        return new OrgsOutputModel($this->send("get", [], []));
+        return new OrgsOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 
     /**
@@ -44,6 +44,6 @@ class Orgs extends BaseEndpoint
     {
         assert(isset($params['id']), new ArgumentException("Parameter `id` is required"));
 
-        return new OrgOutputModel($this->send("get", ["id" => $params['id']], []));
+        return new OrgOutputModel($this->send("get", array_filter($params, fn($key) => in_array($key, ['id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

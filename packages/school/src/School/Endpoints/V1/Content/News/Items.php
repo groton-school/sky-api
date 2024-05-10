@@ -38,6 +38,6 @@ class Items extends BaseEndpoint
     {
         assert(isset($params['categories']), new ArgumentException("Parameter `categories` is required"));
 
-        return new NewsItemCollection($this->send("get", [], ["categories" => $params['categories']]));
+        return new NewsItemCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['categories']), ARRAY_FILTER_USE_KEY)));
     }
 }

@@ -8,8 +8,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * CreateConstituentAppealResponse
  *
  * @property string $constituent_appeal_id The constituent appeal id.
- * @property string $date The the date of the response.Uses the format
- *   YYYY-MM-DD. An example date: *2019-11-21*.
+ * @property string $date The the date of the response. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property string $response_category The the response category. This simple
  *   list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/fa5c3e42-aea6-450c-a66f-e79919df98d8. Read-only in the SOAP API.

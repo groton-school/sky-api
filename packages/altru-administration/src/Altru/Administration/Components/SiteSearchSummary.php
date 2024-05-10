@@ -5,10 +5,10 @@ namespace Blackbaud\SKY\Altru\Administration\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * SearchSite
+ * SearchSites
  *
- * @property string $id The id.
- * @property string $site_id The site id.
+ * @property string $id The ID.
+ * @property string $site_id The site ID.
  * @property string $name The name.
  * @property string $short_name The short name.
  * @property string $acronym The acronym.

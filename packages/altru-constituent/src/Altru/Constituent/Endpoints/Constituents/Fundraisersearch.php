@@ -17,7 +17,7 @@ class Fundraisersearch extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituents/fundraisersearch";
 
     /**
-     * Search for Fundraisers.
+     * Search for fundraisers.
      *
      * @param array{constituent_type: int, full_name: string, key_name:
      *   string, first_name: string, lookup_id: string, address_block: string,
@@ -108,36 +108,6 @@ class Fundraisersearch extends BaseEndpoint
         assert(isset($params['sites_selected']), new ArgumentException("Parameter `sites_selected` is required"));
         assert(isset($params['limit']), new ArgumentException("Parameter `limit` is required"));
 
-        return new ConstituentFundraiserSearchCollection($this->send("get", [], ["constituent_type" => $params['constituent_type'],
-            "full_name" => $params['full_name'],
-            "key_name" => $params['key_name'],
-            "first_name" => $params['first_name'],
-            "lookup_id" => $params['lookup_id'],
-            "address_block" => $params['address_block'],
-            "city" => $params['city'],
-            "state" => $params['state'],
-            "post_code" => $params['post_code'],
-            "country" => $params['country'],
-            "include_inactive" => $params['include_inactive'],
-            "include_deceased" => $params['include_deceased'],
-            "only_primary_address" => $params['only_primary_address'],
-            "exact_match_only" => $params['exact_match_only'],
-            "only_prospects" => $params['only_prospects'],
-            "only_fundraisers" => $params['only_fundraisers'],
-            "only_staff" => $params['only_staff'],
-            "only_volunteers" => $params['only_volunteers'],
-            "ssn" => $params['ssn'],
-            "check_nick_name" => $params['check_nick_name'],
-            "check_aliases" => $params['check_aliases'],
-            "check_merged_constituents" => $params['check_merged_constituents'],
-            "minimum_date" => $params['minimum_date'],
-            "include_individuals" => $params['include_individuals'],
-            "include_organizations" => $params['include_organizations'],
-            "include_groups" => $params['include_groups'],
-            "check_alternate_lookup_ids" => $params['check_alternate_lookup_ids'],
-            "fuzzy_search_on_name" => $params['fuzzy_search_on_name'],
-            "site_filter_mode" => $params['site_filter_mode'],
-            "sites_selected" => $params['sites_selected'],
-            "limit" => $params['limit']]));
+        return new ConstituentFundraiserSearchCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['constituent_type','full_name','key_name','first_name','lookup_id','address_block','city','state','post_code','country','include_inactive','include_deceased','only_primary_address','exact_match_only','only_prospects','only_fundraisers','only_staff','only_volunteers','ssn','check_nick_name','check_aliases','check_merged_constituents','minimum_date','include_individuals','include_organizations','include_groups','check_alternate_lookup_ids','fuzzy_search_on_name','site_filter_mode','sites_selected','limit']), ARRAY_FILTER_USE_KEY)));
     }
 }

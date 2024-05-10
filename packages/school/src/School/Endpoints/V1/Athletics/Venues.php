@@ -34,6 +34,6 @@ class Venues extends BaseEndpoint
      */
     public function list_(): AthleticVenueCollection
     {
-        return new AthleticVenueCollection($this->send("get", [], []));
+        return new AthleticVenueCollection($this->send("get", array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

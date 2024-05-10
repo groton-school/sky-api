@@ -5,16 +5,16 @@ namespace Blackbaud\SKY\Altru\Constituent\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * SearchTribute
+ * SearchTributes
  *
- * @property string $id The id.
+ * @property string $id The ID.
  * @property string $tribute_text The tribute text.
  * @property string $tributee_name The tributee.
  * @property string $tribute_type The tribute type.
- * @property string $date_created The date created.Uses the format YYYY-MM-DD.
- *   An example date: *2019-11-21*.
+ * @property string $date_created The date created. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
  * @property bool $active Indicates whether is active.
- * @property string $designation_id The default designation id.
+ * @property string $designation_id The default designation ID.
  * @property string $designation The default designation.
  * @property string $site_id The site.
  *

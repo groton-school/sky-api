@@ -7,8 +7,8 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * CreateConstituentPhone
  *
- * @property string $constituent_id The constituent id.
- * @property string $phone_type The type. This codetable can be queried at
+ * @property string $constituent_id The constituent ID.
+ * @property string $phone_type The type. This code table can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/phonetypecode/entries
  * @property string $number The number.
  * @property bool $primary Indicates whether set as primary phone number.
@@ -27,8 +27,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   $start_time HourMinute
  * @property \Blackbaud\SKY\Altru\Constituent\Components\HourMinute $end_time
  *   HourMinute
- * @property string $info_source The information source. This codetable can be
- *   queried at
+ * @property string $info_source The information source. This code table can
+ *   be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/infosourcecode/entries
  * @property string $info_source_comments The comments.
  * @property string $country The country. This simple list can be queried at
@@ -37,15 +37,15 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   $seasonal_start_date MonthDay
  * @property \Blackbaud\SKY\Altru\Constituent\Components\MonthDay
  *   $seasonal_end_date MonthDay
- * @property string $start_date The start date.Uses the format YYYY-MM-DD. An
- *   example date: *2019-11-21*.
- * @property string $do_not_call_reason The reason. This codetable can be
+ * @property string $start_date The start date. Uses the format
+ *   YYYY-MM-DDThh:mm:ss. An example date: *1955-11-05T22:04:00*.
+ * @property string $do_not_call_reason The reason. This code table can be
  *   queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/codetables/donotcallreasoncode/entries
  * @property bool $confidential Indicates whether this phone number is
  *   confidential.
- * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentPhoneCountrycodes[]
- *   $country_codes country\_codes
+ * @property \Blackbaud\SKY\Altru\Constituent\Components\NewConstituentPhoneCountryCodes[]
+ *   $country_codes Country codes.
  * @property string $constituent_data_review_rollback_reason The reason. This
  *   simple list can be queried at
  *   https://api.sky.blackbaud.com/alt-adnmg/simplelists/484441bc-f0e6-4f5f-a6bf-49f02881dd13.
@@ -86,7 +86,7 @@ class NewConstituentPhone extends BaseComponent
         "start_date" => "string",
         "do_not_call_reason" => "string",
         "confidential" => "bool",
-        "country_codes" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentPhoneCountrycodes[]",
+        "country_codes" => "\Blackbaud\SKY\Altru\Constituent\Components\NewConstituentPhoneCountryCodes[]",
         "constituent_data_review_rollback_reason" => "string",
         "forced_primary" => "bool",
         "can_edit_primary" => "bool",

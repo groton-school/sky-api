@@ -33,6 +33,6 @@ class Constituent extends BaseEndpoint
     {
         assert(isset($params['importid']), new ArgumentException("Parameter `importid` is required"));
 
-        return new ImportIdMap($this->send("get", ["importid" => $params['importid']], []));
+        return new ImportIdMap($this->send("get", array_filter($params, fn($key) => in_array($key, ['importid']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }

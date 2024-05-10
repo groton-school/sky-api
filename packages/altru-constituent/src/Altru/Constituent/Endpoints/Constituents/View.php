@@ -17,7 +17,7 @@ class View extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/alt-conmg/constituents/{constituent_id}/view";
 
     /**
-     * This view dataform template provides a constituent summary profile.
+     * This view operation provides a constituent summary profile.
      *
      * @param array{constituent_id: string} $params An associative array
      *     - constituent_id: The constituent id.
@@ -33,6 +33,6 @@ class View extends BaseEndpoint
     {
         assert(isset($params['constituent_id']), new ArgumentException("Parameter `constituent_id` is required"));
 
-        return new ConstituentSummaryProfileView($this->send("get", ["constituent_id" => $params['constituent_id']], []));
+        return new ConstituentSummaryProfileView($this->send("get", array_filter($params, fn($key) => in_array($key, ['constituent_id']), ARRAY_FILTER_USE_KEY), array_filter($params, fn($key) => in_array($key, ['']), ARRAY_FILTER_USE_KEY)));
     }
 }
