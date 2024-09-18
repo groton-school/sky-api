@@ -1,5 +1,11 @@
 # @groton/sky-api.oneroster
 
+## 1.0.1
+
+### Patch Changes
+
+- 30466e6: oops
+
 ## 1.0.0
 
 ### Minor Changes
