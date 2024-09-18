@@ -24,15 +24,9 @@ class Runner
 
         foreach (
             [
-                'var/alt-adnmg.json' => 'packages/altru-administration/src',
-                'var/alt-anamg.json' => 'packages/altru-analysis/src',
-                'var/alt-conmg.json' => 'packages/altru-constituent/src',
-                'var/nxt-data-integration.json' =>
-                    'packages/nxt-data-integration/src',
                 'var/afe-rostr.json' => 'packages/oneroster/src',
                 'var/school.json' => 'packages/school/src',
-            ]
-            as $specPath => $basePath
+            ] as $specPath => $basePath
         ) {
             $generator->generate($specPath, $basePath, 'Blackbaud\\SKY', true);
         }
