@@ -25,9 +25,6 @@ class Allergies extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{allergy_id: int} $params An associative array
      *     - allergy_id: Format - int32. The ID of the student's allergy.
      *
@@ -50,9 +47,6 @@ class Allergies extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{allergy_id: int} $params An associative array
      *     - allergy_id: Format - int32. The ID of the student's allergy.
@@ -81,9 +75,6 @@ class Allergies extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergy
      *   $requestBody The medical allergy to be created for student

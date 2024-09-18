@@ -7,6 +7,7 @@ use Battis\OpenAPI\Client\BaseComponent;
 /**
  * @property ?int $building_id
  * @property ?string $display_name
+ * @property ?bool $is_faculty
  * @property ?bool $is_admin
  * @property ?bool $is_head
  * @property ?int $owner_type
@@ -21,6 +22,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $suffix
  * @property ?string $middle_name
  * @property ?string $display
+ * @property ?string $type
  * @property ?string $date_of_birth
  *
  * @api
@@ -33,6 +35,7 @@ class DormLeader extends BaseComponent
     protected static array $fields = [
         "building_id" => "int",
         "display_name" => "string",
+        "is_faculty" => "bool",
         "is_admin" => "bool",
         "is_head" => "bool",
         "owner_type" => "int",
@@ -47,6 +50,7 @@ class DormLeader extends BaseComponent
         "suffix" => "string",
         "middle_name" => "string",
         "display" => "string",
+        "type" => "string",
         "date_of_birth" => "string",
     ];
 }

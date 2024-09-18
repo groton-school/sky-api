@@ -57,7 +57,7 @@ class Emergencycontacts extends BaseEndpoint
     protected ?Nonuser $_nonuser = null;
 
     /**
-     * Returns a collection of a emergency contacts for the specified
+     * Returns a collection of emergency contacts for the specified
      * ```user\_id```. Requires at least one of the following roles in the
      * Education Management system:
      *

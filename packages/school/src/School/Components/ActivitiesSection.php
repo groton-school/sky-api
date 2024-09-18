@@ -12,8 +12,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property int $id The ID of the section
  * @property ?string $course_code The identifier used to reference a course;
  *   the Course Code is a user-entered value
- * @property \Blackbaud\SKY\School\Components\Duration $duration Duration
- *   Model
+ * @property \Blackbaud\SKY\School\Components\Duration $duration An object
+ *   describing the term or season for the section
  * @property ?int $lead_section_id The ID of the first section in a series of
  *   terms
  * @property ?string $name The name of the section

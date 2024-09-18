@@ -54,6 +54,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?int $family_id
  * @property ?string $current_status_date Current status date
  * @property \Blackbaud\SKY\School\Components\ApplicationModel $application
+ * @property ?\Blackbaud\SKY\School\Components\CandidateEventReadModel[]
+ *   $events An array of candidate event objects
+ * @property ?\Blackbaud\SKY\School\Components\CandidateInterviewReadModel[]
+ *   $interviews An array of candidate interview objects
+ * @property ?\Blackbaud\SKY\School\Components\CandidateVisitReadModel[]
+ *   $visits An array of candidate visit objects
  *
  * @api
  */
@@ -105,5 +111,8 @@ class CandidateRead extends BaseComponent
         "family_id" => "int",
         "current_status_date" => "string",
         "application" => "\Blackbaud\SKY\School\Components\ApplicationModel",
+        "events" => "\Blackbaud\SKY\School\Components\CandidateEventReadModel[]",
+        "interviews" => "\Blackbaud\SKY\School\Components\CandidateInterviewReadModel[]",
+        "visits" => "\Blackbaud\SKY\School\Components\CandidateVisitReadModel[]",
     ];
 }

@@ -21,6 +21,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $preferred_name The preferred name of the user
  * @property ?string $prefix The prefix of a user
  * @property ?string $suffix The suffix of a user
+ * @property ?string $preferred_last_name The preferred last name of the user
  *
  * @api
  */
@@ -42,5 +43,6 @@ class ChildOfParent extends BaseComponent
         "preferred_name" => "string",
         "prefix" => "string",
         "suffix" => "string",
+        "preferred_last_name" => "string",
     ];
 }

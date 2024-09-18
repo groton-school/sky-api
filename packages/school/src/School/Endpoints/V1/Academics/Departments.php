@@ -28,8 +28,12 @@ class Departments extends BaseEndpoint
      *
      * - Any Manager Role
      *
-     * @param array{level_id: int} $params An associative array
-     *     - level_id: Format - int32. Level number.
+     * @param array{level_id: int, include_nonacademic: bool} $params An
+     *   associative array
+     *     - level_id: Format - int32. Provide a school level ID to limit
+     *   results to departments valid for the specified school level.
+     *     - include_nonacademic: Set to true to include non-academic
+     *   departments in results. Defaults to false.
      *
      * @return \Blackbaud\SKY\School\Components\DepartmentCollection Success
      *
@@ -39,7 +43,8 @@ class Departments extends BaseEndpoint
     public function list_(array $params): DepartmentCollection
     {
         assert(isset($params['level_id']), new ArgumentException("Parameter `level_id` is required"));
+        assert(isset($params['include_nonacademic']), new ArgumentException("Parameter `include_nonacademic` is required"));
 
-        return new DepartmentCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['level_id']), ARRAY_FILTER_USE_KEY)));
+        return new DepartmentCollection($this->send("get", [], array_filter($params, fn($key) => in_array($key, ['level_id','include_nonacademic']), ARRAY_FILTER_USE_KEY)));
     }
 }

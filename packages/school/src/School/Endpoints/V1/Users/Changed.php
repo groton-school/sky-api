@@ -27,7 +27,7 @@ class Changed extends BaseEndpoint
      *
      * @param array{base_role_ids: string, start_date: string} $params An
      *   associative array
-     *     - base_role_ids: Comma delimited list of base role IDs to get users
+     *     - base_role_ids: Comma-delimited list of base role IDs to get users
      *   for.
      *     - start_date: Format - date-time (as date-time in RFC3339). The
      *   date to begin looking for changes. Use

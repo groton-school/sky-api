@@ -25,9 +25,6 @@ class Categories extends BaseEndpoint
      *
      * - Student
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @return \Blackbaud\SKY\School\Components\EventsCategoryCollection
      *   Success
      */

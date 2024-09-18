@@ -6,6 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\AcademicsSectionCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments;
+use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Customfields;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students;
 
@@ -18,6 +19,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students;
  *   $students
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles
  *   $cycles
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Customfields
+ *   $customfields Routing class for the subnamespace `Customfields`
  *
  * @api
  */
@@ -36,6 +39,7 @@ class Sections extends BaseEndpoint
         "assignments" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Assignments",
         "students" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Students",
         "cycles" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Cycles",
+        "customfields" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Customfields",
     ];
 
     /**
@@ -55,6 +59,12 @@ class Sections extends BaseEndpoint
      *   $_cycles
      */
     protected ?Cycles $_cycles = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Sections\Customfields
+     *   $_customfields Routing class for the subnamespace `Customfields`
+     */
+    protected ?Customfields $_customfields = null;
 
     /**
      * Returns a collection of academic sections for the specified school

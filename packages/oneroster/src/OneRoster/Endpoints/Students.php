@@ -28,7 +28,7 @@ class Students extends BaseEndpoint
     }
 
     /**
-     * Returns a single student user for the specified `id`.
+     * Returns a single student user for the specified ```id```.
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the student

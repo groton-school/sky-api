@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * Year Model
+ * An object with school year information
  *
  * @property ?int $id The ID of a school year
  * @property ?string $begin_date The begin date in a school year date range.
@@ -19,6 +19,14 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?bool $published Gets or sets the published flag
  * @property ?string $school_year_label The label used to identify the range
  *   of dates in a school year
+ * @property ?string $begin_billing_year_date The begin billing year date in a
+ *   school year date range. Uses
+ *   [ISO-8601](https://tools.ietf.org/html/rfc3339) (24H) format:
+ *   2003-04-21T10:29:43
+ * @property ?string $end_billing_year_date The end billing year date in a
+ *   school year date range. Uses
+ *   [ISO-8601](https://tools.ietf.org/html/rfc3339) (24H) format:
+ *   2003-04-21T10:29:43
  *
  * @api
  */
@@ -34,5 +42,7 @@ class Year extends BaseComponent
         "end_date" => "string",
         "published" => "bool",
         "school_year_label" => "string",
+        "begin_billing_year_date" => "string",
+        "end_billing_year_date" => "string",
     ];
 }

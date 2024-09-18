@@ -17,7 +17,7 @@ class Classes extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/teachers/{teacher_id}/classes";
 
     /**
-     * Returns a collection of classes for the specified `teacher_id`.
+     * Returns a collection of classes for the specified ```teacher\_id```.
      *
      * @param array{teacher_id: string} $params An associative array
      *     - teacher_id: sourcedId for the teacher

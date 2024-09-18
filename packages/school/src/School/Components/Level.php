@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * Level Model
+ * An object with school level information
  *
  * @property ?int $id The ID of a school level
  * @property ?string $abbreviation The abbreviation associated with a school

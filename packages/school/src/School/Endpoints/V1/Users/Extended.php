@@ -30,7 +30,7 @@ class Extended extends BaseEndpoint
      *
      * @param array{base_role_ids: string, marker: int} $params An associative
      *   array
-     *     - base_role_ids: Comma delimited list of base role IDs to get users
+     *     - base_role_ids: Comma-delimited list of base role IDs to get users
      *   for.
      *     - marker: Format - int32. The user's ID to start at to return the
      *   next batch of data. Results will start with the next user in the result

@@ -26,9 +26,6 @@ class Athleticrequirements extends BaseEndpoint
      *
      * - Coach
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int, schoolYear: string, season: string,
      *   include_: string} $params An associative array
      *     - user_id: Format - int32. The ID of the student

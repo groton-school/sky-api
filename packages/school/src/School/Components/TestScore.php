@@ -15,8 +15,11 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?\Blackbaud\SKY\School\Components\SubTest[] $sub_tests List of
  *   Subtests
  * @property ?string $test_date The Test Date
+ * @property ?string $last_modified Last Modified Date
  * @property ?string $test_type The Test Type
  * @property ?int $test_type_id The Test Type Id
+ * @property \Blackbaud\SKY\School\Components\UserBaseRead $user UserBaseRead
+ *   Model
  *
  * @api
  */
@@ -33,7 +36,9 @@ class TestScore extends BaseComponent
         "printon_transcript" => "bool",
         "sub_tests" => "\Blackbaud\SKY\School\Components\SubTest[]",
         "test_date" => "string",
+        "last_modified" => "string",
         "test_type" => "string",
         "test_type_id" => "int",
+        "user" => "\Blackbaud\SKY\School\Components\UserBaseRead",
     ];
 }

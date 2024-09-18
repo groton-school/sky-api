@@ -51,6 +51,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $section_identifier The identifier used to differentiate
  *   between multiple sections that contain a course; the Section Identifier is
  *   a user-entered value
+ * @property ?\Blackbaud\SKY\School\Components\CustumFieldReadModel[]
+ *   $custom_fields The list of custom fields for the section
  *
  * @api
  */
@@ -90,5 +92,6 @@ class Enrollment extends BaseComponent
         "room_number" => "string",
         "school_year" => "string",
         "section_identifier" => "string",
+        "custom_fields" => "\Blackbaud\SKY\School\Components\CustumFieldReadModel[]",
     ];
 }

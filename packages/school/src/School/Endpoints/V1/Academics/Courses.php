@@ -5,8 +5,14 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Academics;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\CourseCollection;
+use Blackbaud\SKY\School\Endpoints\V1\Academics\Courses\Customfields;
 
 /**
+ * Routing class for the subnamespace `Courses`
+ *
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Courses\Customfields
+ *   $customfields Routing class for the subnamespace `Customfields`
+ *
  * @api
  */
 class Courses extends BaseEndpoint
@@ -15,6 +21,20 @@ class Courses extends BaseEndpoint
      * @var string $url Endpoint URL pattern
      */
     protected string $url = "https://api.sky.blackbaud.com/school/v1/academics/courses";
+
+    /**
+     * @var array<string, class-string<\Battis\OpenAPI\Client\BaseEndpoint>>
+     *   $endpoints Routing subpaths
+     */
+    protected array $endpoints = [
+        "customfields" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Courses\Customfields",
+    ];
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Courses\Customfields
+     *   $_customfields Routing class for the subnamespace `Customfields`
+     */
+    protected ?Customfields $_customfields = null;
 
     /**
      * Returns a collection of academic courses, filtered by department and/or

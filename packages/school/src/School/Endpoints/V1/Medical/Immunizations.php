@@ -24,9 +24,6 @@ class Immunizations extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param \Blackbaud\SKY\School\Components\StudentImmunizationUpdate
      *   $requestBody The immunizations to update
      *

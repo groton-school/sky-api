@@ -52,7 +52,7 @@ class Teachers extends BaseEndpoint
     }
 
     /**
-     * Returns a single teacher user for the specified `id`.
+     * Returns a single teacher user for the specified ```id```.
      *
      *  Roles returned include:
      *

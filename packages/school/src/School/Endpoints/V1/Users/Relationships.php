@@ -130,9 +130,6 @@ class Relationships extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int, left_user_id: int} $params An associative
      *   array
      *     - user_id: Format - int32. The ID of the user.

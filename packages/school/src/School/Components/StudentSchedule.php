@@ -32,8 +32,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $meeting_date The date the meeting takes place
  * @property ?int $faculty_user_id The user Id of the head teacher
  * @property ?bool $attendance_required Returns true if attendance is required
- * @property \Blackbaud\SKY\School\Components\OfferingType $offering_type
- *   OfferingType Model
+ * @property \Blackbaud\SKY\School\Components\OfferingType $offering_type An
+ *   object with offering type information
  *
  * @api
  */

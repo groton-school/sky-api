@@ -33,9 +33,9 @@ class Enrollments extends BaseEndpoint
      *   int, limit?: int, offset?: int} $params An associative array
      *     - school_year: The school year label to get enrollments for. The
      *   school year should be formatted like ```2022-2023```
-     *     - school_level_id: Format - int32. The school level Id to return
+     *     - school_level_id: Format - int32. The school level ID to return
      *   enrollments for. Optional.
-     *     - grade_level_id: Format - int32. The grade level Id to return
+     *     - grade_level_id: Format - int32. The grade level ID to return
      *   enrollments for. Optional.
      *     - limit: Format - int32. The number of records to return. Defaults
      *   to 1000. Maximum is 5000.

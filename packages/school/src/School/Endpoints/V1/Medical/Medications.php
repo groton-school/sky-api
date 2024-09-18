@@ -27,9 +27,6 @@ class Medications extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param \Blackbaud\SKY\School\Components\StudentMedicationCreate
      *   $requestBody The medication to be created for student
      *
@@ -52,9 +49,6 @@ class Medications extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{medication_id: int} $params An associative array
      *     - medication_id: Format - int32. The ID of the student's
@@ -79,9 +73,6 @@ class Medications extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{medication_id: int} $params An associative array
      *     - medication_id: Format - int32. &gt;The student medication ID

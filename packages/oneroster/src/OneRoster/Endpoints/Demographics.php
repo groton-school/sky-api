@@ -29,7 +29,7 @@ class Demographics extends BaseEndpoint
     }
 
     /**
-     * Returns a single user's demographic data for the specified `id`..
+     * Returns a single user's demographic data for the specified ```id```..
      *
      * @param array{id: string} $params An associative array
      *     - id: sourcedId for the user

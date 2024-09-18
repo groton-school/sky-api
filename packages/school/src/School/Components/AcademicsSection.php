@@ -9,11 +9,13 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @property ?\Blackbaud\SKY\School\Components\Teacher[] $teachers The list of
  *   teachers for this section
+ * @property ?\Blackbaud\SKY\School\Components\CustumFieldReadModel[]
+ *   $custom_fields The list of custom fields for the section
  * @property int $id The ID of the section
  * @property ?string $course_code The identifier used to reference a course;
  *   the Course Code is a user-entered value
- * @property \Blackbaud\SKY\School\Components\Duration $duration Duration
- *   Model
+ * @property \Blackbaud\SKY\School\Components\Duration $duration An object
+ *   describing the term or season for the section
  * @property ?int $lead_section_id The ID of the first section in a series of
  *   terms
  * @property ?string $name The name of the section
@@ -36,6 +38,7 @@ class AcademicsSection extends BaseComponent
      */
     protected static array $fields = [
         "teachers" => "\Blackbaud\SKY\School\Components\Teacher[]",
+        "custom_fields" => "\Blackbaud\SKY\School\Components\CustumFieldReadModel[]",
         "id" => "int",
         "course_code" => "string",
         "duration" => "\Blackbaud\SKY\School\Components\Duration",

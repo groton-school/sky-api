@@ -16,6 +16,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $grade_level_abbreviation The grade level abbreviation of
  *   the student
  * @property ?string $grade_level_name The grade level name of the student
+ * @property ?\Blackbaud\SKY\School\Components\Level[] $school_levels The
+ *   school levels the student is enrolled in
  *
  * @api
  */
@@ -32,5 +34,6 @@ class StudentInfo extends BaseComponent
         "grade_level_description" => "string",
         "grade_level_abbreviation" => "string",
         "grade_level_name" => "string",
+        "school_levels" => "\Blackbaud\SKY\School\Components\Level[]",
     ];
 }

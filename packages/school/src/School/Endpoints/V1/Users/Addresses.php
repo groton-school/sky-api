@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\School\Endpoints\V1\Users;
 use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\AddressAdd;
-use Blackbaud\SKY\School\Components\AddressEdit;
+use Blackbaud\SKY\School\Components\AddressPatch;
 use Blackbaud\SKY\School\Components\AddressReadCollection;
 use Blackbaud\SKY\School\Endpoints\V1\Users\Addresses\Share;
 
@@ -105,7 +105,7 @@ class Addresses extends BaseEndpoint
      *   array
      *     - user_id: Format - int32. The ID of the user.
      *     - address_id: Format - int32. The ID of the address to be updated.
-     * @param \Blackbaud\SKY\School\Components\AddressEdit $requestBody
+     * @param \Blackbaud\SKY\School\Components\AddressPatch $requestBody
      *   Address information to be updated.
      *
      * @return int ID of the address just updated.
@@ -113,7 +113,7 @@ class Addresses extends BaseEndpoint
      * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
      *   parameters are not defined
      */
-    public function patchOnUserIdAndAddressId(array $params, AddressEdit $requestBody): int
+    public function patchOnUserIdAndAddressId(array $params, AddressPatch $requestBody): int
     {
         assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
         assert(isset($params['address_id']), new ArgumentException("Parameter `address_id` is required"));
@@ -136,9 +136,6 @@ class Addresses extends BaseEndpoint
      * - Platform Manager
      *
      * - Contact Card Manager
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, address_id: int, address_type_id: int}
      *   $params An associative array

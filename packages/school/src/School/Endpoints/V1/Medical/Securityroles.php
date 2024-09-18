@@ -20,8 +20,7 @@ class Securityroles extends BaseEndpoint
      * posting medical data like student allergies or student medication.
      *
      *  The ```role\_access``` object in those post endpoints takes in the
-     * role IDs returned here. \*\*\*This endpoint is in BETA. It may be
-     * removed or replaced with a 90 day deprecation period.\*\*\*
+     * role IDs returned here.
      *
      * @return \Blackbaud\SKY\School\Components\SecurityRoleCollection Success
      */

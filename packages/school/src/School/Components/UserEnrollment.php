@@ -13,7 +13,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $preferred_name The preferred name of the user
  * @property ?string $name The formatted name of the user
  * @property ?string $school_year The school year the user is enrolled in
- * @property \Blackbaud\SKY\School\Components\Level $school_level Level Model
+ * @property \Blackbaud\SKY\School\Components\Level $school_level An object
+ *   with school level information
  * @property \Blackbaud\SKY\School\Components\GradeLevel $grade_level
  *   GradeLevel Model
  * @property ?bool $repeated Returns true if the user repeated this enrollment
@@ -25,6 +26,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $depart_reason The reason the user departed the school
  * @property ?string $session The name of the session, if a session is
  *   attached to the enrollment
+ * @property ?string $preferred_last_name The preferred last name of the user
  *
  * @api
  */
@@ -48,5 +50,6 @@ class UserEnrollment extends BaseComponent
         "depart_date" => "string",
         "depart_reason" => "string",
         "session" => "string",
+        "preferred_last_name" => "string",
     ];
 }

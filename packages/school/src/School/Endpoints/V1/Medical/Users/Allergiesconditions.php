@@ -25,8 +25,8 @@ class Allergiesconditions extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * \*\*\*This endpoint is DEPRECATED and will no longer function as of
+     * 2024-09-01\*\*\*
      *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. ID of the student

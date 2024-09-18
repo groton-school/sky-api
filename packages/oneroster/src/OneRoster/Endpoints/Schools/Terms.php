@@ -17,7 +17,7 @@ class Terms extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/schools/{school_id}/terms";
 
     /**
-     * Returns a collection of terms for the specified `school_id`.
+     * Returns a collection of terms for the specified ```school\_id```.
      *
      * @param array{school_id: string} $params An associative array
      *     - school_id: sourcedId for the school

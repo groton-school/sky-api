@@ -9,6 +9,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Admissions;
 use Blackbaud\SKY\School\Endpoints\V1\Advisories;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics;
 use Blackbaud\SKY\School\Endpoints\V1\Attendance;
+use Blackbaud\SKY\School\Endpoints\V1\Communitygroups;
 use Blackbaud\SKY\School\Endpoints\V1\Content;
 use Blackbaud\SKY\School\Endpoints\V1\Customfields;
 use Blackbaud\SKY\School\Endpoints\V1\Degrees;
@@ -77,6 +78,8 @@ use Blackbaud\SKY\School\Endpoints\V1\Years;
  *   for the subnamespace `Degrees`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Medical $medical Routing class
  *   for the subnamespace `Medical`
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Communitygroups
+ *   $communitygroups Routing class for the subnamespace `Communitygroups`
  *
  * @api
  */
@@ -114,6 +117,7 @@ class V1 extends BaseEndpoint
         "content" => "\Blackbaud\SKY\School\Endpoints\V1\Content",
         "degrees" => "\Blackbaud\SKY\School\Endpoints\V1\Degrees",
         "medical" => "\Blackbaud\SKY\School\Endpoints\V1\Medical",
+        "communitygroups" => "\Blackbaud\SKY\School\Endpoints\V1\Communitygroups",
     ];
 
     /**
@@ -266,4 +270,11 @@ class V1 extends BaseEndpoint
      *   class for the subnamespace `Medical`
      */
     protected ?Medical $_medical = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Communitygroups
+     *   $_communitygroups Routing class for the subnamespace `Communitygroups`
+
+     */
+    protected ?Communitygroups $_communitygroups = null;
 }

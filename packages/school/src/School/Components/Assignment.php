@@ -28,7 +28,9 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   when it's assigned; based on the Date property
  * @property bool $published Returns True if the assignment is published
  * @property ?int $rank Gets or sets the rank of the assignment
- * @property ?int $status The status of the assignment
+ * @property ?int $status The status of the assignment. The status corresponds
+ *   with static system options. Allowed values: "0" for In Progress, "1" for
+ *   Completed, "2" for Overdue, and "-1" for To Do.
  * @property ?string $type The assignment type (ex. Homework, Essay)
  * @property ?int $type_id The Type ID of the assignment; the Type ID is a
  *   static system value.

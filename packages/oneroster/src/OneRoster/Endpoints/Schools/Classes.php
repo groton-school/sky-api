@@ -37,7 +37,7 @@ class Classes extends BaseEndpoint
     protected ?Enrollments $_enrollments = null;
 
     /**
-     * Returns a collection of classes for the specified `school_id`.
+     * Returns a collection of classes for the specified ```school\_id```.
      *
      * @param array{school_id: string} $params An associative array
      *     - school_id: sourcedId for the school

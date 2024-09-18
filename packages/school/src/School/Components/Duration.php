@@ -5,10 +5,10 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * Duration Model
+ * An object describing the term or season for the section
  *
  * @property int $id The ID of the duration
- * @property ?string $name The starting term of the section
+ * @property ?string $name The Name of the duration
  *
  * @api
  */

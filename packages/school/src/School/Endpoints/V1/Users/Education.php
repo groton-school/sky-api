@@ -55,9 +55,6 @@ class Education extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int} $params An associative array
      *     - user_id: Format - int32. The ID of the user.
      * @param \Blackbaud\SKY\School\Components\EducationAdd $requestBody The
@@ -88,9 +85,6 @@ class Education extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int, education_id: int} $params An associative
      *   array
      *     - user_id: Format - int32.
@@ -120,9 +114,6 @@ class Education extends BaseEndpoint
      * - Platform Manager
      *
      * - Contact Card Manager
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{user_id: int, education_id: int} $params An associative
      *   array

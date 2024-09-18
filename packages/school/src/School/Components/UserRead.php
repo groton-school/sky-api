@@ -51,11 +51,12 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $nick_name The nickname of a user **This field will be
  *   deprecated after 90 days.**
  * @property ?string $preferred_name The preferred name of the user
+ * @property ?string $preferred_last_name The preferred last name of the user
  * @property ?string $dob Users date of birth
  * @property ?string $prefix The prefix of a user
  * @property ?string $suffix The suffix of a user
  * @property \Blackbaud\SKY\School\Components\ProfilePictureUrls
- *   $profile_pictures
+ *   $profile_pictures An object with profile photo and thumbnail
  * @property ?\Blackbaud\SKY\School\Components\HomeLanguageRead[]
  *   $home_languages List of languages spoken at home by the user
  *
@@ -94,6 +95,7 @@ class UserRead extends BaseComponent
         "middle_name" => "string",
         "nick_name" => "string",
         "preferred_name" => "string",
+        "preferred_last_name" => "string",
         "dob" => "string",
         "prefix" => "string",
         "suffix" => "string",

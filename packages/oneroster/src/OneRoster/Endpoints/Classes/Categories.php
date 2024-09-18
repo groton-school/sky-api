@@ -17,7 +17,7 @@ class Categories extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/categories";
 
     /**
-     * Returns a collection of categories for a specified `class_id`.
+     * Returns a collection of categories for a specified ```class\_id```.
      *
      * @param array{class_id: string} $params An associative array
      *     - class_id: sourcedId for the category

@@ -45,7 +45,7 @@ class Categories extends BaseEndpoint
     }
 
     /**
-     * Returns the Id of the created Events Category
+     * Returns the ID of the created Events Category
      *
      *  Requires one of the following roles in the Education Management
      * system:

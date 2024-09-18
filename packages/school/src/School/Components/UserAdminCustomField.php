@@ -13,6 +13,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $preferred_name Preferred Name
  * @property ?\Blackbaud\SKY\School\Components\CustomAdminField[]
  *   $custom_fields Custom Fields
+ * @property ?string $preferred_last_name Preferred Last Name
  *
  * @api
  */
@@ -27,5 +28,6 @@ class UserAdminCustomField extends BaseComponent
         "last_name" => "string",
         "preferred_name" => "string",
         "custom_fields" => "\Blackbaud\SKY\School\Components\CustomAdminField[]",
+        "preferred_last_name" => "string",
     ];
 }

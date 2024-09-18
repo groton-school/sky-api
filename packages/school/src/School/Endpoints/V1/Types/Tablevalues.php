@@ -25,8 +25,7 @@ class Tablevalues extends BaseEndpoint
      * both. For example, If a ```tableId``` is provided, then any value
      * provided for ```tableName``` will be ignored. In the case that the
      * calling user does not have permissions to view the data being requested
-     * no results will be returned. \*\*\*This endpoint is in BETA. It may be
-     * removed or replaced with a 90 day deprecation period.\*\*\*
+     * no results will be returned.
      *
      * @param array{tableId?: int, tableName: string, includeInactive?: bool}
      *   $params An associative array
@@ -54,9 +53,7 @@ class Tablevalues extends BaseEndpoint
     /**
      * Add a new table value to a table type.
      *
-     *  Allowed table types: Allergy, Condition \*\*\*This endpoint is in
-     * BETA. It may be removed or replaced with a 90 day deprecation
-     * period.\*\*\*
+     *  Allowed table types: Allergy, Condition, Admission
      *
      * @param \Blackbaud\SKY\School\Components\AddTableValuesRequest
      *   $requestBody

@@ -37,7 +37,7 @@ class LineItems extends BaseEndpoint
     protected ?Results $_results = null;
 
     /**
-     * Returns a collection of lineItems for the specified `class_id`.
+     * Returns a collection of lineItems for the specified ```class\_id```.
      *
      * @param array{class_id: string} $params An associative array
      *     - class_id: sourcedId for the class

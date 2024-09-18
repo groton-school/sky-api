@@ -7,6 +7,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Locations;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Result;
+use Blackbaud\SKY\School\Endpoints\V1\Athletics\Rosters;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Schedules;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Sports;
 use Blackbaud\SKY\School\Endpoints\V1\Athletics\Sportslevels;
@@ -31,6 +32,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Athletics\Venues;
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights
  *   $highlights
  * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $result
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Athletics\Rosters $rosters
  *
  * @api
  */
@@ -51,6 +53,7 @@ class Athletics extends BaseEndpoint
         "opponents" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Opponents",
         "highlights" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Highlights",
         "result" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Result",
+        "rosters" => "\Blackbaud\SKY\School\Endpoints\V1\Athletics\Rosters",
     ];
 
     /**
@@ -109,4 +112,9 @@ class Athletics extends BaseEndpoint
      * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Result $_result
      */
     protected ?Result $_result = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Athletics\Rosters $_rosters
+     */
+    protected ?Rosters $_rosters = null;
 }

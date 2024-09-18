@@ -33,8 +33,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property int $num_absent The number of absent students for this meeting
  * @property int $attendance_id the id of the attendance record
  * @property int $level_number The level number the meeting belongs to
- * @property \Blackbaud\SKY\School\Components\OfferingType $offering_type
- *   OfferingType Model
+ * @property \Blackbaud\SKY\School\Components\OfferingType $offering_type An
+ *   object with offering type information
  * @property string $created_date The date the section was created
  * @property string $modified_date The date the section was last modified
  * @property int $last_modified_user_id The identifier of the user that last

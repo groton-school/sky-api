@@ -221,7 +221,7 @@ class Users extends BaseEndpoint
      * @param array{roles: string, first_name: string, last_name: string,
      *   email: string, maiden_name: string, grad_year: string, end_grad_year:
      *   string, marker: int} $params An associative array
-     *     - roles: Comma delimited list of role IDs to get users for.
+     *     - roles: Comma-delimited list of role IDs to get users for.
      *     - first_name: Filter results by first name.
      *     - last_name: Filter results by last name.
      *     - email: Filter results by e-mail.
@@ -280,7 +280,9 @@ class Users extends BaseEndpoint
     }
 
     /**
-     * Updates the record of a single user.
+     * Updates the record of a single user. **Note:** Deleting/clearing data
+     * from a field requires the use of the ```fields\_to\_delete``` property
+     * described below
      *
      *  Returns the ID of the user just updated upon success.
      *

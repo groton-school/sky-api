@@ -99,9 +99,6 @@ class Phones extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int, phone_id: int, phone_type_id: int} $params
      *   An associative array
      *     - user_id: Format - int32. The ID of the user.

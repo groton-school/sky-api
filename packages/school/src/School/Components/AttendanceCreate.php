@@ -18,6 +18,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   will default to the end of the day ("23:59:00").
  * @property ?int $excuse_type_id ID of the attendace execuse
  * @property ?string $excuse_comment Description of the attendance report
+ * @property ?int $reported_by The user reporting the attendance. Defaults to
+ *   user calling endpoint.
  *
  * @api
  */
@@ -34,5 +36,6 @@ class AttendanceCreate extends BaseComponent
         "end_time" => "string",
         "excuse_type_id" => "int",
         "excuse_comment" => "string",
+        "reported_by" => "int",
     ];
 }

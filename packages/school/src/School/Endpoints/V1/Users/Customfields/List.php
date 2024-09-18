@@ -27,11 +27,8 @@ class List_ extends BaseEndpoint
      *
      * - Platform Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The Id of the user to create a custom
+     *     - user_id: Format - int32. The ID of the user to create a custom
      *   field for
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldCreate[]
      *   $requestBody Object that describes the list of custom fields that will
@@ -59,7 +56,7 @@ class List_ extends BaseEndpoint
      * - Platform Manager
      *
      * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The Id of the user to update an existing
+     *     - user_id: Format - int32. The ID of the user to update an existing
      *   custom field for.
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldUpdate[]
      *   $requestBody Object that describes the custom field that should be

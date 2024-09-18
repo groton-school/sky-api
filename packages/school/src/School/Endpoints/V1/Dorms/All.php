@@ -28,8 +28,9 @@ class All extends BaseEndpoint
      *
      * @param array{level_number: int, school_year: string} $params An
      *   associative array
-     *     - level_number: Format - int32. Identifier for the school level
-     *     - school_year: Identifier for the school year
+     *     - level_number: Format - int32. Identifier for the school level.
+     *     - school_year: Identifier for the school year (Defaults to current
+     *   school year).
      *
      * @return \Blackbaud\SKY\School\Components\DormCollection Success
      *

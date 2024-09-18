@@ -25,9 +25,6 @@ class Conditions extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{condition_id: int} $params An associative array
      *     - condition_id: Format - int32. The ID of the student's condition.
      *
@@ -50,9 +47,6 @@ class Conditions extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param array{condition_id: int} $params An associative array
      *     - condition_id: Format - int32. The ID of the student's condition.
@@ -81,9 +75,6 @@ class Conditions extends BaseEndpoint
      * system:
      *
      * - Nurse
-     *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalCondition
      *   $requestBody The medical condition to be created for student

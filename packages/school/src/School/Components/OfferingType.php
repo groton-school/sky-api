@@ -5,7 +5,7 @@ namespace Blackbaud\SKY\School\Components;
 use Battis\OpenAPI\Client\BaseComponent;
 
 /**
- * OfferingType Model
+ * An object with offering type information
  *
  * @property int $id The ID of an offering type
  * @property ?string $description The description of an offering type

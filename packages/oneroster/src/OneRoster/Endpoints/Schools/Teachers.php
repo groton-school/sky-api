@@ -18,7 +18,7 @@ class Teachers extends BaseEndpoint
 
     /**
      * Returns a collection of teacher user data for the specified
-     * `school_id`.
+     * ```school\_id```.
      *
      *  Roles returned include:
      *

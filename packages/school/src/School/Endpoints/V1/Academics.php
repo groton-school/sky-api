@@ -8,6 +8,7 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Courses;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Departments;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Gradedassignments;
+use Blackbaud\SKY\School\Endpoints\V1\Academics\Rosters;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Sections;
 use Blackbaud\SKY\School\Endpoints\V1\Academics\Specialdays;
@@ -24,12 +25,14 @@ use Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers;
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Specialdays
  *   $specialdays
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Courses $courses
+ *   Routing class for the subnamespace `Courses`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments
  *   $enrollments Routing class for the subnamespace `Enrollments`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Assignments
  *   $assignments
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Gradedassignments
  *   $gradedassignments
+ * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Rosters $rosters
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers $teachers
  *   Routing class for the subnamespace `Teachers`
  * @property \Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules $schedules
@@ -53,6 +56,7 @@ class Academics extends BaseEndpoint
         "enrollments" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Enrollments",
         "assignments" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Assignments",
         "gradedassignments" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Gradedassignments",
+        "rosters" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Rosters",
         "teachers" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers",
         "schedules" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Schedules",
         "student" => "\Blackbaud\SKY\School\Endpoints\V1\Academics\Student",
@@ -78,6 +82,7 @@ class Academics extends BaseEndpoint
 
     /**
      * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Courses $_courses
+     *   Routing class for the subnamespace `Courses`
      */
     protected ?Courses $_courses = null;
 
@@ -98,6 +103,11 @@ class Academics extends BaseEndpoint
      *   $_gradedassignments
      */
     protected ?Gradedassignments $_gradedassignments = null;
+
+    /**
+     * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Rosters $_rosters
+     */
+    protected ?Rosters $_rosters = null;
 
     /**
      * @var ?\Blackbaud\SKY\School\Endpoints\V1\Academics\Teachers $_teachers

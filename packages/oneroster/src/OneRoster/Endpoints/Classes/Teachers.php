@@ -17,8 +17,8 @@ class Teachers extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/teachers";
 
     /**
-     * Returns a collection of teacher user data for the specified `class_id`.
-     *
+     * Returns a collection of teacher user data for the specified
+     * ```class\_id```.
      *
      *  Roles returned include:
      *

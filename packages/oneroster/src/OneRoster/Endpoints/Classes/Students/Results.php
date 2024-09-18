@@ -17,8 +17,8 @@ class Results extends BaseEndpoint
     protected string $url = "https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1/classes/{class_id}/students/{student_id}/results";
 
     /**
-     * Returns a collection of results for a specified `class_id` and
-     * `student_id`.
+     * Returns a collection of results for a specified ```class\_id``` and
+     * ```student\_id```.
      *
      * @param array{class_id: string, student_id: string} $params An
      *   associative array

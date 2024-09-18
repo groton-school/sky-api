@@ -86,9 +86,6 @@ class Occupations extends BaseEndpoint
      *
      * - Contact Card Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{user_id: int, occupation_id: int, current: bool} $params
      *   An associative array
      *     - user_id: Format - int32. The ID of the user.

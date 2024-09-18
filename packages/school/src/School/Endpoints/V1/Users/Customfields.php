@@ -56,13 +56,13 @@ class Customfields extends BaseEndpoint
      *
      * @param array{base_role_ids: string, marker: int, field_ids: string}
      *   $params An associative array
-     *     - base_role_ids: A comma delimited list of base role IDs to get
+     *     - base_role_ids: A comma-delimited list of base role IDs to get
      *   users for. Example: ```base\_role\_ids=14,16``` for Students and
      *   Parents.
      *     - marker: Format - int32. The user's ```id``` to start at to return
      *   the next batch of data. Results will start with the next user in the
      *   result set.
-     *     - field_ids: A comma delimited list of field IDs to filter the
+     *     - field_ids: A comma-delimited list of field IDs to filter the
      *   result set down to. Only matching custom fields will be returned from
      *   that result set for all users in that set even if they don't have any
      *   data for the given ```field\_ids```.
@@ -121,7 +121,7 @@ class Customfields extends BaseEndpoint
      * - Platform Manager
      *
      * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The Id of the user to create a custom
+     *     - user_id: Format - int32. The ID of the user to create a custom
      *   field for
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldCreate
      *   $requestBody Object that describes the custom field that will be
@@ -149,7 +149,7 @@ class Customfields extends BaseEndpoint
      * - Platform Manager
      *
      * @param array{user_id: int} $params An associative array
-     *     - user_id: Format - int32. The Id of the user to update an existing
+     *     - user_id: Format - int32. The ID of the user to update an existing
      *   custom field for.
      * @param \Blackbaud\SKY\School\Components\UserAdminCustomFieldUpdate
      *   $requestBody Object that describes the custom field that should be

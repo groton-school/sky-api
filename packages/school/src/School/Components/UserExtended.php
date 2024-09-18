@@ -70,7 +70,6 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $first_name The first name of a user
  * @property ?string $gender The gender of the user
  * @property ?string $gender_description The gender description of the user
- * @property ?int $global_id Global id associated with user
  * @property ?string $greeting The greeting in the user profile
  * @property ?string $host_id The hostId in the user profile
  * @property ?\Blackbaud\SKY\School\Components\HomeLanguageRead[]
@@ -141,6 +140,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property ?string $username The username used to access the system
  * @property \Blackbaud\SKY\School\Components\UserVisa $visa An object for
  *   visa information
+ * @property ?string $preferred_last_name The preferred last name of a user
  *
  * @api
  */
@@ -185,7 +185,6 @@ class UserExtended extends BaseComponent
         "first_name" => "string",
         "gender" => "string",
         "gender_description" => "string",
-        "global_id" => "int",
         "greeting" => "string",
         "host_id" => "string",
         "home_languages" => "\Blackbaud\SKY\School\Components\HomeLanguageRead[]",
@@ -230,5 +229,6 @@ class UserExtended extends BaseComponent
         "suffix" => "string",
         "username" => "string",
         "visa" => "\Blackbaud\SKY\School\Components\UserVisa",
+        "preferred_last_name" => "string",
     ];
 }

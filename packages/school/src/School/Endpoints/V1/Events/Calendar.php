@@ -26,9 +26,6 @@ class Calendar extends BaseEndpoint
      *
      * - Teacher
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{start_date: string, end_date: string} $params An
      *   associative array
      *     - start_date: Format - date-time (as date-time in RFC3339).

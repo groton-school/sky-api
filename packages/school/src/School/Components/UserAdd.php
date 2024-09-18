@@ -81,6 +81,7 @@ use Battis\OpenAPI\Client\BaseComponent;
  *   Descriptors are not case sensitive, but otherwise must match the table
  *   value exactly. These values are returned by GET Types table values.
  * @property ?string $preferred_name The preferred name of the user
+ * @property ?string $preferred_lastname The preferred last name of a user
  * @property ?string $prefix The prefix of a user
  * @property ?string $pronouns The descriptor or ID of the pronouns.
  *   Descriptors are not case sensitive, but otherwise must match the table
@@ -150,6 +151,7 @@ class UserAdd extends BaseComponent
         "passport" => "\Blackbaud\SKY\School\Components\UserPassport",
         "primary_language" => "string",
         "preferred_name" => "string",
+        "preferred_lastname" => "string",
         "prefix" => "string",
         "pronouns" => "string",
         "races" => "\Blackbaud\SKY\School\Components\UserAddRace[]",

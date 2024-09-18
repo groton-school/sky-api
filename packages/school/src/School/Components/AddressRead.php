@@ -9,6 +9,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  *
  * @property int $id The ID of the address
  * @property ?string $address_type The 'Type' of the address
+ * @property \Blackbaud\SKY\School\Components\Salutations $salutations
+ *   Salutations Model
  * @property ?string $city The city for the address
  * @property ?string $country The country for the address
  * @property ?string $line_one The first line of the address
@@ -38,6 +40,7 @@ class AddressRead extends BaseComponent
     protected static array $fields = [
         "id" => "int",
         "address_type" => "string",
+        "salutations" => "\Blackbaud\SKY\School\Components\Salutations",
         "city" => "string",
         "country" => "string",
         "line_one" => "string",

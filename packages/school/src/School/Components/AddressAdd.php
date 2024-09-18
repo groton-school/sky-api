@@ -11,6 +11,8 @@ use Battis\OpenAPI\Client\BaseComponent;
  * @property int $type_id Address Type ID associated with an address. The list
  *   of address types can be found using the [GET Users Address Types
  *   List](https://developer.sky.blackbaud.com/docs/services/school/operations/V1UsersAddresstypesGet).
+ * @property \Blackbaud\SKY\School\Components\Salutations $salutations
+ *   Salutations Model
  * @property ?string $country Country full name (United States)
  * @property string $line_one Address Line 1 (123 Main Street)
  * @property ?string $line_two Address Line 2 (Suite 100)
@@ -35,6 +37,7 @@ class AddressAdd extends BaseComponent
     protected static array $fields = [
         "user_id" => "int",
         "type_id" => "int",
+        "salutations" => "\Blackbaud\SKY\School\Components\Salutations",
         "country" => "string",
         "line_one" => "string",
         "line_two" => "string",

@@ -6,6 +6,7 @@ use Battis\OpenAPI\Client\BaseEndpoint;
 use Battis\OpenAPI\Client\Exceptions\ArgumentException;
 use Blackbaud\SKY\School\Components\FacultyEmploymentRead;
 use Blackbaud\SKY\School\Components\UserEmploymentCollection;
+use Blackbaud\SKY\School\Components\UserEmploymentUpdate;
 
 /**
  * @api
@@ -41,6 +42,33 @@ class Employment extends BaseEndpoint
     }
 
     /**
+     * Updates the employment information for a user.
+     *
+     *  Requires the following role in the Education Management system:
+     *
+     * - SKY API Data Sync
+     *
+     * - SKY API Platform Manager
+     *
+     * @param array{user_id: int} $params An associative array
+     *     - user_id: Format - int32. The ID of the user.
+     * @param \Blackbaud\SKY\School\Components\UserEmploymentUpdate
+     *   $requestBody
+     *
+     * @return int Success
+     *
+     * @throws \Battis\OpenAPI\Client\Exceptions\ArgumentException if required
+     *   parameters are not defined
+     */
+    public function patchOnUserId(array $params, UserEmploymentUpdate $requestBody): int
+    {
+        assert(isset($params['user_id']), new ArgumentException("Parameter `user_id` is required"));
+        assert(isset($params['requestBody']), new ArgumentException("Parameter `requestBody` is required"));
+
+        return $this->send("patch", array_filter($params, fn($key) => in_array($key, ['user_id']), ARRAY_FILTER_USE_KEY), [], $requestBody);
+    }
+
+    /**
      * Returns a paginated collection of users employment details based on
      * base roles, limited to 1000 users per page.
      *
@@ -53,12 +81,9 @@ class Employment extends BaseEndpoint
      *
      * - SKY API Platform Manager
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
-     *
      * @param array{base_role_ids: string, marker: int} $params An associative
      *   array
-     *     - base_role_ids: Comma delimited list of base role IDs to get users
+     *     - base_role_ids: Comma-delimited list of base role IDs to get users
      *   for.
      *     - marker: Format - int32. The user's ID to start at to return the
      *   next batch of data. Results will start with the next user in the result

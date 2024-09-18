@@ -18,7 +18,7 @@ class Students extends BaseEndpoint
 
     /**
      * Returns a collection of student user data for the specified
-     * `school_id`.
+     * ```school\_id```.
      *
      * @param array{school_id: string} $params An associative array
      *     - school_id: sourcedId for the school

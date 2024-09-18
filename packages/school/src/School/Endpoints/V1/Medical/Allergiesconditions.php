@@ -26,8 +26,8 @@ class Allergiesconditions extends BaseEndpoint
      *
      * - Nurse
      *
-     * \*\*\*This endpoint is in BETA. It may be removed or replaced with a 90
-     * day deprecation period.\*\*\*
+     * \*\*\*This endpoint is DEPRECATED and will no longer function as of
+     * 2024-09-01\*\*\*
      *
      * @param \Blackbaud\SKY\School\Components\StudentMedicalAllergyCondition
      *   $requestBody The medical allergy/condition to be created for student
