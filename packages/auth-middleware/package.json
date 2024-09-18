@@ -1,6 +1,6 @@
 {
   "name": "@groton/sky-api.auth-middleware",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/auth-middleware#readme",
   "repository": {
     "type": "git",
