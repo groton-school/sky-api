@@ -4,8 +4,8 @@
     "examples/*"
   ],
   "devDependencies": {
-    "@battis/eslint-config": "^1.1.4",
-    "@battis/prettier-config": "^1.3.2"
+    "@battis/eslint-config": "^1.2.2",
+    "@battis/prettier-config": "^1.5.4"
   },
   "prettier": "@battis/prettier-config",
   "eslint": {
