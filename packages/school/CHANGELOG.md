@@ -1,5 +1,11 @@
 # @groton/sky-api.school
 
+## 1.0.1
+
+### Patch Changes
+
+- f704b75: tweak npm ignore to... include files?
+
 ## 1.0.0
 
 ### Minor Changes
