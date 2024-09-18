@@ -1,0 +1,19 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   lernaVersion: '8.1.8',
+0 silly argv   '$0': 'node_modules/lerna/dist/cli.js',
+0 silly argv   script: 'build'
+0 silly argv }
+1 notice cli v8.1.8
+2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
+3 verbose rootPath /Users/sbattis/Documents/GitHub/sky-api
+4 error Error: Invalid package name "example/sky-api.appengine-client" of package "example/sky-api.appengine-client@file:examples/appengine-client": name can only contain URL-friendly characters.
+4 error     at invalidPackageName (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:111:15)
+4 error     at Result.setName (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:158:11)
+4 error     at new Result (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:147:10)
+4 error     at Function.resolve (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:59:15)
+4 error     at new _Package (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/lerna@8.1.8_encoding@0.1.13/node_modules/lerna/dist/index.js:2199:57)
+4 error     at /Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/lerna@8.1.8_encoding@0.1.13/node_modules/lerna/dist/index.js:2904:14
+4 error     at Array.forEach (<anonymous>)
+4 error     at createProjectGraphWithPackages (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/lerna@8.1.8_encoding@0.1.13/node_modules/lerna/dist/index.js:2901:16)
+4 error     at async detectProjects (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/lerna@8.1.8_encoding@0.1.13/node_modules/lerna/dist/index.js:3001:24)

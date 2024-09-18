@@ -1,0 +1,28 @@
+{
+  "name": "@groton/sky-api.auth-middleware",
+  "version": "0.0.0",
+  "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/auth-middleware#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groton-school/sky-api.git",
+    "directory": "packages/auth-middleware"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist/*",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.12.0"
+  },
+  "devDependencies": {
+    "@groton/sky-api.tsconfig": "workspace:*",
+    "del-cli": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.6.2"
+  }
+}

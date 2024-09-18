@@ -1,0 +1,3 @@
+{
+  "extends": "@groton/sky-api.tsconfig"
+}

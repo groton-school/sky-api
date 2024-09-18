@@ -1,13 +1,40 @@
 {
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
-  "devDependencies": {
-    "@battis/eslint-config": "^1.2.2",
-    "@battis/prettier-config": "^1.5.4"
+  "homepage": "https://github.com/groton-school/sky-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groton-school/sky-api.git"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "email": "sbattis@groton.org",
+    "url": "https://github.com/groton-school"
+  },
+  "scripts": {
+    "build": "run-s build:*",
+    "build:openapi": "tsx ./bin/schema.ts",
+    "build:lerna": "lerna run build",
+    "pre-changeset": "run-s pre-changeset:*",
+    "pre-changeset:monorepo-package-paths": "npx monorepo-package-paths -w --author --homepage --repository",
+    "pre-changeset:build": "run-s build",
+    "release": "run-s release:*",
+    "release:changeset": "changeset version",
+    "release:publish": "pnpm publish -r --otp $(op item get npm --otp)"
   },
   "prettier": "@battis/prettier-config",
+  "devDependencies": {
+    "@battis/eslint-config": "^1.2.2",
+    "@battis/prettier-config": "^1.5.4",
+    "@battis/qui-cli": "^0.4.2",
+    "@changesets/cli": "^2.27.8",
+    "@groton/sky-api.tsconfig": "workspace:*",
+    "@tsconfig/recommended": "^1.0.7",
+    "lerna": "^8.1.8",
+    "monorepo-package-paths": "^0.3.1",
+    "npm-run-all": "^4.1.5",
+    "openapi-typescript": "^7.4.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
   "eslint": {
     "extends": "@battis/eslint-config"
   }

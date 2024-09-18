@@ -1,0 +1,19 @@
+{
+  "name": "@groton/sky-api.tsconfig",
+  "version": "0.0.0",
+  "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/tsconfig#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groton-school/sky-api.git",
+    "directory": "packages/tsconfig"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "email": "sbattis@groton.org",
+    "url": "https://github.com/groton-school"
+  },
+  "main": "./tsconfig.json",
+  "dependencies": {
+    "@tsconfig/recommended": "^1.0.7"
+  }
+}

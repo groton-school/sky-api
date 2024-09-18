@@ -145,6 +145,7 @@
     "zip",
     "zlib"
   ],
+  "prettier.module.path" : "\/Users\/sbattis\/Documents\/GitHub\/sky-api\/node_modules\/prettier",
   "workspace.art_style" : 1,
   "workspace.color" : 9,
   "workspace.name" : "sky-api"
