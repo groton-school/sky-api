@@ -1,5 +1,11 @@
 # @groton/sky-api.oneroster
 
+## 1.0.2
+
+### Patch Changes
+
+- 1ced025: fix npmignore to actually include the right files
+
 ## 1.0.1
 
 ### Patch Changes
