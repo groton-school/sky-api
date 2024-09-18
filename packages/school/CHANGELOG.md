@@ -1,5 +1,11 @@
 # @groton/sky-api.school
 
+## 1.1.1
+
+### Patch Changes
+
+- d6ca788: actually build the new version
+
 ## 1.1.0
 
 ### Minor Changes
