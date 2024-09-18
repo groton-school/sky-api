@@ -2,15 +2,16 @@ import Authorization from '@groton/sky-api.auth-middleware';
 import createClient from 'openapi-fetch';
 import type { components, paths } from './schema.js';
 
-namespace SKY {
-  export type School = components['schemas'];
-  export namespace School {
-    export function client(getCredentials: Authorization.CredentialsPromise) {
-      const client = createClient<paths>();
-      client.use(Authorization.middleware(getCredentials));
-      return client;
-    }
+type School = components['schemas'];
+
+namespace School {
+  export function Client(getCredentials: Authorization.CredentialsPromise) {
+    const client = createClient<paths>({
+      baseUrl: 'https://api.sky.blackbaud.com/school'
+    });
+    client.use(Authorization.middleware(getCredentials));
+    return client;
   }
 }
 
-export default SKY;
+export default School;

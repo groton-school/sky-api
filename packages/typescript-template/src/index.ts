@@ -2,16 +2,14 @@ import Authorization from '@groton/sky-api.auth-middleware';
 import createClient from 'openapi-fetch';
 import type { components, paths } from './schema.js';
 
-type OneRoster = components['schemas'];
+type __NAMESPACE__ = components['schemas'];
 
-namespace OneRoster {
+namespace __NAMESPACE__ {
   export function Client(getCredentials: Authorization.CredentialsPromise) {
-    const client = createClient<paths>({
-      baseUrl: 'https://api.sky.blackbaud.com/afe-rostr/ims/oneroster/v1p1'
-    });
+    const client = createClient<paths>({ baseUrl: '__BASE_URL__' });
     client.use(Authorization.middleware(getCredentials));
     return client;
   }
 }
 
-export default OneRoster;
+export default __NAMESPACE__;

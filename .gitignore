@@ -8,6 +8,7 @@
 **/vendor/
 **/var/*
 !**/var/README.md
+!**/var/*.example.*
 /coverage/
 /examples/**/composer.lock
 /packages/**/composer.lock

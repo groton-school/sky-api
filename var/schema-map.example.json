@@ -1,0 +1,8 @@
+[
+  {
+    "schema": "./foo-bar.json",
+    "path": "../packages/foo-bar",
+    "namespace": "FooBar",
+    "package": "@example/foo-bar"
+  }
+]
