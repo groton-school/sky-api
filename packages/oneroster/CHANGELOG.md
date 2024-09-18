@@ -1,5 +1,11 @@
 # @groton/sky-api.oneroster
 
+## 1.1.0
+
+### Minor Changes
+
+- c87681f: refactor client generation
+
 ## 1.0.2
 
 ### Patch Changes
