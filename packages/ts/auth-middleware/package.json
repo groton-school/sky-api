@@ -1,6 +1,7 @@
 {
   "name": "@groton/sky-api.auth-middleware",
   "version": "0.1.0",
+  "description": "Middleware for openapi-fetch client to authenticate to API",
   "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/ts/auth-middleware#readme",
   "repository": {
     "type": "git",
