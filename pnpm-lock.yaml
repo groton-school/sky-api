@@ -22,7 +22,7 @@ importers:
         version: 2.27.8
       '@groton/sky-api.tsconfig':
         specifier: workspace:*
-        version: link:packages/tsconfig
+        version: link:packages/ts/tsconfig
       '@tsconfig/recommended':
         specifier: ^1.0.7
         version: 1.0.7
@@ -48,19 +48,7 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
 
-  examples/appengine-client:
-    devDependencies:
-      '@battis/partly-gcloudy':
-        specifier: ^0.4.5
-        version: 0.4.5
-      '@battis/qui-cli':
-        specifier: ^0.4.2
-        version: 0.4.2
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-
-  packages/auth-middleware:
+  packages/ts/auth-middleware:
     dependencies:
       openapi-fetch:
         specifier: ^0.12.0
@@ -79,7 +67,7 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
 
-  packages/oneroster:
+  packages/ts/oneroster:
     dependencies:
       '@groton/sky-api.auth-middleware':
         specifier: workspace:*
@@ -98,7 +86,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
 
-  packages/school:
+  packages/ts/school:
     dependencies:
       '@groton/sky-api.auth-middleware':
         specifier: workspace:*
@@ -117,30 +105,30 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
 
-  packages/tsconfig:
+  packages/ts/template:
+    dependencies:
+      '@groton/sky-api.auth-middleware':
+        specifier: workspace:*
+        version: link:../auth-middleware
+      '@groton/sky-api.tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      openapi-fetch:
+        specifier: ^0.12.0
+        version: 0.12.0
+    devDependencies:
+      del-cli:
+        specifier: ^5.1.0
+        version: 5.1.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+
+  packages/ts/tsconfig:
     dependencies:
       '@tsconfig/recommended':
         specifier: ^1.0.7
         version: 1.0.7
-
-  packages/typescript-template:
-    dependencies:
-      '@groton/sky-api.auth-middleware':
-        specifier: workspace:*
-        version: link:../auth-middleware
-      '@groton/sky-api.tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      openapi-fetch:
-        specifier: ^0.12.0
-        version: 0.12.0
-    devDependencies:
-      del-cli:
-        specifier: ^5.1.0
-        version: 5.1.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
 
 packages:
 
@@ -226,10 +214,6 @@ packages:
   '@battis/import-package-json@0.1.3':
     resolution: {integrity: sha512-1niythxDa3icwyjTx0zX2/UfdM+2rW4ijjDKFZZJWH6BB6Rup5zHkRl4SXJv6q+M52fojoGN9LCG7GWiBHgWJw==}
 
-  '@battis/partly-gcloudy@0.4.5':
-    resolution: {integrity: sha512-zl50LwPoLuQiKwtCmEbrJYnsr4OZGCqYKKMQLxeSaf9Cct+AEJsm0bPj08HLPLL2UZlci2KGC5qkQ6GKMcrnfw==}
-    engines: {node: '>=12.17'}
-
   '@battis/prettier-config@1.5.4':
     resolution: {integrity: sha512-2umrqr6M8aVsORQOdaA6geo7mvXYEFHqfnV5WwX55gvxlHsZMgTUcjIhXV5wV9N2fexlFsoP2PGT0Va6JIdeKA==}
     engines: {node: '>=12.17'}
@@ -237,9 +221,6 @@ packages:
   '@battis/qui-cli@0.4.2':
     resolution: {integrity: sha512-IiSLPNjSQ7HH8+kQwjEOTWhzJpXpiU4mxc1Jn5Prko/RUyzR5Gcahe/Y2sGy/N9TRXjNHjiQtErOaypw6OAMQw==}
     engines: {node: '>=12.17'}
-
-  '@battis/typescript-tricks@0.4.3':
-    resolution: {integrity: sha512-7uHRia+kAWWXbTJFMjax3XXmTSIAAnqegLFONN9dAjMv1T5dqRTj+adkKcAlUrZBBQq3A2f0pZz8OFWNwXYTOg==}
 
   '@changesets/apply-release-plan@7.0.5':
     resolution: {integrity: sha512-1cWCk+ZshEkSVEZrm2fSj1Gz8sYvxgUL4Q78+1ZZqeqfuevPTPk033/yUZ3df8BKMohkqqHfzj0HOOrG0KtXTw==}
@@ -501,10 +482,6 @@ packages:
 
   '@inquirer/core@2.3.1':
     resolution: {integrity: sha512-faYAYnIfdEuns3jGKykaog5oUqFiEVbCx9nXGZfUhyEEpKcHt5bpJfZTb3eOBQKo8I/v4sJkZeBHmFlSZQuBCw==}
-    engines: {node: '>=14.18.0'}
-
-  '@inquirer/core@3.1.2':
-    resolution: {integrity: sha512-lR2GaqBkp42Ew9BOAOqf2pSp+ymVES1qN8OC90WWh45yeoYLl0Ty1GyCxmkKqBJtq/+Ea1MF12AdFcZcpRNFsw==}
     engines: {node: '>=14.18.0'}
 
   '@inquirer/core@6.0.0':
@@ -3371,9 +3348,6 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
-  rword@3.2.1:
-    resolution: {integrity: sha512-E1PhzHCM8enXQJoVv0ZKvqMNojkbRqMsv66pD0P4mRl1imb+0g+3Q19CtXobZIqOhi3zNZi1br//U87vc/s6OA==}
-
   rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
 
@@ -4079,17 +4053,6 @@ snapshots:
       node-fetch: 3.3.2
       semver: 7.6.3
 
-  '@battis/partly-gcloudy@0.4.5':
-    dependencies:
-      '@battis/qui-cli': 0.4.2
-      '@battis/typescript-tricks': 0.4.3
-      '@inquirer/core': 3.1.2
-      '@inquirer/select': 1.3.3
-      '@inquirer/type': 1.5.5
-      app-root-path: 3.1.0
-      lodash: 4.17.21
-      rword: 3.2.1
-
   '@battis/prettier-config@1.5.4(typescript@5.6.2)':
     dependencies:
       '@prettier/plugin-xml': 2.2.0
@@ -4121,8 +4084,6 @@ snapshots:
       shelljs: 0.8.5
       strip-ansi: 7.1.0
       winston: 3.14.2
-
-  '@battis/typescript-tricks@0.4.3': {}
 
   '@changesets/apply-release-plan@7.0.5':
     dependencies:
@@ -4426,22 +4387,6 @@ snapshots:
       mute-stream: 1.0.0
       run-async: 3.0.0
       string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 6.2.0
-
-  '@inquirer/core@3.1.2':
-    dependencies:
-      '@inquirer/type': 1.5.5
-      '@types/mute-stream': 0.0.1
-      '@types/node': 20.16.5
-      '@types/wrap-ansi': 3.0.0
-      ansi-escapes: 4.3.2
-      chalk: 4.1.2
-      cli-spinners: 2.9.2
-      cli-width: 4.1.0
-      figures: 3.2.0
-      mute-stream: 1.0.0
-      run-async: 3.0.0
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
 
@@ -7846,8 +7791,6 @@ snapshots:
   run-parallel@1.2.0:
     dependencies:
       queue-microtask: 1.2.3
-
-  rword@3.2.1: {}
 
   rxjs@7.8.1:
     dependencies:

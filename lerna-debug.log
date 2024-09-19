@@ -7,7 +7,7 @@
 1 notice cli v8.1.8
 2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
 3 verbose rootPath /Users/sbattis/Documents/GitHub/sky-api
-4 error Error: Invalid package name "example/sky-api.appengine-client" of package "example/sky-api.appengine-client@file:examples/appengine-client": name can only contain URL-friendly characters.
+4 error Error: Invalid package name "__PACKAGE__" of package "__PACKAGE__@file:packages/ts/typescript-template": name cannot start with an underscore.
 4 error     at invalidPackageName (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:111:15)
 4 error     at Result.setName (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:158:11)
 4 error     at new Result (/Users/sbattis/Documents/GitHub/sky-api/node_modules/.pnpm/npm-package-arg@11.0.2/node_modules/npm-package-arg/lib/npa.js:147:10)

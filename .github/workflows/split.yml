@@ -1,46 +1,46 @@
-name: "split"
+name: 'split'
 on:
   push:
     branches:
       - main
     tags:
-      - "*"
+      - '*'
 jobs:
   packages_split:
     runs-on: ubuntu-latest
-    environment: "actions"
+    environment: 'actions'
     env:
       GITHUB_TOKEN: ${{ secrets.SPLIT_ACCESS_TOKEN }}
     strategy:
       fail-fast: false
       matrix:
         package:
-          - local_path: "appengine-client"
-            split_repository: "sky-api.appengine-client"
-          - local_path: "oauth2"
-            split_repository: "OAuth2-BlackbaudSKY"
-          - local_path: "oneroster"
-            split_repository: "sky-api.oneroster"
-          - local_path: "school"
-            split_repository: "sky-api.school"
+          - local_path: 'appengine-client'
+            split_repository: 'sky-api.appengine-client'
+          - local_path: 'oauth2'
+            split_repository: 'OAuth2-BlackbaudSKY'
+          - local_path: 'oneroster'
+            split_repository: 'sky-api.oneroster'
+          - local_path: 'school'
+            split_repository: 'sky-api.school'
     steps:
       - uses: actions/checkout@v2
       # no tag
       - if: "!startsWith(github.ref, 'refs/tags/')"
-        uses: "danharrin/monorepo-split-github-action@v2.3.0"
+        uses: 'danharrin/monorepo-split-github-action@v2.3.0'
         with:
-          package_directory: "packages/${{ matrix.package.local_path }}"
-          repository_organization: "groton-school"
-          repository_name: "${{ matrix.package.split_repository }}"
-          user_name: "battis"
-          user_email: "sbattis@groton.org"
+          package_directory: 'packages/php/${{ matrix.package.local_path }}'
+          repository_organization: 'groton-school'
+          repository_name: '${{ matrix.package.split_repository }}'
+          user_name: 'battis'
+          user_email: 'sbattis@groton.org'
       # with tag
       - if: "startsWith(github.ref, 'refs/tags/')"
-        uses: "danharrin/monorepo-split-github-action@v2.3.0"
+        uses: 'danharrin/monorepo-split-github-action@v2.3.0'
         with:
           tag: ${GITHUB_REF#refs/tags/}
-          package_directory: "packages/${{ matrix.package.local_path }}"
-          repository_organization: "groton-school"
-          repository_name: "${{ matrix.package.split_repository }}"
-          user_name: "battis"
-          user_email: "sbattis@groton.org"
+          package_directory: 'packages/php/${{ matrix.package.local_path }}'
+          repository_organization: 'groton-school'
+          repository_name: '${{ matrix.package.split_repository }}'
+          user_name: 'battis'
+          user_email: 'sbattis@groton.org'

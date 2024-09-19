@@ -1,11 +1,11 @@
 {
-  "name": "@groton/sky-api.school",
+  "name": "@groton/sky-api.oneroster",
   "version": "0.1.1",
-  "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/school#readme",
+  "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/ts/template#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/groton-school/sky-api.git",
-    "directory": "packages/school"
+    "directory": "packages/ts/template"
   },
   "author": {
     "name": "Seth Battis",
@@ -15,10 +15,6 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "./dist/*",
-    "./README.md"
-  ],
   "scripts": {
     "clean": "del ./dist/*",
     "build": "run-s build:*",

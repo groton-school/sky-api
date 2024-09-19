@@ -10,8 +10,8 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([
-        __DIR__ . '/packages',
-        __DIR__ . '/examples',
+        __DIR__ . '/packages/php',
+        __DIR__ . '/examples/php',
     ]);
 
     $mbConfig->workers([

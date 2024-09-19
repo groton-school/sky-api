@@ -27,7 +27,7 @@ const CWD = process.cwd();
         templatePath: {
           short: 't',
           description: `Path to the template package (refer to README.md)`,
-          default: './packages/typescript-template'
+          default: './packages/ts/template'
         },
         prettierConfig: {
           short: 'p',
@@ -48,7 +48,8 @@ const CWD = process.cwd();
   spinner.start('Parsing template');
   templatePath = path.join(CWD, templatePath!);
   const templateFilePaths = await glob(path.join(templatePath, './**/*'), {
-    ignore: '**/node_modules/**'
+    ignore: ['**/node_modules/**', '**/dist/**', '**/.DS_Store'],
+    dot: true
   });
   spinner.succeed(`Template: ${cli.colors.url(templatePath)}`);
 
@@ -73,36 +74,31 @@ const CWD = process.cwd();
           fs.mkdirSync(targetPath);
         }
       } else {
-        const contents = fs
+        let contents = fs
           .readFileSync(templateFilePath)
           .toString()
           .replace(/__NAMESPACE__/g, map.namespace)
-          .replace(/__PACKAGE__/g, map.package)
+          .replace(/PACKAGE_NAME/g, map.package)
           .replace(/__BASE_URL__/g, schema.servers[0].url);
         if (path.basename(templateFilePath) == 'package.json') {
           const pkg = JSON.parse(fs.readFileSync(targetPath).toString());
-          fs.writeFileSync(
-            targetPath,
-            await prettier.format(
-              JSON.stringify({
-                ...pkg,
-                ...JSON.parse(contents)
-              }),
-              {
-                ...prettierOptions,
-                filepath: targetPath
-              }
-            )
-          );
-        } else {
-          fs.writeFileSync(
-            targetPath,
-            await prettier.format(contents, {
-              ...prettierOptions,
-              filepath: targetPath
-            })
+          contents = JSON.stringify({
+            ...pkg,
+            ...JSON.parse(contents)
+          });
+        }
+        try {
+          contents = await prettier.format(contents, {
+            ...prettierOptions,
+            filepath: targetPath
+          });
+        } catch (error) {
+          spinner.fail(
+            `Prettier could not format ${cli.colors.url(targetPath)}`
           );
         }
+
+        fs.writeFileSync(targetPath, contents);
       }
       spinner.succeed(cli.colors.url(targetPath));
     }

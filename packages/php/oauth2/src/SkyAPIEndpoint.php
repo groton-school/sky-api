@@ -32,8 +32,8 @@ class SkyAPIEndpoint
         $this->path = $path;
         $this->accessToken = $accessToken;
         $this->client = new Client([
-      "base_uri" => Path::join($this->sky->getBaseApiUrl(), $this->path) . "/",
-    ]);
+            "base_uri" => Path::join($this->sky->getBaseApiUrl(), $this->path) . "/",
+        ]);
     }
 
     public function send(string $method, string $url, array $options = []): mixed
