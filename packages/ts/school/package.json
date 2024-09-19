@@ -1,6 +1,6 @@
 {
   "name": "@groton/sky-api.school",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Client for Blackbaud's SKY API School endpoints",
   "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/ts/template#readme",
   "repository": {

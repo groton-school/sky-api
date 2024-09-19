@@ -1,6 +1,6 @@
 {
   "name": "@groton/sky-api.tsconfig",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/ts/tsconfig#readme",
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 {
   "name": "@groton/sky-api.oneroster",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Client for Blackbaud's SKY API OneRoster endpoints",
   "homepage": "https://github.com/groton-school/sky-api/tree/main/packages/ts/template#readme",
   "repository": {
