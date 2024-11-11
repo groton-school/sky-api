@@ -14,6 +14,6 @@
   },
   "main": "./tsconfig.json",
   "dependencies": {
-    "@tsconfig/recommended": "^1.0.7"
+    "@tsconfig/recommended": "^1.0.8"
   }
 }
