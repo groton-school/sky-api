@@ -15,8 +15,8 @@ importers:
         specifier: latest
         version: 1.5.5(typescript@5.6.3)
       '@battis/qui-cli':
-        specifier: ^0.6.3
-        version: 0.6.3
+        specifier: ^0.7.3
+        version: 0.7.3
       '@changesets/cli':
         specifier: ^2.27.9
         version: 2.27.10
@@ -215,8 +215,8 @@ packages:
     resolution: {integrity: sha512-IiSLPNjSQ7HH8+kQwjEOTWhzJpXpiU4mxc1Jn5Prko/RUyzR5Gcahe/Y2sGy/N9TRXjNHjiQtErOaypw6OAMQw==}
     engines: {node: '>=12.17'}
 
-  '@battis/qui-cli@0.6.3':
-    resolution: {integrity: sha512-fdor3FhwHNuKK42vRLwW3YP8vQ+Ifw9pm1KSZ4a0V0pdAF1f4zesX4jfRX15SEKNI+NR/M1i3kbCiGSXHwnxzA==}
+  '@battis/qui-cli@0.7.3':
+    resolution: {integrity: sha512-APsUhhJGqjo9JDGrlgpWg68mnKGciBFwvqywW9K+I7HybVDqiFJ9DDCkBjE0REZge3wuV10/NZ9e2ONFmG2Mcg==}
     engines: {node: '>=12.17'}
 
   '@changesets/apply-release-plan@7.0.6':
@@ -4064,7 +4064,7 @@ snapshots:
       strip-ansi: 7.1.0
       winston: 3.17.0
 
-  '@battis/qui-cli@0.6.3':
+  '@battis/qui-cli@0.7.3':
     dependencies:
       '@inquirer/prompts': 2.3.1
       '@tahul/is-valid-domain': 1.0.5
@@ -6573,7 +6573,7 @@ snapshots:
   jake@10.9.2:
     dependencies:
       async: 3.2.6
-      chalk: 4.1.0
+      chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
 
@@ -6581,7 +6581,7 @@ snapshots:
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -7198,7 +7198,7 @@ snapshots:
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
       axios: 1.7.7
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
@@ -7298,9 +7298,9 @@ snapshots:
   ora@5.3.0:
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
-      cli-spinners: 2.6.1
+      cli-spinners: 2.9.2
       is-interactive: 1.0.0
       log-symbols: 4.1.0
       strip-ansi: 6.0.1
