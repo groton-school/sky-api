@@ -24,7 +24,7 @@
   "devDependencies": {
     "@battis/eslint-config": "latest",
     "@battis/prettier-config": "latest",
-    "@battis/qui-cli": "^0.6.3",
+    "@battis/qui-cli": "^0.7.3",
     "@changesets/cli": "^2.27.9",
     "@groton/sky-api.tsconfig": "workspace:*",
     "@tsconfig/recommended": "^1.0.8",
