@@ -34,7 +34,7 @@ importers:
         version: 8.1.9(encoding@0.1.13)
       monorepo-package-paths:
         specifier: ^0.3.3
-        version: 0.3.3(prettier@3.4.1)
+        version: 0.3.4(prettier@3.4.1)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -2646,8 +2646,8 @@ packages:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
     engines: {node: '>=0.10.0'}
 
-  monorepo-package-paths@0.3.3:
-    resolution: {integrity: sha512-nsuw024iaQ8S0CFM/dRKPMTAUjcNaMakMgr0Dyj1hKz+S2P3A8RGuYDKParxPbrCLyd/g0srOJEs6+7OnWe37w==}
+  monorepo-package-paths@0.3.4:
+    resolution: {integrity: sha512-Cr610UVtV/QkwiqrT5i8bNBiI08j2oJB6QfeC1j9BzPqBuPEAtK3jdtyiTFQXeboC5sIm8SciPmTAM3PzpbJUw==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0
@@ -4815,7 +4815,7 @@ snapshots:
       '@octokit/request-error': 3.0.3
       '@octokit/types': 9.3.2
       is-plain-object: 5.0.0
-      node-fetch: 2.6.7(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
       universal-user-agent: 6.0.1
     transitivePeerDependencies:
       - encoding
@@ -6963,7 +6963,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.3.3(prettier@3.4.1):
+  monorepo-package-paths@0.3.4(prettier@3.4.1):
     dependencies:
       '@battis/import-package-json': 0.1.5
       '@battis/qui-cli': 0.4.2
