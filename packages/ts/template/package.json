@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@groton/sky-api.auth-middleware": "workspace:*",
-    "openapi-fetch": "^0.13.0"
+    "openapi-fetch": "^0.13.3"
   },
   "devDependencies": {
     "del-cli": "^6.0.0",
