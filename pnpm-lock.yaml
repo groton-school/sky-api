@@ -52,7 +52,7 @@ importers:
     dependencies:
       openapi-fetch:
         specifier: ^0.13.3
-        version: 0.13.3
+        version: 0.13.4
     devDependencies:
       '@groton/sky-api.tsconfig':
         specifier: workspace:*
@@ -77,7 +77,7 @@ importers:
         version: link:../tsconfig
       openapi-fetch:
         specifier: ^0.13.3
-        version: 0.13.3
+        version: 0.13.4
     devDependencies:
       del-cli:
         specifier: ^6.0.0
@@ -96,7 +96,7 @@ importers:
         version: link:../tsconfig
       openapi-fetch:
         specifier: ^0.13.3
-        version: 0.13.3
+        version: 0.13.4
     devDependencies:
       del-cli:
         specifier: ^6.0.0
@@ -115,7 +115,7 @@ importers:
         version: link:../tsconfig
       openapi-fetch:
         specifier: ^0.13.3
-        version: 0.13.3
+        version: 0.13.4
     devDependencies:
       del-cli:
         specifier: ^6.0.0
@@ -2044,6 +2044,10 @@ packages:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
 
+  import-fresh@3.3.1:
+    resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
+    engines: {node: '>=6'}
+
   import-local@3.1.0:
     resolution: {integrity: sha512-ASB07uLtnDs1o6EHjKpX34BKYDSqnFerfTOJL2HvMqF70LnxpjkzDB8J44oT9pu4AMPkQwf8jl6szgvNd2tRIg==}
     engines: {node: '>=8'}
@@ -2872,8 +2876,8 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
-  openapi-fetch@0.13.3:
-    resolution: {integrity: sha512-M1THnPkNOXUPsQKZfqunhW/wqH8l3/W3Vlj4lemQynf4mTaTwBTvL2pgjBe0zerL/GFT5ttCHu9fYvanUI3tOw==}
+  openapi-fetch@0.13.4:
+    resolution: {integrity: sha512-JHX7UYjLEiHuQGCPxa3CCCIqe/nc4bTIF9c4UYVC8BegAbWoS3g4gJxKX5XcG7UtYQs2060kY6DH64KkvNZahg==}
 
   openapi-typescript-helpers@0.0.15:
     resolution: {integrity: sha512-opyTPaunsklCBpTK8JGef6mfPhLSnyy5a0IN9vKtx3+4aExf+KxEqYwIy3hqkedXIB97u357uLMJsOnm3GVjsw==}
@@ -4396,7 +4400,7 @@ snapshots:
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
-      import-fresh: 3.3.0
+      import-fresh: 3.3.1
       js-yaml: 4.1.0
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
@@ -6361,6 +6365,11 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
+  import-fresh@3.3.1:
+    dependencies:
+      parent-module: 1.0.1
+      resolve-from: 4.0.0
+
   import-local@3.1.0:
     dependencies:
       pkg-dir: 4.2.0
@@ -7317,7 +7326,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openapi-fetch@0.13.3:
+  openapi-fetch@0.13.4:
     dependencies:
       openapi-typescript-helpers: 0.0.15
 
