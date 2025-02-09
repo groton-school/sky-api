@@ -24,29 +24,6 @@
         "phpstan/phpstan": "^2.1",
         "symplify/monorepo-builder": "^11.2"
     },
-    "autoload": {
-        "psr-4": {
-            "Blackbaud\\SKY\\": [
-                "packages/altru-administration/src/",
-                "packages/altru-analysis/src/",
-                "packages/altru-constituent/src/",
-                "packages/nxt-data-integration/src/",
-                "packages/oneroster/src/",
-                "packages/school/src/"
-            ],
-            "GrotonSchool\\OAuth2\\Client\\Provider\\": "packages/oauth2/src/",
-            "GrotonSchool\\SKY\\": "src",
-            "GrotonSchool\\SKY\\AppEngine\\": "packages/appengine-client/src"
-        }
-    },
-    "scripts": {
-        "build": [
-            "./runner 'GrotonSchool\\SKY\\Build\\Runner::run'"
-        ]
-    },
-    "config": {
-        "sort-packages": true
-    },
     "replace": {
         "groton-school/oauth2-blackbaudsky": "self.version",
         "groton-school/oauth2-blackbaudsky-example": "self.version",
@@ -63,5 +40,28 @@
         "groton-school/sky-api.nxt-data-integration": "self.version",
         "groton-school/sky-api.oneroster": "self.version",
         "groton-school/sky-api.school": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blackbaud\\SKY\\": [
+                "packages/altru-administration/src/",
+                "packages/altru-analysis/src/",
+                "packages/altru-constituent/src/",
+                "packages/nxt-data-integration/src/",
+                "packages/oneroster/src/",
+                "packages/school/src/"
+            ],
+            "GrotonSchool\\OAuth2\\Client\\Provider\\": "packages/oauth2/src/",
+            "GrotonSchool\\SKY\\": "src",
+            "GrotonSchool\\SKY\\AppEngine\\": "packages/appengine-client/src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "build": [
+            "./runner 'GrotonSchool\\SKY\\Build\\Runner::run'"
+        ]
     }
 }
