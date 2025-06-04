@@ -23,7 +23,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "openapi-fetch": "^0.13.3"
+    "openapi-fetch": "^0.14.0"
   },
   "devDependencies": {
     "@groton/sky-api.tsconfig": "workspace:*",
