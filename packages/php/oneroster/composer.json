@@ -16,5 +16,13 @@
   "require": {
     "battis/openapi-client.base": "^0.1",
     "groton-school/oauth2-blackbaudsky": "^0.2"
+  },
+  "require-dev": {
+    "franzl/studio": "^0.16.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "franzl/studio": true
+    }
   }
 }
