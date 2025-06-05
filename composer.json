@@ -18,6 +18,7 @@
         "league/oauth2-client": "^2.6"
     },
     "require-dev": {
+        "franzl/studio": "^0.16.0",
         "friendsofphp/php-cs-fixer": "^3.51",
         "phar-io/version": "^3.2",
         "php-di/php-di": "^7.0",
